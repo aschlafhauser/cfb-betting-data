@@ -1,0 +1,35 @@
+{
+  "updatedAt": "2026-08-28",
+  "sources": [
+    {
+      "sourceFamily": "nflverse",
+      "priority": 1,
+      "access": "public",
+      "uses": ["play-by-play", "team stats", "player stats", "rosters", "snap counts", "advanced stats", "Next Gen Stats"],
+      "entryPoints": [
+        "https://github.com/nflverse/nflverse-data",
+        "https://github.com/nflverse/nflverse-pbp",
+        "https://github.com/nflverse/nflreadr",
+        "https://github.com/nflverse/nfl_data_py"
+      ],
+      "refreshNotes": "Primary reproducible statistical backbone. nflverse documents raw play-by-play arriving roughly 1–2 hours after games, processed PBP/player stats updating daily in season, rosters daily, snap counts/advanced stats polled multiple times daily, and Next Gen Stats daily."
+    },
+    {
+      "sourceFamily": "Official NFL",
+      "priority": 1,
+      "access": "public",
+      "uses": ["schedule", "injuries", "inactives", "transactions", "official game information"],
+      "entryPoints": ["https://www.nfl.com/"],
+      "refreshNotes": "Use as authoritative availability/event source."
+    },
+    {
+      "sourceFamily": "Market Data",
+      "priority": 1,
+      "access": "public-plus-optional-api",
+      "uses": ["openers", "current lines", "book-level executable prices", "closing lines", "CLV"],
+      "entryPoints": [],
+      "refreshNotes": "Final provider selection should favor timestamped multi-book data. Public cross-checks can bootstrap the portal, but an API/feed is preferable for automated historical snapshots."
+    }
+  ],
+  "modelingRule": "Store source/raw fields separately from derived model features. Derived EPA, success rate, opponent adjustments, rolling windows and player/unit values should be reproducible from versioned source snapshots whenever possible."
+}
