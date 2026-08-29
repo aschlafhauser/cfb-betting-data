@@ -1,0 +1,49 @@
+{
+  "season": 2026,
+  "experimentStartWeek": 1,
+  "updatedAt": "2026-08-29T09:17:00-04:00",
+  "purpose": "Prospective timestamped market/model observations for line-movement and execution-timing validation. Research observations are not retroactive bets.",
+  "provisionalExecutionPolicy": {
+    "earlyLock": {
+      "spreadEdgeMin": 2.5,
+      "totalEdgeMin": 3.0,
+      "requiredInformationRisk": "low",
+      "note": "Eligible for early official recommendation only after normal integrity, price-quality and source-freshness checks."
+    },
+    "standardWatch": {
+      "spreadEdgeRange": [1.5, 2.49],
+      "totalEdgeRange": [2.0, 2.99],
+      "note": "Monitor market and news through the normal execution window."
+    },
+    "waitForInformation": {
+      "informationRisk": "high",
+      "triggers": ["unresolved QB", "material injury/depth-chart uncertainty", "suspension", "coaching availability", "material weather uncertainty"],
+      "note": "Do not force early execution when unresolved information can materially move the fair line."
+    }
+  },
+  "observationFields": [
+    "gameId",
+    "timestamp",
+    "hoursToKickoff",
+    "marketSpread",
+    "marketSpreadPrice",
+    "marketTotal",
+    "marketTotalPrice",
+    "modelSpread",
+    "modelTotal",
+    "spreadEdge",
+    "totalEdge",
+    "informationRisk",
+    "unresolvedFlags",
+    "stage"
+  ],
+  "postCloseFields": [
+    "closingSpread",
+    "closingTotal",
+    "movementTowardModel",
+    "movementFromFirstThresholdCrossing",
+    "entryCLV",
+    "fairLineChangedAfterRecommendation"
+  ],
+  "observations": []
+}
