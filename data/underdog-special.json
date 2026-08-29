@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "status": "prospective-shadow",
+  "updatedAt": "2026-08-29T15:00:00-04:00",
+  "research": {
+    "selectedBand": "+3.5 to +7",
+    "primaryRule": "Model-selected underdog with at least 2 of 3 advantages: rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA",
+    "historicalSample": 54,
+    "historicalWins": 28,
+    "historicalWinRate": 0.5185185185,
+    "historicalStatus": "exploratory discovery sample; not independently validated with actual historical sportsbook moneylines",
+    "secondaryRules": [
+      "Model ML Watchlist may include dogs with meaningful spread-model value that do not clear the full 2-of-3 profile",
+      "+7.5 to +14 dogs are excluded from the primary Special algorithm because the historical signal was unstable across 2024 and 2025",
+      "Transfer-QB and other matchup traits may be displayed as context but do not alter Profile v1.0 qualification"
+    ],
+    "parlayNote": "Historical synthetic underdog-moneyline parlays were weak. Only independently qualifying, live-priced individual Specials may be combined, and any parlay remains experimental/high variance rather than a Best Bet.",
+    "reviewCheckpoints": [25, 50, 75, 100],
+    "versioningRule": "Do not alter v1.0 qualification based on 2026 outcomes. Any rule change becomes a separately tracked version."
+  },
+  "pricing": {
+    "fairWinModel": "training-only 2019/2021-2023 spread-to-win logistic",
+    "intercept": 0.05770036915442411,
+    "betaMarketMargin": 0.13110322150111067,
+    "executionRule": "A live moneyline must be verified before a candidate becomes actionable. Estimated/synthetic prices may inform fair value but cannot be stored as an executable market price.",
+    "lineShopping": "Show a consistent primary/consensus price and optional best-available price; do not hindsight-select a bookmaker."
+  },
+  "candidates": [],
+  "parlayLab": [],
+  "ledger": [],
+  "ledgerSchema": {
+    "required": ["id", "week", "gameId", "team", "opponent", "identifiedAt", "entryMl", "fairWinProbability", "fairMl", "profileVersion", "qualifiers"],
+    "closeout": ["closeMl", "result", "units", "clvNote"],
+    "qualifiers": ["rest", "nonExplosive", "qbYpa"]
+  }
+}
