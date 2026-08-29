@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "status": "prospective-shadow",
-  "updatedAt": "2026-08-29T15:00:00-04:00",
+  "updatedAt": "2026-08-29T18:56:00-04:00",
   "research": {
     "selectedBand": "+3.5 to +7",
     "primaryRule": "Model-selected underdog with at least 2 of 3 advantages: rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA",
@@ -25,7 +25,60 @@
     "executionRule": "A live moneyline must be verified before a candidate becomes actionable. Estimated/synthetic prices may inform fair value but cannot be stored as an executable market price.",
     "lineShopping": "Show a consistent primary/consensus price and optional best-available price; do not hindsight-select a bookmaker."
   },
-  "candidates": [],
+  "candidates": [
+    {
+      "gameId": "2026-W0-HAW-STAN",
+      "team": "Hawaii",
+      "opponent": "Stanford",
+      "marketSpread": "+3.5 (+100)",
+      "modelSpread": "+2.5",
+      "spreadEdge": 1.0,
+      "modelSignalQualifies": false,
+      "verifiedMoneyline": "+160",
+      "moneylineSource": "FanDuel via Action Network",
+      "moneylineTimestamp": "2026-08-29T18:56:00-04:00",
+      "fairWinProbability": 0.4328929336,
+      "fairMl": "+131",
+      "marketImpliedWinProbability": 0.3846153846,
+      "fairVsMarketEdgePctPts": 4.8277549,
+      "qualifiers": {
+        "rest": {"qualifies": false, "reason": "Both teams are opening the season; Hawaii also travels to the mainland, so there is no rest/schedule advantage."},
+        "nonExplosive": {"qualifies": true, "reason": "Hawaii held the stronger down-to-down/early-down profile in the 2025 head-to-head and enters against a Stanford defense that finished 2025 near the bottom nationally in pass defense; the advantage is efficiency-based rather than dependent on isolated explosives."},
+        "qbYpa": {"qualifies": true, "reason": "Micah Alejado returns after a highly efficient 2025 (66.3% completions, 3,106 yards, 24 TD) and ranked 16th in EPA/dropback in cited 2025 data, while Davis Warren's last healthy season produced materially weaker per-dropback efficiency."}
+      },
+      "qualifierCount": 2,
+      "profileQualifies": true,
+      "status": "screened-out-before-special",
+      "action": "No Underdog Special",
+      "note": "Profile v1.0 clears 2 of 3 and the live ML is favorable to the frozen fair-ML estimate, but the underlying spread-model signal no longer qualifies after Hawaii moved from +4.5 to +3.5. The 2026 framework requires the model gate first, so neither ML action nor execution pricing is permitted."
+    },
+    {
+      "gameId": "2026-W0-MEM-UNLV",
+      "team": "Memphis",
+      "opponent": "UNLV",
+      "marketSpread": "+4.5 (-115)",
+      "modelSpread": "+3.5",
+      "spreadEdge": 1.0,
+      "modelSignalQualifies": false,
+      "verifiedMoneyline": "+155",
+      "moneylineSource": "bet365 via Action Network",
+      "moneylineTimestamp": "2026-08-29T18:56:00-04:00",
+      "fairWinProbability": 0.4010334517,
+      "fairMl": "+149",
+      "marketImpliedWinProbability": 0.3921568627,
+      "fairVsMarketEdgePctPts": 0.8876589,
+      "qualifiers": {
+        "rest": {"qualifies": false, "reason": "Both teams are opening the season and Memphis travels to Las Vegas; no rest/schedule edge is established."},
+        "nonExplosive": {"qualifies": true, "reason": "Current matchup analysis identifies Memphis' front seven as the unit most capable of winning down-to-down against UNLV's run-first offense and limiting its most repeatable offensive path."},
+        "qbYpa": {"qualifies": false, "reason": "Marcus Stokes' strong Division II production is not a sufficiently comparable FBS YPA/efficiency sample to award the frozen QB advantage over experienced Jackson Arnold."}
+      },
+      "qualifierCount": 1,
+      "profileQualifies": false,
+      "status": "screened-out",
+      "action": "No Special / no ML Watchlist",
+      "note": "Memphis does not clear the 2-of-3 profile and the spread-model edge is only about 1 point. The verified +155 ML is also only marginally above the frozen fair estimate, so there is no actionable ML value."
+    }
+  ],
   "parlayLab": [],
   "ledger": [],
   "ledgerSchema": {
