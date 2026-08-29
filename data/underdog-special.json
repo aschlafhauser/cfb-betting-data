@@ -1,28 +1,31 @@
 {
-  "version": "1.0",
-  "status": "prospective-shadow",
-  "updatedAt": "2026-08-29T18:56:00-04:00",
+  "version": "1.1",
+  "status": "prospective-live",
+  "updatedAt": "2026-08-29T19:01:00-04:00",
   "research": {
     "selectedBand": "+3.5 to +7",
-    "primaryRule": "Model-selected underdog with at least 2 of 3 advantages: rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA",
+    "primaryRule": "Underdog between +3.5 and +7 with at least 2 of 3 advantages (rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA) plus a verified live moneyline better than the frozen fair-ML estimate.",
+    "spreadEdgeRole": "Spread-model edge is a confidence/context input, not a hard qualification gate. A weak or negative spread edge can reduce confidence, but it does not automatically veto a 2-of-3 profile with verified positive ML value.",
     "historicalSample": 54,
     "historicalWins": 28,
     "historicalWinRate": 0.5185185185,
     "historicalStatus": "exploratory discovery sample; not independently validated with actual historical sportsbook moneylines",
     "secondaryRules": [
-      "Model ML Watchlist may include dogs with meaningful spread-model value that do not clear the full 2-of-3 profile",
-      "+7.5 to +14 dogs are excluded from the primary Special algorithm because the historical signal was unstable across 2024 and 2025",
-      "Transfer-QB and other matchup traits may be displayed as context but do not alter Profile v1.0 qualification"
+      "ML Watchlist may include +3.5-to-+7 dogs with meaningful model/price interest that do not clear the full 2-of-3 profile.",
+      "+7.5 to +14 dogs remain excluded from the primary Special algorithm because the historical signal was unstable across 2024 and 2025.",
+      "Transfer-QB and other matchup traits may be displayed as context but do not alter the three core qualifier flags.",
+      "A verified sportsbook moneyline is mandatory for actionability; synthetic or estimated market ML prices are never executable.",
+      "Profile v1.1 begins prospective evaluation from adoption. Do not retroactively book wagers after kickoff or rewrite v1.0 results."
     ],
-    "parlayNote": "Historical synthetic underdog-moneyline parlays were weak. Only independently qualifying, live-priced individual Specials may be combined, and any parlay remains experimental/high variance rather than a Best Bet.",
+    "parlayNote": "Only independently qualifying, live-priced individual Specials may be combined. Parlays remain experimental/high variance and are never forced.",
     "reviewCheckpoints": [25, 50, 75, 100],
-    "versioningRule": "Do not alter v1.0 qualification based on 2026 outcomes. Any rule change becomes a separately tracked version."
+    "versioningRule": "v1.0 remains preserved as the original rule. v1.1 removes the hard spread-edge veto and uses verified ML-versus-fair value as the price gate after the 2-of-3 football profile qualifies. Future rule changes require a new version."
   },
   "pricing": {
     "fairWinModel": "training-only 2019/2021-2023 spread-to-win logistic",
     "intercept": 0.05770036915442411,
     "betaMarketMargin": 0.13110322150111067,
-    "executionRule": "A live moneyline must be verified before a candidate becomes actionable. Estimated/synthetic prices may inform fair value but cannot be stored as an executable market price.",
+    "executionRule": "After the 2-of-3 profile qualifies, a verified live moneyline must be better than the model fair ML to qualify as a Special. Estimated/synthetic prices cannot be stored as executable market prices.",
     "lineShopping": "Show a consistent primary/consensus price and optional best-available price; do not hindsight-select a bookmaker."
   },
   "candidates": [
@@ -33,24 +36,36 @@
       "marketSpread": "+3.5 (+100)",
       "modelSpread": "+2.5",
       "spreadEdge": 1.0,
-      "modelSignalQualifies": false,
+      "spreadSignalStrength": "modest",
       "verifiedMoneyline": "+160",
+      "currentMl": 160,
       "moneylineSource": "FanDuel via Action Network",
       "moneylineTimestamp": "2026-08-29T18:56:00-04:00",
       "fairWinProbability": 0.4328929336,
-      "fairMl": "+131",
+      "fairMl": 131,
       "marketImpliedWinProbability": 0.3846153846,
       "fairVsMarketEdgePctPts": 4.8277549,
       "qualifiers": {
         "rest": {"qualifies": false, "reason": "Both teams are opening the season; Hawaii also travels to the mainland, so there is no rest/schedule advantage."},
         "nonExplosive": {"qualifies": true, "reason": "Hawaii held the stronger down-to-down/early-down profile in the 2025 head-to-head and enters against a Stanford defense that finished 2025 near the bottom nationally in pass defense; the advantage is efficiency-based rather than dependent on isolated explosives."},
-        "qbYpa": {"qualifies": true, "reason": "Micah Alejado returns after a highly efficient 2025 (66.3% completions, 3,106 yards, 24 TD) and ranked 16th in EPA/dropback in cited 2025 data, while Davis Warren's last healthy season produced materially weaker per-dropback efficiency."}
+        "qbYpa": {"qualifies": true, "reason": "Micah Alejado returns after a highly efficient 2025 and held the stronger cited EPA/dropback profile than Davis Warren's last healthy season."}
       },
       "qualifierCount": 2,
       "profileQualifies": true,
-      "status": "screened-out-before-special",
-      "action": "No Underdog Special",
-      "note": "Profile v1.0 clears 2 of 3 and the live ML is favorable to the frozen fair-ML estimate, but the underlying spread-model signal no longer qualifies after Hawaii moved from +4.5 to +3.5. The 2026 framework requires the model gate first, so neither ML action nor execution pricing is permitted."
+      "mlValueQualifies": true,
+      "status": "special",
+      "confidence": "B",
+      "action": "Underdog Special v1.1 profile qualifies; no retroactive Week 0 wager",
+      "reasons": [
+        "Clears 2 of 3 frozen football-profile qualifiers: down-to-down efficiency and QB passing efficiency/YPA.",
+        "Verified +160 ML is materially better than the model fair ML of approximately +131 (about +4.8 percentage points of win-probability value)."
+      ],
+      "risks": [
+        "Spread edge is only about 1 point, so confidence is lower than a Special that also has a strong spread-model disagreement.",
+        "Pofele Ashlock is out, reducing Hawaii receiving certainty.",
+        "v1.1 was adopted at/after the scheduled Week 0 kickoff, so this game cannot be entered retroactively into the official prospective betting ledger."
+      ],
+      "note": "Hawaii is the motivating v1.1 example: the football profile and verified ML value qualify even though the spread-edge gate would have screened it out under v1.0. Spread edge now informs confidence instead of serving as a hard veto."
     },
     {
       "gameId": "2026-W0-MEM-UNLV",
@@ -59,12 +74,13 @@
       "marketSpread": "+4.5 (-115)",
       "modelSpread": "+3.5",
       "spreadEdge": 1.0,
-      "modelSignalQualifies": false,
+      "spreadSignalStrength": "modest",
       "verifiedMoneyline": "+155",
+      "currentMl": 155,
       "moneylineSource": "bet365 via Action Network",
       "moneylineTimestamp": "2026-08-29T18:56:00-04:00",
       "fairWinProbability": 0.4010334517,
-      "fairMl": "+149",
+      "fairMl": 149,
       "marketImpliedWinProbability": 0.3921568627,
       "fairVsMarketEdgePctPts": 0.8876589,
       "qualifiers": {
@@ -74,9 +90,13 @@
       },
       "qualifierCount": 1,
       "profileQualifies": false,
-      "status": "screened-out",
-      "action": "No Special / no ML Watchlist",
-      "note": "Memphis does not clear the 2-of-3 profile and the spread-model edge is only about 1 point. The verified +155 ML is also only marginally above the frozen fair estimate, so there is no actionable ML value."
+      "mlValueQualifies": true,
+      "status": "watchlist",
+      "confidence": "C",
+      "action": "ML Watchlist only",
+      "reasons": ["Verified market ML is slightly better than fair, but the football profile clears only 1 of 3 qualifiers."],
+      "risks": ["Does not satisfy the primary 2-of-3 profile requirement.", "The fair-versus-market ML advantage is less than one percentage point."],
+      "note": "v1.1 does not loosen the football-profile requirement. Memphis remains Watchlist-only because it clears just one core qualifier."
     }
   ],
   "parlayLab": [],
@@ -85,5 +105,12 @@
     "required": ["id", "week", "gameId", "team", "opponent", "identifiedAt", "entryMl", "fairWinProbability", "fairMl", "profileVersion", "qualifiers"],
     "closeout": ["closeMl", "result", "units", "clvNote"],
     "qualifiers": ["rest", "nonExplosive", "qbYpa"]
+  },
+  "migration": {
+    "from": "1.0",
+    "to": "1.1",
+    "adoptedAt": "2026-08-29T19:01:00-04:00",
+    "reason": "A hard spread-edge gate could reject a dog that independently clears the football profile and has verified positive moneyline value. v1.1 makes verified ML-versus-fair value the price gate and retains spread disagreement as confidence/context.",
+    "week0Handling": "No retroactive official wager or ledger entry is created for Hawaii because the rule was adopted at/after scheduled kickoff."
   }
 }
