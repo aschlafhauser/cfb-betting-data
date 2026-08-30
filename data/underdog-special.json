@@ -1,120 +1,60 @@
 {
   "version": "1.1",
   "status": "prospective-live",
-  "updatedAt": "2026-08-30T03:00:00-04:00",
+  "updatedAt": "2026-08-30T08:30:00-04:00",
   "research": {
     "selectedBand": "+3.5 to +7",
     "primaryRule": "Underdog between +3.5 and +7 with at least 2 of 3 advantages (rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA) plus a verified live moneyline better than the frozen fair-ML estimate.",
-    "spreadEdgeRole": "Spread-model edge is a confidence/context input, not a hard qualification gate. A weak or negative spread edge can reduce confidence, but it does not automatically veto a 2-of-3 profile with verified positive ML value.",
+    "spreadEdgeRole": "Spread-model edge is confidence/context, not a hard qualification gate.",
     "historicalSample": 54,
     "historicalWins": 28,
     "historicalWinRate": 0.5185185185,
     "historicalStatus": "exploratory discovery sample; not independently validated with actual historical sportsbook moneylines",
     "secondaryRules": [
-      "ML Watchlist may include +3.5-to-+7 dogs with meaningful model/price interest that do not clear the full 2-of-3 profile.",
-      "+7.5 to +14 dogs remain excluded from the primary Special algorithm because the historical signal was unstable across 2024 and 2025.",
-      "Transfer-QB and other matchup traits may be displayed as context but do not alter the three core qualifier flags.",
-      "A verified sportsbook moneyline is mandatory for actionability; synthetic or estimated market ML prices are never executable.",
-      "Profile v1.1 begins prospective evaluation from adoption. Do not retroactively book wagers after kickoff or rewrite v1.0 results."
+      "ML Watchlist may include +3.5-to-+7 dogs that do not clear the full 2-of-3 profile when the game remains useful to monitor.",
+      "+7.5 to +14 dogs remain excluded from the primary Special algorithm.",
+      "A verified sportsbook moneyline is mandatory for actionability; synthetic prices are never executable.",
+      "v1.0 history remains preserved; v1.1 is prospective only."
     ],
     "parlayNote": "Only independently qualifying, live-priced individual Specials may be combined. Parlays remain experimental/high variance and are never forced.",
-    "reviewCheckpoints": [25, 50, 75, 100],
-    "versioningRule": "v1.0 remains preserved as the original rule. v1.1 removes the hard spread-edge veto and uses verified ML-versus-fair value as the price gate after the 2-of-3 football profile qualifies. Future rule changes require a new version."
+    "reviewCheckpoints": [25,50,75,100]
   },
   "pricing": {
     "fairWinModel": "training-only 2019/2021-2023 spread-to-win logistic",
     "intercept": 0.05770036915442411,
     "betaMarketMargin": 0.13110322150111067,
-    "executionRule": "After the 2-of-3 profile qualifies, a verified live moneyline must be better than the model fair ML to qualify as a Special. Estimated/synthetic prices cannot be stored as executable market prices.",
-    "lineShopping": "Show a consistent primary/consensus price and optional best-available price; do not hindsight-select a bookmaker."
+    "executionRule": "After the 2-of-3 profile qualifies, verified live ML must be better than model fair ML."
   },
   "candidates": [
     {
-      "gameId": "2026-W0-HAW-STAN",
-      "team": "Hawaii",
-      "opponent": "Stanford",
-      "marketSpread": "+3.5 (+100)",
-      "modelSpread": "+2.5",
-      "spreadEdge": 1.0,
-      "spreadSignalStrength": "modest",
-      "verifiedMoneyline": "+160",
-      "currentMl": 160,
-      "moneylineSource": "FanDuel via Action Network",
-      "moneylineTimestamp": "2026-08-29T18:56:00-04:00",
-      "fairWinProbability": 0.4328929336,
-      "fairMl": 131,
-      "marketImpliedWinProbability": 0.3846153846,
-      "fairVsMarketEdgePctPts": 4.8277549,
-      "qualifiers": {
-        "rest": {"qualifies": false, "reason": "Both teams were opening the season; Hawaii also traveled to the mainland, so there was no rest/schedule advantage."},
-        "nonExplosive": {"qualifies": true, "reason": "Hawaii held the stronger down-to-down/early-down profile in the 2025 head-to-head and entered against a Stanford defense that finished 2025 near the bottom nationally in pass defense; the advantage was efficiency-based rather than dependent on isolated explosives."},
-        "qbYpa": {"qualifies": true, "reason": "Micah Alejado returned after a highly efficient 2025 and held the stronger cited EPA/dropback profile than Davis Warren's last healthy season."}
-      },
-      "qualifierCount": 2,
-      "profileQualifies": true,
-      "mlValueQualifies": true,
-      "status": "completed-no-entry",
-      "confidence": "B",
-      "action": "No wager recorded",
-      "result": "loss",
-      "finalScore": "Stanford 37, Hawaii 27",
-      "reasons": [
-        "Cleared 2 of 3 football-profile qualifiers: down-to-down efficiency and QB passing efficiency/YPA.",
-        "Verified +160 ML was materially better than the model fair ML of approximately +131 (about +4.8 percentage points of win-probability value)."
-      ],
-      "risks": [
-        "Spread edge was only about 1 point, so confidence was lower than a Special that also had a strong spread-model disagreement.",
-        "Pofele Ashlock was out, reducing Hawaii receiving certainty.",
-        "v1.1 was adopted at/after the scheduled Week 0 kickoff, so this game was not entered retroactively into the official prospective betting ledger."
-      ],
-      "note": "Hawaii was the motivating v1.1 example, but it is recorded only as a completed no-entry profile because the rule change occurred at/after kickoff. Stanford won 37-27; no units or official ML result are booked."
+      "week":0,"gameId":"2026-W0-HAW-STAN","team":"Hawaii","opponent":"Stanford","marketSpread":"+3.5 (+100)","modelSpread":"+2.5","spreadEdge":1.0,"verifiedMoneyline":"+160","currentMl":160,"moneylineSource":"FanDuel via Action Network","moneylineTimestamp":"2026-08-29T18:56:00-04:00","fairWinProbability":0.4328929336,"fairMl":131,"qualifierCount":2,"profileQualifies":true,"mlValueQualifies":true,"status":"completed-no-entry","confidence":"B","action":"No wager recorded","result":"loss","finalScore":"Stanford 37, Hawaii 27","note":"v1.1 was adopted at/after scheduled kickoff; no retroactive wager."
     },
     {
-      "gameId": "2026-W0-MEM-UNLV",
-      "team": "Memphis",
-      "opponent": "UNLV",
-      "marketSpread": "+4.5 (-110)",
-      "modelSpread": "+3.5",
-      "spreadEdge": 1.0,
-      "spreadSignalStrength": "modest",
-      "verifiedMoneyline": "+164",
-      "currentMl": 164,
-      "moneylineSource": "DraftKings via Action Network live board",
-      "moneylineTimestamp": "2026-08-29T21:54:42-04:00",
-      "fairWinProbability": 0.4010334517,
-      "fairMl": 149,
-      "marketImpliedWinProbability": 0.3787878788,
-      "fairVsMarketEdgePctPts": 2.22455729,
-      "qualifiers": {
-        "rest": {"qualifies": false, "reason": "Both teams were opening the season and Memphis traveled to Las Vegas; no rest/schedule edge was established."},
-        "nonExplosive": {"qualifies": true, "reason": "Pregame matchup analysis identified Memphis' front seven as the unit most capable of winning down-to-down against UNLV's run-first offense and limiting its most repeatable offensive path."},
-        "qbYpa": {"qualifies": false, "reason": "Marcus Stokes' strong Division II production was not a sufficiently comparable FBS YPA/efficiency sample to award the frozen QB advantage over experienced Jackson Arnold."}
-      },
-      "qualifierCount": 1,
-      "profileQualifies": false,
-      "mlValueQualifies": true,
-      "status": "completed-watchlist-no-entry",
-      "confidence": "C",
-      "action": "No Special / no wager recorded",
-      "result": "watchlist dog won outright",
-      "finalScore": "Memphis 27, UNLV 21",
-      "reasons": ["Verified +164 pregame ML was better than the roughly +149 fair ML, but the football profile cleared only 1 of 3 qualifiers."],
-      "risks": ["Did not satisfy the primary 2-of-3 profile requirement.", "The spread remained only about 1 point better than the model fair spread."],
-      "note": "Memphis remained Watchlist-only through kickoff and never became an Underdog Special. Memphis won 27-21, but the outcome does not change or retroactively relax the 2-of-3 profile rule; no units are booked."
+      "week":0,"gameId":"2026-W0-MEM-UNLV","team":"Memphis","opponent":"UNLV","marketSpread":"+4.5 (-110)","modelSpread":"+3.5","spreadEdge":1.0,"verifiedMoneyline":"+164","currentMl":164,"moneylineSource":"DraftKings via Action Network","moneylineTimestamp":"2026-08-29T21:54:42-04:00","fairWinProbability":0.4010334517,"fairMl":149,"qualifierCount":1,"profileQualifies":false,"mlValueQualifies":true,"status":"completed-watchlist-no-entry","confidence":"C","action":"No Special / no wager recorded","result":"watchlist dog won outright","finalScore":"Memphis 27, UNLV 21","note":"Outcome does not retroactively relax the 2-of-3 rule."
+    },
+    {
+      "week":1,"gameId":"2026-W1-COL-GT","team":"Colorado","opponent":"Georgia Tech","marketSpread":"+6.5","modelSpread":"+7.0","spreadEdge":-0.5,"verifiedMoneyline":"+205","currentMl":205,"moneylineSource":"Oddschecker multi-book board","moneylineTimestamp":"2026-08-30T08:30:00-04:00","fairWinProbability":0.2973347114,"fairMl":236,
+      "qualifiers":{"rest":{"qualifies":false,"reason":"Both teams are opening their seasons."},"nonExplosive":{"qualifies":false,"reason":"No 2026 down-to-down evidence yet strong enough to award Colorado an advantage."},"qbYpa":{"qualifies":false,"reason":"Georgia Tech returns ACC Player of the Year Haynes King; Colorado's quarterback setup is materially less proven."}},"qualifierCount":0,"profileQualifies":false,"mlValueQualifies":false,"status":"watchlist","confidence":"C","action":"No Special","risks":["Market +205 is worse than the frozen fair ML near +236.","Preseason-only efficiency comparison."],"note":"Useful marquee-game monitor only; does not clear profile or price gate."
+    },
+    {
+      "week":1,"gameId":"2026-W1-SJSU-EMU","team":"San Jose State","opponent":"Eastern Michigan","marketSpread":"+3.5","modelSpread":"+4.5","spreadEdge":-1.0,"verifiedMoneyline":"+154","currentMl":154,"moneylineSource":"ESPN DraftKings scoreboard","moneylineTimestamp":"2026-08-30T08:30:00-04:00","fairWinProbability":0.3699889712,"fairMl":170,
+      "qualifiers":{"rest":{"qualifies":false,"reason":"Both played Week 0; San Jose State also travels from Los Angeles to Michigan while EMU remains home."},"nonExplosive":{"qualifies":false,"reason":"EMU produced the cleaner Week 0 down-to-down offensive profile and allowed only 17 points."},"qbYpa":{"qualifies":false,"reason":"Noah Kim's 279-yard, 2-TD Week 0 performance is the stronger verified early-season quarterback efficiency signal."}},"qualifierCount":0,"profileQualifies":false,"mlValueQualifies":false,"status":"watchlist","confidence":"C","action":"No Special","risks":["Current +154 is worse than fair ML near +170."],"note":"No v1.1 qualification."
+    },
+    {
+      "week":1,"gameId":"2026-W1-LIB-JMU","team":"Liberty","opponent":"James Madison","marketSpread":"+6.5","modelSpread":"+6.0","spreadEdge":0.5,"verifiedMoneyline":"+200","currentMl":200,"moneylineSource":"BetMGM/Sportingbet board (3.00 decimal)","moneylineTimestamp":"2026-08-30T08:30:00-04:00","fairWinProbability":0.3254319991,"fairMl":207,
+      "qualifiers":{"rest":{"qualifies":false,"reason":"Both teams are opening their seasons."},"nonExplosive":{"qualifies":false,"reason":"Insufficient 2026 opponent-adjusted efficiency evidence to award Liberty a clear advantage."},"qbYpa":{"qualifies":false,"reason":"No sufficiently verified quarterback-efficiency advantage for Liberty at this stage."}},"qualifierCount":0,"profileQualifies":false,"mlValueQualifies":false,"status":"watchlist","confidence":"C","action":"No Special","risks":["+200 is slightly worse than fair ML near +207.","Preseason-only profile evidence."],"note":"Monitor only."
+    },
+    {
+      "week":1,"gameId":"2026-W1-WYO-CSU","team":"Wyoming","opponent":"Colorado State","marketSpread":"+3.5","modelSpread":"+3.5","spreadEdge":0.0,"verifiedMoneyline":"+136","currentMl":136,"moneylineSource":"SportsGrid FanDuel market preview","moneylineTimestamp":"2026-08-30T08:30:00-04:00","fairWinProbability":0.4010334517,"fairMl":149,
+      "qualifiers":{"rest":{"qualifies":false,"reason":"Both teams are opening their seasons."},"nonExplosive":{"qualifies":false,"reason":"No 2026 down-to-down evidence yet."},"qbYpa":{"qualifies":false,"reason":"No verified preseason QB-efficiency edge large enough to award the qualifier."}},"qualifierCount":0,"profileQualifies":false,"mlValueQualifies":false,"status":"watchlist","confidence":"C","action":"No Special","risks":["+136 is worse than fair ML near +149."],"note":"No profile or price qualification."
+    },
+    {
+      "week":1,"gameId":"2026-W1-LOU-OM","team":"Louisville","opponent":"Ole Miss","marketSpread":"+6.5","modelSpread":"+5.5","spreadEdge":1.0,"verifiedMoneyline":"+210","currentMl":210,"moneylineSource":"VegasInsider consensus","moneylineTimestamp":"2026-08-30T08:30:00-04:00","fairWinProbability":0.3399835894,"fairMl":194,
+      "qualifiers":{"rest":{"qualifies":false,"reason":"Both teams are opening their seasons at a neutral site."},"nonExplosive":{"qualifies":true,"reason":"Louisville's veteran skill/run-game profile gives it a plausible repeatable-efficiency path rather than requiring explosive variance."},"qbYpa":{"qualifies":false,"reason":"Ole Miss returns Trinidad Chambliss from a CFP semifinal team; Louisville does not hold a clear verified QB-efficiency advantage."}},"qualifierCount":1,"profileQualifies":false,"mlValueQualifies":true,"status":"watchlist","confidence":"C+","action":"ML Watchlist only","risks":["Clears the price test at +210 versus fair +194 but only 1 of 3 football-profile qualifiers.","Ole Miss coaching transition is meaningful but not itself one of the frozen three qualifiers."],"note":"Do not promote without a second frozen-profile advantage."
     }
   ],
   "parlayLab": [],
   "ledger": [],
-  "ledgerSchema": {
-    "required": ["id", "week", "gameId", "team", "opponent", "identifiedAt", "entryMl", "fairWinProbability", "fairMl", "profileVersion", "qualifiers"],
-    "closeout": ["closeMl", "result", "units", "clvNote"],
-    "qualifiers": ["rest", "nonExplosive", "qbYpa"]
-  },
-  "migration": {
-    "from": "1.0",
-    "to": "1.1",
-    "adoptedAt": "2026-08-29T19:01:00-04:00",
-    "reason": "A hard spread-edge gate could reject a dog that independently clears the football profile and has verified positive moneyline value. v1.1 makes verified ML-versus-fair value the price gate and retains spread disagreement as confidence/context.",
-    "week0Handling": "No retroactive official wager or ledger entry was created for Hawaii because the rule was adopted at/after scheduled kickoff."
-  }
+  "ledgerSchema": {"required":["id","week","gameId","team","opponent","identifiedAt","entryMl","fairWinProbability","fairMl","profileVersion","qualifiers"],"closeout":["closeMl","result","units","clvNote"]},
+  "migration": {"from":"1.0","to":"1.1","adoptedAt":"2026-08-29T19:01:00-04:00","weekBindingFixedAt":"2026-08-30T08:30:00-04:00","week0Handling":"No retroactive official wager was created."}
 }
