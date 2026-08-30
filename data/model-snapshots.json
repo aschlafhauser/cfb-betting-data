@@ -1,1 +1,29 @@
-[]
+{
+  "season": 2026,
+  "snapshots": [
+    {
+      "week": 0,
+      "snapshotType": "frozen-pre-kickoff",
+      "frozenAt": "2026-08-29T21:54:42-04:00",
+      "governance": "Preserved exactly as the final operating model state; postgame outcomes must not rewrite these fair values.",
+      "games": [
+        {"gameId":"2026-W0-UNC-TCU","marketSpread":"TCU -9.5","modelSpread":"TCU -7","marketTotal":46.5,"modelTotal":47.0,"sideSignal":"North Carolina +9.5","spreadEdge":2.5},
+        {"gameId":"2026-W0-SJSU-USC","marketSpread":"USC -38.5","modelSpread":"USC -40.5","marketTotal":60.5,"modelTotal":61.0,"sideSignal":"USC -38.5","spreadEdge":2.0},
+        {"gameId":"2026-W0-NCSU-UVA","marketSpread":"Virginia -4","modelSpread":"Virginia -3","marketTotal":50.5,"modelTotal":54.0,"sideSignal":"NC State +4","spreadEdge":1.0},
+        {"gameId":"2026-W0-JSU-NDSU","marketSpread":"North Dakota State -6.5 to -7","modelSpread":null,"marketTotal":46.5,"modelTotal":46.5,"sideSignal":"MODEL AUDIT","spreadEdge":null},
+        {"gameId":"2026-W0-SAC-EMU","marketSpread":"Eastern Michigan -8.5","modelSpread":"Eastern Michigan -10.5","marketTotal":52.5,"modelTotal":51.5,"sideSignal":"Eastern Michigan -8.5","spreadEdge":2.0},
+        {"gameId":"2026-W0-HAW-STAN","marketSpread":"Stanford -3.5","modelSpread":"Stanford -2.5","marketTotal":48.5,"modelTotal":48.0,"sideSignal":"Hawaii +3.5","spreadEdge":1.0},
+        {"gameId":"2026-W0-NMSU-FSU","marketSpread":"Florida State -30.5","modelSpread":"Florida State -29.5","marketTotal":53.5,"modelTotal":52.5,"sideSignal":"New Mexico State +30.5","spreadEdge":1.0},
+        {"gameId":"2026-W0-MEM-UNLV","marketSpread":"UNLV -4.5","modelSpread":"UNLV -3.5","marketTotal":55.5,"modelTotal":56.0,"sideSignal":"Memphis +4.5","spreadEdge":1.0}
+      ],
+      "postgameAudit": {
+        "spreadMAEExcludingQuarantinedGame": 12.79,
+        "totalMAEAllEightGames": 9.94,
+        "averageTotalErrorActualMinusModel": -4.19,
+        "trackedConvictionSideSignals": {"wins":2,"losses":1,"pushes":0,"note":"UNC +9.5 W, USC -38.5 L, EMU -8.5 W; these were not persisted as official bets."},
+        "officialLedger": {"bets":0,"units":0.0},
+        "calibrationDecision": "Research flag only. Week 0 is too small and transition-heavy to justify system-level weight changes. Preserve preseason priors and cap team/unit production moves."
+      }
+    }
+  ]
+}
