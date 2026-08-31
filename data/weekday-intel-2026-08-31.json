@@ -1,0 +1,102 @@
+{
+  "season": 2026,
+  "week": 1,
+  "timestamp": "2026-08-31T09:09:21-05:00",
+  "type": "weekday-intelligence-watch",
+  "governance": "Prospective research snapshot. No system-level model weights changed. No official wager may be inferred from this file.",
+  "marketChecks": [
+    {
+      "gameId": "2026-W1-COL-GT",
+      "marketSpread": "Georgia Tech -6.5",
+      "marketTotal": 50.5,
+      "priorSpread": "Georgia Tech -6.5",
+      "priorTotal": 51.5,
+      "modelSpread": "Georgia Tech -7",
+      "modelTotal": 51.0,
+      "spreadEdge": 0.5,
+      "totalEdge": 0.5,
+      "decision": "PASS",
+      "note": "Side unchanged; total fell one point and is now essentially aligned with the model. VSiN reports the spread had been -7 through much of summer before moving market-wide to -6.5."
+    },
+    {
+      "gameId": "2026-W1-SJSU-EMU",
+      "marketSpread": "Eastern Michigan -3.5",
+      "marketTotal": 54.5,
+      "modelSpread": "Eastern Michigan -4.5",
+      "modelTotal": 53.5,
+      "spreadEdge": 1.0,
+      "totalEdge": 1.0,
+      "decision": "WATCH / PRICE TARGET",
+      "priceTarget": "Eastern Michigan -3 or better",
+      "note": "No meaningful side move. VSiN notes total movement upward and expects modeling interest after both teams played Week 0."
+    },
+    {
+      "gameId": "2026-W1-MIA-STAN",
+      "marketSpread": "Miami -24.5",
+      "marketTotal": 47.5,
+      "priorSpread": "Miami -24",
+      "priorTotal": 48.5,
+      "modelSpread": "Miami -23",
+      "modelTotal": 49.0,
+      "spreadEdge": 1.5,
+      "totalEdge": 1.5,
+      "decision": "WATCH / PRICE TARGET",
+      "priceTarget": "Stanford +24.5 or better remains a watch; information gate not yet cleared",
+      "note": "Market moved another half-point toward Miami while total fell one point. VSiN independently prices Miami -20.5, reinforcing that the current market favorite premium deserves monitoring, but this is not an activation by itself."
+    },
+    {
+      "gameId": "2026-W1-CLEM-LSU",
+      "marketSpread": "LSU -10.5",
+      "marketTotal": 51.5,
+      "modelSpread": "LSU -9.5",
+      "modelTotal": 51.0,
+      "spreadEdge": 1.0,
+      "totalEdge": 0.5,
+      "decision": "WATCH / PRICE TARGET",
+      "priceTarget": "Clemson +11.5 warrants stronger re-check",
+      "informationRisk": "medium-high",
+      "newFlag": "LSU eligibility litigation: former NFL players Zxavian Harris and Dae'Quan Wright are among athletes affected by a temporary restraining order; a Thursday hearing occurs just over 48 hours before kickoff.",
+      "note": "No fair-line adjustment yet because availability and role are unresolved and the market remains LSU -10.5. Treat as an information-risk flag, not an automatic Clemson upgrade."
+    },
+    {
+      "gameId": "2026-W1-UCLA-CAL",
+      "marketSpread": "UCLA -1.5",
+      "marketTotal": 53.5,
+      "modelSpread": "Pick",
+      "modelTotal": 53.0,
+      "spreadEdge": 1.5,
+      "totalEdge": 0.5,
+      "decision": "WATCH / PRICE TARGET",
+      "priceTarget": "Cal +2.5 preferred",
+      "note": "Current market unchanged. Fresh Cal beat analysis continues to emphasize high variance but identifies QB Jaron-Keawe Sagapolutele and the passing ceiling as Cal's strongest matchup path. This is supportive qualitative context, not a direct fair-line adjustment."
+    },
+    {
+      "gameId": "2026-W1-SMU-FSU",
+      "marketSpread": "SMU -3 market-wide with some -3.5 reported",
+      "marketTotal": 53.5,
+      "priorSpread": "SMU -2.5",
+      "modelSpread": "SMU -3",
+      "modelTotal": 53.0,
+      "spreadEdge": 0.0,
+      "totalEdge": 0.5,
+      "decision": "PASS",
+      "note": "Market moved toward the model from -2.5 to -3, with VSiN reporting FanDuel -3.5. The early model disagreement has been consumed rather than strengthened; do not chase through 3."
+    }
+  ],
+  "underdogSpecial": {
+    "version": "1.1",
+    "newOfficialSpecials": 0,
+    "parlayLab": [],
+    "note": "No newly verified +3.5-to-+7 dog cleared both the frozen 2-of-3 football profile and live-ML-better-than-fair gate in this pass."
+  },
+  "officialBetActivation": {
+    "newOfficialBets": 0,
+    "ledgerMutation": false,
+    "reason": "No monitored game cleared the established model edge, information-quality and executable-price gates."
+  },
+  "sources": [
+    {"name":"VSiN Week 1 College Football Betting Report and Odds","published":"2026-08-30","usedFor":"market lines and movement"},
+    {"name":"Reuters / Field Level Media","published":"2026-08-31","usedFor":"SEC eligibility litigation and LSU availability risk"},
+    {"name":"Write For California","published":"2026-08-31","usedFor":"Cal matchup context"}
+  ]
+}
