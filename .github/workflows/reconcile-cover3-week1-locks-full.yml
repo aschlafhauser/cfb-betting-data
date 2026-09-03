@@ -1,0 +1,81 @@
+name: Reconcile Cover 3 Week 1 Locks Full
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-cover3-week1-locks-full.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append deduped Cover 3 Week 1 locks
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          ep='Week 1 LOCKS 🔒 Best Bets, Against The Spread Picks, Moneyline Sprinkles & More! | Cover 3'
+          url='https://gamedaycole.com/2026/09/03/week-1-2026-cfb-locks-from-the-cover-3-podcast/'
+          new=[
+            ('c3-w1-locks-bud-smu-3','2026-W1-SMU-FSU','Cover 3 — Bud Elliott','SMU -3','lock','spread','SMU','contradicts-model','Bud Elliott locks SMU -3 vs Florida State (-110).'),
+            ('c3-w1-locks-bud-nd-1h-u245','2026-W1-WISC-ND','Cover 3 — Bud Elliott','1H Under 24.5','lock','1H total','Wisconsin/Notre Dame','orthogonal-new-information','Bud Elliott locks Wisconsin-Notre Dame first-half Under 24.5 (-110).'),
+            ('c3-w1-locks-bud-louom-u555','2026-W1-LOU-OM','Cover 3 — Bud Elliott','Under 55.5','lock','total','Louisville/Ole Miss','orthogonal-new-information','Bud Elliott locks Louisville-Ole Miss Under 55.5 (-110).'),
+            ('c3-w1-locks-bud-clem-tt-u205','2026-W1-CLEM-LSU','Cover 3 — Bud Elliott','Clemson team total Under 20.5','lock','team total','Clemson','orthogonal-new-information','Bud Elliott locks Clemson team total Under 20.5 (-110).'),
+            ('c3-w1-locks-bud-boise-1h-tt-u65','2026-W1-BOISE-ORE','Cover 3 — Bud Elliott','Boise State 1H team total Under 6.5','lock','1H team total','Boise State','orthogonal-new-information','Bud Elliott locks Boise State first-half team total Under 6.5 (-110).'),
+            ('c3-w1-locks-bud-mia-1h-135','2026-W1-MIA-STAN','Cover 3 — Bud Elliott','Miami 1H -13.5','lock','1H spread','Miami','contradicts-model','Bud Elliott locks Miami first-half -13.5 vs Stanford (-110).'),
+            ('c3-w1-locks-chip-nd-20','2026-W1-WISC-ND','Cover 3 — Chip Patterson','Notre Dame -20','lock','spread','Notre Dame','orthogonal-new-information','Chip Patterson locks Notre Dame -20 vs Wisconsin (-110).'),
+            ('c3-w1-locks-chip-ecu-ala-1h-u285','2026-W1-ECU-ALA','Cover 3 — Chip Patterson','1H Under 28.5','lock','1H total','East Carolina/Alabama','orthogonal-new-information','Chip Patterson locks East Carolina-Alabama first-half Under 28.5 (-110).'),
+            ('c3-w1-locks-chip-cal-2','2026-W1-UCLA-CAL','Cover 3 — Chip Patterson','Cal +2','lock','spread','Cal','corroborates-model','Chip Patterson locks Cal +2 vs UCLA (-110).'),
+            ('c3-w1-locks-chip-bc-75','2026-W1-BC-CIN','Cover 3 — Chip Patterson','Boston College +7.5','lock','spread','Boston College','corroborates-model','Chip Patterson locks Boston College +7.5 at Cincinnati (-110).'),
+            ('c3-w1-locks-chip-wyocsu-u465','2026-W1-WYO-CSU','Cover 3 — Chip Patterson','Under 46.5','lock','total','Wyoming/Colorado State','corroborates-model','Chip Patterson locks Wyoming-Colorado State Under 46.5 (-110).'),
+            ('c3-w1-locks-chip-boise-tt-u135','2026-W1-BOISE-ORE','Cover 3 — Chip Patterson','Boise State team total Under 13.5','lock','team total','Boise State','orthogonal-new-information','Chip Patterson locks Boise State team total Under 13.5 (-110).'),
+            ('c3-w1-locks-chip-msu-toledo-u475','2026-W1-TOLEDO-MSU','Cover 3 — Chip Patterson','Under 47.5','lock','total','Toledo/Michigan State','contradicts-model','Chip Patterson locks Toledo-Michigan State Under 47.5 (-110).'),
+            ('c3-w1-locks-chip-gt-1h-35','2026-W1-COL-GT','Cover 3 — Chip Patterson','Georgia Tech 1H -3.5','lock','1H spread','Georgia Tech','orthogonal-new-information','Chip Patterson locks Georgia Tech first-half -3.5 vs Colorado (-110).'),
+            ('c3-w1-locks-kanell-wisc-1h-115','2026-W1-WISC-ND','Cover 3 — Danny Kanell','Wisconsin 1H +11.5','lock','1H spread','Wisconsin','orthogonal-new-information','Danny Kanell locks Wisconsin first-half +11.5 vs Notre Dame (-110).'),
+            ('c3-w1-locks-kanell-lou-7','2026-W1-LOU-OM','Cover 3 — Danny Kanell','Louisville +7','lock','spread','Louisville','corroborates-model','Danny Kanell locks Louisville +7 vs Ole Miss (-110).'),
+            ('c3-w1-locks-kanell-aub-7','2026-W1-AUB-BAY','Cover 3 — Danny Kanell','Auburn -7','lock','spread','Auburn','contradicts-model','Danny Kanell locks Auburn -7 vs Baylor (-110).'),
+            ('c3-w1-locks-kanell-clemlsu-u505','2026-W1-CLEM-LSU','Cover 3 — Danny Kanell','Under 50.5','lock','total','Clemson/LSU','orthogonal-new-information','Danny Kanell locks Clemson-LSU Under 50.5 (-110).'),
+            ('c3-w1-locks-kanell-boise-tt-u135','2026-W1-BOISE-ORE','Cover 3 — Danny Kanell','Boise State team total Under 13.5','lock','team total','Boise State','orthogonal-new-information','Danny Kanell locks Boise State team total Under 13.5 (-110).'),
+            ('c3-w1-locks-kanell-stan-mia-o475','2026-W1-MIA-STAN','Cover 3 — Danny Kanell','Over 47.5','lock','total','Miami/Stanford','orthogonal-new-information','Danny Kanell locks Stanford-Miami Over 47.5 (-110).'),
+            ('c3-w1-locks-kanell-colgt-1h-u265','2026-W1-COL-GT','Cover 3 — Danny Kanell','1H Under 26.5','lock','1H total','Colorado/Georgia Tech','orthogonal-new-information','Danny Kanell locks Colorado-Georgia Tech first-half Under 26.5 (-110).'),
+            ('c3-w1-locks-fornelli-nd-u475','2026-W1-WISC-ND','Cover 3 — Tom Fornelli','Under 47.5','lock of the week','total','Wisconsin/Notre Dame','orthogonal-new-information','Tom Fornelli locks Wisconsin-Notre Dame Under 47.5 (-110).'),
+            ('c3-w1-locks-fornelli-aubbay-u59','2026-W1-AUB-BAY','Cover 3 — Tom Fornelli','Under 59','lock','total','Auburn/Baylor','orthogonal-new-information','Tom Fornelli locks Auburn-Baylor Under 59 (-110).'),
+            ('c3-w1-locks-fornelli-bccin-u505','2026-W1-BC-CIN','Cover 3 — Tom Fornelli','Under 50.5','lock','total','Boston College/Cincinnati','orthogonal-new-information','Tom Fornelli locks Cincinnati-Boston College Under 50.5 (-110).'),
+            ('c3-w1-ml-bud-baylor-250','2026-W1-AUB-BAY','Cover 3 — Bud Elliott','Baylor ML +250','moneyline sprinkle','moneyline','Baylor','corroborates-model','Bud Elliott sprinkles Baylor +250 moneyline vs Auburn.'),
+            ('c3-w1-ml-bud-wyo-165','2026-W1-WYO-CSU','Cover 3 — Bud Elliott','Wyoming ML +165','moneyline sprinkle','moneyline','Wyoming','orthogonal-new-information','Bud Elliott sprinkles Wyoming +165 moneyline vs Colorado State.'),
+            ('c3-w1-ml-bud-lib-190','2026-W1-LIB-JMU','Cover 3 — Bud Elliott','Liberty ML +190','moneyline sprinkle','moneyline','Liberty','corroborates-model','Bud Elliott sprinkles Liberty +190 moneyline vs James Madison.'),
+            ('c3-w1-ml-chip-cal-115','2026-W1-UCLA-CAL','Cover 3 — Chip Patterson','Cal ML +115','moneyline sprinkle','moneyline','Cal','corroborates-model','Chip Patterson sprinkles Cal +115 moneyline vs UCLA.'),
+            ('c3-w1-ml-chip-toledo-350','2026-W1-TOLEDO-MSU','Cover 3 — Chip Patterson','Toledo ML +350','moneyline sprinkle','moneyline','Toledo','orthogonal-new-information','Chip Patterson sprinkles Toledo +350 moneyline vs Michigan State.'),
+            ('c3-w1-ml-kanell-fsu-140','2026-W1-SMU-FSU','Cover 3 — Danny Kanell','Florida State ML +140','moneyline sprinkle','moneyline','Florida State','contradicts-model','Danny Kanell sprinkles Florida State +140 moneyline vs SMU.'),
+            ('c3-w1-ml-kanell-cal-115','2026-W1-UCLA-CAL','Cover 3 — Danny Kanell','Cal ML +115','moneyline sprinkle','moneyline','Cal','corroborates-model','Danny Kanell sprinkles Cal +115 moneyline vs UCLA.'),
+            ('c3-w1-ml-kanell-clem-325','2026-W1-CLEM-LSU','Cover 3 — Danny Kanell','Clemson ML +325','moneyline sprinkle','moneyline','Clemson','corroborates-model','Danny Kanell sprinkles Clemson +325 moneyline vs LSU.'),
+            ('c3-w1-ml-fornelli-cal-115','2026-W1-UCLA-CAL','Cover 3 — Tom Fornelli','Cal ML +115','moneyline sprinkle','moneyline','Cal','corroborates-model','Tom Fornelli sprinkles Cal +115 moneyline vs UCLA.')
+          ]
+          p=pathlib.Path('data/expert-weekly.json'); rows=json.loads(p.read_text()); ids={r.get('id') for r in rows}
+          for rid,gid,src,direction,conv,cat,team,rel,summary in new:
+            if rid in ids: continue
+            rows.append({'id':rid,'week':1,'gameId':gid,'source':src,'episode':ep,'sourceDate':'2026-09-03','segment':'full indexed pick sheet; episode timestamps available','type':'weekly locks — exact construction','explicit':True,'direction':direction,'conviction':conv,'sourceAnalysis':summary,'bettingImplication':'Exact host-level Cover 3 construction retained as correlated same-family evidence; portal model/price gates remain authoritative.','sourceFamily':'Cover 3','analyst':src.replace('Cover 3 — ',''),'phase':'pre-Week-1','category':cat,'team':team,'freshness':'same-day','independence':'correlated-source-family','incrementalInformation':1,'modelRelationship':rel,'summary':summary,'episodeCompleteness':'PROVISIONAL','sourceUrl':url})
+          p.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
+          ip=pathlib.Path('data/expert-intelligence.json'); intel=json.loads(ip.read_text()); iids={r.get('id') for r in intel}
+          for rid,gid,src,direction,conv,cat,team,rel,summary in new:
+            if rid in iids: continue
+            intel.append({'id':rid,'sourceFamily':'Cover 3','analyst':src.replace('Cover 3 — ',''),'sourceDate':'2026-09-03','phase':'pre-Week-1','category':cat,'team':team,'direction':direction,'conviction':conv,'freshness':'same-day','independence':'correlated-source-family','incrementalInformation':1,'modelRelationship':rel,'summary':summary,'sourceUrl':url})
+          ip.write_text(json.dumps(intel,ensure_ascii=False,indent=2)+'\n')
+          sp=pathlib.Path('data/expert-episode-state.json'); state=json.loads(sp.read_text())
+          found=False
+          for e in state:
+            if e.get('episode')==ep:
+              found=True; e['status']='PROVISIONAL'; e['checkedEvidence']=['official episode/show notes and timestamps','Podscan episode listing','complete indexed host-level ATS/1H/team-total pick sheet','complete indexed Moneyline Sprinkles sheet','current-week matchup relevance and dedupe check','Expert Intelligence v1 append','expert-weekly.json cross-check']; e['lastChecked']='2026-09-03T16:54:50-05:00'; e['ledgerAction']='full-host-pick-sheet-reconciled'; e['note']='Complete host-level pick sheet is now indexed and reconciled, including ATS, first-half, team-total and moneyline sprinkle constructions. Episode remains PROVISIONAL because a full retrievable transcript/captions with all matchup reasoning is still expected and has not yet been exhaustively reconciled.'
+          if not found:
+            state.append({'source':'Cover 3','episode':ep,'sourceDate':'2026-09-03','status':'PROVISIONAL','checkedEvidence':['official episode/show notes and timestamps','Podscan episode listing','complete indexed host-level ATS/1H/team-total pick sheet','complete indexed Moneyline Sprinkles sheet','current-week matchup relevance and dedupe check','Expert Intelligence v1 append','expert-weekly.json cross-check'],'lastChecked':'2026-09-03T16:54:50-05:00','ledgerAction':'full-host-pick-sheet-reconciled','note':'Complete host-level pick sheet reconciled; full transcript/captions still pending for reasoning completeness.'})
+          sp.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Commit reconciliation
+        shell: bash
+        run: |
+          git config user.name "cfb-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          git commit -m "Reconcile full Cover 3 Week 1 locks pick sheet" || exit 0
+          git push
