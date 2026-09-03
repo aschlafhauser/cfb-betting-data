@@ -1,0 +1,46 @@
+name: Reconcile Cover 3 Week 1 Locks Sep 3
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-cover3-w1-locks-sep3.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append new Cover 3 locks evidence
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          ep='Week 1 LOCKS 🔒 Best Bets, Against The Spread Picks, Moneyline Sprinkles & More! | Cover 3'
+          pod='https://www.podscan.fm/podcasts/cover-3-college-football'
+          cbs='https://www.cbssports.com/college-football/news/six-pack-picks-week-1-lsu-clemson-ole-miss-louisville/'
+          new=[
+            {'id':'c3-w1-locks-fornelli-lsu-10','week':1,'gameId':'2026-W1-CLEM-LSU','source':'Cover 3 — Tom Fornelli','episode':ep,'sourceDate':'2026-09-03','segment':'24:16 game segment; exact host-pick timestamp unresolved','type':'same-day near-primary exact spread pick','explicit':True,'direction':'LSU -10','conviction':'published Week 1 pick','sourceAnalysis':'Tom Fornelli’s same-day CBS Six Pack explicitly lays LSU -10 (-112). His case is that LSU has the materially stronger roster, Clemson has slipped from its elite tier, and LSU has incentive to make a statement under Lane Kiffin despite some uncertainty from the many new roster pieces.','bettingImplication':'This is explicit Cover 3-family disagreement with the portal’s Clemson +10/+10.5 lean. It should lower confidence in Clemson at current price but not be counted as independent of the Cover 3 podcast family or override the portal fair line.','sourceFamily':'Cover 3','analyst':'Tom Fornelli','phase':'pre-Week-1','category':'spread / roster-quality / coaching','team':'LSU','freshness':'same-day','independence':'correlated-source-family','incrementalInformation':1,'modelRelationship':'contradicts-model','summary':'Fornelli lays LSU -10; stronger roster and statement-game thesis oppose the portal’s Clemson +points lean.','episodeCompleteness':'PROVISIONAL','sourceUrl':cbs},
+            {'id':'c3-w1-locks-fornelli-lou-7','week':1,'gameId':'2026-W1-LOU-OM','source':'Cover 3 — Tom Fornelli','episode':ep,'sourceDate':'2026-09-03','segment':'36:45 game segment; exact host-pick timestamp unresolved','type':'same-day near-primary exact spread pick','explicit':True,'direction':'Louisville +7','conviction':'published Week 1 pick','sourceAnalysis':'Fornelli explicitly takes Louisville +7 (-112). He questions whether the market is overvaluing Ole Miss after last season, flags possible coaching drop-off from Lane Kiffin to Pete Golding, trusts Jeff Brohm with preparation time, and questions Ole Miss defensive quality after a middling 2025 efficiency profile.','bettingImplication':'This directly corroborates the portal’s Louisville +7 watch and aligns with earlier Cover 3 Louisville-upset discussion, but it remains one correlated Cover 3 source family rather than an independent confirmation.','sourceFamily':'Cover 3','analyst':'Tom Fornelli','phase':'pre-Week-1','category':'spread / coaching / defense','team':'Louisville','freshness':'same-day','independence':'correlated-source-family','incrementalInformation':1,'modelRelationship':'corroborates-model','summary':'Fornelli takes Louisville +7, citing Brohm preparation, Ole Miss coaching transition and defensive uncertainty.','episodeCompleteness':'PROVISIONAL','sourceUrl':cbs},
+            {'id':'c3-w1-locks-fornelli-wisc-nd-under','week':1,'gameId':'2026-W1-WISC-ND','source':'Cover 3 — Tom Fornelli','episode':ep,'sourceDate':'2026-09-03','segment':'40:28 game segment; exact host-pick timestamp unresolved','type':'same-day near-primary exact total pick','explicit':True,'direction':'Under 47.5','conviction':'Lock of the Week','sourceAnalysis':'Fornelli makes Wisconsin-Notre Dame Under 47.5 (-115) his Lock of the Week. He sees either Notre Dame suffocating Wisconsin’s rebuilt offense or Wisconsin’s improved defense keeping the game competitive, with both paths favoring fewer points.','bettingImplication':'This is strong Cover 3-family support for a lower-scoring Wisconsin-Notre Dame game. It is a distinct total construction from Pate’s Notre Dame -20.5 spread position and should be evaluated separately.','sourceFamily':'Cover 3','analyst':'Tom Fornelli','phase':'pre-Week-1','category':'total / defense / game-script','team':'Wisconsin-Notre Dame','freshness':'same-day','independence':'correlated-source-family','incrementalInformation':1,'modelRelationship':'orthogonal-new-information','summary':'Fornelli’s Week 1 Lock is Wisconsin-Notre Dame Under 47.5.','episodeCompleteness':'PROVISIONAL','sourceUrl':cbs},
+            {'id':'c3-w1-locks-fornelli-cal-ml','week':1,'gameId':'2026-W1-UCLA-CAL','source':'Cover 3 — Tom Fornelli','episode':ep,'sourceDate':'2026-09-03','segment':'47:20 other locks / exact episode timestamp unresolved','type':'same-day near-primary moneyline pick','explicit':True,'direction':'Cal moneyline +105','conviction':'Upset of the Week','sourceAnalysis':'Fornelli makes Cal +105 his Upset of the Week. He disagrees with Cal being a home underdog, sees a credible argument that Cal has the better quarterback, and is slightly higher on the Bears’ offensive skill players.','bettingImplication':'This directly corroborates the portal’s Cal +points direction and Will Compton’s Cal ML, while conflicting with Josh Pate’s low-confidence UCLA -1.5. Cover 3 and The Locker Room remain distinct source families.','sourceFamily':'Cover 3','analyst':'Tom Fornelli','phase':'pre-Week-1','category':'moneyline / quarterback / skill talent','team':'Cal','freshness':'same-day','independence':'independent-source-family','incrementalInformation':1,'modelRelationship':'corroborates-model','summary':'Fornelli takes Cal ML +105 as his Upset of the Week, citing QB and skill-position edge.','episodeCompleteness':'PROVISIONAL','sourceUrl':cbs}
+          ]
+          p=pathlib.Path('data/expert-weekly.json'); rows=json.loads(p.read_text()); ids={r.get('id') for r in rows}
+          rows.extend(r for r in new if r['id'] not in ids); p.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
+          ip=pathlib.Path('data/expert-intelligence.json'); intel=json.loads(ip.read_text()); iids={r.get('id') for r in intel}
+          for r in new:
+            ir={k:r[k] for k in ['id','sourceFamily','analyst','sourceDate','phase','category','team','direction','conviction','freshness','independence','incrementalInformation','modelRelationship','summary','sourceUrl']}
+            if ir['id'] not in iids: intel.append(ir)
+          ip.write_text(json.dumps(intel,ensure_ascii=False,indent=2)+'\n')
+          sp=pathlib.Path('data/expert-episode-state.json'); state=json.loads(sp.read_text())
+          if not any(e.get('episode')==ep for e in state):
+            state.append({'source':'Cover 3','episode':ep,'sourceDate':'2026-09-03','status':'PROVISIONAL','checkedEvidence':['Podscan same-day episode page and chapter timestamps','CBS Cover 3 show listing','same-day Tom Fornelli CBS Six Pack exact Week 1 picks','search for full transcript/captions and host-level complete lock sheet','current-week matchup relevance and dedupe check','Expert Intelligence v1 append','expert-weekly.json cross-check'],'lastChecked':'2026-09-03T13:55:00-05:00','ledgerAction':'four-new-fornelli-exact-pick-records; full-cover3-lock-sheet-still-provisional','note':'New Week 1 Locks episode discovered. Exact same-day Tom Fornelli picks are verified via his CBS Six Pack: LSU -10, Louisville +7, Wisconsin-Notre Dame Under 47.5 (Lock of Week), and Cal ML +105 (Upset of Week). The full episode transcript/complete host lock and moneyline-sprinkle sheet is not yet retrievable, so the episode remains PROVISIONAL and will be rechecked silently.'})
+          sp.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Commit runtime reconciliation
+        shell: bash
+        run: |
+          git config user.name 'cfb-runtime-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          git commit -m 'Reconcile Cover 3 Week 1 Locks evidence' || exit 0
+          git push
