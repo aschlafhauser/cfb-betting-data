@@ -1,0 +1,55 @@
+name: Reconcile McShay Sep 3
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-mcshay-sep3.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append deduped McShay Week 1 evidence
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          ep="Ranking Week 1 CFB Matchups, a 2023 NFL Redraft, QB Start-Bench-Cut, and Debuting First Tape"
+          url="https://www.theringer.com/podcasts/the-todd-mcshay-show/2026/09/03/ranking-week-1-cfb-matchups-a-2023-nfl-redraft-qb-start-bench-cut-and-debuting-first-tape"
+
+          p=pathlib.Path('data/expert-weekly.json')
+          rows=json.loads(p.read_text())
+          new={"id":"mcshay-w1-ecu-ala-cover","week":1,"gameId":"2026-W1-ECU-ALA","source":"The McShay Show — Todd McShay & Steve Muench","episode":ep,"sourceDate":"2026-09-03","segment":"1:11:58 Week 1 CFB picks; exact pick timestamp within segment not yet indexed","type":"weekly picks — favorite direction","explicit":True,"direction":"Alabama to cover; exact spread not yet verified","conviction":"favorite Week 1 betting pick; exact host-level attribution/line pending full transcript","sourceAnalysis":"The newly published McShay Show episode includes a dedicated Week 1 picks segment. Podcast Rex's indexed episode summary specifically identifies Alabama covering a large spread among the show's favorite betting picks. The available primary show notes confirm the picks segment but do not yet expose the exact spread or enough transcript detail to assign the Alabama pick to Todd versus Steve without inference.","bettingImplication":"This is new McShay-family support for Alabama laying a large number against East Carolina. Because the exact spread and host-level attribution are not yet retrievable, the portal should record only the cover direction and must not convert it into a price-specific recommendation until the transcript is complete.","sourceFamily":"The McShay Show","analyst":"Todd McShay & Steve Muench — host attribution pending transcript","phase":"pre-Week-1","category":"spread / weekly picks","team":"Alabama","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"orthogonal-new-information","summary":"New Sep. 3 McShay episode includes Alabama covering a large spread among its favorite Week 1 betting picks; exact line and host attribution remain unverified, so no number is inferred.","episodeCompleteness":"PROVISIONAL","sourceUrl":url}
+          if not any(r.get('id')==new['id'] for r in rows): rows.append(new)
+          p.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+"\n")
+
+          ip=pathlib.Path('data/expert-intelligence.json')
+          intel=json.loads(ip.read_text())
+          ir={k:new[k] for k in ['id','sourceFamily','analyst','sourceDate','phase','category','team','direction','conviction','freshness','independence','incrementalInformation','modelRelationship','summary','sourceUrl']}
+          if not any(r.get('id')==ir['id'] for r in intel): intel.append(ir)
+          ip.write_text(json.dumps(intel,ensure_ascii=False,indent=2)+"\n")
+
+          sp=pathlib.Path('data/expert-episode-state.json')
+          state=json.loads(sp.read_text())
+          found=False
+          for e in state:
+            if e.get('episode')==ep and e.get('source')=='The McShay Show':
+              found=True
+              e['status']='PROVISIONAL'
+              e['checkedEvidence']=["official Ringer episode page/show notes and timestamp chapters","Amazon Music episode listing/show notes","Podcast Rex indexed episode summary/key takeaways","web search for full transcript/captions","current-week matchup relevance and dedupe check","Week 1 picks segment identified at 1:11:58","Alabama-cover direction captured without inventing exact spread or host attribution"]
+              e['lastChecked']='2026-09-03T09:53:57-05:00'
+              e['ledgerAction']='one-new-provisional-weekly-pick-record'
+              e['note']='New Sep. 3 episode discovered. Official show notes identify a Week 1 picks segment and Podcast Rex specifically summarizes Alabama covering a large spread among the favorite picks. The full transcript/captions are not yet retrievable, so exact spread, host attribution, any additional low-scoring-game constructions, score predictions and full matchup reasoning remain unresolved. Episode stays PROVISIONAL and will be rechecked silently.'
+          if not found:
+            state.append({"source":"The McShay Show","episode":ep,"sourceDate":"2026-09-03","status":"PROVISIONAL","checkedEvidence":["official Ringer episode page/show notes and timestamp chapters","Amazon Music episode listing/show notes","Podcast Rex indexed episode summary/key takeaways","web search for full transcript/captions","current-week matchup relevance and dedupe check","Week 1 picks segment identified at 1:11:58","Alabama-cover direction captured without inventing exact spread or host attribution"],"lastChecked":"2026-09-03T09:53:57-05:00","ledgerAction":"one-new-provisional-weekly-pick-record","note":"New Sep. 3 episode discovered. Official show notes identify a Week 1 picks segment and Podcast Rex specifically summarizes Alabama covering a large spread among the favorite picks. The full transcript/captions are not yet retrievable, so exact spread, host attribution, any additional low-scoring-game constructions, score predictions and full matchup reasoning remain unresolved. Episode stays PROVISIONAL and will be rechecked silently."})
+          sp.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
+          PY
+      - name: Commit runtime reconciliation
+        shell: bash
+        run: |
+          git config user.name "cfb-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          git commit -m "Add McShay Sep 3 Week 1 podcast evidence" || exit 0
+          git push
