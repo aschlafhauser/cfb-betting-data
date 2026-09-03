@@ -1,0 +1,63 @@
+name: Reconcile Locker Room Sep 3
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-locker-room-sep3.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append deduped expert records
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          ep="The Locker Room - Josh Pate Is ALL IN On DJ Lagway & Baylor + Taylor Lewan Loves LSU, Will Compton Says Cal Over UCLA"
+          url="https://www.listennotes.com/podcasts/josh-pates-college/the-locker-room-josh-pate-is-2K6HvnVZtmO/"
+          p=pathlib.Path('data/expert-weekly.json')
+          rows=json.loads(p.read_text())
+          new=[
+            {"id":"locker-w1-pate-nd-205","week":1,"gameId":"2026-W1-WISC-ND","source":"The Locker Room — Josh Pate","episode":ep,"sourceDate":"2026-09-02","segment":"32:11-36:51","type":"exact spread + confidence pick","explicit":True,"direction":"Notre Dame -20.5","conviction":"3 units","sourceAnalysis":"Pate says he would lay Notre Dame up to roughly -26, hates the matchup spot for Wisconsin, expects Notre Dame to press margin because of limited resume opportunities, and cites Wisconsin offensive-line health plus difficulty moving the ball against Notre Dame's defense. He records Notre Dame -20.5 for three units.","bettingImplication":"This materially strengthens the existing Notre Dame favorite case and supplies an exact price/conviction that Pate's separate prediction show did not. It remains correlated Josh Pate-family evidence, not a second independent source.","sourceFamily":"Josh Pate / The Locker Room","analyst":"Josh Pate","phase":"pre-Week-1","category":"spread / confidence / matchup","team":"Notre Dame","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"orthogonal-new-information","summary":"Pate lays Notre Dame -20.5 for 3 units and says he would lay up to about -26.","episodeCompleteness":"COMPLETE","sourceUrl":url},
+            {"id":"locker-w1-pate-om-65","week":1,"gameId":"2026-W1-LOU-OM","source":"The Locker Room — Josh Pate","episode":ep,"sourceDate":"2026-09-02","segment":"36:51-45:14","type":"exact spread + confidence pick","explicit":True,"direction":"Ole Miss -6.5","conviction":"3 units","sourceAnalysis":"Pate records Ole Miss -6.5 for three units. He treats Louisville's rebuilt areas as questions rather than automatic weaknesses but still prefers Ole Miss at the posted number.","bettingImplication":"This sharpens the independent-source disagreement with the portal's Louisville +7 watch and Cover 3's Louisville-upset case. It is a stronger Pate signal than the lower-conviction prediction-show wording because the exact price and three-unit confidence are now explicit.","sourceFamily":"Josh Pate / The Locker Room","analyst":"Josh Pate","phase":"pre-Week-1","category":"spread / confidence","team":"Ole Miss","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"contradicts-model","summary":"Pate lays Ole Miss -6.5 for 3 units, strengthening the Pate-family disagreement with Louisville +points.","episodeCompleteness":"COMPLETE","sourceUrl":url},
+            {"id":"locker-w1-pate-bay-75","week":1,"gameId":"2026-W1-AUB-BAY","source":"The Locker Room — Josh Pate","episode":ep,"sourceDate":"2026-09-02","segment":"45:14-58:48","type":"exact spread + maximum-confidence pick","explicit":True,"direction":"Baylor +7.5","conviction":"5 units / bang-the-table","sourceAnalysis":"Pate makes Baylor +7.5 his five-unit confidence play. He questions why the line is only 7.5, cites Auburn offensive-line newness, says Dave Aranda has called Baylor's defensive line a strength, and argues DJ Lagway's ceiling creates a plausible upset/cover path despite obvious volatility.","bettingImplication":"This is a material confidence upgrade to Pate's previously captured Baylor-cover call and directly corroborates the portal's Baylor +points direction. The portal should preserve its own activation threshold and not treat Pate's five units as a model override.","sourceFamily":"Josh Pate / The Locker Room","analyst":"Josh Pate","phase":"pre-Week-1","category":"spread / maximum confidence / matchup","team":"Baylor","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"corroborates-model","summary":"Pate makes Baylor +7.5 a 5-unit maximum-confidence play.","episodeCompleteness":"COMPLETE","sourceUrl":url},
+            {"id":"locker-w1-will-cal-ml","week":1,"gameId":"2026-W1-UCLA-CAL","source":"The Locker Room — Will Compton","episode":ep,"sourceDate":"2026-09-02","segment":"58:48-1:02:41","type":"moneyline + confidence pick","explicit":True,"direction":"Cal moneyline","conviction":"3 units","sourceAnalysis":"Compton takes Cal moneyline for three units. He is bullish on Cal's receiving additions and quarterback setup and treats the near-pick'em market as sufficient to take the outright side.","bettingImplication":"This independently corroborates the portal's Cal +points direction, but it is correlated within The Locker Room family and should not be counted as separate from other same-show host opinions.","sourceFamily":"The Locker Room","analyst":"Will Compton","phase":"pre-Week-1","category":"moneyline / confidence / roster","team":"Cal","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"corroborates-model","summary":"Compton takes Cal moneyline for 3 units.","episodeCompleteness":"COMPLETE","sourceUrl":url},
+            {"id":"locker-w1-pate-ucla-15","week":1,"gameId":"2026-W1-UCLA-CAL","source":"The Locker Room — Josh Pate","episode":ep,"sourceDate":"2026-09-02","segment":"1:02:41-1:03:27","type":"exact spread + low-confidence pick","explicit":True,"direction":"UCLA -1.5","conviction":"1 unit","sourceAnalysis":"Pate says the matchup is difficult to know with confidence but retains faith in Bob Chesney's direction at UCLA and lays UCLA -1.5 for one unit.","bettingImplication":"This creates explicit same-episode disagreement with Will Compton's Cal moneyline pick and contradicts the portal's Cal lean, although Pate's stated confidence is low.","sourceFamily":"Josh Pate / The Locker Room","analyst":"Josh Pate","phase":"pre-Week-1","category":"spread / low confidence / coaching","team":"UCLA","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"contradicts-model","summary":"Pate lays UCLA -1.5 for 1 unit, creating a clear same-show split with Compton's Cal ML.","episodeCompleteness":"COMPLETE","sourceUrl":url},
+            {"id":"locker-w1-pate-sjsu-ml","week":1,"gameId":"2026-W1-SJSU-EMU","source":"The Locker Room — Josh Pate","episode":ep,"sourceDate":"2026-09-02","segment":"1:09:12-1:10:38","type":"explicit moneyline pick","explicit":True,"direction":"San Jose State moneyline","conviction":"explicit ML pick; units not stated in segment","sourceAnalysis":"Pate explicitly takes San Jose State moneyline at Eastern Michigan. He says he thinks San Jose State should actually be laying points and therefore sees value in the underdog ML, while acknowledging the short-rest West-to-East travel concern.","bettingImplication":"This is materially stronger than Pate's already captured San Jose State +2.5 best bet because it adds a distinct outright-win construction. It directly contradicts the portal's EMU -4.5 fair spread, while leaving the separate official SJSU-EMU Under untouched.","sourceFamily":"Josh Pate / The Locker Room","analyst":"Josh Pate","phase":"pre-Week-1","category":"moneyline / price disagreement / travel","team":"San Jose State","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"contradicts-model","summary":"Pate explicitly takes San Jose State ML and says his view makes SJSU the team that should be laying points.","episodeCompleteness":"COMPLETE","sourceUrl":url},
+            {"id":"locker-w1-pate-lib-parlay","week":1,"gameId":"2026-W1-LIB-JMU","source":"The Locker Room — Josh Pate","episode":ep,"sourceDate":"2026-09-02","segment":"1:10:49-1:11:14","type":"parlay leg only — not standalone pick","explicit":True,"direction":"Liberty +6.5 as parlay leg paired with Oklahoma State -13.5","conviction":"two-leg parlay +288; Liberty not stated as standalone","sourceAnalysis":"Pate pairs Oklahoma State -13.5 with Liberty +6.5 in a two-leg parlay returning +288. He says he has less to say about Liberty and that the model simply likes it. The Liberty leg is not presented as a standalone wager.","bettingImplication":"This is mild model-family support for Liberty +6.5 and directionally aligns with the portal's small Liberty lean, but it must not be represented as a standalone Josh Pate bet.","sourceFamily":"Josh Pate / The Locker Room","analyst":"Josh Pate","phase":"pre-Week-1","category":"parlay leg / model","team":"Liberty","freshness":"same-day","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"corroborates-model","summary":"Liberty +6.5 appears only as a leg of Pate's +288 parlay with Oklahoma State -13.5; not a standalone bet.","episodeCompleteness":"COMPLETE","sourceUrl":url}
+          ]
+          ids={r.get('id') for r in rows}
+          for r in new:
+            if r['id'] not in ids: rows.append(r)
+          p.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+"\n")
+
+          ip=pathlib.Path('data/expert-intelligence.json')
+          intel=json.loads(ip.read_text())
+          iids={r.get('id') for r in intel}
+          for r in new:
+            ir={k:r[k] for k in ['id','sourceFamily','analyst','sourceDate','phase','category','team','direction','conviction','freshness','independence','incrementalInformation','modelRelationship','summary','sourceUrl']}
+            if ir['id'] not in iids: intel.append(ir)
+          ip.write_text(json.dumps(intel,ensure_ascii=False,indent=2)+"\n")
+
+          sp=pathlib.Path('data/expert-episode-state.json')
+          state=json.loads(sp.read_text())
+          for e in state:
+            if e.get('episode')==ep:
+              e['status']='COMPLETE'
+              e['checkedEvidence']=["official Omny episode page/show notes and timestamp chapters","full indexed Listen Notes transcript","host-level confidence-unit picks","moneyline/spread/parlay constructions","current-week matchup relevance and dedupe check","Expert Intelligence v1 append","expert-weekly.json cross-check","final completeness audit"]
+              e['lastChecked']='2026-09-03T05:39:00-05:00'
+              e['ledgerAction']='late-transcript-reconciled-material-confidence-and-construction-updates'
+              e['note']='Full transcript is now indexed and reconciled. Material late evidence includes Josh Pate Notre Dame -20.5 (3 units), Ole Miss -6.5 (3), Baylor +7.5 (5), UCLA -1.5 (1), San Jose State moneyline, and Liberty +6.5 strictly as a parlay leg; Will Compton Cal moneyline (3 units) is retained as same-show disagreement. The Pate SJSU ML is a distinct outright construction from his earlier +2.5 best bet. Episode is COMPLETE.'
+          sp.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
+          PY
+      - name: Remove one-off workflow and commit runtime reconciliation
+        shell: bash
+        run: |
+          rm -f .github/workflows/reconcile-locker-room-sep3.yml
+          git config user.name "cfb-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json .github/workflows/reconcile-locker-room-sep3.yml
+          git commit -m "Reconcile Locker Room Week 1 transcript evidence"
+          git push
