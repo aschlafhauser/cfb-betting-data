@@ -3,6 +3,7 @@
   "week": 1,
   "status": "COMPLETE",
   "completedAt": "2026-09-03T07:10:00-05:00",
+  "lastExecutionAuditAt": "2026-09-03T07:24:00-05:00",
   "gameCount": 91,
   "completedGameCount": 91,
   "defaultStage": "deep-dive",
@@ -24,10 +25,23 @@
     "Underdog Special v1.1 eligibility framework"
   ],
   "marketCrossCheck": {
-    "source": "Blue Chip Analytics Week 1 full-slate board plus current CBS/Oddschecker Thursday cross-checks",
-    "sourceAsOf": "2026-09-03T07:10:00-05:00",
+    "source": "Blue Chip Analytics Week 1 full-slate board plus current CBS/FantasyData/Oddschecker/BetMGM/Linewhale checks",
+    "sourceAsOf": "2026-09-03T07:24:00-05:00",
     "note": "External power lines are research cross-checks only and are never substituted for the production Final Fair or used by themselves to activate an official wager."
   },
+  "thursdayUrgentAudit": [
+    {"game":"Massachusetts at Rutgers","market":"Rutgers -29.5 / total about 51.5-52.5","decision":"PASS","note":"Large-favorite game; no validated production edge strong enough to activate. Rutgers matchup context is favorable, but no price chase is warranted."},
+    {"game":"Bethune-Cookman at UCF","market":"UCF -42.5 / 58.5","decision":"PASS","note":"FCS opponent; Independent Fair unavailable without genuine opponent coverage."},
+    {"game":"Akron at Wake Forest","market":"Wake Forest -24.5 / 48-48.5","decision":"WATCH / PRICE TARGET","note":"External independent power cross-check is modestly stronger on Wake, but no production-gate activation without a validated Final Fair edge."},
+    {"game":"Merrimack at Delaware","market":"Delaware -28.5 / 56.5","decision":"PASS","note":"FCS opponent; no manufactured independent edge."},
+    {"game":"West Georgia at Kennesaw State","market":"Kennesaw State -22.5 / 51.5","decision":"PASS","note":"External power disagreement is extreme and contradictory to market; treated as model-quality warning, not a bet signal."},
+    {"game":"UAlbany at Buffalo","market":"Buffalo -18.5 / about 48","decision":"PASS","note":"FCS opponent; market moved sharply toward Albany from earlier numbers, but no production edge is asserted without validated cross-level pricing."},
+    {"game":"Arkansas-Pine Bluff at Missouri","market":"Missouri -54 to -54.5 / 61","decision":"PASS","note":"FCS opponent; no independent price manufactured."},
+    {"game":"Colorado at Georgia Tech","market":"Georgia Tech roughly -6.5 to -7.5 / 50.5-51","decision":"PASS","note":"Production fair remains Georgia Tech -7; current price is at/through fair, eliminating actionable value."},
+    {"game":"Eastern Illinois at Minnesota","market":"Minnesota -42.5 / 51.5","decision":"PASS","note":"FCS opponent; external power and market are closely aligned."},
+    {"game":"Idaho at Utah","market":"Utah -35.5 / 57.5","decision":"PASS / MONITOR WEATHER","note":"Elevated wind is monitored; independent external handicap supports Utah but not enough to override production-gate discipline."},
+    {"game":"UAB at Illinois","market":"Illinois -27.5 / 54.5","decision":"WATCH / PRICE TARGET","note":"External power cross-check and local matchup reporting lean Illinois, but new QB/new OL/new defensive scheme introduce enough uncertainty to avoid forcing a large-favorite bet."}
+  ],
   "weatherTravelFlags": [
     "UTEP at Oklahoma: elevated heat/wind monitoring",
     "Idaho at Utah: elevated wind monitoring",
@@ -53,6 +67,17 @@
     "Washington State at Washington"
   ],
   "externalPowerDisagreementNote": "These are mandatory re-check games because an external independent power source differs materially from the sportsbook market. They are not official bets and do not overwrite our production fair lines.",
+  "newActivation": {
+    "game":"Toledo at Michigan State",
+    "bet":"Over 46.5",
+    "odds":-112,
+    "units":0.5,
+    "finalFairTotal":49.0,
+    "finalExecutableEdge":2.5,
+    "gateVersion":"v1.1",
+    "tier":"standard 2.0-2.99",
+    "note":"Persisted immediately after executable 46.5 was reverified. External Under-system disagreement remains a confidence reducer, not a high-risk veto."
+  },
   "modelCoveragePolicy": "FBS-v-FCS games still receive full information, market, matchup, weather and execution research. Independent Fair/Edge remains unavailable when the independent engine lacks genuine opponent rating coverage; no neutral or market-derived substitute is labeled independent.",
   "decisionPolicy": "Stage records research completeness only. OFFICIAL BET / WATCH-PRICE TARGET / PASS remains a separate prospective execution decision and may change after Deep Dive as price or information changes.",
   "maintenance": "All unplayed games remain live through individual kickoff. Thursday/Friday games receive immediate refresh priority; later games are revisited as material price, availability, expert or weather information changes."
