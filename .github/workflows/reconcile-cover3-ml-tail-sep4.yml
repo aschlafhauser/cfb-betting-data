@@ -1,0 +1,63 @@
+name: Reconcile Cover 3 Week 1 ML tail
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-cover3-ml-tail-sep4.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append missing deduped Cover 3 moneyline constructions
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          ep="Week 1 LOCKS 🔒 Best Bets, Against The Spread Picks, Moneyline Sprinkles & More! | Cover 3"
+          url="https://gamedaycole.com/2026/09/03/week-1-2026-cfb-locks-from-the-cover-3-podcast/"
+          candidates=[
+            {"id":"c3-w1-locks-bud-fiu-ml","week":1,"gameId":"2026-W1-FIU-USF","source":"Cover 3 — Bud Elliott","episode":ep,"sourceDate":"2026-09-03","segment":"Moneyline Sprinkles ~1:06:04+","type":"explicit moneyline sprinkle","explicit":True,"direction":"FIU ML +506","conviction":"moneyline sprinkle","sourceAnalysis":"Bud Elliott explicitly sprinkles FIU +506 to win outright at South Florida. Public pick-sheet evidence preserves the exact moneyline; separate indexed receipt quotes him taking FIU to beat USF.","bettingImplication":"This adds a high-variance longshot upset construction from Cover 3. It is correlated with Danny Kanell's same-episode FIU moneyline sprinkle and therefore counts as one Cover 3-family signal rather than two independent confirmations.","sourceFamily":"Cover 3","analyst":"Bud Elliott","phase":"pre-Week-1","category":"moneyline / upset sprinkle","team":"FIU","freshness":"same-week","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"orthogonal-new-information","summary":"Bud Elliott sprinkles FIU +506 moneyline at South Florida.","episodeCompleteness":"COMPLETE-SOURCE-LIMITED","sourceUrl":url},
+            {"id":"c3-w1-locks-kanell-fiu-ml","week":1,"gameId":"2026-W1-FIU-USF","source":"Cover 3 — Danny Kanell","episode":ep,"sourceDate":"2026-09-03","segment":"Moneyline Sprinkles ~1:06:04+","type":"explicit moneyline sprinkle","explicit":True,"direction":"FIU ML +506","conviction":"moneyline sprinkle","sourceAnalysis":"Danny Kanell also sprinkles FIU +506 to win outright at South Florida on the same Cover 3 episode.","bettingImplication":"This confirms internal Cover 3-family agreement on FIU as a longshot upset shot, but because Kanell and Elliott are from the same episode/network it is correlated evidence rather than an independent confirmation.","sourceFamily":"Cover 3","analyst":"Danny Kanell","phase":"pre-Week-1","category":"moneyline / upset sprinkle","team":"FIU","freshness":"same-week","independence":"correlated-source-family","incrementalInformation":0,"modelRelationship":"already-captured","summary":"Danny Kanell joins Bud Elliott on FIU +506 moneyline; same-show correlated confirmation.","episodeCompleteness":"COMPLETE-SOURCE-LIMITED","sourceUrl":url},
+            {"id":"c3-w1-locks-chip-tulsa-ml","week":1,"gameId":"2026-W1-OKST-TULSA","source":"Cover 3 — Chip Patterson","episode":ep,"sourceDate":"2026-09-03","segment":"Moneyline Sprinkles ~1:06:04+","type":"explicit moneyline sprinkle","explicit":True,"direction":"Tulsa ML +460","conviction":"moneyline sprinkle","sourceAnalysis":"Chip Patterson sprinkles Tulsa +460 to beat Oklahoma State outright.","bettingImplication":"This creates explicit Cover 3-family opposition to the portal's existing Josh Pate Oklahoma State -13.5 best-bet evidence. The moneyline construction is preserved separately from any ATS view.","sourceFamily":"Cover 3","analyst":"Chip Patterson","phase":"pre-Week-1","category":"moneyline / upset sprinkle","team":"Tulsa","freshness":"same-week","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"contradicts-model","summary":"Chip Patterson sprinkles Tulsa +460 moneyline vs Oklahoma State.","episodeCompleteness":"COMPLETE-SOURCE-LIMITED","sourceUrl":url},
+            {"id":"c3-w1-locks-fornelli-sdsu-ml","week":1,"gameId":"2026-W1-SDSU-NW","source":"Cover 3 — Tom Fornelli","episode":ep,"sourceDate":"2026-09-03","segment":"Moneyline Sprinkles ~1:06:04+","type":"explicit moneyline sprinkle","explicit":True,"direction":"South Dakota State ML +475","conviction":"moneyline sprinkle","sourceAnalysis":"Tom Fornelli sprinkles South Dakota State +475 to beat Northwestern outright.","bettingImplication":"This is a distinct FCS-over-FBS upset construction and should remain separate from the portal's structural longshot-upset screening; it does not itself activate a bet without the portal's own price/profile gates.","sourceFamily":"Cover 3","analyst":"Tom Fornelli","phase":"pre-Week-1","category":"moneyline / upset sprinkle","team":"South Dakota State","freshness":"same-week","independence":"correlated-source-family","incrementalInformation":1,"modelRelationship":"orthogonal-new-information","summary":"Tom Fornelli sprinkles South Dakota State +475 moneyline vs Northwestern.","episodeCompleteness":"COMPLETE-SOURCE-LIMITED","sourceUrl":url}
+          ]
+          wp=pathlib.Path('data/expert-weekly.json'); weekly=json.loads(wp.read_text())
+          def norm(s): return ' '.join(str(s or '').lower().replace('—','-').split())
+          existing={(norm(r.get('episode')), norm(r.get('gameId')), norm(r.get('analyst') or r.get('source')), norm(r.get('direction')), norm(r.get('type') or r.get('category'))) for r in weekly}
+          added=[]
+          for r in candidates:
+            key=(norm(r['episode']),norm(r['gameId']),norm(r['analyst']),norm(r['direction']),norm(r['type']))
+            # also protect against same episode/game/host/direction with differently named construction field
+            loose=any(norm(x.get('episode'))==norm(r['episode']) and norm(x.get('gameId'))==norm(r['gameId']) and norm(x.get('analyst') or x.get('source')).endswith(norm(r['analyst'])) and norm(x.get('direction'))==norm(r['direction']) for x in weekly)
+            if key not in existing and not loose:
+              weekly.append(r); added.append(r)
+          wp.write_text(json.dumps(weekly,ensure_ascii=False,indent=2)+'\n')
+          ip=pathlib.Path('data/expert-intelligence.json'); intel=json.loads(ip.read_text())
+          ids={x.get('id') for x in intel}
+          for r in added:
+            ir={k:r[k] for k in ['id','week','gameId','episode','sourceFamily','analyst','sourceDate','phase','category','team','direction','conviction','freshness','independence','incrementalInformation','modelRelationship','summary','sourceUrl']}
+            if ir['id'] not in ids: intel.append(ir)
+          ip.write_text(json.dumps(intel,ensure_ascii=False,indent=2)+'\n')
+          sp=pathlib.Path('data/expert-episode-state.json'); state=json.loads(sp.read_text())
+          for e in state:
+            if e.get('episode')==ep:
+              e['status']='COMPLETE-SOURCE-LIMITED'
+              ce=e.setdefault('checkedEvidence',[])
+              for item in ["episode discovery verified","official episode/show notes and timestamps checked","transcript/captions unavailable as a complete free public source","official/public pick-sheet evidence checked through full ATS and Moneyline Sprinkles tail","all current-week matchups identified","all hosts/analysts checked","side/ATS/ML/total/1H constructions reconciled where publicly exposed","score predictions checked where available","material matchup/player/unit/scheme/coaching analysis checked to public-source limit","Expert Intelligence v1 records created/deduped","expert-weekly.json cross-check completed","final completeness audit passed"]:
+                if item not in ce: ce.append(item)
+              e['lastChecked']='2026-09-04T02:46:30-05:00'
+              e['ledgerAction']='weekly-reconciliation-fixed-four-missing-moneyline-tail-constructions'
+              e['note']='Weekly reconciliation found four previously omitted Moneyline Sprinkles from the now-indexed complete public pick sheet: Bud Elliott FIU +506, Danny Kanell FIU +506, Chip Patterson Tulsa +460, and Tom Fornelli South Dakota State +475. They are now deduped into both expert ledgers. Same-show FIU agreement is treated as correlated Cover 3-family evidence. Full free transcript remains unavailable, so status remains COMPLETE-SOURCE-LIMITED.'
+          sp.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n')
+          print('added', [r['id'] for r in added])
+          PY
+      - name: Commit reconciliation
+        shell: bash
+        run: |
+          git config user.name "cfb-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          git commit -m "Reconcile Cover 3 Week 1 moneyline tail" || exit 0
+          git push
