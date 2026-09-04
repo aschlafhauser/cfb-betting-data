@@ -3,82 +3,147 @@
   "week": 1,
   "status": "COMPLETE",
   "completedAt": "2026-09-03T07:10:00-05:00",
-  "lastExecutionAuditAt": "2026-09-03T07:24:00-05:00",
+  "lastExecutionAuditAt": "2026-09-04T08:34:31-05:00",
   "gameCount": 91,
   "completedGameCount": 91,
   "defaultStage": "deep-dive",
   "nextStage": "final-kickoff-locked",
-  "coverageRule": "Every selected-week game receives a complete Deep Dive by Wednesday; this Week 1 catch-up audit was completed Thursday morning. Priority controls revisit frequency, not research depth.",
+  "coverageRule": "Every selected-week game receives a complete Deep Dive by Wednesday and remains actively maintained through individual kickoff. Week 1 remains 91/91 complete; Friday refresh rechecked the complete unplayed schedule, with earlier kickoffs and actionable/watch games receiving immediate execution review.",
   "reviewedDimensions": [
     "complete slate and kickoff sequencing",
-    "current/recent spread and total market",
+    "current verified spread / total / relevant moneyline",
     "market movement and price sensitivity",
     "embedded quantitative fair-line engine",
-    "Independent Composite where genuine source coverage exists",
-    "Phil Steele team power / continuity / unit context already loaded in portal",
-    "opponent-adjusted team and unit context already available",
-    "QB / depth-chart / injury / suspension / coaching availability public scan",
+    "Independent Football Fair/Edge only where genuinely emitted",
+    "Phil Steele power / continuity / unit context already loaded",
+    "opponent-adjusted team and unit context",
+    "QB / depth-chart / injury / suspension / coaching availability",
     "travel and home-field context",
     "actionable weather risk",
-    "already-ingested Expert Intelligence v1",
-    "Bet Activation Gate v1.1 classification framework",
-    "Underdog Special v1.1 eligibility framework"
+    "newly ingested Expert Intelligence v1",
+    "Bet Activation Gate v1.1",
+    "Underdog Special v1.1",
+    "Longshot Upset Lab complete-schedule +300 screen"
   ],
   "marketCrossCheck": {
-    "source": "Blue Chip Analytics Week 1 full-slate board plus current CBS/FantasyData/Oddschecker/BetMGM/Linewhale checks",
-    "sourceAsOf": "2026-09-03T07:24:00-05:00",
-    "note": "External power lines are research cross-checks only and are never substituted for the production Final Fair or used by themselves to activate an official wager."
+    "source": "CBS Sports Week 1 odds board plus Action Network / SportsbookReview / current matchup-specific market checks",
+    "sourceAsOf": "2026-09-04T08:34:31-05:00",
+    "note": "External lines and models remain research cross-checks only. No market-derived or reverse-engineered value is labeled Independent Football Fair/Edge."
   },
-  "thursdayUrgentAudit": [
-    {"game":"Massachusetts at Rutgers","market":"Rutgers -29.5 / total about 51.5-52.5","decision":"PASS","note":"Large-favorite game; no validated production edge strong enough to activate. Rutgers matchup context is favorable, but no price chase is warranted."},
-    {"game":"Bethune-Cookman at UCF","market":"UCF -42.5 / 58.5","decision":"PASS","note":"FCS opponent; Independent Fair unavailable without genuine opponent coverage."},
-    {"game":"Akron at Wake Forest","market":"Wake Forest -24.5 / 48-48.5","decision":"WATCH / PRICE TARGET","note":"External independent power cross-check is modestly stronger on Wake, but no production-gate activation without a validated Final Fair edge."},
-    {"game":"Merrimack at Delaware","market":"Delaware -28.5 / 56.5","decision":"PASS","note":"FCS opponent; no manufactured independent edge."},
-    {"game":"West Georgia at Kennesaw State","market":"Kennesaw State -22.5 / 51.5","decision":"PASS","note":"External power disagreement is extreme and contradictory to market; treated as model-quality warning, not a bet signal."},
-    {"game":"UAlbany at Buffalo","market":"Buffalo -18.5 / about 48","decision":"PASS","note":"FCS opponent; market moved sharply toward Albany from earlier numbers, but no production edge is asserted without validated cross-level pricing."},
-    {"game":"Arkansas-Pine Bluff at Missouri","market":"Missouri -54 to -54.5 / 61","decision":"PASS","note":"FCS opponent; no independent price manufactured."},
-    {"game":"Colorado at Georgia Tech","market":"Georgia Tech roughly -6.5 to -7.5 / 50.5-51","decision":"PASS","note":"Production fair remains Georgia Tech -7; current price is at/through fair, eliminating actionable value."},
-    {"game":"Eastern Illinois at Minnesota","market":"Minnesota -42.5 / 51.5","decision":"PASS","note":"FCS opponent; external power and market are closely aligned."},
-    {"game":"Idaho at Utah","market":"Utah -35.5 / 57.5","decision":"PASS / MONITOR WEATHER","note":"Elevated wind is monitored; independent external handicap supports Utah but not enough to override production-gate discipline."},
-    {"game":"UAB at Illinois","market":"Illinois -27.5 / 54.5","decision":"WATCH / PRICE TARGET","note":"External power cross-check and local matchup reporting lean Illinois, but new QB/new OL/new defensive scheme introduce enough uncertainty to avoid forcing a large-favorite bet."}
+  "fridayExecutionReview": [
+    {
+      "game": "San Jose State at Eastern Michigan",
+      "market": "Eastern Michigan -2.5 to -3; total 56.5; SJSU ML about +128",
+      "model": "Eastern Michigan -4.5 / 53.5",
+      "decision": "HOLD OFFICIAL BETS / NO ADD",
+      "priceCliff": "Do not chase EMU beyond -3. Existing EMU -2.5 -122 and Under 56.5 -112 remain immutable.",
+      "note": "Current market is at or near official entry. Same-game correlation plus no superior new price means no stake increase."
+    },
+    {
+      "game": "Toledo at Michigan State",
+      "market": "Michigan State -10; total 46.5; Toledo ML +319 to +320",
+      "model": "Michigan State -9.5 / 49.0",
+      "decision": "HOLD OFFICIAL OVER / NO ADD; LONGSHOT LIVE RESEARCH",
+      "priceCliff": "Over 46.5 remains the activation price already captured at -112; worse than 46.5 is no-add. Toledo ML is research-only.",
+      "note": "Total returned to the original official entry and again shows 2.5 raw points to fair, but duplicate exposure is not added. Toledo now meets the +300 Longshot Lab screen."
+    },
+    {
+      "game": "Miami at Stanford",
+      "market": "Miami -24 to -24.5; total 47.5; Stanford ML about +1500",
+      "model": "Miami -24 / 48.5",
+      "decision": "PASS SIDE / WATCH TOTAL PRICE",
+      "priceCliff": "Stanford +26 or better for side recheck; Over 47.5 has only ~1 point raw value and remains WATCH, not activation.",
+      "note": "Stanford OL availability risk and Miami travel are already in the handicap; no new high-risk flag changes fair."
+    },
+    {
+      "game": "Fresno State at USC",
+      "market": "USC -21.5 to -22.5; total 51.5; Fresno ML about +1200",
+      "model": "USC -22.5 / 52.0",
+      "decision": "WATCH / PRICE TARGET",
+      "priceCliff": "USC -21.5 creates ~1 point and remains WATCH. -21 or better is preferred for stronger recheck; do not buy through 10/14 rules because underlying side is not yet qualified.",
+      "note": "Friday price improved toward USC enough to move the side from PASS into watch territory, but still below activation."
+    },
+    {
+      "game": "Boston College at Cincinnati",
+      "market": "Cincinnati -7.5; total 49.5; BC ML +245",
+      "model": "Cincinnati -6.5 / 51.0",
+      "decision": "WATCH / PRICE TARGET",
+      "priceCliff": "BC +8 reaches the 1.5-point band; +8.5 preferred. Current +7.5 is about 1 point and does not activate.",
+      "note": "No independent-football requirement is invoked unless genuinely emitted; current information quality remains below the 1.5-point small-bet gate."
+    },
+    {
+      "game": "Clemson at LSU",
+      "market": "Clemson +10.5; total 50.5; ML +310 to +325",
+      "model": "LSU -9.5 / 50.5",
+      "decision": "WATCH / PRICE TARGET; LONGSHOT PRIORITY RESEARCH",
+      "priceCliff": "Clemson +11 is ATS recheck zone; current +10.5 remains ~1 point. ML remains research-only unless separate Longshot governance qualifies.",
+      "note": "No Bet Activation Gate side activation. Longshot Lab remains Priority Research."
+    },
+    {
+      "game": "UCLA at California",
+      "market": "UCLA -1.5 to -2; total 53.5; Cal ML +104 to +110",
+      "model": "Pick / 53.0",
+      "decision": "WATCH / PRICE TARGET",
+      "priceCliff": "Cal +3 plus high information quality and genuine independent support would be needed for 0.25u tier; current price remains vetoed.",
+      "note": "No material new information clears the information/confidence gate."
+    },
+    {
+      "game": "Wyoming at Colorado State",
+      "market": "Colorado State around -3; total 46.5; Wyoming ML about +144",
+      "model": "Colorado State -3.5 / 44.5",
+      "decision": "HOLD OFFICIAL UNDER / NO ADD",
+      "priceCliff": "Official Under 46.5 -105 remains immutable. 47.5 or better would be required to consider additional governed exposure.",
+      "note": "Underdog Special remains non-qualifying at roughly +3/+144."
+    },
+    {
+      "game": "Arkansas State at Memphis",
+      "market": "Memphis -11.5; total 52.5; Arkansas State ML +350",
+      "model": "Memphis -9.5 / 55.5",
+      "decision": "WATCH ATS / LONGSHOT LIVE RESEARCH",
+      "priceCliff": "Arkansas State +11.5 now creates roughly 2 points versus production fair, but this is not promoted to an official side without full gate confirmation. ML +350 enters Longshot Lab prospectively.",
+      "note": "Experienced Arkansas State offense and current price create a credible upset mechanism, while Memphis Week 0 trench performance remains the main favorite-side counterweight."
+    },
+    {
+      "game": "Louisville vs Ole Miss",
+      "market": "Louisville +6.5; total 54.5 to 55.5; ML +215 to +225",
+      "model": "Ole Miss -5.5 / 54.0",
+      "decision": "WATCH / PRICE TARGET",
+      "priceCliff": "+7.5 remains preferred ATS activation zone. Current +6.5 is ~1 point; do not create an Underdog Special because profile remains 1-of-3.",
+      "note": "Expert residual remains contradictory, including explicit Ole Miss support and separate Louisville upset/value arguments."
+    },
+    {
+      "game": "SMU at Florida State",
+      "market": "SMU -2.5; total 53.5; FSU ML +124",
+      "model": "SMU -3.5 / 52.5",
+      "decision": "WATCH / PRICE TARGET",
+      "priceCliff": "SMU -2.5 creates ~1 point and remains WATCH. Better than -2.5 required before side activation review.",
+      "note": "Week-of-game Expert Intelligence now properly includes Cover 3 and Josh Pate FSU-risk context, but expert residual remains qualitative and does not manufacture model edge."
+    }
   ],
   "weatherTravelFlags": [
     "UTEP at Oklahoma: elevated heat/wind monitoring",
-    "Idaho at Utah: elevated wind monitoring",
     "Nicholls at Kansas State: extreme-heat monitoring",
     "UNLV at Hawaii: largest travel/body-clock burden and strong Hawaii HFA",
     "Miami at Stanford: major cross-country travel/body-clock burden",
-    "San Jose State at Eastern Michigan: major cross-country travel/body-clock burden"
+    "San Jose State at Eastern Michigan: major cross-country travel/body-clock burden",
+    "Clemson at LSU: warm conditions with only modest rain/wind signal; no material weather reprice",
+    "Louisville vs Ole Miss: warm neutral-site conditions; no material weather reprice"
   ],
-  "externalPowerDisagreementWatch": [
-    "Liberty at James Madison",
-    "Boston College at Cincinnati",
-    "Ohio at Nebraska",
-    "Coastal Carolina at West Virginia",
-    "Western Kentucky at Nevada",
-    "Toledo at Michigan State",
-    "Oregon State at Houston",
-    "East Carolina at Alabama",
-    "Boise State at Oregon",
-    "Marshall at Penn State",
-    "Wyoming at Colorado State",
-    "Arkansas State at Memphis",
-    "Florida International at South Florida",
-    "Washington State at Washington"
+  "completedUpsetLearning": [
+    {
+      "game": "Massachusetts at Rutgers",
+      "result": "Massachusetts 37, Rutgers 21",
+      "type": "significant outright upset",
+      "learning": "Mobile/efficient underdog QB, favorite turnover/QB volatility, sustained offensive competence and possession/rushing path remain useful prospective Upset Lab features; no weight changes."
+    },
+    {
+      "game": "Colorado at Georgia Tech",
+      "result": "Colorado 14, Georgia Tech 13",
+      "type": "outright underdog upset / near-pick structural learning",
+      "learning": "Favorite transition at QB/OC, game compression, late-game underdog QB ceiling and special-teams variance combined to create an upset path. Add as a learning marker only; do not alter thresholds or production weights from one result."
+    }
   ],
-  "externalPowerDisagreementNote": "These are mandatory re-check games because an external independent power source differs materially from the sportsbook market. They are not official bets and do not overwrite our production fair lines.",
-  "newActivation": {
-    "game":"Toledo at Michigan State",
-    "bet":"Over 46.5",
-    "odds":-112,
-    "units":0.5,
-    "finalFairTotal":49.0,
-    "finalExecutableEdge":2.5,
-    "gateVersion":"v1.1",
-    "tier":"standard 2.0-2.99",
-    "note":"Persisted immediately after executable 46.5 was reverified. External Under-system disagreement remains a confidence reducer, not a high-risk veto."
-  },
   "modelCoveragePolicy": "FBS-v-FCS games still receive full information, market, matchup, weather and execution research. Independent Fair/Edge remains unavailable when the independent engine lacks genuine opponent rating coverage; no neutral or market-derived substitute is labeled independent.",
-  "decisionPolicy": "Stage records research completeness only. OFFICIAL BET / WATCH-PRICE TARGET / PASS remains a separate prospective execution decision and may change after Deep Dive as price or information changes.",
-  "maintenance": "All unplayed games remain live through individual kickoff. Thursday/Friday games receive immediate refresh priority; later games are revisited as material price, availability, expert or weather information changes."
+  "decisionPolicy": "Deep Dive completion is research completeness, not a static decision. OFFICIAL BET / WATCH-PRICE TARGET / PASS is maintained prospectively through individual kickoff and can change with price or verified information.",
+  "maintenance": "All 91 Week 1 games remain covered; completed games are frozen for prospective decision purposes, while every unplayed game remains live-maintained through kickoff."
 }
