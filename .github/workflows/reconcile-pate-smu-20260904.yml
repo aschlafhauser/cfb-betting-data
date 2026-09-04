@@ -1,0 +1,105 @@
+name: Reconcile Pate SMU 2026-09-04
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-pate-smu-20260904.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Append deduped Pate SMU evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          ep = "Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide"
+          url = "https://omny.fm/shows/josh-pates-college-football-show/week-1-upset-alerts-sec-sues-lsu-viewer-s-guide"
+
+          def load(path):
+              return json.loads(Path(path).read_text())
+          def save(path, data):
+              Path(path).write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+
+          weekly_path='data/expert-weekly.json'
+          intel_path='data/expert-intelligence.json'
+          state_path='data/expert-episode-state.json'
+          weekly=load(weekly_path); intel=load(intel_path); state=load(state_path)
+
+          wid='pate-2026-09-03-smu-fsu-minus-2-5'
+          if not any(x.get('id')==wid for x in weekly):
+              weekly.append({
+                'id': wid,
+                'week': 1,
+                'gameId': '2026-W1-SMU-FSU',
+                'source': 'Josh Pate',
+                'episode': ep,
+                'sourceDate': '2026-09-03',
+                'segment': 'SMU-Florida State prediction segment; exact timestamp not preserved in indexed evidence',
+                'type': 'weekly prediction — explicit ATS side and matchup mechanism',
+                'explicit': True,
+                'direction': 'SMU -2.5',
+                'conviction': 'explicit pick/lean; no unit size surfaced',
+                'sourceAnalysis': "Late-indexed transcript evidence resolves Pate’s previously numberless SMU-to-win-and-cover call as SMU -2.5. His handicap centers on Kevin Jennings as the quarterback advantage over Ashton Daniels, SMU’s veteran offensive line, Florida State needing its run game to protect Daniels, and the risk that Daniels’ historical turnover-worthy-play profile becomes costly if FSU falls behind. Pate also identifies SMU’s rebuilt defensive front as the main path for Florida State to keep the matchup competitive and notes that FSU must generate pressure or its secondary can be exposed.",
+                'bettingImplication': 'This is direct Josh Pate-family corroboration of the portal’s SMU side at the same -2.5 market number, but it does not manufacture additional model edge. It remains distinct from and in conflict with the existing FSU-supporting expert signals, so expert disagreement stays explicit.',
+                'sourceFamily': 'Josh Pate',
+                'analyst': 'Josh Pate',
+                'sourceUrl': url
+              })
+
+          iid='pate-2026-09-03-smu-fsu-minus-2-5-intel'
+          if not any(x.get('id')==iid for x in intel):
+              intel.append({
+                'id': iid,
+                'week': 1,
+                'gameId': '2026-W1-SMU-FSU',
+                'episode': ep,
+                'episodeCompleteness': 'PROVISIONAL',
+                'sourceFamily': 'Josh Pate',
+                'analyst': 'Josh Pate',
+                'sourceDate': '2026-09-03',
+                'phase': 'pre-kickoff',
+                'category': 'ATS pick + matchup mechanism',
+                'team': 'SMU',
+                'direction': 'SMU -2.5',
+                'conviction': 'explicit pick/lean; no unit size surfaced',
+                'freshness': 'late-indexed pre-kickoff evidence',
+                'independence': 'independent source family; internally correlated with other Josh Pate-family evidence',
+                'incrementalInformation': 'High: resolves the exact -2.5 construction and adds QB/OL/pass-rush/turnover mechanisms not represented by the earlier generic Pate FSU-risk row.',
+                'modelRelationship': 'corroborates-model',
+                'summary': "Pate explicitly supports SMU -2.5 at Florida State. He cites Kevin Jennings as the QB edge, SMU’s veteran OL, FSU’s need to protect Ashton Daniels with the run game, Daniels’ turnover-worthy-play history if forced into catch-up passing, and FSU’s need to pressure Jennings to keep the secondary from being exposed. SMU’s rebuilt defensive front is the main uncertainty he identifies for the favorite.",
+                'sourceUrl': url
+              })
+
+          for rec in state:
+              if rec.get('sourceDate')=='2026-09-03' and rec.get('episode')==ep and 'Josh Pate' in rec.get('source',''):
+                  rec['status']='PROVISIONAL'
+                  rec['lastChecked']='2026-09-04T16:17:35-05:00'
+                  rec['ledgerAction']='late-indexed-smu-minus-2-5-and-mechanisms-persisted'
+                  checks=rec.setdefault('checkedEvidence',[])
+                  for item in [
+                    'late-indexed SMU-Florida State transcript evidence checked',
+                    'explicit SMU -2.5 construction extracted without inferring units',
+                    'QB/OL/pass-rush/turnover matchup mechanisms extracted',
+                    'Expert Intelligence v1 record created/deduped',
+                    'expert-weekly.json cross-check completed'
+                  ]:
+                      if item not in checks: checks.append(item)
+                  rec['note']="Late-indexed evidence resolves Josh Pate’s SMU side as SMU -2.5 and adds specific Jennings/Daniels, offensive-line, pass-rush and turnover mechanisms. The exact construction is now persisted in both ledgers and deduped. Episode remains PROVISIONAL because the complete public transcript/remaining segment-level evidence has not yet been fully exhausted."
+
+          save(weekly_path, weekly); save(intel_path, intel); save(state_path, state)
+          PY
+      - name: Commit runtime reconciliation
+        run: |
+          git config user.name 'cfb-runtime-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Reconcile Pate SMU -2.5 expert evidence'
+          git push
