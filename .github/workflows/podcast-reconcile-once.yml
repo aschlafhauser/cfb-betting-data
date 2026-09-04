@@ -1,0 +1,122 @@
+name: Podcast reconcile once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/podcast-reconcile-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile late Josh Pate evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          weekly_path = Path('data/expert-weekly.json')
+          intel_path = Path('data/expert-intelligence.json')
+          state_path = Path('data/expert-episode-state.json')
+
+          weekly = json.loads(weekly_path.read_text())
+          intel = json.loads(intel_path.read_text())
+          state = json.loads(state_path.read_text())
+
+          episode = 'Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide'
+          source_url = 'https://omny.fm/shows/josh-pates-college-football-show/week-1-upset-alerts-sec-sues-lsu-viewer-s-guide'
+
+          weekly_record = {
+            'id': 'pate-w1-20260903-smu-fsu-win-cover',
+            'week': 1,
+            'gameId': '2026-W1-SMU-FSU',
+            'source': 'Josh Pate',
+            'episode': episode,
+            'sourceDate': '2026-09-03',
+            'segment': 'SMU-Florida State prediction segment; exact timestamp/line not exposed in current public evidence',
+            'type': 'explicit side + ATS direction',
+            'explicit': True,
+            'direction': 'SMU to win and cover; exact spread not publicly exposed',
+            'conviction': 'explicit prediction',
+            'sourceAnalysis': "Late-indexed verified quote evidence has Josh Pate explicitly saying he will take SMU to win and to cover against Florida State because he thinks SMU is that much better. The available evidence does not expose the exact spread attached to the cover call, so no number is inferred.",
+            'bettingImplication': "This is new explicit Josh Pate-family betting-construction evidence favoring SMU and materially sharpens the earlier qualitative FSU concern. It corroborates the portal's SMU-side direction but does not create a new price edge or authorize chasing a number through the portal's execution gate.",
+            'sourceFamily': 'Josh Pate',
+            'analyst': 'Josh Pate',
+            'phase': 'pre-Week-1',
+            'category': 'side / spread',
+            'team': 'SMU',
+            'freshness': 'same-week',
+            'independence': 'correlated-source-family',
+            'incrementalInformation': 1,
+            'modelRelationship': 'corroborates-model',
+            'summary': 'Josh Pate explicitly takes SMU to win and cover vs Florida State; exact spread is not exposed and is not inferred.',
+            'episodeCompleteness': 'PROVISIONAL',
+            'sourceUrl': source_url
+          }
+
+          intel_record = {
+            'id': 'pate-2026-09-03-smu-fsu-win-cover',
+            'week': 1,
+            'gameId': '2026-W1-SMU-FSU',
+            'episode': episode,
+            'episodeCompleteness': 'PROVISIONAL',
+            'sourceFamily': 'Josh Pate',
+            'analyst': 'Josh Pate',
+            'sourceDate': '2026-09-03',
+            'phase': 'pre-Week-1',
+            'category': 'side / spread',
+            'team': 'SMU',
+            'direction': 'SMU to win and cover; exact spread not publicly exposed',
+            'conviction': 'explicit prediction',
+            'freshness': 'same-week',
+            'independence': 'correlated-source-family',
+            'incrementalInformation': 1,
+            'modelRelationship': 'corroborates-model',
+            'summary': "Late-indexed verified quote evidence resolves Pate's SMU-Florida State direction: he explicitly takes SMU to win and cover because he views SMU as substantially better. No exact spread is inferred from the current evidence.",
+            'sourceUrl': source_url
+          }
+
+          # Dedupe on durable ID and episode+game+analyst+construction semantics.
+          if not any(r.get('id') == weekly_record['id'] or (
+              r.get('episode') == episode and r.get('gameId') == '2026-W1-SMU-FSU' and
+              (r.get('analyst') == 'Josh Pate' or r.get('source') == 'Josh Pate') and
+              'win and cover' in str(r.get('direction','')).lower()
+          ) for r in weekly):
+              weekly.append(weekly_record)
+
+          if not any(r.get('id') == intel_record['id'] or (
+              r.get('episode') == episode and r.get('gameId') == '2026-W1-SMU-FSU' and
+              r.get('analyst') == 'Josh Pate' and 'win and cover' in str(r.get('direction','')).lower()
+          ) for r in intel):
+              intel.append(intel_record)
+
+          for rec in state:
+              if rec.get('source') == "Josh Pate's College Football Show" and rec.get('episode') == episode:
+                  rec['lastChecked'] = '2026-09-04T05:47:25-05:00'
+                  rec['ledgerAction'] = 'late-evidence-one-new-explicit-smu-win-cover-record'
+                  rec['note'] = "Late-indexed verified quote evidence now resolves one material construction: Josh Pate explicitly takes SMU to win and cover vs Florida State because he views SMU as substantially better. The exact spread, score prediction, full Ramen Noodle card, and remaining episode transcript detail are still not fully exposed, so no number or additional bet is inferred and the episode remains PROVISIONAL. The new construction is deduped into expert-weekly.json and expert-intelligence.json."
+                  if 'late-indexed verified quote evidence: SMU to win and cover; exact spread not exposed' not in rec.get('checkedEvidence', []):
+                      rec.setdefault('checkedEvidence', []).append('late-indexed verified quote evidence: SMU to win and cover; exact spread not exposed')
+                  break
+
+          weekly_path.write_text(json.dumps(weekly, indent=2, ensure_ascii=False) + '\n')
+          intel_path.write_text(json.dumps(intel, indent=2, ensure_ascii=False) + '\n')
+          state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Commit reconciliation
+        run: |
+          git config user.name "cfb-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          git commit -m "Reconcile Josh Pate SMU-FSU late evidence"
+          git push
