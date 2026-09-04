@@ -1,0 +1,114 @@
+name: One-time podcast reconciliation 2026-09-04
+on:
+  push:
+    paths:
+      - '.github/workflows/podcast-reconcile-20260904.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile late Josh Pate Toledo detail
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          episode = "Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide"
+          source_url = "https://sports.yahoo.com/video/toledo-michigan-state-preview-zips-162302428.html"
+
+          weekly_path = Path('data/expert-weekly.json')
+          weekly = json.loads(weekly_path.read_text())
+          weekly_id = 'pate-w1-upset-toledo-detail-20260904'
+          if not any(r.get('id') == weekly_id for r in weekly):
+              weekly.append({
+                  "id": weekly_id,
+                  "week": 1,
+                  "gameId": "2026-W1-TOL-MSU",
+                  "source": "Josh Pate",
+                  "sourceFamily": "Josh Pate",
+                  "analyst": "Josh Pate",
+                  "episode": episode,
+                  "sourceDate": "2026-09-03",
+                  "phase": "pre-Week-1",
+                  "category": "upset-warning / roster-continuity / quarterback / coaching",
+                  "team": "Toledo",
+                  "type": "late-indexed upset-alert detail",
+                  "explicit": True,
+                  "direction": "Toledo upset risk / Michigan State vulnerability",
+                  "conviction": "8.5/10 upset-alert concern; not an ATS or ML wager",
+                  "freshness": "late-indexed current-week evidence",
+                  "independence": "correlated-source-family",
+                  "incrementalInformation": 1,
+                  "modelRelationship": "corroborates-model",
+                  "sourceAnalysis": "A newly indexed Josh Pate video transcript fills in the previously missing Toledo-Michigan State upset-alert detail. Pate rates the game 8.5/10 on his upset-alert concern scale, corrects the live reference spread to Michigan State -10.5, calls Toledo a very good team with the best odds to win the MAC, and questions whether Michigan State's portal-built roster one-for-one replaced outgoing quality after a portal class he cites as 61st. He also highlights veteran Toledo quarterback John Alan Richter's persistence, captaincy and potential for an inspired spotlight performance, plus Mike Jacobs' strong lower-level coaching record. Pate does not make an ATS bet or quote a Toledo moneyline, so none is inferred.",
+                  "bettingImplication": "This materially upgrades the earlier generic Pate upset warning into a high-concern, mechanism-specific Toledo upset case. It independently corroborates the portal's Toledo longshot-upset research direction and identifies roster replacement quality and veteran-QB continuity as the upset path, but it still does not convert Toledo ATS or ML into an official bet without the portal's own price/model gates.",
+                  "summary": "Pate rates Toledo at Michigan State 8.5/10 on his upset-alert concern scale, citing Toledo's MAC-favorite quality, Michigan State's uncertain portal replacement quality, veteran captain QB John Alan Richter and Mike Jacobs' coaching record. He references Michigan State -10.5 but does not issue an ATS or ML wager.",
+                  "episodeCompleteness": "PROVISIONAL",
+                  "sourceUrl": source_url
+              })
+          weekly_path.write_text(json.dumps(weekly, indent=2, ensure_ascii=False) + '\n')
+
+          intel_path = Path('data/expert-intelligence.json')
+          intel = json.loads(intel_path.read_text())
+          intel_id = 'pate-2026-09-03-toledo-msu-upset-detail'
+          if not any(r.get('id') == intel_id for r in intel):
+              intel.append({
+                  "id": intel_id,
+                  "week": 1,
+                  "gameId": "2026-W1-TOL-MSU",
+                  "episode": episode,
+                  "episodeCompleteness": "PROVISIONAL",
+                  "sourceFamily": "Josh Pate",
+                  "analyst": "Josh Pate",
+                  "sourceDate": "2026-09-03",
+                  "phase": "pre-Week-1",
+                  "category": "upset-warning / roster-continuity / quarterback / coaching",
+                  "team": "Toledo",
+                  "direction": "positive Toledo upset case / negative Michigan State favorite stability",
+                  "conviction": "8.5/10 upset-alert concern; no ATS/ML wager stated",
+                  "freshness": "late-indexed current-week evidence",
+                  "independence": "independent-source-family; correlated with other Josh Pate rows",
+                  "incrementalInformation": 1,
+                  "modelRelationship": "corroborates-model",
+                  "summary": "Late-indexed transcript detail upgrades Pate's Toledo-Michigan State warning: 8.5/10 upset concern, Michigan State -10.5 reference, skepticism that a portal-built MSU roster fully replaced outgoing quality, Toledo's MAC-favorite status, veteran captain QB John Alan Richter and Mike Jacobs' lower-level coaching success. No Toledo ATS or ML wager is inferred.",
+                  "sourceUrl": source_url
+              })
+          intel_path.write_text(json.dumps(intel, indent=2, ensure_ascii=False) + '\n')
+
+          state_path = Path('data/expert-episode-state.json')
+          state = json.loads(state_path.read_text())
+          for rec in state:
+              if rec.get('episode') == episode and 'Josh Pate' in str(rec.get('sourceFamily', rec.get('source', ''))):
+                  rec['status'] = 'PROVISIONAL'
+                  rec['lastChecked'] = '2026-09-04T13:01:48-05:00'
+                  rec['ledgerAction'] = 'late-indexed-toledo-concern-score-and-matchup-mechanisms-added'
+                  rec['note'] = "Late-indexed Yahoo/Josh Pate video transcript now supplies the previously missing Toledo-Michigan State upset-alert detail: Pate rates it 8.5/10, references Michigan State -10.5, and cites Toledo's MAC-favorite quality, Michigan State portal-replacement uncertainty, veteran captain QB John Alan Richter and Mike Jacobs' coaching record. These details were appended as new records without overwriting the earlier generic upset-warning rows. Episode remains PROVISIONAL because full episode transcript/captions and complete attributable detail for every upset-alert segment are not yet publicly exhausted."
+                  break
+          state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Validate JSON and dedupe
+        run: |
+          python - <<'PY'
+          import json
+          for p in ['data/expert-weekly.json','data/expert-intelligence.json','data/expert-episode-state.json']:
+              rows=json.load(open(p))
+              ids=[r.get('id') for r in rows if r.get('id')]
+              assert len(ids)==len(set(ids)), f'duplicate ids in {p}'
+          PY
+      - name: Commit runtime-data reconciliation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          if git diff --cached --quiet; then
+            echo 'No changes needed'
+          else
+            git commit -m 'Reconcile Josh Pate Toledo upset detail'
+            git push
+          fi
