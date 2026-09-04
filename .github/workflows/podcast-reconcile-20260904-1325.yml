@@ -1,0 +1,172 @@
+name: One-time Cover 3 week-zero trend reconciliation 2026-09-04
+on:
+  push:
+    paths:
+      - '.github/workflows/podcast-reconcile-20260904-1325.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile late Cover 3 transcript evidence
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          episode = "Week 1 College Football Preview: Notable Trends, CFP Debates, MUST-WATCH Games & More!"
+          source_url = "https://podscan.fm/podcasts/cover-3-college-football-2/episodes/week-1-college-football-preview-notable-trends-cfp-debates-must-watch-games-amp-more"
+          source_date = "2026-09-02"
+
+          items = [
+            {
+              "suffix":"fresno-usc-rest-rust", "gameId":"2026-W1-FRES-USC", "team":"Fresno State",
+              "direction":"Fresno State situational advantage / USC favorite caution",
+              "relationship":"corroborates-model",
+              "summary":"Cover 3 cites a 10-season sample in which teams making their season debut against opponents that already played in Week 0 covered 58% of 265 games, then explicitly applies the setup to Fresno State at USC. The mechanism is information asymmetry: USC has put game tape and any still-present errors on film while Fresno State has not. This is situational handicap information, not an ATS pick or quoted Fresno number.",
+              "implication":"Adds an independent Cover 3-family mechanism supporting caution on USC's large favorite price and directionally strengthens Fresno State as a price-sensitive dog. No spread or wager is inferred."
+            },
+            {
+              "suffix":"arkst-mem-rest-rust", "gameId":"2026-W1-ARKST-MEM", "team":"Arkansas State",
+              "direction":"Arkansas State situational advantage / Memphis favorite caution",
+              "relationship":"corroborates-model",
+              "summary":"Cover 3 cites the same 58% fresh-team ATS trend and explicitly includes Memphis-Arkansas State among this week's qualifying rest-versus-rust setups. Memphis has already exposed Week 0 film while Arkansas State enters without game tape. This is a matchup-specific situational edge, not an explicit Arkansas State ATS or ML recommendation.",
+              "implication":"Materially corroborates the portal's existing Arkansas State +11.5 position through a genuinely different mechanism—Week 0 tape/information disadvantage—without changing the frozen ticket or manufacturing another wager."
+            },
+            {
+              "suffix":"haw-unlv-rest-rust", "gameId":"2026-W1-HAW-UNLV", "team":"Hawaii",
+              "direction":"Hawaii situational advantage / UNLV caution",
+              "relationship":"orthogonal-new-information",
+              "summary":"Cover 3 explicitly includes UNLV-Hawaii in the 58% fresh-team-versus-Week-0-team historical ATS setup. The stated mechanism is that UNLV has already shown live-game tendencies and any persistent mistakes on film while Hawaii retains more first-game information asymmetry. No Hawaii side, total, moneyline or price is stated.",
+              "implication":"Adds a new situational reason to shade the matchup toward Hawaii relative to a pure roster/model read, but remains qualitative because the show did not attach a wager or number."
+            },
+            {
+              "suffix":"miami-stan-rest-rust", "gameId":"2026-W1-MIA-STAN", "team":"Miami",
+              "direction":"Miami situational advantage / Stanford dog caution",
+              "relationship":"contradicts-model",
+              "summary":"Cover 3 explicitly says Stanford has already put useful Davis Warren tape on film and calls that an advantage for Miami within a broader 58% historical ATS trend favoring fresh Week 1 teams over opponents that played in Week 0. No Miami ATS number or wager is stated.",
+              "implication":"This is meaningful counterevidence to the portal's Stanford +points value case: it does not erase the model edge, but it lowers confidence by identifying a specific information-asymmetry mechanism favoring Miami."
+            },
+            {
+              "suffix":"smu-fsu-rest-rust", "gameId":"2026-W1-SMU-FSU", "team":"SMU",
+              "direction":"SMU situational advantage / Florida State caution",
+              "relationship":"corroborates-model",
+              "summary":"Cover 3 explicitly includes SMU-Florida State in the 58% fresh-team-versus-Week-0-team ATS setup and notes that Florida State has already put varying-quality game film on tape. The follow-up explanation argues that errors still visible after offseason practices, camp and Week 0 should not automatically be dismissed as first-game noise. No exact SMU spread or wager is stated in this segment.",
+              "implication":"Adds a distinct situational mechanism supporting the portal's existing SMU-side expert evidence while preserving the show's separate host-level constructions from the Locks episode."
+            }
+          ]
+
+          weekly_path = Path('data/expert-weekly.json')
+          weekly = json.loads(weekly_path.read_text())
+          for x in items:
+              rid = f"c3-w1-preview-{x['suffix']}-20260904"
+              if any(r.get('id') == rid for r in weekly):
+                  continue
+              weekly.append({
+                  "id": rid,
+                  "week": 1,
+                  "gameId": x['gameId'],
+                  "source": "Cover 3",
+                  "sourceFamily": "Cover 3",
+                  "analyst": "Cover 3 crew",
+                  "episode": episode,
+                  "sourceDate": source_date,
+                  "phase": "pre-Week-1",
+                  "category": "situational / information-asymmetry / Week-0-to-Week-1 rest-rust trend",
+                  "team": x['team'],
+                  "type": "late-indexed matchup-specific trend application",
+                  "explicit": True,
+                  "direction": x['direction'],
+                  "conviction": "explicit matchup application of historical ATS trend; not a wager",
+                  "freshness": "late-indexed current-week evidence",
+                  "independence": "correlated-source-family",
+                  "incrementalInformation": 1,
+                  "modelRelationship": x['relationship'],
+                  "sourceAnalysis": x['summary'],
+                  "bettingImplication": x['implication'],
+                  "summary": x['summary'],
+                  "episodeCompleteness": "COMPLETE-SOURCE-LIMITED",
+                  "sourceUrl": source_url
+              })
+          weekly_path.write_text(json.dumps(weekly, indent=2, ensure_ascii=False) + '\n')
+
+          intel_path = Path('data/expert-intelligence.json')
+          intel = json.loads(intel_path.read_text())
+          for x in items:
+              rid = f"c3-2026-09-02-{x['suffix']}"
+              if any(r.get('id') == rid for r in intel):
+                  continue
+              intel.append({
+                  "id": rid,
+                  "week": 1,
+                  "gameId": x['gameId'],
+                  "episode": episode,
+                  "episodeCompleteness": "COMPLETE-SOURCE-LIMITED",
+                  "sourceFamily": "Cover 3",
+                  "analyst": "Cover 3 crew",
+                  "sourceDate": source_date,
+                  "phase": "pre-Week-1",
+                  "category": "situational / information-asymmetry / Week-0-to-Week-1 rest-rust trend",
+                  "team": x['team'],
+                  "direction": x['direction'],
+                  "conviction": "explicit matchup application of historical ATS trend; no specific wager stated",
+                  "freshness": "late-indexed current-week evidence",
+                  "independence": "independent-source-family; correlated within Cover 3",
+                  "incrementalInformation": 1,
+                  "modelRelationship": x['relationship'],
+                  "summary": x['summary'],
+                  "sourceUrl": source_url
+              })
+          intel_path.write_text(json.dumps(intel, indent=2, ensure_ascii=False) + '\n')
+
+          state_path = Path('data/expert-episode-state.json')
+          state = json.loads(state_path.read_text())
+          for rec in state:
+              if rec.get('episode') == episode and rec.get('source') == 'Cover 3':
+                  rec['status'] = 'COMPLETE-SOURCE-LIMITED'
+                  rec['lastChecked'] = '2026-09-04T13:25:50-05:00'
+                  rec['ledgerAction'] = 'five-late-indexed-rest-rust-matchup-records-appended-and-deduped'
+                  rec['checkedEvidence'] = [
+                    'episode discovery verified in official Cover 3 feed',
+                    'official Apple/Spotify show notes and timestamps checked',
+                    'Podscan transcript checked; publicly indexed transcript is partial/incompletely retrievable beyond available segments',
+                    'Podcast Rex near-primary episode summary and segment index checked',
+                    'official social/pick-sheet evidence checked; no separate pick sheet tied to this preview episode surfaced',
+                    'all current-week matchups exposed by reasonably available evidence identified',
+                    'all attributable Cover 3 hosts/crew evidence checked; same-family hosts treated as correlated',
+                    'side/ATS/ML/total/1H constructions checked; no new explicit construction inferred from this situational segment',
+                    'score predictions checked; none newly attributable from available evidence',
+                    'material matchup/player/unit/scheme/coaching/situational analysis extracted',
+                    'Expert Intelligence v1 records created/deduped',
+                    'expert-weekly.json cross-check completed',
+                    'final completeness audit passed subject to public-source limitation'
+                  ]
+                  rec['note'] = "Late-indexed transcript evidence adds a matchup-specific Cover 3 rest-versus-rust mechanism: over the cited 10-season sample, fresh Week 1 teams facing opponents that already played in Week 0 covered 58% across 265 games. The episode explicitly applies that setup to Fresno State-USC, Arkansas State-Memphis, Hawaii-UNLV, Miami-Stanford and SMU-Florida State; those five matchup rows were appended without inferring any unspoken spread, total, ML or wager. The Miami-Stanford item is counterevidence to the portal's Stanford +points case; Arkansas State-Memphis corroborates the existing Arkansas State position through a different mechanism. Public show notes, indexed transcript segments, episode summary and available pick/social evidence were exhausted, but a fully retrievable end-to-end transcript remains unavailable, so the episode is COMPLETE-SOURCE-LIMITED rather than COMPLETE."
+                  break
+          state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Validate JSON and dedupe
+        run: |
+          python - <<'PY'
+          import json
+          for p in ['data/expert-weekly.json','data/expert-intelligence.json','data/expert-episode-state.json']:
+              rows=json.load(open(p))
+              ids=[r.get('id') for r in rows if r.get('id')]
+              assert len(ids)==len(set(ids)), f'duplicate ids in {p}'
+          PY
+      - name: Commit runtime-data reconciliation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          if git diff --cached --quiet; then
+            echo 'No changes needed'
+          else
+            git commit -m 'Reconcile Cover 3 Week 1 rest-rust trend'
+            git push
+          fi
