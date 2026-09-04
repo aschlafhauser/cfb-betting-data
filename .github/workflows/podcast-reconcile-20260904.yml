@@ -1,0 +1,128 @@
+name: Podcast reconciliation 2026-09-04
+on:
+  push:
+    paths:
+      - '.github/workflows/podcast-reconcile-20260904.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append late Josh Pate upset alerts
+        run: |
+          python - <<'PY'
+          import json, pathlib, datetime
+
+          root = pathlib.Path('.')
+          weekly_p = root/'data/expert-weekly.json'
+          intel_p = root/'data/expert-intelligence.json'
+          state_p = root/'data/expert-episode-state.json'
+          board_p = root/'data/weekly-board.json'
+
+          weekly = json.loads(weekly_p.read_text())
+          intel = json.loads(intel_p.read_text())
+          state = json.loads(state_p.read_text())
+          board = json.loads(board_p.read_text())
+
+          def walk(obj):
+              if isinstance(obj, dict):
+                  yield obj
+                  for v in obj.values():
+                      yield from walk(v)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      yield from walk(v)
+
+          def game_id(team_a, team_b, fallback):
+              a, b = team_a.lower(), team_b.lower()
+              for d in walk(board):
+                  vals = ' '.join(str(d.get(k,'')) for k in ('away','home','game','matchup','team','opponent')).lower()
+                  if a in vals and b in vals and d.get('gameId'):
+                      return d['gameId']
+              return fallback
+
+          toledo_gid = game_id('toledo','michigan state','2026-W1-TOLEDO-MSU')
+          miaoh_gid = game_id('miami','pitt','2026-W1-MIAOH-PITT')
+
+          episode = 'Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide'
+          src = 'https://podcastrex.com/shows/josh-pates-college-football-show/week-1-upset-alerts-sec-sues-lsu-viewers-guide'
+
+          weekly_new = [
+            {
+              'id':'pate-2026-09-03-toledo-msu-upset-alert','week':1,'gameId':toledo_gid,
+              'source':'Josh Pate','episode':episode,'sourceDate':'2026-09-03',
+              'segment':'Upset Alerts segment (~14:00); exact concern-meter score not exposed in public indexed evidence',
+              'type':'dangerous-game / upset alert','explicit':True,
+              'direction':'Toledo-Michigan State listed on upset alert; no ATS/ML side or price inferred',
+              'conviction':'explicit upset-alert inclusion; exact concern score unavailable',
+              'sourceAnalysis':'Late-indexed episode evidence explicitly identifies Toledo at Michigan State among Josh Pate’s five Week 1 upset alerts. The currently public evidence does not expose an exact concern-meter score, spread, moneyline price, side recommendation, or wager, so none is inferred.',
+              'bettingImplication':'This is a genuinely new Josh Pate-family favorite-risk signal and materially corroborates the portal’s existing Toledo +300-or-longer Longshot Upset Lab research. It is not an official Toledo ML or ATS pick and should not be treated as one.',
+              'sourceFamily':'Josh Pate','analyst':'Josh Pate','phase':'pre-Week-1','category':'dangerous-game / upset alert',
+              'team':'Toledo','freshness':'current-week','independence':'distinct-source-family','incrementalInformation':1,
+              'modelRelationship':'corroborates-model','summary':'Pate explicitly places Toledo at Michigan State on his Week 1 upset-alert list. No concern score, spread, ML price, or wager is publicly exposed, so the portal records only the upset-warning direction.',
+              'episodeCompleteness':'PROVISIONAL','sourceUrl':src
+            },
+            {
+              'id':'pate-2026-09-03-miaoh-pitt-upset-alert','week':1,'gameId':miaoh_gid,
+              'source':'Josh Pate','episode':episode,'sourceDate':'2026-09-03',
+              'segment':'Upset Alerts segment (~14:00); exact concern-meter score not exposed in public indexed evidence',
+              'type':'dangerous-game / upset alert','explicit':True,
+              'direction':'Miami (OH)-Pitt listed on upset alert; no ATS/ML side or price inferred',
+              'conviction':'explicit upset-alert inclusion; exact concern score unavailable',
+              'sourceAnalysis':'Late-indexed episode evidence explicitly identifies Miami (OH) at Pitt among Josh Pate’s Week 1 upset alerts. The currently public evidence does not expose an exact concern-meter score, spread, moneyline price, side recommendation, or wager, so none is inferred.',
+              'bettingImplication':'Adds a new independent source-family warning that Pitt carries upset risk in Week 1. This is qualitative favorite-risk context only, not a Miami (OH) ATS or moneyline recommendation.',
+              'sourceFamily':'Josh Pate','analyst':'Josh Pate','phase':'pre-Week-1','category':'dangerous-game / upset alert',
+              'team':'Miami (OH)','freshness':'current-week','independence':'distinct-source-family','incrementalInformation':1,
+              'modelRelationship':'orthogonal-new-information','summary':'Pate explicitly places Miami (OH) at Pitt on his Week 1 upset-alert list. No concern score, spread, ML price, or wager is publicly exposed, so the portal records only the upset-warning direction.',
+              'episodeCompleteness':'PROVISIONAL','sourceUrl':src
+            }
+          ]
+
+          existing_ids = {r.get('id') for r in weekly if isinstance(r,dict)}
+          for r in weekly_new:
+              if r['id'] not in existing_ids:
+                  weekly.append(r)
+
+          intel_new = []
+          for r in weekly_new:
+              intel_new.append({k:r[k] for k in ['id','week','gameId','episode','episodeCompleteness','sourceFamily','analyst','sourceDate','phase','category','team','direction','conviction','freshness','independence','incrementalInformation','modelRelationship','summary','sourceUrl']})
+          intel_ids = {r.get('id') for r in intel if isinstance(r,dict)}
+          for r in intel_new:
+              if r['id'] not in intel_ids:
+                  intel.append(r)
+
+          for e in state:
+              if isinstance(e,dict) and e.get('source') == "Josh Pate's College Football Show" and e.get('episode') == episode:
+                  checked = e.setdefault('checkedEvidence',[])
+                  for item in [
+                    'September 4 Podcast Rex late-indexed key takeaways and segment map',
+                    'upset-alert matchup identities rechecked (Clemson-LSU, Toledo-Michigan State, Miami (OH)-Pitt explicitly surfaced)',
+                    'Ramen Noodle Express Baylor +7.5 and Clemson-LSU Under 50.5 cross-checked as already represented within Josh Pate family',
+                    'Expert Intelligence v1 dedupe cross-check',
+                    'expert-weekly.json dedupe cross-check'
+                  ]:
+                      if item not in checked:
+                          checked.append(item)
+                  e['status']='PROVISIONAL'
+                  e['lastChecked']='2026-09-04T09:00:39-05:00'
+                  e['ledgerAction']='two-new-upset-alert-context-records; repeated-same-family-bets-zero-incremental'
+                  e['note']='Late-indexed public evidence now explicitly identifies Toledo at Michigan State and Miami (OH) at Pitt as Josh Pate Week 1 upset-alert games. Those qualitative warnings were added without inferring concern scores, ATS sides, ML prices, or wagers. Podcast Rex also identifies Baylor +7.5 and Clemson-LSU Under 50.5 in the Ramen Noodle Express, but those constructions are already represented within the Josh Pate source family and receive zero incremental-information credit here. Episode remains PROVISIONAL because the full public transcript and complete five-game concern-meter details are not yet retrievable.'
+                  break
+
+          weekly_p.write_text(json.dumps(weekly, indent=2, ensure_ascii=False)+'\n')
+          intel_p.write_text(json.dumps(intel, indent=2, ensure_ascii=False)+'\n')
+          state_p.write_text(json.dumps(state, indent=2, ensure_ascii=False)+'\n')
+          PY
+      - name: Commit runtime reconciliation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Reconcile late Josh Pate Week 1 upset alerts"
+            git push
+          fi
