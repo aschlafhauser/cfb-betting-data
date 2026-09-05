@@ -1,6 +1,6 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-05T10:31:37-05:00",
+  "updatedAt": "2026-09-05T11:49:20-05:00",
   "stage": "game-day-watch",
   "governance": "Bet Activation Gate v1.1; no reverse-engineered Independent Football fair values; no retroactive entries.",
   "materialChanges": [
@@ -29,7 +29,7 @@
       "kickoff": "2026-09-05T18:00:00-05:00",
       "liveSpread": "Arkansas State +11.5 / Memphis -11.5",
       "liveTotal": 52.5,
-      "liveMoneyline": "Arkansas State +360 / Memphis -480 FanDuel reference",
+      "liveMoneyline": "Arkansas State +340 to +360 / Memphis -450 to -480",
       "priorModelSpread": "Memphis -9.5",
       "priorModelTotal": 55.5,
       "spreadEdge": 2.0,
@@ -37,7 +37,7 @@
       "thresholdStatus": "Bet Activation Gate v1.1 standard 2.0-2.99 tier",
       "priceSensitivity": "+11.5 is the captured immutable entry. Do not chase below +11 without a fresh reprice.",
       "expertResidual": "Josh Pate flags Memphis -11.5 as surprisingly short from a Memphis perspective but explicitly lacks a substantive Arkansas State breakdown; classified explains-market/price-warning rather than a contradictory football residual.",
-      "note": "Canonical bet ledger activation occurred 2026-09-04T08:34:31-05:00. This game-day audit surfaces the already-immutable official bet that the abbreviated weekly-board overlay failed to display."
+      "note": "Canonical bet ledger activation occurred 2026-09-04T08:34:31-05:00. Current market remains at the captured spread; official position unchanged."
     },
     {
       "gameId": "2026-W1-BC-CIN",
@@ -52,9 +52,9 @@
       "spreadEdge": 1.0,
       "totalEdge": 1.5,
       "status": "WATCH-PRICE TARGET / NO ACTIVATION",
-      "thresholdStatus": "Total raw edge crossed into 1.5-point small-bet band but gate veto remains",
+      "thresholdStatus": "Total raw edge remains in 1.5-point small-bet band but gate veto remains",
       "priceSensitivity": "BC +8 reaches the 1.5-point side band; +8.5 preferred. Over 49.5 has 1.5 raw points but lacks the high information quality plus genuine independent-football support required for a 0.25u activation.",
-      "note": "Current live market verified at Cincinnati -7.5 / 49.5."
+      "note": "Current live market reconfirmed at Cincinnati -7.5 / 49.5. Final snapshot target window begins roughly 13:00 CT."
     },
     {
       "gameId": "2026-W1-UNLV-HAW",
@@ -63,26 +63,28 @@
       "kickoff": "2026-09-05T21:00:00-05:00",
       "liveSpread": "UNLV -3.5",
       "liveTotal": 56.5,
-      "liveMoneyline": "Hawaii +125 / UNLV -150 FanDuel",
+      "liveMoneyline": "Hawaii +122 to +125 / UNLV -146 to -150",
       "priorModelSpread": "UNLV -3",
       "priorModelTotal": 57.5,
       "spreadEdge": 0.5,
-      "status": "WATCH / UNDERDOG PROFILE RECHECK",
-      "thresholdStatus": "Hawaii remains inside Underdog Special v1.1 spread band at +3.5",
-      "priceSensitivity": "No Special activation at current ML: fair ML from the frozen +3.5 training-only spread-to-win model is approximately +149, so verified +125 is worse than fair even before profile qualification.",
-      "note": "Mandatory v1.1 price gate still fails."
+      "status": "MATERIAL AVAILABILITY / UNDERDOG PROFILE RECHECK / NO ACTIVATION",
+      "thresholdStatus": "Hawaii is inside Underdog Special v1.1 band at +3.5, but mandatory ML value gate fails",
+      "priceSensitivity": "No Special activation at current ML: the frozen +3.5 training-only spread-to-win fair ML is approximately +149, so verified +122 to +125 is materially worse than fair.",
+      "availability": "UNLV starting center Austin Boyd is out for the Hawaii game.",
+      "reprice": "Starting-center loss is a meaningful offensive-line downgrade and increases Hawaii matchup support, but no governed numeric point change is manufactured without the production engine emitting it.",
+      "note": "Late OL news is material; v1.1 moneyline gate still rejects Hawaii at the currently verified price."
     },
     {
       "gameId": "2026-W1-WYO-CSU",
       "away": "Wyoming",
       "home": "Colorado State",
       "kickoff": "2026-09-05T17:00:00-05:00",
-      "liveSpread": "Wyoming +3.5 -122 / Colorado State -3.5 +100 FanDuel",
+      "liveSpread": "Colorado State -2.5 / Wyoming +2.5 FanDuel reference",
       "liveTotal": 46.5,
-      "liveMoneyline": "Wyoming +130 / Colorado State -156 FanDuel",
+      "liveMoneyline": "Wyoming +128 / Colorado State -154 FanDuel reference",
       "officialEntry": "Under 46.5 -105, 0.5u",
       "status": "HOLD OFFICIAL BET / NO ADD",
-      "note": "FanDuel currently shows Under 46.5 -115; preserve immutable -105 entry and do not add at worse juice."
+      "note": "Current Under 46.5 is materially worse juice than the captured -105 entry. Preserve immutable entry; no add."
     },
     {
       "gameId": "2026-W1-CLEM-LSU",
@@ -91,15 +93,34 @@
       "kickoff": "2026-09-05T18:30:00-05:00",
       "liveSpread": "LSU -10.5",
       "liveTotal": 50.5,
-      "liveMoneyline": "Clemson +320 / LSU -425 BetMGM",
+      "liveMoneyline": "Clemson about +300 to +320 / LSU -375 to -425",
       "priorModelSpread": "LSU -9.5",
       "priorModelTotal": 50.5,
       "spreadEdge": 1.0,
-      "status": "WATCH-PRICE TARGET",
-      "thresholdStatus": "below activation",
-      "priceSensitivity": "Clemson +11 remains ATS recheck zone; +10.5 is only ~1 point.",
-      "availability": "LSU left Dae'Quan Wright and Zxavian Harris off the Week 1 roster; uncertainty is resolved against their participation.",
-      "note": "No fair-line change beyond the already-maintained LSU -9.5 is made from the now-resolved availability item."
+      "status": "MATERIAL AVAILABILITY RISK / WATCH-PRICE TARGET",
+      "thresholdStatus": "below activation; information risk increased",
+      "priceSensitivity": "Clemson +11 had been the ATS recheck zone, but a confirmed Collin Sadler absence would require a fresh reprice before activating at that threshold.",
+      "availability": "LSU Dae'Quan Wright and Zxavian Harris are off the Week 1 roster. Clemson projected starting RT Collin Sadler is newly reported questionable; he has 1,291 career snaps and 15 starts and is part of a line replacing four starters.",
+      "reprice": "No point change is imposed while Sadler remains questionable rather than ruled out; the new flag raises information risk and can veto a marginal Clemson activation until resolved.",
+      "note": "Late Clemson OL availability is materially relevant against LSU's front."
+    },
+    {
+      "gameId": "2026-W1-UCLA-CAL",
+      "away": "UCLA",
+      "home": "Cal",
+      "kickoff": "2026-09-05T21:30:00-05:00",
+      "liveSpread": "UCLA -1.5 / Cal +1.5 FanDuel reference",
+      "liveTotal": 53.5,
+      "liveMoneyline": "UCLA -125 / Cal +105 FanDuel reference",
+      "priorModelSpread": "Pick",
+      "priorModelTotal": 53.0,
+      "spreadEdge": 1.5,
+      "totalEdge": 0.5,
+      "status": "WATCH-PRICE TARGET / NO ACTIVATION",
+      "thresholdStatus": "1.5-point raw side edge but small-bet gate remains vetoed",
+      "priceSensitivity": "Cal +3 remains the preferred activation zone; +1.5 does not satisfy the required information/confidence/independent-support combination for a 0.25u small bet.",
+      "expertResidual": "Current expert layer remains contradictory rather than cleanly supportive; do not upgrade solely from outside picks.",
+      "note": "Current FanDuel reference is still UCLA -1.5, not the isolated -2.5 display seen on one Action odds page. No threshold crossing is accepted without a cleaner executable quote."
     },
     {
       "gameId": "2026-W1-NT-IND",
@@ -110,7 +131,7 @@
       "status": "MATERIAL LATE AVAILABILITY / SNAPSHOT FAILURE",
       "thresholdStatus": "No governed activation calculation available",
       "priceSensitivity": "No bet may be activated because the production selected-week record does not expose a governed fair spread/total for this game.",
-      "note": "No point adjustment is inferred or reverse-engineered."
+      "note": "Game has kicked off; no retroactive entry or snapshot repair is permitted."
     },
     {
       "gameId": "2026-W1-CCU-WVU",
@@ -118,36 +139,44 @@
       "home": "West Virginia",
       "kickoff": "2026-09-05T11:00:00-05:00",
       "weather": "High chance of rain around kickoff in Morgantown in current game-day reporting.",
-      "status": "MATERIAL WEATHER MONITOR / SNAPSHOT FAILURE",
+      "status": "MATERIAL WEATHER / SNAPSHOT FAILURE — KICKED OFF",
       "thresholdStatus": "No governed activation calculation available",
-      "note": "Weather is actionable context, but the production selected-week record lacks a governed fair spread/total, so no model-point adjustment is invented."
+      "note": "No retroactive model-point adjustment, wager or snapshot repair is permitted after kickoff."
     },
     {
       "gameId": "2026-W1-ECU-BAMA",
       "away": "East Carolina",
       "home": "Alabama",
       "kickoff": "2026-09-05T11:00:00-05:00",
-      "availability": "Alabama RB EJ Crowell is a game-time decision with an ankle injury; WR Noah Rogers and RB A.K. Dear are not expected to play.",
-      "status": "SNAPSHOT FAILURE / NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
-      "note": "Late availability is material context but cannot be converted into a governed fair-line change without the selected-week canonical runtime model record."
+      "availability": "Alabama RB EJ Crowell was a game-time decision with an ankle injury; WR Noah Rogers and RB A.K. Dear were not expected to play.",
+      "status": "SNAPSHOT FAILURE — KICKED OFF / NO RETROACTIVE ACTIVATION",
+      "note": "No retroactive fair-line reconstruction is permitted."
     },
     {
       "gameId": "2026-W1-ORST-HOU",
       "away": "Oregon State",
       "home": "Houston",
       "kickoff": "2026-09-05T11:00:00-05:00",
-      "availability": "Houston WR Muizz Tounkara ruled out; TE Luke McGary doubtful. Oregon State is starting freshman QB Braden Atkinson.",
-      "status": "SNAPSHOT FAILURE / NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
-      "note": "Fresh market and availability are verified, but no production fair line is exposed in the public runtime dataset."
+      "availability": "Houston WR Muizz Tounkara ruled out; TE Luke McGary doubtful. Oregon State started freshman QB Braden Atkinson.",
+      "status": "SNAPSHOT FAILURE — KICKED OFF / NO RETROACTIVE ACTIVATION",
+      "note": "No retroactive fair-line reconstruction is permitted."
     }
   ],
   "snapshotAudit": {
     "targetWindow": "60-90 minutes before individual kickoff",
-    "earlySlateStatus": "PARTIAL LOCK / FAILURE — target window has now elapsed",
-    "asOf": "2026-09-05T10:31:37-05:00",
-    "reason": "Liberty-JMU has a genuine production fair and was frozen immutably. Seven other 11:00 CT games still lack governed production fair spreads/totals and therefore cannot receive legitimate final snapshots; only 29 minutes remain before kickoff.",
+    "earlySlateStatus": "MISSED LOCK FAILURE — immutable post-kickoff remediation prohibited",
+    "asOf": "2026-09-05T11:49:20-05:00",
+    "reason": "Liberty-JMU was legitimately frozen. Seven other early games lacked governed production fair spreads/totals before kickoff and are now immutable snapshot failures; they will not be backfilled after kickoff.",
     "lockedGames": ["2026-W1-LIB-JMU"],
     "failedGames": ["2026-W1-NT-IND", "2026-W1-ECU-BAMA", "2026-W1-ORST-HOU", "2026-W1-CCU-WVU", "2026-W1-OHIO-NEB", "2026-W1-TAR-BGSU", "2026-W1-MIAOH-PITT"],
+    "upcomingLockWindows": [
+      {"games":["2026-W1-BC-CIN","2026-W1-AUB-BAY"],"kickoff":"2026-09-05T14:30:00-05:00","target":"approximately 13:00-13:30 CT"},
+      {"games":["2026-W1-WYO-CSU"],"kickoff":"2026-09-05T17:00:00-05:00","target":"approximately 15:30-16:00 CT"},
+      {"games":["2026-W1-ASU-MEM"],"kickoff":"2026-09-05T18:00:00-05:00","target":"approximately 16:30-17:00 CT"},
+      {"games":["2026-W1-CLEM-LSU"],"kickoff":"2026-09-05T18:30:00-05:00","target":"approximately 17:00-17:30 CT"},
+      {"games":["2026-W1-UNLV-HAW"],"kickoff":"2026-09-05T21:00:00-05:00","target":"approximately 19:30-20:00 CT"},
+      {"games":["2026-W1-UCLA-CAL"],"kickoff":"2026-09-05T21:30:00-05:00","target":"approximately 20:00-20:30 CT"}
+    ],
     "requiredRemediation": "Persist governed selected-week fair spreads/totals for every modeled game before future game-day lock windows; browser-only canonicalization cannot create legitimate fair values when the embedded slate itself says Pending."
   }
 }
