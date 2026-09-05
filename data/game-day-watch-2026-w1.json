@@ -1,0 +1,79 @@
+{
+  "week": 1,
+  "updatedAt": "2026-09-05T09:22:36-05:00",
+  "stage": "game-day-watch",
+  "governance": "Bet Activation Gate v1.1; no reverse-engineered Independent Football fair values; no retroactive entries.",
+  "materialChanges": [
+    {
+      "gameId": "2026-W1-LIB-JMU",
+      "away": "Liberty",
+      "home": "James Madison",
+      "kickoff": "2026-09-05T11:00:00-05:00",
+      "liveSpread": "James Madison -6.5",
+      "liveTotal": 50.5,
+      "liveMoneyline": "Liberty +198 / James Madison -245 (Action Network); FanDuel reference Liberty +180 / JMU -220",
+      "priorModelSpread": "James Madison -6",
+      "priorModelTotal": 52.0,
+      "spreadEdge": 0.5,
+      "totalEdge": 1.5,
+      "status": "PASS",
+      "thresholdStatus": "below activation",
+      "priceSensitivity": "No side activation at Liberty +6.5. Total move creates only a 1.5-point Over edge; 1.5-1.99 tier cannot activate without high information quality and genuine independent-football support.",
+      "expertResidual": "Fresh external opinion is mixed on total: Covers supports Over while FanDuel editorial supports Under; no governed expert residual upgrade.",
+      "note": "Total fell from prior runtime 52.5 to 50.5; material market move but still no official activation."
+    },
+    {
+      "gameId": "2026-W1-UNLV-HAW",
+      "away": "UNLV",
+      "home": "Hawaii",
+      "kickoff": "2026-09-05T21:00:00-05:00",
+      "liveSpread": "UNLV -3.5",
+      "liveTotal": "55.5 to 56.5",
+      "liveMoneyline": "Hawaii +125 to +128 / UNLV -150 to -157",
+      "priorModelSpread": "UNLV -3",
+      "priorModelTotal": 57.5,
+      "spreadEdge": 0.5,
+      "status": "WATCH / UNDERDOG PROFILE RECHECK",
+      "thresholdStatus": "Hawaii re-entered Underdog Special v1.1 spread band at +3.5",
+      "priceSensitivity": "No Special activation at current ML: fair ML from the frozen +3.5 training-only spread-to-win model is approximately +149, so verified +125 to +128 is worse than fair even before profile qualification.",
+      "note": "This is a material v1.1 band crossing, but the mandatory price gate currently fails."
+    },
+    {
+      "gameId": "2026-W1-WYO-CSU",
+      "away": "Wyoming",
+      "home": "Colorado State",
+      "liveTotal": "45.5 FanDuel; 46.5 still shown at several books in Covers aggregation",
+      "officialEntry": "Under 46.5 -105, 0.5u",
+      "status": "HOLD OFFICIAL BET / NO ADD",
+      "note": "Market movement is toward the official Under. Preserve immutable entry; do not add at a worse total."
+    },
+    {
+      "gameId": "2026-W1-ECU-BAMA",
+      "away": "East Carolina",
+      "home": "Alabama",
+      "kickoff": "2026-09-05T11:00:00-05:00",
+      "availability": "Alabama RB EJ Crowell is a game-time decision with an ankle injury; WR Noah Rogers and RB A.K. Dear are not expected to play.",
+      "status": "NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
+      "note": "Late availability is material context but cannot be converted into a governed fair-line change without the selected-week canonical runtime model record."
+    },
+    {
+      "gameId": "2026-W1-ORST-HOU",
+      "away": "Oregon State",
+      "home": "Houston",
+      "kickoff": "2026-09-05T11:00:00-05:00",
+      "liveSpread": "Houston -20.5 (-115) / Oregon State +20.5 (-105)",
+      "liveTotal": 49.5,
+      "availability": "Houston WR Muizz Tounkara ruled out; TE Luke McGary doubtful.",
+      "status": "NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
+      "note": "Fresh market and availability verified, but no production fair line is exposed in the public runtime dataset."
+    }
+  ],
+  "snapshotAudit": {
+    "targetWindow": "60-90 minutes before individual kickoff",
+    "earlySlateStatus": "FAILURE / INCOMPLETE",
+    "reason": "The public Week 1 runtime board still exposes only the curated subset. The private full-slate canonicalization patch exists, but production-accessible runtime data does not yet expose fair lines for every 11:00 CT game. Freezing invented or reconstructed fair values is prohibited.",
+    "affectedExamples": ["East Carolina-Alabama", "Oregon State-Houston", "Ohio-Nebraska", "North Texas-Indiana", "Coastal Carolina-West Virginia"],
+    "libertyJmu": "Production fair values are exposed; current state recorded above.",
+    "requiredRemediation": "Deploy/activate full-slate canonical runtime board and persist full selected-week fair lines so every game can be frozen independently before kickoff."
+  }
+}
