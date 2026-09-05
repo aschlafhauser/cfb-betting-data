@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-05T18:18:04-05:00",
+  "updatedAt": "2026-09-05T18:35:36-05:00",
   "purpose": "Append-only game-day timing observations for threshold crossings, final-lock timing and late information-quality changes. Does not rewrite official bets or frozen fair values.",
   "observations": [
     {
@@ -96,6 +96,38 @@
       "informationRisk": "medium-high weather",
       "recommendationState": "NO UNDERDOG SPECIAL / TOTAL VETO REMAINS",
       "note": "Authoritative Honolulu forecast is less severe than the earlier 22-mph/rain characterization but remains breezy: northeast winds 15-20 mph with scattered showers tonight. Best current consensus spread is +3, with +3.5 appearing at some references; Hawaii ML +128 to +130 still fails the frozen v1.1 +3.5 fair-ML threshold when that spread is available. Do not manufacture a weather reprice; raw Over 55.5 edge remains non-executable pending the final-lock weather check."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-UNLV-HAW",
+      "timestamp": "2026-09-05T18:35:36-05:00",
+      "stage": "underdog-special-band-exit",
+      "marketSpread": "UNLV -3 / Hawaii +3 DraftKings; some boards have flashed +3.5",
+      "marketTotal": 55.5,
+      "marketMoneyline": "Hawaii +130 / UNLV -155 DraftKings",
+      "modelSpread": "UNLV -3",
+      "modelTotal": 57.5,
+      "spreadEdge": 0.0,
+      "totalEdge": 2.0,
+      "informationRisk": "medium-high weather",
+      "recommendationState": "NO UNDERDOG SPECIAL / TOTAL VETO REMAINS",
+      "note": "Latest verified Action/DraftKings board is Hawaii +3, which is outside the frozen v1.1 +3.5-to-+7 primary band. Even if +3.5 reappears, +130 remains worse than the frozen +149 fair-ML threshold. Winds remain materially relevant to the total, so the raw Over 55.5 edge is still not executable."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-SMU-FSU",
+      "timestamp": "2026-09-05T18:35:36-05:00",
+      "stage": "game-day-threshold-crossing",
+      "marketSpread": "SMU -2.5 (-122) / Florida State +2.5 (+100) FanDuel",
+      "marketTotal": 53.5,
+      "marketMoneyline": "SMU -150 / Florida State +125 FanDuel",
+      "modelSpread": "SMU -3.5",
+      "modelTotal": 52.5,
+      "spreadEdge": 1.0,
+      "totalEdge": 1.0,
+      "informationRisk": "medium",
+      "recommendationState": "WATCH-PRICE TARGET / NO ACTIVATION",
+      "note": "SMU improved from the prior -3 to -3.5 market into -2.5, creating a 1.0-point executable side edge versus the preserved -3.5 fair. That crosses from PASS into WATCH only; it does not meet activation tiers. Current Week-of-game Expert Intelligence includes both SMU-supportive and FSU-risk context, so no confidence override is applied."
     }
   ]
 }
