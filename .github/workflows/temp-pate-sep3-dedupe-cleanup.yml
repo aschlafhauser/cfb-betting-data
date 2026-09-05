@@ -1,0 +1,40 @@
+name: Temp Pate Sep3 Dedupe Cleanup
+on:
+  push:
+    paths:
+      - '.github/workflows/temp-pate-sep3-dedupe-cleanup.yml'
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove duplicate Marshall record and correct completeness note
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          for name in ['expert-weekly.json','expert-intelligence.json']:
+              p=pathlib.Path('data')/name
+              arr=json.loads(p.read_text())
+              arr=[x for x in arr if not (isinstance(x,dict) and x.get('id')=='pate-2026-09-03-marshall-psu-upset-alert-detail')]
+              p.write_text(json.dumps(arr,indent=2,ensure_ascii=False)+'\n')
+          p=pathlib.Path('data/expert-episode-state.json')
+          arr=json.loads(p.read_text())
+          ep='Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide'
+          for r in arr:
+              if r.get('source')=="Josh Pate's College Football Show" and r.get('episode')==ep:
+                  r['ledgerAction']='full-transcript-reconciliation-one-new-matchup-record-and-completeness-upgrade'
+                  r['note']='Full public transcript is now retrievable and closes the remaining upset-alert attribution gaps. The genuinely new material added in this reconciliation is Oregon State-Houston: Pate rates Houston upset concern 5/10 at -20.5, highlights Braden Atkinson’s Mercer production and winning the Oregon State QB job over Malik Murphy, but still expects Houston to win and makes no Oregon State ATS/ML wager. Penn State-Marshall 3/10 had already been persisted immediately before this pass and was therefore retained only in its original deduped record. Clemson-LSU, Toledo-Michigan State, Miami (OH)-Pitt, SMU-FSU and the four in-episode Ramen Noodle constructions were verified without duplication. Friday Night Lines was searched as required by the episode; no reliably attributable additional Sep. 4 card surfaced in public indexing, so nothing was inferred. Episode now passes the full completeness checklist and is COMPLETE.'
+          p.write_text(json.dumps(arr,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          git commit -m "Deduplicate Pate Sep 3 transcript reconciliation"
+          git push
