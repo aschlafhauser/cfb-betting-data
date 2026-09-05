@@ -24,6 +24,49 @@
         "officialLedger": {"bets":0,"units":0.0},
         "calibrationDecision": "Research flag only. Week 0 is too small and transition-heavy to justify system-level weight changes. Preserve preseason priors and cap team/unit production moves."
       }
+    },
+    {
+      "week": 1,
+      "snapshotType": "frozen-pre-kickoff",
+      "frozenAt": "2026-09-05T10:06:20-05:00",
+      "workflowStage": "Final / Kickoff Locked",
+      "governance": "Bet Activation Gate v1.1; preserve production fair values exactly; no reverse-engineered Independent Football fair; immutable pre-kickoff state.",
+      "games": [
+        {
+          "gameId": "2026-W1-LIB-JMU",
+          "kickoff": "2026-09-05T11:00:00-05:00",
+          "marketSpread": "James Madison -6.5",
+          "marketTotal": 50.5,
+          "marketMoneyline": "Liberty +180 / James Madison -220 (FanDuel reference)",
+          "modelSpread": "James Madison -6",
+          "modelTotal": 52.0,
+          "spreadEdge": 0.5,
+          "totalEdge": 1.5,
+          "sideSignal": "PASS",
+          "totalSignal": "PASS",
+          "status": "PASS",
+          "confidence": "low-medium",
+          "informationQuality": "medium",
+          "thresholdStatus": "below activation",
+          "priceSensitivity": "No side activation at Liberty +6.5. Over 50.5 has 1.5 points to fair but cannot clear the 1.5-1.99 tier without high information quality and genuine independent-football support.",
+          "snapshotTimingNote": "Captured 54 minutes before kickoff, slightly inside the 60-90 minute target because the early-slate runtime coverage issue remained under active audit."
+        }
+      ],
+      "snapshotFailures": [
+        {
+          "kickoffWindow": "2026-09-05 11:00-12:00 CT early slate",
+          "reason": "Production-accessible selected-week records still do not expose governed fair spreads/totals for several games. Inventing, reconstructing or reverse-engineering those values is prohibited.",
+          "affectedGames": [
+            "2026-W1-NT-IND",
+            "2026-W1-ECU-BAMA",
+            "2026-W1-ORST-HOU",
+            "2026-W1-CCU-WVU",
+            "2026-W1-OHIO-NEB",
+            "2026-W1-TAR-BGSU",
+            "2026-W1-MIAOH-PITT"
+          ]
+        }
+      ]
     }
   ]
 }
