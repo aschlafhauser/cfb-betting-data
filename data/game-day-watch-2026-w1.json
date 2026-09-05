@@ -1,6 +1,6 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-05T09:22:36-05:00",
+  "updatedAt": "2026-09-05T10:06:20-05:00",
   "stage": "game-day-watch",
   "governance": "Bet Activation Gate v1.1; no reverse-engineered Independent Football fair values; no retroactive entries.",
   "materialChanges": [
@@ -11,16 +11,40 @@
       "kickoff": "2026-09-05T11:00:00-05:00",
       "liveSpread": "James Madison -6.5",
       "liveTotal": 50.5,
-      "liveMoneyline": "Liberty +198 / James Madison -245 (Action Network); FanDuel reference Liberty +180 / JMU -220",
+      "liveMoneyline": "Liberty +180 / James Madison -220 FanDuel reference; earlier Action Network Liberty +198 / JMU -245",
       "priorModelSpread": "James Madison -6",
       "priorModelTotal": 52.0,
       "spreadEdge": 0.5,
       "totalEdge": 1.5,
-      "status": "PASS",
+      "status": "PASS / FINAL-KICKOFF-LOCKED",
       "thresholdStatus": "below activation",
       "priceSensitivity": "No side activation at Liberty +6.5. Total move creates only a 1.5-point Over edge; 1.5-1.99 tier cannot activate without high information quality and genuine independent-football support.",
-      "expertResidual": "Fresh external opinion is mixed on total: Covers supports Over while FanDuel editorial supports Under; no governed expert residual upgrade.",
-      "note": "Total fell from prior runtime 52.5 to 50.5; material market move but still no official activation."
+      "expertResidual": "Fresh external opinion remains mixed on the total; no governed expert residual upgrade.",
+      "note": "Immutable pre-kickoff snapshot frozen at 10:06:20 CT, 54 minutes before kickoff. No official bet."
+    },
+    {
+      "gameId": "2026-W1-NT-IND",
+      "away": "North Texas",
+      "home": "Indiana",
+      "kickoff": "2026-09-05T11:00:00-05:00",
+      "liveSpread": "North Texas +40.5 consensus; Indiana -39.5 available in current market checks",
+      "liveTotal": "55.5 to 57",
+      "liveMoneyline": "North Texas around +5000 / Indiana around -20000",
+      "availability": "Indiana defensive linemen Stephen Daley and Kellan Wyatt were restored to eligibility by court order and are eligible to play today.",
+      "status": "MATERIAL LATE AVAILABILITY / SNAPSHOT FAILURE",
+      "thresholdStatus": "No governed activation calculation available",
+      "priceSensitivity": "No bet may be activated from the availability upgrade because the production selected-week record does not expose a governed fair spread/total for this game.",
+      "note": "The reinstatements strengthen an already highly rated Indiana defensive front, but no point adjustment is inferred or reverse-engineered."
+    },
+    {
+      "gameId": "2026-W1-CCU-WVU",
+      "away": "Coastal Carolina",
+      "home": "West Virginia",
+      "kickoff": "2026-09-05T11:00:00-05:00",
+      "weather": "High chance of rain around the noon kickoff in Morgantown in current game-day reporting.",
+      "status": "MATERIAL WEATHER MONITOR / SNAPSHOT FAILURE",
+      "thresholdStatus": "No governed activation calculation available",
+      "note": "Weather is actionable context, but the production selected-week record lacks a governed fair spread/total, so no model-point adjustment is invented."
     },
     {
       "gameId": "2026-W1-UNLV-HAW",
@@ -36,7 +60,7 @@
       "status": "WATCH / UNDERDOG PROFILE RECHECK",
       "thresholdStatus": "Hawaii re-entered Underdog Special v1.1 spread band at +3.5",
       "priceSensitivity": "No Special activation at current ML: fair ML from the frozen +3.5 training-only spread-to-win model is approximately +149, so verified +125 to +128 is worse than fair even before profile qualification.",
-      "note": "This is a material v1.1 band crossing, but the mandatory price gate currently fails."
+      "note": "Material v1.1 band crossing remains live, but mandatory price gate fails."
     },
     {
       "gameId": "2026-W1-WYO-CSU",
@@ -53,7 +77,7 @@
       "home": "Alabama",
       "kickoff": "2026-09-05T11:00:00-05:00",
       "availability": "Alabama RB EJ Crowell is a game-time decision with an ankle injury; WR Noah Rogers and RB A.K. Dear are not expected to play.",
-      "status": "NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
+      "status": "SNAPSHOT FAILURE / NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
       "note": "Late availability is material context but cannot be converted into a governed fair-line change without the selected-week canonical runtime model record."
     },
     {
@@ -61,19 +85,20 @@
       "away": "Oregon State",
       "home": "Houston",
       "kickoff": "2026-09-05T11:00:00-05:00",
-      "liveSpread": "Houston -20.5 (-115) / Oregon State +20.5 (-105)",
+      "liveSpread": "Houston -20.5 / Oregon State +20.5",
       "liveTotal": 49.5,
-      "availability": "Houston WR Muizz Tounkara ruled out; TE Luke McGary doubtful.",
-      "status": "NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
-      "note": "Fresh market and availability verified, but no production fair line is exposed in the public runtime dataset."
+      "availability": "Houston WR Muizz Tounkara ruled out; TE Luke McGary doubtful. Oregon State is starting freshman QB Braden Atkinson.",
+      "status": "SNAPSHOT FAILURE / NO ACTIVATION WITHOUT CANONICAL FAIR-LINE RECORD",
+      "note": "Fresh market and availability are verified, but no production fair line is exposed in the public runtime dataset."
     }
   ],
   "snapshotAudit": {
     "targetWindow": "60-90 minutes before individual kickoff",
-    "earlySlateStatus": "FAILURE / INCOMPLETE",
-    "reason": "The public Week 1 runtime board still exposes only the curated subset. The private full-slate canonicalization patch exists, but production-accessible runtime data does not yet expose fair lines for every 11:00 CT game. Freezing invented or reconstructed fair values is prohibited.",
-    "affectedExamples": ["East Carolina-Alabama", "Oregon State-Houston", "Ohio-Nebraska", "North Texas-Indiana", "Coastal Carolina-West Virginia"],
-    "libertyJmu": "Production fair values are exposed; current state recorded above.",
-    "requiredRemediation": "Deploy/activate full-slate canonical runtime board and persist full selected-week fair lines so every game can be frozen independently before kickoff."
+    "earlySlateStatus": "PARTIAL LOCK / FAILURE",
+    "asOf": "2026-09-05T10:06:20-05:00",
+    "reason": "Liberty-JMU has a genuine production fair and was frozen immutably. Several other early games still lack governed production fair spreads/totals; freezing reconstructed values is prohibited.",
+    "lockedGames": ["2026-W1-LIB-JMU"],
+    "failedGames": ["2026-W1-NT-IND", "2026-W1-ECU-BAMA", "2026-W1-ORST-HOU", "2026-W1-CCU-WVU", "2026-W1-OHIO-NEB", "2026-W1-TAR-BGSU", "2026-W1-MIAOH-PITT"],
+    "requiredRemediation": "Persist governed selected-week fair spreads/totals for every modeled game before future game-day lock windows; browser-only canonicalization cannot create legitimate fair values when the embedded slate itself says Pending."
   }
 }
