@@ -1,0 +1,96 @@
+name: tmp-reconcile-pate-pennstate
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-reconcile-pate-pennstate.yml'
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Append late Pate Penn State material
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          weekly_p=Path('data/expert-weekly.json')
+          intel_p=Path('data/expert-intelligence.json')
+          state_p=Path('data/expert-episode-state.json')
+          weekly=json.loads(weekly_p.read_text())
+          intel=json.loads(intel_p.read_text())
+          state=json.loads(state_p.read_text())
+          wid='pate-2026-09-03-psu-marshall-upset-alert-3-late-detail'
+          weekly_row={
+            'id':wid,
+            'week':1,
+            'gameId':'2026-W1-MARSHALL-PSU',
+            'source':'Josh Pate',
+            'sourceFamily':'Josh Pate',
+            'analyst':'Josh Pate',
+            'episode':'Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide',
+            'sourceDate':'2026-09-03',
+            'segment':'Upset Alerts — late-indexed Penn State-Marshall clip',
+            'type':'upset alert / favorite-risk analysis',
+            'explicit':True,
+            'direction':'Penn State upset concern 3/10; no ATS or ML wager',
+            'conviction':'low upset concern',
+            'sourceAnalysis':'Pate rates Penn State only 3/10 on his upset-alert concern meter as a 24.5-point favorite over Marshall. He expects Penn State to be okay and says he kind of likes the Nittany Lions to run it up, but notes mild concern because Penn State looked inferior against inferior competition early last season. Marshall QB Carlos Del Rio-Wilson is highlighted as an experienced improviser who is good off-script and situationally and can frustrate a favorite by extending plays.',
+            'bettingImplication':'This is a low-grade favorite-risk flag, not a Marshall bet. It adds a specific mechanism—Del Rio-Wilson improvisation plus Penn State early-season sluggishness history—but Pate explicitly remains low concern and leans toward Penn State separating. No spread, moneyline, total, or wager is inferred beyond the stated 3/10 concern and the referenced Penn State -24.5 market.',
+            'sourceUrl':'https://sports.yahoo.com/video/penn-state-marshall-preview-matt-161437429.html'
+          }
+          if not any(r.get('id')==wid for r in weekly): weekly.append(weekly_row)
+          intel_row={
+            'id':wid,
+            'week':1,
+            'gameId':'2026-W1-MARSHALL-PSU',
+            'episode':'Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide',
+            'episodeCompleteness':'COMPLETE-SOURCE-LIMITED',
+            'sourceFamily':'Josh Pate',
+            'analyst':'Josh Pate',
+            'sourceDate':'2026-09-03',
+            'phase':'pre-Week-1',
+            'category':'upset alert / favorite risk',
+            'team':'Marshall',
+            'direction':'favorite-risk warning only; Penn State concern 3/10',
+            'conviction':'low',
+            'freshness':'late-indexed pre-kickoff evidence',
+            'independence':'independent source family; single Josh Pate signal',
+            'incrementalInformation':'Adds quantified 3/10 concern plus Carlos Del Rio-Wilson improvisation/off-script mechanism and Penn State early-season sluggishness history; no additional wager construction.',
+            'modelRelationship':'orthogonal-new-information',
+            'summary':'Pate rates Penn State-Marshall 3/10 on the upset-alert concern meter. He expects Penn State to be okay and even says he kind of likes Penn State to run it up, but flags Marshall QB Carlos Del Rio-Wilson as an experienced improviser who can extend plays and notes Penn State fans have reason to remember sluggish early performances against inferior opponents last season. No Marshall ATS/ML or total wager is stated.',
+            'sourceUrl':'https://sports.yahoo.com/video/penn-state-marshall-preview-matt-161437429.html'
+          }
+          if not any(r.get('id')==wid for r in intel): intel.append(intel_row)
+          ep='Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide'
+          for r in state:
+            if r.get('episode')==ep and 'Josh Pate' in r.get('source',''):
+              checks=r.setdefault('checkedEvidence',[])
+              for c in [
+                'September 5 Yahoo/Josh Pate official-syndicated video clip recheck',
+                'Penn State-Marshall exact 3/10 concern-meter value and matchup mechanism extracted',
+                'expert-weekly.json and Expert Intelligence v1 dedupe cross-check completed for Penn State-Marshall'
+              ]:
+                if c not in checks: checks.append(c)
+              r['lastChecked']='2026-09-05T07:18:36-05:00'
+              r['ledgerAction']='late-penn-state-marshall-concern-meter-detail-appended-and-deduped'
+              old=r.get('note','')
+              add=' Late-indexed syndicated Josh Pate video now resolves Penn State-Marshall as a 3/10 upset-alert concern: Pate expects Penn State to be okay and leans toward the favorite separating, while identifying Carlos Del Rio-Wilson improvisation/off-script ability and Penn State early-season sluggishness history as the upset mechanism. No Marshall ATS/ML/total wager was inferred.'
+              if add.strip() not in old: r['note']=old+add
+              break
+          weekly_p.write_text(json.dumps(weekly,indent=2,ensure_ascii=False)+'\n')
+          intel_p.write_text(json.dumps(intel,indent=2,ensure_ascii=False)+'\n')
+          state_p.write_text(json.dumps(state,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit runtime reconciliation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Reconcile late Josh Pate Penn State-Marshall upset detail'
+          git push
