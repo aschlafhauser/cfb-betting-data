@@ -56,15 +56,61 @@
         {
           "kickoffWindow": "2026-09-05 11:00-12:00 CT early slate",
           "reason": "Production-accessible selected-week records still do not expose governed fair spreads/totals for several games. Inventing, reconstructing or reverse-engineering those values is prohibited.",
-          "affectedGames": [
-            "2026-W1-NT-IND",
-            "2026-W1-ECU-BAMA",
-            "2026-W1-ORST-HOU",
-            "2026-W1-CCU-WVU",
-            "2026-W1-OHIO-NEB",
-            "2026-W1-TAR-BGSU",
-            "2026-W1-MIAOH-PITT"
-          ]
+          "affectedGames": ["2026-W1-NT-IND","2026-W1-ECU-BAMA","2026-W1-ORST-HOU","2026-W1-CCU-WVU","2026-W1-OHIO-NEB","2026-W1-TAR-BGSU","2026-W1-MIAOH-PITT"]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "snapshotType": "frozen-pre-kickoff",
+      "frozenAt": "2026-09-05T12:44:42-05:00",
+      "workflowStage": "Final / Kickoff Locked",
+      "governance": "Bet Activation Gate v1.1; current executable market references; preserve governed production fair values; no reverse-engineered Independent Football fair.",
+      "games": [
+        {
+          "gameId":"2026-W1-BC-CIN",
+          "kickoff":"2026-09-05T14:30:00-05:00",
+          "marketSpread":"Cincinnati -7.5",
+          "marketTotal":49.5,
+          "marketMoneyline":"Boston College approximately +245 / Cincinnati -310",
+          "modelSpread":"Cincinnati -6.5",
+          "modelTotal":51.0,
+          "spreadEdge":1.0,
+          "totalEdge":1.5,
+          "sideSignal":"WATCH-PRICE TARGET",
+          "totalSignal":"PASS",
+          "status":"WATCH / NO ACTIVATION",
+          "confidence":"medium",
+          "informationQuality":"medium",
+          "thresholdStatus":"side 1.0 WATCH; total 1.5 raw small-bet band vetoed",
+          "priceSensitivity":"BC +8 reaches 1.5-point raw side band; +8.5 preferred. Over 49.5 cannot activate without high information quality and genuine independent-football support.",
+          "snapshotTimingNote":"Captured 106 minutes before kickoff because the hourly game-day cadence would otherwise miss the 60-90 minute target; no later snapshot may rewrite this frozen fair state."
+        },
+        {
+          "gameId":"2026-W1-AUB-BAY",
+          "kickoff":"2026-09-05T14:30:00-05:00",
+          "marketSpread":"Auburn -7 to -7.5; Baylor +7.5 available",
+          "marketTotal":59.5,
+          "marketMoneyline":"Baylor about +225 / Auburn about -275",
+          "modelSpread":"Auburn -6.5",
+          "modelTotal":59.0,
+          "spreadEdge":1.0,
+          "totalEdge":0.5,
+          "sideSignal":"PASS",
+          "totalSignal":"PASS",
+          "status":"PASS",
+          "confidence":"medium",
+          "informationQuality":"medium",
+          "thresholdStatus":"below activation",
+          "priceSensitivity":"Baylor +8.5 remains the governed stronger-value zone. +7.5 is only 1.0 point to fair and remains WATCH/PASS territory under v1.1.",
+          "snapshotTimingNote":"Captured 106 minutes before kickoff because the hourly game-day cadence would otherwise miss the 60-90 minute target; neutral indoor venue removes weather risk."
+        }
+      ],
+      "snapshotFailures": [
+        {
+          "kickoffWindow":"2026-09-05 14:00-14:45 CT",
+          "reason":"Universal Deep Dive status exists, but persistent production-accessible data does not expose governed fair spreads/totals for these games. No fair values were reconstructed or reverse-engineered.",
+          "affectedGames":["2026-W1-TNST-UGA","2026-W1-TUL-DUKE","2026-W1-CIT-CHA","2026-W1-TOW-NAVY","2026-W1-UTRGV-UTSA","2026-W1-BOISE-ORE","2026-W1-MAR-PSU","2026-W1-FORD-NDSU","2026-W1-TXST-TEX","2026-W1-FUR-TENN","2026-W1-MAINE-APP","2026-W1-OKST-TULSA"]
         }
       ]
     }
