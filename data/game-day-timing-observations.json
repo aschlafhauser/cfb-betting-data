@@ -1,0 +1,53 @@
+{
+  "season": 2026,
+  "updatedAt": "2026-09-05T16:06:56-05:00",
+  "purpose": "Append-only game-day timing observations for threshold crossings, final-lock timing and late information-quality changes. Does not rewrite official bets or frozen fair values.",
+  "observations": [
+    {
+      "week": 1,
+      "gameId": "2026-W1-ASU-MEM",
+      "timestamp": "2026-09-05T16:06:56-05:00",
+      "stage": "final-kickoff-locked",
+      "marketSpread": "Arkansas State +11.5",
+      "marketTotal": 52.5,
+      "modelSpread": "Memphis -9.5",
+      "modelTotal": 55.5,
+      "spreadEdge": 2.0,
+      "totalEdge": 3.0,
+      "informationRisk": "medium",
+      "recommendationState": "HOLD EXISTING OFFICIAL SIDE + TOTAL / NO ADD",
+      "note": "Final snapshot captured 113 minutes before kickoff because the next hourly pass would miss the target window. Current credible public reporting conflicts on whether Trey Owens was formally named QB1; preserve prior official entries immutably but do not add exposure."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-UCLA-CAL",
+      "timestamp": "2026-09-05T16:06:56-05:00",
+      "stage": "game-day-threshold-crossing",
+      "marketSpread": "UCLA -2.5 / Cal +2.5",
+      "marketTotal": 53.5,
+      "modelSpread": "Pick",
+      "modelTotal": 53.0,
+      "spreadEdge": 2.5,
+      "totalEdge": 0.5,
+      "informationRisk": "medium",
+      "recommendationState": "WATCH-PRICE TARGET / NO ACTIVATION",
+      "note": "Cal raw edge crossed from 1.5 to 2.5 points as the market moved to UCLA -2.5. Gate remains vetoed because production confidence is low-medium and information quality medium, below the 2.0-2.99 activation requirements."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-UNLV-HAW",
+      "timestamp": "2026-09-05T16:06:56-05:00",
+      "stage": "underdog-special-recheck",
+      "marketSpread": "UNLV -3.5 / Hawaii +3.5",
+      "marketTotal": 55.5,
+      "marketMoneyline": "Hawaii +128",
+      "modelSpread": "UNLV -3",
+      "modelTotal": 57.5,
+      "spreadEdge": 0.5,
+      "totalEdge": 2.0,
+      "informationRisk": "high-weather",
+      "recommendationState": "NO UNDERDOG SPECIAL / TOTAL VETOED",
+      "note": "Hawaii re-entered the +3.5-to-+7 v1.1 band, but +128 fails the frozen +149 fair-ML price test. Wind/rain risk continues to veto the raw 2.0-point Over edge."
+    }
+  ]
+}
