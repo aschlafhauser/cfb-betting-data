@@ -1,6 +1,6 @@
 {
   "week": 1,
-  "updatedAt": "2026-09-05T11:49:20-05:00",
+  "updatedAt": "2026-09-05T12:44:42-05:00",
   "stage": "game-day-watch",
   "governance": "Bet Activation Gate v1.1; no reverse-engineered Independent Football fair values; no retroactive entries.",
   "materialChanges": [
@@ -46,15 +46,37 @@
       "kickoff": "2026-09-05T14:30:00-05:00",
       "liveSpread": "Cincinnati -7.5",
       "liveTotal": 49.5,
-      "liveMoneyline": "Boston College +245 / Cincinnati -310 FanDuel",
+      "liveMoneyline": "Boston College approximately +245 / Cincinnati -310",
       "priorModelSpread": "Cincinnati -6.5",
       "priorModelTotal": 51.0,
       "spreadEdge": 1.0,
       "totalEdge": 1.5,
-      "status": "WATCH-PRICE TARGET / NO ACTIVATION",
-      "thresholdStatus": "Total raw edge remains in 1.5-point small-bet band but gate veto remains",
-      "priceSensitivity": "BC +8 reaches the 1.5-point side band; +8.5 preferred. Over 49.5 has 1.5 raw points but lacks the high information quality plus genuine independent-football support required for a 0.25u activation.",
-      "note": "Current live market reconfirmed at Cincinnati -7.5 / 49.5. Final snapshot target window begins roughly 13:00 CT."
+      "status": "FINAL / KICKOFF LOCKED — WATCH / NO ACTIVATION",
+      "thresholdStatus": "Side 1.0 WATCH; total 1.5 raw small-bet band vetoed",
+      "priceSensitivity": "BC +8 reaches 1.5-point raw side band; +8.5 preferred. Over 49.5 cannot activate without high information quality and genuine independent-football support.",
+      "availability": "No meaningful late injury change verified; both teams are broadly healthy apart from previously known BC TE Kaelan Chuszinski season-long absence.",
+      "expertResidual": "External models remain mixed; fresh Dimers-style projection supports BC +7.5 directionally but is not part of governed Expert Intelligence v1 and does not upgrade the production gate.",
+      "note": "Immutable snapshot frozen at 12:44:42 CT, 106 minutes before kickoff because the hourly cadence would otherwise miss the target window."
+    },
+    {
+      "gameId": "2026-W1-AUB-BAY",
+      "away": "Baylor",
+      "home": "Auburn",
+      "kickoff": "2026-09-05T14:30:00-05:00",
+      "liveSpread": "Auburn -7 to -7.5; Baylor +7.5 available",
+      "liveTotal": 59.5,
+      "liveMoneyline": "Baylor about +225 / Auburn about -275",
+      "priorModelSpread": "Auburn -6.5",
+      "priorModelTotal": 59.0,
+      "spreadEdge": 1.0,
+      "totalEdge": 0.5,
+      "status": "FINAL / KICKOFF LOCKED — PASS",
+      "thresholdStatus": "below activation",
+      "priceSensitivity": "Baylor +8.5 remains the governed stronger-value zone; +7.5 is only 1.0 point to fair.",
+      "availability": "Baylor QB DJ Lagway remains the starter; Ashton Jones is unavailable for the season. No new high-risk late availability flag was verified.",
+      "weather": "Neutral indoor game at Mercedes-Benz Stadium; no actionable weather adjustment.",
+      "expertResidual": "Fresh public analysis is supportive of Baylor +7.5, but this remains outside governed Expert Intelligence v1 and does not change production status.",
+      "note": "Immutable snapshot frozen at 12:44:42 CT, 106 minutes before kickoff because the hourly cadence would otherwise miss the target window."
     },
     {
       "gameId": "2026-W1-UNLV-HAW",
@@ -165,18 +187,17 @@
   "snapshotAudit": {
     "targetWindow": "60-90 minutes before individual kickoff",
     "earlySlateStatus": "MISSED LOCK FAILURE — immutable post-kickoff remediation prohibited",
-    "asOf": "2026-09-05T11:49:20-05:00",
-    "reason": "Liberty-JMU was legitimately frozen. Seven other early games lacked governed production fair spreads/totals before kickoff and are now immutable snapshot failures; they will not be backfilled after kickoff.",
-    "lockedGames": ["2026-W1-LIB-JMU"],
-    "failedGames": ["2026-W1-NT-IND", "2026-W1-ECU-BAMA", "2026-W1-ORST-HOU", "2026-W1-CCU-WVU", "2026-W1-OHIO-NEB", "2026-W1-TAR-BGSU", "2026-W1-MIAOH-PITT"],
+    "asOf": "2026-09-05T12:44:42-05:00",
+    "reason": "Liberty-JMU was legitimately frozen. Seven other early games lacked governed production fair spreads/totals before kickoff and are immutable snapshot failures. BC-Cincinnati and Baylor-Auburn are now frozen prospectively; other games in their surrounding kickoff window still lack persistent governed fair values and are recorded as failures rather than reconstructed.",
+    "lockedGames": ["2026-W1-LIB-JMU","2026-W1-BC-CIN","2026-W1-AUB-BAY"],
+    "failedGames": ["2026-W1-NT-IND","2026-W1-ECU-BAMA","2026-W1-ORST-HOU","2026-W1-CCU-WVU","2026-W1-OHIO-NEB","2026-W1-TAR-BGSU","2026-W1-MIAOH-PITT","2026-W1-TNST-UGA","2026-W1-TUL-DUKE","2026-W1-CIT-CHA","2026-W1-TOW-NAVY","2026-W1-UTRGV-UTSA","2026-W1-BOISE-ORE","2026-W1-MAR-PSU","2026-W1-FORD-NDSU","2026-W1-TXST-TEX","2026-W1-FUR-TENN","2026-W1-MAINE-APP","2026-W1-OKST-TULSA"],
     "upcomingLockWindows": [
-      {"games":["2026-W1-BC-CIN","2026-W1-AUB-BAY"],"kickoff":"2026-09-05T14:30:00-05:00","target":"approximately 13:00-13:30 CT"},
       {"games":["2026-W1-WYO-CSU"],"kickoff":"2026-09-05T17:00:00-05:00","target":"approximately 15:30-16:00 CT"},
       {"games":["2026-W1-ASU-MEM"],"kickoff":"2026-09-05T18:00:00-05:00","target":"approximately 16:30-17:00 CT"},
       {"games":["2026-W1-CLEM-LSU"],"kickoff":"2026-09-05T18:30:00-05:00","target":"approximately 17:00-17:30 CT"},
       {"games":["2026-W1-UNLV-HAW"],"kickoff":"2026-09-05T21:00:00-05:00","target":"approximately 19:30-20:00 CT"},
       {"games":["2026-W1-UCLA-CAL"],"kickoff":"2026-09-05T21:30:00-05:00","target":"approximately 20:00-20:30 CT"}
     ],
-    "requiredRemediation": "Persist governed selected-week fair spreads/totals for every modeled game before future game-day lock windows; browser-only canonicalization cannot create legitimate fair values when the embedded slate itself says Pending."
+    "requiredRemediation": "Persist governed selected-week fair spreads/totals for every modeled game before future game-day lock windows; browser-only canonicalization cannot create legitimate fair values when persistent model inputs are unavailable."
   }
 }
