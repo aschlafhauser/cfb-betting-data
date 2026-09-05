@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-05T16:06:56-05:00",
+  "updatedAt": "2026-09-05T16:56:53-05:00",
   "purpose": "Append-only game-day timing observations for threshold crossings, final-lock timing and late information-quality changes. Does not rewrite official bets or frozen fair values.",
   "observations": [
     {
@@ -48,6 +48,22 @@
       "informationRisk": "high-weather",
       "recommendationState": "NO UNDERDOG SPECIAL / TOTAL VETOED",
       "note": "Hawaii re-entered the +3.5-to-+7 v1.1 band, but +128 fails the frozen +149 fair-ML price test. Wind/rain risk continues to veto the raw 2.0-point Over edge."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-CLEM-LSU",
+      "timestamp": "2026-09-05T16:56:53-05:00",
+      "stage": "final-kickoff-locked",
+      "marketSpread": "LSU -10.5 / Clemson +10.5",
+      "marketTotal": 50.5,
+      "marketMoneyline": "Clemson +290 to +300 / LSU -370 to -375",
+      "modelSpread": "LSU -9.5",
+      "modelTotal": 50.5,
+      "spreadEdge": 1.0,
+      "totalEdge": 0.0,
+      "informationRisk": "medium-high due unresolved Clemson RT",
+      "recommendationState": "WATCH-PRICE TARGET / NO ACTIVATION / FINAL-KICKOFF-LOCKED",
+      "note": "Snapshot captured 94 minutes before kickoff because the next hourly pass would miss the target band. Collin Sadler remains questionable; +10.5 is only a 1.0-point edge. Earlier Baton Rouge lightning is forecast to ease by kickoff and does not create a total edge at the 50.5 fair."
     }
   ]
 }
