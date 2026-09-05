@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-05T16:56:53-05:00",
+  "updatedAt": "2026-09-05T18:18:04-05:00",
   "purpose": "Append-only game-day timing observations for threshold crossings, final-lock timing and late information-quality changes. Does not rewrite official bets or frozen fair values.",
   "observations": [
     {
@@ -64,6 +64,38 @@
       "informationRisk": "medium-high due unresolved Clemson RT",
       "recommendationState": "WATCH-PRICE TARGET / NO ACTIVATION / FINAL-KICKOFF-LOCKED",
       "note": "Snapshot captured 94 minutes before kickoff because the next hourly pass would miss the target band. Collin Sadler remains questionable; +10.5 is only a 1.0-point edge. Earlier Baton Rouge lightning is forecast to ease by kickoff and does not create a total edge at the 50.5 fair."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-LOU-OM",
+      "timestamp": "2026-09-05T18:18:04-05:00",
+      "stage": "game-day-threshold-regression",
+      "marketSpread": "Ole Miss -6.5 / Louisville +6.5",
+      "marketTotal": 55.5,
+      "marketMoneyline": "Louisville best around +220 / Ole Miss -250",
+      "modelSpread": "Ole Miss -5.5",
+      "modelTotal": 54.0,
+      "spreadEdge": 1.0,
+      "totalEdge": 1.5,
+      "informationRisk": "medium",
+      "recommendationState": "WATCH-PRICE TARGET / NO ACTIVATION",
+      "note": "Louisville price shortened from the prior +7 area to +6.5, reducing the side's raw executable edge from 1.5 to 1.0 points. Existing contradictory Expert Intelligence v1 remains a confidence reducer. No activation; +7.5 remains the preferred recheck zone."
+    },
+    {
+      "week": 1,
+      "gameId": "2026-W1-UNLV-HAW",
+      "timestamp": "2026-09-05T18:18:04-05:00",
+      "stage": "game-day-weather-reassessment",
+      "marketSpread": "UNLV -3 / Hawaii +3 consensus; some FanDuel references +3.5",
+      "marketTotal": 55.5,
+      "marketMoneyline": "Hawaii +128 to +130",
+      "modelSpread": "UNLV -3",
+      "modelTotal": 57.5,
+      "spreadEdge": 0.0,
+      "totalEdge": 2.0,
+      "informationRisk": "medium-high weather",
+      "recommendationState": "NO UNDERDOG SPECIAL / TOTAL VETO REMAINS",
+      "note": "Authoritative Honolulu forecast is less severe than the earlier 22-mph/rain characterization but remains breezy: northeast winds 15-20 mph with scattered showers tonight. Best current consensus spread is +3, with +3.5 appearing at some references; Hawaii ML +128 to +130 still fails the frozen v1.1 +3.5 fair-ML threshold when that spread is available. Do not manufacture a weather reprice; raw Over 55.5 edge remains non-executable pending the final-lock weather check."
     }
   ]
 }
