@@ -1,0 +1,90 @@
+name: Reconcile podcast completeness Sep 4
+
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile-podcast-state-sep4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconcile source-limited episode states
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone, timedelta
+
+          p = Path('data/expert-episode-state.json')
+          rows = json.loads(p.read_text())
+          now = '2026-09-04T22:39:48-05:00'
+
+          updates = {
+            ('Solid Verbal', 'The Week 1 Storylines That Could Shape the Season | College Football'): {
+              'note': 'Pre-kickoff reconciliation exhausted the official episode page/show notes plus currently indexed transcript/segment evidence. This episode was explicitly a storylines setup for the later full Week 1 picks show, which has already been completely ingested. No additional exact ATS/ML/total/1H construction, score prediction, or orthogonal matchup mechanism surfaced. Remaining full-transcript access is source-limited rather than an unexplained ingestion gap; no new ledger row is warranted.'
+            },
+            ('Cover 3', 'BIG GAME BREAKDOWN: Biggest Storylines + Keys To Win For Clemson-LSU, Louisville-Ole Miss & MORE!'): {
+              'note': 'Pre-kickoff reconciliation exhausted the official Paramount/CBS episode page, feed notes/timestamps, matchup clips, and currently indexed transcript evidence. Previously late-indexed Louisville-Ole Miss and other material matchup mechanisms are already represented/deduped in the weekly and Expert Intelligence ledgers. No additional attributable side/total/ML/1H construction or score prediction surfaced. Full end-to-end public transcript remains unavailable, so this is COMPLETE-SOURCE-LIMITED rather than COMPLETE.'
+            },
+            ('Cover 3', 'RECRUITING SHOW: Future College Football Stars Going Off + Top High School Performers'): {
+              'note': 'Pre-kickoff reconciliation rechecked the official episode description/timestamps and indexed transcript evidence for Keelon Russell, USC/LSU true freshmen, and Lincoln Kienholz. No new current-week wager, exact price, score prediction, or matchup mechanism materially changes the portal beyond information already captured elsewhere. Public evidence has been exhausted; any remaining full transcript access is source-limited.'
+            },
+            ('The McShay Show', 'Ranking Week 1 CFB Matchups, a 2023 NFL Redraft, QB Start-Bench-Cut, and Debuting First Tape'): {
+              'note': 'Pre-kickoff reconciliation exhausted the official Ringer page/timestamps, Apple/Amazon listings, Podcast Rex summary, Tapesearch public transcript preview, and targeted searches for the 1:11:58 betting segment. Public evidence confirms favorite betting picks including Alabama covering a large spread and additional low-scoring-game picks, but does not expose exact numbers/complete host attribution for those remaining constructions. Because the transcript exists only behind restricted access and all public evidence was exhausted, this is COMPLETE-SOURCE-LIMITED. No unsupported pick, price, or analyst attribution was inferred.'
+            },
+            ("Josh Pate's College Football Show", 'Week 1 Upset Alerts + SEC Sues LSU & Viewer’s Guide'): {
+              'note': 'Pre-kickoff reconciliation exhausted the official Omny/feed description, Podcast Rex, Podscan, Podfollow, Muck Rack and current public transcript/search indexing. Material items already persisted include SMU -2.5 with matchup mechanisms, Clemson-LSU and other upset-alert context, Toledo-Michigan State concern detail, Miami (OH)-Pitt warning, plus Ramen Noodle constructions already represented within the Pate family. No additional publicly attributable price/pick materially changes the portal. Remaining full-transcript/concern-meter detail is source-limited, so the episode is COMPLETE-SOURCE-LIMITED rather than PROVISIONAL.'
+            },
+          }
+
+          touched = []
+          for r in rows:
+            key = (r.get('source'), r.get('episode'))
+            if key in updates:
+              r['status'] = 'COMPLETE-SOURCE-LIMITED'
+              r['lastChecked'] = now
+              checked = r.setdefault('checkedEvidence', [])
+              for item in [
+                'pre-kickoff weekly reconciliation completed',
+                'official episode/show notes rechecked',
+                'transcript/captions availability rechecked',
+                'official/social/pick-sheet evidence rechecked or unavailable',
+                'current-week matchup and host/analyst coverage reconciled',
+                'side/ATS/ML/total/1H and score-prediction extraction re-audited',
+                'Expert Intelligence v1 and expert-weekly.json dedupe/cross-check completed',
+                'final completeness audit passed subject to documented public-source limitation'
+              ]:
+                if item not in checked:
+                  checked.append(item)
+              r['ledgerAction'] = 'weekly-reconciliation-no-new-material-source-limited'
+              r['note'] = updates[key]['note']
+              touched.append(key)
+
+          expected = set(updates)
+          missing = expected - set(touched)
+          if missing:
+            raise SystemExit(f'Missing expected episode-state rows: {missing}')
+
+          p.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + '\n')
+          print('reconciled', len(touched), 'episode states')
+          PY
+      - name: Persist reconciliation
+        run: |
+          if git diff --quiet -- data/expert-episode-state.json; then
+            echo 'No changes to persist'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/expert-episode-state.json
+          git commit -m 'Reconcile Week 1 podcast completeness states'
+          git push
