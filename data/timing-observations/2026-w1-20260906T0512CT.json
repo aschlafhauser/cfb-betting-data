@@ -1,0 +1,68 @@
+{
+  "week": 1,
+  "timestamp": "2026-09-06T05:12:17-05:00",
+  "observations": [
+    {
+      "gameId": "2026-W1-WSU-WASH",
+      "stage": "game-day-maintenance",
+      "marketSpread": "Washington -23.5 / Washington State +23.5",
+      "marketTotal": "51.5",
+      "marketMoneyline": "Washington State +1200 / Washington -2400 on current DraftKings-linked reference",
+      "status": "MAINTAIN / NO ACTIVATION",
+      "availability": "Caden Pinnick remains the confirmed Washington State starting QB; no newly verified late availability item materially changes the preserved Deep Dive.",
+      "weather": "No actionable same-day Seattle weather change verified.",
+      "expertIntelligenceV1": "No newly ingested Expert Intelligence v1 item was verified since the prior runtime pass.",
+      "note": "Market remains Washington -23.5 after the prior maintenance pass. No governed production fair is exposed for this matchup, so no edge is manufactured. Final-lock snapshot remains due approximately 60-90 minutes before kickoff."
+    },
+    {
+      "gameId": "2026-W1-WIS-ND",
+      "stage": "game-day-maintenance",
+      "marketSpread": "Notre Dame -20.5 / Wisconsin +20.5",
+      "marketTotal": "46.5 to 47.5 across current references",
+      "status": "MATERIAL AVAILABILITY FLAG MAINTAINED — NO ACTIVATION / REPRICE PENDING GOVERNED MODEL OUTPUT",
+      "availability": "Notre Dame LB Kyngstonn Viliamu-Asa remains questionable; WR Quincy Porter and multiple OL remain out. Wisconsin OL Kevin Heywood and Emerson Mandell remain game-time decisions and WR Jaylon Domingeaux remains questionable.",
+      "weather": "Current neutral-site Green Bay weather remains non-actionable.",
+      "expertIntelligenceV1": "No newly ingested Expert Intelligence v1 item was verified since the prior runtime pass.",
+      "note": "No governed production fair is exposed in the execution layer; preserve prior and recheck final availability before the 60-90 minute lock."
+    },
+    {
+      "gameId": "2026-W1-LOU-OM",
+      "stage": "game-day-maintenance",
+      "marketSpread": "Ole Miss -6.5 / Louisville +6.5",
+      "marketTotal": "54.5",
+      "marketMoneyline": "Louisville +215 / Ole Miss -265 on current DraftKings-linked reference",
+      "model": "Ole Miss -5.5 / 54.0",
+      "edge": "Louisville +6.5 = 1.0 side point; Under 54.5 = 0.5 total point",
+      "status": "WATCH SIDE / PASS TOTAL — NO NEW ACTIVATION",
+      "thresholdStatus": "No Bet Activation Gate v1.1 crossing. Side remains WATCH; total remains PASS.",
+      "priceCliff": "Louisville +7.5 remains the preferred ATS recheck level.",
+      "availability": "Expected starting QBs remain Lincoln Kienholz for Louisville and Trinidad Chambliss for Ole Miss; no newly verified late starter/availability change materially alters the preserved Deep Dive.",
+      "weather": "Warm Nashville conditions remain non-actionable.",
+      "expertIntelligenceV1": "No newly ingested Expert Intelligence v1 item changes the existing mixed residual.",
+      "note": "No production reprice emitted. Current market is unchanged from the prior threshold state."
+    },
+    {
+      "gameId": "2026-W1-SMU-FSU",
+      "stage": "game-day-maintenance",
+      "marketSpread": "Best currently verified SMU -2.5 (-122); other current references show SMU -3",
+      "marketTotal": "53.5",
+      "marketMoneyline": "SMU approximately -149 to -155 / Florida State +125 to +130",
+      "model": "SMU -3.5 / 52.5",
+      "edge": "At best executable -2.5, SMU side edge remains 1.0 point; at -3 the edge is 0.5. Under 53.5 = 1.0 total point.",
+      "status": "WATCH / PRICE TARGET — NO ACTIVATION",
+      "thresholdStatus": "No Bet Activation Gate v1.1 crossing because -2.5 remains currently verified and the best executable side remains WATCH-only.",
+      "availability": "No authoritative Sunday availability report was found that supersedes the Saturday-night ACC state already persisted.",
+      "weather": "Tallahassee thunderstorm/field-condition risk remains a monitor item; no numeric production reprice is manufactured.",
+      "expertIntelligenceV1": "No newly ingested Expert Intelligence v1 item was verified since the prior runtime pass.",
+      "priceCliff": "SMU -2 or better creates a 1.5-point raw side band but still requires all v1.1 small-bet support conditions; do not chase -3.",
+      "note": "No official wager added and immutable ledger unchanged."
+    }
+  ],
+  "sources": [
+    "Current DraftKings-linked Washington State-Washington market reference",
+    "Current Wisconsin-Notre Dame market and same-day team availability reporting",
+    "Current DraftKings-linked Louisville-Ole Miss market reference and same-day game preview",
+    "Current SMU-Florida State market references including -2.5 and -3 pricing",
+    "Existing governed Week 1 runtime model and Expert Intelligence v1 state"
+  ]
+}
