@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "cfb-final-snapshot-v1.1",
+  "immutable": true,
+  "week": 1,
+  "game": "SMU at Florida State",
+  "kickoff": "2026-09-07T19:30:00-04:00",
+  "snapshotTimestamp": "2026-09-07T19:02:23-04:00",
+  "timing": {
+    "minutesBeforeKickoff": 28,
+    "targetWindowMinutes": "60-90",
+    "status": "LATE_FINAL_SNAPSHOT_QC_FAILURE",
+    "note": "No prior immutable SMU-FSU final snapshot was present when the 19:02 ET automation pass began. This late immutable snapshot preserves the final governed state without backdating or rewriting history."
+  },
+  "governedModel": {
+    "spreadFair": "SMU -3.5",
+    "totalFair": 52.5,
+    "source": "preserved Week 1 governed deep-dive/runtime state",
+    "reverseEngineered": false
+  },
+  "market": {
+    "fanDuel": {
+      "spread": "SMU -2.5",
+      "total": 54.5,
+      "sourceChecked": "Tomahawk Nation game-day update published shortly before snapshot"
+    },
+    "otherCurrentReference": {
+      "spread": "SMU -3 -116 / Florida State +3 -110",
+      "total": "53.5; Under -116",
+      "moneyline": "SMU -164 / Florida State +127",
+      "sourceChecked": "RotoWire current odds page"
+    }
+  },
+  "edges": {
+    "fanDuelSpreadPoints": 1.0,
+    "fanDuelUnderPoints": 2.0,
+    "note": "Under 54.5 reaches the 2.0-point numerical threshold versus the preserved 52.5 fair, but no official wager is created without a verified exact FanDuel total price/juice at this snapshot."
+  },
+  "availability": {
+    "floridaStateOut": ["Blake Nichelson", "Devin Carter", "Karson Hobbs", "Chauncey/Chuck Kennon", "Jordan Crutchfield", "Darryll Desir", "Tae'Shaun Gelsey", "K.J. Kirkland"],
+    "smuOut": ["Ahmaad Moses", "Jaden Milliner-Jones"],
+    "smuCleared": ["Daylon Singleton"],
+    "gameTimeDecisions": [],
+    "note": "Final pregame availability reporting says Desir, Gelsey and Kirkland were ruled out; SMU Daylon Singleton was cleared."
+  },
+  "weather": {
+    "status": "thunderstorm/rain risk remained relevant near kickoff",
+    "modelAction": "no independent fair change applied solely from forecast"
+  },
+  "recommendation": {
+    "side": "WATCH / PASS AT CURRENT PRICE",
+    "total": "THRESHOLD-CROSSING BUT NO OFFICIAL ACTIVATION",
+    "officialBetCreated": false,
+    "reason": "Exact executable sportsbook juice required for immutable activation was not verified at the final snapshot; no wager is manufactured."
+  },
+  "sources": [
+    "ACC availability reporting / Tomahawk Nation final availability update, 2026-09-07",
+    "Tomahawk Nation FanDuel game-day market update, 2026-09-07",
+    "RotoWire SMU-Florida State current odds page, checked 2026-09-07"
+  ]
+}
