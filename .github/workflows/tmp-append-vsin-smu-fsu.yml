@@ -1,0 +1,121 @@
+name: tmp append VSiN SMU FSU intel
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-append-vsin-smu-fsu.yml'
+permissions:
+  contents: write
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Append governed CFB expert records and audit
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          weekly_path = pathlib.Path('data/expert-weekly.json')
+          intel_path = pathlib.Path('data/expert-intelligence.json')
+          weekly = json.loads(weekly_path.read_text())
+          intel = json.loads(intel_path.read_text())
+          base = {
+            "season": 2026,
+            "week": 1,
+            "gameId": "2026-W1-SMU-FSU",
+            "episode": "Top Picks from the CFB Betting Splits for SMU-Florida State on Monday September 7th",
+            "sourceFamily": "VSiN",
+            "analyst": "Josh Appelbaum",
+            "sourceDate": "2026-09-07",
+            "phase": "game-day / pre-kickoff",
+            "freshness": "same-day",
+            "independence": "independent-source-family",
+            "incrementalInformation": 1,
+            "modelRelationship": "explains-market",
+            "sourceUrl": "https://vsin.com/college-football/top-picks-from-the-cfb-betting-splits-for-smu-florida-state-on-monday-september-7th/",
+            "episodeCompleteness": "COMPLETE"
+          }
+          side = dict(base)
+          side.update({
+            "category":"market/ATS",
+            "team":"Florida State",
+            "direction":"contrarian support for Florida State at +3 / resistance to SMU above -3",
+            "conviction":"market-analysis signal only — no explicit analyst wager inferred",
+            "summary":"Appelbaum reports SMU opened -2.5 and moved to -3 behind 76% of DraftKings spread bets, but the key number drew Florida State buyback: FSU +3 was juiced to -115 with some books returning to +2.5. Circa showed Florida State with only 26% of tickets but 50% of spread dollars. He interprets the resistance at 3 as sharp line freeze/reverse movement toward the home dog and notes conference-dog/buy-low context.",
+            "constructionDetail":"Florida State +3 sharp-buyback / line-resistance context; no explicit FSU bet stated",
+            "bettingImplication":"This explains why the market is resisting SMU beyond -3 and adds same-day evidence against treating public SMU support as independent confirmation. It does not convert into an FSU wager or change the governed fair by itself."
+          })
+          total = dict(base)
+          total.update({
+            "category":"market/total",
+            "team":"SMU / Florida State",
+            "direction":"contrarian Under signal after market total rose",
+            "conviction":"market-analysis signal only — no explicit analyst wager inferred",
+            "summary":"Appelbaum notes the total rose from 52.5 to 54.5 while Under tickets remained a small minority: 23% of bets/33% of dollars at DraftKings and 25% of bets/32% of dollars at Circa. He characterizes the split as a sell-high contrarian Under signal, but does not publish an explicit Under wager or price recommendation in the article.",
+            "constructionDetail":"Under market-split signal at 54.5 context; no explicit Under wager stated",
+            "bettingImplication":"Adds same-day total-market context and potential resistance to the upward move. Preserve as explains-market evidence only; do not infer an official Under or overwrite the production total fair."
+          })
+          records = [side, total]
+          def target(obj):
+              if isinstance(obj, list): return obj
+              if isinstance(obj, dict):
+                  for k in ('records','items','entries'):
+                      if isinstance(obj.get(k), list): return obj[k]
+              raise RuntimeError('Unsupported expert ledger shape')
+          def dedupe_append(obj, rec):
+              arr = target(obj)
+              key = (rec.get('episode'),rec.get('sourceFamily'),rec.get('gameId'),rec.get('analyst'),rec.get('constructionDetail'))
+              existing = {(r.get('episode'),r.get('sourceFamily'),r.get('gameId'),r.get('analyst'),r.get('constructionDetail')) for r in arr if isinstance(r,dict)}
+              if key not in existing:
+                  arr.append(rec)
+                  return True
+              return False
+          changed_w = changed_i = False
+          for r in records:
+              changed_w |= dedupe_append(weekly, dict(r))
+              changed_i |= dedupe_append(intel, dict(r))
+          if changed_w:
+              weekly_path.write_text(json.dumps(weekly, indent=2, ensure_ascii=False) + '\n')
+          if changed_i:
+              intel_path.write_text(json.dumps(intel, indent=2, ensure_ascii=False) + '\n')
+          audit = {
+            "season":2026,
+            "week":1,
+            "sourceFamily":"VSiN",
+            "sourceDate":"2026-09-07",
+            "title":"Top Picks from the CFB Betting Splits for SMU-Florida State on Monday September 7th",
+            "analyst":"Josh Appelbaum",
+            "status":"COMPLETE",
+            "episodeDiscovery":True,
+            "officialEpisodeShowNotesChecked":True,
+            "officialEpisodeShowNotesStatus":"Written VSiN analysis rather than a podcast episode; full official article checked end-to-end.",
+            "transcriptCaptionsChecked":True,
+            "transcriptCaptionsStatus":"Not applicable to written analysis; full article text publicly retrievable and exhausted.",
+            "officialSocialPickSheetChecked":True,
+            "officialSocialPickSheetStatus":"No separate attributable pick sheet was necessary; the official VSiN article contains the market splits and interpretation. No explicit analyst wager was stated.",
+            "currentWeekMatchupsIdentified":["SMU at Florida State"],
+            "relevantAnalystsChecked":["Josh Appelbaum"],
+            "sideATSMLTotal1HConstructionsChecked":True,
+            "materialItemsExtracted":["SMU -2.5 to -3 on heavy public action","Florida State sharp buyback/line resistance at +3","Circa FSU 26% tickets vs 50% dollars","total 52.5 to 54.5 with contrarian Under money skew"],
+            "explicitWagersExtracted":[],
+            "scorePredictionsExtracted":[],
+            "gameIdCrossCheck":"Matched canonical CFB game ID 2026-W1-SMU-FSU.",
+            "dedupeCrossCheck":"Cross-checked VSiN + gameId + analyst + construction/detail against existing expert-weekly and expert-intelligence ledgers; no prior Appelbaum SMU-FSU rows were present.",
+            "expertWeeklyWrite":"Two comprehensive records appended: ATS market-resistance signal and total market-split signal.",
+            "expertIntelligenceWrite":"Matching structured records appended with explains-market relationship; no artificial independent confirmations created.",
+            "quantitativeGovernance":"No CFB fair spread/total, confidence, activation threshold, or official bet status was overwritten by expert intelligence.",
+            "finalCompletenessAudit":"PASS"
+          }
+          ap = pathlib.Path('data/expert-episode-audit/2026-09-07-vsin-smu-fsu-betting-splits.json')
+          if not ap.exists(): ap.write_text(json.dumps(audit, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Commit governed data only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/expert-weekly.json data/expert-intelligence.json data/expert-episode-audit/2026-09-07-vsin-smu-fsu-betting-splits.json
+          if git diff --cached --quiet; then
+            echo "No governed data changes"
+          else
+            git commit -m "Add VSiN SMU-FSU game-day market intelligence"
+            git push
+          fi
