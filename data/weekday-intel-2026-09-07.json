@@ -1,0 +1,59 @@
+{
+  "season": 2026,
+  "week": 2,
+  "timestamp": "2026-09-07T08:51:53-04:00",
+  "type": "weekday-intelligence-watch",
+  "stage": "monday-progressive-research",
+  "scheduleCoverage": {"completeSlate": true, "gameCount": 86, "deepDiveDeadline": "2026-09-09", "universalDeepDiveRequiredToday": false},
+  "governance": "Bet Activation Gate v1.1 unchanged. Preseason priors preserved. Week 1 evidence is opponent-adjusted and capped. No system-level weight changes. Expert Intelligence v1 remains a qualitative residual. Independent Football fields remain null unless genuinely emitted by the current engine.",
+  "productionState": {"governedWeek2FairEmission": "pending", "officialBetsActivated": 0, "reason": "No official wager may be created from market movement alone without a governed Final Executable Edge."},
+  "materialChanges": [
+    {
+      "gameId": "2026-W2-RUT-BC",
+      "priorMarket": "Boston College -4.5 to -6.5 Sunday dispersion",
+      "currentMarket": "Boston College -3.5 +100 / Rutgers +3.5 -108; total 54.5; Rutgers +145 / BC -154",
+      "source": "CBS Sports Week 2 current board / FanDuel reporting",
+      "status": "HIGH-PRIORITY DEEP DIVE / VERIFY REPRICE",
+      "note": "The spread has compressed materially toward Rutgers after both teams' Week 1 losses. No activation without governed fair."
+    },
+    {
+      "gameId": "2026-W2-OKLA-MICH",
+      "priorMarket": "Sunday board internally inconsistent near pick'em",
+      "currentMarket": "Oklahoma -5.5 to -6; Michigan +6.5 available in current CBS conference boards; total roughly 43.5-45.5; Oklahoma ML about -230 to -238",
+      "source": "CBS Sports Week 2 current boards",
+      "status": "HIGH-PRIORITY DEEP DIVE / MATERIAL MARKET MOVE",
+      "note": "Michigan's 13-12 escape versus Western Michigan and Oklahoma's Week 1 defensive performance have produced a major market reset. Treat as repricing/audit target, never automatic value."
+    },
+    {
+      "gameId": "2026-W2-MISS-MINN",
+      "priorMarket": "Minnesota approximately -2.5 with incomplete total",
+      "currentMarket": "Mississippi State -1.5 -104 / Minnesota +1.5 -112; total 55.5; ML Mississippi State -114 / Minnesota +105",
+      "source": "CBS Sports SEC Week 2 board",
+      "status": "RESEARCH / SIDE FLIP",
+      "note": "Favorite has flipped from Minnesota to Mississippi State; opponent-adjusted Week 1 evidence and personnel review required before any model reaction."
+    }
+  ],
+  "longshotScreen": {
+    "scope": "complete selected-week FBS schedule universe; widely posted FCS-v-FBS prices tracked separately",
+    "verifiedMondayCandidates": [
+      {"team":"Buffalo","opponent":"FIU","spread":"+10.5","moneyline":"+310","level":"FBS-v-FBS","status":"LIVE RESEARCH"},
+      {"team":"Middle Tennessee","opponent":"Marshall","spread":"+14.5","moneyline":"+500","level":"FBS-v-FBS","status":"RESEARCH"},
+      {"team":"Sam Houston","opponent":"Tulsa","spread":"+13.5","moneyline":"+450","level":"FBS-v-FBS","status":"RESEARCH"},
+      {"team":"New Mexico State","opponent":"Hawaii","spread":"+10","moneyline":"+300","level":"FBS-v-FBS","status":"LIVE RESEARCH"},
+      {"team":"Washington State","opponent":"Kansas State","spread":"+17.5 to +18.5","moneyline":"+825","level":"FBS-v-FBS","status":"RESEARCH"},
+      {"team":"Iowa State","opponent":"Iowa","spread":"+14.5","moneyline":"+490","level":"FBS-v-FBS","status":"RESEARCH"},
+      {"team":"Arizona State","opponent":"Texas A&M","spread":"+14.5","moneyline":"+500","level":"FBS-v-FBS","status":"RESEARCH"},
+      {"team":"Kentucky","opponent":"Alabama","spread":"+10.5","moneyline":"+340","level":"FBS-v-FBS","status":"LIVE RESEARCH"},
+      {"team":"Arkansas","opponent":"Utah","spread":"+11.5","moneyline":"+370","level":"FBS-v-FBS","status":"LIVE RESEARCH"},
+      {"team":"Oregon State","opponent":"Texas Tech","spread":"+26.5 to +29.5","moneyline":"+1700 to +2000","level":"FBS-v-FBS","status":"EXTREME LONGSHOT RESEARCH"},
+      {"team":"Louisiana","opponent":"USC","spread":"+28.5","moneyline":"+2200","level":"FBS-v-FBS","status":"EXTREME LONGSHOT RESEARCH"}
+    ],
+    "fcsExamplesTrackedSeparately": [
+      {"team":"Delaware","opponent":"Vanderbilt","moneyline":"+800 to +950"},
+      {"team":"Sacramento State","opponent":"Fresno State","moneyline":"+760"}
+    ],
+    "note": "Monday is a prospective screen, not a bet list. Six-factor viability scoring and injury/QB/expert contradiction work continues through the week; no candidate is promoted from price alone."
+  },
+  "underdogSpecialV11": {"status":"RERUN REQUIRED AS RESEARCH DEEP DIVES MATURE", "mondayNote":"Kansas +6.5 remains in the spread band but ML is only about +205; no special is activated from price alone."},
+  "nextCheckpoint": "Continue progressive full-slate Deep Dives Tuesday; universal 86/86 completion required Wednesday."
+}
