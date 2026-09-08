@@ -1,0 +1,40 @@
+{
+  "season": 2026,
+  "week": 2,
+  "sourceFamily": "VSiN / T Shoe Index",
+  "analyst": "Tyler Shoemaker",
+  "title": "Week 2 College Football Predictions from the T Shoe Index",
+  "sourceDate": "2026-09-07",
+  "sourceUrl": "https://vsin.com/college-football/week-2-college-football-predictions-from-t-shoe-index/",
+  "episodeCompleteness": "COMPLETE",
+  "completenessNotes": "Full public article was available and exhausted. It contains two explicit early Week 2 betting constructions and their stated mechanisms/prices. No additional wager, score prediction, first-half angle, or total was inferred.",
+  "sameFamilyCorrelation": "Treat VSiN/T Shoe Index records as one correlated source family, not independent confirmations.",
+  "recordsExtracted": [
+    {
+      "gameId": "2026-W2-TEMP-PSU",
+      "matchup": "Temple at Penn State",
+      "analyst": "Tyler Shoemaker",
+      "kind": "explicit side",
+      "construction": "Penn State -23.5; play to -24",
+      "summary": "Shoemaker explicitly bets Penn State -23.5 and says he would play it to -24. He cites Penn State's Week 1 speed on defense, efficient passing offense (6.8 yards per play and 12 yards per pass attempt), and a dominant defensive showing against Marshall; TSI makes Penn State -31 and his market-estimated formula -26.5, so he believes the market may need several games to catch up.",
+      "conviction": "explicit published bet",
+      "incrementalInformation": true,
+      "modelRelationship": "qualitative/external-model context only; does not overwrite governed fair"
+    },
+    {
+      "gameId": "2026-W2-JVST-OHIO",
+      "matchup": "Jacksonville State at Ohio",
+      "analyst": "Tyler Shoemaker",
+      "kind": "explicit moneyline",
+      "construction": "Ohio ML -130 or better",
+      "summary": "Shoemaker explicitly bets Ohio moneyline at -130 or better. His mechanism is that Ohio was competitive with Nebraska for three quarters before Big Ten depth separated the game, while Jacksonville State was outplayed by FBS newcomer North Dakota State, producing only 2.7 yards per carry, 3.7 yards per pass attempt and a 28% success rate. TSI's spread projection is near market, but his on-field grades favor Ohio by six.",
+      "conviction": "explicit published bet with price ceiling",
+      "incrementalInformation": true,
+      "modelRelationship": "qualitative/external-model context only; does not overwrite governed fair"
+    }
+  ],
+  "dedupeCrossCheck": "No existing VSiN/T Shoe Index Week 2 record with these analyst + matchup + construction combinations was found in repository search.",
+  "ledgerPersistence": "FAILED-SAFE",
+  "ledgerPersistenceNotes": "The governed data/expert-weekly.json file is too large for a safe connector-side append because the available write action replaces the full file and retrieval is truncated. Exact intended records are preserved here rather than risk historical record loss.",
+  "reconciliationStatus": "UNRESOLVED-INGESTION-FAILURE"
+}
