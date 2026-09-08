@@ -1,0 +1,23 @@
+{
+  "season": 2026,
+  "week": 2,
+  "timestamp": "2026-09-08T08:40:21-04:00",
+  "type": "weekday-intelligence-watch",
+  "stage": "tuesday-progressive-research",
+  "scheduleCoverage": {"completeSlate": true, "gameCount": 86, "deepDiveDeadline": "2026-09-09", "universalDeepDiveRequiredToday": false},
+  "governance": "Bet Activation Gate v1.1 unchanged. Preseason priors preserved. Week 1 evidence is opponent-adjusted and capped. No system-level weight changes. Expert Intelligence v1 remains a qualitative residual. Independent Football fields remain null unless genuinely emitted by the current engine.",
+  "productionState": {"governedWeek2FinalExecutableEdge": "pending full-slate emission", "officialBetsActivated": 0, "reason": "No official wager may be created from market movement, external model disagreement or expert opinion alone."},
+  "materialChanges": [
+    {"gameId":"2026-W2-OKLA-MICH","currentMarket":"Oklahoma -5.5 -108 / Michigan +5.5 -105; total 43.5; Michigan ML +190 / Oklahoma about -217 to -218","priorMonday":"Oklahoma -5.5 to -6 with +6.5 reported","status":"HIGH-PRIORITY DEEP DIVE / MARKET RESET HOLDS","note":"The major Sunday-to-Monday repricing remains intact, but Tuesday has consolidated nearer -5.5 rather than continuing through -6. No activation without governed fair."},
+    {"gameId":"2026-W2-RUT-BC","currentMarket":"Boston College -3.5 -105 / Rutgers +3.5 -110; total roughly 53.5-54.5; Rutgers ML +146 / BC -175","priorMonday":"BC -3.5 with total 54.5","status":"HIGH-PRIORITY DEEP DIVE / STABLE AFTER COMPRESSION","note":"Large Sunday compression remains the key market observation; no fresh activation signal Tuesday."},
+    {"gameId":"2026-W2-ARK-UTAH","currentMarket":"Utah -13 to -13.5; Arkansas +13.5 -112; total 56.5; Arkansas ML +400","priorMonday":"Utah roughly -11.5 / Arkansas +370","status":"LONGSHOT LIVE RESEARCH UPGRADE / ATS RESEARCH","note":"Price and spread both moved materially against Arkansas. Revisit upset mechanism and depth/injury context; do not equate a larger dog number with automatic value."},
+    {"gameId":"2026-W2-BUFF-FIU","currentMarket":"FIU -10 to -10.5; total 47.5; Buffalo ML +340","priorMonday":"Buffalo +10.5 / +310","status":"LONGSHOT LIVE RESEARCH / PRICE IMPROVEMENT","note":"Buffalo ML improved from +310 to +340 while the spread remains around +10/+10.5."},
+    {"gameId":"2026-W2-NMST-HAW","currentMarket":"Hawaii -9.5 to -10; total 50.5; New Mexico State ML +300","priorMonday":"Hawaii roughly -10 / NMSU +300","status":"LONGSHOT LIVE RESEARCH / TRAVEL-RISK EMPHASIS","note":"Price is stable, but NMSU faces roughly 6,420 round-trip miles. Their defense has forced a turnover in 18 straight games, preserving an upset-variance path despite the travel penalty."},
+    {"gameId":"2026-W2-BAMA-UK","currentMarket":"Alabama -10 to -10.5; total 49.5; Kentucky ML +320","priorMonday":"Kentucky +340 range","status":"LONGSHOT LIVE RESEARCH / QB UPSIDE IMPROVED","note":"Kenny Minchey threw for 300+ yards and four TDs with no interceptions in his first Kentucky start. Starting RT Malachi Wood and CB Hasaan Sykes are expected back; Terhyon Nichols remains day-to-day. This improves the dog mechanism but not enough to create an official wager."},
+    {"gameId":"2026-W2-FAMU-MIA","currentMarket":"Miami -53.5; total 60.5","status":"DEEP DIVE PERSONNEL UPDATE","note":"Miami CB O.J. Frederique Jr. is expected out for an extended period and CB Ja'boree Antoine is also out; RB Jordan Lyle remains unresolved. FCS-v-FBS execution remains separate from Longshot Lab FBS screen."}
+  ],
+  "underdogSpecialV11": {"status":"NO NEW QUALIFIER TUESDAY","note":"Kansas remains near the spread band but ML is below Longshot criteria and no governed Final Executable Edge has been emitted. Re-run as full Deep Dives mature."},
+  "longshotLab": {"status":"REFRESHED","runtimeFile":"data/longshot-upset-lab.json","materialChanges":["Arkansas +400 / +13.5 upgraded to Live Research attention","Buffalo +340 price improvement","Kentucky QB/availability mechanism improved","NMSU turnover path retained but travel remains a major veto risk"]},
+  "officialBets": [],
+  "nextCheckpoint": "Complete universal 86/86 Deep Dives Wednesday and rerun Bet Activation Gate v1.1 only from governed Final Executable Edge."
+}
