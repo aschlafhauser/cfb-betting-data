@@ -11,9 +11,28 @@ const oldBoard = JSON.parse(await fs.readFile(boardPath, 'utf8'));
 
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
+page.on('console', msg => console.log(`[browser:${msg.type()}] ${msg.text()}`));
+page.on('pageerror', err => console.error(`[browser:pageerror] ${err.message}`));
 await page.goto(portal, { waitUntil: 'networkidle', timeout: 120000 });
 await page.waitForFunction(() => window.CFB_RUNTIME_DATA && ['remote-active','local-fallback'].includes(window.CFB_RUNTIME_DATA.status), null, { timeout: 60000 });
-await page.waitForTimeout(2500);
+
+try {
+  await page.waitForFunction(() => {
+    const src = window.CFB_WEEKLY_BOARD_2026;
+    const rt = window.CFB_RUNTIME_DATA;
+    return Array.isArray(src?.games) && src.games.length >= 80 && rt?.modelPromotion?.status === 'browser-governed-model-active';
+  }, null, { timeout: 60000 });
+} catch (e) {
+  const diag = await page.evaluate(() => ({
+    runtime: window.CFB_RUNTIME_DATA || null,
+    gameCount: window.CFB_WEEKLY_BOARD_2026?.games?.length || 0,
+    scheduleCoverage: window.CFB_WEEKLY_BOARD_2026?.scheduleCoverage || null,
+    compatLoaded: !!window.CFB_WEEK2_COMPAT,
+    weekGameCount: typeof weeks !== 'undefined' && weeks['Week 2']?.games?.length || 0
+  }));
+  await browser.close();
+  throw new Error(`Full-slate hydration/model promotion timed out: ${JSON.stringify(diag)}`);
+}
 
 const emitted = await page.evaluate(() => {
   const src = window.CFB_WEEKLY_BOARD_2026;
