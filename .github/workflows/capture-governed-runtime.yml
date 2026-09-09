@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/capture-governed-runtime.mjs'
+      - 'scripts/verify-live-portal.mjs'
       - '.github/workflows/capture-governed-runtime.yml'
       - 'data/weekly-board.json'
   schedule:
@@ -41,10 +42,16 @@ jobs:
         run: |
           if git diff --quiet -- data/weekly-board.json; then
             echo 'No runtime changes.'
-            exit 0
+          else
+            git config user.name 'cfb-runtime-bot'
+            git config user.email 'cfb-runtime-bot@users.noreply.github.com'
+            git add data/weekly-board.json
+            git commit -m 'chore: persist governed CFB runtime [skip ci]'
+            git push
           fi
-          git config user.name 'cfb-runtime-bot'
-          git config user.email 'cfb-runtime-bot@users.noreply.github.com'
-          git add data/weekly-board.json
-          git commit -m 'chore: persist governed CFB runtime [skip ci]'
-          git push
+      - name: Verify live production portal
+        env:
+          CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
+          CFB_EXPECTED_GAMES: '86'
+          CFB_MIN_FAIR_CELLS: '86'
+        run: node scripts/verify-live-portal.mjs
