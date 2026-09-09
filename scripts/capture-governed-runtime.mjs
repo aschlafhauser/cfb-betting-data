@@ -8,7 +8,7 @@ const boardPath = 'data/weekly-board.json';
 const oldBoard = JSON.parse(await fs.readFile(boardPath, 'utf8'));
 const week = Number(oldBoard.week || 2);
 const season = 2026;
-const espnSchedule = `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${season}&seasontype=2&week=${week}&limit=200`;
+const espnSchedule = `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${season}&seasontype=2&week=${week}&limit=200&groups=80`;
 
 const norm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 const key = g => `${norm(g.away)}__${norm(g.home)}`;
