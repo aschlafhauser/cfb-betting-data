@@ -1,0 +1,50 @@
+name: Capture governed CFB runtime
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/capture-governed-runtime.mjs'
+      - '.github/workflows/capture-governed-runtime.yml'
+      - 'data/weekly-board.json'
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cfb-governed-runtime-capture
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser runtime
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture governed portal outputs
+        env:
+          CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
+        run: node scripts/capture-governed-runtime.mjs
+      - name: Persist changed runtime board
+        run: |
+          if git diff --quiet -- data/weekly-board.json; then
+            echo 'No runtime changes.'
+            exit 0
+          fi
+          git config user.name 'cfb-runtime-bot'
+          git config user.email 'cfb-runtime-bot@users.noreply.github.com'
+          git add data/weekly-board.json
+          git commit -m 'chore: persist governed CFB runtime [skip ci]'
+          git push
