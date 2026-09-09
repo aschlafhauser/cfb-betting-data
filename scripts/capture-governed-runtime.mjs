@@ -15,6 +15,25 @@ const scheduleUrl = `https://site.api.espn.com/apis/site/v2/sports/football/coll
 
 const norm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 const key = g => `${norm(g.away)}__${norm(g.home)}`;
+const teamLabel = c => c?.team?.location || c?.team?.shortDisplayName || c?.team?.displayName || c?.team?.name || null;
+const mlText = v => {
+  const n = Number(v);
+  if (!Number.isFinite(n)) return null;
+  return n > 0 ? `+${n}` : String(n);
+};
+function spreadFromOdds(odds, away, home, awayLabel, homeLabel) {
+  const details = String(odds?.details || '').trim();
+  if (!details) return null;
+  const m = details.match(/^([^\s]+)\s+(-?\d+(?:\.\d+)?)/);
+  if (!m) return details;
+  const token = m[1].toUpperCase();
+  const line = m[2];
+  const awayAbbr = String(away?.team?.abbreviation || '').toUpperCase();
+  const homeAbbr = String(home?.team?.abbreviation || '').toUpperCase();
+  if (token === awayAbbr) return `${awayLabel} ${line}`;
+  if (token === homeAbbr) return `${homeLabel} ${line}`;
+  return details;
+}
 
 function scheduleRow(ev) {
   const comp = ev?.competitions?.[0] || {};
@@ -22,17 +41,24 @@ function scheduleRow(ev) {
   const away = cs.find(c => c.homeAway === 'away');
   const home = cs.find(c => c.homeAway === 'home');
   if (!away || !home) return null;
+  const awayLabel = teamLabel(away) || 'Away';
+  const homeLabel = teamLabel(home) || 'Home';
   const broadcasts = (comp.broadcasts || []).flatMap(b => b.names || []);
+  const odds = Array.isArray(comp.odds) ? comp.odds[0] : null;
+  const awayMl = mlText(odds?.awayTeamOdds?.moneyLine);
+  const homeMl = mlText(odds?.homeTeamOdds?.moneyLine);
+  const overUnder = Number(odds?.overUnder);
   return {
     gameId: `ESPN-${ev.id}`,
     dateTime: ev.date || comp.date || null,
-    away: away.team?.displayName || away.team?.shortDisplayName || away.team?.name || 'Away',
-    home: home.team?.displayName || home.team?.shortDisplayName || home.team?.name || 'Home',
+    away: awayLabel,
+    home: homeLabel,
     neutral: !!comp.neutralSite,
     tv: broadcasts[0] || null,
-    currentSpread: null,
-    currentTotal: null,
-    currentMoneyline: null,
+    currentSpread: spreadFromOdds(odds, away, home, awayLabel, homeLabel),
+    currentTotal: Number.isFinite(overUnder) && overUnder > 0 ? overUnder : null,
+    currentMoneyline: awayMl || homeMl ? `${awayLabel} ${awayMl || '—'} / ${homeLabel} ${homeMl || '—'}` : null,
+    marketSource: odds?.provider?.name ? `ESPN ${odds.provider.name}` : (odds ? 'ESPN odds feed' : null),
     modelSpread: null,
     modelTotal: null,
     modelEdgeMagnitude: null,
@@ -45,9 +71,9 @@ function scheduleRow(ev) {
     priority: 'low',
     stage: 'universal-deep-dive-complete',
     confidence: 'pending',
-    informationQuality: 'pending',
-    thresholdStatus: 'DEEP DIVE COMPLETE · MARKET/EXECUTION PENDING',
-    action: 'PASS until verified executable market and governed edge',
+    informationQuality: odds ? 'market-available' : 'source-limited',
+    thresholdStatus: odds ? 'DEEP DIVE COMPLETE · MARKET AVAILABLE' : 'DEEP DIVE COMPLETE · MARKET/EXECUTION PENDING',
+    action: 'PASS until governed edge and execution gate clear',
     notes: 'Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.'
   };
 }
@@ -62,11 +88,25 @@ async function buildFullSlate() {
   console.log(`ESPN groups=80 selected-week events=${schedule.length}; expected=${expected}.`);
   if (schedule.length !== expected) throw new Error(`Canonical selected-week slate mismatch: ${schedule.length}/${expected}`);
 
-  const overlay = new Map((oldBoard.games || []).map(g => [key(g), g]));
+  const overlayByKey = new Map((oldBoard.games || []).map(g => [key(g), g]));
+  const overlayById = new Map((oldBoard.games || []).filter(g => g.gameId).map(g => [String(g.gameId), g]));
   const games = schedule.map(g => {
-    const prior = overlay.get(key(g));
-    return prior ? { ...g, ...prior, gameId: prior.gameId || g.gameId, tv: prior.tv || g.tv || null } : g;
+    const prior = overlayById.get(String(g.gameId)) || overlayByKey.get(key(g));
+    const merged = prior ? { ...prior, ...g, priority: prior.priority || g.priority, stage: prior.stage || g.stage } : g;
+    // Never carry a previous browser fallback model emission forward as source data.
+    merged.modelSpread = null;
+    merged.modelTotal = null;
+    merged.modelEdgeMagnitude = null;
+    merged.independentFootballFair = null;
+    merged.independentFootballHomeMargin = null;
+    merged.independentFootballEdge = null;
+    merged.independentFootballSide = null;
+    merged.independentFootballConfidence = null;
+    return merged;
   }).sort((a, b) => new Date(a.dateTime || 0) - new Date(b.dateTime || 0));
+
+  const marketCount = games.filter(g => g.currentSpread || Number.isFinite(g.currentTotal)).length;
+  console.log(`Canonical identity normalized; ESPN market coverage=${marketCount}/${games.length}.`);
 
   return {
     ...oldBoard,
@@ -77,8 +117,9 @@ async function buildFullSlate() {
       slateCount: expected,
       renderedSlateCount: expected,
       runtimeSource: 'GitHub Node ESPN groups=80 selected-week schedule + governed overlay',
-      scheduleHydration: 'SERVER-SIDE COMPLETE — exact 86-game selected-week universe',
-      scheduleHydrationError: null
+      scheduleHydration: 'SERVER-SIDE COMPLETE — canonical model team names + ESPN market fields',
+      scheduleHydrationError: null,
+      marketGameCount: marketCount
     }
   };
 }
@@ -128,14 +169,21 @@ await page.waitForTimeout(500);
 
 const emitted = await page.evaluate(() => {
   const rows = Array.from(document.querySelectorAll('#scheduleRows tr'));
+  const meaningfulFairCells = rows.filter(r => {
+    const text = r.children?.[5]?.textContent?.trim() || '';
+    return text && !/pending|—/i.test(text) && !/^Pick(?:power|\s|$)/i.test(text);
+  }).length;
+  const marketCells = rows.filter(r => {
+    const spread = r.children?.[3]?.textContent?.trim() || '';
+    const total = r.children?.[4]?.textContent?.trim() || '';
+    return (spread && spread !== '—') || (total && total !== '—');
+  }).length;
   return JSON.parse(JSON.stringify({
     board: window.CFB_WEEKLY_BOARD_2026,
     runtime: window.CFB_RUNTIME_DATA,
     renderedRows: rows.length,
-    renderedFairCells: rows.filter(r => {
-      const text = r.children?.[5]?.textContent?.trim() || '';
-      return text && !/pending|—/i.test(text);
-    }).length
+    meaningfulFairCells,
+    marketCells
   }));
 });
 await browser.close();
@@ -151,14 +199,14 @@ const mergedGames = emitted.board.games.map(g => {
   return {
     ...prior,
     ...g,
-    modelSpread: g.modelSpread ?? prior.modelSpread ?? null,
-    modelTotal: Number.isFinite(g.modelTotal) ? g.modelTotal : (prior.modelTotal ?? null),
-    modelEdgeMagnitude: Number.isFinite(g.modelEdgeMagnitude) ? g.modelEdgeMagnitude : (prior.modelEdgeMagnitude ?? null),
-    independentFootballFair: g.independentFootballFair ?? prior.independentFootballFair ?? null,
-    independentFootballHomeMargin: Number.isFinite(g.independentFootballHomeMargin) ? g.independentFootballHomeMargin : (prior.independentFootballHomeMargin ?? null),
-    independentFootballEdge: Number.isFinite(g.independentFootballEdge) ? g.independentFootballEdge : (prior.independentFootballEdge ?? null),
-    independentFootballSide: g.independentFootballSide ?? prior.independentFootballSide ?? null,
-    independentFootballConfidence: g.independentFootballConfidence ?? prior.independentFootballConfidence ?? null,
+    modelSpread: g.modelSpread ?? null,
+    modelTotal: Number.isFinite(g.modelTotal) && g.modelTotal > 0 ? g.modelTotal : null,
+    modelEdgeMagnitude: Number.isFinite(g.modelEdgeMagnitude) ? g.modelEdgeMagnitude : null,
+    independentFootballFair: g.independentFootballFair ?? null,
+    independentFootballHomeMargin: Number.isFinite(g.independentFootballHomeMargin) ? g.independentFootballHomeMargin : null,
+    independentFootballEdge: Number.isFinite(g.independentFootballEdge) ? g.independentFootballEdge : null,
+    independentFootballSide: g.independentFootballSide ?? null,
+    independentFootballConfidence: g.independentFootballConfidence ?? null,
     finalExecutableEdge: prior.finalExecutableEdge ?? g.finalExecutableEdge ?? null
   };
 });
@@ -172,15 +220,16 @@ const candidate = {
     slateCount: expected,
     renderedSlateCount: emitted.renderedRows,
     runtimeSource: 'Server-side exact selected-week hydration + production governed model capture',
-    scheduleHydration: 'SERVER-SIDE COMPLETE — browser ESPN dependency removed',
+    scheduleHydration: 'SERVER-SIDE COMPLETE — canonical model team names + ESPN market fields',
     scheduleHydrationError: null,
-    note: `Canonical Week ${week} runtime persists all ${expected} selected games and governed production model emissions.`
+    marketGameCount: emitted.marketCells,
+    note: `Canonical Week ${week} runtime persists all ${expected} selected games; placeholder model outputs are not treated as valid coverage.`
   },
   modelStatus: {
     ...(oldBoard.modelStatus || {}),
-    productionFairRecompute: 'ACTIVE — governed portal runtime emission persisted',
-    reason: 'The exact selected-week schedule is hydrated server-side and supplied to the canonical production loader before model synchronization. No market-derived fair is manufactured.',
-    independentFootball: 'ACTIVE when genuinely emitted by Independent Composite v2.2; values are persisted exactly from the portal engine.',
+    productionFairRecompute: 'ACTIVE — source-valid governed portal emissions only',
+    reason: 'Canonical team identity is aligned to model inputs. Zero-information Pick/0.0 fallbacks are rejected rather than persisted.',
+    independentFootball: 'ACTIVE only when genuinely emitted with source coverage by Independent Composite v2.2.',
     finalExecutableEdge: 'Remains null unless Bet Activation Gate v1.1 has exact executable book/line/juice and all veto checks are satisfied.'
   },
   runtimePersistence: {
@@ -190,7 +239,8 @@ const candidate = {
     promotedGameCount: emitted.runtime.modelPromotion.promotedGameCount,
     independentGameCount: emitted.runtime.modelPromotion.independentGameCount,
     renderedRowCount: emitted.renderedRows,
-    renderedFairCellCount: emitted.renderedFairCells,
+    meaningfulFairCellCount: emitted.meaningfulFairCells,
+    marketCellCount: emitted.marketCells,
     capturedAt: new Date().toISOString()
   }
 };
@@ -210,4 +260,4 @@ if (stable(candidate) === stable(oldBoard)) {
 
 candidate.updatedAt = new Date().toISOString();
 await fs.writeFile(boardPath, JSON.stringify(candidate, null, 2) + '\n');
-console.log(`Persisted ${mergedGames.length} games; rendered=${emitted.renderedRows}; fair cells=${emitted.renderedFairCells}; production fairs=${emitted.runtime.modelPromotion.promotedGameCount}; independent=${emitted.runtime.modelPromotion.independentGameCount}.`);
+console.log(`Persisted ${mergedGames.length} games; rendered=${emitted.renderedRows}; markets=${emitted.marketCells}; meaningful fairs=${emitted.meaningfulFairCells}; production=${emitted.runtime.modelPromotion.promotedGameCount}; independent=${emitted.runtime.modelPromotion.independentGameCount}.`);
