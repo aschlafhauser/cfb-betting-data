@@ -1,0 +1,93 @@
+{
+  "season": 2026,
+  "week": 2,
+  "timestamp": "2026-09-09T08:17:49-04:00",
+  "type": "wednesday-full-slate-handicap-checkpoint",
+  "stage": "universal-deep-dive-complete",
+  "scheduleCoverage": {
+    "completeSlate": true,
+    "gameCount": 86,
+    "completedDeepDives": 86,
+    "universalDeepDiveRequiredToday": true,
+    "unresolvedCoverageFailures": 0,
+    "note": "Every selected-week game received the Wednesday Deep Dive checkpoint. Games without a verified executable book quote remain source-limited for execution but are not omitted from handicap coverage."
+  },
+  "governance": "CFB remains isolated from NFL. Bet Activation Gate v1.1, alternate-line governance, Underdog Special v1.1 and Longshot Upset Lab remain unchanged. Preseason priors are preserved; Week 1 evidence is opponent-adjusted and capped. Expert Intelligence is qualitative residual only. Independent Football Fair/Edge fields remain null unless genuinely emitted by the current engine.",
+  "reviewedDimensions": [
+    "canonical schedule / selected-week game identity",
+    "current spread / total / moneyline where currently published",
+    "opener-to-current movement and price dispersion",
+    "QB / depth-chart / injury / suspension / coaching state",
+    "weather / travel / home-field context",
+    "opponent-adjusted Week 1 team and unit evidence",
+    "preseason priors and current Expert Intelligence",
+    "Bet Activation Gate v1.1 and price cliffs",
+    "Underdog Special v1.1 and Longshot Upset Lab"
+  ],
+  "productionFairState": {
+    "status": "BLOCKED-NO-PERSISTED-WEEK2-GOVERNED-FAIRS",
+    "detail": "The data repository still does not expose a complete governed Week 2 Final Executable Edge/fair-spread/fair-total emission. The Wednesday handicap review therefore does not reverse-engineer or manufacture production fair values from market movement, expert opinion or external models.",
+    "independentFootball": "No persistent genuine Week 2 Independent Football outputs were available in the runtime data repository; fields remain null rather than reconstructed.",
+    "officialBetImpact": "No new official wager can clear Bet Activation Gate v1.1 until governed production fair/edge outputs are persistently available."
+  },
+  "materialRepricing": [
+    {
+      "gameId": "2026-W2-OKLA-MICH",
+      "currentMarket": "Oklahoma -5.5 around -108/-110; Michigan +5.5 around -105/-108; total 43.5; Michigan ML about +190",
+      "sourceCheck": "Oddschecker / RotoWire current board, checked 2026-09-09",
+      "priorSunday": "Sunday board had internally inconsistent favorite direction; Tuesday had consolidated Oklahoma -5.5",
+      "classification": "HIGH-PRIORITY / MARKET RESET CONFIRMED",
+      "footballContext": "Michigan fell out of the AP Top 25 after a 13-12 Week 1 escape; Oklahoma enters after a 51-0 opener. Do not convert those scorelines directly into spread points.",
+      "action": "PASS pending governed fair; +5.5/-5.5 is the current price anchor."
+    },
+    {
+      "gameId": "2026-W2-RUT-BC",
+      "currentMarket": "Boston College -3.5; total roughly mid-50s",
+      "sourceCheck": "FanDuel reference reported 2026-09-09",
+      "availability": "Rutgers will start AJ Surace for injured Dylan Lonergan; Lonergan may be emergency-only.",
+      "classification": "HIGH-PRIORITY REPRICE / QB CHANGE",
+      "action": "PASS pending governed fair. QB change is material but no manual point value is invented."
+    },
+    {
+      "gameId": "2026-W2-ARK-UTAH",
+      "currentMarket": "Utah roughly -11.5 to -12.5; total 56.5-57; Arkansas ML about +360 to +370",
+      "sourceCheck": "current DraftKings-linked/Betr/RotoWire references",
+      "classification": "LONGSHOT LIVE RESEARCH / PRICE RECONCILED",
+      "action": "No official wager; Arkansas remains outside Underdog Special spread band and Longshot promotion requires governed value plus mechanism confidence."
+    },
+    {
+      "gameId": "2026-W2-BAMA-UK",
+      "currentMarket": "Alabama -10.5",
+      "availability": "Kentucky QB Kenny Minchey enters after 301 yards and four TDs in Week 1; RT Malachi Wood and CB Hasaan Sykes were expected back in Tuesday research.",
+      "classification": "LONGSHOT RESEARCH ONLY",
+      "action": "No bet without governed fair and executable edge."
+    },
+    {
+      "gameId": "2026-W2-OHST-TEX",
+      "currentMarket": "Texas -1.5; Ohio State +1.5; total about 49; Ohio State ML around +100/+102, Texas around -115/-120",
+      "sourceCheck": "Oddschecker current board, 2026-09-09",
+      "classification": "PREMIUM DEEP DIVE / NEAR-PICK'EM",
+      "action": "PASS pending governed fair; Week 1 blowouts receive capped opponent-adjusted treatment."
+    }
+  ],
+  "expertIntelligence": {
+    "status": "CURRENT THROUGH EARLY 2026-09-09 RECONCILIATION",
+    "note": "Cover 3, Solid Verbal, Josh Pate, McShay and other established source-family reconciliation was current through the early-morning Week 2 audit files. Correlated hosts remain one source family and expert evidence does not manufacture spread points."
+  },
+  "underdogSpecialV11": {
+    "status": "NO NEW OFFICIAL QUALIFIER",
+    "note": "No candidate is promoted without governed Final Executable Edge and the existing football-profile requirements."
+  },
+  "longshotLab": {
+    "status": "REFRESHED / NO OFFICIAL BET",
+    "tracked": ["Arkansas", "Buffalo", "Kentucky", "New Mexico State"],
+    "note": "Price alone is insufficient; mechanism and governed price value remain mandatory."
+  },
+  "officialBets": [],
+  "qc": {
+    "status": "UNIVERSAL COVERAGE COMPLETE; PRODUCTION FAIR EMISSION BLOCK REMAINS",
+    "materialIssue": "Week 2 governed production fair/Final Executable Edge is not persistently emitted in cfb-betting-data, preventing Wednesday activation decisions despite completed handicap coverage.",
+    "sourceDataFailures": [],
+    "executionLimitations": ["Exact executable book/juice was not captured for every non-priority game; those games remain non-actionable rather than omitted."]
+  }
+}
