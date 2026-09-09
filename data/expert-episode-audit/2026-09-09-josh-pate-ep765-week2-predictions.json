@@ -7,7 +7,7 @@
   "episodeNumber": 765,
   "sourceDate": "2026-09-09",
   "discoveredAt": "2026-09-09T04:33:59-04:00",
-  "lastReconciledAt": "2026-09-09T14:22:27-04:00",
+  "lastReconciledAt": "2026-09-09T18:44:06-04:00",
   "status": "PROVISIONAL",
   "officialEvidence": [
     {
@@ -28,27 +28,56 @@
     {
       "type": "late-transcript-mirror",
       "url": "https://podscan.fm/podcasts/josh-pates-college-football-show/episodes/sec-threatening-to-expel-lsu-week-2-predictions-amp-ap-poll-reaction-1",
-      "result": "A transcript mirror became indexed later on September 9. The available retrieval exposed the opening transcript and confirmed that Pate explicitly says he will predict Ohio State-Texas, Oklahoma-Michigan and Alabama-Kentucky, but the available search/fetch surface still truncated before the matchup segments and did not safely expose the actual predictions, mechanisms, scores or Ramen Noodle Express selections."
+      "result": "Transcript mirror remains incomplete through the available retrieval surface and does not safely expose every preview/pick segment."
+    },
+    {
+      "type": "late-attributable-video-transcript",
+      "url": "https://sports.yahoo.com/video/ohio-state-texas-preview-buckeyes-170027393.html",
+      "result": "Yahoo Sports now exposes a full attributable Josh Pate Ohio State-Texas clip transcript. Pate says both offensive lines may be net disadvantages against the opposing fronts, doubts either side consistently creates ground-game chunk yardage, identifies tight-end usage/personnel as overlooked, and says elite receivers could decide a low-total game with one or two explosive plays. He references a 48.5 total and says he could see the game going under, but does not state an Under wager in the accessible clip."
+    },
+    {
+      "type": "late-attributable-video-transcript",
+      "url": "https://sports.yahoo.com/video/bryce-underwoods-brutal-spot-no-142428687.html",
+      "result": "Yahoo Sports exposes an attributable Josh Pate Oklahoma-Michigan clip transcript/summary. Pate frames Bryce Underwood as entering a high-pressure spot against Brent Venables' Oklahoma defense after Michigan produced little offensive foundation in Week 1, with home-crowd pressure capable of worsening an early offensive stall. No ATS/ML/total wager or price is stated in the accessible evidence."
     }
   ],
   "transcriptCaptionAttempt": {
     "availableIndicator": true,
-    "retrieved": "partial/indexed mirror only",
-    "reason": "Late transcript mirror is now discoverable, but the available retrieval surface truncates before the relevant matchup segments. Episode therefore moves from COMPLETE-SOURCE-LIMITED to PROVISIONAL pending a complete reasonably retrievable transcript/caption or attributable official pick evidence."
+    "retrieved": "matchup-specific attributable clips for Ohio State-Texas and Oklahoma-Michigan; full episode still incomplete",
+    "reason": "Late clips now safely expose material portions of two matchup segments, but the full episode and individual Ramen Noodle Express constructions remain incompletely retrievable."
   },
   "officialSocialPickSheetAttempt": {
     "searched": true,
-    "result": "No newly indexed official Josh Pate/Pate State pick sheet or attributable social evidence exposed the individual Week 2 Ramen Noodle Express selections in this pass."
+    "result": "No newly indexed official Josh Pate/Pate State pick sheet safely exposed the individual Week 2 Ramen Noodle Express selections and prices in this pass."
   },
   "matchupsExplicitlyConfirmedBySourceNotes": [
     "Ohio State vs Texas",
     "Oklahoma vs Michigan",
     "Alabama vs Kentucky"
   ],
+  "newStructuredRecordsIntended": [
+    {
+      "id": "pate-w2-ohst-tex-trench-explosive-20260909",
+      "gameId": "2026-W2-OHST-TEX",
+      "analyst": "Josh Pate",
+      "constructionDetail": "OL/front mismatch + run-game suppression + TE usage + explosive-receiver leverage; low-total/Under-compatible analysis only, not a wager",
+      "sourceAnalysis": "Pate says both offensive lines could be net disadvantages relative to the opposing fronts, making consistent ground-game chunk plays difficult. He calls tight-end personnel/usage an overlooked factor and expects the passing game—especially Jeremiah Smith, Cam Coleman, Ryan Wingo and the other high-end receivers—to hold the most game-breaking leverage if the run games are constrained.",
+      "bettingImplication": "Pate references a 48.5 total and says he could see the game going under, with one or two explosive pass plays potentially deciding a lower-scoring game. Preserve this as matchup/total context only; no Under wager, side, ATS, ML or price recommendation is inferred."
+    },
+    {
+      "id": "pate-w2-okla-mich-underwood-pressure-20260909",
+      "gameId": "2026-W2-OKLA-MICH",
+      "analyst": "Josh Pate",
+      "constructionDetail": "Underwood pressure + Venables defensive stress + negative home-crowd game-state feedback; no wager",
+      "sourceAnalysis": "Pate says Bryce Underwood enters an unusually unforgiving spot: Michigan has little positive offensive drive-chart evidence to build from Week 1, Brent Venables brings Oklahoma's defense to Ann Arbor, and an early offensive stall could trigger significant home-crowd pressure on the young quarterback.",
+      "bettingImplication": "Adds a game-state mechanism favoring Oklahoma's defense if Michigan starts poorly, but it is not an Oklahoma ATS/ML recommendation and supplies no executable price."
+    }
+  ],
   "bettingSegmentConfirmed": "Early Week 2 Ramen Noodle Express best bets are explicitly advertised, but individual selections and prices remain unverified in reasonably retrievable evidence.",
-  "newStructuredRecords": [],
-  "unsupportedInferenceGuard": "No side, ATS, ML, total, 1H, score prediction, upset warning, matchup mechanism, price or conviction was inferred from title/description or from transcript material that did not reach the relevant segment.",
-  "dedupe": "PASS: no duplicate game-level record created.",
-  "reconciliationState": "Episode remains explained but PROVISIONAL because a transcript mirror now exists while the matchup/pick segments remain inaccessible through the available retrieval surface.",
-  "notification": "No material handicap claim; completeness status changed because late transcript evidence appeared."
+  "ledgerPersistence": "FAILED-SAFE",
+  "ledgerPersistenceNotes": "The two intended records are preserved exactly in this audit, but the connected GitHub contents write requires full replacement of data/expert-weekly.json. Although blob retrieval can identify the current file, there is no safe append/patch action in the connected write surface; destructive reconstruction was not attempted. This remains an ingestion/reconciliation failure until the governed primary ledger can be losslessly appended.",
+  "unsupportedInferenceGuard": "No side, ATS, ML, total, 1H, score prediction, price or conviction was inferred beyond Pate's attributable words. His statement that the game could go under 48.5 is analysis, not recorded as an Under bet.",
+  "dedupe": "PASS: repository search found no Josh Pate Week 2 record with these gameId + analyst + construction/detail combinations. Existing PFF Ohio State-Texas pressure analysis is related but materially distinct and remains a separate source family.",
+  "reconciliationState": "Episode remains PROVISIONAL because late matchup-specific transcripts are now available for two games while the full episode and Ramen Noodle Express selections remain incompletely exposed.",
+  "notification": "MATERIAL NEW CFB HANDICAP EVIDENCE + UNRESOLVED PRIMARY-LEDGER INGESTION FAILURE"
 }
