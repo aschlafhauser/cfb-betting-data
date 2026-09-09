@@ -1,3 +1,4 @@
+// Persist governed portal emissions into the public runtime repository.
 import fs from 'node:fs/promises';
 import { chromium } from 'playwright';
 
