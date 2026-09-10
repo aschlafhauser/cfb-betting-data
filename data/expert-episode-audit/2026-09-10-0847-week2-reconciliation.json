@@ -1,0 +1,23 @@
+{
+  "sport":"CFB",
+  "season":2026,
+  "week":2,
+  "auditType":"pre-kickoff-current-week-reconciliation",
+  "auditedAt":"2026-09-10T08:47:35-05:00",
+  "status":"PROVISIONAL",
+  "sourcesChecked":["Cover 3 / CBS Sports","The Solid Verbal","Josh Pate / Pate State","The McShay Show","Ringer Tailgate / The Ringer CFB","Winning Cures Everything","other established CFB source families"],
+  "newRelevantEpisodes":["data/expert-episode-audit/2026-09-10-winning-cures-everything-week2.json"],
+  "newStructuredRecords":10,
+  "newMaterial":["Gary Segars: Ohio State +1.5 vs Texas and outright-win expectation","Gary Segars: Michigan +6.5 vs Oklahoma; would accept +5.5","Gary Segars: Memphis +8.5 at Boise State","Gary Segars: Kentucky +10.5 vs Alabama","Gary Segars: Oklahoma State +22.5 vs Oregon","Gary Segars: Iowa State +14.5 at Iowa","Gary Segars: Arizona State +14.5 at Texas A&M","Gary Segars: Arizona +7.5 at BYU","Gary Segars: Missouri -5.5 at Kansas","Gary Segars: Georgia Tech +12.5 vs Tennessee"],
+  "canonicalJoinStatus":"PASS for the 10 newly added Winning Cures Everything records; all use canonical ESPN Week 2 IDs.",
+  "dedupeApplied":true,
+  "sameFamilyCorrelationApplied":true,
+  "unsupportedPicksInferred":false,
+  "quantitativeFairModified":false,
+  "firstPartyInventoryNotes":"The Solid Verbal Sept. 10 Week 2 preview remains PROVISIONAL: first-party latest-episode/feed inventory confirms it covers the major Week 2 slate and includes picks/locks, but currently exposed evidence still does not safely identify analyst-specific selections/prices. Cover 3, Josh Pate and McShay first-party/current inventories did not yield an additional safely attributable incremental episode in this pass.",
+  "primaryLedgerStatus":"UNRESOLVED_INGESTION_FAILURE",
+  "primaryLedgerDetail":"The oversized data/expert-weekly.json remains unsafe to losslessly append through the current connected truncated-read/full-replacement surface. Newly governed records are preserved in episode audit; do not risk rewriting or truncating prior history to force synchronization.",
+  "otherOpenJoinIssue":"The earlier Rock M Nation Sept. 10 audit still contains four audit-preserved records whose canonical IDs were not asserted in that run; these remain a reconciliation item until safely resolved in the primary expert ledger path.",
+  "runtimeWrite":"CFB only",
+  "notification":"new material CFB handicap evidence plus unresolved ingestion/reconciliation gate"
+}
