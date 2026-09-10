@@ -79,25 +79,15 @@ jobs:
       - name: Refresh weekly control manifest
         run: node scripts/refresh-weekly-manifest.mjs
       - name: Persist governed decision runtime safely
-        env:
-          CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: |
           set -e
           git config user.name 'cfb-runtime-bot'
           git config user.email 'cfb-runtime-bot@users.noreply.github.com'
-          rebuild_on_latest() {
-            git fetch origin main
-            git reset --hard origin/main
-            node scripts/capture-governed-runtime.mjs
-            node scripts/build-deep-dive-runtime.mjs
-            node scripts/build-upset-research.mjs
-            node scripts/build-specialty-layers.mjs
-            node scripts/refresh-weekly-manifest.mjs
-          }
           git fetch origin main
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-            echo 'Remote advanced during capture; rebuilding governed artifacts on latest main.'
-            rebuild_on_latest
+            echo 'A newer runtime commit already landed while this run was executing; treating this capture as superseded rather than rebasing generated JSON.'
+            git reset --hard origin/main
+            exit 0
           fi
           if git diff --quiet -- data/; then
             echo 'No governed data changes.'
@@ -106,15 +96,10 @@ jobs:
           git add data/
           git commit -m 'chore: persist governed CFB decision runtime [skip ci]'
           if ! git push origin HEAD:main; then
-            echo 'Remote advanced during push; rebuilding once on latest main instead of rebasing generated JSON.'
-            rebuild_on_latest
-            if git diff --quiet -- data/; then
-              echo 'Latest main already contains equivalent governed data.'
-              exit 0
-            fi
-            git add data/
-            git commit -m 'chore: persist governed CFB decision runtime after concurrent update [skip ci]'
-            git push origin HEAD:main
+            echo 'Remote advanced during push; a newer runtime owns persistence. Resetting to latest main and exiting successfully.'
+            git fetch origin main
+            git reset --hard origin/main
+            exit 0
           fi
       - name: Verify live production decision system
         if: ${{ always() }}
