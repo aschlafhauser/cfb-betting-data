@@ -6,6 +6,7 @@ const key=(a,h)=>`${norm(a)}__${norm(h)}`;
 function parseSpread(s){const m=String(s||'').match(/^(.+?)\s+(-?\d+(?:\.\d+)?)/);return m?{fav:m[1].trim(),line:Math.abs(Number(m[2]))}:null}
 function dogFor(g){const p=parseSpread(g.currentSpread);if(!p)return null;const fav=norm(p.fav),away=norm(g.away),home=norm(g.home);if(fav===away)return {team:g.home,opponent:g.away,spread:p.line};if(fav===home)return {team:g.away,opponent:g.home,spread:p.line};return null}
 function parseML(text,team){const s=String(text||'');if(!s)return null;const idx=s.toLowerCase().indexOf(String(team).toLowerCase());if(idx<0)return null;const tail=s.slice(idx+String(team).length);const m=tail.match(/([+-]\d+)/);return m?Number(m[1]):null}
+function numericML(text){const m=String(text||'').match(/([+]\d+)/);return m?Number(m[1]):null}
 const boardByKey=new Map((board.games||[]).map(g=>[key(g.away,g.home),g]));
 const LEGACY_MATCHUPS={
  '2026-W2-RUT-BC':['Rutgers','Boston College'],
@@ -18,6 +19,29 @@ const LEGACY_MATCHUPS={
  '2026-W2-TTU-ORST':['Texas Tech','Oregon State'],
  '2026-W2-ARK-UTAH':['Arkansas','Utah']
 };
+
+// Pull the unified research score into specialty views. This is display/research-only and has zero production impact.
+let upsetResearch={upsetLab:[],underdogSpecial:[]};
+try{upsetResearch=JSON.parse(await fs.readFile(`data/upset-research-2026-w${week}.json`,'utf8'))}catch{}
+const upsetById=new Map([...(upsetResearch.upsetLab||[]),...(upsetResearch.underdogSpecial||[])].map(x=>[String(x.canonicalGameId),x]));
+
+// Preserve the newest governed moneyline evidence even when the current ESPN schedule feed omits ML.
+// Older values remain explicitly timestamped/stale rather than being mislabeled as current executable prices.
+const governedMlByPair=new Map();
+try{
+  const files=(await fs.readdir('data')).filter(f=>/^weekday-intel-\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
+  for(const f of files){
+    let doc;try{doc=JSON.parse(await fs.readFile(`data/${f}`,'utf8'))}catch{continue}
+    if(Number(doc.week)!==week)continue;
+    const ts=doc.timestamp||doc.updatedAt||null;
+    for(const c of doc.longshotScreen?.verifiedMondayCandidates||[]){
+      const k=norm(c.team+' '+c.opponent); if(c.moneyline) governedMlByPair.set(k,{moneyline:c.moneyline,timestamp:ts,source:`${f} longshotScreen`});
+    }
+    for(const c of doc.longshotScreen?.verifiedCandidates||[]){
+      const k=norm(c.team+' '+c.opponent); if(c.moneyline) governedMlByPair.set(k,{moneyline:c.moneyline,timestamp:ts,source:`${f} longshotScreen`});
+    }
+  }
+}catch{}
 
 let sunday={observations:[]};
 try{sunday=JSON.parse(await fs.readFile(`data/timing-observations/2026-W${week}-sunday-open.json`,'utf8'))}catch{}
@@ -34,7 +58,7 @@ await fs.writeFile(`data/market-movers-2026-w${week}.json`,JSON.stringify({seaso
 let priorUD={candidates:[]};try{priorUD=JSON.parse(await fs.readFile('data/underdog-special.json','utf8'))}catch{}
 const priorUdByTeam=new Map((priorUD.candidates||[]).map(c=>[norm(c.team+' '+c.opponent),c]));
 const ud=[];
-for(const g of board.games||[]){const d=dogFor(g);if(!d||d.spread<3.5||d.spread>7)continue;const prior=priorUdByTeam.get(norm(d.team+' '+d.opponent));const ml=parseML(g.currentMoneyline,d.team);const priceCurrent=Number.isFinite(ml);ud.push({week,canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,currentSpread:`+${d.spread}`,currentMoneyline:priceCurrent?(ml>0?`+${ml}`:`${ml}`):null,moneylineStatus:priceCurrent?'CURRENT':'PRICE-RECHECK-REQUIRED',qualifiers:prior?.qualifiers||null,qualifierCount:Number.isFinite(prior?.qualifierCount)?prior.qualifierCount:null,profileQualifies:prior?.profileQualifies??null,mlValueQualifies:priceCurrent?(prior?.fairMl!=null?ml>Number(prior.fairMl):null):null,deepDiveStatus:g.deepDiveStatus||'PENDING',status:priceCurrent?'CURRENT-SCREEN':'CURRENT-SCREEN-PRICE-PENDING',action:priceCurrent?'Evaluate existing v1.1 football-profile and fair-ML gates.':'Do not declare NO QUALIFIER until a current executable moneyline is verified.',note:'Current-week screen generated from canonical Weekly Board. Missing price is a visible execution limitation, not an empty result.'});}
+for(const g of board.games||[]){const d=dogFor(g);if(!d||d.spread<3.5||d.spread>7)continue;const prior=priorUdByTeam.get(norm(d.team+' '+d.opponent));const ml=parseML(g.currentMoneyline,d.team);const priceCurrent=Number.isFinite(ml);const research=upsetById.get(String(g.gameId));ud.push({week,canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,currentSpread:`+${d.spread}`,currentMoneyline:priceCurrent?(ml>0?`+${ml}`:`${ml}`):null,moneylineStatus:priceCurrent?'CURRENT':'PRICE-RECHECK-REQUIRED',profileScore:Number.isFinite(research?.profileScore)?research.profileScore:null,researchTier:research?.tier||null,qualifiers:prior?.qualifiers||null,qualifierCount:Number.isFinite(prior?.qualifierCount)?prior.qualifierCount:null,profileQualifies:prior?.profileQualifies??null,mlValueQualifies:priceCurrent?(prior?.fairMl!=null?ml>Number(prior.fairMl):null):null,deepDiveStatus:g.deepDiveStatus||'PENDING',status:priceCurrent?'CURRENT-SCREEN':'CURRENT-SCREEN-PRICE-PENDING',action:priceCurrent?'Evaluate existing v1.1 football-profile and fair-ML gates.':'Do not declare NO QUALIFIER until a current executable moneyline is verified.',note:'Current-week screen generated from canonical Weekly Board. Missing price is a visible execution limitation, not an empty result.'});}
 priorUD.week=week;priorUD.updatedAt=now;priorUD.sundayWeek2Rerun={timestamp:now,result:ud.some(x=>x.status==='CURRENT-SCREEN')?'CURRENT SCREEN COMPLETE':'CURRENT SCREEN / PRICE VERIFICATION REQUIRED',note:`Canonical board produced ${ud.length} +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred.`};priorUD.candidates=[...(priorUD.candidates||[]).filter(c=>Number(c.week)!==week),...ud];
 await fs.writeFile('data/underdog-special.json',JSON.stringify(priorUD,null,2)+'\n');
 
@@ -44,12 +68,20 @@ const ls=[];
 for(const g of board.games||[]){
   const d=dogFor(g);if(!d||d.spread<9.5)continue;
   const prior=priorLsByTeam.get(norm(d.team+' '+d.opponent));
-  // Keep the primary lab focused on games with both-team independent-model coverage or an existing governed longshot record; this removes most FCS/buy-game noise.
-  const hasFbsCoverage=!!g.independentFootballFair||!!prior;
+  const research=upsetById.get(String(g.gameId));
+  // Keep the primary lab focused on games with both-team independent-model coverage, unified upset research, or an existing governed longshot record.
+  const hasFbsCoverage=!!g.independentFootballFair||!!research||!!prior;
   if(!hasFbsCoverage)continue;
-  const ml=parseML(g.currentMoneyline,d.team),priceCurrent=Number.isFinite(ml),qualifiesPrice=priceCurrent&&ml>=300,priorPrice=prior?.moneyline||null;
-  ls.push({canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,currentSpread:`+${d.spread}`,currentMoneyline:priceCurrent?(ml>0?`+${ml}`:`${ml}`):null,priorMoneyline:priorPrice,priceStatus:priceCurrent?'CURRENT':'PRICE-RECHECK-REQUIRED',screenEligibility:qualifiesPrice?'VERIFIED +300+':(priceCurrent?'CURRENT BELOW +300':'LIKELY LONGSHOT / ML PENDING'),score:prior?.score??null,classification:prior?.classification||'WATCH / PRICE PENDING',informationQuality:prior?.informationQuality||'standard',qbThesis:prior?.qbThesis||null,compressionThesis:prior?.compressionThesis||null,personnel:prior?.personnel||null,deepDiveStatus:g.deepDiveStatus||'PENDING',action:qualifiesPrice?'Reconcile mechanism and governed value; classification alone never activates a wager.':'Keep visible until current moneyline is verified.',note:'Primary Longshot Lab is restricted to games with both-team governed football coverage or an existing governed longshot record; cross-level/buy-game dogs are not allowed to swamp the screen.'});
+  const currentMl=parseML(g.currentMoneyline,d.team),pairEvidence=governedMlByPair.get(norm(d.team+' '+d.opponent));
+  const currentPrice=Number.isFinite(currentMl);
+  const evidenceText=currentPrice?(currentMl>0?`+${currentMl}`:`${currentMl}`):(pairEvidence?.moneyline||null);
+  const evidenceNumeric=currentPrice?currentMl:numericML(evidenceText);
+  const hasEvidence=Number.isFinite(evidenceNumeric);
+  const qualifiesPrice=hasEvidence&&evidenceNumeric>=300;
+  const score=Number.isFinite(research?.profileScore)?research.profileScore:(Number.isFinite(prior?.score)?prior.score:null);
+  const classification=research?.tier?(`UNIFIED ${research.tier}`):(prior?.classification||'WATCH / PRICE PENDING');
+  ls.push({week,canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,currentSpread:`+${d.spread}`,currentMoneyline:evidenceText,priorMoneyline:prior?.currentMoneyline||prior?.moneyline||null,priceStatus:currentPrice?'CURRENT':(hasEvidence?'LAST-GOVERNED-PRICE / RECHECK REQUIRED':'PRICE-RECHECK-REQUIRED'),moneylineTimestamp:currentPrice?(board.updatedAt||now):(pairEvidence?.timestamp||null),moneylineSource:currentPrice?(g.marketSource||'canonical weekly board'):(pairEvidence?.source||null),screenEligibility:qualifiesPrice?(currentPrice?'VERIFIED CURRENT +300+':'LAST-GOVERNED +300+ / CURRENT RECHECK'):(hasEvidence?'LAST-GOVERNED BELOW +300 / CURRENT RECHECK':'LIKELY LONGSHOT / ML PENDING'),score,unifiedProfileScore:Number.isFinite(research?.profileScore)?research.profileScore:null,researchTier:research?.tier||null,researchComponents:research?.components||null,researchFlags:research?.researchFlags||null,classification,informationQuality:research?.informationQuality||prior?.informationQuality||'standard',qbThesis:prior?.qbThesis||null,compressionThesis:prior?.compressionThesis||null,personnel:prior?.personnel||null,deepDiveStatus:g.deepDiveStatus||'PENDING',action:currentPrice&&qualifiesPrice?'Reconcile mechanism and governed value; classification alone never activates a wager.':(hasEvidence?'Historical governed ML is displayed for context only; re-verify current executable price before any decision.':'Keep visible until current moneyline is verified.'),note:'Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.'});
 }
-priorLS.week=week;priorLS.updatedAt=now;priorLS.status='prospective-live-current-screen';priorLS.coverage={...(priorLS.coverage||{}),eligibilityUniverse:`complete ${(board.games||[]).length}-game canonical selected-week schedule; primary display filtered to both-team football coverage/existing governed candidates`,thursdayScreenComplete:true,lastCanonicalRefresh:now};priorLS.candidates=ls;
+priorLS.week=week;priorLS.updatedAt=now;priorLS.status='prospective-live-current-screen';priorLS.coverage={...(priorLS.coverage||{}),eligibilityUniverse:`complete ${(board.games||[]).length}-game canonical selected-week schedule; primary display filtered to governed football coverage/unified upset research`,thursdayScreenComplete:true,lastCanonicalRefresh:now,scoredCandidates:ls.filter(x=>Number.isFinite(x.score)).length,pricedCandidates:ls.filter(x=>x.currentMoneyline).length,currentPricedCandidates:ls.filter(x=>x.priceStatus==='CURRENT').length};priorLS.candidates=ls;
 await fs.writeFile('data/longshot-upset-lab.json',JSON.stringify(priorLS,null,2)+'\n');
-console.log(`Specialty layers refreshed: movers=${movers.length}/${(sunday.observations||[]).length}, underdog-band=${ud.length}, longshot-primary=${ls.length}.`);
+console.log(`Specialty layers refreshed: movers=${movers.length}/${(sunday.observations||[]).length}, underdog-band=${ud.length}, longshot-primary=${ls.length}, longshot-scored=${ls.filter(x=>Number.isFinite(x.score)).length}, longshot-priced=${ls.filter(x=>x.currentMoneyline).length}.`);
