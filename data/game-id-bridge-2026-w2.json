@@ -1,0 +1,12 @@
+{
+  "season": 2026,
+  "week": 2,
+  "updatedAt": "2026-09-10T07:45:00-05:00",
+  "purpose": "Persistent bridge between legacy governed Week 2 IDs and canonical ESPN Weekly Board IDs. Derived datasets must resolve through this bridge rather than string-matching team names.",
+  "mappings": [
+    {"legacyGameId":"2026-W2-RUT-BC","canonicalGameId":"ESPN-401858214","away":"Rutgers","home":"Boston College","status":"VERIFIED"},
+    {"legacyGameId":"2026-W2-KAN-MIZZ","canonicalGameId":"ESPN-401856678","away":"Missouri","home":"Kansas","status":"VERIFIED","note":"Legacy ID encodes Kansas/Missouri ordering; canonical schedule identity is Missouri at Kansas."},
+    {"legacyGameId":"2026-W2-ORE-OKST","canonicalGameId":"ESPN-401856782","away":"Oregon","home":"Oklahoma State","status":"VERIFIED"}
+  ],
+  "unresolvedPolicy": "No legacy record is considered canonically joined until an explicit mapping is present. Continue expanding this bridge for every legacy 2026-W2-* ID encountered in derived datasets."
+}
