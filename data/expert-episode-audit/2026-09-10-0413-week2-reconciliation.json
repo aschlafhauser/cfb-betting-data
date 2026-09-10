@@ -1,0 +1,21 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "auditType": "pre-kickoff-current-week-reconciliation",
+  "auditedAt": "2026-09-10T04:13:20-04:00",
+  "sourcesChecked": ["Cover 3 / CBS Sports", "The Solid Verbal", "Josh Pate / Pate State", "The McShay Show", "Ringer Tailgate", "Rock M Nation / SB Nation regional analysis", "other established CFB source families"],
+  "newRelevantEpisodes": ["data/expert-episode-audit/2026-09-10-rock-m-nation-week2-best-bets.json"],
+  "newStructuredRecords": 6,
+  "newMaterial": ["Missouri -5.5 ATS Best Bet", "Oklahoma -5.5 ATS Best Bet", "Mississippi State -1.5 ATS Best Bet", "Ohio -2.5 worth-a-look", "UCLA -12.5 worth-a-look", "Utah -12.5 worth-a-look"],
+  "dedupeApplied": true,
+  "sameFamilyCorrelationApplied": true,
+  "unsupportedPicksInferred": false,
+  "quantitativeFairModified": false,
+  "sourceNotes": "A newly published Sep. 10 Rock M Nation Week 2 best-bets article was fully accessible and contained explicit attributable ATS constructions. No additional new Cover 3, Solid Verbal, Josh Pate/Pate State, McShay or Ringer Tailgate episode cleared the incremental threshold in this pass.",
+  "primaryLedgerStatus": "UNRESOLVED_INGESTION_FAILURE",
+  "primaryLedgerDetail": "The exact new Rock M Nation records are preserved in governed episode audit, but the oversized primary data/expert-weekly.json remains unsafe to losslessly append through the connected truncated-read/full-replacement surface. Prior governed Josh Pate synchronization also remains unresolved.",
+  "canonicalJoinNotes": "Missouri-Kansas and Oklahoma-Michigan were joined to known canonical IDs. Remaining four records are audit-preserved with canonicalGameId unset rather than guessing an ID; they must be resolved before primary-ledger ingestion.",
+  "appRepoModified": false,
+  "reconciliationStatus": "PROVISIONAL because primary-ledger synchronization and four canonical-ID resolutions remain open."
+}
