@@ -12,6 +12,18 @@ const expected=Number(board.scheduleCoverage?.slateCount||board.games?.length||0
 const fresh=x=>{const t=Date.parse(x?.updatedAt||'');return Number.isFinite(t)&&Date.now()-t<6*3600000};
 const routingViolations=Number(upsetResearch?.coverage?.routingViolations??NaN);
 const routingHealthy=!!(upsetResearch&&Number(upsetResearch.week)===week&&fresh(upsetResearch)&&routingViolations===0);
+async function latestExpertReconciliation(){
+  const dir='data/expert-episode-audit';
+  const names=(await fs.readdir(dir).catch(()=>[])).filter(n=>/reconciliation\.json$/i.test(n)).sort().reverse();
+  for(const n of names){
+    const x=await read(`${dir}/${n}`).catch(()=>null);
+    if(x&&Number(x.week)===week&&String(x.sport||'CFB').toUpperCase()==='CFB')return {file:n,data:x};
+  }
+  return null;
+}
+const expertRecon=await latestExpertReconciliation();
+const primaryLedgerStatus=String(expertRecon?.data?.primaryLedgerStatus||'UNKNOWN');
+const expertLedgerHealthy=/^(PASS|SYNCHRONIZED|CURRENT)$/i.test(primaryLedgerStatus);
 const gates={
  canonicalSchedule:{status:Array.isArray(board.games)&&board.games.length===expected?'PASS':'FAIL',expectedGames:expected,actualGames:board.games?.length||0,detail:'Canonical selected-week schedule coverage.'},
  marketCoverage:{status:market>=Math.min(60,expected)?'PASS':'FAIL',minimumRequired:Math.min(60,expected),actualMarketGames:market,detail:'Current spread/total coverage from canonical board.'},
@@ -20,7 +32,7 @@ const gates={
  marketMovers:{status:movers&&Number(movers.week)===week&&fresh(movers)&&Number(movers.coverage?.referenceGames||0)>0?'PASS':'FAIL',detail:movers?`Current derived mover set has ${movers.coverage?.referenceGames||0} reference games.`:'Missing current market-movers artifact.'},
  underdogSpecial:{status:ud&&Number(ud.week)===week&&fresh(ud)?'PASS':'FAIL',detail:ud?`Canonical +3.5-to-+7 screen refreshed; ${ud.sundayWeek2Rerun?.note||ud.currentRerun?.note||''}`:'Missing current Underdog Special screen.'},
  longshotUpsetLab:{status:ls&&Number(ls.week)===week&&fresh(ls)?'PASS':'FAIL',detail:ls?`Canonical longshot spread screen refreshed with ${ls.candidates?.length||0} visible candidates.`:'Missing current Longshot Lab screen.'},
- expertEpisodeInventory:{status:'IN_PROGRESS',detail:'Episode completeness is governed separately. Any discovered relevant PROVISIONAL episode remains visible until exhausted; it does not invalidate completed football dossiers.'},
+ expertEpisodeInventory:{status:expertLedgerHealthy?'IN_PROGRESS':'FAIL',primaryLedgerStatus,latestReconciliation:expertRecon?.file||null,pointImpact:0,detail:expertLedgerHealthy?'Episode completeness remains separately governed; current primary ledger reconciliation is healthy.':'Primary expert ledger is stale/incomplete versus newer governed episode audits. This is UNRESOLVED_INGESTION_FAILURE and cannot be masked by episode-discovery completeness.'},
  canonicalGameJoins:{status:'PASS-DERIVED-LAYERS',detail:'New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten.'},
  productionVerifier:{status:'PENDING-LIVE-CHECK',detail:'Live portal verification runs after runtime artifacts are committed/deployed.'},
  preKickoffSnapshots:{status:'IN_PROGRESS',detail:'Immutable 60–90 minute final snapshots remain required individually through kickoff.'}
