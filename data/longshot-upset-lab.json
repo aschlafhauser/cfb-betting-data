@@ -1,8 +1,8 @@
 {
-  "version": "1.0",
+  "version": "2.0-25pt",
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T20:30:41.113Z",
+  "updatedAt": "2026-09-10T20:37:02.191Z",
   "status": "prospective-live-current-screen",
   "historyPolicy": "Week 1 pregame state remains immutable in repository history. No candidate is added after its result is known.",
   "coverage": {
@@ -11,26 +11,32 @@
     "tuesdayScreenComplete": true,
     "universalDeepDiveDeadline": "2026-09-09",
     "thursdayScreenComplete": true,
-    "lastCanonicalRefresh": "2026-09-10T20:30:41.069Z",
+    "lastCanonicalRefresh": "2026-09-10T20:37:02.083Z",
     "scoredCandidates": 62,
     "pricedCandidates": 13,
     "currentPricedCandidates": 0,
     "freeSourcePricedCandidates": 6,
-    "freeMoneylineOverlayUpdatedAt": "2026-09-10T19:49:00Z"
+    "freeMoneylineOverlayUpdatedAt": "2026-09-10T19:49:00Z",
+    "scoreFramework": "25-point directional v2",
+    "narrativeCandidates": 62,
+    "scoreSyncMissing": 0
   },
   "scoreWeights": {
-    "footballPriceEdge": 30,
-    "quarterbackUpside": 20,
-    "gameCompression": 15,
-    "favoriteVolatility": 15,
-    "explosiveTurnoverPath": 10,
-    "brandMarketInflation": 10
+    "qbStability": 4,
+    "trenchResistance": 4,
+    "explosivePath": 3,
+    "compression": 3,
+    "havocVolatility": 3,
+    "coachingSituational": 2,
+    "availability": 2,
+    "productionModel": 2,
+    "independentModel": 2
   },
   "classifications": {
-    "priorityResearch": "75+",
-    "liveResearch": "65-74",
-    "watch": "55-64",
-    "pass": "<55"
+    "priorityResearch": "19+",
+    "liveResearch": "16-18.9",
+    "watch": "13-15.9",
+    "pass": "<13"
   },
   "candidates": [
     {
@@ -65,14 +71,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Use for research/screening only; re-verify an executable sportsbook price before any official decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Florida A&M is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Florida A&M QB/WR vs Miami DB — Miami ++",
+          "Miami QB/WR vs Florida A&M DB — Miami ++",
+          "Florida A&M OL/RB vs Miami DL/LB — Miami ++"
+        ]
+      },
+      "upsetCase": "Florida A&M is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -106,14 +137,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Use for research/screening only; re-verify an executable sportsbook price before any official decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Villanova is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Louisville OL/RB vs Villanova DL/LB — Louisville ++",
+          "Villanova QB/WR vs Louisville DB — Louisville ++",
+          "Villanova OL/RB vs Louisville DL/LB — Louisville ++"
+        ]
+      },
+      "upsetCase": "Villanova is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -147,14 +203,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Use for research/screening only; re-verify an executable sportsbook price before any official decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Norfolk State has an upset path built around a lower-total environment that can compress possessions. Norfolk State OL/RB vs Virginia DL/LB — Virginia ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Norfolk State OL/RB vs Virginia DL/LB — Virginia ++",
+          "Norfolk State QB/WR vs Virginia DB — Virginia ++",
+          "Virginia OL/RB vs Norfolk State DL/LB — Virginia ++"
+        ]
+      },
+      "upsetCase": "Norfolk State has an upset path built around a lower-total environment that can compress possessions. Norfolk State OL/RB vs Virginia DL/LB — Virginia ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -188,14 +269,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Richmond has an upset path built around a lower-total environment that can compress possessions. NC State QB/WR vs Richmond DB — NC State ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "NC State QB/WR vs Richmond DB — NC State ++",
+          "Richmond QB/WR vs NC State DB — NC State +",
+          "Richmond OL/RB vs NC State DL/LB — NC State +"
+        ]
+      },
+      "upsetCase": "Richmond has an upset path built around a lower-total environment that can compress possessions. NC State QB/WR vs Richmond DB — NC State ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -229,14 +335,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Howard is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Howard QB/WR vs Indiana DB — Indiana ++",
+          "Howard OL/RB vs Indiana DL/LB — Indiana ++",
+          "Indiana QB/WR vs Howard DB — Indiana ++"
+        ]
+      },
+      "upsetCase": "Howard is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -270,14 +401,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Use for research/screening only; re-verify an executable sportsbook price before any official decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Oklahoma State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Oregon QB/WR vs Oklahoma State DB — Oregon ++",
+          "Oregon OL/RB vs Oklahoma State DL/LB — Oregon ++",
+          "Oklahoma State OL/RB vs Oregon DL/LB — Oregon ++"
+        ]
+      },
+      "upsetCase": "Oklahoma State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -311,14 +467,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Use for research/screening only; re-verify an executable sportsbook price before any official decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 5.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Arizona State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Arizona State OL/RB vs Texas A&M DL/LB — Texas A&M ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Arizona State OL/RB vs Texas A&M DL/LB — Texas A&M ++",
+          "Arizona State QB/WR vs Texas A&M DB — Texas A&M ++",
+          "Texas A&M QB/WR vs Arizona State DB — Texas A&M ++"
+        ]
+      },
+      "upsetCase": "Arizona State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Arizona State OL/RB vs Texas A&M DL/LB — Texas A&M ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -352,14 +533,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 6.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Temple has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Temple QB/WR vs Penn State DB — Penn State ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Temple QB/WR vs Penn State DB — Penn State ++",
+          "Penn State OL/RB vs Temple DL/LB — Penn State ++",
+          "Penn State QB/WR vs Temple DB — Penn State +"
+        ]
+      },
+      "upsetCase": "Temple has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Temple QB/WR vs Penn State DB — Penn State ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -393,14 +599,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Use for research/screening only; re-verify an executable sportsbook price before any official decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Washington State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Washington State QB/WR vs Kansas State DB — Kansas State ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Washington State QB/WR vs Kansas State DB — Kansas State ++",
+          "Kansas State QB/WR vs Washington State DB — Kansas State +",
+          "Kansas State OL/RB vs Washington State DL/LB — Kansas State +"
+        ]
+      },
+      "upsetCase": "Washington State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Washington State QB/WR vs Kansas State DB — Kansas State ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -434,14 +665,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "East Tennessee State has an upset path built around a lower-total environment that can compress possessions. East Tennessee State OL/RB vs North Carolina DL/LB — North Carolina ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "East Tennessee State OL/RB vs North Carolina DL/LB — North Carolina ++",
+          "East Tennessee State QB/WR vs North Carolina DB — North Carolina +",
+          "North Carolina QB/WR vs East Tennessee State DB — Even"
+        ]
+      },
+      "upsetCase": "East Tennessee State has an upset path built around a lower-total environment that can compress possessions. East Tennessee State OL/RB vs North Carolina DL/LB — North Carolina ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -475,14 +731,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 6.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Old Dominion has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Virginia Tech OL/RB vs Old Dominion DL/LB — Virginia Tech ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Virginia Tech OL/RB vs Old Dominion DL/LB — Virginia Tech ++",
+          "Virginia Tech QB/WR vs Old Dominion DB — Virginia Tech +",
+          "Old Dominion OL/RB vs Virginia Tech DL/LB — Virginia Tech +"
+        ]
+      },
+      "upsetCase": "Old Dominion has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Virginia Tech OL/RB vs Old Dominion DL/LB — Virginia Tech ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -516,14 +797,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Wofford has an upset path built around a lower-total environment that can compress possessions. Wofford QB/WR vs Kent State DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Wofford QB/WR vs Kent State DB — Even",
+          "Wofford OL/RB vs Kent State DL/LB — Even",
+          "Kent State QB/WR vs Wofford DB — Even"
+        ]
+      },
+      "upsetCase": "Wofford has an upset path built around a lower-total environment that can compress possessions. Wofford QB/WR vs Kent State DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -557,14 +863,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Western Kentucky has an upset path built around support from at least one independent pricing view. Western Kentucky QB/WR vs Georgia DB — Georgia ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Western Kentucky QB/WR vs Georgia DB — Georgia ++",
+          "Georgia OL/RB vs Western Kentucky DL/LB — Georgia ++",
+          "Western Kentucky OL/RB vs Georgia DL/LB — Georgia ++"
+        ]
+      },
+      "upsetCase": "Western Kentucky has an upset path built around support from at least one independent pricing view. Western Kentucky QB/WR vs Georgia DB — Georgia ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -598,14 +929,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "UT Martin is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "West Virginia OL/RB vs UT Martin DL/LB — West Virginia ++",
+          "UT Martin OL/RB vs West Virginia DL/LB — Even",
+          "West Virginia QB/WR vs UT Martin DB — Even"
+        ]
+      },
+      "upsetCase": "UT Martin is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -639,14 +995,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Colgate has an upset path built around a lower-total environment that can compress possessions. Colgate QB/WR vs Central Michigan DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Colgate QB/WR vs Central Michigan DB — Even",
+          "Colgate OL/RB vs Central Michigan DL/LB — Even",
+          "Central Michigan QB/WR vs Colgate DB — Even"
+        ]
+      },
+      "upsetCase": "Colgate has an upset path built around a lower-total environment that can compress possessions. Colgate QB/WR vs Central Michigan DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -680,14 +1061,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Holy Cross has an upset path built around a lower-total environment that can compress possessions. Holy Cross OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Holy Cross OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
+          "Holy Cross QB/WR vs Miami (OH) DB — Miami (OH) +",
+          "Miami (OH) OL/RB vs Holy Cross DL/LB — Even"
+        ]
+      },
+      "upsetCase": "Holy Cross has an upset path built around a lower-total environment that can compress possessions. Holy Cross OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -721,14 +1127,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 0.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Stony Brook is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Stony Brook QB/WR vs Ball State DB — Even",
+          "Stony Brook OL/RB vs Ball State DL/LB — Even",
+          "Ball State QB/WR vs Stony Brook DB — Even"
+        ]
+      },
+      "upsetCase": "Stony Brook is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -762,14 +1193,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 5.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Rice has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Rice QB/WR vs Notre Dame DB — Notre Dame ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Rice QB/WR vs Notre Dame DB — Notre Dame ++",
+          "Notre Dame OL/RB vs Rice DL/LB — Notre Dame ++",
+          "Rice OL/RB vs Notre Dame DL/LB — Notre Dame ++"
+        ]
+      },
+      "upsetCase": "Rice has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Rice QB/WR vs Notre Dame DB — Notre Dame ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -803,14 +1259,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": "Kenny Minchey opened with 300+ passing yards, four TDs and no interceptions in his first Kentucky start, materially improving the offensive-upside component.",
       "compressionThesis": "Total around 49.5 gives Kentucky a viable lower-possession path if it avoids early Alabama explosives.",
       "personnel": "Kentucky expects starting RT Malachi Wood and CB Hasaan Sykes back; CB Terhyon Nichols is day-to-day.",
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Kentucky has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Kentucky QB/WR vs Alabama DB — Alabama ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Kentucky QB/WR vs Alabama DB — Alabama ++",
+          "Alabama QB/WR vs Kentucky DB — Alabama +",
+          "Kentucky OL/RB vs Alabama DL/LB — Alabama +"
+        ]
+      },
+      "upsetCase": "Kentucky has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Kentucky QB/WR vs Alabama DB — Alabama ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -844,14 +1325,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Utah State has an upset path built around support from at least one independent pricing view. Utah State OL/RB vs Washington DL/LB — Washington ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Utah State OL/RB vs Washington DL/LB — Washington ++",
+          "Utah State QB/WR vs Washington DB — Washington ++",
+          "Washington QB/WR vs Utah State DB — Washington ++"
+        ]
+      },
+      "upsetCase": "Utah State has an upset path built around support from at least one independent pricing view. Utah State OL/RB vs Washington DL/LB — Washington ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -885,14 +1391,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Weber State has an upset path built around a lower-total environment that can compress possessions. Colorado QB/WR vs Weber State DB — Colorado ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Colorado QB/WR vs Weber State DB — Colorado ++",
+          "Weber State QB/WR vs Colorado DB — Colorado +",
+          "Weber State OL/RB vs Colorado DL/LB — Colorado +"
+        ]
+      },
+      "upsetCase": "Weber State has an upset path built around a lower-total environment that can compress possessions. Colorado QB/WR vs Weber State DB — Colorado ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -926,14 +1457,41 @@
         "modelSupport": true,
         "volatilityPath": true
       },
-      "classification": "UNIFIED C",
+      "classification": "25PT C",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 13.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Eastern Michigan has an upset path built around a credible quarterback/passing path, an explosive-play matchup path, a lower-total environment that can compress possessions. Eastern Michigan OL/RB vs Michigan State DL/LB — Michigan State ++",
+        "whyItCouldFail": "The case can fail if the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "Eastern Michigan QB efficiency and early-down success",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Eastern Michigan OL/RB vs Michigan State DL/LB — Michigan State ++",
+          "Michigan State OL/RB vs Eastern Michigan DL/LB — Michigan State +",
+          "Eastern Michigan QB/WR vs Michigan State DB — Eastern Michigan +"
+        ]
+      },
+      "upsetCase": "Eastern Michigan has an upset path built around a credible quarterback/passing path, an explosive-play matchup path, a lower-total environment that can compress possessions. Eastern Michigan OL/RB vs Michigan State DL/LB — Michigan State ++",
+      "whyItCouldFail": "The case can fail if the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "Eastern Michigan QB efficiency and early-down success",
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -967,14 +1525,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "UConn has an upset path built around a lower-total environment that can compress possessions. Maryland QB/WR vs UConn DB — Maryland +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Maryland QB/WR vs UConn DB — Maryland +",
+          "UConn QB/WR vs Maryland DB — Maryland +",
+          "UConn OL/RB vs Maryland DL/LB — Maryland +"
+        ]
+      },
+      "upsetCase": "UConn has an upset path built around a lower-total environment that can compress possessions. Maryland QB/WR vs UConn DB — Maryland +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1008,14 +1591,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "UL Monroe has an upset path built around support from at least one independent pricing view. UL Monroe QB/WR vs UAB DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "UL Monroe QB/WR vs UAB DB — Even",
+          "UL Monroe OL/RB vs UAB DL/LB — Even",
+          "UAB QB/WR vs UL Monroe DB — Even"
+        ]
+      },
+      "upsetCase": "UL Monroe has an upset path built around support from at least one independent pricing view. UL Monroe QB/WR vs UAB DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1049,14 +1657,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Robert Morris has an upset path built around a lower-total environment that can compress possessions. Akron OL/RB vs Robert Morris DL/LB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Akron OL/RB vs Robert Morris DL/LB — Even",
+          "Robert Morris QB/WR vs Akron DB — Even",
+          "Robert Morris OL/RB vs Akron DL/LB — Even"
+        ]
+      },
+      "upsetCase": "Robert Morris has an upset path built around a lower-total environment that can compress possessions. Akron OL/RB vs Robert Morris DL/LB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1090,14 +1723,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 0.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Central Connecticut is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Central Connecticut OL/RB vs Toledo DL/LB — Even",
+          "Toledo OL/RB vs Central Connecticut DL/LB — Even",
+          "Central Connecticut QB/WR vs Toledo DB — Even"
+        ]
+      },
+      "upsetCase": "Central Connecticut is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1131,14 +1789,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Sacred Heart has an upset path built around a lower-total environment that can compress possessions. Sacred Heart QB/WR vs Massachusetts DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Sacred Heart QB/WR vs Massachusetts DB — Even",
+          "Sacred Heart OL/RB vs Massachusetts DL/LB — Even",
+          "Massachusetts QB/WR vs Sacred Heart DB — Even"
+        ]
+      },
+      "upsetCase": "Sacred Heart has an upset path built around a lower-total environment that can compress possessions. Sacred Heart QB/WR vs Massachusetts DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1172,14 +1855,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Wagner has an upset path built around a lower-total environment that can compress possessions. James Madison OL/RB vs Wagner DL/LB — James Madison +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "James Madison OL/RB vs Wagner DL/LB — James Madison +",
+          "Wagner OL/RB vs James Madison DL/LB — James Madison +",
+          "Wagner QB/WR vs James Madison DB — Even"
+        ]
+      },
+      "upsetCase": "Wagner has an upset path built around a lower-total environment that can compress possessions. James Madison OL/RB vs Wagner DL/LB — James Madison +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1213,14 +1921,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "UC Davis is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "SMU QB/WR vs UC Davis DB — SMU ++",
+          "UC Davis OL/RB vs SMU DL/LB — SMU ++",
+          "UC Davis QB/WR vs SMU DB — SMU ++"
+        ]
+      },
+      "upsetCase": "UC Davis is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1254,14 +1987,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Northern Colorado has an upset path built around a lower-total environment that can compress possessions. Wyoming OL/RB vs Northern Colorado DL/LB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Wyoming OL/RB vs Northern Colorado DL/LB — Even",
+          "Northern Colorado QB/WR vs Wyoming DB — Even",
+          "Northern Colorado OL/RB vs Wyoming DL/LB — Even"
+        ]
+      },
+      "upsetCase": "Northern Colorado has an upset path built around a lower-total environment that can compress possessions. Wyoming OL/RB vs Northern Colorado DL/LB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1295,14 +2053,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Mercyhurst has an upset path built around a lower-total environment that can compress possessions. Mercyhurst OL/RB vs New Mexico DL/LB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Mercyhurst OL/RB vs New Mexico DL/LB — Even",
+          "Mercyhurst QB/WR vs New Mexico DB — Even",
+          "New Mexico QB/WR vs Mercyhurst DB — Even"
+        ]
+      },
+      "upsetCase": "Mercyhurst has an upset path built around a lower-total environment that can compress possessions. Mercyhurst OL/RB vs New Mexico DL/LB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1336,14 +2119,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Delaware has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Vanderbilt QB/WR vs Delaware DB — Vanderbilt ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Vanderbilt QB/WR vs Delaware DB — Vanderbilt ++",
+          "Delaware OL/RB vs Vanderbilt DL/LB — Vanderbilt +",
+          "Vanderbilt OL/RB vs Delaware DL/LB — Vanderbilt +"
+        ]
+      },
+      "upsetCase": "Delaware has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Vanderbilt QB/WR vs Delaware DB — Vanderbilt ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1377,14 +2185,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Campbell is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Florida QB/WR vs Campbell DB — Florida ++",
+          "Florida OL/RB vs Campbell DL/LB — Florida ++",
+          "Campbell OL/RB vs Florida DL/LB — Florida ++"
+        ]
+      },
+      "upsetCase": "Campbell is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1418,14 +2251,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Buffalo has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Buffalo QB/WR vs Florida International DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Buffalo QB/WR vs Florida International DB — Even",
+          "Buffalo OL/RB vs Florida International DL/LB — Even",
+          "Florida International QB/WR vs Buffalo DB — Even"
+        ]
+      },
+      "upsetCase": "Buffalo has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Buffalo QB/WR vs Florida International DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1459,14 +2317,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Gardner-Webb is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Liberty OL/RB vs Gardner-Webb DL/LB — Liberty ++",
+          "Gardner-Webb QB/WR vs Liberty DB — Even",
+          "Gardner-Webb OL/RB vs Liberty DL/LB — Even"
+        ]
+      },
+      "upsetCase": "Gardner-Webb is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1500,14 +2383,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Monmouth has an upset path built around a lower-total environment that can compress possessions. Western Michigan OL/RB vs Monmouth DL/LB — Western Michigan +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Western Michigan OL/RB vs Monmouth DL/LB — Western Michigan +",
+          "Monmouth QB/WR vs Western Michigan DB — Even",
+          "Western Michigan QB/WR vs Monmouth DB — Even"
+        ]
+      },
+      "upsetCase": "Monmouth has an upset path built around a lower-total environment that can compress possessions. Western Michigan OL/RB vs Monmouth DL/LB — Western Michigan +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1541,14 +2449,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Georgia Tech has an upset path built around support from at least one independent pricing view. Tennessee QB/WR vs Georgia Tech DB — Tennessee ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Tennessee QB/WR vs Georgia Tech DB — Tennessee ++",
+          "Georgia Tech QB/WR vs Tennessee DB — Tennessee ++",
+          "Tennessee OL/RB vs Georgia Tech DL/LB — Tennessee +"
+        ]
+      },
+      "upsetCase": "Georgia Tech has an upset path built around support from at least one independent pricing view. Tennessee QB/WR vs Georgia Tech DB — Tennessee ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1582,14 +2515,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Southern is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Houston QB/WR vs Southern DB — Houston ++",
+          "Southern OL/RB vs Houston DL/LB — Houston ++",
+          "Southern QB/WR vs Houston DB — Houston ++"
+        ]
+      },
+      "upsetCase": "Southern is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1623,14 +2581,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Towson has an upset path built around a lower-total environment that can compress possessions. Towson OL/RB vs South Carolina DL/LB — South Carolina ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Towson OL/RB vs South Carolina DL/LB — South Carolina ++",
+          "South Carolina QB/WR vs Towson DB — South Carolina ++",
+          "Towson QB/WR vs South Carolina DB — South Carolina ++"
+        ]
+      },
+      "upsetCase": "Towson has an upset path built around a lower-total environment that can compress possessions. Towson OL/RB vs South Carolina DL/LB — South Carolina ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1664,14 +2647,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Western Carolina is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Cincinnati OL/RB vs Western Carolina DL/LB — Cincinnati ++",
+          "Western Carolina OL/RB vs Cincinnati DL/LB — Cincinnati +",
+          "Cincinnati QB/WR vs Western Carolina DB — Even"
+        ]
+      },
+      "upsetCase": "Western Carolina is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1705,14 +2713,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 5.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Bowling Green has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Bowling Green QB/WR vs Nebraska DB — Nebraska ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Bowling Green QB/WR vs Nebraska DB — Nebraska ++",
+          "Nebraska OL/RB vs Bowling Green DL/LB — Nebraska ++",
+          "Bowling Green OL/RB vs Nebraska DL/LB — Nebraska ++"
+        ]
+      },
+      "upsetCase": "Bowling Green has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Bowling Green QB/WR vs Nebraska DB — Nebraska ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1746,14 +2779,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 0.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Southern Utah is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Colorado State QB/WR vs Southern Utah DB — Colorado State +",
+          "Colorado State OL/RB vs Southern Utah DL/LB — Even",
+          "Southern Utah QB/WR vs Colorado State DB — Even"
+        ]
+      },
+      "upsetCase": "Southern Utah is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1787,14 +2845,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Sam Houston has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Tulsa OL/RB vs Sam Houston DL/LB — Tulsa +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Tulsa OL/RB vs Sam Houston DL/LB — Tulsa +",
+          "Tulsa QB/WR vs Sam Houston DB — Tulsa +",
+          "Sam Houston OL/RB vs Tulsa DL/LB — Even"
+        ]
+      },
+      "upsetCase": "Sam Houston has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Tulsa OL/RB vs Sam Houston DL/LB — Tulsa +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1828,14 +2911,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "South Alabama has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Tulane QB/WR vs South Alabama DB — Tulane +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Tulane QB/WR vs South Alabama DB — Tulane +",
+          "South Alabama OL/RB vs Tulane DL/LB — Tulane +",
+          "South Alabama QB/WR vs Tulane DB — Even"
+        ]
+      },
+      "upsetCase": "South Alabama has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Tulane QB/WR vs South Alabama DB — Tulane +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1869,14 +2977,43 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED C",
+      "classification": "25PT C",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 13.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Middle Tennessee has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Marshall QB/WR vs Middle Tennessee DB — Marshall +",
+        "whyItCouldFail": "The case can fail if the favorite’s talent and depth advantages dominate the matchup.",
+        "keyThingsToWatch": [
+          "Middle Tennessee QB efficiency and early-down success",
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Marshall QB/WR vs Middle Tennessee DB — Marshall +",
+          "Middle Tennessee QB/WR vs Marshall DB — Middle Tennessee +",
+          "Middle Tennessee OL/RB vs Marshall DL/LB — Even"
+        ]
+      },
+      "upsetCase": "Middle Tennessee has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Marshall QB/WR vs Middle Tennessee DB — Marshall +",
+      "whyItCouldFail": "The case can fail if the favorite’s talent and depth advantages dominate the matchup.",
+      "keyThingsToWatch": [
+        "Middle Tennessee QB efficiency and early-down success",
+        "pressure rate and line-of-scrimmage control",
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1910,14 +3047,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Lindenwood has an upset path built around a lower-total environment that can compress possessions. Lindenwood QB/WR vs Missouri State DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Lindenwood QB/WR vs Missouri State DB — Even",
+          "Lindenwood OL/RB vs Missouri State DL/LB — Even",
+          "Missouri State QB/WR vs Lindenwood DB — Even"
+        ]
+      },
+      "upsetCase": "Lindenwood has an upset path built around a lower-total environment that can compress possessions. Lindenwood QB/WR vs Missouri State DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1951,14 +3113,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 3.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "San Diego State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. UCLA QB/WR vs San Diego State DB — UCLA +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "UCLA QB/WR vs San Diego State DB — UCLA +",
+          "UCLA OL/RB vs San Diego State DL/LB — UCLA +",
+          "San Diego State OL/RB vs UCLA DL/LB — Even"
+        ]
+      },
+      "upsetCase": "San Diego State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. UCLA QB/WR vs San Diego State DB — UCLA +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -1992,14 +3179,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Western Illinois has an upset path built around a lower-total environment that can compress possessions. Western Illinois OL/RB vs Wisconsin DL/LB — Wisconsin ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Western Illinois OL/RB vs Wisconsin DL/LB — Wisconsin ++",
+          "Wisconsin QB/WR vs Western Illinois DB — Wisconsin ++",
+          "Wisconsin OL/RB vs Western Illinois DL/LB — Wisconsin +"
+        ]
+      },
+      "upsetCase": "Western Illinois has an upset path built around a lower-total environment that can compress possessions. Western Illinois OL/RB vs Wisconsin DL/LB — Wisconsin ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2033,14 +3245,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Louisiana Tech has an upset path built around support from at least one independent pricing view. Louisiana Tech OL/RB vs LSU DL/LB — LSU ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Louisiana Tech OL/RB vs LSU DL/LB — LSU ++",
+          "Louisiana Tech QB/WR vs LSU DB — LSU ++",
+          "LSU OL/RB vs Louisiana Tech DL/LB — LSU ++"
+        ]
+      },
+      "upsetCase": "Louisiana Tech has an upset path built around support from at least one independent pricing view. Louisiana Tech OL/RB vs LSU DL/LB — LSU ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2074,14 +3311,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 5.1,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Oregon State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Oregon State OL/RB vs Texas Tech DL/LB — Texas Tech ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Oregon State OL/RB vs Texas Tech DL/LB — Texas Tech ++",
+          "Oregon State QB/WR vs Texas Tech DB — Texas Tech ++",
+          "Texas Tech OL/RB vs Oregon State DL/LB — Texas Tech ++"
+        ]
+      },
+      "upsetCase": "Oregon State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Oregon State OL/RB vs Texas Tech DL/LB — Texas Tech ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2115,14 +3377,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 7,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Iowa State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Iowa State QB/WR vs Iowa DB — Iowa ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Iowa State QB/WR vs Iowa DB — Iowa ++",
+          "Iowa OL/RB vs Iowa State DL/LB — Iowa ++",
+          "Iowa State OL/RB vs Iowa DL/LB — Iowa ++"
+        ]
+      },
+      "upsetCase": "Iowa State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Iowa State QB/WR vs Iowa DB — Iowa ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2156,14 +3443,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Georgia Southern has an upset path built around support from at least one independent pricing view. Georgia Southern OL/RB vs Clemson DL/LB — Clemson ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Georgia Southern OL/RB vs Clemson DL/LB — Clemson ++",
+          "Georgia Southern QB/WR vs Clemson DB — Clemson ++",
+          "Clemson QB/WR vs Georgia Southern DB — Clemson ++"
+        ]
+      },
+      "upsetCase": "Georgia Southern has an upset path built around support from at least one independent pricing view. Georgia Southern OL/RB vs Clemson DL/LB — Clemson ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2197,14 +3509,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Fordham has an upset path built around a lower-total environment that can compress possessions. Fordham QB/WR vs Coastal Carolina DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Fordham QB/WR vs Coastal Carolina DB — Even",
+          "Fordham OL/RB vs Coastal Carolina DL/LB — Even",
+          "Coastal Carolina QB/WR vs Fordham DB — Even"
+        ]
+      },
+      "upsetCase": "Fordham has an upset path built around a lower-total environment that can compress possessions. Fordham QB/WR vs Coastal Carolina DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2238,14 +3575,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Charlotte has an upset path built around support from at least one independent pricing view. Charlotte OL/RB vs Ole Miss DL/LB — Ole Miss ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, a high-total script increases the favorite’s separation ceiling.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Charlotte OL/RB vs Ole Miss DL/LB — Ole Miss ++",
+          "Ole Miss QB/WR vs Charlotte DB — Ole Miss ++",
+          "Charlotte QB/WR vs Ole Miss DB — Ole Miss ++"
+        ]
+      },
+      "upsetCase": "Charlotte has an upset path built around support from at least one independent pricing view. Charlotte OL/RB vs Ole Miss DL/LB — Ole Miss ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, a high-total script increases the favorite’s separation ceiling.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2279,14 +3641,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Southern Miss has an upset path built around support from at least one independent pricing view. Auburn OL/RB vs Southern Miss DL/LB — Auburn ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Auburn OL/RB vs Southern Miss DL/LB — Auburn ++",
+          "Auburn QB/WR vs Southern Miss DB — Auburn ++",
+          "Southern Miss OL/RB vs Auburn DL/LB — Auburn ++"
+        ]
+      },
+      "upsetCase": "Southern Miss has an upset path built around support from at least one independent pricing view. Auburn OL/RB vs Southern Miss DL/LB — Auburn ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2320,14 +3707,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Grambling has an upset path built around a lower-total environment that can compress possessions. Grambling QB/WR vs TCU DB — TCU ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Grambling QB/WR vs TCU DB — TCU ++",
+          "Grambling OL/RB vs TCU DL/LB — TCU +",
+          "TCU OL/RB vs Grambling DL/LB — TCU +"
+        ]
+      },
+      "upsetCase": "Grambling has an upset path built around a lower-total environment that can compress possessions. Grambling QB/WR vs TCU DB — TCU ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2361,14 +3773,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 2.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Prairie View A&M is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Prairie View A&M QB/WR vs Baylor DB — Baylor ++",
+          "Baylor QB/WR vs Prairie View A&M DB — Baylor +",
+          "Baylor OL/RB vs Prairie View A&M DL/LB — Baylor +"
+        ]
+      },
+      "upsetCase": "Prairie View A&M is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2402,14 +3839,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 0.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Cal Poly is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Cal Poly QB/WR vs San José State DB — Even",
+          "Cal Poly OL/RB vs San José State DL/LB — Even",
+          "San José State QB/WR vs Cal Poly DB — Even"
+        ]
+      },
+      "upsetCase": "Cal Poly is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2443,14 +3905,39 @@
         "modelSupport": false,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 1.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Texas Southern has an upset path built around a lower-total environment that can compress possessions. Texas Southern QB/WR vs UTEP DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Texas Southern QB/WR vs UTEP DB — Even",
+          "Texas Southern OL/RB vs UTEP DL/LB — Even",
+          "UTEP QB/WR vs Texas Southern DB — Even"
+        ]
+      },
+      "upsetCase": "Texas Southern has an upset path built around a lower-total environment that can compress possessions. Texas Southern QB/WR vs UTEP DB — Even",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2484,14 +3971,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": "KJ Jackson provides experience and dual-threat upside, but Arkansas' Week 1 red-zone and turnover execution was poor.",
       "compressionThesis": null,
       "personnel": "DE Quincy Rhodes Jr. and RB Cam Settles remain monitoring items; multiple season-long absences are already known.",
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Arkansas has an upset path built around support from at least one independent pricing view. Utah QB/WR vs Arkansas DB — Utah ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Utah QB/WR vs Arkansas DB — Utah ++",
+          "Arkansas QB/WR vs Utah DB — Utah ++",
+          "Utah OL/RB vs Arkansas DL/LB — Utah +"
+        ]
+      },
+      "upsetCase": "Arkansas has an upset path built around support from at least one independent pricing view. Utah QB/WR vs Arkansas DB — Utah ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2525,14 +4037,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Keep visible until current moneyline is verified.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Sacramento State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Sacramento State QB/WR vs Fresno State DB — Fresno State +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Sacramento State QB/WR vs Fresno State DB — Fresno State +",
+          "Sacramento State OL/RB vs Fresno State DL/LB — Fresno State +",
+          "Fresno State OL/RB vs Sacramento State DL/LB — Fresno State +"
+        ]
+      },
+      "upsetCase": "Sacramento State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Sacramento State QB/WR vs Fresno State DB — Fresno State +",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     },
     {
       "week": 2,
@@ -2566,14 +4103,39 @@
         "modelSupport": true,
         "volatilityPath": false
       },
-      "classification": "UNIFIED D",
+      "classification": "25PT D",
       "informationQuality": "standard",
       "qbThesis": null,
       "compressionThesis": null,
       "personnel": null,
       "deepDiveStatus": "COMPLETE",
       "action": "Historical governed ML is displayed for context only; re-verify current executable price before any decision.",
-      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution."
+      "note": "Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.",
+      "score25": 4.5,
+      "scoreMax": 25,
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "narrative": {
+        "upsetCase": "Louisiana has an upset path built around support from at least one independent pricing view. USC OL/RB vs Louisiana DL/LB — USC ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "USC OL/RB vs Louisiana DL/LB — USC ++",
+          "USC QB/WR vs Louisiana DB — USC ++",
+          "Louisiana QB/WR vs USC DB — USC ++"
+        ]
+      },
+      "upsetCase": "Louisiana has an upset path built around support from at least one independent pricing view. USC OL/RB vs Louisiana DL/LB — USC ++",
+      "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+      "keyThingsToWatch": [
+        "game pace / possession count",
+        "late availability and inactives"
+      ]
     }
   ],
   "fcsVsFbsTrackedSeparately": [
@@ -2590,5 +4152,6 @@
       "status": "cross-level research only"
     }
   ],
-  "productionPolicy": "Longshot classification never activates an official CFB wager by itself. Bet Activation Gate v1.1 and Underdog Special v1.1 remain separate governed strategies."
+  "productionPolicy": "Longshot classification never activates an official CFB wager by itself. Bet Activation Gate v1.1 and Underdog Special v1.1 remain separate governed strategies.",
+  "scoreMax": 25
 }
