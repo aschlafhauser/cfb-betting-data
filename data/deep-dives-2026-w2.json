@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T14:28:20.665Z",
-  "definition": "Evidence-backed matchup dossiers generated from the live governed portal/unit engine plus canonical market/model runtime. COMPLETE-SOURCE-LIMITED is a completed research pass with explicit missing-source dimensions, not a fabricated full-evidence grade.",
+  "updatedAt": "2026-09-10T14:34:15.355Z",
+  "definition": "Evidence-backed matchup dossiers generated from live governed portal/unit engine plus canonical market/model runtime. COMPLETE-SOURCE-LIMITED is a completed research pass with explicit missing-source dimensions, not a fabricated full-evidence grade.",
   "expectedCount": 86,
   "completedResearchCount": 86,
   "fullEvidenceCount": 86,
@@ -155,7 +155,7 @@
         "modelTotal": 65,
         "modelEdgeMagnitude": 2.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.353Z"
     },
     {
       "canonicalGameId": "ESPN-401858215",
@@ -304,7 +304,7 @@
         "modelTotal": 56.5,
         "modelEdgeMagnitude": 2.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.353Z"
     },
     {
       "canonicalGameId": "ESPN-401858220",
@@ -453,7 +453,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 2.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.353Z"
     },
     {
       "canonicalGameId": "ESPN-401858222",
@@ -601,80 +601,285 @@
         "modelTotal": 49,
         "modelEdgeMagnitude": 1.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.353Z"
     },
     {
-      "gameId": "2026-W2-RUT-BC",
       "canonicalGameId": "ESPN-401858214",
+      "legacyGameId": null,
       "matchup": "Rutgers at Boston College",
       "status": "COMPLETE",
-      "priority": "HIGH",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
         "spread": "Boston College -3.5",
         "total": 54.5,
-        "asOf": "2026-09-10 canonical board"
+        "moneyline": null,
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
+      },
+      "model": {
+        "spread": "Boston College -2.5",
+        "total": 54,
+        "edgeMagnitude": 1.1,
+        "independentFootballFair": "Boston College -0.5",
+        "independentFootballSide": "Rutgers",
+        "independentFootballEdge": 2.9081585677749358
       },
       "mechanisms": [
-        "AJ Surace is confirmed as Rutgers' starter with Dylan Lonergan unable to practice; Surace adds a more mobile/deeper-throwing profile but also creates first-start uncertainty behind an offensive line that must limit pressure and sacks.",
-        "Rutgers' Week 1 offense produced explosive perimeter output through KJ Duff, while its ground game was inefficient; Boston College's coverage plan therefore has to prevent Duff explosives without allowing Surace's mobility to create second-reaction plays.",
-        "Rutgers allowed more than 200 rushing yards in Week 1 and generated little pass rush, giving Boston College a direct run-game/front and protection path rather than relying on generic home-field advantage."
+        "Rutgers OL/RB vs Boston College DL/LB — Rutgers +",
+        "Rutgers QB/WR vs Boston College DB — Rutgers +",
+        "Boston College QB/WR vs Rutgers DB — Even",
+        "Boston College OL/RB vs Rutgers DL/LB — Even",
+        "Rutgers has 1.6 points of model value versus the current spread. Primary matchup evidence: Rutgers OL/RB vs Boston College DL/LB (Rutgers +); Rutgers QB/WR vs Boston College DB (Rutgers +). Rutgers has 1.6 points of model value versus the current spread. Primary matchup evidence: Rutgers OL/RB vs Boston College DL/LB (Rutgers +); Rutgers QB/WR vs Boston College DB (Rutgers +). ",
+        "Total driver: Boston College: low returning offensive snaps (25%)"
       ],
-      "availability": "Lonergan remains a mandatory game-day check even though Surace is confirmed to start.",
-      "expertResidual": "No correlated-source repetition is treated as independent confirmation.",
-      "modelRelationship": "Canonical board is Boston College -3.5 versus production model Boston College -2.5; Independent Football is BC -0.5/Rutgers side, but that diagnostic layer remains separate from the governed production fair.",
-      "invalidators": [
-        "Lonergan unexpectedly becomes materially available",
-        "Surace fails to protect the ball or takes excessive sacks",
-        "Boston College cannot exploit Rutgers run-defense weakness",
-        "market materially reprices through key numbers"
-      ],
-      "execution": "No official Rutgers/BC position until final QB availability and executable line/juice are reconciled.",
-      "currentBoard": {
-        "spread": "Boston College -3.5",
-        "total": 54.5,
-        "moneyline": null,
-        "modelSpread": "Boston College -2.5",
-        "modelTotal": 54,
-        "modelEdgeMagnitude": 1.1
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Rutgers QB/WR vs Boston College DB",
+              "Rutgers +"
+            ],
+            [
+              "Boston College QB/WR vs Rutgers DB",
+              "Even"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Rutgers OL/RB vs Boston College DL/LB",
+              "Rutgers +"
+            ],
+            [
+              "Rutgers QB/WR vs Boston College DB",
+              "Rutgers +"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Rutgers QB/WR vs Boston College DB",
+              "Rutgers +"
+            ],
+            [
+              "Boston College QB/WR vs Rutgers DB",
+              "Even"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Rutgers OL/RB vs Boston College DL/LB",
+              "Rutgers +"
+            ],
+            [
+              "Rutgers QB/WR vs Boston College DB",
+              "Rutgers +"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Boston College -3.5",
+            "total": 54.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Boston College -2.5",
+            "total": 54,
+            "edge": 1.1,
+            "components": {
+              "base": 3,
+              "power": -0.3929761904761905,
+              "units": -0.19586086956521737,
+              "confidence": 0.7450000000000001,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.354Z"
     },
     {
-      "gameId": "ESPN-401856678",
-      "legacyGameId": "2026-W2-KAN-MIZZ",
+      "canonicalGameId": "ESPN-401856678",
+      "legacyGameId": null,
       "matchup": "Missouri at Kansas",
       "status": "COMPLETE",
-      "priority": "HIGH-DISAGREEMENT",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
         "spread": "Missouri -5.5",
         "total": 50.5,
-        "asOf": "2026-09-10 canonical board"
+        "moneyline": null,
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
+      },
+      "model": {
+        "spread": "Missouri -6.5",
+        "total": 51,
+        "edgeMagnitude": 1.2,
+        "independentFootballFair": "Pick",
+        "independentFootballSide": "Kansas",
+        "independentFootballEdge": 5.602158567774937
       },
       "mechanisms": [
-        "Missouri's offensive ceiling is the favorite-side mechanism, but Kansas' upset/cover path improves if Missouri cannot consistently finish drives and the rivalry environment compresses possessions.",
-        "Missouri is expected to regain LT Cayden Green after he missed the opener, strengthening the favorite's protection/run-blocking continuity.",
-        "Kansas has material uncertainty at two leverage points: LB Bam Crouch is doubtful and top WR Cam Pickett is a game-time decision, weakening both defensive second-level stability and passing-game explosiveness if unavailable."
+        "Missouri OL/RB vs Kansas DL/LB — Missouri ++",
+        "Kansas QB/WR vs Missouri DB — Missouri +",
+        "Kansas OL/RB vs Missouri DL/LB — Kansas +",
+        "Missouri QB/WR vs Kansas DB — Missouri +",
+        "Missouri has 1.7 points of model value versus the current spread. Primary matchup evidence: Missouri OL/RB vs Kansas DL/LB (Missouri ++); Kansas QB/WR vs Missouri DB (Missouri +). Missouri has 1.7 points of model value versus the current spread. Primary matchup evidence: Missouri OL/RB vs Kansas DL/LB (Missouri ++); Kansas QB/WR vs Missouri DB (Missouri +). ",
+        "Total driver: Missouri: 2 top-20 Phil offensive units"
       ],
-      "availability": "Final check required on Cayden Green, Bam Crouch and Cam Pickett.",
-      "expertResidual": "Nathan Hurst/Rock M Nation has an explicit Missouri -5.5 construction; same-family repetitions are correlated rather than independent confirmations.",
-      "modelRelationship": "Canonical production model is Missouri -6.5 versus market -5.5, only a modest Missouri edge. Independent Football is near Pick and points toward Kansas by roughly 5.6 points, creating a major model-family disagreement that must lower confidence rather than trigger a bet.",
-      "invalidators": [
-        "Pickett active and fully effective",
-        "Green setback",
-        "Kansas generates efficient early-down rushing and keeps Missouri behind schedule",
-        "Independent Football disagreement is traced to stale/weak source coverage"
-      ],
-      "execution": "WATCH / AUDIT. Do not activate Missouri merely because production model and one expert source agree; reconcile the Independent Football disagreement first.",
-      "canonicalGameId": "ESPN-401856678",
-      "currentBoard": {
-        "spread": "Missouri -5.5",
-        "total": 50.5,
-        "moneyline": null,
-        "modelSpread": "Missouri -6.5",
-        "modelTotal": 51,
-        "modelEdgeMagnitude": 1.2
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Kansas QB/WR vs Missouri DB",
+              "Missouri +"
+            ],
+            [
+              "Missouri QB/WR vs Kansas DB",
+              "Missouri +"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Missouri OL/RB vs Kansas DL/LB",
+              "Missouri ++"
+            ],
+            [
+              "Kansas OL/RB vs Missouri DL/LB",
+              "Kansas +"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Kansas QB/WR vs Missouri DB",
+              "Missouri +"
+            ],
+            [
+              "Missouri QB/WR vs Kansas DB",
+              "Missouri +"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Missouri OL/RB vs Kansas DL/LB",
+              "Missouri ++"
+            ],
+            [
+              "Kansas OL/RB vs Missouri DL/LB",
+              "Kansas +"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Missouri -5.5",
+            "total": 50.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Missouri -6.5",
+            "total": 51,
+            "edge": 1.2,
+            "components": {
+              "base": -6,
+              "power": -0.25321428571428567,
+              "units": -0.4065391304347826,
+              "confidence": 0.655,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401858439",
@@ -823,44 +1028,147 @@
         "modelTotal": 64.5,
         "modelEdgeMagnitude": 2.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
-      "gameId": "ESPN-401856782",
-      "legacyGameId": "2026-W2-ORE-OKST",
+      "canonicalGameId": "ESPN-401856782",
+      "legacyGameId": null,
       "matchup": "Oregon at Oklahoma State",
       "status": "COMPLETE",
-      "priority": "HIGH-EDGE / PERSONNEL",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
         "spread": "Oregon -23.5",
         "total": 57.5,
-        "asOf": "2026-09-10 canonical board"
+        "moneyline": null,
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
+      },
+      "model": {
+        "spread": "Oregon -26.5",
+        "total": 57.5,
+        "edgeMagnitude": 2.8,
+        "independentFootballFair": "Oregon -24.5",
+        "independentFootballSide": "Oregon",
+        "independentFootballEdge": 0.9621214117647021
       },
       "mechanisms": [
-        "Oregon's principal edge is at the line of scrimmage against an Oklahoma State offense coming off a 24-10 loss to Tulsa; the Cowboys' protection problem becomes more important if LT Jacob Sexton cannot play through his leg injury.",
-        "Oklahoma State also has uncertainty at TE, reducing available protection/short-area answers if the Oregon front wins early downs.",
-        "Oregon's receiver room is not fully healthy: Jalen Lott is out after hand surgery while Iverson Hooks has a return path. That limits the case for blindly extrapolating favorite scoring margin even when trench advantage is substantial."
+        "Oregon QB/WR vs Oklahoma State DB — Oregon ++",
+        "Oregon OL/RB vs Oklahoma State DL/LB — Oregon ++",
+        "Oklahoma State OL/RB vs Oregon DL/LB — Oregon ++",
+        "Oklahoma State QB/WR vs Oregon DB — Oregon +",
+        "Oregon has 4.3 points of model value versus the current spread. Primary matchup evidence: Oregon QB/WR vs Oklahoma State DB (Oregon ++); Oregon OL/RB vs Oklahoma State DL/LB (Oregon ++). Oregon has 4.3 points of model value versus the current spread. Primary matchup evidence: Oregon QB/WR vs Oklahoma State DB (Oregon ++); Oregon OL/RB vs Oklahoma State DL/LB (Oregon ++). ",
+        "Total driver: Oregon: 4 top-20 Phil offensive units",
+        "Total driver: Oregon: 2 top-20 Phil defensive units"
       ],
-      "availability": "Final checks required on Oklahoma State LT Jacob Sexton and TEs Oscar Hammond/David Green; Oregon Jalen Lott is out and Iverson Hooks is a return/probable watch.",
-      "expertResidual": "No expert opinion is allowed to convert the personnel mismatch directly into spread points.",
-      "modelRelationship": "Canonical production model Oregon -26.5 versus market -23.5 creates roughly a 3-point raw favorite-side difference; Independent Football Oregon -24.5 is much closer to market, so the disagreement is meaningful and execution remains gated.",
-      "invalidators": [
-        "Sexton returns near full effectiveness",
-        "Oklahoma State creates explosive passing answers against Oregon pressure",
-        "Oregon receiver attrition worsens",
-        "market moves through the model advantage before execution"
-      ],
-      "execution": "WATCH Oregon only. Exact book/juice and Bet Activation Gate clearance required; no automatic favorite activation from the raw model gap.",
-      "canonicalGameId": "ESPN-401856782",
-      "currentBoard": {
-        "spread": "Oregon -23.5",
-        "total": 57.5,
-        "moneyline": null,
-        "modelSpread": "Oregon -26.5",
-        "modelTotal": 57.5,
-        "modelEdgeMagnitude": 2.8
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Oregon QB/WR vs Oklahoma State DB",
+              "Oregon ++"
+            ],
+            [
+              "Oklahoma State QB/WR vs Oregon DB",
+              "Oregon +"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Oregon OL/RB vs Oklahoma State DL/LB",
+              "Oregon ++"
+            ],
+            [
+              "Oklahoma State OL/RB vs Oregon DL/LB",
+              "Oregon ++"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Oregon QB/WR vs Oklahoma State DB",
+              "Oregon ++"
+            ],
+            [
+              "Oklahoma State QB/WR vs Oregon DB",
+              "Oregon +"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Oregon OL/RB vs Oklahoma State DL/LB",
+              "Oregon ++"
+            ],
+            [
+              "Oklahoma State OL/RB vs Oregon DL/LB",
+              "Oregon ++"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Oregon -23.5",
+            "total": 57.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Oregon -26.5",
+            "total": 57.5,
+            "edge": 2.8,
+            "components": {
+              "base": -25,
+              "power": -0.42488095238095236,
+              "units": -0.9,
+              "confidence": 0.71,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401856683",
@@ -1009,46 +1317,147 @@
         "modelTotal": 50.5,
         "modelEdgeMagnitude": 2.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
-      "gameId": "2026-W2-OKLA-MICH",
+      "canonicalGameId": "ESPN-401856679",
+      "legacyGameId": null,
       "matchup": "Oklahoma at Michigan",
       "status": "COMPLETE",
-      "priority": "HIGH",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
         "spread": "Oklahoma -5.5",
         "total": 43.5,
-        "asOf": "2026-09-10 canonical board"
+        "moneyline": null,
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
+      },
+      "model": {
+        "spread": "Oklahoma -5.5",
+        "total": 43,
+        "edgeMagnitude": 0.1,
+        "independentFootballFair": "Michigan -2.5",
+        "independentFootballSide": "Michigan",
+        "independentFootballEdge": 8.19375959079284
       },
       "mechanisms": [
-        "Michigan enters without a strong positive offensive foundation from Week 1 and now faces a Brent Venables defense capable of stressing a young quarterback with simulated pressure and post-snap complexity.",
-        "Early stalled drives can amplify home-crowd pressure on Bryce Underwood rather than automatically creating a home-field advantage.",
-        "Oklahoma's Week 1 blowout is confirmation of ceiling but is deliberately not converted one-for-one into rating points."
+        "Michigan QB/WR vs Oklahoma DB — Oklahoma +",
+        "Oklahoma OL/RB vs Michigan DL/LB — Michigan +",
+        "Michigan OL/RB vs Oklahoma DL/LB — Even",
+        "Oklahoma QB/WR vs Michigan DB — Even",
+        "Oklahoma has 0.1 points of model value versus the current spread. Primary matchup evidence: Michigan QB/WR vs Oklahoma DB (Oklahoma +); Oklahoma OL/RB vs Michigan DL/LB (Michigan +). Oklahoma has 0.1 points of model value versus the current spread. Primary matchup evidence: Michigan QB/WR vs Oklahoma DB (Oklahoma +); Oklahoma OL/RB vs Michigan DL/LB (Michigan +). ",
+        "Total driver: Oklahoma: 2 top-20 Phil offensive units",
+        "Total driver: Oklahoma: 3 top-20 Phil defensive units"
       ],
-      "availability": "Recheck Michigan offensive personnel and Oklahoma defensive availability before final snapshot.",
-      "expertResidual": [
-        "Josh Pate: Michigan offensive-foundation concern versus Oklahoma's defense; no ATS wager inferred from that segment.",
-        "Taylor Lewan: explicit Michigan moneyline, 5-unit conviction.",
-        "Nathan Hurst/Rock M Nation: explicit Oklahoma -5.5 position, creating meaningful cross-family disagreement."
-      ],
-      "modelRelationship": "Current expert set contains direct disagreement and therefore lowers confidence rather than being counted as multiple confirmations.",
-      "invalidators": [
-        "Michigan demonstrates efficient early-down passing",
-        "Oklahoma pressure fails to reach Underwood",
-        "material QB/OL availability change"
-      ],
-      "execution": "Treat -5.5 as current reference; no official activation solely from expert disagreement.",
-      "canonicalGameId": "ESPN-401856679",
-      "currentBoard": {
-        "spread": "Oklahoma -5.5",
-        "total": 43.5,
-        "moneyline": null,
-        "modelSpread": "Oklahoma -5.5",
-        "modelTotal": 43,
-        "modelEdgeMagnitude": 0.1
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Michigan QB/WR vs Oklahoma DB",
+              "Oklahoma +"
+            ],
+            [
+              "Oklahoma QB/WR vs Michigan DB",
+              "Even"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Oklahoma OL/RB vs Michigan DL/LB",
+              "Michigan +"
+            ],
+            [
+              "Michigan OL/RB vs Oklahoma DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Michigan QB/WR vs Oklahoma DB",
+              "Oklahoma +"
+            ],
+            [
+              "Oklahoma QB/WR vs Michigan DB",
+              "Even"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Oklahoma OL/RB vs Michigan DL/LB",
+              "Michigan +"
+            ],
+            [
+              "Michigan OL/RB vs Oklahoma DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Oklahoma -5.5",
+            "total": 43.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Oklahoma -5.5",
+            "total": 43,
+            "edge": 0.1,
+            "components": {
+              "base": -5.5,
+              "power": 0,
+              "units": -0.08598260869565219,
+              "confidence": 0.8616666666666668,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401858442",
@@ -1197,7 +1606,7 @@
         "modelTotal": 49.5,
         "modelEdgeMagnitude": 3.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401856781",
@@ -1344,7 +1753,7 @@
         "modelTotal": 48.5,
         "modelEdgeMagnitude": 2
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401858218",
@@ -1492,7 +1901,7 @@
         "modelTotal": 54,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401858221",
@@ -1641,7 +2050,7 @@
         "modelTotal": 49.5,
         "modelEdgeMagnitude": 1.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401858224",
@@ -1789,7 +2198,7 @@
         "modelTotal": 49,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401862702",
@@ -1938,7 +2347,7 @@
         "modelTotal": 46.5,
         "modelEdgeMagnitude": 0.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401864571",
@@ -2086,7 +2495,7 @@
         "modelTotal": 56,
         "modelEdgeMagnitude": 0
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401866416",
@@ -2233,7 +2642,7 @@
         "modelTotal": 47.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401856673",
@@ -2382,7 +2791,7 @@
         "modelTotal": 55.5,
         "modelEdgeMagnitude": 3.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401856791",
@@ -2531,7 +2940,7 @@
         "modelTotal": 55.5,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401866415",
@@ -2678,7 +3087,7 @@
         "modelTotal": 49.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401866417",
@@ -2825,7 +3234,7 @@
         "modelTotal": 49.5,
         "modelEdgeMagnitude": 0.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401866413",
@@ -2972,7 +3381,7 @@
         "modelTotal": 57.5,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401859184",
@@ -3121,42 +3530,147 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 3.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
-      "gameId": "2026-W2-BAMA-UK",
+      "canonicalGameId": "ESPN-401856674",
+      "legacyGameId": null,
       "matchup": "Alabama at Kentucky",
       "status": "COMPLETE",
-      "priority": "HIGH / LONGSHOT RESEARCH",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
-        "spread": "Alabama about -10.5",
-        "total": "about 49.5",
-        "asOf": "Week 2 governed research"
-      },
-      "mechanisms": [
-        "Kentucky QB Kenny Minchey enters with a credible passing-upside path after a 300+ yard, four-TD opener, improving the underdog's ability to punish Alabama if game state stays compressed.",
-        "Josh Pate flagged Alabama's historical road-favorite volatility under Kalen DeBoer and the difficulty of this specific healthy, engaged Lexington environment, while explicitly cautioning that history does not define this year's team.",
-        "Alabama starting RG Michael Carroll was reported doubtful, adding continuity/protection risk for Keelon Russell's first true road start; this remains an availability interpretation rather than an automatic spread adjustment."
-      ],
-      "availability": "Mandatory final check on Michael Carroll, AK Dear, Jireh Edwards, Noah Rogers and Kentucky RT/secondary availability.",
-      "expertResidual": "Pate's favorite-risk framing is not converted into a Kentucky wager; Solid Verbal Week 2 evidence remains PROVISIONAL until analyst-specific selections are recovered.",
-      "modelRelationship": "Longshot Lab context and expert residual are separate from Bet Activation Gate v1.1.",
-      "invalidators": [
-        "Alabama OL availability improves materially",
-        "Kentucky loses passing-game personnel",
-        "early Alabama explosives destroy game compression"
-      ],
-      "execution": "Research candidate only; no Kentucky ATS/ML inferred.",
-      "canonicalGameId": "ESPN-401856674",
-      "currentBoard": {
         "spread": "Alabama -10.5",
         "total": 49.5,
         "moneyline": null,
-        "modelSpread": "Alabama -12.5",
-        "modelTotal": 49,
-        "modelEdgeMagnitude": 1.9
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "model": {
+        "spread": "Alabama -12.5",
+        "total": 49,
+        "edgeMagnitude": 1.9,
+        "independentFootballFair": "Alabama -3",
+        "independentFootballSide": "Kentucky",
+        "independentFootballEdge": 7.255769820971867
+      },
+      "mechanisms": [
+        "Kentucky QB/WR vs Alabama DB — Alabama ++",
+        "Alabama QB/WR vs Kentucky DB — Alabama +",
+        "Kentucky OL/RB vs Alabama DL/LB — Alabama +",
+        "Alabama OL/RB vs Kentucky DL/LB — Even",
+        "Alabama has 2.9 points of model value versus the current spread. Primary matchup evidence: Kentucky QB/WR vs Alabama DB (Alabama ++); Alabama QB/WR vs Kentucky DB (Alabama +). Alabama has 2.9 points of model value versus the current spread. Primary matchup evidence: Kentucky QB/WR vs Alabama DB (Alabama ++); Alabama QB/WR vs Kentucky DB (Alabama +). ",
+        "Total driver: Alabama: 1 top-20 Phil offensive unit",
+        "Total driver: Alabama: 2 top-20 Phil defensive units"
+      ],
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Kentucky QB/WR vs Alabama DB",
+              "Alabama ++"
+            ],
+            [
+              "Alabama QB/WR vs Kentucky DB",
+              "Alabama +"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Kentucky OL/RB vs Alabama DL/LB",
+              "Alabama +"
+            ],
+            [
+              "Alabama OL/RB vs Kentucky DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Kentucky QB/WR vs Alabama DB",
+              "Alabama ++"
+            ],
+            [
+              "Alabama QB/WR vs Kentucky DB",
+              "Alabama +"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Kentucky OL/RB vs Alabama DL/LB",
+              "Alabama +"
+            ],
+            [
+              "Alabama OL/RB vs Kentucky DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Alabama -10.5",
+            "total": 49.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Alabama -12.5",
+            "total": 49,
+            "edge": 1.9,
+            "components": {
+              "base": -11.5,
+              "power": -0.37749999999999995,
+              "units": -0.5020173913043479,
+              "confidence": 0.6900000000000002,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
+      },
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401856810",
@@ -3305,7 +3819,7 @@
         "modelTotal": 47.5,
         "modelEdgeMagnitude": 1.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.354Z"
     },
     {
       "canonicalGameId": "ESPN-401858446",
@@ -3454,7 +3968,7 @@
         "modelTotal": 55,
         "modelEdgeMagnitude": 3.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856677",
@@ -3603,7 +4117,7 @@
         "modelTotal": 55.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.664Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856785",
@@ -3751,7 +4265,7 @@
         "modelTotal": 54,
         "modelEdgeMagnitude": 1.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856790",
@@ -3898,7 +4412,7 @@
         "modelTotal": 56.5,
         "modelEdgeMagnitude": 1.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858216",
@@ -4045,7 +4559,7 @@
         "modelTotal": 56.5,
         "modelEdgeMagnitude": 0.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858217",
@@ -4192,7 +4706,7 @@
         "modelTotal": 51.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858440",
@@ -4339,7 +4853,7 @@
         "modelTotal": 49.5,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858444",
@@ -4487,7 +5001,7 @@
         "modelTotal": 52,
         "modelEdgeMagnitude": 2.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401860884",
@@ -4635,7 +5149,7 @@
         "modelTotal": 66,
         "modelEdgeMagnitude": 0.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401862708",
@@ -4783,7 +5297,7 @@
         "modelTotal": 55,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401866412",
@@ -4930,7 +5444,7 @@
         "modelTotal": 41.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401866419",
@@ -5078,7 +5592,7 @@
         "modelTotal": 55,
         "modelEdgeMagnitude": 0.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401866420",
@@ -5225,7 +5739,7 @@
         "modelTotal": 53.5,
         "modelEdgeMagnitude": 0
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401867929",
@@ -5373,7 +5887,7 @@
         "modelTotal": 54,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401862705",
@@ -5521,7 +6035,7 @@
         "modelTotal": 56,
         "modelEdgeMagnitude": 1.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858223",
@@ -5670,7 +6184,7 @@
         "modelTotal": 59,
         "modelEdgeMagnitude": 2.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864506",
@@ -5817,7 +6331,7 @@
         "modelTotal": 47.5,
         "modelEdgeMagnitude": 0.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401865252",
@@ -5964,7 +6478,7 @@
         "modelTotal": 51.5,
         "modelEdgeMagnitude": 0.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401868326",
@@ -6110,7 +6624,7 @@
         "modelTotal": 51.5,
         "modelEdgeMagnitude": null
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856684",
@@ -6257,7 +6771,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 2.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856672",
@@ -6406,7 +6920,7 @@
         "modelTotal": 66,
         "modelEdgeMagnitude": 2.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401860881",
@@ -6555,7 +7069,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 1.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401866414",
@@ -6703,7 +7217,7 @@
         "modelTotal": 47,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401866418",
@@ -6851,7 +7365,7 @@
         "modelTotal": 50,
         "modelEdgeMagnitude": 0.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401868187",
@@ -6998,7 +7512,7 @@
         "modelTotal": 55.5,
         "modelEdgeMagnitude": 0.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401866421",
@@ -7145,7 +7659,7 @@
         "modelTotal": 52.5,
         "modelEdgeMagnitude": 0.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856681",
@@ -7294,7 +7808,7 @@
         "modelTotal": 55.5,
         "modelEdgeMagnitude": 2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856787",
@@ -7441,7 +7955,7 @@
         "modelTotal": 60.5,
         "modelEdgeMagnitude": 2.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856680",
@@ -7590,7 +8104,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 2.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856786",
@@ -7738,7 +8252,7 @@
         "modelTotal": 61,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858441",
@@ -7887,7 +8401,7 @@
         "modelTotal": 51,
         "modelEdgeMagnitude": 3.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401860882",
@@ -8035,7 +8549,7 @@
         "modelTotal": 56,
         "modelEdgeMagnitude": 0.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401862707",
@@ -8182,7 +8696,7 @@
         "modelTotal": 51.5,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864503",
@@ -8329,7 +8843,7 @@
         "modelTotal": 48.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864575",
@@ -8477,7 +8991,7 @@
         "modelTotal": 49,
         "modelEdgeMagnitude": 1.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401868241",
@@ -8623,7 +9137,7 @@
         "modelTotal": null,
         "modelEdgeMagnitude": null
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401869955",
@@ -8770,7 +9284,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 0.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401871045",
@@ -8917,7 +9431,7 @@
         "modelTotal": 56.5,
         "modelEdgeMagnitude": 0.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401871046",
@@ -9064,7 +9578,7 @@
         "modelTotal": 52.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858443",
@@ -9206,13 +9720,13 @@
       "capturedAt": "2026-09-10T12:29:36.336Z",
       "currentBoard": {
         "spread": "UCLA -12.5",
-        "total": 54.5,
+        "total": 55.5,
         "moneyline": null,
         "modelSpread": "UCLA -13.5",
-        "modelTotal": 55,
+        "modelTotal": 56,
         "modelEdgeMagnitude": 1.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858447",
@@ -9360,47 +9874,147 @@
         "modelTotal": 48,
         "modelEdgeMagnitude": 2.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
-      "gameId": "2026-W2-OHST-TEX",
+      "canonicalGameId": "ESPN-401856682",
+      "legacyGameId": null,
       "matchup": "Ohio State at Texas",
       "status": "COMPLETE",
-      "priority": "PREMIUM",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
-        "spread": "Texas -1.5 / Ohio State +1.5",
-        "total": "about 49",
-        "moneyline": "near pick'em",
-        "asOf": "2026-09-09/10 governed Week 2 research"
-      },
-      "mechanisms": [
-        "Both offensive lines face elite opposing fronts; the most credible early-game path is suppressed efficient rushing and greater dependence on passing-game explosives.",
-        "Josh Pate specifically highlighted TE/personnel usage and elite WRs as the likely explosive-play escape valve when conventional run-game chunk gains are difficult.",
-        "Separate PFF Week 2 research adds QB pressure/efficiency context, making protection and response to pressure central rather than generic team-strength inputs."
-      ],
-      "availability": "Continue late-week OL/front-seven and secondary availability checks; no unverified absence is converted into points.",
-      "expertResidual": [
-        "Josh Pate: total-under compatible game-shape discussion, but no Under wager inferred from the attributable clip.",
-        "Pate/Lewan/Compton later took Texas to cover in an attributable transcript-derived source; no spread price was exposed, so none is inferred.",
-        "Solid Verbal Week 2 preview is discovered and PROVISIONAL until analyst-specific pick evidence is recoverable."
-      ],
-      "modelRelationship": "Expert evidence is qualitative residual only and does not overwrite the quantitative fair.",
-      "invalidators": [
-        "Unexpected OL/front-seven availability change",
-        "early explosive plays defeating the expected trench compression",
-        "market crossing materially away from the near-pick'em range"
-      ],
-      "execution": "No official side/total without current executable price and Bet Activation Gate clearance.",
-      "canonicalGameId": "ESPN-401856682",
-      "currentBoard": {
         "spread": "Texas -1.5",
         "total": 49.5,
         "moneyline": null,
-        "modelSpread": "Texas -1.5",
-        "modelTotal": 49,
-        "modelEdgeMagnitude": 0
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "model": {
+        "spread": "Texas -1.5",
+        "total": 49,
+        "edgeMagnitude": 0,
+        "independentFootballFair": "Ohio State -2",
+        "independentFootballSide": "Ohio State",
+        "independentFootballEdge": 3.335575447570333
+      },
+      "mechanisms": [
+        "Ohio State QB/WR vs Texas DB — Ohio State +",
+        "Texas QB/WR vs Ohio State DB — Texas +",
+        "Ohio State OL/RB vs Texas DL/LB — Even",
+        "Texas OL/RB vs Ohio State DL/LB — Even",
+        "Ohio State has 0.0 points of model value versus the current spread. Primary matchup evidence: Ohio State QB/WR vs Texas DB (Ohio State +); Texas QB/WR vs Ohio State DB (Texas +). Ohio State has 0.0 points of model value versus the current spread. Primary matchup evidence: Ohio State QB/WR vs Texas DB (Ohio State +); Texas QB/WR vs Ohio State DB (Texas +). ",
+        "Total driver: Ohio State: 4 top-20 Phil offensive units",
+        "Total driver: Ohio State: 3 top-20 Phil defensive units"
+      ],
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Ohio State QB/WR vs Texas DB",
+              "Ohio State +"
+            ],
+            [
+              "Texas QB/WR vs Ohio State DB",
+              "Texas +"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Ohio State OL/RB vs Texas DL/LB",
+              "Even"
+            ],
+            [
+              "Texas OL/RB vs Ohio State DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Ohio State QB/WR vs Texas DB",
+              "Ohio State +"
+            ],
+            [
+              "Texas QB/WR vs Ohio State DB",
+              "Texas +"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Ohio State OL/RB vs Texas DL/LB",
+              "Even"
+            ],
+            [
+              "Texas OL/RB vs Ohio State DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Texas -1.5",
+            "total": 49.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Texas -1.5",
+            "total": 49,
+            "edge": 0,
+            "components": {
+              "base": 1.5,
+              "power": 0,
+              "units": -0.017843478260869593,
+              "confidence": 0.8316666666666668,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
+      },
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401867796",
@@ -9549,7 +10163,7 @@
         "modelTotal": 55,
         "modelEdgeMagnitude": 3.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856783",
@@ -9698,7 +10312,7 @@
         "modelTotal": 53.5,
         "modelEdgeMagnitude": 3.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856788",
@@ -9847,7 +10461,7 @@
         "modelTotal": 40.5,
         "modelEdgeMagnitude": 3
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858219",
@@ -9996,7 +10610,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 3.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401862703",
@@ -10144,7 +10758,7 @@
         "modelTotal": 59,
         "modelEdgeMagnitude": 1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401868008",
@@ -10292,7 +10906,7 @@
         "modelTotal": 52,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856676",
@@ -10441,7 +11055,7 @@
         "modelTotal": 60,
         "modelEdgeMagnitude": 3.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856671",
@@ -10590,7 +11204,7 @@
         "modelTotal": 56.5,
         "modelEdgeMagnitude": 3.2
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856789",
@@ -10737,7 +11351,7 @@
         "modelTotal": 54.5,
         "modelEdgeMagnitude": 1.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401856784",
@@ -10885,7 +11499,7 @@
         "modelTotal": 56,
         "modelEdgeMagnitude": 1.8
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864504",
@@ -11032,7 +11646,7 @@
         "modelTotal": 56.5,
         "modelEdgeMagnitude": 0
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864505",
@@ -11180,7 +11794,7 @@
         "modelTotal": 52,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864502",
@@ -11327,42 +11941,147 @@
         "modelTotal": 47.5,
         "modelEdgeMagnitude": 0.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
-      "gameId": "2026-W2-ARK-UTAH",
+      "canonicalGameId": "ESPN-401856670",
+      "legacyGameId": null,
       "matchup": "Arkansas at Utah",
       "status": "COMPLETE",
-      "priority": "LONGSHOT LIVE RESEARCH",
+      "informationQuality": "standard",
+      "priority": "low",
       "market": {
-        "spread": "Utah roughly -11.5 to -13.5 across Week 2 observations",
-        "moneyline": "Arkansas roughly +360 to +400",
-        "asOf": "Week 2 governed research"
-      },
-      "mechanisms": [
-        "Arkansas' upset path is driven by KJ Jackson's experience/dual-threat ability plus explosive/turnover variance rather than a claim of down-to-down superiority.",
-        "The underdog price lengthened materially during the week, but a larger number alone is not treated as value.",
-        "Arkansas' poor red-zone/turnover execution in Week 1 is both the source of upside variance and the primary reason the profile is not promoted automatically."
-      ],
-      "availability": "Continue monitoring Arkansas DE Quincy Rhodes Jr., RB Cam Settles and any Utah QB/offensive-line availability changes.",
-      "expertResidual": "Longshot classification is research only and is not counted as an official betting signal.",
-      "modelRelationship": "Outside the primary Underdog Special spread band; governed separately in Longshot Upset Lab.",
-      "invalidators": [
-        "Utah establishes efficient early-down offense with no turnover opportunities",
-        "Arkansas red-zone inefficiency persists",
-        "price shortens without improvement in football evidence"
-      ],
-      "execution": "No official ML/ATS wager without a separate governed value and execution-gate clearance.",
-      "canonicalGameId": "ESPN-401856670",
-      "currentBoard": {
         "spread": "Utah -12.5",
         "total": 54.5,
         "moneyline": null,
-        "modelSpread": "Utah -14.5",
-        "modelTotal": 54.5,
-        "modelEdgeMagnitude": 1.9
+        "source": "ESPN DraftKings",
+        "asOf": "2026-09-10T14:34:10.526Z"
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "model": {
+        "spread": "Utah -14.5",
+        "total": 54.5,
+        "edgeMagnitude": 1.9,
+        "independentFootballFair": "Utah -7",
+        "independentFootballSide": "Arkansas",
+        "independentFootballEdge": 5.526046035805627
+      },
+      "mechanisms": [
+        "Utah QB/WR vs Arkansas DB — Utah ++",
+        "Arkansas QB/WR vs Utah DB — Utah ++",
+        "Utah OL/RB vs Arkansas DL/LB — Utah +",
+        "Arkansas OL/RB vs Utah DL/LB — Even",
+        "Utah has 2.9 points of model value versus the current spread. Primary matchup evidence: Utah QB/WR vs Arkansas DB (Utah ++); Arkansas QB/WR vs Utah DB (Utah ++). Utah has 2.9 points of model value versus the current spread. Primary matchup evidence: Utah QB/WR vs Arkansas DB (Utah ++); Arkansas QB/WR vs Utah DB (Utah ++). ",
+        "Total driver: Utah: 1 top-20 Phil offensive unit",
+        "Total driver: Utah: 1 top-20 Phil defensive unit"
+      ],
+      "evidenceDimensions": {
+        "qbPassing": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Utah QB/WR vs Arkansas DB",
+              "Utah ++"
+            ],
+            [
+              "Arkansas QB/WR vs Utah DB",
+              "Utah ++"
+            ]
+          ]
+        },
+        "olFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Utah OL/RB vs Arkansas DL/LB",
+              "Utah +"
+            ],
+            [
+              "Arkansas OL/RB vs Utah DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "receiversCoverage": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Utah QB/WR vs Arkansas DB",
+              "Utah ++"
+            ],
+            [
+              "Arkansas QB/WR vs Utah DB",
+              "Utah ++"
+            ]
+          ]
+        },
+        "runFront": {
+          "accounted": true,
+          "evidence": [
+            [
+              "Utah OL/RB vs Arkansas DL/LB",
+              "Utah +"
+            ],
+            [
+              "Arkansas OL/RB vs Utah DL/LB",
+              "Even"
+            ]
+          ]
+        },
+        "availability": {
+          "accounted": true,
+          "evidence": "No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck."
+        },
+        "coachingScheme": {
+          "accounted": true,
+          "evidence": "Governed team/matchup profile contains coaching/scheme/situational context."
+        },
+        "marketMovement": {
+          "accounted": true,
+          "evidence": {
+            "spread": "Utah -12.5",
+            "total": 54.5,
+            "moneyline": null,
+            "source": "ESPN DraftKings"
+          }
+        },
+        "modelFair": {
+          "accounted": true,
+          "evidence": {
+            "fair": "Utah -14.5",
+            "total": 54.5,
+            "edge": 1.9,
+            "components": {
+              "base": 13.5,
+              "power": 0.3451190476190475,
+              "units": 0.5269565217391304,
+              "confidence": 0.5650000000000001,
+              "sourceValid": true
+            }
+          }
+        },
+        "expertResidual": {
+          "accounted": true,
+          "evidence": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence."
+        },
+        "invalidators": {
+          "accounted": true,
+          "evidence": [
+            "Material QB/OL/secondary availability change",
+            "Market move through a key price/number without supporting football evidence",
+            "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+          ]
+        }
+      },
+      "expertResidual": "No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.",
+      "invalidators": [
+        "Material QB/OL/secondary availability change",
+        "Market move through a key price/number without supporting football evidence",
+        "Observed matchup behavior contradicts the leading unit-interaction mechanism"
+      ],
+      "execution": "No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.",
+      "evidenceCount": 10,
+      "sourceLimitedReason": null,
+      "capturedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401860883",
@@ -11510,7 +12229,7 @@
         "modelTotal": 45,
         "modelEdgeMagnitude": 2.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864500",
@@ -11657,7 +12376,7 @@
         "modelTotal": 49.5,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401858445",
@@ -11806,7 +12525,7 @@
         "modelTotal": 61.5,
         "modelEdgeMagnitude": 3.1
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     },
     {
       "canonicalGameId": "ESPN-401864578",
@@ -11954,7 +12673,7 @@
         "modelTotal": 49,
         "modelEdgeMagnitude": 0.9
       },
-      "refreshedAt": "2026-09-10T14:28:20.665Z"
+      "refreshedAt": "2026-09-10T14:34:15.355Z"
     }
   ]
 }
