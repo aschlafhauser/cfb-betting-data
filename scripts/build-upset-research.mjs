@@ -10,6 +10,15 @@ function modelDogEdge(g,d){const e=n(g.modelEdgeMagnitude); if(e==null)return 0;
 function independentDogEdge(g,d){const e=n(g.independentFootballEdge);return e!=null&&norm(g.independentFootballSide).includes(norm(d.team))?Math.min(2,e/2):0}
 function text(d){return JSON.stringify(d||{}).toLowerCase()}
 function flag(t,words){return words.some(w=>t.includes(w))}
+function routeBand(line){
+  // Governed routing is exact and intentionally leaves small/intermediate dogs in calibration.
+  // Underdog Special research: +3.5 through +7 inclusive.
+  // Upset Lab research: +9.5 or longer.
+  // Everything else remains INTERMEDIATE/CALIBRATION and cannot leak into specialty screens.
+  if(line>=3.5 && line<=7)return 'UNDERDOG-SPECIAL';
+  if(line>=9.5)return 'UPSET-LAB';
+  return 'INTERMEDIATE';
+}
 const records=[];
 for(const g of board.games||[]){const d=dog(g);if(!d)continue;const dd=byId.get(g.gameId),t=text(dd);let components={};
  components.qbStability=flag(t,['qb advantage','qb/','quarterback','passing'])?1:0;
@@ -24,10 +33,13 @@ for(const g of board.games||[]){const d=dog(g);if(!d)continue;const dd=byId.get(
  const raw=Object.values(components).reduce((a,b)=>a+b,0), max=12;
  const profileScore=Math.round(raw/max*100);
  const tier=profileScore>=65?'A':profileScore>=50?'B':profileScore>=35?'C':'D';
- records.push({week:board.week,canonicalGameId:g.gameId,team:d.team,opponent:d.opp,currentSpread:`+${d.line}`,band:d.line<=7?'UNDERDOG-SPECIAL':d.line>=9.5?'UPSET-LAB':'INTERMEDIATE',profileScore,tier,components,deepDiveStatus:dd?.status||g.deepDiveStatus||'PENDING',informationQuality:dd?.informationQuality||'unknown',researchFlags:{highProfile:profileScore>=50,modelSupport:components.productionModel>0||components.independentModel>0,volatilityPath:components.explosivePath+components.havocVolatility+components.compression>=2},governance:'RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots.'});
+ records.push({week:board.week,canonicalGameId:g.gameId,team:d.team,opponent:d.opp,currentSpread:`+${d.line}`,band:routeBand(d.line),profileScore,tier,components,deepDiveStatus:dd?.status||g.deepDiveStatus||'PENDING',informationQuality:dd?.informationQuality||'unknown',researchFlags:{highProfile:profileScore>=50,modelSupport:components.productionModel>0||components.independentModel>0,volatilityPath:components.explosivePath+components.havocVolatility+components.compression>=2},governance:'RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots.'});
 }
 records.sort((a,b)=>b.profileScore-a.profileScore);
 const underdog=records.filter(r=>r.band==='UNDERDOG-SPECIAL'), upset=records.filter(r=>r.band==='UPSET-LAB');
-const out={version:'1.0-research',season:2026,week:board.week,updatedAt:now,status:'PROSPECTIVE-RESEARCH-ONLY',isolation:{productionFairImpact:0,modelWeightImpact:0,betActivationImpact:0,ledgerImpact:0},methodology:{purpose:'Rank underdogs relative to comparable current spread bands using governed dossier evidence and existing model disagreement without changing production pricing.',components:['QB stability/path','trench resistance','explosive path','game compression','havoc/volatility','coaching/situational','availability','production-model support','Independent Football support'],validationPlan:['preserve weekly prospective scores','compare outright win rate to market-implied probability within price buckets','track CLV','track Brier/log loss when executable ML exists','measure lift versus comparable-price dogs','promote no component into production without holdout validation']},coverage:{allUnderdogs:records.length,underdogSpecial:underdog.length,upsetLab:upset.length},underdogSpecial:underdog,upsetLab:upset,intermediate:records.filter(r=>r.band==='INTERMEDIATE')};
+const intermediate=records.filter(r=>r.band==='INTERMEDIATE');
+const routingViolations=records.filter(r=>(r.band==='UNDERDOG-SPECIAL'&&!(parseFloat(r.currentSpread.slice(1))>=3.5&&parseFloat(r.currentSpread.slice(1))<=7))||(r.band==='UPSET-LAB'&&parseFloat(r.currentSpread.slice(1))<9.5));
+if(routingViolations.length)throw new Error(`Governed upset routing violation: ${routingViolations.map(r=>`${r.team} ${r.currentSpread} -> ${r.band}`).join(', ')}`);
+const out={version:'1.1-research',season:2026,week:board.week,updatedAt:now,status:'PROSPECTIVE-RESEARCH-ONLY',isolation:{productionFairImpact:0,modelWeightImpact:0,betActivationImpact:0,ledgerImpact:0},methodology:{purpose:'Rank underdogs relative to comparable current spread bands using governed dossier evidence and existing model disagreement without changing production pricing.',routing:{underdogSpecial:'+3.5 through +7 inclusive',upsetLab:'+9.5 or longer',intermediate:'all other current underdogs; calibration only'},components:['QB stability/path','trench resistance','explosive path','game compression','havoc/volatility','coaching/situational','availability','production-model support','Independent Football support'],validationPlan:['preserve weekly prospective scores','compare outright win rate to market-implied probability within price buckets','track CLV','track Brier/log loss when executable ML exists','measure lift versus comparable-price dogs','promote no component into production without holdout validation']},coverage:{allUnderdogs:records.length,underdogSpecial:underdog.length,upsetLab:upset.length,intermediate:intermediate.length,routingViolations:0},underdogSpecial:underdog,upsetLab:upset,intermediate};
 await fs.writeFile(`data/upset-research-2026-w${board.week}.json`,JSON.stringify(out,null,2)+'\n');
-console.log(`Unified upset research: all=${records.length}, special=${underdog.length}, upset=${upset.length}; production impact=0.`);
+console.log(`Unified upset research: all=${records.length}, special=${underdog.length}, upset=${upset.length}, intermediate=${intermediate.length}, routingViolations=0; production impact=0.`);
