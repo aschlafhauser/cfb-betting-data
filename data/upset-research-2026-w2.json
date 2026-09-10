@@ -2,7 +2,7 @@
   "version": "2.0-25pt-directional-research",
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T22:38:05.925Z",
+  "updatedAt": "2026-09-10T23:09:29.750Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -1026,10 +1026,10 @@
       "canonicalGameId": "ESPN-401856783",
       "team": "Oregon State",
       "opponent": "Texas Tech",
-      "currentSpread": "+25.5",
+      "currentSpread": "+26.5",
       "band": "UPSET-LAB",
-      "profileScore": 5.1,
-      "score25": 5.1,
+      "profileScore": 5.5,
+      "score25": 5.5,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -1041,7 +1041,7 @@
         "coachingSituational": 0,
         "availability": 2,
         "productionModel": 0,
-        "independentModel": 1.6
+        "independentModel": 2
       },
       "narrative": {
         "upsetCase": "Oregon State has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Oregon State OL/RB vs Texas Tech DL/LB — Texas Tech ++",
@@ -1218,7 +1218,7 @@
       "canonicalGameId": "ESPN-401858446",
       "team": "Utah State",
       "opponent": "Washington",
-      "currentSpread": "+26.5",
+      "currentSpread": "+27.5",
       "band": "UPSET-LAB",
       "profileScore": 4.5,
       "score25": 4.5,
@@ -1554,7 +1554,7 @@
       "canonicalGameId": "ESPN-401860883",
       "team": "Sacramento State",
       "opponent": "Fresno State",
-      "currentSpread": "+17.5",
+      "currentSpread": "+18.5",
       "band": "UPSET-LAB",
       "profileScore": 4.5,
       "score25": 4.5,
@@ -3715,6 +3715,55 @@
     },
     {
       "week": 2,
+      "canonicalGameId": "ESPN-401856677",
+      "team": "Mississippi State",
+      "opponent": "Minnesota",
+      "currentSpread": "+1.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 10.5,
+      "score25": 10.5,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 4,
+        "trenchResistance": 0,
+        "explosivePath": 3,
+        "compression": 1.5,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 2,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "narrative": {
+        "upsetCase": "Mississippi State has an upset path built around a credible quarterback/passing path, an explosive-play matchup path, a lower-total environment that can compress possessions. Mississippi State OL/RB vs Minnesota DL/LB — Minnesota ++",
+        "whyItCouldFail": "The case can fail if the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "Mississippi State QB efficiency and early-down success",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Mississippi State OL/RB vs Minnesota DL/LB — Minnesota ++",
+          "Mississippi State QB/WR vs Minnesota DB — Mississippi State +",
+          "Minnesota OL/RB vs Mississippi State DL/LB — Minnesota +"
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": true
+      },
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
       "canonicalGameId": "ESPN-401858224",
       "team": "Purdue",
       "opponent": "Wake Forest",
@@ -3804,55 +3853,6 @@
       "researchFlags": {
         "highProfile": false,
         "modelSupport": true,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v2.0-25pt-directional",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
-      "canonicalGameId": "ESPN-401856677",
-      "team": "Mississippi State",
-      "opponent": "Minnesota",
-      "currentSpread": "+1.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 9.5,
-      "score25": 9.5,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 4,
-        "trenchResistance": 0,
-        "explosivePath": 3,
-        "compression": 0.5,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 2,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "narrative": {
-        "upsetCase": "Mississippi State has an upset path built around a credible quarterback/passing path, an explosive-play matchup path. Mississippi State OL/RB vs Minnesota DL/LB — Minnesota ++",
-        "whyItCouldFail": "The case can fail if the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "Mississippi State QB efficiency and early-down success",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Mississippi State OL/RB vs Minnesota DL/LB — Minnesota ++",
-          "Mississippi State QB/WR vs Minnesota DB — Mississippi State +",
-          "Minnesota OL/RB vs Mississippi State DL/LB — Minnesota +"
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
         "volatilityPath": false
       },
       "scoreAudit": {
