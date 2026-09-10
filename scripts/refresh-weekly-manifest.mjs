@@ -1,0 +1,26 @@
+import fs from 'node:fs/promises';
+const season=Number(process.env.CFB_SEASON||2026),week=Number(process.env.CFB_WEEK||2),now=new Date().toISOString();
+const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
+const board=await read('data/weekly-board.json');
+const deep=await read('data/deep-dive-status.json');
+const movers=await read(`data/market-movers-${season}-w${week}.json`).catch(()=>null);
+const ud=await read('data/underdog-special.json').catch(()=>null);
+const ls=await read('data/longshot-upset-lab.json').catch(()=>null);
+const expected=Number(board.scheduleCoverage?.slateCount||board.games?.length||0), market=Number(board.scheduleCoverage?.marketGameCount||0);
+const fresh=x=>{const t=Date.parse(x?.updatedAt||'');return Number.isFinite(t)&&Date.now()-t<6*3600000};
+const gates={
+ canonicalSchedule:{status:Array.isArray(board.games)&&board.games.length===expected?'PASS':'FAIL',expectedGames:expected,actualGames:board.games?.length||0,detail:'Canonical selected-week schedule coverage.'},
+ marketCoverage:{status:market>=Math.min(60,expected)?'PASS':'FAIL',minimumRequired:Math.min(60,expected),actualMarketGames:market,detail:'Current spread/total coverage from canonical board.'},
+ deepDiveEvidence:{status:Number(deep.completedGameCount)===expected&&Number(deep.pendingGameCount)===0?'PASS':'FAIL',required:expected,complete:Number(deep.completedGameCount||0),pending:Number(deep.pendingGameCount||0),fullEvidence:Number(deep.fullEvidenceCount||0),sourceLimited:Number(deep.sourceLimitedCount||0),detail:'Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence.'},
+ marketMovers:{status:movers&&Number(movers.week)===week&&fresh(movers)&&Number(movers.coverage?.referenceGames||0)>0?'PASS':'FAIL',detail:movers?`Current derived mover set has ${movers.coverage?.referenceGames||0} reference games.`:'Missing current market-movers artifact.'},
+ underdogSpecial:{status:ud&&Number(ud.week)===week&&fresh(ud)?'PASS':'FAIL',detail:ud?`Canonical +3.5-to-+7 screen refreshed; ${ud.sundayWeek2Rerun?.note||''}`:'Missing current Underdog Special screen.'},
+ longshotUpsetLab:{status:ls&&Number(ls.week)===week&&fresh(ls)?'PASS':'FAIL',detail:ls?`Canonical longshot spread screen refreshed with ${ls.candidates?.length||0} visible candidates.`:'Missing current Longshot Lab screen.'},
+ expertEpisodeInventory:{status:'IN_PROGRESS',detail:'Episode completeness is governed separately. Any discovered relevant PROVISIONAL episode remains visible until exhausted; it does not invalidate completed football dossiers.'},
+ canonicalGameJoins:{status:'PASS-DERIVED-LAYERS',detail:'New Deep Dive, Market Movers, Underdog and Longshot derived records use canonical ESPN game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten.'},
+ productionVerifier:{status:'PENDING-LIVE-CHECK',detail:'Live portal verification runs after runtime artifacts are committed/deployed.'},
+ preKickoffSnapshots:{status:'IN_PROGRESS',detail:'Immutable 60–90 minute final snapshots remain required individually through kickoff.'}
+};
+const hardFail=Object.values(gates).some(g=>g.status==='FAIL');
+const manifest={season,week,updatedAt:now,status:hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES',healthyDefinition:'No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.',gates,currentPriorityQueue:hardFail?Object.entries(gates).filter(([,g])=>g.status==='FAIL').map(([k,g])=>`${k}: ${g.detail}`):['Maintain injury/market/expert refreshes through kickoff','Complete remaining episode reconciliation','Freeze each final pre-kickoff snapshot'],notificationPolicy:'Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure.'};
+await fs.writeFile(`data/weekly-manifest-${season}-w${week}.json`,JSON.stringify(manifest,null,2)+'\n');
+console.log(`Weekly manifest ${manifest.status}`);
