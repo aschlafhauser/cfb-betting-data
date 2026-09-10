@@ -1,35 +1,41 @@
 {
   "season": 2026,
   "week": 2,
-  "status": "COMPLETE",
-  "updatedAt": "2026-09-09T08:17:49-04:00",
+  "status": "IN_PROGRESS",
+  "updatedAt": "2026-09-10T07:20:00-05:00",
   "gameCount": 86,
-  "completedGameCount": 86,
-  "stage": "wednesday-universal-complete",
-  "universalDeepDiveDeadline": "2026-09-09",
-  "universalDeepDiveRequiredToday": true,
-  "coverageRule": "Every selected-week game receives a complete Deep Dive by Wednesday. Week 2 Wednesday coverage is complete 86/86. Thursday and Friday maintain every unplayed game through kickoff.",
-  "reviewedDimensions": [
-    "canonical schedule and kickoff sequence",
-    "verified spread / total / relevant moneyline where published",
-    "opener-vs-current movement and timestamped market history",
-    "QB / depth chart / injury / suspension / coaching availability",
-    "weather / travel / home-field context",
-    "opponent-adjusted team and unit evidence",
-    "Expert Intelligence v1 qualitative residual",
-    "Bet Activation Gate v1.1",
-    "Underdog Special v1.1",
-    "Longshot Upset Lab complete-schedule screen"
+  "completedGameCount": 5,
+  "pendingGameCount": 81,
+  "stage": "evidence-backed-rebuild",
+  "coverageRule": "Schedule presence is not Deep Dive completion. A game is COMPLETE only when a matchup dossier contains attributable evidence across the required football dimensions or explicitly documents why a dimension is unavailable, plus market/model reconciliation and invalidators.",
+  "minimumCompleteDimensions": [
+    "QB / passing-state context",
+    "OL vs defensive-front/pass-rush matchup",
+    "receivers/coverage or pass-game matchup",
+    "run-game/front matchup",
+    "injury / availability / depth-chart state",
+    "coaching / scheme / situational context",
+    "current market and movement context",
+    "model/fair relationship without expert overwrite",
+    "expert residual or explicit no-new-expert-evidence",
+    "invalidators / failure modes / execution sensitivity"
   ],
-  "productionFairState": "BLOCKED: Week 2 governed Final Executable Edge/fair spread/fair total has not been persistently emitted for the full slate. No wager is activated from market movement, external-model disagreement or expert opinion alone. Independent Football fields remain null unless genuinely emitted by the engine.",
+  "evidenceBackedCompleteGames": [
+    {"gameId":"2026-W2-OKLA-MICH","reason":"High-priority market reset plus matchup/expert evidence and explicit execution hold."},
+    {"gameId":"2026-W2-RUT-BC","reason":"Material starting-QB change plus market and matchup repricing evidence."},
+    {"gameId":"2026-W2-ARK-UTAH","reason":"Longshot research includes price path, QB/upset mechanism, personnel and execution constraints."},
+    {"gameId":"2026-W2-BAMA-UK","reason":"Longshot research plus QB/personnel context and new Alabama availability evidence."},
+    {"gameId":"2026-W2-OHST-TEX","reason":"Premium matchup with market state and multiple attributable expert/trench/QB-pressure mechanisms."}
+  ],
+  "pendingPolicy": "The remaining 81 games remain PENDING until dossier evidence is written. They must not inherit COMPLETE from schedule hydration or a blanket weekly checkpoint.",
   "sourceDataFailures": [],
   "executionLimitations": [
-    "Exact executable book/juice is not available for every non-priority matchup at this early Wednesday checkpoint; affected games remain non-actionable rather than uncovered."
+    "Exact executable book/juice and verified moneyline are not available for every matchup.",
+    "Podcast/source completeness remains independently governed; a game can have a complete football dossier while a newly published episode is still PROVISIONAL, and vice versa."
   ],
   "qc": {
-    "priorIssue": "Canonical deep-dive-status.json was still pointing at completed Week 1 on Tuesday morning.",
-    "resolution": "Advanced canonical status to selected Week 2 and completed the Wednesday 86/86 checkpoint.",
-    "remainingIssue": "Persistent Week 2 governed fair/Final Executable Edge emission is still missing and blocks activation decisions.",
-    "severity": "material production-QC blocker for wager activation, not a universal-coverage failure"
+    "priorIssue": "Week 2 schedule/checkpoint coverage was incorrectly represented as 86/86 complete Deep Dives.",
+    "resolution": "Canonical status reset to evidence-backed completion only; schedule coverage and research completion are separated.",
+    "severity": "corrected material process defect"
   }
 }
