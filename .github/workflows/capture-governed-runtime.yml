@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - 'scripts/capture-governed-runtime.mjs'
+      - 'scripts/build-deep-dive-runtime.mjs'
+      - 'scripts/build-specialty-layers.mjs'
+      - 'scripts/refresh-weekly-manifest.mjs'
       - 'scripts/verify-live-portal.mjs'
       - 'scripts/verify-weekly-gates.mjs'
       - '.github/workflows/capture-governed-runtime.yml'
@@ -15,6 +18,7 @@ on:
       - 'data/underdog-special.json'
       - 'data/longshot-upset-lab.json'
       - 'data/market-model-history.json'
+      - 'data/timing-observations/**'
       - 'data/expert-episode-audit/**'
   schedule:
     - cron: '17 * * * *'
@@ -31,7 +35,7 @@ jobs:
   capture:
     if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -46,15 +50,26 @@ jobs:
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/capture-governed-runtime.mjs
-      - name: Persist changed runtime board
+      - name: Build full-slate evidence-backed Deep Dives
+        env:
+          CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
+        run: node scripts/build-deep-dive-runtime.mjs
+      - name: Refresh Market Movers and specialty screens
+        run: node scripts/build-specialty-layers.mjs
+      - name: Refresh weekly control manifest
+        env:
+          CFB_SEASON: '2026'
+          CFB_WEEK: '2'
+        run: node scripts/refresh-weekly-manifest.mjs
+      - name: Persist governed decision runtime
         run: |
-          if git diff --quiet -- data/weekly-board.json; then
-            echo 'No runtime changes.'
+          if git diff --quiet -- data/; then
+            echo 'No governed data changes.'
           else
             git config user.name 'cfb-runtime-bot'
             git config user.email 'cfb-runtime-bot@users.noreply.github.com'
-            git add data/weekly-board.json
-            git commit -m 'chore: persist governed CFB runtime [skip ci]'
+            git add data/
+            git commit -m 'chore: persist governed CFB decision runtime [skip ci]'
             git pull --rebase origin main
             git push origin main
           fi
