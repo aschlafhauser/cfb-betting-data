@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T17:13:12.934Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-10T17:42:52.694Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
     "canonicalSchedule": {
@@ -43,11 +43,12 @@
       "detail": "Canonical longshot spread screen refreshed with 62 visible candidates."
     },
     "expertEpisodeInventory": {
-      "status": "FAIL",
-      "primaryLedgerStatus": "UNRESOLVED_INGESTION_FAILURE",
+      "status": "IN_PROGRESS",
+      "primaryLedgerStatus": "SYNCHRONIZED",
+      "ledgerSyncReport": "data/expert-ledger-reconciliation.json",
       "latestReconciliation": "2026-09-10-1123-week2-reconciliation.json",
       "pointImpact": 0,
-      "detail": "Primary expert ledger is stale/incomplete versus newer governed episode audits. This is UNRESOLVED_INGESTION_FAILURE and cannot be masked by episode-discovery completeness."
+      "detail": "Primary expert ledger is losslessly synchronized with governed audit records (140 ledger records; 0 missing). Episode discovery/completeness remains separately governed."
     },
     "canonicalGameJoins": {
       "status": "PASS-DERIVED-LAYERS",
@@ -63,7 +64,9 @@
     }
   },
   "currentPriorityQueue": [
-    "expertEpisodeInventory: Primary expert ledger is stale/incomplete versus newer governed episode audits. This is UNRESOLVED_INGESTION_FAILURE and cannot be masked by episode-discovery completeness."
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Complete remaining episode reconciliation",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
