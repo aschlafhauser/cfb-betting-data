@@ -7,7 +7,7 @@
   "episodeNumber": 765,
   "sourceDate": "2026-09-09",
   "discoveredAt": "2026-09-09T04:33:59-04:00",
-  "lastReconciledAt": "2026-09-09T18:44:06-04:00",
+  "lastReconciledAt": "2026-09-09T21:39:34-04:00",
   "status": "PROVISIONAL",
   "officialEvidence": [
     {
@@ -39,12 +39,17 @@
       "type": "late-attributable-video-transcript",
       "url": "https://sports.yahoo.com/video/bryce-underwoods-brutal-spot-no-142428687.html",
       "result": "Yahoo Sports exposes an attributable Josh Pate Oklahoma-Michigan clip transcript/summary. Pate frames Bryce Underwood as entering a high-pressure spot against Brent Venables' Oklahoma defense after Michigan produced little offensive foundation in Week 1, with home-crowd pressure capable of worsening an early offensive stall. No ATS/ML/total wager or price is stated in the accessible evidence."
+    },
+    {
+      "type": "late-attributable-video-transcript",
+      "url": "https://sports.yahoo.com/video/kalen-deboers-road-record-double-171145146.html",
+      "result": "Yahoo Sports exposes an attributable Josh Pate Alabama-Kentucky clip transcript. Pate explicitly references Alabama -10.5 at Kentucky, notes Kalen DeBoer is 7-5 straight up as a double-digit road favorite and 4-8 ATS as a ranked road favorite, and argues Kentucky in Week 2 is a different proposition from Kentucky later in the season because the Wildcats are healthy, undefeated and will have an engaged Lexington crowd. He explicitly leaves open the possibility that Alabama has reached a new gear and does not state a Kentucky ATS or ML wager."
     }
   ],
   "transcriptCaptionAttempt": {
     "availableIndicator": true,
-    "retrieved": "matchup-specific attributable clips for Ohio State-Texas and Oklahoma-Michigan; full episode still incomplete",
-    "reason": "Late clips now safely expose material portions of two matchup segments, but the full episode and individual Ramen Noodle Express constructions remain incompletely retrievable."
+    "retrieved": "matchup-specific attributable clips for Ohio State-Texas, Oklahoma-Michigan and Alabama-Kentucky; full episode still incomplete",
+    "reason": "Late clips now safely expose material portions of all three advertised matchup segments, but the full episode and individual Ramen Noodle Express constructions remain incompletely retrievable."
   },
   "officialSocialPickSheetAttempt": {
     "searched": true,
@@ -71,13 +76,21 @@
       "constructionDetail": "Underwood pressure + Venables defensive stress + negative home-crowd game-state feedback; no wager",
       "sourceAnalysis": "Pate says Bryce Underwood enters an unusually unforgiving spot: Michigan has little positive offensive drive-chart evidence to build from Week 1, Brent Venables brings Oklahoma's defense to Ann Arbor, and an early offensive stall could trigger significant home-crowd pressure on the young quarterback.",
       "bettingImplication": "Adds a game-state mechanism favoring Oklahoma's defense if Michigan starts poorly, but it is not an Oklahoma ATS/ML recommendation and supplies no executable price."
+    },
+    {
+      "id": "pate-w2-bama-uk-road-favorite-volatility-20260909",
+      "gameId": "2026-W2-BAMA-UK",
+      "analyst": "Josh Pate",
+      "constructionDetail": "Alabama -10.5 road-favorite caution + DeBoer ATS history + Week-2 Kentucky health/crowd context; no Kentucky wager",
+      "sourceAnalysis": "Pate explicitly questions laying double digits with Kalen DeBoer on the road, citing DeBoer's 7-5 straight-up record as a double-digit road favorite and 4-8 ATS record as a ranked road favorite. He argues Kentucky in Week 2 is more dangerous than the same opponent later in the season because the Wildcats are healthy, undefeated and should have a fully engaged Lexington crowd.",
+      "bettingImplication": "Material caution against treating Alabama -10.5 as a routine favorite position and a volatility/upset-resistance flag for Kentucky. Pate also says past performance need not define the current Alabama team and does not explicitly recommend Kentucky +10.5, Kentucky ML or any other wager."
     }
   ],
   "bettingSegmentConfirmed": "Early Week 2 Ramen Noodle Express best bets are explicitly advertised, but individual selections and prices remain unverified in reasonably retrievable evidence.",
   "ledgerPersistence": "FAILED-SAFE",
-  "ledgerPersistenceNotes": "The two intended records are preserved exactly in this audit, but the connected GitHub contents write requires full replacement of data/expert-weekly.json. Although blob retrieval can identify the current file, there is no safe append/patch action in the connected write surface; destructive reconstruction was not attempted. This remains an ingestion/reconciliation failure until the governed primary ledger can be losslessly appended.",
-  "unsupportedInferenceGuard": "No side, ATS, ML, total, 1H, score prediction, price or conviction was inferred beyond Pate's attributable words. His statement that the game could go under 48.5 is analysis, not recorded as an Under bet.",
-  "dedupe": "PASS: repository search found no Josh Pate Week 2 record with these gameId + analyst + construction/detail combinations. Existing PFF Ohio State-Texas pressure analysis is related but materially distinct and remains a separate source family.",
-  "reconciliationState": "Episode remains PROVISIONAL because late matchup-specific transcripts are now available for two games while the full episode and Ramen Noodle Express selections remain incompletely exposed.",
+  "ledgerPersistenceNotes": "The three intended records are preserved exactly in this audit, but the connected GitHub contents write requires full replacement of data/expert-weekly.json. Although blob retrieval can identify the current file, there is no safe append/patch action in the connected write surface; destructive reconstruction was not attempted. This remains an ingestion/reconciliation failure until the governed primary ledger can be losslessly appended.",
+  "unsupportedInferenceGuard": "No side, ATS, ML, total, 1H, score prediction, price or conviction was inferred beyond Pate's attributable words. His Ohio State-Texas statement that the game could go under 48.5 is analysis, not recorded as an Under bet. His Alabama-Kentucky comments are recorded as favorite-risk/volatility context, not as a Kentucky wager.",
+  "dedupe": "PASS: repository search found no Josh Pate Week 2 record with these gameId + analyst + construction/detail combinations. Existing PFF/market records remain separate source families and are not treated as independent confirmation of Pate's views.",
+  "reconciliationState": "Episode remains PROVISIONAL because matchup-specific transcripts are now available for all three advertised games while the full episode and Ramen Noodle Express selections remain incompletely exposed.",
   "notification": "MATERIAL NEW CFB HANDICAP EVIDENCE + UNRESOLVED PRIMARY-LEDGER INGESTION FAILURE"
 }
