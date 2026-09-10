@@ -1,64 +1,25 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T12:53:36.670Z",
+  "updatedAt": "2026-09-10T08:47:35-05:00",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
-    "canonicalSchedule": {
-      "status": "PASS",
-      "expectedGames": 86,
-      "actualGames": 86,
-      "detail": "Canonical selected-week schedule coverage."
-    },
-    "marketCoverage": {
-      "status": "PASS",
-      "minimumRequired": 60,
-      "actualMarketGames": 85,
-      "detail": "Current spread/total coverage from canonical board."
-    },
-    "deepDiveEvidence": {
-      "status": "PASS",
-      "required": 86,
-      "complete": 86,
-      "pending": 0,
-      "fullEvidence": 86,
-      "sourceLimited": 0,
-      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
-    },
-    "marketMovers": {
-      "status": "PASS",
-      "detail": "Current derived mover set has 8 reference games."
-    },
-    "underdogSpecial": {
-      "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 10 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."
-    },
-    "longshotUpsetLab": {
-      "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 63 visible candidates."
-    },
-    "expertEpisodeInventory": {
-      "status": "IN_PROGRESS",
-      "detail": "Episode completeness is governed separately. Any discovered relevant PROVISIONAL episode remains visible until exhausted; it does not invalidate completed football dossiers."
-    },
-    "canonicalGameJoins": {
-      "status": "PASS-DERIVED-LAYERS",
-      "detail": "New Deep Dive, Market Movers, Underdog and Longshot derived records use canonical ESPN game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
-    },
-    "productionVerifier": {
-      "status": "PENDING-LIVE-CHECK",
-      "detail": "Live portal verification runs after runtime artifacts are committed/deployed."
-    },
-    "preKickoffSnapshots": {
-      "status": "IN_PROGRESS",
-      "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
-    }
+    "canonicalSchedule": {"status":"PASS","expectedGames":86,"actualGames":86,"detail":"Canonical selected-week schedule coverage."},
+    "marketCoverage": {"status":"PASS","minimumRequired":60,"actualMarketGames":85,"detail":"Current spread/total coverage from canonical board."},
+    "deepDiveEvidence": {"status":"PASS","required":86,"complete":86,"pending":0,"fullEvidence":86,"sourceLimited":0,"detail":"Every game has a structured evidence-backed dossier."},
+    "marketMovers": {"status":"PASS","detail":"Current derived mover set remains governed from canonical board/reference history."},
+    "underdogSpecial": {"status":"PASS","detail":"Current canonical +3.5-to-+7 screen remains separately governed; expert records do not auto-promote a qualifier."},
+    "longshotUpsetLab": {"status":"PASS","detail":"Current canonical longshot/upset screen remains separately governed; expert records do not alter model weights or fair values."},
+    "expertEpisodeInventory": {"status":"IN_PROGRESS","detail":"Winning Cures Everything Week 2 was newly discovered as a prior inventory miss and is now COMPLETE with 10/10 transcript-confirmed show picks canonically joined. The Solid Verbal Sept. 10 Week 2 preview remains PROVISIONAL because analyst-specific picks/locks are not yet safely attributable from currently exposed first-party metadata/transcript surfaces."},
+    "canonicalGameJoins": {"status":"PASS-DERIVED-LAYERS","detail":"New Winning Cures Everything records joined 10/10 to canonical ESPN game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."},
+    "productionVerifier": {"status":"PENDING-LIVE-CHECK","detail":"Live portal verification runs separately after governed runtime/data changes."},
+    "preKickoffSnapshots": {"status":"IN_PROGRESS","detail":"Immutable 60–90 minute final snapshots remain required individually through kickoff."}
   },
   "currentPriorityQueue": [
+    "Exhaust The Solid Verbal Sept. 10 Week 2 episode for attributable host-level picks/locks and matchup mechanisms",
     "Maintain injury/market/expert refreshes through kickoff",
-    "Complete remaining episode reconciliation",
     "Freeze each final pre-kickoff snapshot"
   ],
-  "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
+  "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate/ingestion failure."
 }
