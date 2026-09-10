@@ -1,16 +1,17 @@
 {
   "week": 2,
-  "updatedAt": "2026-09-10T11:25:30.230Z",
+  "updatedAt": "2026-09-10T12:11:38.128Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
     "slateCount": 86,
-    "runtimeSource": "Server-side exact selected-week hydration + production governed model capture",
-    "note": "Canonical Week 2 runtime persists all 86 selected games; placeholder model outputs are not treated as valid coverage.",
+    "runtimeSource": "GitHub Node ESPN selected-week schedule + governed overlay",
+    "note": "Canonical Week 2: schedule coverage and Deep Dive coverage are separate. Deep Dive complete=0/86.",
     "renderedSlateCount": 86,
-    "scheduleHydration": "SERVER-SIDE COMPLETE — canonical model team names + ESPN market fields",
+    "scheduleHydration": "SERVER-SIDE COMPLETE",
     "scheduleHydrationError": null,
-    "marketGameCount": 85
+    "marketGameCount": 85,
+    "deepDiveCompleteCount": 0
   },
   "governance": "Bet Activation Gate v1.1. Preseason priors preserved; conservative Week 1 opponent-adjusted team/unit updates only. No system-level weights changed. Expert Intelligence v1 is qualitative residual only. Independent Football Fair/Edge may be recorded only when genuinely emitted by the underlying engine; none is reverse-engineered here.",
   "modelStatus": {
@@ -40,12 +41,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 59,
         "power": 0.5175,
@@ -56,7 +57,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Miami ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858215",
@@ -78,12 +81,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 38,
         "power": 0.39261904761904753,
@@ -94,7 +97,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Louisville ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858220",
@@ -116,12 +121,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 45.5,
         "power": 0.3096428571428571,
@@ -132,7 +137,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Virginia ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858222",
@@ -154,12 +161,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 31,
         "power": 0.18952380952380948,
@@ -170,7 +177,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean NC State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858214",
@@ -192,12 +201,12 @@
       "independentFootballSide": "Rutgers",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 3,
         "power": -0.3929761904761905,
@@ -208,7 +217,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Rutgers",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856678",
@@ -230,12 +241,12 @@
       "independentFootballSide": "Kansas",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -6,
         "power": -0.25321428571428567,
@@ -246,7 +257,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Missouri",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858439",
@@ -268,12 +281,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 58,
         "power": 0.5175,
@@ -284,7 +297,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Indiana ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856782",
@@ -306,12 +321,12 @@
       "independentFootballSide": "Oregon",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -25,
         "power": -0.42488095238095236,
@@ -322,7 +337,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Oregon ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856683",
@@ -344,12 +361,12 @@
       "independentFootballSide": "Arizona State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 16,
         "power": 0.49380952380952375,
@@ -360,7 +377,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Texas A&M ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856679",
@@ -382,12 +401,12 @@
       "independentFootballSide": "Michigan",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -5.5,
         "power": 0,
@@ -398,7 +417,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Oklahoma",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858442",
@@ -420,12 +441,12 @@
       "independentFootballSide": "Temple",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -25,
         "power": -0.8517857142857141,
@@ -436,7 +457,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Penn State ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856781",
@@ -458,12 +481,12 @@
       "independentFootballSide": "Washington State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 19.5,
         "power": 0.3857142857142856,
@@ -474,7 +497,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Kansas State ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858218",
@@ -496,12 +521,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 35,
         "power": 0.09714285714285714,
@@ -512,7 +537,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean North Carolina",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858221",
@@ -534,12 +561,12 @@
       "independentFootballSide": "Old Dominion",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 20.5,
         "power": 0.3659523809523809,
@@ -550,7 +577,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Virginia Tech ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858224",
@@ -572,12 +601,12 @@
       "independentFootballSide": "Purdue",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -3.5,
         "power": -0.09749999999999999,
@@ -588,7 +617,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Wake Forest",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401862702",
@@ -610,12 +641,12 @@
       "independentFootballSide": "South Florida",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 3.5,
         "power": -0.07059523809523809,
@@ -626,7 +657,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Army",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864571",
@@ -648,12 +681,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 7.5,
         "power": -0.14809523809523809,
@@ -664,7 +697,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean East Carolina",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866416",
@@ -686,12 +721,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 11,
         "power": -0.4416666666666666,
@@ -702,7 +737,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Wofford",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856673",
@@ -724,12 +761,12 @@
       "independentFootballSide": "Western Kentucky",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 42,
         "power": 0.7803571428571429,
@@ -740,7 +777,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Georgia ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856791",
@@ -762,12 +801,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 42,
         "power": 0.11178571428571428,
@@ -778,7 +817,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean West Virginia",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866415",
@@ -800,12 +841,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 23,
         "power": -0.4116666666666666,
@@ -816,7 +857,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Colgate",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866417",
@@ -838,12 +881,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 30.5,
         "power": -0.16285714285714284,
@@ -854,7 +897,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Miami (OH)",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866413",
@@ -876,12 +921,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 14,
         "power": -0.4533333333333333,
@@ -892,7 +937,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Stony Brook",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401859184",
@@ -914,12 +961,12 @@
       "independentFootballSide": "Rice",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 46.5,
         "power": 0.9474999999999999,
@@ -930,7 +977,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Notre Dame ATS",
-      "modelGrade": "A-"
+      "modelGrade": "A-",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856674",
@@ -952,12 +1001,12 @@
       "independentFootballSide": "Kentucky",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -11.5,
         "power": -0.37749999999999995,
@@ -968,7 +1017,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Alabama ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856810",
@@ -990,12 +1041,12 @@
       "independentFootballSide": "BYU",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 8,
         "power": 0.18797619047619046,
@@ -1006,7 +1057,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean BYU",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858446",
@@ -1028,12 +1081,12 @@
       "independentFootballSide": "Utah State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 28,
         "power": 0.7423809523809524,
@@ -1044,7 +1097,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Washington ATS",
-      "modelGrade": "A-"
+      "modelGrade": "A-",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856677",
@@ -1066,12 +1121,12 @@
       "independentFootballSide": "Minnesota",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 2,
         "power": 0.1497619047619047,
@@ -1082,7 +1137,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Minnesota",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856785",
@@ -1104,12 +1161,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 34.5,
         "power": 0.07404761904761904,
@@ -1120,7 +1177,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Colorado ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856790",
@@ -1142,12 +1201,12 @@
       "independentFootballSide": "UCF",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 6.5,
         "power": -0.2236904761904762,
@@ -1158,7 +1217,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UCF",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858216",
@@ -1180,12 +1241,12 @@
       "independentFootballSide": "California",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 3.5,
         "power": 0.03238095238095237,
@@ -1196,7 +1257,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean California",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858217",
@@ -1218,12 +1281,12 @@
       "independentFootballSide": "Illinois",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 6.5,
         "power": 0.12690476190476188,
@@ -1234,7 +1297,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Illinois",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858440",
@@ -1256,12 +1321,12 @@
       "independentFootballSide": "Eastern Michigan",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 18,
         "power": 0.33309523809523806,
@@ -1272,7 +1337,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Michigan State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858444",
@@ -1294,12 +1361,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -13.5,
         "power": -0.605,
@@ -1310,7 +1377,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Maryland ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401860884",
@@ -1332,12 +1401,12 @@
       "independentFootballSide": "UTSA",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 1.5,
         "power": -0.1270238095238095,
@@ -1348,7 +1417,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UTSA",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401862708",
@@ -1370,12 +1441,12 @@
       "independentFootballSide": "UL Monroe",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 9.5,
         "power": -0.43499999999999994,
@@ -1386,7 +1457,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UL Monroe",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866412",
@@ -1408,12 +1481,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 27,
         "power": -0.4383333333333333,
@@ -1424,7 +1497,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Robert Morris",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866419",
@@ -1446,12 +1521,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 33.5,
         "power": -0.2916666666666667,
@@ -1462,7 +1537,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Central Connecticut",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866420",
@@ -1484,12 +1561,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 23.5,
         "power": 0,
@@ -1500,7 +1577,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Sacred Heart",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401867929",
@@ -1522,12 +1601,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 46,
         "power": 0.01952380952380952,
@@ -1538,7 +1617,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean James Madison",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401862705",
@@ -1560,12 +1641,12 @@
       "independentFootballSide": "UNLV",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -4,
         "power": -0.23130952380952383,
@@ -1576,7 +1657,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UNLV",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858223",
@@ -1598,12 +1681,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 27,
         "power": 0.5125,
@@ -1614,7 +1697,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "SMU ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864506",
@@ -1636,12 +1721,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 22,
         "power": -0.34750000000000003,
@@ -1652,7 +1737,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Northern Colorado",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401865252",
@@ -1674,12 +1761,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 40.5,
         "power": 0.01976190476190476,
@@ -1690,7 +1777,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean New Mexico",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401868326",
@@ -1712,12 +1801,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -0.5,
         "power": -0.334047619047619,
@@ -1726,7 +1815,9 @@
         "sourceValid": true
       },
       "week": 2,
-      "marketSource": "ESPN DraftKings"
+      "marketSource": "ESPN DraftKings",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856684",
@@ -1748,12 +1839,12 @@
       "independentFootballSide": "Delaware",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 22,
         "power": 0.7361904761904762,
@@ -1764,7 +1855,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Vanderbilt ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856672",
@@ -1786,12 +1879,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 51,
         "power": 0.42499999999999993,
@@ -1802,7 +1895,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Florida ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401860881",
@@ -1824,12 +1919,12 @@
       "independentFootballSide": "Memphis",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 9.5,
         "power": 0.37690476190476185,
@@ -1840,7 +1935,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Boise State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866414",
@@ -1862,12 +1959,12 @@
       "independentFootballSide": "Buffalo",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 11,
         "power": 0.4183333333333333,
@@ -1878,7 +1975,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Florida International",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866418",
@@ -1900,12 +1999,12 @@
       "independentFootballSide": "Ohio",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 2,
         "power": -0.16809523809523805,
@@ -1916,7 +2015,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Jacksonville State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401868187",
@@ -1938,12 +2039,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 27,
         "power": -0.13845238095238094,
@@ -1954,7 +2055,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Liberty",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401866421",
@@ -1976,12 +2079,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 25.5,
         "power": -0.09095238095238095,
@@ -1992,7 +2095,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Western Michigan",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856681",
@@ -2014,12 +2119,12 @@
       "independentFootballSide": "Georgia Tech",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -13.5,
         "power": -0.2655952380952381,
@@ -2030,7 +2135,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Tennessee ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856787",
@@ -2052,12 +2159,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 52.5,
         "power": 0.47119047619047616,
@@ -2068,7 +2175,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Houston ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856680",
@@ -2090,12 +2199,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 45,
         "power": 0.415,
@@ -2106,7 +2215,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "South Carolina ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856786",
@@ -2128,12 +2239,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 37,
         "power": -0.030833333333333334,
@@ -2144,7 +2255,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Cincinnati",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858441",
@@ -2166,12 +2279,12 @@
       "independentFootballSide": "Bowling Green",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 31,
         "power": 0.7954761904761904,
@@ -2182,7 +2295,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Nebraska ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401860882",
@@ -2204,12 +2319,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 20.5,
         "power": -0.2652380952380952,
@@ -2220,7 +2335,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Southern Utah",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401862707",
@@ -2242,12 +2359,12 @@
       "independentFootballSide": "Sam Houston",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -14,
         "power": -0.3213095238095238,
@@ -2258,7 +2375,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Tulsa",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864503",
@@ -2280,12 +2399,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -5,
         "power": -0.44,
@@ -2296,7 +2415,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Illinois State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864575",
@@ -2318,12 +2439,12 @@
       "independentFootballSide": "South Alabama",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 10,
         "power": 0.32761904761904753,
@@ -2334,7 +2455,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Tulane",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401868241",
@@ -2356,12 +2479,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "source-limited",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET/EXECUTION PENDING",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET/EXECUTION PENDING · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -0.5,
         "power": -0.32107142857142856,
@@ -2370,7 +2493,9 @@
         "sourceValid": true
       },
       "week": 2,
-      "marketSource": null
+      "marketSource": null,
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401869955",
@@ -2392,12 +2517,12 @@
       "independentFootballSide": "Georgia State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 10,
         "power": 0.054880952380952315,
@@ -2408,7 +2533,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Kennesaw State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401871045",
@@ -2430,12 +2557,12 @@
       "independentFootballSide": "Middle Tennessee",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 14,
         "power": 0.2951190476190476,
@@ -2446,7 +2573,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Marshall",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401871046",
@@ -2468,12 +2597,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 19,
         "power": -0.43666666666666665,
@@ -2484,7 +2613,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Lindenwood",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858443",
@@ -2506,12 +2637,12 @@
       "independentFootballSide": "San Diego State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 13,
         "power": 0.3851190476190476,
@@ -2522,7 +2653,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UCLA",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858447",
@@ -2544,12 +2677,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 39.5,
         "power": 0.36166666666666664,
@@ -2560,7 +2693,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Wisconsin ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856682",
@@ -2582,12 +2717,12 @@
       "independentFootballSide": "Ohio State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 1.5,
         "power": 0,
@@ -2598,7 +2733,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Ohio State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401867796",
@@ -2620,12 +2757,12 @@
       "independentFootballSide": "Louisiana Tech",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 37,
         "power": 0.7301190476190474,
@@ -2636,7 +2773,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "LSU ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856783",
@@ -2658,12 +2797,12 @@
       "independentFootballSide": "Oregon State",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -28.5,
         "power": -0.9025,
@@ -2674,7 +2813,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Texas Tech ATS",
-      "modelGrade": "A-"
+      "modelGrade": "A-",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856788",
@@ -2696,12 +2837,12 @@
       "independentFootballSide": "Iowa State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 15.5,
         "power": 0.7514285714285714,
@@ -2712,7 +2853,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Iowa",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858219",
@@ -2734,12 +2877,12 @@
       "independentFootballSide": "Georgia Southern",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 22.5,
         "power": 0.8541666666666665,
@@ -2750,7 +2893,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Clemson",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401862703",
@@ -2772,12 +2917,12 @@
       "independentFootballSide": "Florida Atlantic",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -6,
         "power": -0.0713095238095238,
@@ -2788,7 +2933,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Navy",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401868008",
@@ -2810,12 +2957,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 33,
         "power": -0.42666666666666664,
@@ -2826,7 +2973,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Fordham",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856676",
@@ -2848,12 +2997,12 @@
       "independentFootballSide": "Charlotte",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 49.5,
         "power": 0.9758333333333332,
@@ -2864,7 +3013,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Ole Miss ATS",
-      "modelGrade": "A-"
+      "modelGrade": "A-",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856671",
@@ -2886,12 +3037,12 @@
       "independentFootballSide": "Southern Miss",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 35,
         "power": 0.8451190476190475,
@@ -2902,7 +3053,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Auburn",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856789",
@@ -2924,12 +3077,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 44.5,
         "power": 0.3360714285714285,
@@ -2940,7 +3093,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "TCU ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856784",
@@ -2962,12 +3117,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 39.5,
         "power": 0.25011904761904763,
@@ -2978,7 +3133,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Baylor ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864504",
@@ -3000,12 +3157,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 20.5,
         "power": 0,
@@ -3016,7 +3173,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Cal Poly",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864505",
@@ -3038,12 +3197,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 25,
         "power": -0.4433333333333333,
@@ -3054,7 +3213,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Texas Southern",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864502",
@@ -3076,12 +3237,12 @@
       "independentFootballSide": "Air Force",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -2.5,
         "power": 0.13297619047619044,
@@ -3092,7 +3253,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean North Dakota State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401856670",
@@ -3114,12 +3277,12 @@
       "independentFootballSide": "Arkansas",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 13.5,
         "power": 0.3451190476190475,
@@ -3130,7 +3293,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Utah",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401860883",
@@ -3152,12 +3317,12 @@
       "independentFootballSide": "Sacramento State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 19.5,
         "power": 0.5714285714285714,
@@ -3168,7 +3333,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Fresno State ATS",
-      "modelGrade": "B"
+      "modelGrade": "B",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864500",
@@ -3190,12 +3357,12 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -4,
         "power": -0.4083333333333333,
@@ -3206,7 +3373,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Montana State",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401858445",
@@ -3228,12 +3397,12 @@
       "independentFootballSide": "Louisiana",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 32,
         "power": 0.7302380952380951,
@@ -3244,7 +3413,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "USC ATS",
-      "modelGrade": "B+"
+      "modelGrade": "B+",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     },
     {
       "gameId": "ESPN-401864578",
@@ -3266,12 +3437,12 @@
       "independentFootballSide": "New Mexico State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "universal-deep-dive-complete",
+      "stage": "deep-dive-pending",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "DEEP DIVE COMPLETE · MARKET AVAILABLE",
-      "action": "PASS until governed edge and execution gate clear",
-      "notes": "Universal Week 2 selected-slate row. Model outputs populate only when genuinely emitted by the governed production engine.",
+      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
+      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 8,
         "power": 0.4316666666666666,
@@ -3282,7 +3453,9 @@
       "week": 2,
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Hawai'i",
-      "modelGrade": "Watch"
+      "modelGrade": "Watch",
+      "deepDiveStatus": "PENDING",
+      "deepDiveEvidenceCount": 0
     }
   ],
   "bestBets": [],
@@ -3321,12 +3494,26 @@
   "runtimePersistence": {
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "hydration": "server-side exact selected-week feed",
-    "promotedGameCount": 86,
-    "independentGameCount": 47,
     "renderedRowCount": 86,
-    "meaningfulFairCellCount": 86,
-    "marketCellCount": 85,
-    "capturedAt": "2026-09-10T11:25:30.228Z"
+    "deepDiveCompleteCount": 0,
+    "capturedAt": "2026-09-10T12:11:38.126Z"
+  },
+  "modelRuntime": {
+    "week": 2,
+    "promotedGameCount": 86,
+    "totalPromotedGameCount": 85,
+    "independentGameCount": 47,
+    "rejectedFallbackCount": 0,
+    "generatedAt": "2026-09-10T12:11:37.576Z",
+    "status": "browser-governed-model-active",
+    "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
+  },
+  "coverage": {
+    "mode": "canonical-full-slate",
+    "source": "universal-deep-dive + explicit runtime overrides",
+    "gameCount": 86,
+    "explicitRuntimeCount": 86,
+    "synthesizedCount": 0,
+    "deepDiveCompletedAt": null
   }
 }
