@@ -8,6 +8,7 @@ on:
       - 'scripts/build-deep-dive-runtime.mjs'
       - 'scripts/build-specialty-layers.mjs'
       - 'scripts/build-upset-research.mjs'
+      - 'scripts/refresh-free-moneylines.mjs'
       - 'scripts/apply-free-moneylines.mjs'
       - 'scripts/apply-longshot-v2.mjs'
       - 'scripts/sync-expert-ledger.mjs'
@@ -85,6 +86,8 @@ jobs:
         run: node scripts/build-upset-research.mjs
       - name: Refresh Market Movers and specialty screens
         run: node scripts/build-specialty-layers.mjs
+      - name: Refresh free-source moneylines
+        run: node scripts/refresh-free-moneylines.mjs
       - name: Apply governed free-source moneylines
         run: node scripts/apply-free-moneylines.mjs
       - name: Apply Longshot v2 25-point scores and narratives
