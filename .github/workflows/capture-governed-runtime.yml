@@ -9,6 +9,7 @@ on:
       - 'scripts/build-specialty-layers.mjs'
       - 'scripts/build-upset-research.mjs'
       - 'scripts/apply-free-moneylines.mjs'
+      - 'scripts/apply-longshot-v2.mjs'
       - 'scripts/sync-expert-ledger.mjs'
       - 'scripts/refresh-weekly-manifest.mjs'
       - 'scripts/verify-live-portal.mjs'
@@ -86,6 +87,8 @@ jobs:
         run: node scripts/build-specialty-layers.mjs
       - name: Apply governed free-source moneylines
         run: node scripts/apply-free-moneylines.mjs
+      - name: Apply Longshot v2 25-point scores and narratives
+        run: node scripts/apply-longshot-v2.mjs
       - name: Refresh weekly control manifest
         run: node scripts/refresh-weekly-manifest.mjs
       - name: Persist governed decision runtime safely
