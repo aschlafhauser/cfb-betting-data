@@ -1,0 +1,33 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "auditType": "hourly-current-week-reconciliation",
+  "auditedAt": "2026-09-10T10:54:27-05:00",
+  "status": "PROVISIONAL",
+  "sourcesChecked": [
+    "Cover 3 / CBS Sports first-party podcast inventory",
+    "The Solid Verbal first-party inventory",
+    "Josh Pate / Pate State first-party inventory",
+    "The McShay Show / The Ringer first-party inventory",
+    "established adjacent CFB source families"
+  ],
+  "newMaterialRecords": 0,
+  "newRelevantEpisodes": [],
+  "dedupeApplied": true,
+  "unsupportedPicksInferred": false,
+  "quantitativeFairModified": false,
+  "canonicalJoinFailures": 0,
+  "discoveryNotes": "Fresh first-party-led discovery found no genuinely incremental safely attributable Week 2 matchup package beyond already governed Solid Verbal, Josh Pate/Locker Room, Winning Cures Everything and other current audit records. No unsupported pick, price, score prediction or conviction was inferred.",
+  "primaryLedgerStatus": "UNRESOLVED_INGESTION_FAILURE",
+  "primaryLedgerDetail": "data/expert-weekly.json remains the designated primary expert ledger but newer governed episode-audit records are not losslessly synchronized into it. The connected read surface is truncated for this oversized file, so replacing it here would risk historical loss. Existing exact records remain preserved in governed episode audits until a lossless synchronization path is implemented.",
+  "runtimeWrite": "CFB only",
+  "productionImpact": {
+    "fairPoints": 0,
+    "modelWeights": 0,
+    "unifiedUpsetRouting": 0,
+    "betActivationGate": 0,
+    "officialLedger": 0,
+    "units": 0
+  }
+}
