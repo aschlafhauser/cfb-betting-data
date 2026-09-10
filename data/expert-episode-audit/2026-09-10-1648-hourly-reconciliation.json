@@ -1,0 +1,22 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "auditedAt": "2026-09-10T16:48:00-05:00",
+  "sourceFamily": "hourly first-party inventory reconciliation",
+  "status": "COMPLETE",
+  "firstPartyInventory": [
+    {"family":"Cover 3","result":"Fresh first-party/current inventory check found no newly attributable incremental Week 2 package beyond governed inventory since the 16:01 CT reconciliation."},
+    {"family":"The Solid Verbal","result":"No newly attributable incremental Week 2 package beyond the already-governed Sept. 10 episode; analyst-specific unsupported picks remain un-inferred."},
+    {"family":"The McShay Show","result":"Sept. 10 Ohio State-Texas preview and Week 2 picks episode remains the latest governed matchup package; first-party notes still expose segment timestamps but not additional analyst-specific selections safely."},
+    {"family":"Josh Pate/Pate State","result":"No newly attributable incremental Week 2 package surfaced since the prior reconciliation."}
+  ],
+  "newStructuredRecordsIntended": [],
+  "materialRecords": [],
+  "dedupeApplied": true,
+  "unsupportedPicksInferred": false,
+  "reconciliationRequired": true,
+  "reconciliationCommand": "node scripts/sync-expert-ledger.mjs",
+  "preRunLedgerState": {"status":"SYNCHRONIZED","ledgerRecordCount":140,"missingGovernedRecords":0,"reportGeneratedAt":"2026-09-10T21:03:38.039Z"},
+  "governance": "Expert Intelligence qualitative residual only; zero automatic impact on unified-upset routing, production fair, model weights, Bet Activation Gate v1.1, official ledger or units."
+}
