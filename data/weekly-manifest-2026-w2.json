@@ -1,67 +1,26 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T15:43:16.001Z",
-  "status": "PASS-WITH-IN-PROGRESS-GATES",
-  "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
+  "updatedAt": "2026-09-10T15:54:27.000Z",
+  "status": "FAIL-EXPERT-LEDGER-SYNC",
+  "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden. Primary expert-ledger synchronization is a hard ingestion gate.",
   "gates": {
-    "canonicalSchedule": {
-      "status": "PASS",
-      "expectedGames": 86,
-      "actualGames": 86,
-      "detail": "Canonical selected-week schedule coverage."
-    },
-    "marketCoverage": {
-      "status": "PASS",
-      "minimumRequired": 60,
-      "actualMarketGames": 85,
-      "detail": "Current spread/total coverage from canonical board."
-    },
-    "deepDiveEvidence": {
-      "status": "PASS",
-      "required": 86,
-      "complete": 86,
-      "pending": 0,
-      "fullEvidence": 86,
-      "sourceLimited": 0,
-      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
-    },
-    "unifiedUpsetResearch": {
-      "status": "PASS",
-      "detail": "Research artifact week=2; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."
-    },
-    "marketMovers": {
-      "status": "PASS",
-      "detail": "Current derived mover set has 8 reference games."
-    },
-    "underdogSpecial": {
-      "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 11 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."
-    },
-    "longshotUpsetLab": {
-      "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 62 visible candidates."
-    },
-    "expertEpisodeInventory": {
-      "status": "IN_PROGRESS",
-      "detail": "Episode completeness is governed separately. Any discovered relevant PROVISIONAL episode remains visible until exhausted; it does not invalidate completed football dossiers."
-    },
-    "canonicalGameJoins": {
-      "status": "PASS-DERIVED-LAYERS",
-      "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
-    },
-    "productionVerifier": {
-      "status": "PENDING-LIVE-CHECK",
-      "detail": "Live portal verification runs after runtime artifacts are committed/deployed."
-    },
-    "preKickoffSnapshots": {
-      "status": "IN_PROGRESS",
-      "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
-    }
+    "canonicalSchedule": {"status":"PASS","expectedGames":86,"actualGames":86,"detail":"Canonical selected-week schedule coverage."},
+    "marketCoverage": {"status":"PASS","minimumRequired":60,"actualMarketGames":85,"detail":"Current spread/total coverage from canonical board."},
+    "deepDiveEvidence": {"status":"PASS","required":86,"complete":86,"pending":0,"fullEvidence":86,"sourceLimited":0,"detail":"Every game has a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."},
+    "unifiedUpsetResearch": {"status":"PASS","detail":"Research artifact week=2; routing remains isolated from production pricing and execution."},
+    "marketMovers": {"status":"PASS","detail":"Current derived mover set is governed separately from expert ingestion."},
+    "underdogSpecial": {"status":"PASS","detail":"Canonical +3.5-to-+7 screen is governed separately; no expert record can activate it by itself."},
+    "longshotUpsetLab": {"status":"PASS","detail":"Canonical longshot screen is governed separately; expert residual has zero automatic routing/price impact."},
+    "expertEpisodeInventory": {"status":"FAIL","detail":"Current first-party inventory is reconciled through 2026-09-10 10:54 CT with no new incremental package, but data/expert-weekly.json is not losslessly synchronized with newer governed episode-audit records. Primary-ledger synchronization remains an unresolved ingestion failure."},
+    "canonicalGameJoins": {"status":"PASS-DERIVED-LAYERS","detail":"New derived records use canonical game IDs; no new canonical join failure was found in this reconciliation pass. Legacy expert/audit records remain bridged separately."},
+    "productionVerifier": {"status":"PENDING-LIVE-CHECK","detail":"Live portal verification runs after governed runtime updates; expert-ledger FAIL cannot be overridden by rendering success."},
+    "preKickoffSnapshots": {"status":"IN_PROGRESS","detail":"Immutable 60–90 minute final snapshots remain required individually through kickoff."}
   },
   "currentPriorityQueue": [
+    "Implement a lossless synchronization path from governed episode audits into data/expert-weekly.json",
     "Maintain injury/market/expert refreshes through kickoff",
-    "Complete remaining episode reconciliation",
+    "Complete remaining provisional episode evidence surfaces",
     "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
