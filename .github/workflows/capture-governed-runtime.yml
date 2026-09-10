@@ -8,6 +8,7 @@ on:
       - 'scripts/build-deep-dive-runtime.mjs'
       - 'scripts/build-specialty-layers.mjs'
       - 'scripts/build-upset-research.mjs'
+      - 'scripts/sync-expert-ledger.mjs'
       - 'scripts/refresh-weekly-manifest.mjs'
       - 'scripts/verify-live-portal.mjs'
       - 'scripts/verify-portal-completeness.mjs'
@@ -23,6 +24,8 @@ on:
       - 'data/free-moneylines-*.json'
       - 'data/market-model-history.json'
       - 'data/timing-observations/**'
+      - 'data/expert-weekly.json'
+      - 'data/expert-ledger-reconciliation.json'
       - 'data/expert-episode-audit/**'
   schedule:
     - cron: '17 * * * *'
@@ -61,6 +64,11 @@ jobs:
           console.log(`CFB_WEEK=${week}`);
           console.log(`CFB_EXPECTED_GAMES=${games}`);
           NODE
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Losslessly reconcile Expert Intelligence primary ledger
+        run: node scripts/sync-expert-ledger.mjs
       - name: Install browser runtime
         run: |
           npm init -y >/dev/null 2>&1
