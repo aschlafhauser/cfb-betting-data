@@ -1,0 +1,23 @@
+import fs from 'node:fs/promises';
+import { chromium } from 'playwright';
+const portal=process.env.CFB_PORTAL_URL||'https://cfb-betting-intelligence.netlify.app/';
+const board=JSON.parse(await fs.readFile('data/weekly-board.json','utf8'));
+const longshot=JSON.parse(await fs.readFile('data/longshot-upset-lab.json','utf8'));
+const underdog=JSON.parse(await fs.readFile('data/underdog-special.json','utf8'));
+const expected=Number(process.env.CFB_EXPECTED_GAMES||board.scheduleCoverage?.slateCount||board.games?.length||0);
+const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(`pageerror:${e.message}`));
+await page.goto(portal,{waitUntil:'domcontentloaded',timeout:120000});
+await page.waitForFunction(n=>window.CFB_RUNTIME_DATA&&Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n,expected,{timeout:60000});await page.waitForTimeout(2500);
+const result=await page.evaluate(async({expected,longshotCount,scoredCount,pricedCount,underdogCount})=>{
+ const out={tabs:{},board:{},longshot:{},underdog:{},match:{},failures:[]};
+ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+ const clickTab=async id=>{const b=document.querySelector(`nav button[data-tab="${id}"]`);if(!b){out.failures.push(`missing nav tab ${id}`);return null;}b.click();await sleep(100);const s=document.getElementById(id);if(!s){out.failures.push(`missing section ${id}`);return null;}const text=(s.innerText||'').trim();out.tabs[id]={textLength:text.length,visible:s.classList.contains('active')};if(!s.classList.contains('active'))out.failures.push(`${id} did not become active`);if(text.length<20)out.failures.push(`${id} appears unpopulated`);return s;};
+ const base=['board','best','match','moves','teams','ledger','futures','changed','signals','coverage','model','glossary'];for(const id of base)await clickTab(id);
+ await clickTab('board');out.board.rows=document.querySelectorAll('#scheduleRows tr[data-game-id],#scheduleRows tr.clickrow').length||document.querySelectorAll('#scheduleRows tr').length;if(out.board.rows!==expected)out.failures.push(`Weekly Board visible rows ${out.board.rows}/${expected}`);
+ await clickTab('match');out.match.options=document.querySelectorAll('#matchSel option').length;out.match.governedPanel=!!document.querySelector('#governedDeepDivePanel');if(out.match.options!==expected)out.failures.push(`Matchup selector ${out.match.options}/${expected}`);if(!out.match.governedPanel)out.failures.push('Matchup Center governed panel missing');
+ await clickTab('longshots');out.longshot.cards=document.querySelectorAll('#lsCards .ls-candidate-card').length;out.longshot.totalScores=document.querySelectorAll('#lsCards .ls-total-score').length;out.longshot.componentRows=document.querySelectorAll('#lsCards .ls-score-component').length;out.longshot.priced=document.querySelectorAll('#lsCards .ls-moneyline').length;out.longshot.priceStatus=document.querySelectorAll('#lsCards .ls-price-status').length;
+ if(longshotCount>0&&out.longshot.cards!==longshotCount)out.failures.push(`Longshot cards ${out.longshot.cards}/${longshotCount}`);if(scoredCount>0&&out.longshot.totalScores<scoredCount)out.failures.push(`Longshot score labels ${out.longshot.totalScores}/${scoredCount}`);if(scoredCount>0&&out.longshot.componentRows<scoredCount*9)out.failures.push(`Longshot score component rows ${out.longshot.componentRows}/${scoredCount*9}`);if(pricedCount>0&&out.longshot.priced<pricedCount)out.failures.push(`Longshot priced rows ${out.longshot.priced}/${pricedCount}`);if(pricedCount>0&&out.longshot.priceStatus<pricedCount)out.failures.push(`Longshot price provenance ${out.longshot.priceStatus}/${pricedCount}`);
+ await clickTab('underdog');out.underdog.entries=document.querySelectorAll('#underdog .card,#underdog [data-game-id],#underdogSpecialCards .card').length;if(underdogCount>0&&out.underdog.entries===0)out.failures.push('Underdog Special runtime candidates exist but UI is empty');
+ return out;
+},{expected,longshotCount:(longshot.candidates||[]).length,scoredCount:(longshot.candidates||[]).filter(x=>Number.isFinite(Number(x.score))).length,pricedCount:(longshot.candidates||[]).filter(x=>x.currentMoneyline).length,underdogCount:(underdog.candidates||[]).filter(x=>Number(x.week||underdog.week)===Number(board.week)).length});
+await browser.close();result.browserErrors=errors;if(errors.length)result.failures.push(...errors);console.log(JSON.stringify(result,null,2));if(result.failures.length)throw new Error(`CFB PORTAL COMPLETENESS FAIL: ${result.failures.join(' | ')}`);console.log('CFB PORTAL COMPLETENESS PASS');
