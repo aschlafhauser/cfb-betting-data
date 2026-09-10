@@ -1,8 +1,8 @@
 {
-  "version": "1.0-research",
+  "version": "1.1-research",
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T13:54:48.857Z",
+  "updatedAt": "2026-09-10T14:22:57.739Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -12,6 +12,11 @@
   },
   "methodology": {
     "purpose": "Rank underdogs relative to comparable current spread bands using governed dossier evidence and existing model disagreement without changing production pricing.",
+    "routing": {
+      "underdogSpecial": "+3.5 through +7 inclusive",
+      "upsetLab": "+9.5 or longer",
+      "intermediate": "all other current underdogs; calibration only"
+    },
     "components": [
       "QB stability/path",
       "trench resistance",
@@ -34,68 +39,12 @@
   },
   "coverage": {
     "allUnderdogs": 84,
-    "underdogSpecial": 17,
-    "upsetLab": 63
+    "underdogSpecial": 10,
+    "upsetLab": 63,
+    "intermediate": 11,
+    "routingViolations": 0
   },
   "underdogSpecial": [
-    {
-      "week": 2,
-      "canonicalGameId": "ESPN-401856682",
-      "team": "Ohio State",
-      "opponent": "Texas",
-      "currentSpread": "+1.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 64,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 1,
-        "coachingSituational": 0,
-        "availability": 1,
-        "productionModel": 0,
-        "independentModel": 1.6677877237851666
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "unknown",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": true,
-        "volatilityPath": true
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
-      "canonicalGameId": "ESPN-401858224",
-      "team": "Purdue",
-      "opponent": "Wake Forest",
-      "currentSpread": "+3",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 63,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 1,
-        "availability": 1,
-        "productionModel": 0,
-        "independentModel": 1.5173292225764636
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": true,
-        "volatilityPath": true
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
     {
       "week": 2,
       "canonicalGameId": "ESPN-401862703",
@@ -185,64 +134,6 @@
     },
     {
       "week": 2,
-      "canonicalGameId": "ESPN-401864502",
-      "team": "Air Force",
-      "opponent": "North Dakota State",
-      "currentSpread": "+2.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 58,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 0,
-        "havocVolatility": 0,
-        "coachingSituational": 1,
-        "availability": 1,
-        "productionModel": 0,
-        "independentModel": 2
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": true,
-        "volatilityPath": false
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
-      "canonicalGameId": "ESPN-401860884",
-      "team": "UTSA",
-      "opponent": "Texas State",
-      "currentSpread": "+1.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 55,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 1,
-        "availability": 1,
-        "productionModel": 0.1,
-        "independentModel": 0.48942195346718154
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": true,
-        "volatilityPath": true
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
       "canonicalGameId": "ESPN-401858216",
       "team": "California",
       "opponent": "Syracuse",
@@ -272,35 +163,6 @@
     },
     {
       "week": 2,
-      "canonicalGameId": "ESPN-401866418",
-      "team": "Jacksonville State",
-      "opponent": "Ohio",
-      "currentSpread": "+2.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 53,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 1,
-        "availability": 1,
-        "productionModel": 0.4,
-        "independentModel": 0
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": true,
-        "volatilityPath": true
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
       "canonicalGameId": "ESPN-401858214",
       "team": "Rutgers",
       "opponent": "Boston College",
@@ -324,64 +186,6 @@
       "researchFlags": {
         "highProfile": true,
         "modelSupport": true,
-        "volatilityPath": true
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
-      "canonicalGameId": "ESPN-401856677",
-      "team": "Mississippi State",
-      "opponent": "Minnesota",
-      "currentSpread": "+1.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 50,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 1,
-        "availability": 1,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": false,
-        "volatilityPath": true
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 2,
-      "canonicalGameId": "ESPN-401862705",
-      "team": "North Texas",
-      "opponent": "UNLV",
-      "currentSpread": "+3",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 50,
-      "tier": "B",
-      "components": {
-        "qbStability": 1,
-        "trenchResistance": 1,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 1,
-        "availability": 1,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": true,
-        "modelSupport": false,
         "volatilityPath": true
       },
       "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
@@ -857,7 +661,7 @@
       "canonicalGameId": "ESPN-401867796",
       "team": "Louisiana Tech",
       "opponent": "LSU",
-      "currentSpread": "+34.5",
+      "currentSpread": "+35.5",
       "band": "UPSET-LAB",
       "profileScore": 67,
       "tier": "A",
@@ -1060,7 +864,7 @@
       "canonicalGameId": "ESPN-401858445",
       "team": "Louisiana",
       "opponent": "USC",
-      "currentSpread": "+31.5",
+      "currentSpread": "+30.5",
       "band": "UPSET-LAB",
       "profileScore": 67,
       "tier": "A",
@@ -1350,7 +1154,7 @@
       "canonicalGameId": "ESPN-401858213",
       "team": "Florida A&M",
       "opponent": "Miami",
-      "currentSpread": "+57.5",
+      "currentSpread": "+58.5",
       "band": "UPSET-LAB",
       "profileScore": 50,
       "tier": "B",
@@ -2393,6 +2197,93 @@
     },
     {
       "week": 2,
+      "canonicalGameId": "ESPN-401856682",
+      "team": "Ohio State",
+      "opponent": "Texas",
+      "currentSpread": "+1.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 64,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 1,
+        "coachingSituational": 0,
+        "availability": 1,
+        "productionModel": 0,
+        "independentModel": 1.6677877237851666
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "unknown",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": true,
+        "volatilityPath": true
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
+      "canonicalGameId": "ESPN-401858224",
+      "team": "Purdue",
+      "opponent": "Wake Forest",
+      "currentSpread": "+3",
+      "band": "INTERMEDIATE",
+      "profileScore": 63,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 1,
+        "availability": 1,
+        "productionModel": 0,
+        "independentModel": 1.5173292225764636
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": true,
+        "volatilityPath": true
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
+      "canonicalGameId": "ESPN-401864502",
+      "team": "Air Force",
+      "opponent": "North Dakota State",
+      "currentSpread": "+2.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 58,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 0,
+        "havocVolatility": 0,
+        "coachingSituational": 1,
+        "availability": 1,
+        "productionModel": 0,
+        "independentModel": 2
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": true,
+        "volatilityPath": false
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
       "canonicalGameId": "ESPN-401864578",
       "team": "New Mexico State",
       "opponent": "Hawai'i",
@@ -2410,6 +2301,64 @@
         "availability": 1,
         "productionModel": 0,
         "independentModel": 1.0165882352941176
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": true,
+        "volatilityPath": true
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
+      "canonicalGameId": "ESPN-401860884",
+      "team": "UTSA",
+      "opponent": "Texas State",
+      "currentSpread": "+1.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 55,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 1,
+        "availability": 1,
+        "productionModel": 0.1,
+        "independentModel": 0.48942195346718154
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": true,
+        "volatilityPath": true
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
+      "canonicalGameId": "ESPN-401866418",
+      "team": "Jacksonville State",
+      "opponent": "Ohio",
+      "currentSpread": "+2.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 53,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 1,
+        "availability": 1,
+        "productionModel": 0.4,
+        "independentModel": 0
       },
       "deepDiveStatus": "COMPLETE",
       "informationQuality": "standard",
@@ -2455,6 +2404,64 @@
       "team": "Arizona",
       "opponent": "BYU",
       "currentSpread": "+7.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 50,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 1,
+        "availability": 1,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": false,
+        "volatilityPath": true
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
+      "canonicalGameId": "ESPN-401856677",
+      "team": "Mississippi State",
+      "opponent": "Minnesota",
+      "currentSpread": "+1.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 50,
+      "tier": "B",
+      "components": {
+        "qbStability": 1,
+        "trenchResistance": 1,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 1,
+        "availability": 1,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": true,
+        "modelSupport": false,
+        "volatilityPath": true
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 2,
+      "canonicalGameId": "ESPN-401862705",
+      "team": "North Texas",
+      "opponent": "UNLV",
+      "currentSpread": "+3",
       "band": "INTERMEDIATE",
       "profileScore": 50,
       "tier": "B",
