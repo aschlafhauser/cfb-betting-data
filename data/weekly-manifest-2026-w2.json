@@ -1,72 +1,22 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T22:38:53.821Z",
+  "updatedAt": "2026-09-10T23:05:32.000Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
-    "canonicalSchedule": {
-      "status": "PASS",
-      "expectedGames": 86,
-      "actualGames": 86,
-      "detail": "Canonical selected-week schedule coverage."
-    },
-    "marketCoverage": {
-      "status": "PASS",
-      "minimumRequired": 60,
-      "actualMarketGames": 85,
-      "detail": "Current spread/total coverage from canonical board."
-    },
-    "deepDiveEvidence": {
-      "status": "PASS",
-      "required": 86,
-      "complete": 86,
-      "pending": 0,
-      "fullEvidence": 86,
-      "sourceLimited": 0,
-      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
-    },
-    "unifiedUpsetResearch": {
-      "status": "PASS",
-      "detail": "Research artifact week=2; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."
-    },
-    "marketMovers": {
-      "status": "PASS",
-      "detail": "Current derived mover set has 8 reference games."
-    },
-    "underdogSpecial": {
-      "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 12 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."
-    },
-    "longshotUpsetLab": {
-      "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 62 visible candidates."
-    },
-    "expertEpisodeInventory": {
-      "status": "IN_PROGRESS",
-      "primaryLedgerStatus": "SYNCHRONIZED",
-      "ledgerSyncReport": "data/expert-ledger-reconciliation.json",
-      "latestReconciliation": "2026-09-10-1648-hourly-reconciliation.json",
-      "pointImpact": 0,
-      "detail": "Primary expert ledger is losslessly synchronized with governed audit records (140 ledger records; 0 missing). Episode discovery/completeness remains separately governed."
-    },
-    "canonicalGameJoins": {
-      "status": "PASS-DERIVED-LAYERS",
-      "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
-    },
-    "productionVerifier": {
-      "status": "PENDING-LIVE-CHECK",
-      "detail": "Live portal verification runs after runtime artifacts are committed/deployed."
-    },
-    "preKickoffSnapshots": {
-      "status": "IN_PROGRESS",
-      "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
-    }
+    "canonicalSchedule": {"status":"PASS","expectedGames":86,"actualGames":86,"detail":"Canonical selected-week schedule coverage."},
+    "marketCoverage": {"status":"PASS","minimumRequired":60,"actualMarketGames":85,"detail":"Current spread/total coverage from canonical board."},
+    "deepDiveEvidence": {"status":"PASS","required":86,"complete":86,"pending":0,"fullEvidence":86,"sourceLimited":0,"detail":"Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."},
+    "unifiedUpsetResearch": {"status":"PASS","detail":"Research artifact week=2 refreshed from canonical board at 2026-09-10T22:38:05.925Z; routingViolations=0; research remains zero-impact on production pricing/ledger."},
+    "marketMovers": {"status":"PASS","detail":"Current derived mover set has 8 reference games."},
+    "underdogSpecial": {"status":"PASS","detail":"Canonical +3.5-to-+7 screen refreshed; 12 qualifying spread-band underdogs. Exact executable ML remains separately required where governed specialty rules require it."},
+    "longshotUpsetLab": {"status":"PASS","detail":"Canonical longshot screen refreshed from the same current board; Florida A&M remains research-only and cannot activate a wager."},
+    "expertEpisodeInventory": {"status":"IN_PROGRESS","primaryLedgerStatus":"SYNCHRONIZED","ledgerSyncReport":"data/expert-ledger-reconciliation.json","latestReconciliation":"2026-09-10-1648-hourly-reconciliation.json","pointImpact":0,"detail":"Primary expert ledger remains losslessly synchronized with governed audit records (140 ledger records; 0 missing). No newer governed record requiring a fresh sync was identified in this pass."},
+    "canonicalGameJoins": {"status":"PASS-DERIVED-LAYERS","detail":"Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."},
+    "productionVerifier": {"status":"PENDING-LIVE-CHECK","detail":"Live portal verification remains unresolved; repository gate cannot be promoted to fully HEALTHY until live verification passes."},
+    "preKickoffSnapshots": {"status":"IN_PROGRESS","detail":"Florida A&M-Miami immutable snapshot frozen at 18:05:32 CT, 54.5 minutes before kickoff; all later games remain individually required. Snapshot was captured immediately on this run, approximately 5.5 minutes inside the nominal 60-minute lower bound, and is preserved immutably."}
   },
-  "currentPriorityQueue": [
-    "Maintain injury/market/expert refreshes through kickoff",
-    "Complete remaining episode reconciliation",
-    "Freeze each final pre-kickoff snapshot"
-  ],
+  "currentPriorityQueue": ["Maintain injury/market/expert refreshes through kickoff","Complete remaining episode reconciliation","Freeze each remaining final pre-kickoff snapshot","Clear live production verification"],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
