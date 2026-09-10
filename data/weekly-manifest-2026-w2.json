@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T14:25:11.731Z",
+  "updatedAt": "2026-09-10T14:27:00.000Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
@@ -26,13 +26,17 @@
       "sourceLimited": 0,
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
+    "unifiedUpsetResearch": {
+      "status": "PASS",
+      "detail": "Week 2 prospective research refreshed with 84 underdogs: 10 routed to +3.5-through-+7 Underdog Special research, 63 routed to +9.5-or-longer Upset Lab research, 11 retained as intermediate/calibration, routingViolations=0. Research production impact remains zero."
+    },
     "marketMovers": {
       "status": "PASS",
       "detail": "Current derived mover set has 8 reference games."
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 10 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; 10 current underdogs. Current ML availability is evaluated separately; no wager is inferred."
     },
     "longshotUpsetLab": {
       "status": "PASS",
@@ -44,7 +48,7 @@
     },
     "canonicalGameJoins": {
       "status": "PASS-DERIVED-LAYERS",
-      "detail": "New Deep Dive, Market Movers, Underdog and Longshot derived records use canonical ESPN game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
+      "detail": "Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
       "status": "PENDING-LIVE-CHECK",
