@@ -8,17 +8,18 @@ on:
       - 'scripts/verify-live-portal.mjs'
       - '.github/workflows/capture-governed-runtime.yml'
       - 'data/weekly-board.json'
+      - 'data/underdog-special.json'
+      - 'data/longshot-upset-lab.json'
+      - 'data/market-model-history.json'
+      - 'data/expert-episode-audit/**'
   schedule:
     - cron: '17 * * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: cfb-governed-runtime-capture
   cancel-in-progress: true
-
 jobs:
   capture:
     if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
@@ -40,18 +41,15 @@ jobs:
         run: node scripts/capture-governed-runtime.mjs
       - name: Persist changed runtime board
         run: |
-          if git diff --quiet -- data/weekly-board.json; then
-            echo 'No runtime changes.'
-          else
+          if git diff --quiet -- data/weekly-board.json; then echo 'No runtime changes.'; else
             git config user.name 'cfb-runtime-bot'
             git config user.email 'cfb-runtime-bot@users.noreply.github.com'
             git add data/weekly-board.json
             git commit -m 'chore: persist governed CFB runtime [skip ci]'
-            # Rebase onto any intelligence/audit commits that landed during capture.
             git pull --rebase origin main
             git push origin main
           fi
-      - name: Verify live production portal
+      - name: Verify live production decision system
         if: ${{ always() }}
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
