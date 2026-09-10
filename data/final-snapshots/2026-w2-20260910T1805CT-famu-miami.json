@@ -1,0 +1,48 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "snapshotType": "frozen-pre-kickoff",
+  "frozenAt": "2026-09-10T18:05:32-05:00",
+  "workflowStage": "Final / Kickoff Locked",
+  "canonicalGameId": "ESPN-401858213",
+  "game": "Florida A&M at Miami",
+  "kickoff": "2026-09-10T19:00:00-05:00",
+  "snapshotTimingMinutesBeforeKickoff": 54.5,
+  "snapshotTimingAssessment": "CAPTURED IMMEDIATELY ON AUTOMATION RUN; approximately 5.5 minutes inside the nominal 60-minute lower bound, but before kickoff. Historical state is frozen and must not be rewritten.",
+  "market": {
+    "canonicalBoardObservedAt": "2026-09-10T22:38:05.860Z",
+    "spread": "Miami -59.5",
+    "total": 66.5,
+    "relevantMoneyline": "Florida A&M +8000 from current governed free-moneyline artifact",
+    "externalCrossCheck": "State of the U pregame publication showed Miami -57.5 / 62.5 earlier on Sep. 10; canonical governed board had subsequently moved farther to Miami -59.5 / 66.5.",
+    "movementContext": "Governed Tuesday reference Miami -53.5 / 60.5 -> final governed board Miami -59.5 / 66.5. Material favorite and total move preserved as observed market state; no fair is inferred from the move."
+  },
+  "personnelContext": {
+    "miamiQB": "Darian Mensah expected starter; no late governed quarterback change identified before freeze.",
+    "miamiAvailability": "Previously governed Miami secondary absences remain part of dossier; no new pre-freeze status change justified an ad-hoc fair adjustment.",
+    "famuContext": "Florida A&M is playing its second game at Hard Rock Stadium in five days after Sunday's loss to South Carolina State; quarterback usage remained a dossier uncertainty, but no verified late starter change was used to manufacture a price adjustment."
+  },
+  "research": {
+    "unifiedUpsetResearch": "REFRESHED on canonical board at 2026-09-10T22:38:05.925Z",
+    "floridaAMScore25": 4.5,
+    "routing": "LONGSHOT / UPSET LAB",
+    "governance": "RESEARCH-ONLY; zero automatic impact on production fair, model weights, Bet Activation Gate, official ledger or units."
+  },
+  "governance": {
+    "productionFair": null,
+    "fairAction": "PRESERVE EXISTING GOVERNED FAIR STATE; DO NOT REVERSE-ENGINEER FROM MARKET",
+    "finalExecutableEdge": null,
+    "status": "PASS / NO OFFICIAL ACTIVATION / FINAL-KICKOFF-LOCKED",
+    "betActivationGateV1_1": "NO OFFICIAL BET — no source-valid governed production fair/executable edge pair supports activation.",
+    "underdogSpecialV1_1": "NOT APPLICABLE; Florida A&M is routed to Longshot/Upset Lab by spread band.",
+    "historicalIntegrity": "IMMUTABLE. Do not rewrite this snapshot after kickoff or based on result."
+  },
+  "sources": [
+    "data/weekly-board.json",
+    "data/upset-research-2026-w2.json",
+    "data/longshot-upset-lab.json",
+    "data/free-moneylines-2026-w2.json",
+    "data/game-day-intel/2026-w2-20260910T0724ET-famu-miami.json"
+  ]
+}
