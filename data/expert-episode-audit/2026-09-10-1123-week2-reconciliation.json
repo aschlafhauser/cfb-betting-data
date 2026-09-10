@@ -1,0 +1,31 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "auditType": "hourly-current-week-reconciliation",
+  "auditedAt": "2026-09-10T11:23:18-05:00",
+  "status": "PROVISIONAL",
+  "sourcesChecked": [
+    "Cover 3 / CBS Sports first-party inventory",
+    "The Solid Verbal first-party latest-episode inventory",
+    "Josh Pate / Pate State first-party inventory",
+    "The McShay Show / first-party Apple/Ringer inventory",
+    "established adjacent CFB source families"
+  ],
+  "evidenceSurfaces": [
+    {"source":"The Solid Verbal","surface":"first-party latest episode page","result":"Latest remains College Football Week 2: Ohio State-Texas, Michigan's Gut Check & Picks for a Loaded Slate; already governed, no new attributable incremental package."},
+    {"source":"The McShay Show","surface":"first-party show inventory / Apple Podcasts","result":"Latest visible episodes remain Sunday/Week 1 reaction material; no new Week 2 matchup-specific episode visible in this pass."},
+    {"source":"Cover 3 / Josh Pate","surface":"first-party-led discovery plus fallback search","result":"No newly surfaced current-week episode with safely attributable incremental picks/mechanisms beyond governed inventory."}
+  ],
+  "newMaterialRecords": 0,
+  "newRelevantEpisodes": [],
+  "dedupeApplied": true,
+  "unsupportedPicksInferred": false,
+  "quantitativeFairModified": false,
+  "canonicalJoinFailures": 0,
+  "discoveryNotes": "No genuinely incremental safely attributable Week 2 CFB package surfaced after first-party-led checks. Existing Solid Verbal, Josh Pate/Locker Room, Winning Cures Everything and other governed records remain deduped.",
+  "primaryLedgerStatus": "UNRESOLVED_INGESTION_FAILURE",
+  "primaryLedgerDetail": "data/expert-weekly.json remains the designated primary expert ledger but newer governed episode-audit records are not demonstrably losslessly synchronized into it. The oversized ledger must not be replaced from a partial/truncated read surface. Exact records remain preserved in governed audits until a lossless merge path is available.",
+  "runtimeWrite": "CFB only",
+  "productionImpact": {"fairPoints":0,"modelWeights":0,"unifiedUpsetRouting":0,"betActivationGate":0,"officialLedger":0,"units":0}
+}
