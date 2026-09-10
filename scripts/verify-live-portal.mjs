@@ -7,7 +7,13 @@ let diag=null;
 for(let attempt=1;attempt<=8;attempt++){
  await page.goto(`${portal}?verify=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
  try{await page.waitForFunction(n=>Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&Array.isArray(window.CFB_DEEP_DIVES_CURRENT?.dossiers)&&window.CFB_DEEP_DIVES_CURRENT.dossiers.length===n&&window.CFB_MARKET_MOVERS_CURRENT&&window.CFB_WEEKLY_MANIFEST_CURRENT&&window.CFB_LONGSHOT_UPSET_LAB_2026&&window.CFB_UNDERDOG_SPECIAL_2026,n,{timeout:12000})}catch{}
+ // Wait for the app-side specialty renderers, not just their runtime JSON.
+ try{await page.waitForFunction(()=>typeof window.renderLongshotUpsetLab==='function'&&typeof window.renderUnderdogSpecial==='function',{timeout:8000})}catch{}
  await page.waitForTimeout(1500);
+ // Activate and render the dynamic tabs exactly as a user would before inspecting DOM state.
+ for(const tab of ['match','longshots','underdog']){
+   try{await page.locator(`nav button[data-tab="${tab}"]`).click({timeout:3000});await page.waitForTimeout(150)}catch{}
+ }
  diag=await page.evaluate(()=>{
   const rows=Array.from(document.querySelectorAll('#scheduleRows tr')),games=window.CFB_WEEKLY_BOARD_2026?.games||[];
   const meaningful=rows.filter(r=>{const t=r.children?.[5]?.textContent?.trim()||'';return t&&!/pending|—/i.test(t)&&!/^Pick(?:power|\s|$)/i.test(t)}).length;
@@ -16,25 +22,26 @@ for(let attempt=1;attempt<=8;attempt++){
   const deepDiveComplete=games.filter(g=>['COMPLETE','COMPLETE-SOURCE-LIMITED'].includes(g.deepDiveStatus)&&Number(g.deepDiveEvidenceCount)>0).length;
   const falseDeepDive=games.filter(g=>/deep-dive-complete/i.test(g.stage||'')&&!(['COMPLETE','COMPLETE-SOURCE-LIMITED'].includes(g.deepDiveStatus)&&Number(g.deepDiveEvidenceCount)>0)).length;
   const integrity=document.getElementById('runtimeIntegrity')?.textContent?.trim()||'',manifest=document.getElementById('weeklyManifestStrip')?.textContent?.trim()||'',dossiers=window.CFB_DEEP_DIVES_CURRENT?.dossiers||[],movers=window.CFB_MARKET_MOVERS_CURRENT?.movers||[];
-  let matchPanel=false;try{const s=document.getElementById('matchSel');if(s&&s.options.length){s.selectedIndex=0;s.dispatchEvent(new Event('change',{bubbles:true}))}}catch{}matchPanel=!!document.getElementById('governedDeepDivePanel');
+  let matchPanel=false;try{const s=document.getElementById('matchSel');if(s&&s.options.length){s.selectedIndex=0;s.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch();}}catch{}matchPanel=!!document.getElementById('governedDeepDivePanel');
   try{if(typeof window.renderLongshotUpsetLab==='function')window.renderLongshotUpsetLab()}catch{}
   try{if(typeof window.renderUnderdogSpecial==='function')window.renderUnderdogSpecial()}catch{}
   const longshotRuntime=(window.CFB_LONGSHOT_UPSET_LAB_2026?.candidates||[]).length;
-  const longshotRendered=document.querySelectorAll('#lsCards > .card').length;
+  const longshotRendered=document.querySelectorAll('#lsCards .ls-candidate-card,#lsCards > .card').length;
   const longshotText=document.getElementById('lsCards')?.textContent?.trim()||'';
+  const longshotComponents=document.querySelectorAll('#lsCards .ls-score-component').length;
   const underdogData=window.CFB_UNDERDOG_SPECIAL_2026||{};
   const underdogRuntime=(underdogData.candidates||underdogData.games||underdogData.items||[]).length;
   const underdogSection=document.getElementById('underdog');
   const underdogRendered=underdogSection?underdogSection.querySelectorAll('.card,[data-candidate],tr').length:0;
-  const longshotVisibleOk=longshotRuntime===0||longshotRendered>0;
+  const longshotVisibleOk=longshotRuntime===0||(longshotRendered===longshotRuntime&&longshotComponents>=longshotRuntime*9);
   const underdogVisibleOk=underdogRuntime===0||underdogRendered>0;
-  return{sourceGames:games.length,renderedRows:rows.length,meaningful,markets,picks,deepDiveComplete,falseDeepDive,dossierCount:dossiers.length,moverCount:movers.length,integrity,manifest,matchPanel,longshotRuntime,longshotRendered,longshotText,longshotVisibleOk,underdogRuntime,underdogRendered,underdogVisibleOk,runtime:window.CFB_RUNTIME_DATA||null};
+  return{sourceGames:games.length,renderedRows:rows.length,meaningful,markets,picks,deepDiveComplete,falseDeepDive,dossierCount:dossiers.length,moverCount:movers.length,integrity,manifest,matchPanel,longshotRuntime,longshotRendered,longshotComponents,longshotText,longshotVisibleOk,underdogRuntime,underdogRendered,underdogVisibleOk,runtime:window.CFB_RUNTIME_DATA||null};
  });
  console.log(`Live verification attempt ${attempt}: ${JSON.stringify(diag)}`);
  const structural=diag.sourceGames===expected&&diag.renderedRows===expected&&diag.meaningful>=minModels&&diag.markets>=minMarkets&&diag.picks===0&&diag.falseDeepDive===0;
  const decisionLayers=diag.dossierCount===expected&&diag.deepDiveComplete===expected&&diag.moverCount>0&&diag.matchPanel;
  const specialty=!/Runtime integrity:\s*FAIL/i.test(diag.integrity)&&diag.longshotVisibleOk&&diag.underdogVisibleOk;
- if(structural&&decisionLayers&&specialty){await browser.close();console.log(`LIVE PORTAL VERIFIED: rows=${expected}; markets=${diag.markets}; meaningful models=${diag.meaningful}; Deep Dives=${diag.deepDiveComplete}/${expected}; dossiers=${diag.dossierCount}; movers=${diag.moverCount}; Matchup Center governed panel=YES; Longshot ${diag.longshotRendered}/${diag.longshotRuntime}; Underdog visible=${diag.underdogVisibleOk}; specialty integrity PASS.`);process.exit(0)}
+ if(structural&&decisionLayers&&specialty){await browser.close();console.log(`LIVE PORTAL VERIFIED: rows=${expected}; markets=${diag.markets}; meaningful models=${diag.meaningful}; Deep Dives=${diag.deepDiveComplete}/${expected}; dossiers=${diag.dossierCount}; movers=${diag.moverCount}; Matchup Center governed panel=YES; Longshot ${diag.longshotRendered}/${diag.longshotRuntime} with ${diag.longshotComponents} component rows; Underdog visible=${diag.underdogVisibleOk}; specialty integrity PASS.`);process.exit(0)}
  await page.waitForTimeout(4000);
 }
 await browser.close();throw new Error(`Live production verification failed decision-system gate: ${JSON.stringify(diag)}`);
