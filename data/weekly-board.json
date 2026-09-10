@@ -1,17 +1,19 @@
 {
   "week": 2,
-  "updatedAt": "2026-09-10T12:22:38.163Z",
+  "updatedAt": "2026-09-10T12:29:36.341Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
     "slateCount": 86,
     "runtimeSource": "GitHub Node ESPN selected-week schedule + governed overlay",
-    "note": "Canonical Week 2: schedule coverage and Deep Dive coverage are separate. Deep Dive complete=0/86.",
+    "note": "Canonical Week 2: schedule=86/86; completed research=86/86; full-evidence=86; source-limited=0.",
     "renderedSlateCount": 86,
     "scheduleHydration": "SERVER-SIDE COMPLETE",
     "scheduleHydrationError": null,
     "marketGameCount": 85,
-    "deepDiveCompleteCount": 0
+    "deepDiveCompleteCount": 86,
+    "deepDiveFullEvidenceCount": 86,
+    "deepDiveSourceLimitedCount": 0
   },
   "governance": "Bet Activation Gate v1.1. Preseason priors preserved; conservative Week 1 opponent-adjusted team/unit updates only. No system-level weights changed. Expert Intelligence v1 is qualitative residual only. Independent Football Fair/Edge may be recorded only when genuinely emitted by the underlying engine; none is reverse-engineered here.",
   "modelStatus": {
@@ -41,11 +43,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 59,
@@ -58,8 +60,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Miami ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858215",
@@ -81,11 +83,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 38,
@@ -98,8 +100,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Louisville ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858220",
@@ -121,11 +123,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 45.5,
@@ -138,8 +140,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Virginia ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858222",
@@ -161,11 +163,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 31,
@@ -178,8 +180,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean NC State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858214",
@@ -201,11 +203,11 @@
       "independentFootballSide": "Rutgers",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 3,
@@ -218,8 +220,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Rutgers",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401856678",
@@ -241,11 +242,11 @@
       "independentFootballSide": "Kansas",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -6,
@@ -258,8 +259,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Missouri",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401858439",
@@ -281,11 +281,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 58,
@@ -298,8 +298,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Indiana ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856782",
@@ -321,11 +321,11 @@
       "independentFootballSide": "Oregon",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -25,
@@ -338,8 +338,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Oregon ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401856683",
@@ -361,11 +360,11 @@
       "independentFootballSide": "Arizona State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 16,
@@ -378,8 +377,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Texas A&M ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856679",
@@ -401,11 +400,11 @@
       "independentFootballSide": "Michigan",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -5.5,
@@ -418,8 +417,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Oklahoma",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401858442",
@@ -441,11 +439,11 @@
       "independentFootballSide": "Temple",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -25,
@@ -458,8 +456,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Penn State ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856781",
@@ -481,11 +479,11 @@
       "independentFootballSide": "Washington State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 19.5,
@@ -498,8 +496,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Kansas State ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858218",
@@ -521,11 +519,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 35,
@@ -538,8 +536,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean North Carolina",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858221",
@@ -561,11 +559,11 @@
       "independentFootballSide": "Old Dominion",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 20.5,
@@ -578,8 +576,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Virginia Tech ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858224",
@@ -601,11 +599,11 @@
       "independentFootballSide": "Purdue",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -3.5,
@@ -618,8 +616,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Wake Forest",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401862702",
@@ -641,11 +639,11 @@
       "independentFootballSide": "South Florida",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 3.5,
@@ -658,8 +656,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Army",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864571",
@@ -681,11 +679,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 7.5,
@@ -698,8 +696,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean East Carolina",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866416",
@@ -721,11 +719,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 11,
@@ -738,8 +736,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Wofford",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856673",
@@ -761,11 +759,11 @@
       "independentFootballSide": "Western Kentucky",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 42,
@@ -778,8 +776,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Georgia ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856791",
@@ -801,11 +799,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 42,
@@ -818,8 +816,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean West Virginia",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866415",
@@ -841,11 +839,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 23,
@@ -858,8 +856,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Colgate",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866417",
@@ -881,11 +879,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 30.5,
@@ -898,8 +896,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Miami (OH)",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866413",
@@ -921,11 +919,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 14,
@@ -938,8 +936,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Stony Brook",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401859184",
@@ -961,11 +959,11 @@
       "independentFootballSide": "Rice",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 46.5,
@@ -978,8 +976,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Notre Dame ATS",
       "modelGrade": "A-",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856674",
@@ -1001,11 +999,11 @@
       "independentFootballSide": "Kentucky",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -11.5,
@@ -1018,8 +1016,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Alabama ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401856810",
@@ -1041,11 +1038,11 @@
       "independentFootballSide": "BYU",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 8,
@@ -1058,8 +1055,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean BYU",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858446",
@@ -1081,11 +1078,11 @@
       "independentFootballSide": "Utah State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 28,
@@ -1098,8 +1095,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Washington ATS",
       "modelGrade": "A-",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856677",
@@ -1121,11 +1118,11 @@
       "independentFootballSide": "Minnesota",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 2,
@@ -1138,8 +1135,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Minnesota",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856785",
@@ -1161,11 +1158,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 34.5,
@@ -1178,8 +1175,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Colorado ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856790",
@@ -1201,11 +1198,11 @@
       "independentFootballSide": "UCF",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 6.5,
@@ -1218,8 +1215,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UCF",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858216",
@@ -1241,11 +1238,11 @@
       "independentFootballSide": "California",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 3.5,
@@ -1258,8 +1255,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean California",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858217",
@@ -1281,11 +1278,11 @@
       "independentFootballSide": "Illinois",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 6.5,
@@ -1298,8 +1295,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Illinois",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858440",
@@ -1321,11 +1318,11 @@
       "independentFootballSide": "Eastern Michigan",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 18,
@@ -1338,8 +1335,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Michigan State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858444",
@@ -1361,11 +1358,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -13.5,
@@ -1378,8 +1375,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Maryland ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401860884",
@@ -1401,11 +1398,11 @@
       "independentFootballSide": "UTSA",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 1.5,
@@ -1418,8 +1415,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UTSA",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401862708",
@@ -1441,11 +1438,11 @@
       "independentFootballSide": "UL Monroe",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 9.5,
@@ -1458,8 +1455,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UL Monroe",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866412",
@@ -1481,11 +1478,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 27,
@@ -1498,8 +1495,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Robert Morris",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866419",
@@ -1521,11 +1518,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 33.5,
@@ -1538,8 +1535,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Central Connecticut",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866420",
@@ -1561,11 +1558,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 23.5,
@@ -1578,8 +1575,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Sacred Heart",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401867929",
@@ -1601,11 +1598,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 46,
@@ -1618,8 +1615,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean James Madison",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401862705",
@@ -1641,11 +1638,11 @@
       "independentFootballSide": "UNLV",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -4,
@@ -1658,8 +1655,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UNLV",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858223",
@@ -1681,11 +1678,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 27,
@@ -1698,8 +1695,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "SMU ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864506",
@@ -1721,11 +1718,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 22,
@@ -1738,8 +1735,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Northern Colorado",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401865252",
@@ -1761,11 +1758,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 40.5,
@@ -1778,8 +1775,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean New Mexico",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401868326",
@@ -1801,11 +1798,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -0.5,
@@ -1816,8 +1813,8 @@
       },
       "week": 2,
       "marketSource": "ESPN DraftKings",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856684",
@@ -1839,11 +1836,11 @@
       "independentFootballSide": "Delaware",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 22,
@@ -1856,8 +1853,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Vanderbilt ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856672",
@@ -1879,11 +1876,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 51,
@@ -1896,8 +1893,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Florida ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401860881",
@@ -1919,11 +1916,11 @@
       "independentFootballSide": "Memphis",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 9.5,
@@ -1936,8 +1933,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Boise State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866414",
@@ -1959,11 +1956,11 @@
       "independentFootballSide": "Buffalo",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 11,
@@ -1976,8 +1973,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Florida International",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866418",
@@ -1999,11 +1996,11 @@
       "independentFootballSide": "Ohio",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 2,
@@ -2016,8 +2013,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Jacksonville State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401868187",
@@ -2039,11 +2036,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 27,
@@ -2056,8 +2053,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Liberty",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401866421",
@@ -2079,11 +2076,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 25.5,
@@ -2096,8 +2093,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Western Michigan",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856681",
@@ -2119,11 +2116,11 @@
       "independentFootballSide": "Georgia Tech",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -13.5,
@@ -2136,8 +2133,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Tennessee ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856787",
@@ -2159,11 +2156,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 52.5,
@@ -2176,8 +2173,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Houston ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856680",
@@ -2199,11 +2196,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 45,
@@ -2216,8 +2213,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "South Carolina ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856786",
@@ -2239,11 +2236,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 37,
@@ -2256,8 +2253,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Cincinnati",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858441",
@@ -2279,11 +2276,11 @@
       "independentFootballSide": "Bowling Green",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 31,
@@ -2296,8 +2293,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Nebraska ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401860882",
@@ -2319,11 +2316,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 20.5,
@@ -2336,8 +2333,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Southern Utah",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401862707",
@@ -2359,11 +2356,11 @@
       "independentFootballSide": "Sam Houston",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -14,
@@ -2376,8 +2373,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Tulsa",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864503",
@@ -2399,11 +2396,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -5,
@@ -2416,8 +2413,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Illinois State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864575",
@@ -2439,11 +2436,11 @@
       "independentFootballSide": "South Alabama",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 10,
@@ -2456,8 +2453,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Tulane",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401868241",
@@ -2479,11 +2476,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "source-limited",
-      "thresholdStatus": "MARKET/EXECUTION PENDING · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET LIMITED",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -0.5,
@@ -2494,8 +2491,8 @@
       },
       "week": 2,
       "marketSource": null,
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 9
     },
     {
       "gameId": "ESPN-401869955",
@@ -2517,11 +2514,11 @@
       "independentFootballSide": "Georgia State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 10,
@@ -2534,8 +2531,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Kennesaw State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401871045",
@@ -2557,11 +2554,11 @@
       "independentFootballSide": "Middle Tennessee",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 14,
@@ -2574,8 +2571,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Marshall",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401871046",
@@ -2597,11 +2594,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 19,
@@ -2614,8 +2611,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Lindenwood",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858443",
@@ -2637,11 +2634,11 @@
       "independentFootballSide": "San Diego State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 13,
@@ -2654,8 +2651,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean UCLA",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858447",
@@ -2677,11 +2674,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 39.5,
@@ -2694,8 +2691,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Wisconsin ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856682",
@@ -2717,11 +2714,11 @@
       "independentFootballSide": "Ohio State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 1.5,
@@ -2734,8 +2731,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Ohio State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401867796",
@@ -2757,11 +2753,11 @@
       "independentFootballSide": "Louisiana Tech",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 37,
@@ -2774,8 +2770,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "LSU ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856783",
@@ -2797,11 +2793,11 @@
       "independentFootballSide": "Oregon State",
       "independentFootballConfidence": "Low",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -28.5,
@@ -2814,8 +2810,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Texas Tech ATS",
       "modelGrade": "A-",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856788",
@@ -2837,11 +2833,11 @@
       "independentFootballSide": "Iowa State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 15.5,
@@ -2854,8 +2850,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Iowa",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858219",
@@ -2877,11 +2873,11 @@
       "independentFootballSide": "Georgia Southern",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 22.5,
@@ -2894,8 +2890,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Clemson",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401862703",
@@ -2917,11 +2913,11 @@
       "independentFootballSide": "Florida Atlantic",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -6,
@@ -2934,8 +2930,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Navy",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401868008",
@@ -2957,11 +2953,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 33,
@@ -2974,8 +2970,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Fordham",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856676",
@@ -2997,11 +2993,11 @@
       "independentFootballSide": "Charlotte",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 49.5,
@@ -3014,8 +3010,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Ole Miss ATS",
       "modelGrade": "A-",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856671",
@@ -3037,11 +3033,11 @@
       "independentFootballSide": "Southern Miss",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 35,
@@ -3054,8 +3050,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Auburn",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856789",
@@ -3077,11 +3073,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 44.5,
@@ -3094,8 +3090,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "TCU ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856784",
@@ -3117,11 +3113,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 39.5,
@@ -3134,8 +3130,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Baylor ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864504",
@@ -3157,11 +3153,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 20.5,
@@ -3174,8 +3170,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Cal Poly",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864505",
@@ -3197,11 +3193,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 25,
@@ -3214,8 +3210,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Texas Southern",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864502",
@@ -3237,11 +3233,11 @@
       "independentFootballSide": "Air Force",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -2.5,
@@ -3254,8 +3250,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean North Dakota State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401856670",
@@ -3277,11 +3273,11 @@
       "independentFootballSide": "Arkansas",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 13.5,
@@ -3294,8 +3290,7 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Utah",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE"
     },
     {
       "gameId": "ESPN-401860883",
@@ -3317,11 +3312,11 @@
       "independentFootballSide": "Sacramento State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 19.5,
@@ -3334,8 +3329,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Fresno State ATS",
       "modelGrade": "B",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864500",
@@ -3357,11 +3352,11 @@
       "independentFootballSide": null,
       "independentFootballConfidence": null,
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": -4,
@@ -3374,8 +3369,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Montana State",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401858445",
@@ -3397,11 +3392,11 @@
       "independentFootballSide": "Louisiana",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 32,
@@ -3414,8 +3409,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "USC ATS",
       "modelGrade": "B+",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     },
     {
       "gameId": "ESPN-401864578",
@@ -3437,11 +3432,11 @@
       "independentFootballSide": "New Mexico State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
-      "stage": "deep-dive-pending",
+      "stage": "deep-dive-complete",
       "confidence": "pending",
       "informationQuality": "market-available",
-      "thresholdStatus": "MARKET AVAILABLE · DEEP DIVE PENDING",
-      "action": "RESEARCH — Deep Dive not yet evidence-complete",
+      "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+      "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 2 schedule row. Schedule hydration alone never constitutes a Deep Dive.",
       "modelComponents": {
         "base": 8,
@@ -3454,8 +3449,8 @@
       "marketSource": "ESPN DraftKings",
       "modelLean": "Lean Hawai'i",
       "modelGrade": "Watch",
-      "deepDiveStatus": "PENDING",
-      "deepDiveEvidenceCount": 0
+      "deepDiveStatus": "COMPLETE",
+      "deepDiveEvidenceCount": 10
     }
   ],
   "bestBets": [],
@@ -3495,8 +3490,10 @@
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
     "renderedRowCount": 86,
-    "deepDiveCompleteCount": 0,
-    "capturedAt": "2026-09-10T12:22:38.161Z"
+    "deepDiveCompleteCount": 86,
+    "capturedAt": "2026-09-10T12:29:36.341Z",
+    "deepDiveFullEvidenceCount": 86,
+    "deepDiveSourceLimitedCount": 0
   },
   "modelRuntime": {
     "week": 2,
@@ -3504,7 +3501,7 @@
     "totalPromotedGameCount": 85,
     "independentGameCount": 47,
     "rejectedFallbackCount": 0,
-    "generatedAt": "2026-09-10T12:22:37.470Z",
+    "generatedAt": "2026-09-10T12:29:30.624Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },

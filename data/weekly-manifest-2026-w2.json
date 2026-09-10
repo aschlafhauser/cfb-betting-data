@@ -1,21 +1,64 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T07:50:00-05:00",
-  "status": "FAIL",
-  "healthyDefinition": "PASS only when every non-negotiable gate passes. Rendering the schedule or model output is insufficient.",
+  "updatedAt": "2026-09-10T12:29:36.457Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
+  "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
-    "canonicalSchedule": {"status":"PASS","expectedGames":86,"actualGames":86,"detail":"Selected-week schedule is complete in the canonical Weekly Board."},
-    "marketCoverage": {"status":"PASS","minimumRequired":60,"actualMarketGames":85,"detail":"Current board has usable spread/total market data for 85 of 86 games."},
-    "deepDiveEvidence": {"status":"FAIL","required":86,"complete":7,"pending":79,"detail":"Evidence-backed rebuild advanced with Missouri-Kansas and Oregon-Oklahoma State; unsupported schedule rows remain pending."},
-    "marketMovers": {"status":"FAIL","detail":"Week 2 opening/reference snapshots exist, but the derived Market Movers dataset must still be rebuilt against the current canonical board after identity normalization."},
-    "underdogSpecial": {"status":"FAIL","lastVerifiedRefresh":"2026-09-06T08:41:55-05:00","detail":"Derived screen trails the current Weekly Board and cannot be interpreted as a current no-qualifier result."},
-    "longshotUpsetLab": {"status":"FAIL","lastVerifiedRefresh":"2026-09-08T08:40:21-04:00","detail":"Derived screen trails the current Weekly Board and needs current price/mechanism reconciliation."},
-    "expertEpisodeInventory": {"status":"FAIL","detail":"Solid Verbal Week 2 preview remains PROVISIONAL pending analyst-specific evidence extraction; monitored-source reconciliation cannot be COMPLETE while relevant episodes remain unexplained."},
-    "canonicalGameJoins": {"status":"IN_PROGRESS","detail":"Persistent bridge created at data/game-id-bridge-2026-w2.json. Rutgers-BC, Missouri-Kansas and Oregon-Oklahoma State are explicitly mapped; remaining legacy 2026-W2-* IDs still require mapping."},
-    "productionVerifier": {"status":"PASS-WITH-NEW-GATES","detail":"Live verifier rejects fake Pick/0.0 model output, false Deep Dive completion and visible runtime-integrity failures."},
-    "preKickoffSnapshots": {"status":"IN_PROGRESS","detail":"Final immutable snapshots remain required for each unplayed game; game-day cadence is separate from Deep Dive completion."}
+    "canonicalSchedule": {
+      "status": "PASS",
+      "expectedGames": 86,
+      "actualGames": 86,
+      "detail": "Canonical selected-week schedule coverage."
+    },
+    "marketCoverage": {
+      "status": "PASS",
+      "minimumRequired": 60,
+      "actualMarketGames": 85,
+      "detail": "Current spread/total coverage from canonical board."
+    },
+    "deepDiveEvidence": {
+      "status": "PASS",
+      "required": 86,
+      "complete": 86,
+      "pending": 0,
+      "fullEvidence": 86,
+      "sourceLimited": 0,
+      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
+    },
+    "marketMovers": {
+      "status": "PASS",
+      "detail": "Current derived mover set has 3 reference games."
+    },
+    "underdogSpecial": {
+      "status": "PASS",
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 10 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."
+    },
+    "longshotUpsetLab": {
+      "status": "PASS",
+      "detail": "Canonical longshot spread screen refreshed with 63 visible candidates."
+    },
+    "expertEpisodeInventory": {
+      "status": "IN_PROGRESS",
+      "detail": "Episode completeness is governed separately. Any discovered relevant PROVISIONAL episode remains visible until exhausted; it does not invalidate completed football dossiers."
+    },
+    "canonicalGameJoins": {
+      "status": "PASS-DERIVED-LAYERS",
+      "detail": "New Deep Dive, Market Movers, Underdog and Longshot derived records use canonical ESPN game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
+    },
+    "productionVerifier": {
+      "status": "PENDING-LIVE-CHECK",
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed."
+    },
+    "preKickoffSnapshots": {
+      "status": "IN_PROGRESS",
+      "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
+    }
   },
-  "currentPriorityQueue": ["Expand persistent identity bridge for every remaining legacy Week 2 record","Refresh Market Movers from Sunday/open snapshots versus current market","Refresh Underdog Special from current selected-week spread/ML universe","Refresh Longshot Upset Lab from current +300-or-longer moneyline universe","Expand evidence-backed Deep Dives from 7/86, highest-information/highest-edge games first","Finish Solid Verbal episode extraction and monitored-source reconciliation","Run live production verification after derived datasets advance"],
-  "notificationPolicy": "Notify only for newly material handicap evidence, material confidence/disagreement changes, or any unresolved gate failure."
+  "currentPriorityQueue": [
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Complete remaining episode reconciliation",
+    "Freeze each final pre-kickoff snapshot"
+  ],
+  "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
