@@ -1,18 +1,21 @@
 {
-  "version": "FREE-ML-v1",
+  "version": "FREE-ML-v2",
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-10T16:00:00Z",
+  "updatedAt": "2026-09-10T19:49:00Z",
   "status": "CURRENT-FREE-SOURCE-SWEEP",
-  "policy": "ESPN remains canonical identity/schedule source. Free-source moneylines may enrich missing ESPN MLs only when directly observed and timestamped. They do not become executable official prices without re-verification at decision time.",
+  "policy": "ESPN remains canonical identity/schedule source. Free-source moneylines enrich missing ESPN MLs only when directly observed and timestamped. They are research/screen prices and require re-verification at decision time before official execution.",
   "sources": [
-    {"name":"CBS Sports","url":"https://www.cbssports.com/college-football/odds/","role":"primary free moneyline enrichment"}
+    {"name":"CBS Sports","role":"primary free moneyline enrichment"},
+    {"name":"Sportsbook Review","role":"secondary free cross-check / broader sportsbook table"},
+    {"name":"FantasyData","role":"secondary consensus cross-check when a current moneyline is published"}
   ],
   "prices": [
-    {"canonicalGameId":"ESPN-401858215","team":"Villanova","opponent":"Louisville","moneyline":"+5500","source":"CBS Sports Week 2 Top 25 odds","observedAt":"2026-09-10T16:00:00Z","freshness":"CURRENT-OBSERVED"},
-    {"canonicalGameId":"ESPN-401858220","team":"Norfolk State","opponent":"Virginia","moneyline":"+8000","source":"CBS Sports Week 2 Top 25/MEAC odds","observedAt":"2026-09-10T16:00:00Z","freshness":"CURRENT-OBSERVED"},
-    {"canonicalGameId":"ESPN-401856683","team":"Arizona State","opponent":"Texas A&M","moneyline":"+500","source":"CBS Sports Week 2 SEC odds","observedAt":"2026-09-10T16:00:00Z","freshness":"CURRENT-OBSERVED"},
-    {"canonicalGameId":"ESPN-401856781","team":"Washington State","opponent":"Kansas State","moneyline":"+760","source":"CBS Sports Week 2 Big 12 odds","observedAt":"2026-09-10T16:00:00Z","freshness":"CURRENT-OBSERVED"},
-    {"canonicalGameId":"ESPN-401856782","team":"Oklahoma State","opponent":"Oregon","moneyline":"+1150","source":"CBS Sports Week 2 Big 12 odds","observedAt":"2026-09-10T16:00:00Z","freshness":"CURRENT-OBSERVED"}
+    {"canonicalGameId":"ESPN-401858213","team":"Florida A&M","opponent":"Miami","moneyline":"+8000","source":"Sportsbook Review live NCAAF moneyline table","observedAt":"2026-09-10T19:49:00Z","freshness":"CURRENT-OBSERVED","note":"CBS displayed no ML while SBR displayed +8000; preserve source disagreement and require execution recheck."},
+    {"canonicalGameId":"ESPN-401858215","team":"Villanova","opponent":"Louisville","moneyline":"+5500","source":"CBS Sports Week 2 odds; corroborated by Sportsbook Review","observedAt":"2026-09-10T19:49:00Z","freshness":"CURRENT-OBSERVED"},
+    {"canonicalGameId":"ESPN-401858220","team":"Norfolk State","opponent":"Virginia","moneyline":"+8000","source":"CBS Sports Week 2 odds","observedAt":"2026-09-10T19:49:00Z","freshness":"CURRENT-OBSERVED","note":"SBR showed book-dependent prices including +10000; CBS +8000 retained as conservative governed screen price."},
+    {"canonicalGameId":"ESPN-401856683","team":"Arizona State","opponent":"Texas A&M","moneyline":"+500","source":"CBS Sports Week 2 odds; corroborated by Sportsbook Review analysis","observedAt":"2026-09-10T19:49:00Z","freshness":"CURRENT-OBSERVED"},
+    {"canonicalGameId":"ESPN-401856781","team":"Washington State","opponent":"Kansas State","moneyline":"+760","source":"CBS Sports Week 2 Big 12 odds","observedAt":"2026-09-10T16:00:00Z","freshness":"PRIOR-TODAY-OBSERVED"},
+    {"canonicalGameId":"ESPN-401856782","team":"Oklahoma State","opponent":"Oregon","moneyline":"+1200","source":"CBS Sports Week 2 odds","observedAt":"2026-09-10T19:49:00Z","freshness":"CURRENT-OBSERVED"}
   ]
 }
