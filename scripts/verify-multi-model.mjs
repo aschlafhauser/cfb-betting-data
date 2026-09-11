@@ -39,3 +39,8 @@ if(!out.panel)failures.push('Matchup Center multi-model panel missing');
 for(const t of ['Football Independent','Market-Calibrated','Ensemble','ESPN FPI','higher is better'])if(!out.text.includes(t))failures.push(`Matchup panel missing ${t}`);
 for(const e of errors)failures.push(`pageerror: ${e}`);
 const report={checkedAt:new Date().toISOString(),fpiUpdatedAt:out.fpiUpdatedAt,selector:out.options,independence:out.independence,bestRows:out.bestRows,status:failures.length?'FAIL':'PASS',failures};await fs.writeFile('data/multi-model-verification-current.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`MULTI MODEL VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('CFB MULTI MODEL VERIFICATION PASS');
+
+// These are blocking production gates, not informational checks. Run them immediately after
+// the model-selection/independence test so refresh-weekly-manifest.mjs can consume fresh PASS artifacts.
+await import('./verify-statistical-display.mjs');
+await import('./verify-market-derived-integrity.mjs');
