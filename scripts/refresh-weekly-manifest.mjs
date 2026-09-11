@@ -9,6 +9,7 @@ const upsetResearch=await read(`data/upset-research-${season}-w${week}.json`).ca
 const ud=await read('data/underdog-special.json').catch(()=>null);
 const ls=await read('data/longshot-upset-lab.json').catch(()=>null);
 const ledgerSync=await read('data/expert-ledger-reconciliation.json').catch(()=>null);
+const previousManifest=await read(`data/weekly-manifest-${season}-w${week}.json`).catch(()=>null);
 const expected=Number(board.scheduleCoverage?.slateCount||board.games?.length||0), market=Number(board.scheduleCoverage?.marketGameCount||0);
 const fresh=x=>{const t=Date.parse(x?.updatedAt||x?.generatedAt||'');return Number.isFinite(t)&&Date.now()-t<6*3600000};
 const routingViolations=Number(upsetResearch?.coverage?.routingViolations??NaN);
@@ -26,6 +27,11 @@ const expertRecon=await latestExpertReconciliation();
 const syncHealthy=String(ledgerSync?.sport||'').toUpperCase()==='CFB'&&String(ledgerSync?.primaryLedgerStatus||'').toUpperCase()==='SYNCHRONIZED'&&Number(ledgerSync?.missingGovernedRecords||0)===0&&fresh(ledgerSync);
 const primaryLedgerStatus=syncHealthy?'SYNCHRONIZED':String(ledgerSync?.primaryLedgerStatus||expertRecon?.data?.primaryLedgerStatus||'UNKNOWN');
 const expertLedgerHealthy=syncHealthy||/^(PASS|SYNCHRONIZED|CURRENT)$/i.test(primaryLedgerStatus);
+const priorVerifier=previousManifest?.gates?.productionVerifier;
+const persistedVerifierFailure=priorVerifier?.status==='FAIL';
+const productionVerifier=persistedVerifierFailure
+ ? {status:'FAIL',detail:`${priorVerifier.detail||'Previously persisted live production verification failure.'} This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification.`}
+ : {status:'PENDING-LIVE-CHECK',detail:'Live portal verification runs after runtime artifacts are committed/deployed. A persisted FAIL is sticky and cannot be hidden by regeneration.'};
 const gates={
  canonicalSchedule:{status:Array.isArray(board.games)&&board.games.length===expected?'PASS':'FAIL',expectedGames:expected,actualGames:board.games?.length||0,detail:'Canonical selected-week schedule coverage.'},
  marketCoverage:{status:market>=Math.min(60,expected)?'PASS':'FAIL',minimumRequired:Math.min(60,expected),actualMarketGames:market,detail:'Current spread/total coverage from canonical board.'},
@@ -36,7 +42,7 @@ const gates={
  longshotUpsetLab:{status:ls&&Number(ls.week)===week&&fresh(ls)?'PASS':'FAIL',detail:ls?`Canonical longshot spread screen refreshed with ${ls.candidates?.length||0} visible candidates.`:'Missing current Longshot Lab screen.'},
  expertEpisodeInventory:{status:expertLedgerHealthy?'IN_PROGRESS':'FAIL',primaryLedgerStatus,ledgerSyncReport:'data/expert-ledger-reconciliation.json',latestReconciliation:expertRecon?.file||null,pointImpact:0,detail:expertLedgerHealthy?`Primary expert ledger is losslessly synchronized with governed audit records (${ledgerSync?.ledgerRecordCount??'n/a'} ledger records; ${ledgerSync?.missingGovernedRecords??0} missing). Episode discovery/completeness remains separately governed.`:'Primary expert ledger is stale/incomplete versus newer governed episode audits. This is UNRESOLVED_INGESTION_FAILURE and cannot be masked by episode-discovery completeness.'},
  canonicalGameJoins:{status:'PASS-DERIVED-LAYERS',detail:'New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten.'},
- productionVerifier:{status:'PENDING-LIVE-CHECK',detail:'Live portal verification runs after runtime artifacts are committed/deployed.'},
+ productionVerifier,
  preKickoffSnapshots:{status:'IN_PROGRESS',detail:'Immutable 60–90 minute final snapshots remain required individually through kickoff.'}
 };
 const hardFail=Object.values(gates).some(g=>g.status==='FAIL');
