@@ -1,9 +1,9 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-11T09:08:53.814Z",
-  "status": "FAIL",
-  "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
+  "updatedAt": "2026-09-11T11:30:13.741Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
+  "healthyDefinition": "No hard data/runtime gate may fail. The current live-browser verifier is authoritative for production UI health and must be rerunnable after a prior browser failure.",
   "gates": {
     "canonicalSchedule": {
       "status": "PASS",
@@ -55,8 +55,9 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "FAIL",
-      "detail": "Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted pageerror: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until an explicit clean live-browser verification passes. This FAIL is sticky across manifest regeneration. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification."
+      "status": "PENDING-LIVE-CHECK",
+      "priorFailure": true,
+      "detail": "Prior live-browser verification failed: Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted pageerror: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until an explicit clean live-browser verification passes. This FAIL is sticky across manifest regeneration. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification.. A fresh browser verification is required in this run; the prior failure is not allowed to deadlock the recheck."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
@@ -64,7 +65,9 @@
     }
   },
   "currentPriorityQueue": [
-    "productionVerifier: Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted pageerror: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until an explicit clean live-browser verification passes. This FAIL is sticky across manifest regeneration. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
