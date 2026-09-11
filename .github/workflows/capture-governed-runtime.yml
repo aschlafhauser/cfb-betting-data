@@ -118,17 +118,35 @@ jobs:
             exit 0
           fi
       - name: Verify live production decision system
-        if: ${{ always() }}
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
           CFB_MIN_MEANINGFUL_MODELS: '40'
           CFB_MIN_MARKET_GAMES: '60'
         run: node scripts/verify-live-portal.mjs
       - name: Verify every live portal tab and specialty field
-        if: ${{ always() }}
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-portal-completeness.mjs
+      - name: Certify clean live-browser verification
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;
+          const m=JSON.parse(fs.readFileSync(p,'utf8'));
+          const v=m.gates?.productionVerifier||{};
+          m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit live decision-system verification and every-tab portal completeness verification both passed with zero browser/page/runtime errors.'};
+          const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');
+          m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';
+          m.updatedAt=new Date().toISOString();
+          m.currentPriorityQueue=hardFail?Object.entries(m.gates).filter(([,g])=>g?.status==='FAIL').map(([k,g])=>`${k}: ${g.detail||''}`):['Maintain injury/market/expert refreshes through kickoff','Freeze each final pre-kickoff snapshot'];
+          fs.writeFileSync(p,JSON.stringify(m,null,2)+'\n');
+          NODE
+          git config user.name 'cfb-runtime-bot'
+          git config user.email 'cfb-runtime-bot@users.noreply.github.com'
+          git add data/weekly-manifest-${CFB_SEASON}-w${CFB_WEEK}.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: certify clean CFB live verification [skip ci]'
+            git push origin HEAD:main
+          fi
       - name: Enforce weekly non-negotiable gates
-        if: ${{ always() }}
         run: node scripts/verify-weekly-gates.mjs
