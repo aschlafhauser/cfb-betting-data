@@ -1,26 +1,70 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-11T07:51:00.000Z",
+  "updatedAt": "2026-09-11T07:56:23.634Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
-    "canonicalSchedule": {"status":"PASS","expectedGames":86,"actualGames":86,"detail":"Canonical selected-week schedule coverage."},
-    "marketCoverage": {"status":"PASS","minimumRequired":60,"actualMarketGames":84,"detail":"Current spread/total coverage from canonical board."},
-    "deepDiveEvidence": {"status":"PASS","required":86,"complete":86,"pending":0,"fullEvidence":86,"sourceLimited":0,"detail":"Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."},
-    "unifiedUpsetResearch": {"status":"PASS","detail":"Research artifact week=2; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."},
-    "marketMovers": {"status":"PASS","detail":"Current derived mover set has 8 reference games."},
-    "underdogSpecial": {"status":"PASS","detail":"Canonical +3.5-to-+7 screen refreshed; Canonical board produced 12 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."},
-    "longshotUpsetLab": {"status":"PASS","detail":"Canonical longshot spread screen refreshed with 61 visible candidates; latest live verification rendered 61/61."},
-    "expertEpisodeInventory": {"status":"IN_PROGRESS","primaryLedgerStatus":"SYNCHRONIZED","ledgerSyncReport":"data/expert-ledger-reconciliation.json","latestReconciliation":"2026-09-10-1648-hourly-reconciliation.json","pointImpact":0,"detail":"Primary expert ledger is losslessly synchronized with governed audit records (140 ledger records; 0 missing). Episode discovery/completeness remains separately governed."},
-    "canonicalGameJoins": {"status":"PASS-DERIVED-LAYERS","detail":"New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."},
-    "productionVerifier": {"status":"FAIL","detail":"Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted pageerror: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until an explicit clean live-browser verification passes. This FAIL is sticky across manifest regeneration."},
-    "preKickoffSnapshots": {"status":"IN_PROGRESS","detail":"Immutable 60–90 minute final snapshots remain required individually through kickoff."}
+    "canonicalSchedule": {
+      "status": "PASS",
+      "expectedGames": 86,
+      "actualGames": 86,
+      "detail": "Canonical selected-week schedule coverage."
+    },
+    "marketCoverage": {
+      "status": "PASS",
+      "minimumRequired": 60,
+      "actualMarketGames": 84,
+      "detail": "Current spread/total coverage from canonical board."
+    },
+    "deepDiveEvidence": {
+      "status": "PASS",
+      "required": 86,
+      "complete": 86,
+      "pending": 0,
+      "fullEvidence": 86,
+      "sourceLimited": 0,
+      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
+    },
+    "unifiedUpsetResearch": {
+      "status": "PASS",
+      "detail": "Research artifact week=2; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."
+    },
+    "marketMovers": {
+      "status": "PASS",
+      "detail": "Current derived mover set has 8 reference games."
+    },
+    "underdogSpecial": {
+      "status": "PASS",
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 12 +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred."
+    },
+    "longshotUpsetLab": {
+      "status": "PASS",
+      "detail": "Canonical longshot spread screen refreshed with 61 visible candidates."
+    },
+    "expertEpisodeInventory": {
+      "status": "IN_PROGRESS",
+      "primaryLedgerStatus": "SYNCHRONIZED",
+      "ledgerSyncReport": "data/expert-ledger-reconciliation.json",
+      "latestReconciliation": "2026-09-10-1648-hourly-reconciliation.json",
+      "pointImpact": 0,
+      "detail": "Primary expert ledger is losslessly synchronized with governed audit records (140 ledger records; 0 missing). Episode discovery/completeness remains separately governed."
+    },
+    "canonicalGameJoins": {
+      "status": "PASS-DERIVED-LAYERS",
+      "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
+    },
+    "productionVerifier": {
+      "status": "FAIL",
+      "detail": "Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted pageerror: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until an explicit clean live-browser verification passes. This FAIL is sticky across manifest regeneration. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification."
+    },
+    "preKickoffSnapshots": {
+      "status": "IN_PROGRESS",
+      "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
+    }
   },
   "currentPriorityQueue": [
-    "productionVerifier: eliminate live browser null.toFixed runtime error and obtain a clean completeness verification",
-    "Maintain injury/market/expert refreshes through kickoff",
-    "Freeze each final pre-kickoff snapshot"
+    "productionVerifier: Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted pageerror: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until an explicit clean live-browser verification passes. This FAIL is sticky across manifest regeneration. This failure is sticky across manifest regeneration and may be cleared only after an explicit clean live-browser verification."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
