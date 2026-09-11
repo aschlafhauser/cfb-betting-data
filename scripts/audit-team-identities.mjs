@@ -29,10 +29,10 @@ await page.waitForFunction(()=>window.CFB_TEAM_IDENTITY&&window.CFB_TEAM_IDENTIT
 await page.waitForTimeout(500);
 const portalState=await page.evaluate(()=>{
   const groups=['QB','RB','WR/TE','OL','DL','LB','DB','ST'];
-  const all=typeof allTeams!=='undefined'&&Array.isArray(allTeams)?allTeams.slice():[];
+  const all=typeof allTeams!=='undefined'&&Array.isArray(allTeams)?[...new Set(allTeams)]:[];
   const keys={};
   for(const name of ['publicContinuity','philPowerPoll2026','philReturningStarterPoints2026','philAllConferencePoints2026','teamProfiles','teamNotes']){
-    try{const obj=eval(name);keys[name]=obj&&typeof obj==='object'?Object.keys(obj):[]}catch{keys[name]=[]}
+    try{const obj=eval(name);keys[name]=obj&&typeof obj==='object'?[...new Set(Object.keys(obj))]:[]}catch{keys[name]=[]}
   }
   const probe=name=>{
     let ranked=[];try{if(typeof philUnitRank==='function')ranked=groups.map(g=>[g,philUnitRank(name,g)]).filter(([,r])=>r!=null)}catch{}
@@ -44,16 +44,16 @@ const portalState=await page.evaluate(()=>{
 await browser.close();
 
 const fbsByCanon=new Map();
-for(const n of portalState.allTeams||[]){const k=ckey(n);if(!fbsByCanon.has(k))fbsByCanon.set(k,[]);fbsByCanon.get(k).push(n)}
+for(const n of portalState.allTeams||[]){const k=ckey(n);if(!fbsByCanon.has(k))fbsByCanon.set(k,new Set());fbsByCanon.get(k).add(n)}
 const philKeyUniverse=[...new Set(Object.values(portalState.keys||{}).flat())];
-const philKeyByCanon=new Map();for(const n of philKeyUniverse){const k=ckey(n);if(!philKeyByCanon.has(k))philKeyByCanon.set(k,[]);philKeyByCanon.get(k).push(n)}
+const philKeyByCanon=new Map();for(const n of philKeyUniverse){const k=ckey(n);if(!philKeyByCanon.has(k))philKeyByCanon.set(k,new Set());philKeyByCanon.get(k).add(n)}
 
 function tokenSet(s){return new Set(String(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(x=>x.length>2&&!['university','state','college','the'].includes(x)))}
 function aliasCandidates(name,pool){const a=tokenSet(name),out=[];for(const p of pool){const b=tokenSet(p),inter=[...a].filter(x=>b.has(x)).length,den=Math.max(a.size,b.size,1),score=inter/den;if(score>=0.5&&score>0)out.push({name:p,score:Number(score.toFixed(2))})}return out.sort((x,y)=>y.score-x.score).slice(0,4)}
 
-const rows=[],failures=[];
+const rows=[],failures=[],warnings=[];
 for(const team of boardTeams){
-  const key=ckey(team),rec=canonicalToRecord.get(key)||null,stats=statsByCanon.get(key)||[],fbs=fbsByCanon.get(key)||[],philKeys=philKeyByCanon.get(key)||[];
+  const key=ckey(team),rec=canonicalToRecord.get(key)||null,stats=statsByCanon.get(key)||[],fbs=[...(fbsByCanon.get(key)||[])],philKeys=[...(philKeyByCanon.get(key)||[])];
   const explicitPhil=rec?.sources?.phil||null;
   const probeNames=[...new Set([...fbs,explicitPhil,team].filter(Boolean))];
   let rankedUnits=[];let hasProfile=false;
@@ -65,13 +65,16 @@ for(const team of boardTeams){
     const philResolved=fbs.length===1||philKeys.length>0||!!explicitPhil;
     if(!philResolved){status.philStatus='UNRESOLVED';failures.push(`TEAM_IDENTITY_UNRESOLVED: ${team} -> Phil`)}else status.philStatus='PASS';
   }else status.philStatus='NOT_APPLICABLE';
-  if(!rec&&fbs.length===0){const candidates=aliasCandidates(team,portalState.allTeams||[]);if(candidates.length){status.unregisteredAliasCandidates=candidates;failures.push(`TEAM_IDENTITY_UNREGISTERED_ALIAS_CANDIDATE: ${team} -> ${candidates.map(x=>x.name).join(', ')}`)}}
+  // Heuristic candidates are review signals only: many Week 2 opponents are legitimate FCS teams
+  // whose names naturally overlap FBS schools (e.g. Florida A&M vs Florida). Never auto-map them.
+  if(!rec&&fbs.length===0){const candidates=aliasCandidates(team,portalState.allTeams||[]);if(candidates.length){status.unregisteredAliasCandidates=candidates;warnings.push(`TEAM_IDENTITY_ALIAS_REVIEW: ${team} -> ${candidates.map(x=>x.name).join(', ')}`)}}
   if(fbs.length>1){status.fbsStatus='AMBIGUOUS';failures.push(`TEAM_IDENTITY_AMBIGUOUS: ${team} -> portal FBS universe (${fbs.join(', ')})`)}else status.fbsStatus=fbs.length?'PASS':'NOT_APPLICABLE';
   rows.push(status);
 }
 for(const a of ambiguous)failures.push(`TEAM_IDENTITY_REGISTRY_AMBIGUOUS: ${a.alias} -> ${a.canonical.join(' / ')}`);
 for(const e of browserErrors)failures.push(`TEAM_IDENTITY_BROWSER_ERROR: ${e}`);
-const report={season:board.season||2026,week:board.week,checkedAt:new Date().toISOString(),registryVersion:registry.version,portalIdentityStatus:portalState.identityStatus,boardTeamCount:boardTeams.length,statsCoverage:{resolved:rows.filter(r=>r.statsStatus==='PASS').length,total:rows.length},philCoverage:{applicable:rows.filter(r=>r.philApplicable).length,resolved:rows.filter(r=>r.philApplicable&&r.philStatus==='PASS').length},ambiguousRegistryAliases:ambiguous,failures,teams:rows,status:failures.length?'FAIL':'PASS'};
+const report={season:board.season||2026,week:board.week,checkedAt:new Date().toISOString(),registryVersion:registry.version,portalIdentityStatus:portalState.identityStatus,boardTeamCount:boardTeams.length,statsCoverage:{resolved:rows.filter(r=>r.statsStatus==='PASS').length,total:rows.length},philCoverage:{applicable:rows.filter(r=>r.philApplicable).length,resolved:rows.filter(r=>r.philApplicable&&r.philStatus==='PASS').length},ambiguousRegistryAliases:ambiguous,warnings,failures,teams:rows,status:failures.length?'FAIL':warnings.length?'PASS-WITH-ALIAS-REVIEW':'PASS'};
 await fs.writeFile('data/team-identity-audit-current.json',JSON.stringify(report,null,2)+'\n');
-console.log(`CFB identity audit ${report.status}: teams=${rows.length}, stats=${report.statsCoverage.resolved}/${rows.length}, Phil=${report.philCoverage.resolved}/${report.philCoverage.applicable}, failures=${failures.length}`);
+console.log(`CFB identity audit ${report.status}: teams=${rows.length}, stats=${report.statsCoverage.resolved}/${rows.length}, Phil=${report.philCoverage.resolved}/${report.philCoverage.applicable}, failures=${failures.length}, review=${warnings.length}`);
+if(warnings.length)console.warn(warnings.join('\n'));
 if(failures.length){console.error(failures.join('\n'));process.exit(1)}
