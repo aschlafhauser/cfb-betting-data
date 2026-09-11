@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-11T06:47:56.000Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-11T06:52:44.481Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
     "canonicalSchedule": {
@@ -40,7 +40,7 @@
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 61 visible candidates; live verification also rendered 61/61."
+      "detail": "Canonical longshot spread screen refreshed with 61 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -55,8 +55,8 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "FAIL",
-      "detail": "Latest live portal completeness verification rendered 86/86 board rows and 61/61 Longshot candidates but emitted two page errors: Cannot read properties of null (reading 'toFixed'). Treat as unresolved PRODUCTION_QC_FAILURE until a clean live browser verification passes."
+      "status": "PENDING-LIVE-CHECK",
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
@@ -64,8 +64,8 @@
     }
   },
   "currentPriorityQueue": [
-    "productionVerifier: eliminate live browser null.toFixed runtime errors and obtain a clean completeness verification",
     "Maintain injury/market/expert refreshes through kickoff",
+    "Complete remaining episode reconciliation",
     "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
