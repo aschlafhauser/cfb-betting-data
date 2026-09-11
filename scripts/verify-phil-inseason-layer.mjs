@@ -1,3 +1,4 @@
+// Verification v2: rerun after portal hydration/display stabilization fix.
 import fs from 'node:fs/promises';
 import { chromium } from 'playwright';
 
@@ -28,12 +29,12 @@ const browser=await chromium.launch({headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:1100}});const browserErrors=[];page.on('pageerror',e=>browserErrors.push(e.message));
 await page.goto(`${portal}?philInseason=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
 await page.waitForFunction(()=>window.CFB_RUNTIME_DATA&&window.CFB_PHIL_INSEASON_READY===true,{timeout:60000}).catch(()=>{});
-await page.waitForTimeout(1200);
+await page.waitForTimeout(1800);
 const out=await page.evaluate(async()=>{
   const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   const matchBtn=document.querySelector('nav button[data-tab="match"]');if(matchBtn)matchBtn.click();await sleep(150);
   const sel=document.getElementById('matchSel');let idx=-1;if(sel)idx=Array.from(sel.options).findIndex(o=>/UCF.*Pittsburgh|UCF.*Pitt|Pittsburgh.*UCF|Pitt.*UCF/i.test(o.textContent||''));
-  if(idx>=0){sel.selectedIndex=idx;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(500)}
+  if(idx>=0){sel.selectedIndex=idx;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(900)}
   const panel=document.getElementById('philInseasonPanel');const txt=panel?.innerText||'';
   let model=null;try{const id=sel?.value;const x=Object.values(weeks||{}).flatMap(v=>v.games||[]).find(g=>g.id===id);model=x?.modelComponents?.philInseason||null}catch{}
   return {ready:window.CFB_PHIL_INSEASON_READY===true,selectedIndex:idx,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null};
