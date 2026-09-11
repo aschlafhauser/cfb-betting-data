@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/capture-governed-runtime.mjs'
+      - 'scripts/refresh-team-metrics.mjs'
       - 'scripts/build-deep-dive-runtime.mjs'
       - 'scripts/build-specialty-layers.mjs'
       - 'scripts/build-upset-research.mjs'
@@ -18,6 +19,7 @@ on:
       - 'scripts/verify-weekly-gates.mjs'
       - '.github/workflows/capture-governed-runtime.yml'
       - 'data/weekly-board.json'
+      - 'data/team-metrics-current.json'
       - 'data/deep-dive-status.json'
       - 'data/deep-dives-*.json'
       - 'data/upset-research-*.json'
@@ -78,6 +80,8 @@ jobs:
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/capture-governed-runtime.mjs
+      - name: Refresh team and position-group statistical display metrics
+        run: node scripts/refresh-team-metrics.mjs
       - name: Build full-slate evidence-backed Deep Dives
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
