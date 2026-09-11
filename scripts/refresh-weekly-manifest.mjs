@@ -28,17 +28,17 @@ const syncHealthy=String(ledgerSync?.sport||'').toUpperCase()==='CFB'&&String(le
 const primaryLedgerStatus=syncHealthy?'SYNCHRONIZED':String(ledgerSync?.primaryLedgerStatus||expertRecon?.data?.primaryLedgerStatus||'UNKNOWN');
 const expertLedgerHealthy=syncHealthy||/^(PASS|SYNCHRONIZED|CURRENT)$/i.test(primaryLedgerStatus);
 const priorVerifier=previousManifest?.gates?.productionVerifier;
-const priorVerifierFailed=String(priorVerifier?.status||'').toUpperCase()==='FAIL';
+const priorVerifierFailed=String(priorVerifier?.status||'').toUpperCase()==='FAIL'||priorVerifier?.priorFailure===true;
 
-// Do not carry a previous browser failure forward as a self-blocking live-portal FAIL.
-// The workflow immediately performs a fresh Playwright verification after deploy. A prior
-// failure is retained as recheck context, while the current browser run decides CI health.
+// A known live-browser failure is sticky. Ordinary regeneration must never convert it to
+// PENDING/PASS. Only the explicit live-browser verifier may clear it after a clean run with
+// zero browser/page/runtime errors and complete governed rendering.
 const productionVerifier={
- status:'PENDING-LIVE-CHECK',
+ status:priorVerifierFailed?'FAIL':'PENDING-LIVE-CHECK',
  priorFailure:priorVerifierFailed,
  detail:priorVerifierFailed
-  ? `Prior live-browser verification failed: ${priorVerifier.detail||'unspecified browser/runtime failure'}. A fresh browser verification is required in this run; the prior failure is not allowed to deadlock the recheck.`
-  : 'Live portal verification runs after runtime artifacts are committed/deployed; the current browser run is authoritative for current production health.'
+  ? `Persisted live-browser verification failure remains unresolved: ${priorVerifier?.detail||'unspecified browser/runtime failure'}. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors.`
+  : 'Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health.'
 };
 const gates={
  canonicalSchedule:{status:Array.isArray(board.games)&&board.games.length===expected?'PASS':'FAIL',expectedGames:expected,actualGames:board.games?.length||0,detail:'Canonical selected-week schedule coverage.'},
@@ -54,6 +54,6 @@ const gates={
  preKickoffSnapshots:{status:'IN_PROGRESS',detail:'Immutable 60–90 minute final snapshots remain required individually through kickoff.'}
 };
 const hardFail=Object.values(gates).some(g=>g.status==='FAIL');
-const manifest={season,week,updatedAt:now,status:hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES',healthyDefinition:'No hard data/runtime gate may fail. The current live-browser verifier is authoritative for production UI health and must be rerunnable after a prior browser failure.',gates,currentPriorityQueue:hardFail?Object.entries(gates).filter(([,g])=>g.status==='FAIL').map(([k,g])=>`${k}: ${g.detail}`):['Run fresh live-browser production verification','Maintain injury/market/expert refreshes through kickoff','Freeze each final pre-kickoff snapshot'],notificationPolicy:'Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure.'};
+const manifest={season,week,updatedAt:now,status:hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES',healthyDefinition:'No hard data/runtime gate may fail. A persisted live-browser failure is sticky until an explicit clean live-browser completeness verification clears it.',gates,currentPriorityQueue:hardFail?Object.entries(gates).filter(([,g])=>g.status==='FAIL').map(([k,g])=>`${k}: ${g.detail}`):['Run fresh live-browser production verification','Maintain injury/market/expert refreshes through kickoff','Freeze each final pre-kickoff snapshot'],notificationPolicy:'Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure.'};
 await fs.writeFile(`data/weekly-manifest-${season}-w${week}.json`,JSON.stringify(manifest,null,2)+'\n');
 console.log(`Weekly manifest ${manifest.status}`);
