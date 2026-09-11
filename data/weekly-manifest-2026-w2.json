@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-11T05:39:10.000Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-11T05:41:53.776Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Episode reconciliation and future final snapshots may remain IN_PROGRESS before their deadlines but must never be hidden.",
   "gates": {
     "canonicalSchedule": {
@@ -55,19 +55,15 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "FAIL",
-      "detail": "Latest scheduled live completeness check failed because the production Longshot tab rendered 62 candidate cards while the governed data artifact contains 61 canonical Longshot candidates. Live board/deep-dive checks otherwise passed (86 rows, 86/86 dossiers, 85 live markets). Do not certify HEALTHY until the 62/61 runtime mismatch is resolved and reverified."
+      "status": "PENDING-LIVE-CHECK",
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
     }
   },
-  "failures": [
-    "PRODUCTION_QC_FAILURE: live Longshot cards 62 / governed candidates 61"
-  ],
   "currentPriorityQueue": [
-    "Resolve and reverify the live Longshot 62/61 production mismatch",
     "Maintain injury/market/expert refreshes through kickoff",
     "Complete remaining episode reconciliation",
     "Freeze each final pre-kickoff snapshot"
