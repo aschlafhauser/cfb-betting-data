@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-11T14:35:59.968Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-11T19:49:13.830Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -14,7 +14,7 @@
     "marketCoverage": {
       "status": "PASS",
       "minimumRequired": 60,
-      "actualMarketGames": 84,
+      "actualMarketGames": 85,
       "detail": "Current spread/total coverage from canonical board."
     },
     "deepDiveEvidence": {
@@ -27,16 +27,18 @@
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
     "statisticalDisplay": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-11T19:47:52.030Z",
       "artifact": "data/statistical-display-integrity-2026-w2.json",
-      "detail": "No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes."
+      "detail": "Team/stat coverage 172/172; ESPN FPI 138 numeric teams; sampled rendered statistical panels 12/12; FPI panels 12/12."
     },
     "marketDerivedIntegrity": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-11T19:48:00.029Z",
       "artifact": "data/market-derived-integrity-2026-w2.json",
-      "detail": "No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+      "detail": "Independently reconciled 164 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -52,7 +54,7 @@
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 61 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 62 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -67,23 +69,20 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "PASS",
+      "status": "PENDING-LIVE-CHECK",
       "priorFailure": false,
-      "verifiedAt": "2026-09-11T14:35:59.968Z",
-      "detail": "Explicit live decision-system verification, team-identity reconciliation, Phil in-season layer, ESPN FPI refresh, selectable multi-model independence test and every-tab portal completeness verification passed with zero blocking current-runtime errors."
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "detail": "Immutable 60–90 minute final snapshots remain required individually through kickoff."
     }
   },
-  "failures": [
-    "statisticalDisplay",
-    "marketDerivedIntegrity"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
-    "marketDerivedIntegrity: No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
