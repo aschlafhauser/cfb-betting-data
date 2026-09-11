@@ -1,0 +1,46 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "sourceFamily": "Audacy / 92.9 FM ESPN J&J Show / John Martin",
+  "episode": "Week 2 College Football Picks from John Martin",
+  "sourceDate": "2026-09-10",
+  "status": "COMPLETE-SOURCE-LIMITED",
+  "firstDiscovered": "2026-09-11T04:05:12-05:00",
+  "firstPartyUrl": "https://www.audacy.com/929espn/sports/ncaa-football/ryan-silverfield",
+  "evidenceSurfaceLog": [
+    {
+      "surface": "Audacy / 92.9 FM ESPN first-party article and embedded J&J Show audio",
+      "result": "Confirmed John Martin's recurring Thursday Week 2 CFB picks segment and that the segment covers Memphis, Michigan, South Alabama, Georgia Tech and Utah with spread information in the audio."
+    },
+    {
+      "surface": "First-party page text",
+      "result": "Exposes the five teams discussed but does not expose the exact side/total/ML constructions, prices, score predictions, unit sizes or conviction in searchable text."
+    },
+    {
+      "surface": "Canonical Week 2 board",
+      "result": "All five explicitly named teams were joined to selected-week canonical ESPN IDs: Memphis-Boise State ESPN-401860881; Oklahoma-Michigan ESPN-401856679; South Alabama-Tulane ESPN-401864575; Tennessee-Georgia Tech ESPN-401856681; Arkansas-Utah ESPN-401856670."
+    }
+  ],
+  "matchupsEnumerated": [
+    {"canonicalGameId":"ESPN-401860881","matchup":"Boise State at Memphis","teamNamed":"Memphis"},
+    {"canonicalGameId":"ESPN-401856679","matchup":"Oklahoma at Michigan","teamNamed":"Michigan"},
+    {"canonicalGameId":"ESPN-401864575","matchup":"South Alabama at Tulane","teamNamed":"South Alabama"},
+    {"canonicalGameId":"ESPN-401856681","matchup":"Tennessee at Georgia Tech","teamNamed":"Georgia Tech"},
+    {"canonicalGameId":"ESPN-401856670","matchup":"Arkansas at Utah","teamNamed":"Utah"}
+  ],
+  "structuredRecords": [],
+  "unsupportedItemsNotInferred": "No exact pick, side, spread, total, moneyline, price, score prediction, unit size or conviction was inferred from the team list or inaccessible embedded-audio detail.",
+  "correlation": "John Martin / J&J Show is one source family; no same-show segment is counted as independent confirmation.",
+  "dedupe": "No governed John Martin Week 2 episode audit was found before this write. No structured expert-ledger row is appended because the accessible first-party text does not safely expose the actual selections.",
+  "ledgerAction": "NO APPEND pending attributable first-party pick detail.",
+  "reconciliation": "This closes the episode-inventory gap at the audit layer; repository-native sync-expert-ledger must report SYNCHRONIZED / 0 missing governed records before Expert Intelligence may PASS.",
+  "productionImpact": {
+    "fairPoints": 0,
+    "modelWeights": 0,
+    "unifiedUpsetRouting": 0,
+    "betActivationGate": 0,
+    "officialLedger": 0,
+    "units": 0
+  }
+}
