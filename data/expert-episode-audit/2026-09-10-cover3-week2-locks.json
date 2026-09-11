@@ -1,0 +1,48 @@
+{
+  "sport": "CFB",
+  "season": 2026,
+  "week": 2,
+  "sourceFamily": "Cover 3 / CBS Sports",
+  "episode": "Week 2 LOCKS: Best Bets, Against The Spread Picks, Moneyline Sprinkles & More! | Cover 3",
+  "sourceDate": "2026-09-10",
+  "status": "COMPLETE-SOURCE-LIMITED",
+  "firstDiscovered": "2026-09-11T00:56:49-05:00",
+  "evidenceSurfaceLog": [
+    {
+      "surface": "CBS Sports first-party video page",
+      "result": "Confirmed current-week Week 2 LOCKS episode and betting focus; first-party surface exposes the episode but not a complete analyst-by-analyst text pick sheet."
+    },
+    {
+      "surface": "CBS Sports / Cover 3 feed metadata",
+      "result": "Confirmed episode chapters: Thursday/Friday Locks, Ohio State at Texas, Oklahoma at Michigan, CBS doubleheader, Iowa State at Iowa, more locks, Best of the Rest, Locks Recap and Moneyline Sprinkles."
+    },
+    {
+      "surface": "secondary podcast-feed mirrors",
+      "result": "Corroborated publication date, duration and chapter structure."
+    },
+    {
+      "surface": "third-party pick-sheet expansion",
+      "result": "A named-pick recap was located, but because the currently accessible first-party evidence did not independently expose the full analyst-by-analyst selections, those picks were not promoted into governed structured records in this audit."
+    }
+  ],
+  "matchupsEnumerated": [
+    "Ohio State at Texas",
+    "Oklahoma at Michigan",
+    "Iowa State at Iowa",
+    "additional Week 2 games in Best of the Rest / Locks Recap / Moneyline Sprinkles"
+  ],
+  "structuredRecords": [],
+  "unsupportedItemsNotInferred": "No analyst-specific ATS/ML/total/1H selection, price, score prediction, unit size or conviction was inferred from chapter titles or from a secondary recap without first-party corroboration.",
+  "correlation": "Cover 3 hosts are one correlated source family for consensus purposes.",
+  "dedupe": "Episode itself is newly accounted for. No structured expert-ledger row is appended because no safely attributable first-party selection payload was exposed in the accessible evidence surfaces.",
+  "ledgerAction": "NO APPEND pending safely attributable first-party pick evidence.",
+  "reconciliation": "This audit closes the episode-inventory ingestion gap; repository-native sync must still report SYNCHRONIZED / 0 missing governed records before Expert Intelligence may PASS.",
+  "productionImpact": {
+    "fairPoints": 0,
+    "modelWeights": 0,
+    "unifiedUpsetRouting": 0,
+    "betActivationGate": 0,
+    "officialLedger": 0,
+    "units": 0
+  }
+}
