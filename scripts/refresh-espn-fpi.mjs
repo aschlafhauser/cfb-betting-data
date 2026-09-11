@@ -1,5 +1,9 @@
 import fs from 'node:fs/promises';
 
+// Defense is not reliably populated by ESPN's team-statistics endpoint. Enrich it from
+// completed-game opponent box scores before building the shared FPI/stat display layer.
+await import('./enrich-defense-metrics.mjs');
+
 const board=JSON.parse(await fs.readFile('data/weekly-board.json','utf8'));
 const metrics=JSON.parse(await fs.readFile('data/team-metrics-current.json','utf8'));
 const season=Number(board.season||2026);
