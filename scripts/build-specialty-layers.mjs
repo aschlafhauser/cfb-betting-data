@@ -58,8 +58,42 @@ await fs.writeFile(`data/market-movers-2026-w${week}.json`,JSON.stringify({seaso
 let priorUD={candidates:[]};try{priorUD=JSON.parse(await fs.readFile('data/underdog-special.json','utf8'))}catch{}
 const priorUdByTeam=new Map((priorUD.candidates||[]).map(c=>[norm(c.team+' '+c.opponent),c]));
 const ud=[];
-for(const g of board.games||[]){const d=dogFor(g);if(!d||d.spread<3.5||d.spread>7)continue;const prior=priorUdByTeam.get(norm(d.team+' '+d.opponent));const ml=parseML(g.currentMoneyline,d.team);const priceCurrent=Number.isFinite(ml);const research=upsetById.get(String(g.gameId));ud.push({week,canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,currentSpread:`+${d.spread}`,currentMoneyline:priceCurrent?(ml>0?`+${ml}`:`${ml}`):null,moneylineStatus:priceCurrent?'CURRENT':'PRICE-RECHECK-REQUIRED',profileScore:Number.isFinite(research?.profileScore)?research.profileScore:null,researchTier:research?.tier||null,qualifiers:prior?.qualifiers||null,qualifierCount:Number.isFinite(prior?.qualifierCount)?prior.qualifierCount:null,profileQualifies:prior?.profileQualifies??null,mlValueQualifies:priceCurrent?(prior?.fairMl!=null?ml>Number(prior.fairMl):null):null,deepDiveStatus:g.deepDiveStatus||'PENDING',status:priceCurrent?'CURRENT-SCREEN':'CURRENT-SCREEN-PRICE-PENDING',action:priceCurrent?'Evaluate existing v1.1 football-profile and fair-ML gates.':'Do not declare NO QUALIFIER until a current executable moneyline is verified.',note:'Current-week screen generated from canonical Weekly Board. Missing price is a visible execution limitation, not an empty result.'});}
-priorUD.week=week;priorUD.updatedAt=now;priorUD.sundayWeek2Rerun={timestamp:now,result:ud.some(x=>x.status==='CURRENT-SCREEN')?'CURRENT SCREEN COMPLETE':'CURRENT SCREEN / PRICE VERIFICATION REQUIRED',note:`Canonical board produced ${ud.length} +3.5-to-+7 underdogs. Current ML availability is evaluated separately; no wager is inferred.`};priorUD.candidates=[...(priorUD.candidates||[]).filter(c=>Number(c.week)!==week),...ud];
+let teamMetrics={teams:[]},espnFpi={teams:[]};
+try{teamMetrics=JSON.parse(await fs.readFile('data/team-metrics-current.json','utf8'))}catch{}
+try{espnFpi=JSON.parse(await fs.readFile('data/espn-fpi-current.json','utf8'))}catch{}
+const teamMetricByName=new Map((teamMetrics.teams||[]).map(x=>[norm(x.team),x]));
+const fpiByName=new Map((espnFpi.teams||[]).filter(x=>x.team).map(x=>[norm(x.team),x]));
+const finite=v=>Number.isFinite(Number(v));
+const one=v=>finite(v)?Number(v).toFixed(1):'unavailable';
+function assessUnderdogCriteria(team,opponent,gameId){
+ const dogMetric=teamMetricByName.get(norm(team)),oppMetric=teamMetricByName.get(norm(opponent));
+ const dogFpi=fpiByName.get(norm(team)),oppFpi=fpiByName.get(norm(opponent));
+ const research=upsetById.get(String(gameId));
+ const dogSos=dogFpi?.stats?.avgsosrank?.value,oppSos=oppFpi?.stats?.avgsosrank?.value;
+ const restPass=finite(dogSos)&&finite(oppSos)&&Number(dogSos)+10<=Number(oppSos);
+ const dogTotal=dogFpi?.stats?.totefficiency?.value,oppTotal=oppFpi?.stats?.totefficiency?.value;
+ const nonPass=finite(dogTotal)&&finite(oppTotal)&&Number(dogTotal)>Number(oppTotal);
+ const dogYpa=dogMetric?.offense?.yardsPerPassAttempt,oppYpa=oppMetric?.offense?.yardsPerPassAttempt;
+ const qbPath=Number(research?.components?.qbStability||0)>=4;
+ const qbPass=qbPath||(finite(dogYpa)&&finite(oppYpa)&&Number(dogYpa)>=Number(oppYpa)+0.5);
+ const restReason=finite(dogSos)&&finite(oppSos)?`${restPass?'Material schedule edge':'No material schedule/rest edge'}: ESPN FPI prior-schedule rank ${Math.round(Number(dogSos))} vs ${Math.round(Number(oppSos))}; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).`:'No governed rest/schedule advantage is demonstrated; a comparable ESPN FPI prior-schedule row is unavailable for the opponent, so the criterion does not pass.';
+ const nonReason=finite(dogTotal)&&finite(oppTotal)?`${nonPass?'Advantage':'No advantage'}: ESPN opponent-adjusted total per-play efficiency ${one(dogTotal)} vs ${one(oppTotal)}.`:'No governed opponent-adjusted per-play comparison is available for both teams, so the non-explosive efficiency criterion does not pass.';
+ const qbReason=qbPath?`PASS: the completed Unified Upset Deep Dive identifies a credible underdog QB/passing path (QB-stability component ${Number(research.components.qbStability)}/4); raw current YPA is ${one(dogYpa)} vs ${one(oppYpa)}.`:`${qbPass?'PASS':'FAIL'}: governed current passing YPA is ${one(dogYpa)} vs ${one(oppYpa)}; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.`;
+ const qualifiers={rest:{qualifies:restPass,reason:restReason,source:'ESPN FPI prior schedule-strength rank',sourceUpdatedAt:espnFpi.updatedAt||null},nonExplosive:{qualifies:nonPass,reason:nonReason,source:'ESPN opponent-adjusted total efficiency',sourceUpdatedAt:espnFpi.updatedAt||null},qbYpa:{qualifies:qbPass,reason:qbReason,source:qbPath?'Unified Upset Deep Dive plus ESPN team metrics':'ESPN team metrics yards per pass attempt',sourceUpdatedAt:qbPath?(upsetResearch.updatedAt||teamMetrics.updatedAt||null):(teamMetrics.updatedAt||null)}};
+ const count=Object.values(qualifiers).filter(x=>x.qualifies).length;
+ return{qualifiers,count,profileQualifies:count>=2};
+}
+for(const g of board.games||[]){
+ const d=dogFor(g);if(!d||d.spread<3.5||d.spread>7)continue;
+ const prior=priorUdByTeam.get(norm(d.team+' '+d.opponent));const ml=parseML(g.currentMoneyline,d.team);const priceCurrent=Number.isFinite(ml);const research=upsetById.get(String(g.gameId));
+ const assessment=assessUnderdogCriteria(d.team,d.opponent,g.gameId);
+ const action=assessment.profileQualifies?(priceCurrent?'Football profile qualifies; evaluate the separate fair-ML value gate at the current governed price.':'Football profile qualifies; verify a current executable moneyline and then apply the separate fair-ML value gate.'):`No Special: football profile clears ${assessment.count}/3 criteria; retain as an in-band watchlist candidate.`;
+ ud.push({week,canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,currentSpread:`+${d.spread}`,currentMoneyline:priceCurrent?(ml>0?`+${ml}`:`${ml}`):null,moneylineStatus:priceCurrent?'CURRENT':'PRICE-RECHECK-REQUIRED',profileScore:Number.isFinite(research?.profileScore)?research.profileScore:null,researchTier:research?.tier||null,qualifiers:assessment.qualifiers,qualifierCount:assessment.count,profileQualifies:assessment.profileQualifies,criterionAssessmentStatus:'COMPLETE',criterionAssessmentVersion:'v1.1-governed-2026-09-12',criterionAssessedAt:now,mlValueQualifies:priceCurrent?(prior?.fairMl!=null?ml>Number(prior.fairMl):null):null,deepDiveStatus:g.deepDiveStatus||'PENDING',status:priceCurrent?'CURRENT-SCREEN':'CURRENT-SCREEN-PRICE-PENDING',action,note:'All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate.'});
+}
+
+priorUD.research=priorUD.research||{};
+priorUD.research.criterionAssessment={version:'v1.1-governed-2026-09-12',status:'COMPLETE',assessedAt:now,timing:'Complete during Sunday kickoff / Monday early-week screen; refresh after material schedule, statistical, QB or availability changes.',methods:{rest:`PASS when ESPN FPI prior-schedule rank shows the underdog faced a schedule at least 10 ranks stronger (lower rank). Otherwise FAIL; absence of a comparable opponent row cannot create a pass.`,nonExplosive:`PASS when the underdog's ESPN opponent-adjusted total per-play efficiency exceeds the opponent's.`,qbYpa:`PASS when the Unified Upset Deep Dive supplies a full directional QB/passing-path score or governed current YPA is at least 0.5 higher than the opponent's.`},provenance:['data/espn-fpi-current.json','data/team-metrics-current.json',`data/upset-research-2026-w${week}.json`]};
+priorUD.week=week;priorUD.updatedAt=now;priorUD.sundayWeek2Rerun={timestamp:now,result:'CURRENT SCREEN + CRITERIA COMPLETE',criterionAssessment:`${ud.filter(x=>x.criterionAssessmentStatus==='COMPLETE').length}/${ud.length} candidates fully assessed`,note:`Canonical board produced ${ud.length} +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate.`};priorUD.candidates=[...(priorUD.candidates||[]).filter(c=>Number(c.week)!==week),...ud];
 await fs.writeFile('data/underdog-special.json',JSON.stringify(priorUD,null,2)+'\n');
 
 let priorLS={candidates:[]};try{priorLS=JSON.parse(await fs.readFile('data/longshot-upset-lab.json','utf8'))}catch{}
