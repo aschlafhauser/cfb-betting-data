@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 2,
-  "updatedAt": "2026-09-12T22:55:56.067Z",
+  "updatedAt": "2026-09-12T23:02:31.522Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -34,11 +34,10 @@
       "detail": "Team/stat coverage 172/172; ESPN FPI 138 numeric teams; sampled rendered statistical panels 12/12; FPI panels 12/12."
     },
     "marketDerivedIntegrity": {
-      "status": "PASS",
+      "status": "FAIL",
       "blocking": true,
-      "verifiedAt": "2026-09-12T19:27:18.189Z",
       "artifact": "data/market-derived-integrity-2026-w2.json",
-      "detail": "Independently reconciled 158 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Independently reconciled 124 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401856679"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -143,10 +142,12 @@
     }
   },
   "failures": [
+    "marketDerivedIntegrity",
     "finalSnapshotIntegrity",
     "preKickoffSnapshots"
   ],
   "currentPriorityQueue": [
+    "marketDerivedIntegrity: Independently reconciled 124 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401856679",
     "finalSnapshotIntegrity: 51 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858215, ESPN-401858220, ESPN-401858222, ESPN-401858214, ESPN-401856678, ESPN-401858439, ESPN-401856683, ESPN-401856679, ESPN-401858442, ESPN-401856781, ESPN-401858218, ESPN-401858221, ESPN-401858224, ESPN-401862702, ESPN-401864571, ESPN-401866416, ESPN-401867929, ESPN-401868187, ESPN-401856673, ESPN-401856791, ESPN-401866415, ESPN-401866417, ESPN-401856782, ESPN-401866413, ESPN-401859184, ESPN-401856674, ESPN-401856810, ESPN-401858446, ESPN-401856677, ESPN-401856785, ESPN-401856790, ESPN-401858216, ESPN-401858217, ESPN-401858440, ESPN-401858444, ESPN-401860884, ESPN-401862708, ESPN-401866412, ESPN-401866419, ESPN-401866420, ESPN-401862705, ESPN-401858223, ESPN-401864506, ESPN-401865252, ESPN-401868326, ESPN-401856684, ESPN-401856672, ESPN-401860881, ESPN-401866414, ESPN-401866418, ESPN-401866421.",
     "preKickoffSnapshots: 51 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858215, ESPN-401858220, ESPN-401858222, ESPN-401858214, ESPN-401856678, ESPN-401858439, ESPN-401856683, ESPN-401856679, ESPN-401858442, ESPN-401856781, ESPN-401858218, ESPN-401858221, ESPN-401858224, ESPN-401862702, ESPN-401864571, ESPN-401866416, ESPN-401867929, ESPN-401868187, ESPN-401856673, ESPN-401856791, ESPN-401866415, ESPN-401866417, ESPN-401856782, ESPN-401866413, ESPN-401859184, ESPN-401856674, ESPN-401856810, ESPN-401858446, ESPN-401856677, ESPN-401856785, ESPN-401856790, ESPN-401858216, ESPN-401858217, ESPN-401858440, ESPN-401858444, ESPN-401860884, ESPN-401862708, ESPN-401866412, ESPN-401866419, ESPN-401866420, ESPN-401862705, ESPN-401858223, ESPN-401864506, ESPN-401865252, ESPN-401868326, ESPN-401856684, ESPN-401856672, ESPN-401860881, ESPN-401866414, ESPN-401866418, ESPN-401866421."
   ],
