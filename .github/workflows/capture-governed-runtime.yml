@@ -18,6 +18,7 @@ on:
       - 'scripts/apply-longshot-v2.mjs'
       - 'scripts/sync-expert-ledger.mjs'
       - 'scripts/refresh-weekly-manifest.mjs'
+      - 'scripts/verify-final-snapshot-integrity.mjs'
       - 'scripts/verify-live-portal.mjs'
       - 'scripts/verify-portal-completeness.mjs'
       - 'scripts/verify-weekly-gates.mjs'
@@ -32,6 +33,8 @@ on:
       - 'data/deep-dives-*.json'
       - 'data/upset-research-*.json'
       - 'data/weekly-manifest-*.json'
+      - 'data/final-snapshot-integrity-*.json'
+      - 'data/final-snapshots/**'
       - 'data/underdog-special.json'
       - 'data/longshot-upset-lab.json'
       - 'data/free-moneylines-*.json'
@@ -118,6 +121,8 @@ jobs:
         run: node scripts/apply-free-moneylines.mjs
       - name: Apply Longshot v2 25-point scores and narratives
         run: node scripts/apply-longshot-v2.mjs
+      - name: Audit immutable pre-kickoff snapshot integrity
+        run: node scripts/verify-final-snapshot-integrity.mjs
       - name: Refresh weekly control manifest
         run: node scripts/refresh-weekly-manifest.mjs
       - name: Persist governed decision runtime safely
