@@ -10,7 +10,9 @@ if((fpi.teams||[]).filter(x=>Number.isFinite(Number(x.fpi))).length<100)failures
 const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto(`${portal}?multiModel=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
 await page.waitForFunction(()=>window.CFB_MULTI_MODEL?.state?.ready===true,{timeout:60000});await page.waitForTimeout(1200);
-const out=await page.evaluate(async()=>{
+let out;
+try {
+  out=await Promise.race([page.evaluate(async()=>{
   const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   const sel=document.getElementById('modelSel');const options=Array.from(sel?.options||[]).map(o=>o.value);
   const games=typeof weeks!=='undefined'?(weeks[currentWeek]?.games||[]):[];
@@ -27,10 +29,15 @@ const out=await page.evaluate(async()=>{
   const boardSelected=document.querySelector('#scheduleRows tr')?.dataset?.selectedModel||null;
   const bestRows=document.querySelectorAll('#betsRows tr[data-model-candidate="independent"]').length;
   const matchBtn=document.querySelector('nav button[data-tab="match"]');matchBtn?.click();await sleep(120);const ms=document.getElementById('matchSel');if(ms?.options?.length){ms.selectedIndex=0;ms.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(ms.value);await sleep(400)}
-  const panel=document.getElementById('multiModelMatchupPanel');const text=panel?.innerText||'';
-  return{options,independence,independentTitle,boardSelected,bestRows,panel:!!panel,text,fpiUpdatedAt:window.CFB_MULTI_MODEL?.state?.fpi?.updatedAt||null};
-});
-await browser.close();
+  const panel=document.getElementById('multiModelMatchupPanel'),visible=document.querySelector('#matchupCenterV2 .mc2-models');const text=`${visible?.textContent||''} ${panel?.textContent||''}`;
+  return{options,independence,independentTitle,boardSelected,bestRows,panel:!!panel&&!!visible,text,fpiUpdatedAt:window.CFB_MULTI_MODEL?.state?.fpi?.updatedAt||null};
+  }),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Multi-model browser evaluation exceeded 45 seconds')),45000))]);
+} catch (error) {
+  failures.push(`browser verification timeout/error: ${error.message}`);
+  out={options:[],independence:null,independentTitle:'',boardSelected:null,bestRows:0,panel:false,text:'',fpiUpdatedAt:null};
+} finally {
+  await browser.close().catch(()=>{});
+}
 for(const m of ['ensemble','independent','market'])if(!out.options.includes(m))failures.push(`model selector missing ${m}`);
 if(!out.independence||!Number.isFinite(out.independence.before)||Math.abs(out.independence.before-out.independence.after)>.000001)failures.push(`Football Independent fair changed when market was mutated: ${JSON.stringify(out.independence)}`);
 if(!/Football Independent/.test(out.independentTitle))failures.push('Best Bets did not switch to Football Independent');
