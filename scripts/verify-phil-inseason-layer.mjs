@@ -30,7 +30,9 @@ const page=await browser.newPage({viewport:{width:1440,height:1100}});const brow
 await page.goto(`${portal}?philInseason=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
 await page.waitForFunction(()=>window.CFB_RUNTIME_DATA&&window.CFB_PHIL_INSEASON_READY===true,{timeout:60000}).catch(()=>{});
 await page.waitForTimeout(1800);
-const out=await page.evaluate(async()=>{
+let out;
+try {
+  out=await Promise.race([page.evaluate(async()=>{
   const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   const matchBtn=document.querySelector('nav button[data-tab="match"]');if(matchBtn)matchBtn.click();await sleep(150);
   const sel=document.getElementById('matchSel');let idx=-1;if(sel)idx=Array.from(sel.options).findIndex(o=>/UCF.*Pittsburgh|UCF.*Pitt|Pittsburgh.*UCF|Pitt.*UCF/i.test(o.textContent||''));
@@ -38,8 +40,13 @@ const out=await page.evaluate(async()=>{
   const panel=document.getElementById('philInseasonPanel');const txt=panel?.innerText||'';
   let model=null;try{const id=sel?.value;const x=Object.values(weeks||{}).flatMap(v=>v.games||[]).find(g=>g.id===id);model=x?.modelComponents?.philInseason||null}catch{}
   return {ready:window.CFB_PHIL_INSEASON_READY===true,selectedIndex:idx,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null};
-});
-await browser.close();
+  }),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Phil in-season browser evaluation exceeded 45 seconds')),45000))]);
+} catch (error) {
+  failures.push(`browser verification timeout/error: ${error.message}`);
+  out={ready:false,selectedIndex:-1,panel:false,text:'',model:null,updatedAt:null};
+} finally {
+  await browser.close().catch(()=>{});
+}
 if(!out.ready)failures.push('CFB_PHIL_INSEASON_READY did not become true');
 if(out.updatedAt!==expectedDate)failures.push(`Rendered Phil in-season date ${out.updatedAt} != ${expectedDate}`);
 if(out.selectedIndex<0)failures.push('UCF-Pittsburgh matchup not found in Matchup Center');
