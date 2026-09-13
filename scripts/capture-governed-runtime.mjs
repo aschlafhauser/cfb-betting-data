@@ -24,13 +24,21 @@ const hydrated=await buildFullSlate();
 const browser=await chromium.launch({headless:true}),page=await browser.newPage();
 page.on('pageerror',e=>console.error(`[browser:pageerror] ${e.message}`));
 await page.route('**/weekly-board.json*',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(hydrated)}));
+let captureStage='navigation';
+const markStage=stage=>{captureStage=stage;console.log(`Governed portal capture stage: ${stage}`)};
 const capturePortal=async()=>{
+  markStage('navigation');
   await page.goto(portal,{waitUntil:'domcontentloaded',timeout:120000});
+  markStage('runtime-data-ready');
   await page.waitForFunction(()=>window.CFB_RUNTIME_DATA&&['remote-active','local-fallback'].includes(window.CFB_RUNTIME_DATA.status),null,{timeout:60000});
+  markStage('weekly-board-rendered');
   await page.waitForFunction(n=>Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&document.querySelectorAll('#scheduleRows tr').length===n,expected,{timeout:30000});
+  markStage('multi-model-ready');
   await page.waitForFunction(()=>window.CFB_MULTI_MODEL?.state?.ready===true&&typeof window.CFB_RUNTIME_PROMOTE_GOVERNED_MODEL_OUTPUTS==='function',null,{timeout:60000});
+  markStage('model-promotion');
   await page.evaluate(()=>{window.CFB_RUNTIME_PROMOTE_GOVERNED_MODEL_OUTPUTS();try{window.renderBoard?.()}catch{}});
   await page.waitForTimeout(500);
+  markStage('serialization');
   return page.evaluate(()=>({board:JSON.parse(JSON.stringify(window.CFB_WEEKLY_BOARD_2026)),runtime:JSON.parse(JSON.stringify(window.CFB_RUNTIME_DATA)),renderedRows:document.querySelectorAll('#scheduleRows tr').length}));
 };
 let emitted;
@@ -38,7 +46,7 @@ let captureTimer;
 try{
   emitted=await Promise.race([
     capturePortal(),
-    new Promise((_,reject)=>{captureTimer=setTimeout(()=>reject(new Error('Governed portal capture exceeded 150 seconds')),150000)})
+    new Promise((_,reject)=>{captureTimer=setTimeout(()=>reject(new Error(`Governed portal capture exceeded 150 seconds during ${captureStage}`)),150000)})
   ]);
 }finally{
   clearTimeout(captureTimer);
