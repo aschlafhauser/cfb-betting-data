@@ -1,4 +1,4 @@
-// Verification v2: rerun after portal hydration/display stabilization fix.
+// Verification v3: bounded staged browser checks; avoid duplicate direct render invocation.
 import fs from 'node:fs/promises';
 import { chromium } from 'playwright';
 
@@ -26,26 +26,47 @@ if(pitt.power&&Number(pitt.power.current)!==130)failures.push(`Pittsburgh curren
 if(ucf.power&&Number(ucf.power.current)!==127)failures.push(`UCF current Phil power ${ucf.power.current} != 127`);
 
 const browser=await chromium.launch({headless:true});
-const page=await browser.newPage({viewport:{width:1440,height:1100}});const browserErrors=[];page.on('pageerror',e=>browserErrors.push(e.message));
+const page=await browser.newPage({viewport:{width:1440,height:1100}});
+const browserErrors=[];
+page.on('pageerror',e=>browserErrors.push(e.message));
+const bounded=(promise,label,ms=15000)=>Promise.race([
+  promise,
+  new Promise((_,reject)=>setTimeout(()=>reject(new Error(`${label} exceeded ${ms} milliseconds`)),ms))
+]);
 await page.goto(`${portal}?philInseason=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
 await page.waitForFunction(()=>window.CFB_RUNTIME_DATA&&window.CFB_PHIL_INSEASON_READY===true,{timeout:60000}).catch(()=>{});
 await page.waitForTimeout(1800);
 let out;
 try {
-  out=await Promise.race([page.evaluate(async()=>{
-  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-  const matchBtn=document.querySelector('nav button[data-tab="match"]');if(matchBtn)matchBtn.click();await sleep(150);
-  const sel=document.getElementById('matchSel');let idx=-1;if(sel)idx=Array.from(sel.options).findIndex(o=>/UCF.*Pittsburgh|UCF.*Pitt|Pittsburgh.*UCF|Pitt.*UCF/i.test(o.textContent||''));
-  if(idx>=0){sel.selectedIndex=idx;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(900)}
-  const panel=document.getElementById('philInseasonPanel');const txt=panel?.innerText||'';
-  let model=null;try{const id=sel?.value;const x=Object.values(weeks||{}).flatMap(v=>v.games||[]).find(g=>g.id===id);model=x?.modelComponents?.philInseason||null}catch{}
-  return {ready:window.CFB_PHIL_INSEASON_READY===true,selectedIndex:idx,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null};
-  }),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Phil in-season browser evaluation exceeded 45 seconds')),45000))]);
+  const selection=await bounded(page.evaluate(()=>{
+    const matchBtn=document.querySelector('nav button[data-tab="match"]');
+    if(matchBtn)matchBtn.click();
+    const sel=document.getElementById('matchSel');
+    const idx=sel?Array.from(sel.options).findIndex(o=>/UCF.*Pittsburgh|UCF.*Pitt|Pittsburgh.*UCF|Pitt.*UCF/i.test(o.textContent||'')):-1;
+    if(idx>=0){
+      sel.selectedIndex=idx;
+      sel.dispatchEvent(new Event('change',{bubbles:true}));
+    }
+    return {selectedIndex:idx};
+  }),'Phil in-season matchup selection');
+  await page.waitForTimeout(1200);
+  out=await bounded(page.evaluate(selectedIndex=>{
+    const sel=document.getElementById('matchSel');
+    const panel=document.getElementById('philInseasonPanel');
+    const txt=panel?.innerText||'';
+    let model=null;
+    try{
+      const id=sel?.value;
+      const x=Object.values(weeks||{}).flatMap(v=>v.games||[]).find(g=>g.id===id);
+      model=x?.modelComponents?.philInseason||null;
+    }catch{}
+    return {ready:window.CFB_PHIL_INSEASON_READY===true,selectedIndex,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null};
+  },selection.selectedIndex),'Phil in-season result serialization');
 } catch (error) {
   failures.push(`browser verification timeout/error: ${error.message}`);
   out={ready:false,selectedIndex:-1,panel:false,text:'',model:null,updatedAt:null};
 } finally {
-  await browser.close().catch(()=>{});
+  await Promise.race([browser.close().catch(()=>{}),new Promise(resolve=>setTimeout(resolve,5000))]);
 }
 if(!out.ready)failures.push('CFB_PHIL_INSEASON_READY did not become true');
 if(out.updatedAt!==expectedDate)failures.push(`Rendered Phil in-season date ${out.updatedAt} != ${expectedDate}`);
@@ -53,11 +74,15 @@ if(out.selectedIndex<0)failures.push('UCF-Pittsburgh matchup not found in Matchu
 if(!out.panel)failures.push('Phil Steele in-season quantitative panel missing');
 for(const token of ['Pittsburgh','UCF','Average Game Grade','Pass D','Special Teams','Model treatment'])if(!out.text.includes(token))failures.push(`Phil in-season panel missing ${token}`);
 if(out.model){
-  const a=Number(out.model.adjustment);if(!Number.isFinite(a))failures.push('Phil in-season model adjustment is not numeric');else if(Math.abs(a)>.850001)failures.push(`Phil in-season adjustment ${a} exceeds ±0.85 cap`);
+  const a=Number(out.model.adjustment);
+  if(!Number.isFinite(a))failures.push('Phil in-season model adjustment is not numeric');
+  else if(Math.abs(a)>.850001)failures.push(`Phil in-season adjustment ${a} exceeds ±0.85 cap`);
   if(Number(out.model.totalImpact)!==0)failures.push(`Phil in-season totalImpact ${out.model.totalImpact} != 0`);
   if(out.model.governance!=='ACTIVE_CAPPED_RESIDUAL')failures.push(`Phil in-season governance ${out.model.governance} unexpected`);
 }else failures.push('Selected matchup missing modelComponents.philInseason');
 for(const e of browserErrors)failures.push(`browser pageerror: ${e}`);
 const report={checkedAt:new Date().toISOString(),sourceDate:expectedDate,matchup:'UCF at Pittsburgh',model:out.model,failures,status:failures.length?'FAIL':'PASS'};
 await fs.writeFile('data/phil-inseason-verification-current.json',JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('PHIL IN-SEASON VERIFICATION PASS');
+console.log(JSON.stringify(report,null,2));
+if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')"}`);
+console.log('PHIL IN-SEASON VERIFICATION PASS');
