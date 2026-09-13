@@ -28,7 +28,7 @@ try {
   const independentTitle=document.getElementById('betsTitle')?.innerText||'';
   const boardSelected=document.querySelector('#scheduleRows tr')?.dataset?.selectedModel||null;
   const bestRows=document.querySelectorAll('#betsRows tr[data-model-candidate="independent"]').length;
-  const matchBtn=document.querySelector('nav button[data-tab="match"]');matchBtn?.click();await sleep(120);const ms=document.getElementById('matchSel');const realOption=Array.from(ms?.options||[]).find(o=>String(o.value||'').trim());if(ms&&realOption){ms.value=realOption.value;ms.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(ms.value);await sleep(900)}
+  const matchBtn=document.querySelector('nav button[data-tab="match"]');matchBtn?.click();await sleep(120);const ms=document.getElementById('matchSel');const realOption=Array.from(ms?.options||[]).find(o=>String(o.value||'').trim()&&o.value===x?.id)||Array.from(ms?.options||[]).find(o=>String(o.value||'').trim());if(ms&&realOption){ms.value=realOption.value;ms.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(ms.value);await sleep(900)}
   const panel=document.getElementById('multiModelMatchupPanel'),visible=document.querySelector('#matchupCenterV2 .mc2-models');const text=`${visible?.textContent||''} ${panel?.textContent||''}`;
   return{options,independence,selectedState:window.CFB_MULTI_MODEL?.state?.selected||null,independentTitle,boardSelected,bestRows,matchupValue:ms?.value||null,panel:!!panel&&!!visible,text,fpiUpdatedAt:window.CFB_MULTI_MODEL?.state?.fpi?.updatedAt||null};
   }),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Multi-model browser evaluation exceeded 45 seconds')),45000))]);
@@ -45,7 +45,7 @@ if(out.boardSelected!=='independent')failures.push(`Weekly Board selected model=
 if(!out.panel)failures.push('Matchup Center multi-model panel missing');
 for(const t of ['Football Independent','Market-Calibrated','Ensemble','ESPN FPI','higher is better'])if(!out.text.includes(t))failures.push(`Matchup panel missing ${t}`);
 for(const e of errors)failures.push(`pageerror: ${e}`);
-const report={checkedAt:new Date().toISOString(),fpiUpdatedAt:out.fpiUpdatedAt,selector:out.options,independence:out.independence,bestRows:out.bestRows,status:failures.length?'FAIL':'PASS',failures};await fs.writeFile('data/multi-model-verification-current.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`MULTI MODEL VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('CFB MULTI MODEL VERIFICATION PASS');
+const report={checkedAt:new Date().toISOString(),fpiUpdatedAt:out.fpiUpdatedAt,selector:out.options,selectedState:out.selectedState,matchupValue:out.matchupValue,independence:out.independence,bestRows:out.bestRows,status:failures.length?'FAIL':'PASS',failures};await fs.writeFile('data/multi-model-verification-current.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`MULTI MODEL VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('CFB MULTI MODEL VERIFICATION PASS');
 
 // These are blocking production gates, not informational checks. Run them immediately after
 // the model-selection/independence test so refresh-weekly-manifest.mjs can consume fresh PASS artifacts.
