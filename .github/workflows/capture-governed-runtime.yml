@@ -83,6 +83,8 @@ jobs:
           NODE
       - name: Losslessly reconcile Expert Intelligence primary ledger
         run: node scripts/sync-expert-ledger.mjs
+      - name: Audit immutable pre-kickoff snapshot integrity
+        run: node scripts/verify-final-snapshot-integrity.mjs
       - name: Install browser runtime
         run: |
           npm init -y >/dev/null 2>&1
@@ -122,8 +124,6 @@ jobs:
         run: node scripts/apply-free-moneylines.mjs
       - name: Apply Longshot v2 25-point scores and narratives
         run: node scripts/apply-longshot-v2.mjs
-      - name: Audit immutable pre-kickoff snapshot integrity
-        run: node scripts/verify-final-snapshot-integrity.mjs
       - name: Refresh weekly control manifest
         run: node scripts/refresh-weekly-manifest.mjs
       - name: Persist governed decision runtime safely
