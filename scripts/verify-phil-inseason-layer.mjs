@@ -84,5 +84,5 @@ for(const e of browserErrors)failures.push(`browser pageerror: ${e}`);
 const report={checkedAt:new Date().toISOString(),sourceDate:expectedDate,matchup:'UCF at Pittsburgh',model:out.model,failures,status:failures.length?'FAIL':'PASS'};
 await fs.writeFile('data/phil-inseason-verification-current.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));
-if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')"}`);
+if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')}`);
 console.log('PHIL IN-SEASON VERIFICATION PASS');
