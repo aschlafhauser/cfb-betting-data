@@ -24,13 +24,13 @@ try {
     const rt=(window.CFB_WEEKLY_BOARD_2026?.games||[]).find(g=>String(g.away)===away&&String(g.home)===home);
     if(rt){const old=rt.currentSpread;rt.currentSpread=home+' -41.5';const after=window.CFB_MULTI_MODEL.calculate(x,'independent');rt.currentSpread=old;independence={before:before?.homeMargin,after:after?.homeMargin}}
   }
-  if(sel){sel.value='independent';sel.dispatchEvent(new Event('change',{bubbles:true}));await sleep(250)}
+  if(sel){sel.value='independent';sel.dispatchEvent(new Event('change',{bubbles:true}));for(let i=0;i<20&&window.CFB_MULTI_MODEL?.state?.selected!=='independent';i++)await sleep(100);await sleep(300)}
   const independentTitle=document.getElementById('betsTitle')?.innerText||'';
   const boardSelected=document.querySelector('#scheduleRows tr')?.dataset?.selectedModel||null;
   const bestRows=document.querySelectorAll('#betsRows tr[data-model-candidate="independent"]').length;
-  const matchBtn=document.querySelector('nav button[data-tab="match"]');matchBtn?.click();await sleep(120);const ms=document.getElementById('matchSel');if(ms?.options?.length){ms.selectedIndex=0;ms.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(ms.value);await sleep(400)}
+  const matchBtn=document.querySelector('nav button[data-tab="match"]');matchBtn?.click();await sleep(120);const ms=document.getElementById('matchSel');const realOption=Array.from(ms?.options||[]).find(o=>String(o.value||'').trim());if(ms&&realOption){ms.value=realOption.value;ms.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(ms.value);await sleep(900)}
   const panel=document.getElementById('multiModelMatchupPanel'),visible=document.querySelector('#matchupCenterV2 .mc2-models');const text=`${visible?.textContent||''} ${panel?.textContent||''}`;
-  return{options,independence,independentTitle,boardSelected,bestRows,panel:!!panel&&!!visible,text,fpiUpdatedAt:window.CFB_MULTI_MODEL?.state?.fpi?.updatedAt||null};
+  return{options,independence,selectedState:window.CFB_MULTI_MODEL?.state?.selected||null,independentTitle,boardSelected,bestRows,matchupValue:ms?.value||null,panel:!!panel&&!!visible,text,fpiUpdatedAt:window.CFB_MULTI_MODEL?.state?.fpi?.updatedAt||null};
   }),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Multi-model browser evaluation exceeded 45 seconds')),45000))]);
 } catch (error) {
   failures.push(`browser verification timeout/error: ${error.message}`);
