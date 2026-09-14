@@ -4,12 +4,16 @@ on:
   push:
     branches: [main]
     paths:
+      - 'scripts/rollover-selected-week.mjs'
+      - 'scripts/freeze-pre-kickoff-snapshots.mjs'
       - 'scripts/capture-governed-runtime.mjs'
       - 'scripts/refresh-team-metrics.mjs'
       - 'scripts/refresh-espn-fpi.mjs'
       - 'scripts/audit-team-identities.mjs'
       - 'scripts/verify-phil-inseason-layer.mjs'
       - 'scripts/verify-multi-model.mjs'
+      - 'scripts/verify-statistical-display.mjs'
+      - 'scripts/verify-market-derived-integrity.mjs'
       - 'scripts/build-deep-dive-runtime.mjs'
       - 'scripts/build-specialty-layers.mjs'
       - 'scripts/build-upset-research.mjs'
@@ -34,6 +38,8 @@ on:
       - 'data/deep-dives-*.json'
       - 'data/upset-research-*.json'
       - 'data/weekly-manifest-*.json'
+      - 'data/statistical-display-integrity-*.json'
+      - 'data/market-derived-integrity-*.json'
       - 'data/final-snapshot-integrity-*.json'
       - 'data/final-snapshots/**'
       - 'data/underdog-special.json'
@@ -59,7 +65,7 @@ jobs:
   capture:
     if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -67,6 +73,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Advance selected week only when prior slate is complete
+        run: node scripts/rollover-selected-week.mjs
       - name: Read selected-week control metadata
         run: |
           node - <<'NODE' >> "$GITHUB_ENV"
@@ -83,8 +91,6 @@ jobs:
           NODE
       - name: Losslessly reconcile Expert Intelligence primary ledger
         run: node scripts/sync-expert-ledger.mjs
-      - name: Audit immutable pre-kickoff snapshot integrity
-        run: node scripts/verify-final-snapshot-integrity.mjs
       - name: Install browser runtime
         run: |
           npm init -y >/dev/null 2>&1
@@ -124,6 +130,20 @@ jobs:
         run: node scripts/apply-free-moneylines.mjs
       - name: Apply Longshot v2 25-point scores and narratives
         run: node scripts/apply-longshot-v2.mjs
+      - name: Freeze due immutable pre-kickoff snapshots
+        env:
+          CFB_SNAPSHOT_LOOKAHEAD_MINUTES: '90'
+        run: node scripts/freeze-pre-kickoff-snapshots.mjs
+      - name: Audit immutable pre-kickoff snapshot integrity
+        run: node scripts/verify-final-snapshot-integrity.mjs
+      - name: Verify statistical/FPI Matchup Center display at desktop and mobile
+        env:
+          CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
+        run: node scripts/verify-statistical-display.mjs
+      - name: Verify independent market-derived arithmetic and selected-model render
+        env:
+          CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
+        run: node scripts/verify-market-derived-integrity.mjs
       - name: Refresh weekly control manifest
         run: node scripts/refresh-weekly-manifest.mjs
       - name: Persist governed decision runtime safely
@@ -169,7 +189,7 @@ jobs:
           const fs=require('fs');
           const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;
           const m=JSON.parse(fs.readFileSync(p,'utf8'));
-          m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit live decision-system verification, team-identity reconciliation, Phil in-season layer, ESPN FPI refresh, selectable multi-model independence test, every-tab completeness, 5.1-second/75ms Best Bets render stability at desktop/mobile for all three models, and model-independent Longshot/Underdog specialty QA passed with zero blocking current-runtime errors.'};
+          m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit live decision-system verification, team-identity reconciliation, Phil in-season layer, ESPN FPI refresh, selectable multi-model independence test, statistical/FPI Matchup Center display, independent market-derived reconciliation, every-tab completeness, desktop/mobile Best Bets render stability for all three models, and model-independent Longshot/Underdog specialty QA passed with zero blocking current-runtime errors.'};
           const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');
           m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';
           m.updatedAt=new Date().toISOString();
