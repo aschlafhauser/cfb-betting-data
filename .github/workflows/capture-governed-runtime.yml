@@ -36,10 +36,7 @@ jobs:
       - name: Advance selected week only when prior slate is complete
         run: node scripts/rollover-selected-week.mjs
 
-      # The selected-week board must become public before any browser-driven capture.
-      # Otherwise the live portal still reads the prior week's raw GitHub runtime and
-      # the capture can mix a Week N+1 control plane with Week N rendered data.
-      - name: Persist selected-week rollover before portal capture
+      - name: Persist selected-week rollover before model refresh
         run: |
           set -e
           git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'
@@ -59,30 +56,41 @@ jobs:
         continue-on-error: true
         run: node scripts/sync-expert-ledger.mjs
 
+      # Refresh selected-week model dependencies before opening the portal. The portal
+      # reads these files from raw GitHub, so calculating models before publishing the
+      # new stats/FPI snapshot can otherwise yield a Week-3 shell with Week-2 inputs.
+      - name: Refresh team and position-group statistical display metrics
+        id: stats_refresh
+        continue-on-error: true
+        run: node scripts/refresh-team-metrics.mjs
+
+      - name: Refresh ESPN FPI and opponent-adjusted efficiency components
+        id: fpi_refresh
+        continue-on-error: true
+        run: node scripts/refresh-espn-fpi.mjs
+
+      - name: Publish selected-week model inputs before browser calculation
+        run: |
+          set -e
+          git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'
+          if git diff --quiet -- data/team-metrics-current.json data/espn-fpi-current.json data/live-team-stats.json; then echo 'No model-input persistence needed.'; exit 0; fi
+          git add data/team-metrics-current.json data/espn-fpi-current.json data/live-team-stats.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo 'No publishable model-input changes.'; exit 0; fi
+          git commit -m 'chore: publish selected-week CFB model inputs [skip ci]'
+          git push origin HEAD:main
+
       - name: Install browser runtime
         run: |
           npm init -y >/dev/null 2>&1
           npm install playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Capture governed portal outputs
+      - name: Capture governed portal outputs using current selected-week inputs
         id: capture_runtime
         continue-on-error: true
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/capture-governed-runtime.mjs
-
-      - name: Refresh team and position-group statistical display metrics
-        id: stats_refresh
-        if: ${{ always() }}
-        continue-on-error: true
-        run: node scripts/refresh-team-metrics.mjs
-
-      - name: Refresh ESPN FPI and opponent-adjusted efficiency components
-        id: fpi_refresh
-        if: ${{ always() }}
-        continue-on-error: true
-        run: node scripts/refresh-espn-fpi.mjs
 
       - name: Reconcile canonical team identities across schedule, ESPN and Phil Steele
         id: identity
@@ -185,8 +193,6 @@ jobs:
           set -e
           git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'; git fetch origin main
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-            # The only expected remote advance is this run's own early rollover commit.
-            # Rebase our generated data onto it rather than discarding all downstream work.
             git rebase origin/main || { git rebase --abort || true; echo 'Could not safely reconcile generated runtime with latest main.'; exit 1; }
           fi
           if git diff --quiet -- data/; then echo 'No governed data changes.'; exit 0; fi
