@@ -6,7 +6,6 @@ on:
     paths:
       - 'scripts/**'
       - '.github/workflows/capture-governed-runtime.yml'
-      - 'data/**'
   schedule:
     - cron: '17 * * * *'
   workflow_dispatch:
@@ -14,9 +13,12 @@ on:
 permissions:
   contents: write
 
+# Runtime-bot data commits intentionally do not trigger this workflow. Previously, a
+# [skip ci] data persistence push could still enter the concurrency group and cancel
+# the run that created it before downstream models/research/QA finished.
 concurrency:
   group: cfb-governed-runtime-capture
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   capture:
@@ -33,6 +35,18 @@ jobs:
 
       - name: Advance selected week only when prior slate is complete
         run: node scripts/rollover-selected-week.mjs
+
+      # The selected-week board must become public before any browser-driven capture.
+      # Otherwise the live portal still reads the prior week's raw GitHub runtime and
+      # the capture can mix a Week N+1 control plane with Week N rendered data.
+      - name: Persist selected-week rollover before portal capture
+        run: |
+          set -e
+          git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'
+          if git diff --quiet -- data/weekly-board.json; then echo 'No rollover persistence needed.'; exit 0; fi
+          git add data/weekly-board.json
+          git commit -m 'chore: persist selected-week CFB rollover [skip ci]'
+          git push origin HEAD:main
 
       - name: Read selected-week control metadata
         run: |
@@ -51,8 +65,6 @@ jobs:
           npm install playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      # Core selected-week refreshes are intentionally recoverable and independent. A rendering
-      # verifier must never strand the repo on the prior week or suppress stats/FPI/research work.
       - name: Capture governed portal outputs
         id: capture_runtime
         continue-on-error: true
@@ -167,17 +179,19 @@ jobs:
         continue-on-error: true
         run: node scripts/refresh-weekly-manifest.mjs
 
-      # Persist the selected-week governed data even when a later QA gate fails. QA failures remain
-      # explicit in artifacts/manifests and the job is still blocked by the final gate below.
       - name: Persist governed decision runtime safely
         if: ${{ always() }}
         run: |
           set -e
           git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'; git fetch origin main
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then echo 'A newer runtime commit already landed; this run is superseded.'; git reset --hard origin/main; exit 0; fi
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            # The only expected remote advance is this run's own early rollover commit.
+            # Rebase our generated data onto it rather than discarding all downstream work.
+            git rebase origin/main || { git rebase --abort || true; echo 'Could not safely reconcile generated runtime with latest main.'; exit 1; }
+          fi
           if git diff --quiet -- data/; then echo 'No governed data changes.'; exit 0; fi
           git add data/; git commit -m 'chore: persist governed CFB decision runtime [skip ci]'
-          if ! git push origin HEAD:main; then echo 'Remote advanced during push; resetting to latest main.'; git fetch origin main; git reset --hard origin/main; exit 0; fi
+          git push origin HEAD:main
 
       - name: Verify live production decision system
         id: live_verify
