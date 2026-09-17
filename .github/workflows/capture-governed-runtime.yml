@@ -13,9 +13,6 @@ on:
 permissions:
   contents: write
 
-# Runtime-bot data commits intentionally do not trigger this workflow. Previously, a
-# [skip ci] data persistence push could still enter the concurrency group and cancel
-# the run that created it before downstream models/research/QA finished.
 concurrency:
   group: cfb-governed-runtime-capture
   cancel-in-progress: false
@@ -28,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 20
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -43,6 +40,8 @@ jobs:
           if git diff --quiet -- data/weekly-board.json; then echo 'No rollover persistence needed.'; exit 0; fi
           git add data/weekly-board.json
           git commit -m 'chore: persist selected-week CFB rollover [skip ci]'
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
 
       - name: Read selected-week control metadata
@@ -56,9 +55,6 @@ jobs:
         continue-on-error: true
         run: node scripts/sync-expert-ledger.mjs
 
-      # Refresh selected-week model dependencies before opening the portal. The portal
-      # reads these files from raw GitHub, so calculating models before publishing the
-      # new stats/FPI snapshot can otherwise yield a Week-3 shell with Week-2 inputs.
       - name: Refresh team and position-group statistical display metrics
         id: stats_refresh
         continue-on-error: true
@@ -77,9 +73,12 @@ jobs:
           git add data/team-metrics-current.json data/espn-fpi-current.json data/live-team-stats.json 2>/dev/null || true
           if git diff --cached --quiet; then echo 'No publishable model-input changes.'; exit 0; fi
           git commit -m 'chore: publish selected-week CFB model inputs [skip ci]'
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
 
       - name: Install browser runtime
+        if: ${{ always() }}
         run: |
           npm init -y >/dev/null 2>&1
           npm install playwright@1.55.0
@@ -87,6 +86,7 @@ jobs:
 
       - name: Capture governed portal outputs using current selected-week inputs
         id: capture_runtime
+        if: ${{ always() }}
         continue-on-error: true
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
@@ -191,12 +191,12 @@ jobs:
         if: ${{ always() }}
         run: |
           set -e
-          git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'; git fetch origin main
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-            git rebase origin/main || { git rebase --abort || true; echo 'Could not safely reconcile generated runtime with latest main.'; exit 1; }
-          fi
+          git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'
           if git diff --quiet -- data/; then echo 'No governed data changes.'; exit 0; fi
-          git add data/; git commit -m 'chore: persist governed CFB decision runtime [skip ci]'
+          git add data/
+          git commit -m 'chore: persist governed CFB decision runtime [skip ci]'
+          git fetch origin main
+          git rebase origin/main || { git rebase --abort || true; echo 'Could not safely reconcile generated runtime with latest main.'; exit 1; }
           git push origin HEAD:main
 
       - name: Verify live production decision system
@@ -232,7 +232,7 @@ jobs:
           const fs=require('fs');const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;const m=JSON.parse(fs.readFileSync(p,'utf8'));m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed.'};const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';m.updatedAt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(m,null,2)+'\n');
           NODE
           git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'; git add data/weekly-manifest-${CFB_SEASON}-w${CFB_WEEK}.json
-          if ! git diff --cached --quiet; then git commit -m 'chore: certify clean CFB live verification [skip ci]'; git push origin HEAD:main; fi
+          if ! git diff --cached --quiet; then git commit -m 'chore: certify clean CFB live verification [skip ci]'; git fetch origin main; git rebase origin/main; git push origin HEAD:main; fi
 
       - name: Enforce weekly non-negotiable gates
         if: ${{ always() }}
