@@ -1,0 +1,50 @@
+name: CFB specialty layer guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/specialty-layer-guard.mjs'
+      - '.github/workflows/specialty-layer-guard.yml'
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cfb-specialty-layer-guard
+  cancel-in-progress: false
+
+jobs:
+  specialty:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Refresh selected-week statistics
+        run: |
+          node scripts/refresh-team-metrics.mjs
+          node scripts/refresh-espn-fpi.mjs
+
+      - name: Build and verify selected-week specialty layers
+        run: node scripts/specialty-layer-guard.mjs
+
+      - name: Persist specialty runtime
+        run: |
+          set -e
+          git config user.name 'cfb-runtime-bot'
+          git config user.email 'cfb-runtime-bot@users.noreply.github.com'
+          git add data/
+          if git diff --cached --quiet; then echo 'No specialty-layer changes.'; exit 0; fi
+          git commit -m 'chore: refresh CFB specialty layers [skip ci]'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
