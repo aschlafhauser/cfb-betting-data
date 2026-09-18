@@ -16,11 +16,16 @@ const reusablePrior=d=>!!(d&&['COMPLETE','COMPLETE-SOURCE-LIMITED'].includes(d.s
 const browser=await chromium.launch({headless:true});
 const page=await browser.newPage();
 await page.goto(`${portal}?deepDiveCapture=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
-await page.waitForFunction(()=>window.CFB_RUNTIME_DATA&&Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games),null,{timeout:60000});
-await page.waitForTimeout(1200);
+await page.waitForFunction(expectedWeek=>window.CFB_RUNTIME_DATA?.status==='remote-active'&&Number(window.CFB_WEEKLY_BOARD_2026?.week)===Number(expectedWeek)&&Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games),week,{timeout:60000});
+await page.evaluate(expectedWeek=>{
+  const s=document.getElementById('weekSel');if(!s)return;
+  const target=[...s.options].find(o=>{const m=String(o.value||o.textContent||'').match(/(\d+)/);return m&&Number(m[1])===Number(expectedWeek)});
+  if(target){s.value=target.value;s.dispatchEvent(new Event('change',{bubbles:true}))}
+},week);
+await page.waitForTimeout(1000);
 
-const appGames=await page.evaluate(async()=>{
-  const all=(typeof weeks!=='undefined')?Object.values(weeks).flatMap(v=>v?.games||[]):[];
+const appGames=await page.evaluate(async(expectedWeek)=>{
+  const all=(typeof weeks!=='undefined'&&weeks[`Week ${expectedWeek}`])?(weeks[`Week ${expectedWeek}`].games||[]):[];
   const out=[];
   for(const x of all){
     if(!x?.game) continue;
@@ -33,8 +38,9 @@ const appGames=await page.evaluate(async()=>{
     out.push({id:x.id,game:x.game,away,home,market:x.market||null,total:x.total??null,fair:x.fair||null,edge:x.edge||null,why:x.why||null,priority:x.priority||null,interactions:Array.isArray(x.interactions)?x.interactions:[],modelComponents:x.modelComponents||null,modelTotal:x.modelTotal??null,totalDrivers:Array.isArray(x.totalDrivers)?x.totalDrivers:[],awayProfile:awayProfile?{summary:awayProfile.summary||null,public:awayProfile.public||null}:null,homeProfile:homeProfile?{summary:homeProfile.summary||null,public:homeProfile.public||null}:null,detail});
   }
   return JSON.parse(JSON.stringify(out));
-});
+},week);
 await browser.close();
+if(!appGames.length)throw new Error(`No rendered portal games found for selected Week ${week}; refusing to publish empty Deep Dive enrichment.`);
 const appByKey=new Map(appGames.map(x=>[key(x.away,x.home),x]));
 
 function evidenceFor(bg,ag){
