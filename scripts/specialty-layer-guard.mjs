@@ -46,14 +46,30 @@ const specialIds = new Set(currentSpecial.map(c=>String(c.canonicalGameId||c.gam
 const longshotIds = new Set(currentLongshot.map(c=>String(c.canonicalGameId||c.gameId)));
 const missingSpecial = expectedSpecial.filter(x=>!specialIds.has(String(x.gameId)));
 const missingLongshot = expectedLongshot.filter(x=>!longshotIds.has(String(x.gameId)));
+const incompleteSpecial = currentSpecial.filter(c=>{
+  const q=c.qualifiers||{};
+  return c.criterionAssessmentStatus!=='COMPLETE' || !['rest','nonExplosive','qbYpa'].every(k=>q[k]&&typeof q[k].qualifies==='boolean'&&String(q[k].reason||'').trim());
+});
+const incompleteLongshot = currentLongshot.filter(c=>{
+  const comps=c.researchComponents||{};
+  const narrative=c.narrative||{};
+  const scoreOk=Number.isFinite(Number(c.score))&&Number(c.score)>=0&&Number(c.score)<=25;
+  const componentsOk=['qbStability','trenchResistance','explosivePath','compression','havocVolatility','coachingSituational','availability','productionModel','independentModel'].every(k=>Number.isFinite(Number(comps[k])));
+  const narrativeOk=String(narrative.upsetCase||'').trim()&&String(narrative.whyItCouldFail||'').trim()&&Array.isArray(narrative.keyThingsToWatch)&&narrative.keyThingsToWatch.length>0;
+  const evidenceOk=Array.isArray(narrative.evidence)&&narrative.evidence.length>0;
+  const researchStateOk=!['PENDING',''].includes(String(c.deepDiveStatus||'').toUpperCase())&&!['unknown',''].includes(String(c.informationQuality||'').toLowerCase());
+  const priceOk=!!String(c.priceStatus||'').trim();
+  return !(scoreOk&&componentsOk&&narrativeOk&&evidenceOk&&researchStateOk&&priceOk);
+});
 
 const report = {
   season, week, updatedAt: now,
-  status: missingSpecial.length || missingLongshot.length ? 'FAIL' : 'PASS',
+  status: missingSpecial.length || missingLongshot.length || incompleteSpecial.length || incompleteLongshot.length ? 'FAIL' : 'PASS',
   expected: {underdogSpecial: expectedSpecial.length, longshotUpsetLab: expectedLongshot.length},
   populated: {underdogSpecial: currentSpecial.length, longshotUpsetLab: currentLongshot.length},
   missing: {underdogSpecial: missingSpecial, longshotUpsetLab: missingLongshot},
-  governance: 'Specialty layers must be selected-week complete independent of browser/model-capture success. Research may begin with governed statistical/bootstrap evidence and is enriched when Deep Dives become available.'
+  incomplete: {underdogSpecial: incompleteSpecial.map(x=>({gameId:x.canonicalGameId,team:x.team})), longshotUpsetLab: incompleteLongshot.map(x=>({gameId:x.canonicalGameId,team:x.team,deepDiveStatus:x.deepDiveStatus,informationQuality:x.informationQuality}))},
+  governance: 'Specialty layers must be selected-week complete independent of browser/model-capture success. Population is independent of browser/model capture, but PASS requires governed research completeness. A browser failure may produce SOURCE-LIMITED records with explicit evidence; it may never certify PENDING/unknown/empty-evidence specialty candidates.'
 };
 await fs.writeFile(`data/specialty-layer-guard-${season}-w${week}.json`, JSON.stringify(report,null,2)+'\n');
 console.log(`Specialty guard Week ${week}: underdog ${currentSpecial.length}/${expectedSpecial.length}; longshot ${currentLongshot.length}/${expectedLongshot.length}`);
