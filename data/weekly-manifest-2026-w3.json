@@ -1,0 +1,100 @@
+{
+  "season": 2026,
+  "week": 3,
+  "updatedAt": "2026-09-19T13:04:39.329Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
+  "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
+  "gates": {
+    "canonicalSchedule": {
+      "status": "PASS",
+      "expectedGames": 75,
+      "actualGames": 75,
+      "detail": "Canonical selected-week schedule coverage."
+    },
+    "marketCoverage": {
+      "status": "PASS",
+      "minimumRequired": 60,
+      "actualMarketGames": 74,
+      "detail": "Current spread/total coverage from canonical board."
+    },
+    "deepDiveEvidence": {
+      "status": "PASS",
+      "required": 75,
+      "complete": 75,
+      "pending": 0,
+      "fullEvidence": 0,
+      "sourceLimited": 75,
+      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
+    },
+    "statisticalDisplay": {
+      "status": "PASS",
+      "blocking": true,
+      "verifiedAt": "2026-09-19T13:04:39.249Z",
+      "artifact": "data/statistical-display-integrity-2026-w3.json",
+      "detail": "All 75 canonical games resolve both teams to the current 150-team metrics runtime; governed dossiers incorporate current team statistics and September 15 Phil Steele in-season YPP tables."
+    },
+    "marketDerivedIntegrity": {
+      "status": "PASS",
+      "blocking": true,
+      "verifiedAt": "2026-09-19T13:04:39.249Z",
+      "artifact": "data/market-derived-integrity-2026-w3.json",
+      "detail": "All canonical Week 3 games persist the deterministic production ensemble, market-calibrated fair, independent composite and edge side/magnitude shown by the live portal; no moneyline or expert signal was inferred."
+    },
+    "unifiedUpsetResearch": {
+      "status": "PASS",
+      "detail": "Research artifact week=3; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."
+    },
+    "marketMovers": {
+      "status": "PASS-SOURCE-LIMITED",
+      "detail": "Current derived mover set has 0 reference games; zero-reference coverage is explicitly source-limited when no governed opener set is expected."
+    },
+    "underdogSpecial": {
+      "status": "PASS",
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 11 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+    },
+    "longshotUpsetLab": {
+      "status": "PASS",
+      "detail": "Canonical longshot spread screen refreshed with 49 visible candidates."
+    },
+    "expertEpisodeInventory": {
+      "status": "IN_PROGRESS",
+      "primaryLedgerStatus": "SYNCHRONIZED",
+      "ledgerSyncReport": "data/expert-ledger-reconciliation.json",
+      "latestReconciliation": null,
+      "pointImpact": 0,
+      "detail": "Primary expert ledger is losslessly synchronized with governed audit records (140 ledger records; 0 missing). Episode discovery/completeness remains separately governed."
+    },
+    "canonicalGameJoins": {
+      "status": "PASS-DERIVED-LAYERS",
+      "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
+    },
+    "productionVerifier": {
+      "status": "PENDING-LIVE-CHECK",
+      "priorFailure": false,
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
+    },
+    "finalSnapshotIntegrity": {
+      "status": "PASS-NO-OFFICIAL-WAGERS",
+      "blocking": false,
+      "verifiedAt": "2026-09-19T13:04:39.249Z",
+      "artifact": "data/final-snapshot-integrity-2026-w3.json",
+      "validSnapshots": 0,
+      "pendingBeforeKickoff": 71,
+      "permanentFailures": [],
+      "detail": "0 valid immutable snapshots; 71 games remain pending before kickoff."
+    },
+    "preKickoffSnapshots": {
+      "status": "PASS-NO-OFFICIAL-WAGERS",
+      "blocking": false,
+      "artifact": "data/final-snapshot-integrity-2026-w3.json",
+      "detail": "0 valid immutable snapshots; 71 games remain pending before kickoff."
+    }
+  },
+  "failures": [],
+  "currentPriorityQueue": [
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
+  ],
+  "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
+}
