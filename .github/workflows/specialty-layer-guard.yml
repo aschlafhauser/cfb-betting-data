@@ -32,15 +32,23 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install specialty runtime dependencies
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium
+
       - name: Refresh selected-week statistics
         run: |
           node scripts/refresh-team-metrics.mjs
           node scripts/refresh-espn-fpi.mjs
 
       - name: Build and verify selected-week specialty layers
+        id: specialty_guard
+        continue-on-error: true
         run: node scripts/specialty-layer-guard.mjs
 
-      - name: Persist specialty runtime
+      - name: Persist specialty runtime and diagnostics
+        if: always()
         run: |
           set -e
           git config user.name 'cfb-runtime-bot'
@@ -51,3 +59,8 @@ jobs:
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
+
+      - name: Enforce specialty hard gate
+        if: always()
+        run: |
+          test "${{ steps.specialty_guard.outcome }}" = "success" || { echo 'Specialty-layer hard gate failed; diagnostics were persisted for repair.'; exit 1; }
