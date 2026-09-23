@@ -34,7 +34,10 @@ const appGames=await page.evaluate(async(expectedWeek)=>{
     let awayProfile=null,homeProfile=null,detail='';
     try{awayProfile=typeof getProfile==='function'?getProfile(away):null}catch{}
     try{homeProfile=typeof getProfile==='function'?getProfile(home):null}catch{}
-    try{if(typeof renderMatch==='function'&&x.id){renderMatch(x.id);await new Promise(r=>setTimeout(r,5));detail=(document.getElementById('matchDetail')?.innerText||'').slice(0,7000)}}catch{}
+    // Do not invoke renderMatch for every game here. That renderer mutates the
+    // application repeatedly and can re-enter observers; the dossier builder
+    // already carries interactions, profiles, model components and explicit
+    // source-limit labels without using rendered prose as invented evidence.
     out.push({id:x.id,game:x.game,away,home,market:x.market||null,total:x.total??null,fair:x.fair||null,edge:x.edge||null,why:x.why||null,priority:x.priority||null,interactions:Array.isArray(x.interactions)?x.interactions:[],modelComponents:x.modelComponents||null,modelTotal:x.modelTotal??null,totalDrivers:Array.isArray(x.totalDrivers)?x.totalDrivers:[],awayProfile:awayProfile?{summary:awayProfile.summary||null,public:awayProfile.public||null}:null,homeProfile:homeProfile?{summary:homeProfile.summary||null,public:homeProfile.public||null}:null,detail});
   }
   return JSON.parse(JSON.stringify(out));
