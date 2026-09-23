@@ -17,7 +17,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: cfb-specialty-layer-guard
+  # Serialize with the full governed-runtime workflow so neither job can move
+  # main underneath the other's generated-data commit/rebase sequence.
+  group: cfb-governed-runtime-writer
   cancel-in-progress: false
 
 jobs:

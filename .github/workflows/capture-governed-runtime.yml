@@ -14,14 +14,21 @@ permissions:
   contents: write
 
 concurrency:
-  group: cfb-governed-runtime-capture
+  # Every governed CFB writer shares one lock.  The specialty workflow was
+  # previously able to push while this job was publishing model inputs, which
+  # caused rebase failures and consumed the 30-minute budget before the sticky
+  # verification gates could run.
+  group: cfb-governed-runtime-writer
   cancel-in-progress: false
 
 jobs:
   capture:
     if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Browser installation plus the full desktop/mobile verification matrix can
+    # legitimately exceed 30 minutes.  A timeout before the gate steps leaves no
+    # selected-week manifest and must never masquerade as a completed checkpoint.
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
