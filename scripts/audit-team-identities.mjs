@@ -4,7 +4,10 @@ import { chromium } from 'playwright';
 const portal=process.env.CFB_PORTAL_URL||'https://cfb-betting-intelligence.netlify.app/';
 const board=JSON.parse(await fs.readFile('data/weekly-board.json','utf8'));
 const metrics=JSON.parse(await fs.readFile('data/team-metrics-current.json','utf8').catch(()=>'{"teams":[]}'));
-const registry=await fetch(`${portal.replace(/\/$/,'')}/data/team-identity-registry.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`registry ${r.status}`);return r.json()});
+const registry=await fetch(`${portal.replace(/\/$/,'')}/data/team-identity-registry.json?v=${Date.now()}`,{
+  cache:'no-store',
+  signal:AbortSignal.timeout(30000)
+}).then(r=>{if(!r.ok)throw new Error(`registry ${r.status}`);return r.json()});
 const raw=s=>String(s||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
 const aliasToCanonical=new Map(), canonicalToRecord=new Map(), ambiguous=[];
 for(const rec of registry.teams||[]){
