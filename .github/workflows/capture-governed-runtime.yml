@@ -95,6 +95,7 @@ jobs:
         id: capture_runtime
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/capture-governed-runtime.mjs
@@ -103,6 +104,7 @@ jobs:
         id: identity
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/audit-team-identities.mjs
@@ -111,6 +113,7 @@ jobs:
         id: phil_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-phil-inseason-layer.mjs
@@ -119,6 +122,7 @@ jobs:
         id: multimodel_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-multi-model.mjs
@@ -127,6 +131,7 @@ jobs:
         id: deep_dives
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/build-deep-dive-runtime.mjs
@@ -176,6 +181,7 @@ jobs:
         id: stats_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-statistical-display.mjs
@@ -184,6 +190,7 @@ jobs:
         id: market_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-market-derived-integrity.mjs
@@ -210,6 +217,7 @@ jobs:
         id: live_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
           CFB_MIN_MEANINGFUL_MODELS: '40'
@@ -220,6 +228,7 @@ jobs:
         id: completeness_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-portal-completeness.mjs
@@ -228,6 +237,7 @@ jobs:
         id: stability_verify
         if: ${{ always() }}
         continue-on-error: true
+        timeout-minutes: 8
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: node scripts/verify-model-specialty-stability.mjs
