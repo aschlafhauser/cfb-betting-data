@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-23T19:00:34.694Z",
+  "updatedAt": "2026-09-23T19:35:55.313Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -12,9 +12,9 @@
       "detail": "Canonical selected-week schedule coverage."
     },
     "marketCoverage": {
-      "status": "FAIL",
+      "status": "PASS",
       "minimumRequired": 60,
-      "actualMarketGames": 19,
+      "actualMarketGames": 71,
       "detail": "Current spread/total coverage from canonical board."
     },
     "deepDiveEvidence": {
@@ -34,10 +34,11 @@
       "detail": "Team/stat coverage 142/142; ESPN FPI 138 numeric teams; sampled rendered statistical panels 12/12; FPI panels 8/12."
     },
     "marketDerivedIntegrity": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-23T19:35:55.231Z",
       "artifact": "data/market-derived-integrity-2026-w4.json",
-      "detail": "Independently reconciled 57 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 57 model/market arithmetic records were checkable"
+      "detail": "Independently reconciled 207 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -49,11 +50,11 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 3 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 15 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 9 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 41 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -75,7 +76,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-23T18:53:36.165Z",
+      "verifiedAt": "2026-09-23T19:30:31.762Z",
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 71,
@@ -90,14 +91,10 @@
     }
   },
   "failures": [
-    "marketCoverage",
-    "deepDiveEvidence",
-    "marketDerivedIntegrity"
+    "deepDiveEvidence"
   ],
   "currentPriorityQueue": [
-    "marketCoverage: Current spread/total coverage from canonical board.",
-    "deepDiveEvidence: Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence.",
-    "marketDerivedIntegrity: Independently reconciled 57 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 57 model/market arithmetic records were checkable"
+    "deepDiveEvidence: Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
