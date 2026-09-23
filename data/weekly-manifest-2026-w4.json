@@ -1,0 +1,103 @@
+{
+  "season": 2026,
+  "week": 4,
+  "updatedAt": "2026-09-23T14:43:40.101Z",
+  "status": "FAIL",
+  "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
+  "gates": {
+    "canonicalSchedule": {
+      "status": "PASS",
+      "expectedGames": 71,
+      "actualGames": 71,
+      "detail": "Canonical selected-week schedule coverage."
+    },
+    "marketCoverage": {
+      "status": "FAIL",
+      "minimumRequired": 60,
+      "actualMarketGames": 19,
+      "detail": "Current spread/total coverage from canonical board."
+    },
+    "deepDiveEvidence": {
+      "status": "FAIL",
+      "required": 71,
+      "complete": 75,
+      "pending": 0,
+      "fullEvidence": 0,
+      "sourceLimited": 75,
+      "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
+    },
+    "statisticalDisplay": {
+      "status": "PASS",
+      "blocking": true,
+      "verifiedAt": "2026-09-23T14:38:27.524Z",
+      "artifact": "data/statistical-display-integrity-2026-w4.json",
+      "detail": "Team/stat coverage 142/142; ESPN FPI 138 numeric teams; sampled rendered statistical panels 12/12; FPI panels 11/12."
+    },
+    "marketDerivedIntegrity": {
+      "status": "FAIL",
+      "blocking": true,
+      "artifact": "data/market-derived-integrity-2026-w4.json",
+      "detail": "No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+    },
+    "unifiedUpsetResearch": {
+      "status": "PASS",
+      "detail": "Research artifact week=4; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."
+    },
+    "marketMovers": {
+      "status": "PASS-SOURCE-LIMITED",
+      "detail": "Current derived mover set has 0 reference games; zero-reference coverage is explicitly source-limited when no governed opener set is expected."
+    },
+    "underdogSpecial": {
+      "status": "PASS",
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 3 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+    },
+    "longshotUpsetLab": {
+      "status": "PASS",
+      "detail": "Canonical longshot spread screen refreshed with 9 visible candidates."
+    },
+    "expertEpisodeInventory": {
+      "status": "IN_PROGRESS",
+      "primaryLedgerStatus": "SYNCHRONIZED",
+      "ledgerSyncReport": "data/expert-ledger-reconciliation.json",
+      "latestReconciliation": null,
+      "pointImpact": 0,
+      "detail": "Primary expert ledger is losslessly synchronized with governed audit records (141 ledger records; 0 missing). Episode discovery/completeness remains separately governed."
+    },
+    "canonicalGameJoins": {
+      "status": "PASS-DERIVED-LAYERS",
+      "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
+    },
+    "productionVerifier": {
+      "status": "PENDING-LIVE-CHECK",
+      "priorFailure": false,
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
+    },
+    "finalSnapshotIntegrity": {
+      "status": "IN_PROGRESS",
+      "blocking": false,
+      "verifiedAt": "2026-09-23T14:37:55.644Z",
+      "artifact": "data/final-snapshot-integrity-2026-w4.json",
+      "validSnapshots": 0,
+      "pendingBeforeKickoff": 71,
+      "permanentFailures": [],
+      "detail": "0 valid immutable snapshots; 71 games remain pending before kickoff."
+    },
+    "preKickoffSnapshots": {
+      "status": "IN_PROGRESS",
+      "blocking": false,
+      "artifact": "data/final-snapshot-integrity-2026-w4.json",
+      "detail": "0 valid immutable snapshots; 71 games remain pending before kickoff."
+    }
+  },
+  "failures": [
+    "marketCoverage",
+    "deepDiveEvidence",
+    "marketDerivedIntegrity"
+  ],
+  "currentPriorityQueue": [
+    "marketCoverage: Current spread/total coverage from canonical board.",
+    "deepDiveEvidence: Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence.",
+    "marketDerivedIntegrity: No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+  ],
+  "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
+}
