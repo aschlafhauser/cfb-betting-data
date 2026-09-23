@@ -19,7 +19,7 @@ concurrency:
   # caused rebase failures and consumed the 30-minute budget before the sticky
   # verification gates could run.
   group: cfb-governed-runtime-writer
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   capture:
