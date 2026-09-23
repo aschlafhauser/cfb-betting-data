@@ -13,10 +13,15 @@ const [agg,power,passD,st]=await Promise.all([
   'data/phil-inseason-special-teams-2026.json'
 ].map(async p=>JSON.parse(await fs.readFile(p,'utf8'))));
 const failures=[];
-const sourceDate=String(power.updatedAt||agg.updatedAt||passD.updatedAt||st.updatedAt||'');
+const sourceDates={
+  power:String(power.updatedAt||''),
+  averageGameGrade:String(agg.updatedAt||''),
+  passEfficiencyDefense:String(passD.updatedAt||''),
+  specialTeams:String(st.updatedAt||'')
+};
+const sourceDate=Object.values(sourceDates).filter(Boolean).sort().at(-1)||'';
 for(const [name,d,min] of [['AGG',agg,130],['Power',power,130],['PassD',passD,130],['ST',st,130]]){
   if(!d.updatedAt)failures.push(`${name} snapshot has no source date`);
-  if(sourceDate&&d.updatedAt!==sourceDate)failures.push(`${name} snapshot date ${d.updatedAt} != common source date ${sourceDate}`);
   if(!Array.isArray(d.rows)||d.rows.length<min)failures.push(`${name} rows ${d.rows?.length||0} < ${min}`);
 }
 const raw=s=>String(s||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
@@ -57,4 +62,4 @@ if(!out.ready)failures.push('CFB_PHIL_INSEASON_READY did not become true');if(so
 if(target){for(const token of [target.away,target.home,'Average Game Grade','Pass D','Special Teams','Model treatment'])if(!out.text.includes(token))failures.push(`Phil in-season panel missing ${token}`)}
 if(out.model){const a=Number(out.model.adjustment);if(!Number.isFinite(a))failures.push('Phil in-season model adjustment is not numeric');else if(Math.abs(a)>.850001)failures.push(`Phil in-season adjustment ${a} exceeds ±0.85 cap`);if(Number(out.model.totalImpact)!==0)failures.push(`Phil in-season totalImpact ${out.model.totalImpact} != 0`);if(out.model.governance!=='ACTIVE_CAPPED_RESIDUAL')failures.push(`Phil in-season governance ${out.model.governance} unexpected`)}else if(target)failures.push('Selected matchup missing modelComponents.philInseason');
 for(const e of browserErrors)failures.push(`browser pageerror: ${e}`);
-const report={checkedAt:new Date().toISOString(),week:Number(board.week),sourceDate,matchup:target?`${target.away} at ${target.home}`:null,model:out.model,failures,status:failures.length?'FAIL':'PASS'};await fs.writeFile('data/phil-inseason-verification-current.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('PHIL IN-SEASON VERIFICATION PASS');
+const report={checkedAt:new Date().toISOString(),week:Number(board.week),sourceDate,sourceDates,matchup:target?`${target.away} at ${target.home}`:null,model:out.model,policy:{spreadImpactCap:0.85,totalImpact:0,provenance:'Each governed Phil table retains its own source date; sourceDate is the newest table date.'},failures,status:failures.length?'FAIL':'PASS'};await fs.writeFile('data/phil-inseason-verification-current.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('PHIL IN-SEASON VERIFICATION PASS');
