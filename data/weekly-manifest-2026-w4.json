@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-23T16:20:26.629Z",
+  "updatedAt": "2026-09-23T17:30:01.672Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -37,7 +37,7 @@
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/market-derived-integrity-2026-w4.json",
-      "detail": "No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+      "detail": "Independently reconciled 57 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 57 model/market arithmetic records were checkable"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -75,7 +75,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-23T16:10:01.505Z",
+      "verifiedAt": "2026-09-23T17:24:33.253Z",
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 71,
@@ -97,7 +97,7 @@
   "currentPriorityQueue": [
     "marketCoverage: Current spread/total coverage from canonical board.",
     "deepDiveEvidence: Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence.",
-    "marketDerivedIntegrity: No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+    "marketDerivedIntegrity: Independently reconciled 57 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 57 model/market arithmetic records were checkable"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
