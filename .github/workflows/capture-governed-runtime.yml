@@ -73,16 +73,19 @@ jobs:
         continue-on-error: true
         run: node scripts/refresh-espn-fpi.mjs
 
-      - name: Publish selected-week model inputs before browser calculation
+      - name: Publish selected-week checkpoint before browser calculation
         run: |
           set -e
           git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'
-          if git diff --quiet -- data/team-metrics-current.json data/espn-fpi-current.json data/live-team-stats.json; then echo 'No model-input persistence needed.'; exit 0; fi
-          git add data/team-metrics-current.json data/espn-fpi-current.json data/live-team-stats.json 2>/dev/null || true
-          if git diff --cached --quiet; then echo 'No publishable model-input changes.'; exit 0; fi
-          git commit -m 'chore: publish selected-week CFB model inputs [skip ci]'
+          if git diff --quiet -- data/; then echo 'No checkpoint persistence needed.'; exit 0; fi
+          # Commit every generated data change together. Leaving expert/market files
+          # unstaged and reapplying them with --autostash can inject conflict markers
+          # into JSON that later verification steps read as governed input.
+          git add data/
+          if git diff --cached --quiet; then echo 'No publishable checkpoint changes.'; exit 0; fi
+          git commit -m 'chore: publish selected-week CFB checkpoint [skip ci]'
           git fetch origin main
-          git rebase --autostash origin/main
+          git rebase origin/main || { git rebase --abort || true; echo 'Could not safely reconcile checkpoint with latest main.'; exit 1; }
           git push origin HEAD:main
 
       - name: Install browser runtime
