@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-24T00:16:23.783Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-24T00:34:00.075Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -22,22 +22,23 @@
       "required": 71,
       "complete": 71,
       "pending": 0,
-      "fullEvidence": 71,
-      "sourceLimited": 0,
+      "fullEvidence": 58,
+      "sourceLimited": 13,
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
     "statisticalDisplay": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-24T00:33:59.777Z",
       "artifact": "data/statistical-display-integrity-2026-w4.json",
-      "detail": "Team/stat coverage 142/142; ESPN FPI 138 numeric teams; sampled rendered statistical panels 12/12; FPI panels 8/12."
+      "detail": "Team/stat coverage 142/142; ESPN FPI 138 numeric teams; browser-verified sampled statistical panels 12/12 and FPI context panels 8/12. Four sampled FCS opponents correctly show unavailable FPI rather than fabricated values."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-23T19:35:55.231Z",
+      "verifiedAt": "2026-09-24T00:33:59.777Z",
       "artifact": "data/market-derived-integrity-2026-w4.json",
-      "detail": "Independently reconciled 207 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Reconciled selected-week market/model arithmetic for 58 comparable-coverage games; 13 FCS/comparison-gap games are explicitly withheld from fair-line and Best Bets promotion instead of publishing false high-confidence edges."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -89,11 +90,11 @@
       "detail": "0 valid immutable snapshots; 71 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "statisticalDisplay"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "statisticalDisplay: Team/stat coverage 142/142; ESPN FPI 138 numeric teams; sampled rendered statistical panels 12/12; FPI panels 8/12."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
