@@ -17,13 +17,13 @@ const limited=new Set();
 for(const g of board.games||[]){
   if(covered(g.away)&&covered(g.home))continue;
   limited.add(g.gameId);
-  Object.assign(g,{modelSpread:null,modelHomeMargin:null,ensembleSpread:null,selectedModelSpread:null,modelEdgeMagnitude:null,spreadLean:null,independentFootballFair:null,independentFootballHomeMargin:null,independentFootballEdge:null,independentFootballSide:null,independentFootballConfidence:'coverage-limited',modelTotal:null,totalLean:null,totalEdge:null,confidence:'coverage-limited',priority:'low',stage:'model-coverage-limited',thresholdStatus:'MODEL WITHHELD · COMPARABLE TEAM COVERAGE INCOMPLETE',action:'RESEARCH ONLY — FCS/comparable-team coverage gate',notes:`Current Week ${week} market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.`});
-  g.modelComponents={...(g.modelComponents||{}),sourceValid:false,coverageGate:'WITHHELD_COMPARABLE_TEAM_COVERAGE'};
+  Object.assign(g,{modelSpread:null,modelHomeMargin:null,ensembleSpread:null,selectedModelSpread:null,modelEdgeMagnitude:null,modelLean:null,modelGrade:null,spreadLean:null,multiModel:null,independentFootballFair:null,independentFootballHomeMargin:null,independentFootballEdge:null,independentFootballSide:null,independentFootballConfidence:'coverage-limited',modelTotal:null,totalLean:null,totalEdge:null,confidence:'coverage-limited',priority:'low',stage:'model-coverage-limited',thresholdStatus:'MODEL WITHHELD · COMPARABLE TEAM COVERAGE INCOMPLETE',action:'RESEARCH ONLY — FCS/comparable-team coverage gate',notes:`Current Week ${week} market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.`});
+  g.modelComponents={sourceValid:false,coverageGate:'WITHHELD_COMPARABLE_TEAM_COVERAGE'};
 }
 for(const row of browserRows.rows||browserRows.games||[]){
   const id=row.gameId||row.canonicalGameId||row.id;if(!limited.has(id))continue;
-  Object.assign(row,{fair:'Model pending',modelSpread:null,modelTotal:null,totalEdge:null,totalLean:null,edge:null,bet:null,grade:null,confidence:'coverage-limited'});
-  row.modelComponents={...(row.modelComponents||{}),sourceValid:false,coverageGate:'WITHHELD_COMPARABLE_TEAM_COVERAGE'};
+  Object.assign(row,{fair:'Model pending',modelSpread:null,modelTotal:null,totalEdge:null,totalLean:null,edge:null,bet:null,grade:null,multiModel:null,confidence:'coverage-limited'});
+  row.modelComponents={sourceValid:false,coverageGate:'WITHHELD_COMPARABLE_TEAM_COVERAGE'};
 }
 
 const url='https://www.solidverbal.com/episodes/september-mailbag-big-12-playoff-hopes-big-ten-doubts-texas-am-regression-college-football/';
