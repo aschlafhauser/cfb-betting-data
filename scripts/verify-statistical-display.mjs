@@ -40,7 +40,7 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
   const render=async g=>{const i=choose(g);if(i<0)return false;sel.selectedIndex=i;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(650);return true};
   let checked=0,statsWithValues=0,fpiChecked=0,fpiPanels=0;
   for(const g of allSample){if(!await render(g))continue;const p=document.getElementById('cfbMatchupStatsPanel');if(p){checked++;const t=p.innerText||'';if(/Yds\/play|Success|Explosive|PPG|YPG/i.test(t)&&/\d/.test(t))statsWithValues++;}}
-  for(const g of fpiSample){if(!await render(g))continue;fpiChecked++;const m=document.getElementById('multiModelMatchupPanel');if(m&&/ESPN FPI/.test(m.innerText||'')&&/FPI\s+-?\d/i.test(m.innerText||''))fpiPanels++;}
+  for(const g of fpiSample){if(!await render(g))continue;fpiChecked++;const m=document.getElementById('cfbMatchupStatsPanel');if(m&&/ESPN FPI/.test(m.innerText||'')&&/FPI\s+-?\d/i.test(m.innerText||''))fpiPanels++;}
   return{options:sel?.options?.length||0,checked,statsWithValues,fpiChecked,fpiPanels};
 },{allSample,fpiSample});
 await browser.close();
