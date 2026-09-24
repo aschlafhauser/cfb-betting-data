@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "status": "prospective-live",
-  "updatedAt": "2026-09-24T14:14:32.691Z",
+  "updatedAt": "2026-09-24T14:35:27.714Z",
   "research": {
     "selectedBand": "+3.5 to +7",
     "primaryRule": "Underdog between +3.5 and +7 with at least 2 of 3 advantages (rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA) plus a verified live moneyline better than the frozen fair-ML estimate.",
@@ -26,7 +26,7 @@
     "criterionAssessment": {
       "version": "v1.1-governed-2026-09-12",
       "status": "COMPLETE",
-      "assessedAt": "2026-09-24T14:13:55.707Z",
+      "assessedAt": "2026-09-24T14:34:51.462Z",
       "timing": "Complete during Sunday kickoff / Monday early-week screen; refresh after material schedule, statistical, QB or availability changes.",
       "methods": {
         "rest": "PASS when ESPN FPI prior-schedule rank shows the underdog faced a schedule at least 10 ranks stronger (lower rank). Otherwise FAIL; absence of a comparable opponent row cannot create a pass.",
@@ -47,10 +47,10 @@
     "executionRule": "After the 2-of-3 profile qualifies, verified live ML must be better than model fair ML."
   },
   "sundayWeek2Rerun": {
-    "timestamp": "2026-09-24T14:13:55.707Z",
+    "timestamp": "2026-09-24T14:34:51.462Z",
     "result": "CURRENT SCREEN + CRITERIA COMPLETE",
-    "criterionAssessment": "16/16 candidates fully assessed",
-    "note": "Canonical board produced 16 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+    "criterionAssessment": "17/17 candidates fully assessed",
+    "note": "Canonical board produced 17 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
   },
   "candidates": [
     {
@@ -1030,7 +1030,7 @@
       "profileQualifies": true,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1072,7 +1072,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1114,11 +1114,53 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
       "action": "No Special: football profile clears 1/3 criteria; retain as an in-band watchlist candidate.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 4,
+      "canonicalGameId": "ESPN-401864510",
+      "legacyGameId": null,
+      "team": "Wyoming",
+      "opponent": "Hawai'i",
+      "currentSpread": "+3.5",
+      "currentMoneyline": null,
+      "moneylineStatus": "PRICE-RECHECK-REQUIRED",
+      "profileScore": 3,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": false,
+          "reason": "No material schedule/rest edge: ESPN FPI prior-schedule rank 128 vs 124; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-09-24T14:11:19.907Z"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 15.7 vs 33.1.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-09-24T14:11:19.907Z"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 6.0 vs 5.7; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-09-24T14:11:19.696Z"
+        }
+      },
+      "qualifierCount": 0,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE",
+      "status": "CURRENT-SCREEN-PRICE-PENDING",
+      "action": "No Special: football profile clears 0/3 criteria; retain as an in-band watchlist candidate.",
       "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
     },
     {
@@ -1149,14 +1191,14 @@
           "qualifies": true,
           "reason": "PASS: the completed Unified Upset Deep Dive identifies a credible underdog QB/passing path (QB-stability component 4/4); raw current YPA is 8.3 vs 11.0.",
           "source": "Unified Upset Deep Dive plus ESPN team metrics",
-          "sourceUpdatedAt": "2026-09-24T14:13:55.628Z"
+          "sourceUpdatedAt": "2026-09-24T14:34:51.384Z"
         }
       },
       "qualifierCount": 2,
       "profileQualifies": true,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1198,7 +1240,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1240,7 +1282,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1282,7 +1324,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1324,7 +1366,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1366,7 +1408,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1408,7 +1450,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1450,7 +1492,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1485,14 +1527,14 @@
           "qualifies": true,
           "reason": "PASS: the completed Unified Upset Deep Dive identifies a credible underdog QB/passing path (QB-stability component 4/4); raw current YPA is 6.0 vs 8.9.",
           "source": "Unified Upset Deep Dive plus ESPN team metrics",
-          "sourceUpdatedAt": "2026-09-24T14:13:55.628Z"
+          "sourceUpdatedAt": "2026-09-24T14:34:51.384Z"
         }
       },
       "qualifierCount": 1,
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1534,7 +1576,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1576,7 +1618,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1618,7 +1660,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",
@@ -1660,7 +1702,7 @@
       "profileQualifies": false,
       "criterionAssessmentStatus": "COMPLETE",
       "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
-      "criterionAssessedAt": "2026-09-24T14:13:55.707Z",
+      "criterionAssessedAt": "2026-09-24T14:34:51.462Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE",
       "status": "CURRENT-SCREEN-PRICE-PENDING",

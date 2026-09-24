@@ -2,7 +2,7 @@
   "version": "2.0-25pt-directional-research",
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-24T14:13:55.628Z",
+  "updatedAt": "2026-09-24T14:34:51.384Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 69,
-    "underdogSpecial": 16,
+    "underdogSpecial": 17,
     "upsetLab": 41,
-    "intermediate": 12,
+    "intermediate": 11,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -796,6 +796,57 @@
       "researchFlags": {
         "highProfile": false,
         "modelSupport": true,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 4,
+      "canonicalGameId": "ESPN-401864510",
+      "team": "Wyoming",
+      "opponent": "Hawai'i",
+      "currentSpread": "+3.5",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 3,
+      "score25": 3,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 3,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "narrative": {
+        "upsetCase": "Wyoming has an upset path built around a lower-total environment that can compress possessions. Hawai'i QB/WR vs Wyoming DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Hawai'i QB/WR vs Wyoming DB — Even",
+          "Wyoming OL/RB vs Hawai'i DL/LB — Even",
+          "Hawai'i OL/RB vs Wyoming DL/LB — Even",
+          "Allowed 35 points and five passing touchdowns at Colorado State; offensive output remained limited. One-game rivalry context caps the downgrade.",
+          "Phil Steele current power rating: Wyoming 99 vs Hawai'i 108.",
+          "Canonical selected-week market: Wyoming +3.5, total 44.5; production model Lean Hawai'i edge 5.592047673495042; Football Independent Hawai'i edge 6.653412789158402."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
         "volatilityPath": false
       },
       "scoreAudit": {
@@ -3393,57 +3444,6 @@
           "Clemson QB/WR vs California DB — Clemson +",
           "Phil Steele current power rating: California 117 vs Clemson 127.",
           "Canonical selected-week market: California +1.5, total 50.5; production model Clemson ATS edge 5.4615529119782105; Football Independent Clemson edge 4.435921519963684."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v2.0-25pt-directional",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 4,
-      "canonicalGameId": "ESPN-401864510",
-      "team": "Wyoming",
-      "opponent": "Hawai'i",
-      "currentSpread": "+3",
-      "band": "INTERMEDIATE",
-      "profileScore": 3,
-      "score25": 3,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 3,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "narrative": {
-        "upsetCase": "Wyoming has an upset path built around a lower-total environment that can compress possessions. Hawai'i QB/WR vs Wyoming DB — Even",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Hawai'i QB/WR vs Wyoming DB — Even",
-          "Wyoming OL/RB vs Hawai'i DL/LB — Even",
-          "Hawai'i OL/RB vs Wyoming DL/LB — Even",
-          "Allowed 35 points and five passing touchdowns at Colorado State; offensive output remained limited. One-game rivalry context caps the downgrade.",
-          "Phil Steele current power rating: Wyoming 99 vs Hawai'i 108.",
-          "Canonical selected-week market: Wyoming +3, total 44.5; production model Lean Hawai'i edge 5.592047673495042; Football Independent Hawai'i edge 6.653412789158402."
         ]
       },
       "deepDiveStatus": "COMPLETE",
