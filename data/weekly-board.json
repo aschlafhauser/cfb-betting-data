@@ -1,6 +1,6 @@
 {
   "week": 4,
-  "updatedAt": "2026-09-24T14:47:50.837Z",
+  "updatedAt": "2026-09-24T14:50:22.634Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
@@ -11,7 +11,7 @@
     "scheduleHydrationError": null,
     "marketGameCount": 71,
     "deepDiveCompleteCount": 71,
-    "note": "Canonical Week 4 refreshed from one ESPN snapshot: schedule=71; priced markets=71. Missing quotes remain null and are never carried forward as a mixed snapshot.",
+    "note": "Canonical Week 4: schedule=71/71; completed research=71/71; full-evidence=58; source-limited=13.",
     "marketSnapshotAt": "2026-09-24T14:47:50.837Z",
     "deepDiveFullEvidenceCount": 58,
     "deepDiveSourceLimitedCount": 13
@@ -271,7 +271,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Army -2",
-      "modelTotal": 49,
+      "modelTotal": 48,
       "modelEdgeMagnitude": 1.0379305808871666,
       "finalExecutableEdge": null,
       "independentFootballFair": "Army -0.5",
@@ -289,13 +289,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -2.5,
+        "base": -3,
         "power": -0.2420238095238095,
         "units": 0.10474916387959862,
         "confidence": 0.7216666666666667,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -0.69,
+          "powerAdj": -0.5399999999999999,
           "profileAdj": -0.16499495686888724,
           "matchupAdj": -0.5321554750193292,
           "profileRaw": -0.2357070812412675,
@@ -455,8 +455,8 @@
               "fg50Plus": "0-1"
             }
           },
-          "baseFairHomeMargin": -2.5,
-          "adjustedFairHomeMargin": -3.35,
+          "baseFairHomeMargin": -3,
+          "adjustedFairHomeMargin": -3.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -514,7 +514,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -525,13 +525,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 41.5,
+        "power": 0.21047619047619048,
+        "units": 0.19586086956521737,
+        "confidence": 0.8016666666666667,
+        "philInseason": {
+          "adjustment": -0.3852036417316791,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.3852036417316791,
+          "profileRaw": 0,
+          "matchupRaw": -0.453180754978446,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.8518518518518519,
+                "expected": 0.06635758783264195,
+                "residual": -0.9182094396844938
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.927007299270073,
+                "expected": 0.04969306792116986,
+                "residual": -0.9767003671912429
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.3722627737226277,
+                "expected": 0.05150745521181553,
+                "residual": -0.42377022893444327
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.8102189781021898,
+                "expected": 0.06081295004464139,
+                "residual": -0.8710319281468312
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.41605839416058393,
+                "expected": 0.021026709097095017,
+                "residual": -0.43708510325767896
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.42377022893444327,
+            "awayOffEdge": 0.8710319281468312,
+            "yppMatchup": -0.6474010785406372,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Rutgers",
+              "start": 131,
+              "current": 121,
+              "delta": -10
+            },
+            "agg": {
+              "rank": 126,
+              "team": "Rutgers",
+              "agg": 83.19
+            },
+            "passD": {
+              "rank": 133,
+              "team": "Rutgers",
+              "grade": 5.7,
+              "compPct": 72.5
+            },
+            "offYpp": {
+              "rank": 95,
+              "team": "Rutgers",
+              "ypp": 5.6
+            },
+            "defYpp": {
+              "rank": 125,
+              "team": "Rutgers",
+              "ypp": 6.4
+            },
+            "st": {
+              "rank": 107,
+              "team": "Rutgers",
+              "stRating": 6.82,
+              "stRank": 98,
+              "kickerRating": 1,
+              "kickerRank": 98,
+              "fgTotal": "0-0",
+              "fgPct": 0,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 42,
+          "adjustedFairHomeMargin": 41.61479635826832,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -570,13 +713,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -6,
+        "base": -7,
         "power": -0.4532142857142856,
         "units": -0.4382608695652173,
         "confidence": 0.5616666666666668,
         "philInseason": {
-          "adjustment": -0.8366284467096964,
-          "powerAdj": -0.8400000000000002,
+          "adjustment": -0.5366284467096962,
+          "powerAdj": -0.5400000000000001,
           "profileAdj": -0.1652534718069041,
           "matchupAdj": 0.16862502509720803,
           "profileRaw": -0.2360763882955773,
@@ -736,8 +879,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -7,
-          "adjustedFairHomeMargin": -7.836628446709696,
+          "baseFairHomeMargin": -8,
+          "adjustedFairHomeMargin": -8.536628446709695,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -806,7 +949,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 13,
+        "base": 14.5,
         "power": 0.30833333333333335,
         "units": 0.8248695652173914,
         "confidence": 0.7750000000000001,
@@ -972,8 +1115,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 14,
-          "adjustedFairHomeMargin": 14.85,
+          "baseFairHomeMargin": 15.5,
+          "adjustedFairHomeMargin": 16.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -1027,11 +1170,11 @@
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Clemson -4",
       "modelTotal": 50,
-      "modelEdgeMagnitude": 5.4615529119782105,
+      "modelEdgeMagnitude": 2.4615529119782105,
       "finalExecutableEdge": null,
       "independentFootballFair": "Clemson -3",
       "independentFootballHomeMargin": -2.935921519963684,
-      "independentFootballEdge": 4.435921519963684,
+      "independentFootballEdge": 1.4359215199636841,
       "independentFootballSide": "Clemson",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -1044,13 +1187,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -4,
+        "base": -4.5,
         "power": -0.4635714285714285,
         "units": -0.585808695652174,
         "confidence": 0.5966666666666668,
         "philInseason": {
-          "adjustment": -0.256279089929523,
-          "powerAdj": -0.84,
+          "adjustment": -0.10627908992952292,
+          "powerAdj": -0.69,
           "profileAdj": 0.4466124645819278,
           "matchupAdj": 0.1371084454885492,
           "profileRaw": 0.6380178065456112,
@@ -1210,8 +1353,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -5,
-          "adjustedFairHomeMargin": -5.256279089929523,
+          "baseFairHomeMargin": -5.5,
+          "adjustedFairHomeMargin": -5.606279089929523,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -1225,21 +1368,21 @@
         "market": {
           "fair": "Clemson -5.5",
           "homeMargin": -5.5,
-          "edge": 7,
+          "edge": 4,
           "side": "Clemson",
           "confidence": "Medium"
         },
         "independent": {
           "fair": "Clemson -3",
           "homeMargin": -2.935921519963684,
-          "edge": 4.435921519963684,
+          "edge": 1.4359215199636841,
           "side": "Clemson",
           "confidence": "High"
         },
         "ensemble": {
           "fair": "Clemson -4",
           "homeMargin": -3.9615529119782105,
-          "edge": 5.4615529119782105,
+          "edge": 2.4615529119782105,
           "side": "Clemson",
           "confidence": "High",
           "tags": [
@@ -1268,11 +1411,11 @@
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Texas -4.5",
       "modelTotal": 56,
-      "modelEdgeMagnitude": 0.20848315898399594,
+      "modelEdgeMagnitude": 0.7084831589839959,
       "finalExecutableEdge": null,
       "independentFootballFair": "Texas -3",
       "independentFootballHomeMargin": -2.8336057436072664,
-      "independentFootballEdge": 1.6663942563927336,
+      "independentFootballEdge": 1.1663942563927336,
       "independentFootballSide": "Tennessee",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -1468,21 +1611,21 @@
         "market": {
           "fair": "Texas -7",
           "homeMargin": -7,
-          "edge": 2.5,
+          "edge": 3,
           "side": "Texas",
           "confidence": "High"
         },
         "independent": {
           "fair": "Texas -3",
           "homeMargin": -2.8336057436072664,
-          "edge": 1.6663942563927336,
+          "edge": 1.1663942563927336,
           "side": "Tennessee",
           "confidence": "High"
         },
         "ensemble": {
           "fair": "Texas -4.5",
           "homeMargin": -4.708483158983996,
-          "edge": 0.20848315898399594,
+          "edge": 0.7084831589839959,
           "side": "Texas",
           "confidence": "Medium",
           "tags": [],
@@ -1523,7 +1666,7 @@
       "modelLean": "Illinois ATS",
       "modelGrade": "B+",
       "modelComponents": {
-        "base": 13.5,
+        "base": 12,
         "power": 0.21095238095238095,
         "units": 0.8725565217391305,
         "confidence": 0.6583333333333334,
@@ -1689,8 +1832,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 14.5,
-          "adjustedFairHomeMargin": 15.35,
+          "baseFairHomeMargin": 13,
+          "adjustedFairHomeMargin": 13.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -1759,13 +1902,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 24,
+        "base": 27.5,
         "power": 0.9724999999999999,
         "units": 0.9,
         "confidence": 0.7366666666666668,
         "philInseason": {
-          "adjustment": 0.85,
-          "powerAdj": 1.5599999999999998,
+          "adjustment": -0.12151299659827419,
+          "powerAdj": 0.5099999999999998,
           "profileAdj": -0.1946868258493643,
           "matchupAdj": -0.43682617074890967,
           "profileRaw": -0.2781240369276633,
@@ -1925,8 +2068,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 26,
-          "adjustedFairHomeMargin": 26.85,
+          "baseFairHomeMargin": 29.5,
+          "adjustedFairHomeMargin": 29.378487003401727,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -1980,12 +2123,12 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Louisville -7",
-      "modelTotal": 58,
-      "modelEdgeMagnitude": 5.438222021909484,
+      "modelTotal": 57,
+      "modelEdgeMagnitude": 6.438222021909484,
       "finalExecutableEdge": null,
       "independentFootballFair": "Louisville -7",
       "independentFootballHomeMargin": 6.769629963484195,
-      "independentFootballEdge": 5.730370036515805,
+      "independentFootballEdge": 6.730370036515805,
       "independentFootballSide": "Wake Forest",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -2000,13 +2143,13 @@
       "modelLean": "Lean Wake Forest",
       "modelGrade": "Watch",
       "modelComponents": {
-        "base": 7.5,
+        "base": 7,
         "power": 0.27404761904761904,
         "units": 0.441704347826087,
         "confidence": 0.54,
         "philInseason": {
-          "adjustment": -0.32825640944587114,
-          "powerAdj": -0.5399999999999999,
+          "adjustment": -0.17825640944587123,
+          "powerAdj": -0.38999999999999996,
           "profileAdj": -0.05095317723585306,
           "matchupAdj": 0.2626967677899818,
           "profileRaw": -0.07279025319407581,
@@ -2166,8 +2309,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 8,
-          "adjustedFairHomeMargin": 7.6717435905541285,
+          "baseFairHomeMargin": 7.5,
+          "adjustedFairHomeMargin": 7.321743590554129,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -2181,21 +2324,21 @@
         "market": {
           "fair": "Louisville -7.5",
           "homeMargin": 7.5,
-          "edge": 5,
+          "edge": 6,
           "side": "Wake Forest",
           "confidence": "Low"
         },
         "independent": {
           "fair": "Louisville -7",
           "homeMargin": 6.769629963484195,
-          "edge": 5.730370036515805,
+          "edge": 6.730370036515805,
           "side": "Wake Forest",
           "confidence": "High"
         },
         "ensemble": {
           "fair": "Louisville -7",
           "homeMargin": 7.061777978090516,
-          "edge": 5.438222021909484,
+          "edge": 6.438222021909484,
           "side": "Wake Forest",
           "confidence": "High",
           "tags": [
@@ -2237,13 +2380,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 6,
+        "base": 6.5,
         "power": 0.1760714285714286,
         "units": 0.10977391304347828,
         "confidence": 0.675,
         "philInseason": {
-          "adjustment": 0.05929573022297692,
-          "powerAdj": -0.38999999999999996,
+          "adjustment": -0.09070426977702305,
+          "powerAdj": -0.5399999999999999,
           "profileAdj": 0.4658589208038482,
           "matchupAdj": -0.016563190580871343,
           "profileRaw": 0.6655127440054975,
@@ -2403,8 +2546,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 6.5,
-          "adjustedFairHomeMargin": 6.559295730222977,
+          "baseFairHomeMargin": 7,
+          "adjustedFairHomeMargin": 6.909295730222977,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -2466,7 +2609,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2477,13 +2620,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 52.5,
+        "power": 0.345,
+        "units": 0.6783812709030099,
+        "confidence": 0.7450000000000001,
+        "philInseason": {
+          "adjustment": 0.06793770863407157,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": 0.06793770863407157,
+          "profileRaw": 0,
+          "matchupRaw": 0.07992671604008421,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": 0.8814814814814815,
+                "expected": 0.3451028034542131,
+                "residual": 0.5363786780272684
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": 0.2846715328467153,
+                "expected": 0.19189533867674372,
+                "residual": 0.0927761941699716
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": 0.29927007299270075,
+                "expected": 0.21578111091741312,
+                "residual": 0.08348896207528764
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": 0.38686131386861317,
+                "expected": 0.24198823011508877,
+                "residual": 0.1448730837535244
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": 0.19708029197080293,
+                "expected": 0.08386359560881912,
+                "residual": 0.11321669636198381
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": 0.08348896207528764,
+            "awayOffEdge": -0.1448730837535244,
+            "yppMatchup": 0.11418102291440602,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Pittsburgh",
+              "start": 126,
+              "current": 130,
+              "delta": 4
+            },
+            "agg": {
+              "rank": 9,
+              "team": "Pittsburgh",
+              "agg": 122.05
+            },
+            "passD": {
+              "rank": 50,
+              "team": "Pittsburgh",
+              "grade": 11.1,
+              "compPct": 57.4
+            },
+            "offYpp": {
+              "rank": 49,
+              "team": "Pittsburgh",
+              "ypp": 6.5
+            },
+            "defYpp": {
+              "rank": 43,
+              "team": "Pittsburgh",
+              "ypp": 4.5
+            },
+            "st": {
+              "rank": 42,
+              "team": "Pittsburgh",
+              "stRating": 8.85,
+              "stRank": 56,
+              "kickerRating": 3.14,
+              "kickerRank": 29,
+              "fgTotal": "1-1",
+              "fgPct": 100,
+              "fg50Plus": "1-1"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 53.5,
+          "adjustedFairHomeMargin": 53.56793770863407,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -2504,7 +2790,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Virginia Tech -7",
-      "modelTotal": 48.5,
+      "modelTotal": 47.5,
       "modelEdgeMagnitude": 7.14222251379567,
       "finalExecutableEdge": null,
       "independentFootballFair": "Virginia Tech -5.5",
@@ -2522,13 +2808,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -7,
+        "base": -8,
         "power": -0.480595238095238,
         "units": -0.5157199084668193,
         "confidence": 0.7200000000000001,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -0.8400000000000002,
+          "powerAdj": -0.5400000000000001,
           "profileAdj": -0.482075328890209,
           "matchupAdj": -0.19191230553641883,
           "profileRaw": -0.6886790412717272,
@@ -2688,8 +2974,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -8,
-          "adjustedFairHomeMargin": -8.85,
+          "baseFairHomeMargin": -9,
+          "adjustedFairHomeMargin": -9.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -2743,7 +3029,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Toledo -2",
-      "modelTotal": 52,
+      "modelTotal": 51,
       "modelEdgeMagnitude": 0.8301146507024488,
       "finalExecutableEdge": null,
       "independentFootballFair": "Toledo -3",
@@ -2997,13 +3283,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 7.5,
+        "base": 8.5,
         "power": 0.4411904761904762,
         "units": 0.28519412534535404,
         "confidence": 0.45833333333333337,
         "philInseason": {
           "adjustment": 0.85,
-          "powerAdj": 2,
+          "powerAdj": 1.8599999999999997,
           "profileAdj": -0.3100544359110885,
           "matchupAdj": 0.08954004276269617,
           "profileRaw": -0.4429349084444122,
@@ -3163,8 +3449,8 @@
               "fg50Plus": "0-1"
             }
           },
-          "baseFairHomeMargin": 8,
-          "adjustedFairHomeMargin": 8.85,
+          "baseFairHomeMargin": 9,
+          "adjustedFairHomeMargin": 9.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -3236,7 +3522,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -9,
+        "base": -9.5,
         "power": -0.37785714285714284,
         "units": -0.4969001695148211,
         "confidence": 0.6466666666666667,
@@ -3402,8 +3688,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -10,
-          "adjustedFairHomeMargin": -9.15,
+          "baseFairHomeMargin": -10.5,
+          "adjustedFairHomeMargin": -9.65,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -3474,7 +3760,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 2.5,
+        "base": 3,
         "power": 0.011666666666666705,
         "units": 0,
         "confidence": 0.6500000000000001,
@@ -3640,8 +3926,8 @@
               "fg50Plus": "1-1"
             }
           },
-          "baseFairHomeMargin": 2.5,
-          "adjustedFairHomeMargin": 3.35,
+          "baseFairHomeMargin": 3,
+          "adjustedFairHomeMargin": 3.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -3679,7 +3965,7 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "Lean Ball State",
+      "modelLean": "Lean Kent State",
       "modelGrade": "Watch"
     },
     {
@@ -3712,13 +3998,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 11.5,
+        "base": 13,
         "power": 0.5599999999999999,
         "units": 0.560897777499138,
         "confidence": 0.6533333333333333,
         "philInseason": {
           "adjustment": 0.85,
-          "powerAdj": 1.7099999999999997,
+          "powerAdj": 1.2599999999999998,
           "profileAdj": -0.1144988403302736,
           "matchupAdj": 0.25848780108693425,
           "profileRaw": -0.16356977190039088,
@@ -3878,8 +4164,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 12.5,
-          "adjustedFairHomeMargin": 13.35,
+          "baseFairHomeMargin": 14,
+          "adjustedFairHomeMargin": 14.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -3939,7 +4225,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3950,13 +4236,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 25.5,
+        "power": -0.2689285714285714,
+        "units": 0.17760425909494232,
+        "confidence": 0.7016666666666667,
+        "philInseason": {
+          "adjustment": -0.2144060504923776,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.2144060504923776,
+          "profileRaw": 0,
+          "matchupRaw": -0.25224241234397365,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.9555555555555556,
+                "expected": -0.49113284341050045,
+                "residual": -0.46442271214505515
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.0364963503649635,
+                "expected": -0.23471147358997785,
+                "residual": 0.19821512322501433
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.8394160583941606,
+                "expected": -0.2770398561993797,
+                "residual": -0.5623762021947809
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.45985401459854014,
+                "expected": -0.3015376100962534,
+                "residual": -0.15831640450228673
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.25547445255474455,
+                "expected": -0.10464706392635319,
+                "residual": -0.15082738862839135
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.5623762021947809,
+            "awayOffEdge": 0.15831640450228673,
+            "yppMatchup": -0.3603463033485338,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "E Michigan",
+              "start": 110,
+              "current": 103,
+              "delta": -7
+            },
+            "agg": {
+              "rank": 133,
+              "team": "E Michigan",
+              "agg": 79.59
+            },
+            "passD": {
+              "rank": 72,
+              "team": "Eastern Michigan",
+              "grade": 10.1,
+              "compPct": 58.4
+            },
+            "offYpp": {
+              "rank": 127,
+              "team": "Eastern Michigan",
+              "ypp": 4.5
+            },
+            "defYpp": {
+              "rank": 101,
+              "team": "Eastern Michigan",
+              "ypp": 5.7
+            },
+            "st": {
+              "rank": 114,
+              "team": "Eastern Michigan",
+              "stRating": 7.14,
+              "stRank": 87,
+              "kickerRating": 0.02,
+              "kickerRank": 135,
+              "fgTotal": "0-1",
+              "fgPct": 0,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 25.5,
+          "adjustedFairHomeMargin": 25.28559394950762,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -4231,7 +4660,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -14.5,
+        "base": -16.5,
         "power": -0.49642857142857144,
         "units": -0.9,
         "confidence": 0.7966666666666667,
@@ -4397,8 +4826,8 @@
               "fg50Plus": "2-2"
             }
           },
-          "baseFairHomeMargin": -16,
-          "adjustedFairHomeMargin": -16.85,
+          "baseFairHomeMargin": -18,
+          "adjustedFairHomeMargin": -18.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -4469,7 +4898,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 6,
+        "base": 7,
         "power": -0.009999999999999941,
         "units": 0,
         "confidence": 0.5933333333333334,
@@ -4635,8 +5064,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 6,
-          "adjustedFairHomeMargin": 6.85,
+          "baseFairHomeMargin": 7,
+          "adjustedFairHomeMargin": 7.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -4697,7 +5126,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4708,13 +5137,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 44.5,
+        "power": 0.39833333333333326,
+        "units": 0.9,
+        "confidence": 0.7166666666666668,
+        "philInseason": {
+          "adjustment": -0.42268104238041565,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.42268104238041565,
+          "profileRaw": 0,
+          "matchupRaw": -0.49727181456519487,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.15555555555555556,
+                "expected": 0.09732927845726098,
+                "residual": -0.25288483401281653
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.40145985401459855,
+                "expected": 0.06549332022734473,
+                "residual": -0.46695317424194327
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.40145985401459855,
+                "expected": 0.06976008362354859,
+                "residual": -0.4712199376381471
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.8686131386861314,
+                "expected": 0.08094353671913554,
+                "residual": -0.949556675405267
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": 0.35766423357664234,
+                "expected": 0.028008585376175472,
+                "residual": 0.3296556482004669
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.4712199376381471,
+            "awayOffEdge": 0.949556675405267,
+            "yppMatchup": -0.710388306521707,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Florida St",
+              "start": 121,
+              "current": 122,
+              "delta": 1
+            },
+            "agg": {
+              "rank": 79,
+              "team": "Florida St",
+              "agg": 97.68
+            },
+            "passD": {
+              "rank": 97,
+              "team": "Florida St",
+              "grade": 8.6,
+              "compPct": 65.8
+            },
+            "offYpp": {
+              "rank": 97,
+              "team": "Florida St",
+              "ypp": 5.5
+            },
+            "defYpp": {
+              "rank": 129,
+              "team": "Florida St",
+              "ypp": 6.8
+            },
+            "st": {
+              "rank": 21,
+              "team": "Florida St",
+              "stRating": 9.28,
+              "stRank": 45,
+              "kickerRating": 4.09,
+              "kickerRank": 2,
+              "fgTotal": "3-3",
+              "fgPct": 100,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 46,
+          "adjustedFairHomeMargin": 45.57731895761958,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -4736,11 +5308,11 @@
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Hawai'i -8.5",
       "modelTotal": 44.5,
-      "modelEdgeMagnitude": 5.592047673495042,
+      "modelEdgeMagnitude": 5.092047673495042,
       "finalExecutableEdge": null,
       "independentFootballFair": "Hawai'i -9.5",
       "independentFootballHomeMargin": -9.653412789158402,
-      "independentFootballEdge": 6.653412789158402,
+      "independentFootballEdge": 6.153412789158402,
       "independentFootballSide": "Hawai'i",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -4934,21 +5506,21 @@
         "market": {
           "fair": "Hawai'i -7",
           "homeMargin": -7,
-          "edge": 4,
+          "edge": 3.5,
           "side": "Hawai'i",
           "confidence": "Low"
         },
         "independent": {
           "fair": "Hawai'i -9.5",
           "homeMargin": -9.653412789158402,
-          "edge": 6.653412789158402,
+          "edge": 6.153412789158402,
           "side": "Hawai'i",
           "confidence": "High"
         },
         "ensemble": {
           "fair": "Hawai'i -8.5",
           "homeMargin": -8.592047673495042,
-          "edge": 5.592047673495042,
+          "edge": 5.092047673495042,
           "side": "Hawai'i",
           "confidence": "High",
           "tags": [
@@ -5215,11 +5787,11 @@
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Florida -4.5",
       "modelTotal": 59,
-      "modelEdgeMagnitude": 1.492231785444062,
+      "modelEdgeMagnitude": 0.9922317854440621,
       "finalExecutableEdge": null,
       "independentFootballFair": "Florida -6.5",
       "independentFootballHomeMargin": 6.531330518989203,
-      "independentFootballEdge": 3.5313305189892032,
+      "independentFootballEdge": 3.0313305189892032,
       "independentFootballSide": "Florida",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -5415,21 +5987,21 @@
         "market": {
           "fair": "Florida -2",
           "homeMargin": 2,
-          "edge": 1,
+          "edge": 1.5,
           "side": "Ole Miss",
           "confidence": "High"
         },
         "independent": {
           "fair": "Florida -6.5",
           "homeMargin": 6.531330518989203,
-          "edge": 3.5313305189892032,
+          "edge": 3.0313305189892032,
           "side": "Florida",
           "confidence": "High"
         },
         "ensemble": {
           "fair": "Florida -4.5",
           "homeMargin": 4.492231785444062,
-          "edge": 1.492231785444062,
+          "edge": 0.9922317854440621,
           "side": "Florida",
           "confidence": "Medium",
           "tags": [],
@@ -6169,7 +6741,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -6180,13 +6752,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 43.5,
+        "power": 0.17964285714285713,
+        "units": 0.36975425330812856,
+        "confidence": 0.625,
+        "philInseason": {
+          "adjustment": -0.1990869953403253,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.1990869953403253,
+          "profileRaw": 0,
+          "matchupRaw": -0.2342199945180298,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": 0.37777777777777777,
+                "expected": 0.22121604095573705,
+                "residual": 0.15656173682204072
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.0072992700729927005,
+                "expected": 0.12869432945204426,
+                "residual": -0.13599359952503695
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.29927007299270075,
+                "expected": 0.14277059727048086,
+                "residual": -0.4420406702631816
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.06569343065693431,
+                "expected": 0.16146588341711215,
+                "residual": -0.22715931407404646
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": 0.5036496350364964,
+                "expected": 0.055936090492497294,
+                "residual": 0.4477135445439991
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.4420406702631816,
+            "awayOffEdge": 0.22715931407404646,
+            "yppMatchup": -0.334599992168614,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Duke",
+              "start": 126,
+              "current": 126,
+              "delta": 0
+            },
+            "agg": {
+              "rank": 43,
+              "team": "Duke",
+              "agg": 106.59
+            },
+            "passD": {
+              "rank": 70,
+              "team": "Duke",
+              "grade": 10.2,
+              "compPct": 62.1
+            },
+            "offYpp": {
+              "rank": 90,
+              "team": "Duke",
+              "ypp": 5.6
+            },
+            "defYpp": {
+              "rank": 74,
+              "team": "Duke",
+              "ypp": 5.2
+            },
+            "st": {
+              "rank": 64,
+              "team": "Duke",
+              "stRating": 9.8,
+              "stRank": 35,
+              "kickerRating": 1.04,
+              "kickerRank": 95,
+              "fgTotal": "1-2",
+              "fgPct": 50,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 44,
+          "adjustedFairHomeMargin": 43.80091300465968,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -6227,13 +6942,13 @@
       "modelLean": "Western Michigan ATS",
       "modelGrade": "A-",
       "modelComponents": {
-        "base": -2.5,
+        "base": -2,
         "power": -0.3248809523809523,
         "units": -0.31805217391304347,
         "confidence": 0.7066666666666668,
         "philInseason": {
-          "adjustment": 0.47941384784410584,
-          "powerAdj": 0.06000000000000005,
+          "adjustment": 0.3294138478441059,
+          "powerAdj": -0.08999999999999994,
           "profileAdj": -0.010235265411117732,
           "matchupAdj": 0.42964911325522354,
           "profileRaw": -0.01462180773016819,
@@ -6393,8 +7108,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -3,
-          "adjustedFairHomeMargin": -2.5205861521558943,
+          "baseFairHomeMargin": -2.5,
+          "adjustedFairHomeMargin": -2.1705861521558942,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -6704,7 +7419,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -7.5,
+        "base": -9,
         "power": -0.4514285714285714,
         "units": -0.11478260869565216,
         "confidence": 0.6533333333333333,
@@ -6870,8 +7585,8 @@
               "fg50Plus": "0-1"
             }
           },
-          "baseFairHomeMargin": -8,
-          "adjustedFairHomeMargin": -8.85,
+          "baseFairHomeMargin": -9.5,
+          "adjustedFairHomeMargin": -10.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -6910,8 +7625,8 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "New Mexico State ATS",
-      "modelGrade": "B+"
+      "modelLean": "Lean New Mexico State",
+      "modelGrade": "Watch"
     },
     {
       "gameId": "ESPN-401866426",
@@ -6932,7 +7647,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -6943,13 +7658,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 0,
+        "power": -0.4183333333333333,
+        "units": 0,
+        "confidence": 0.5800000000000001,
+        "philInseason": {
+          "adjustment": -0.04697651278053184,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.04697651278053184,
+          "profileRaw": 0,
+          "matchupRaw": -0.05526648562415511,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.9851851851851852,
+                "expected": -0.8627931309059287,
+                "residual": -0.12239205427925648
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.06569343065693431,
+                "expected": -0.4243145012640763,
+                "residual": 0.358621070607142
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.8832116788321168,
+                "expected": -0.4960713971401765,
+                "residual": -0.3871402816919403
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.31386861313868614,
+                "expected": -0.5431046501901833,
+                "residual": 0.22923603705149714
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.34306569343065696,
+                "expected": -0.18842957927531864,
+                "residual": -0.15463611415533832
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.3871402816919403,
+            "awayOffEdge": -0.22923603705149714,
+            "yppMatchup": -0.07895212232022158,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Buffalo",
+              "start": 94,
+              "current": 91,
+              "delta": -3
+            },
+            "agg": {
+              "rank": 135,
+              "team": "Buffalo",
+              "agg": 77.55
+            },
+            "passD": {
+              "rank": 74,
+              "team": "Buffalo",
+              "grade": 10,
+              "compPct": 53.8
+            },
+            "offYpp": {
+              "rank": 130,
+              "team": "Buffalo",
+              "ypp": 4.4
+            },
+            "defYpp": {
+              "rank": 91,
+              "team": "Buffalo",
+              "ypp": 5.5
+            },
+            "st": {
+              "rank": 103,
+              "team": "Buffalo",
+              "stRating": 6.97,
+              "stRank": 93,
+              "kickerRating": 1,
+              "kickerRank": 98,
+              "fgTotal": "0-0",
+              "fgPct": 0,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": -0.5,
+          "adjustedFairHomeMargin": -0.5469765127805318,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "ensembleSpread": null,
       "selectedModelSpread": null,
@@ -6977,7 +7835,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -6988,13 +7846,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 34.5,
+        "power": -0.41190476190476183,
+        "units": 0,
+        "confidence": 0.5700000000000001,
+        "philInseason": {
+          "adjustment": -0.3789550407597551,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.3789550407597551,
+          "profileRaw": 0,
+          "matchupRaw": -0.445829459717359,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.7777777777777778,
+                "expected": -0.3982177715366434,
+                "residual": -0.3795600062411344
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.8540145985401459,
+                "expected": -0.18731071667145321,
+                "residual": -0.6667038818686928
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.8978102189781022,
+                "expected": -0.22228197096418048,
+                "residual": -0.6755282480139218
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.8394160583941606,
+                "expected": -0.24114585007277092,
+                "residual": -0.5982702083213897
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.48905109489051096,
+                "expected": -0.0837014350891118,
+                "residual": -0.40534965980139914
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.6755282480139218,
+            "awayOffEdge": 0.5982702083213897,
+            "yppMatchup": -0.6368992281676558,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Ohio",
+              "start": 107,
+              "current": 106,
+              "delta": -1
+            },
+            "agg": {
+              "rank": 121,
+              "team": "Ohio",
+              "agg": 86.96
+            },
+            "passD": {
+              "rank": 128,
+              "team": "Ohio",
+              "grade": 6.6,
+              "compPct": 65.5
+            },
+            "offYpp": {
+              "rank": 131,
+              "team": "Ohio",
+              "ypp": 4.3
+            },
+            "defYpp": {
+              "rank": 127,
+              "team": "Ohio",
+              "ypp": 6.6
+            },
+            "st": {
+              "rank": 88,
+              "team": "Ohio",
+              "stRating": 6.51,
+              "stRank": 103,
+              "kickerRating": 2.3,
+              "kickerRank": 73,
+              "fgTotal": "2-3",
+              "fgPct": 67,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 34,
+          "adjustedFairHomeMargin": 33.621044959240244,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -7022,7 +8023,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -7033,13 +8034,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 23.5,
+        "power": -0.15654761904761905,
+        "units": 0.21572315882874893,
+        "confidence": 0.6483333333333334,
+        "philInseason": {
+          "adjustment": -0.33825725892673975,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.33825725892673975,
+          "profileRaw": 0,
+          "matchupRaw": -0.39794971638439974,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.8814814814814815,
+                "expected": -0.3672460809120244,
+                "residual": -0.5142354005694572
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.021897810218978103,
+                "expected": -0.17151046436527834,
+                "residual": 0.14961265414630023
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.9416058394160584,
+                "expected": -0.20402934255244742,
+                "residual": -0.7375764968636109
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.6204379562043796,
+                "expected": -0.2210152633982768,
+                "residual": -0.39942269280610276
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.8540145985401459,
+                "expected": -0.07671955881003135,
+                "residual": -0.7772950397301146
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.7375764968636109,
+            "awayOffEdge": 0.39942269280610276,
+            "yppMatchup": -0.5684995948348568,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Marshall",
+              "start": 111,
+              "current": 107,
+              "delta": -4
+            },
+            "agg": {
+              "rank": 128,
+              "team": "Marshall",
+              "agg": 81.73
+            },
+            "passD": {
+              "rank": 71,
+              "team": "Marshall",
+              "grade": 10.2,
+              "compPct": 60.8
+            },
+            "offYpp": {
+              "rank": 134,
+              "team": "Marshall",
+              "ypp": 4
+            },
+            "defYpp": {
+              "rank": 112,
+              "team": "Marshall",
+              "ypp": 6
+            },
+            "st": {
+              "rank": 133,
+              "team": "Marshall",
+              "stRating": 2.62,
+              "stRank": 128,
+              "kickerRating": 0.28,
+              "kickerRank": 125,
+              "fgTotal": "0-1",
+              "fgPct": 0,
+              "fg50Plus": "0-1"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 23.5,
+          "adjustedFairHomeMargin": 23.16174274107326,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -7078,13 +8222,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -14,
+        "base": -15,
         "power": -0.8695238095238094,
         "units": -0.7343999999999999,
         "confidence": 0.6166666666666667,
         "philInseason": {
-          "adjustment": 0.35387353306195757,
-          "powerAdj": 0.20999999999999977,
+          "adjustment": 0.6538735330619576,
+          "powerAdj": 0.5099999999999998,
           "profileAdj": -0.0939261527357293,
           "matchupAdj": 0.2377996857976871,
           "profileRaw": -0.134180218193899,
@@ -7244,8 +8388,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -15.5,
-          "adjustedFairHomeMargin": -15.146126466938043,
+          "baseFairHomeMargin": -16.5,
+          "adjustedFairHomeMargin": -15.846126466938042,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -7305,7 +8449,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -7316,13 +8460,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 34.5,
+        "power": -0.14809523809523809,
+        "units": 0.16695652173913042,
+        "confidence": 0.5700000000000001,
+        "philInseason": {
+          "adjustment": -0.2753566425435838,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.2753566425435838,
+          "profileRaw": 0,
+          "matchupRaw": -0.3239489912277456,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.6,
+                "expected": -0.24335931841354827,
+                "residual": -0.3566406815864517
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.31386861313868614,
+                "expected": -0.10830945514057885,
+                "residual": -0.20555915799810728
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.6642335766423357,
+                "expected": -0.13101882890551514,
+                "residual": -0.5332147477368205
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.5328467153284672,
+                "expected": -0.14049291670030015,
+                "residual": -0.392353798628167
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.08029197080291971,
+                "expected": -0.04879205369370954,
+                "residual": -0.031499917109210164
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.5332147477368205,
+            "awayOffEdge": 0.392353798628167,
+            "yppMatchup": -0.46278427318249377,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "East Carolina",
+              "start": 116,
+              "current": 111,
+              "delta": -5
+            },
+            "agg": {
+              "rank": 109,
+              "team": "East Carolina",
+              "agg": 91.03
+            },
+            "passD": {
+              "rank": 91,
+              "team": "East Carolina",
+              "grade": 8.8,
+              "compPct": 65
+            },
+            "offYpp": {
+              "rank": 115,
+              "team": "East Carolina",
+              "ypp": 5.1
+            },
+            "defYpp": {
+              "rank": 106,
+              "team": "East Carolina",
+              "ypp": 5.8
+            },
+            "st": {
+              "rank": 69,
+              "team": "East Carolina",
+              "stRating": 7.93,
+              "stRank": 75,
+              "kickerRating": 2.59,
+              "kickerRank": 48,
+              "fgTotal": "1-1",
+              "fgPct": 100,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 34.5,
+          "adjustedFairHomeMargin": 34.224643357456415,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -7343,7 +8630,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Auburn -4",
-      "modelTotal": 55,
+      "modelTotal": 56,
       "modelEdgeMagnitude": 5.548983860443458,
       "finalExecutableEdge": null,
       "independentFootballFair": "Auburn -4.5",
@@ -7363,13 +8650,13 @@
       "modelLean": "Vanderbilt ATS",
       "modelGrade": "B+",
       "modelComponents": {
-        "base": 4,
+        "base": 3,
         "power": 0.04773809523809535,
         "units": 0.525495652173913,
         "confidence": 0.6666666666666667,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -1.89,
+          "powerAdj": -1.5899999999999999,
           "profileAdj": 0.24206320697362,
           "matchupAdj": 0.22744921761147807,
           "profileRaw": 0.3458045813908857,
@@ -7529,8 +8816,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 4.5,
-          "adjustedFairHomeMargin": 3.65,
+          "baseFairHomeMargin": 3.5,
+          "adjustedFairHomeMargin": 2.65,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -8055,7 +9342,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "South Florida -10.5",
-      "modelTotal": 48,
+      "modelTotal": 49,
       "modelEdgeMagnitude": 6.893347116857768,
       "finalExecutableEdge": null,
       "independentFootballFair": "South Florida -10",
@@ -8073,13 +9360,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -10,
+        "base": -11.5,
         "power": -0.3014285714285714,
         "units": -0.39652173913043476,
         "confidence": 0.43500000000000005,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -1.8900000000000001,
+          "powerAdj": -1.4400000000000002,
           "profileAdj": 0.017764547804338313,
           "matchupAdj": -0.03283701926518704,
           "profileRaw": 0.02537792543476902,
@@ -8239,8 +9526,8 @@
               "fg50Plus": "1-1"
             }
           },
-          "baseFairHomeMargin": -10.5,
-          "adjustedFairHomeMargin": -11.35,
+          "baseFairHomeMargin": -12,
+          "adjustedFairHomeMargin": -12.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -8311,13 +9598,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 18,
+        "base": 20.5,
         "power": 0.6934523809523809,
         "units": 0.7396173913043478,
         "confidence": 0.7683333333333334,
         "philInseason": {
           "adjustment": 0.85,
-          "powerAdj": 2,
+          "powerAdj": 1.5599999999999998,
           "profileAdj": -0.295746625093641,
           "matchupAdj": -0.1051433764950959,
           "profileRaw": -0.4224951787052015,
@@ -8477,8 +9764,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 19.5,
-          "adjustedFairHomeMargin": 20.35,
+          "baseFairHomeMargin": 22,
+          "adjustedFairHomeMargin": 22.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -8514,8 +9801,8 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "Lean Virginia",
-      "modelGrade": "Watch"
+      "modelLean": "Virginia ATS",
+      "modelGrade": "A-"
     },
     {
       "gameId": "ESPN-401860892",
@@ -8536,7 +9823,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -8547,13 +9834,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 29.5,
+        "power": 0.04892857142857142,
+        "units": 0.357254004576659,
+        "confidence": 0.74,
+        "philInseason": {
+          "adjustment": -0.2965844649277496,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.2965844649277496,
+          "profileRaw": 0,
+          "matchupRaw": -0.34892289991499953,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.0962962962962963,
+                "expected": -0.1504442465396912,
+                "residual": 0.054147950243394916
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.5766423357664233,
+                "expected": -0.06090869822205425,
+                "residual": -0.5157336375443691
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.41605839416058393,
+                "expected": -0.07626094367031594,
+                "residual": -0.339797450490268
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.7372262773722628,
+                "expected": -0.08010115667681769,
+                "residual": -0.657125120695445
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.2846715328467153,
+                "expected": -0.027846424856468172,
+                "residual": -0.25682510799024716
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.339797450490268,
+            "awayOffEdge": 0.657125120695445,
+            "yppMatchup": -0.4984612855928565,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "Texas St",
+              "start": 118,
+              "current": 114,
+              "delta": -4
+            },
+            "agg": {
+              "rank": 75,
+              "team": "Texas St",
+              "agg": 98.62
+            },
+            "passD": {
+              "rank": 109,
+              "team": "Texas St",
+              "grade": 7.8,
+              "compPct": 71.4
+            },
+            "offYpp": {
+              "rank": 98,
+              "team": "Texas St",
+              "ypp": 5.5
+            },
+            "defYpp": {
+              "rank": 120,
+              "team": "Texas St",
+              "ypp": 6.3
+            },
+            "st": {
+              "rank": 118,
+              "team": "Texas St",
+              "stRating": 7.02,
+              "stRank": 89,
+              "kickerRating": -0.02,
+              "kickerRank": 138,
+              "fgTotal": "0-2",
+              "fgPct": 0,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 30,
+          "adjustedFairHomeMargin": 29.70341553507225,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -8581,7 +10011,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -8592,13 +10022,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 35.5,
+        "power": -0.32035714285714284,
+        "units": 0.09391304347826086,
+        "confidence": 0.6050000000000001,
+        "philInseason": {
+          "adjustment": 0.3371632925733158,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": 0.3371632925733158,
+          "profileRaw": 0,
+          "matchupRaw": 0.3966626971450774,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": 0.06666666666666667,
+                "expected": -0.49113284341050045,
+                "residual": 0.5577995100771671
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": 0.5328467153284672,
+                "expected": -0.23471147358997785,
+                "residual": 0.7675581889184451
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": 0.051094890510948905,
+                "expected": -0.2770398561993797,
+                "residual": 0.3281347467103286
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": 0.5036496350364964,
+                "expected": -0.3015376100962534,
+                "residual": 0.8051872451327498
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.708029197080292,
+                "expected": -0.10464706392635319,
+                "residual": -0.6033821331539388
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": 0.3281347467103286,
+            "awayOffEdge": -0.8051872451327498,
+            "yppMatchup": 0.5666609959215392,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "FIU",
+              "start": 104,
+              "current": 103,
+              "delta": -1
+            },
+            "agg": {
+              "rank": 64,
+              "team": "Florida International",
+              "agg": 101.61
+            },
+            "passD": {
+              "rank": 33,
+              "team": "FIU",
+              "grade": 12.3,
+              "compPct": 55.9
+            },
+            "offYpp": {
+              "rank": 66,
+              "team": "FIU",
+              "ypp": 6.1
+            },
+            "defYpp": {
+              "rank": 35,
+              "team": "FIU",
+              "ypp": 4.2
+            },
+            "st": {
+              "rank": 101,
+              "team": "FIU",
+              "stRating": 5.43,
+              "stRank": 118,
+              "kickerRating": 2.59,
+              "kickerRank": 48,
+              "fgTotal": "1-1",
+              "fgPct": 100,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 35.5,
+          "adjustedFairHomeMargin": 35.837163292573315,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -8637,13 +10210,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -2.5,
+        "base": -3,
         "power": -0.08738095238095238,
         "units": -0.4110874680306905,
         "confidence": 0.48,
         "philInseason": {
-          "adjustment": -0.0754069399107491,
-          "powerAdj": 0.96,
+          "adjustment": 0.07459306008925104,
+          "powerAdj": 1.11,
           "profileAdj": -0.6909381180595539,
           "matchupAdj": -0.3444688218511952,
           "profileRaw": -0.9870544543707912,
@@ -8803,8 +10376,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -3,
-          "adjustedFairHomeMargin": -3.0754069399107493,
+          "baseFairHomeMargin": -3.5,
+          "adjustedFairHomeMargin": -3.425406939910749,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -8859,7 +10432,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Miami -28",
-      "modelTotal": 54,
+      "modelTotal": 55,
       "modelEdgeMagnitude": 13.631422318092937,
       "finalExecutableEdge": null,
       "independentFootballFair": "Miami -24",
@@ -8879,7 +10452,7 @@
       "modelLean": "Central Michigan ATS",
       "modelGrade": "B+",
       "modelComponents": {
-        "base": 30.5,
+        "base": 29,
         "power": 0.9291666666666666,
         "units": 0.9,
         "confidence": 0.6400000000000001,
@@ -9045,8 +10618,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 32.5,
-          "adjustedFairHomeMargin": 33.35,
+          "baseFairHomeMargin": 31,
+          "adjustedFairHomeMargin": 31.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -9116,13 +10689,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -5,
+        "base": -6,
         "power": -0.2455952380952381,
         "units": -0.2817391304347826,
         "confidence": 0.6366666666666667,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -1.8900000000000001,
+          "powerAdj": -1.59,
           "profileAdj": -0.14502072899497792,
           "matchupAdj": -0.37004087704595806,
           "profileRaw": -0.2071724699928256,
@@ -9278,8 +10851,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -5.5,
-          "adjustedFairHomeMargin": -6.35,
+          "baseFairHomeMargin": -6.5,
+          "adjustedFairHomeMargin": -7.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -9354,13 +10927,13 @@
       "modelLean": "South Carolina ATS",
       "modelGrade": "A-",
       "modelComponents": {
-        "base": 7,
+        "base": 6,
         "power": 0.10249999999999998,
         "units": 0.1691478260869565,
         "confidence": 0.7600000000000001,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -2,
+          "powerAdj": -1.89,
           "profileAdj": 0.14960689410589623,
           "matchupAdj": -0.3146877999533851,
           "profileRaw": 0.21372413443699462,
@@ -9520,8 +11093,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 7.5,
-          "adjustedFairHomeMargin": 6.65,
+          "baseFairHomeMargin": 6.5,
+          "adjustedFairHomeMargin": 5.65,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -9591,13 +11164,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -3,
+        "base": -3.5,
         "power": -0.18119047619047618,
         "units": -0.3053303156640858,
         "confidence": 0.645,
         "philInseason": {
-          "adjustment": -0.85,
-          "powerAdj": -0.69,
+          "adjustment": -0.843861336285332,
+          "powerAdj": -0.5399999999999999,
           "profileAdj": -0.15321232625281395,
           "matchupAdj": -0.15064901003251818,
           "profileRaw": -0.21887475178973423,
@@ -9757,8 +11330,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -3.5,
-          "adjustedFairHomeMargin": -4.35,
+          "baseFairHomeMargin": -4,
+          "adjustedFairHomeMargin": -4.843861336285332,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -10071,7 +11644,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 10.5,
+        "base": 12,
         "power": 0.35261904761904755,
         "units": 0.27808695652173915,
         "confidence": 0.45333333333333337,
@@ -10233,8 +11806,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 11,
-          "adjustedFairHomeMargin": 11.85,
+          "baseFairHomeMargin": 12.5,
+          "adjustedFairHomeMargin": 13.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -10288,11 +11861,11 @@
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Arkansas State -3",
       "modelTotal": 52.5,
-      "modelEdgeMagnitude": 2.8055713235294117,
+      "modelEdgeMagnitude": 3.3055713235294117,
       "finalExecutableEdge": null,
       "independentFootballFair": "Arkansas State -2.5",
       "independentFootballHomeMargin": 2.3240477941176474,
-      "independentFootballEdge": 3.6759522058823526,
+      "independentFootballEdge": 4.175952205882353,
       "independentFootballSide": "Kennesaw State",
       "independentFootballConfidence": "Medium",
       "priority": "low",
@@ -10305,13 +11878,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 3.5,
+        "base": 4,
         "power": 0.07404761904761904,
         "units": -0.24,
         "confidence": 0.6016666666666668,
         "philInseason": {
           "adjustment": 0.85,
-          "powerAdj": 1.7099999999999997,
+          "powerAdj": 1.5599999999999998,
           "profileAdj": -0.4325503256398988,
           "matchupAdj": -0.18507080235293338,
           "profileRaw": -0.6179290366284269,
@@ -10471,8 +12044,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 3.5,
-          "adjustedFairHomeMargin": 4.35,
+          "baseFairHomeMargin": 4,
+          "adjustedFairHomeMargin": 4.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -10486,21 +12059,21 @@
         "market": {
           "fair": "Arkansas State -4.5",
           "homeMargin": 4.5,
-          "edge": 1.5,
+          "edge": 2,
           "side": "Kennesaw State",
           "confidence": "Medium"
         },
         "independent": {
           "fair": "Arkansas State -2.5",
           "homeMargin": 2.3240477941176474,
-          "edge": 3.6759522058823526,
+          "edge": 4.175952205882353,
           "side": "Kennesaw State",
           "confidence": "Medium"
         },
         "ensemble": {
           "fair": "Arkansas State -3",
           "homeMargin": 3.1944286764705883,
-          "edge": 2.8055713235294117,
+          "edge": 3.3055713235294117,
           "side": "Kennesaw State",
           "confidence": "High",
           "tags": [
@@ -10533,7 +12106,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -10544,13 +12117,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 38.5,
+        "power": 0,
+        "units": 0,
+        "confidence": 0.7200000000000001,
+        "philInseason": {
+          "adjustment": -0.4027680659020353,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.4027680659020353,
+          "profileRaw": 0,
+          "matchupRaw": -0.47384478341415914,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": -0.8962962962962963,
+                "expected": -0.5221045340351194,
+                "residual": -0.3741917622611769
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.8248175182481752,
+                "expected": -0.2505117258961527,
+                "residual": -0.5743057923520225
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.9854014598540146,
+                "expected": -0.29529248461111274,
+                "residual": -0.6901089752429019
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.9854014598540146,
+                "expected": -0.32166819677074754,
+                "residual": -0.6637332630832671
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -0.8102189781021898,
+                "expected": -0.11162894020543362,
+                "residual": -0.6985900378967562
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": -0.6901089752429019,
+            "awayOffEdge": 0.6637332630832671,
+            "yppMatchup": -0.6769211191630845,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "WKU",
+              "start": 107,
+              "current": 102,
+              "delta": -5
+            },
+            "agg": {
+              "rank": 129,
+              "team": "W Kentucky",
+              "agg": 81.43
+            },
+            "passD": {
+              "rank": 126,
+              "team": "WKU",
+              "grade": 6.8,
+              "compPct": 61
+            },
+            "offYpp": {
+              "rank": 137,
+              "team": "WKU",
+              "ypp": 3.8
+            },
+            "defYpp": {
+              "rank": 137,
+              "team": "WKU",
+              "ypp": 8.3
+            },
+            "st": {
+              "rank": 127,
+              "team": "WKU",
+              "stRating": 3.37,
+              "stRank": 125,
+              "kickerRating": 1,
+              "kickerRank": 98,
+              "fgTotal": "0-0",
+              "fgPct": 0,
+              "fg50Plus": "0-0"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 38.5,
+          "adjustedFairHomeMargin": 38.09723193409796,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -10589,7 +12305,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 4.5,
+        "base": 5,
         "power": 0.20785714285714282,
         "units": -0.04695652173913044,
         "confidence": 0.6066666666666667,
@@ -10750,8 +12466,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 4.5,
-          "adjustedFairHomeMargin": 4.727463965728397,
+          "baseFairHomeMargin": 5,
+          "adjustedFairHomeMargin": 5.227463965728397,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -10825,13 +12541,13 @@
       "modelLean": "Texas A&M ATS",
       "modelGrade": "A-",
       "modelComponents": {
-        "base": 1.5,
+        "base": 1,
         "power": 0,
         "units": 0.021286956521739113,
         "confidence": 0.7166666666666668,
         "philInseason": {
-          "adjustment": -0.47186659677202536,
-          "powerAdj": -0.9899999999999999,
+          "adjustment": -0.32186659677202545,
+          "powerAdj": -0.84,
           "profileAdj": 0.05057469656540162,
           "matchupAdj": 0.46755870666257293,
           "profileRaw": 0.07224956652200232,
@@ -10991,8 +12707,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 1.5,
-          "adjustedFairHomeMargin": 1.0281334032279745,
+          "baseFairHomeMargin": 1,
+          "adjustedFairHomeMargin": 0.6781334032279746,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -11063,9 +12779,9 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelLean": "Oregon ATS",
-      "modelGrade": "B",
+      "modelGrade": "B+",
       "modelComponents": {
-        "base": -5.5,
+        "base": -6,
         "power": 0,
         "units": -0.2703652173913044,
         "confidence": 0.7933333333333333,
@@ -11231,8 +12947,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -6,
-          "adjustedFairHomeMargin": -5.15,
+          "baseFairHomeMargin": -6.5,
+          "adjustedFairHomeMargin": -5.65,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -11302,7 +13018,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -6,
+        "base": -6.5,
         "power": -0.5648809523809524,
         "units": -0.6513391304347826,
         "confidence": 0.6166666666666667,
@@ -11468,8 +13184,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -7,
-          "adjustedFairHomeMargin": -7.85,
+          "baseFairHomeMargin": -7.5,
+          "adjustedFairHomeMargin": -8.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -11542,7 +13258,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 3.5,
+        "base": 4,
         "power": 0.1083333333333333,
         "units": 0,
         "confidence": 0.5900000000000001,
@@ -11708,8 +13424,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 3.5,
-          "adjustedFairHomeMargin": 4.35,
+          "baseFairHomeMargin": 4,
+          "adjustedFairHomeMargin": 4.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -11745,8 +13461,8 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "Lean Utah State",
-      "modelGrade": "Watch"
+      "modelLean": "Utah State ATS",
+      "modelGrade": "B"
     },
     {
       "gameId": "ESPN-401862783",
@@ -11767,7 +13483,7 @@
       "independentFootballHomeMargin": null,
       "independentFootballEdge": null,
       "independentFootballSide": null,
-      "independentFootballConfidence": "coverage-limited",
+      "independentFootballConfidence": null,
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -11778,13 +13494,156 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Current Week 4 market and Deep Dive are retained, but fair-line promotion is withheld because at least one team lacks two independent governed comparison sources. No FBS-only prior is extrapolated to the uncovered opponent.",
       "modelComponents": {
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "base": 37.5,
+        "power": -0.29178571428571426,
+        "units": 0,
+        "confidence": 0.5700000000000001,
+        "philInseason": {
+          "adjustment": -0.07396543005363422,
+          "powerAdj": 0,
+          "profileAdj": 0,
+          "matchupAdj": -0.07396543005363422,
+          "profileRaw": 0,
+          "matchupRaw": -0.08701815300427555,
+          "powerMargin": null,
+          "coverage": 0,
+          "cap": 0.85,
+          "sourceDate": "2026-09-16",
+          "categoryResiduals": {
+            "agg": {
+              "home": {
+                "actual": 0.6296296296296297,
+                "expected": -0.21238762778892925,
+                "residual": 0.8420172574185589
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "passD": {
+              "home": {
+                "actual": -0.635036496350365,
+                "expected": -0.09250920283440399,
+                "residual": -0.542527293515961
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            },
+            "offYpp": {
+              "home": {
+                "actual": -0.0364963503649635,
+                "expected": -0.11276620049378208,
+                "residual": 0.07626985012881858
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "defYpp": {
+              "home": {
+                "actual": -0.44525547445255476,
+                "expected": -0.12036233002580599,
+                "residual": -0.32489314442674877
+              },
+              "away": {
+                "actual": null,
+                "expected": null,
+                "residual": null
+              }
+            },
+            "st": {
+              "home": {
+                "actual": -1,
+                "expected": -0.041810177414629085,
+                "residual": -0.9581898225853709
+              },
+              "away": {
+                "actual": 1,
+                "expected": null,
+                "residual": null
+              },
+              "diff": 0
+            }
+          },
+          "matchupDetail": {
+            "homeOffEdge": 0.07626985012881858,
+            "awayOffEdge": 0.32489314442674877,
+            "yppMatchup": -0.12431164714896509,
+            "passResidualDiff": 0
+          },
+          "home": {
+            "power": {
+              "team": "North Texas",
+              "start": 105,
+              "current": 112,
+              "delta": 7
+            },
+            "agg": {
+              "rank": 26,
+              "team": "North Texas",
+              "agg": 112.97
+            },
+            "passD": {
+              "rank": 113,
+              "team": "North Texas",
+              "grade": 7.6,
+              "compPct": 65.3
+            },
+            "offYpp": {
+              "rank": 72,
+              "team": "North Texas",
+              "ypp": 6.1
+            },
+            "defYpp": {
+              "rank": 100,
+              "team": "North Texas",
+              "ypp": 5.6
+            },
+            "st": {
+              "rank": 136,
+              "team": "North Texas",
+              "stRating": -0.86,
+              "stRank": 138,
+              "kickerRating": 2.74,
+              "kickerRank": 46,
+              "fgTotal": "3-4",
+              "fgPct": 75,
+              "fg50Plus": "0-1"
+            }
+          },
+          "away": {
+            "power": null,
+            "agg": null,
+            "passD": null,
+            "offYpp": null,
+            "defYpp": null,
+            "st": null
+          },
+          "baseFairHomeMargin": 37,
+          "adjustedFairHomeMargin": 36.92603456994637,
+          "governance": "ACTIVE_CAPPED_RESIDUAL",
+          "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
+          "totalImpact": 0
+        },
+        "sourceValid": false
       },
       "modelHomeMargin": null,
       "spreadLean": null,
       "selectedModel": "ensemble",
-      "multiModel": null,
+      "multiModel": {
+        "market": null,
+        "independent": null,
+        "ensemble": null
+      },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
       "modelLean": null,
       "modelGrade": null,
@@ -11823,13 +13682,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 14,
+        "base": 15.5,
         "power": 0.4934523809523809,
         "units": 0.5175322654462243,
         "confidence": 0.5883333333333334,
         "philInseason": {
-          "adjustment": 0.25854301821550824,
-          "powerAdj": -0.2400000000000002,
+          "adjustment": -0.19145698178449172,
+          "powerAdj": -0.6900000000000002,
           "profileAdj": 0.3457811819988479,
           "matchupAdj": 0.15276183621666056,
           "profileRaw": 0.4939731171412113,
@@ -11989,8 +13848,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 15,
-          "adjustedFairHomeMargin": 15.258543018215509,
+          "baseFairHomeMargin": 16.5,
+          "adjustedFairHomeMargin": 16.30854301821551,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -12028,8 +13887,8 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "Lean NC State",
-      "modelGrade": "Watch"
+      "modelLean": "NC State ATS",
+      "modelGrade": "B"
     },
     {
       "gameId": "ESPN-401856703",
@@ -12063,13 +13922,13 @@
       "modelLean": "Missouri ATS",
       "modelGrade": "B",
       "modelComponents": {
-        "base": 4,
+        "base": 4.5,
         "power": -0.26952380952380944,
         "units": -0.36557986270022885,
         "confidence": 0.6933333333333334,
         "philInseason": {
           "adjustment": 0.85,
-          "powerAdj": 1.7099999999999997,
+          "powerAdj": 1.5599999999999998,
           "profileAdj": 0.15403415665261264,
           "matchupAdj": -0.2607642330098677,
           "profileRaw": 0.22004879521801807,
@@ -12229,8 +14088,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 3.5,
-          "adjustedFairHomeMargin": 4.35,
+          "baseFairHomeMargin": 4,
+          "adjustedFairHomeMargin": 4.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -12539,13 +14398,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -5.5,
+        "base": -6.5,
         "power": 0.03666666666666666,
         "units": -0.44550133096716954,
         "confidence": 0.7200000000000001,
         "philInseason": {
-          "adjustment": -0.85,
-          "powerAdj": -1.1400000000000001,
+          "adjustment": -0.7581794064285392,
+          "powerAdj": -0.8400000000000002,
           "profileAdj": -0.17924968700019964,
           "matchupAdj": 0.26107028057166065,
           "profileRaw": -0.25607098142885665,
@@ -12705,8 +14564,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -6,
-          "adjustedFairHomeMargin": -6.85,
+          "baseFairHomeMargin": -7,
+          "adjustedFairHomeMargin": -7.758179406428539,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -12778,7 +14637,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 17.5,
+        "base": 19.5,
         "power": 0.9491666666666665,
         "units": 0.9,
         "confidence": 0.535,
@@ -12944,8 +14803,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": 19.5,
-          "adjustedFairHomeMargin": 20.35,
+          "baseFairHomeMargin": 21.5,
+          "adjustedFairHomeMargin": 22.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -13017,13 +14876,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -5,
+        "base": -5.5,
         "power": -0.058333333333333334,
         "units": -0.1252173913043478,
         "confidence": 0.5650000000000001,
         "philInseason": {
-          "adjustment": -0.11665624426994142,
-          "powerAdj": 0.06000000000000005,
+          "adjustment": 0.0333437557300586,
+          "powerAdj": 0.21000000000000005,
           "profileAdj": -0.5478584334841887,
           "matchupAdj": 0.37120218921424725,
           "profileRaw": -0.7826549049774125,
@@ -13183,8 +15042,8 @@
               "fg50Plus": "0-0"
             }
           },
-          "baseFairHomeMargin": -5,
-          "adjustedFairHomeMargin": -5.116656244269941,
+          "baseFairHomeMargin": -5.5,
+          "adjustedFairHomeMargin": -5.466656244269942,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -13256,13 +15115,13 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": -3,
+        "base": -4,
         "power": -0.10333333333333332,
         "units": 0,
         "confidence": 0.6416666666666668,
         "philInseason": {
           "adjustment": -0.85,
-          "powerAdj": -0.84,
+          "powerAdj": -0.5399999999999999,
           "profileAdj": 0.02208000341238041,
           "matchupAdj": -0.5309774771858028,
           "profileRaw": 0.0315428620176863,
@@ -13422,8 +15281,8 @@
               "fg50Plus": "1-1"
             }
           },
-          "baseFairHomeMargin": -3,
-          "adjustedFairHomeMargin": -3.85,
+          "baseFairHomeMargin": -4,
+          "adjustedFairHomeMargin": -4.85,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -13461,7 +15320,7 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "Lean Sacramento State",
+      "modelLean": "Lean Massachusetts",
       "modelGrade": "Watch"
     },
     {
@@ -13494,7 +15353,7 @@
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 4 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "modelComponents": {
-        "base": 11,
+        "base": 12.5,
         "power": 0.5530952380952381,
         "units": 0.44715498721227614,
         "confidence": 0.645,
@@ -13660,8 +15519,8 @@
               "fg50Plus": "0-1"
             }
           },
-          "baseFairHomeMargin": 12,
-          "adjustedFairHomeMargin": 12.85,
+          "baseFairHomeMargin": 13.5,
+          "adjustedFairHomeMargin": 14.35,
           "governance": "ACTIVE_CAPPED_RESIDUAL",
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
@@ -13699,7 +15558,7 @@
         }
       },
       "marketUpdatedAt": "2026-09-24T14:47:50.837Z",
-      "modelLean": "Lean Rice",
+      "modelLean": "Lean Fresno State",
       "modelGrade": "Watch"
     },
     {
@@ -13714,7 +15573,7 @@
       "currentMoneyline": null,
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Stanford -3",
-      "modelTotal": 48,
+      "modelTotal": 47,
       "modelEdgeMagnitude": 6.291378654936061,
       "finalExecutableEdge": null,
       "independentFootballFair": "Stanford -4",
@@ -14450,30 +16309,28 @@
     "reason": "No Week 2 official bet is created Sunday morning because governed full-slate production fair values were not persistently emitted in this run. Market observations alone cannot satisfy Final Executable Edge."
   },
   "runtimePersistence": {
-    "status": "PASS",
+    "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "capturedAt": "2026-09-24T14:34:51.308Z",
+    "capturedAt": "2026-09-24T14:50:22.634Z",
     "selectedWeek": "Week 4",
     "modelPromotion": {
-      "marketCount": 71,
-      "independentCount": 71,
-      "ensembleCount": 71,
+      "marketCount": 58,
+      "independentCount": 58,
+      "ensembleCount": 58,
       "rejected": 0
     },
     "renderedRowCount": 71,
     "deepDiveCompleteCount": 71,
     "deepDiveFullEvidenceCount": 58,
-    "deepDiveSourceLimitedCount": 13,
-    "qaRepairAt": "2026-09-24T00:59:47.230Z",
-    "modelCoverageWithheld": 13
+    "deepDiveSourceLimitedCount": 13
   },
   "modelRuntime": {
     "week": 4,
-    "promotedGameCount": 71,
-    "totalPromotedGameCount": 71,
+    "promotedGameCount": 58,
+    "totalPromotedGameCount": 58,
     "independentGameCount": 58,
-    "rejectedFallbackCount": 0,
-    "generatedAt": "2026-09-23T19:18:26.874Z",
+    "rejectedFallbackCount": 13,
+    "generatedAt": "2026-09-24T14:49:04.973Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },
