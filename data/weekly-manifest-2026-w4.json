@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-24T10:19:39.679Z",
+  "updatedAt": "2026-09-24T14:16:06.707Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -33,10 +33,11 @@
       "detail": "Team/stat coverage 142/142; ESPN FPI 138 numeric teams; browser-verified sampled statistical panels 12/12 and FPI context panels 8/12. Four sampled FCS opponents correctly show unavailable FPI rather than fabricated values."
     },
     "marketDerivedIntegrity": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-24T14:16:06.650Z",
       "artifact": "data/market-derived-integrity-2026-w4.json",
-      "detail": "Independently reconciled 171 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401869941"
+      "detail": "Independently reconciled 171 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -74,7 +75,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-24T10:17:49.571Z",
+      "verifiedAt": "2026-09-24T14:14:32.866Z",
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 71,
@@ -89,12 +90,10 @@
     }
   },
   "failures": [
-    "statisticalDisplay",
-    "marketDerivedIntegrity"
+    "statisticalDisplay"
   ],
   "currentPriorityQueue": [
-    "statisticalDisplay: Team/stat coverage 142/142; ESPN FPI 138 numeric teams; browser-verified sampled statistical panels 12/12 and FPI context panels 8/12. Four sampled FCS opponents correctly show unavailable FPI rather than fabricated values.",
-    "marketDerivedIntegrity: Independently reconciled 171 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401869941"
+    "statisticalDisplay: Team/stat coverage 142/142; ESPN FPI 138 numeric teams; browser-verified sampled statistical panels 12/12 and FPI context panels 8/12. Four sampled FCS opponents correctly show unavailable FPI rather than fabricated values."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
