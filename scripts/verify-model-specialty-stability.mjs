@@ -7,7 +7,7 @@ const longshot=JSON.parse(await fs.readFile('data/longshot-upset-lab.json','utf8
 const underdog=JSON.parse(await fs.readFile('data/underdog-special.json','utf8'));
 const week=Number(board.week),failures=[],results=[];
 const longshotCount=(longshot.candidates||[]).filter(c=>Number(c.week||longshot.week)===week).length;
-const underdogRows=(underdog.candidates||[]).filter(c=>Number(c.week||underdog.week)===week);
+const underdogRows=(underdog.candidates||[]).filter(c=>Number(c.week)===week&&/^CURRENT-SCREEN/.test(String(c.status||'')));
 const models=[['ensemble','Ensemble'],['independent','Football Independent'],['market','Market-Calibrated']];
 const viewports=[['desktop',{width:1440,height:1100}],['mobile',{width:390,height:844}]];
 const browser=await chromium.launch({headless:true});
@@ -23,7 +23,10 @@ for(const [viewportName,viewport] of viewports){
       const sleep=ms=>new Promise(r=>setTimeout(r,ms));
       const click=async id=>{const b=document.querySelector(`nav button[data-tab="${id}"]`);if(!b)return false;b.click();await sleep(250);return document.getElementById(id)?.classList.contains('active')===true};
       window.CFB_MULTI_MODEL.setModel(model);await sleep(500);
-      const bestActive=await click('best'),states=[];
+      const bestActive=await click('best');
+      const snapshot=()=>JSON.stringify({html:(document.getElementById('betsRows')?.innerHTML||'').replace(/\s+/g,' ').trim(),owner:document.getElementById('betsRows')?.dataset.modelOwner||null,selected:document.getElementById('betsRows')?.dataset.selectedModel||null,selector:document.getElementById('modelSel')?.value||null,title:document.getElementById('betsTitle')?.textContent?.trim()||'',active:document.getElementById('best')?.classList.contains('active')||false});
+      let last='',quiet=0;for(let i=0;i<80&&quiet<10;i++){const now=snapshot();quiet=now===last?quiet+1:0;last=now;await sleep(100)}
+      const states=[];
       for(let i=0;i<68;i++){const body=document.getElementById('betsRows');states.push(JSON.stringify({html:(body?.innerHTML||'').replace(/\s+/g,' ').trim(),owner:body?.dataset.modelOwner||null,selected:body?.dataset.selectedModel||null,selector:document.getElementById('modelSel')?.value||null,title:document.getElementById('betsTitle')?.textContent?.trim()||'',active:document.getElementById('best')?.classList.contains('active')||false,rowModels:[...document.querySelectorAll('#betsRows tr[data-model-candidate]')].map(x=>x.dataset.modelCandidate)}));await sleep(75)}
       const unique=[...new Set(states)],stable=JSON.parse(states.at(-1));
       const longshotActive=await click('longshots');window.CFB_MULTI_MODEL.setModel(model);await sleep(300);

@@ -26,7 +26,7 @@ const page=await browser.newPage({viewport:{width:1440,height:1100}});
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto(`${portal}?statIntegrity=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
 await page.waitForFunction(()=>window.CFB_RUNTIME_DATA?.status==='remote-active'&&window.CFB_MULTI_MODEL?.state?.ready===true,{timeout:60000});
-await page.waitForTimeout(1000);
+await page.waitForTimeout(2000);
 const live=await page.evaluate(async({allSample,fpiSample})=>{
   const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   document.querySelector('nav button[data-tab="match"]')?.click();await sleep(100);
@@ -37,7 +37,7 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
     if(byId>=0)return byId;
     return opts.findIndex(o=>{const t=(o.textContent||'').toLowerCase();return t.includes(String(g.away).toLowerCase())&&t.includes(String(g.home).toLowerCase())});
   };
-  const render=async g=>{const i=choose(g);if(i<0)return false;sel.selectedIndex=i;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(100);return true};
+  const render=async g=>{const i=choose(g);if(i<0)return false;sel.selectedIndex=i;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(650);return true};
   let checked=0,statsWithValues=0,fpiChecked=0,fpiPanels=0;
   for(const g of allSample){if(!await render(g))continue;const p=document.getElementById('cfbMatchupStatsPanel');if(p){checked++;const t=p.innerText||'';if(/Yds\/play|Success|Explosive|PPG|YPG/i.test(t)&&/\d/.test(t))statsWithValues++;}}
   for(const g of fpiSample){if(!await render(g))continue;fpiChecked++;const m=document.getElementById('multiModelMatchupPanel');if(m&&/ESPN FPI/.test(m.innerText||'')&&/FPI\s+-?\d/i.test(m.innerText||''))fpiPanels++;}

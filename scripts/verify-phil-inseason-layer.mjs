@@ -46,12 +46,12 @@ let out={ready:false,panel:false,text:'',model:null,updatedAt:null,selectedIndex
 const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1100}});const browserErrors=[];page.on('pageerror',e=>browserErrors.push(e.message));
 try{
   await page.goto(`${portal}?philSelectedWeek=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
-  await page.waitForFunction(w=>window.CFB_PHIL_INSEASON_READY===true&&Number(window.CFB_WEEKLY_BOARD_2026?.week)===Number(w),Number(board.week),{timeout:60000}).catch(()=>{});
+  await page.waitForFunction(w=>window.CFB_PHIL_INSEASON_READY===true&&window.CFB_RUNTIME_DATA?.status==='remote-active'&&window.CFB_MULTI_MODEL?.state?.ready===true&&Number(window.CFB_WEEKLY_BOARD_2026?.week)===Number(w),Number(board.week),{timeout:60000}).catch(()=>{});await page.waitForTimeout(1500);
   if(target){
     out=await page.evaluate(async ({away,home})=>{
       const sleep=ms=>new Promise(r=>setTimeout(r,ms));document.querySelector('nav button[data-tab="match"]')?.click();await sleep(150);
       const sel=document.getElementById('matchSel'),opts=Array.from(sel?.options||[]),norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,''),wanted=opts.findIndex(o=>{const t=norm(o.textContent);return t.includes(norm(away))&&t.includes(norm(home))});
-      if(sel&&wanted>=0){sel.selectedIndex=wanted;sel.dispatchEvent(new Event('change',{bubbles:true}));await sleep(1200)}
+      if(sel&&wanted>=0){sel.selectedIndex=wanted;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(1600)}
       const panel=document.getElementById('philInseasonPanel'),txt=panel?.innerText||'';let model=null;
       try{const id=sel?.value;const x=Object.values(weeks||{}).flatMap(v=>v.games||[]).find(g=>String(g.gameId||g.id)===String(id));model=x?.modelComponents?.philInseason||null}catch{}
       return{ready:window.CFB_PHIL_INSEASON_READY===true,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null,selectedIndex:wanted,matchup:sel?.selectedOptions?.[0]?.textContent||null};
