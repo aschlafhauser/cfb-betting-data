@@ -3,25 +3,17 @@
   "sport": "CFB",
   "season": 2026,
   "week": 4,
-  "verifiedAt": "2026-09-24T19:16:44.741Z",
+  "verifiedAt": "2026-09-24T22:32:02.925Z",
   "status": "IN_PROGRESS",
   "blocking": false,
   "counts": {
     "selectedWeekGames": 71,
-    "validPreKickoffSnapshots": 0,
-    "pendingBeforeKickoff": 71,
+    "validPreKickoffSnapshots": 1,
+    "pendingBeforeKickoff": 70,
     "permanentFailures": 0
   },
   "permanentFailures": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401869941",
-      "game": "Liberty at Coastal Carolina",
-      "kickoff": "2026-09-24T23:30:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401862779",
       "game": "Army at Temple",
@@ -583,6 +575,15 @@
       "frozenAt": null
     }
   ],
-  "passedGames": [],
+  "passedGames": [
+    {
+      "canonicalGameId": "ESPN-401869941",
+      "game": "Liberty at Coastal Carolina",
+      "kickoff": "2026-09-24T23:30:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w4-ESPN-401869941.json",
+      "frozenAt": "2026-09-24T22:32:02.868Z"
+    }
+  ],
   "governance": "A missed or invalid pre-kickoff snapshot becomes a permanent hard failure after kickoff. Never reconstruct or backfill historical market, model, personnel, recommendation or ledger state from results or later observations."
 }
