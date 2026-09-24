@@ -1,19 +1,85 @@
 {
   "season": 2026,
   "week": 4,
-  "status": "COMPLETE-WITH-EXPLICIT-COVERAGE-LIMITS",
-  "updatedAt": "2026-09-24T00:33:59.777Z",
+  "status": "COMPLETE_WITH_SOURCE_LIMITS",
+  "updatedAt": "2026-09-24T01:31:35.846Z",
   "gameCount": 71,
   "completedGameCount": 71,
   "pendingGameCount": 0,
   "fullEvidenceCount": 58,
   "sourceLimitedCount": 13,
-  "stage": "universal-current-evidence-complete",
-  "coverageRule": "Every selected-week game has a governed dossier; fair lines are withheld when comparable-team source coverage is incomplete.",
-  "sourceDataFailures": [],
+  "stage": "thursday-universal-evidence-backed-complete",
+  "coverageRule": "Every selected-week game has a structured dossier. COMPLETE-SOURCE-LIMITED means the research pass is complete but one or more dimensions are explicitly source-limited; it never masquerades as full evidence.",
+  "sourceDataFailures": [
+    {
+      "gameId": "ESPN-401858468",
+      "matchup": "Howard at Rutgers",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401858236",
+      "matchup": "Bucknell at Pittsburgh",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401866427",
+      "matchup": "Lindenwood at Eastern Michigan",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401858237",
+      "matchup": "Central Arkansas at Florida State",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401858244",
+      "matchup": "William & Mary at Duke",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401866426",
+      "matchup": "Robert Morris at Buffalo",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401866428",
+      "matchup": "Stonehill at Ohio",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401868188",
+      "matchup": "Gardner-Webb at Marshall",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401862781",
+      "matchup": "North Carolina Central at East Carolina",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401860892",
+      "matchup": "Incarnate Word at Texas State",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401867909",
+      "matchup": "Long Island University at Florida International",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401870745",
+      "matchup": "Mercyhurst at Western Kentucky",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    },
+    {
+      "gameId": "ESPN-401862783",
+      "matchup": "Houston Christian at North Texas",
+      "reason": "Comparable-team model coverage is incomplete; market and matchup evidence are retained but the fair line is withheld."
+    }
+  ],
   "qc": {
-    "status": "71/71 DEEP DIVE COMPLETE",
-    "severity": "none",
-    "modelCoverageWithheld": 13
+    "priorIssue": "Schedule/checkpoint coverage had been conflated with Deep Dive completion and stale-schema dossiers could be reused.",
+    "resolution": "All games require current-schema dossier evidence before reuse; stale records are rebuilt and evidence depth is separately graded.",
+    "severity": "transparent source limits remain"
   }
 }
