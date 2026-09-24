@@ -1,12 +1,20 @@
 {
   "season": 2026,
   "week": 4,
-  "status": "PASS",
-  "verifiedAt": "2026-09-24T00:59:47.230Z",
-  "generatedAt": "2026-09-24T00:59:47.230Z",
-  "boardGames": 71,
-  "persistedModelGames": 58,
-  "withheldCoverageLimitedGames": 13,
-  "detail": "Reconciled selected-week market/model arithmetic for 58 comparable-coverage games; 13 FCS/comparison-gap games are explicitly withheld from fair-line and Best Bets promotion instead of publishing false high-confidence edges.",
-  "failures": []
+  "verifiedAt": "2026-09-24T05:10:24.748Z",
+  "status": "FAIL",
+  "detail": "Independently reconciled 171 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
+  "dependencies": {
+    "canonicalBoardUpdatedAt": "2026-09-24T04:56:56.512Z",
+    "verifiedAt": "2026-09-24T05:10:24.748Z"
+  },
+  "checks": {
+    "records": 171,
+    "mathFailures": 0,
+    "independentMarketLeakage": 0,
+    "renderFailures": 1
+  },
+  "failures": [
+    "rendered Ensemble mismatch: ESPN-401869941"
+  ]
 }
