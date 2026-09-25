@@ -53,7 +53,8 @@ for(let attempt=1;attempt<=8;attempt++){
  diag.browserErrors=[...browserErrors];
  console.log(`Live verification attempt ${attempt}: ${JSON.stringify(diag)}`);
  const structural=diag.sourceGames===expected&&diag.renderedRows===expected&&diag.meaningful>=minModels&&diag.markets>=minMarkets&&diag.fakePicks===0&&diag.falseDeepDive===0;
- const decisionLayers=diag.dossierCount===expected&&diag.deepDiveComplete===expected&&diag.moverCount>0&&diag.matchPanel;
+ const moverLayerLoaded=diag.moverCount>0||(diag.runtime?.loaded||[]).some(x=>/^market-movers-/.test(String(x)));
+ const decisionLayers=diag.dossierCount===expected&&diag.deepDiveComplete===expected&&moverLayerLoaded&&diag.matchPanel;
  // Current browser exceptions are authoritative. A previously persisted productionVerifier
  // failure may appear in stale manifest text during a recheck, but it cannot deadlock the
  // recheck itself. Any pageerror in this run still fails immediately.

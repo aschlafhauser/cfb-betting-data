@@ -137,7 +137,14 @@ jobs:
         timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
-        run: node scripts/verify-multi-model.mjs
+        run: |
+          set -e
+          for attempt in 1 2 3; do
+            echo "Multi-model verification attempt ${attempt}/3"
+            if node scripts/verify-multi-model.mjs; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then sleep 30; fi
+          done
+          exit 1
 
       - name: Build full-slate evidence-backed Deep Dives
         id: deep_dives
@@ -265,4 +272,25 @@ jobs:
 
       - name: Enforce weekly non-negotiable gates
         if: ${{ always() }}
-        run: node scripts/verify-weekly-gates.mjs
+        env:
+          CAPTURE_OUTCOME: ${{ steps.capture_runtime.outcome }}
+          IDENTITY_OUTCOME: ${{ steps.identity.outcome }}
+          PHIL_OUTCOME: ${{ steps.phil_verify.outcome }}
+          MULTIMODEL_OUTCOME: ${{ steps.multimodel_verify.outcome }}
+          DEEP_DIVE_OUTCOME: ${{ steps.deep_dives.outcome }}
+          UPSET_OUTCOME: ${{ steps.upset.outcome }}
+          SPECIALTY_OUTCOME: ${{ steps.specialty.outcome }}
+          STATS_OUTCOME: ${{ steps.stats_verify.outcome }}
+          MARKET_OUTCOME: ${{ steps.market_verify.outcome }}
+          MANIFEST_OUTCOME: ${{ steps.manifest.outcome }}
+          LIVE_OUTCOME: ${{ steps.live_verify.outcome }}
+          COMPLETENESS_OUTCOME: ${{ steps.completeness_verify.outcome }}
+          STABILITY_OUTCOME: ${{ steps.stability_verify.outcome }}
+        run: |
+          node scripts/verify-weekly-gates.mjs
+          for outcome in "$CAPTURE_OUTCOME" "$IDENTITY_OUTCOME" "$PHIL_OUTCOME" "$MULTIMODEL_OUTCOME" "$DEEP_DIVE_OUTCOME" "$UPSET_OUTCOME" "$SPECIALTY_OUTCOME" "$STATS_OUTCOME" "$MARKET_OUTCOME" "$MANIFEST_OUTCOME" "$LIVE_OUTCOME" "$COMPLETENESS_OUTCOME" "$STABILITY_OUTCOME"; do
+            if [ "$outcome" != "success" ]; then
+              echo "Sticky governed-runtime step did not succeed: $outcome"
+              exit 1
+            fi
+          done
