@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-25T18:45:08.046Z",
+  "updatedAt": "2026-09-25T22:29:22.396Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -14,7 +14,7 @@
     "marketCoverage": {
       "status": "PASS",
       "minimumRequired": 60,
-      "actualMarketGames": 70,
+      "actualMarketGames": 69,
       "detail": "Current spread/total coverage from canonical board."
     },
     "deepDiveEvidence": {
@@ -29,16 +29,16 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-25T18:45:03.871Z",
+      "verifiedAt": "2026-09-25T22:29:15.681Z",
       "artifact": "data/statistical-display-integrity-2026-w4.json",
       "detail": "Team/stat coverage 142/142; ESPN FPI 130 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/12."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-25T18:45:08.005Z",
+      "verifiedAt": "2026-09-25T22:29:22.337Z",
       "artifact": "data/market-derived-integrity-2026-w4.json",
-      "detail": "Independently reconciled 168 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Independently reconciled 165 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -50,7 +50,7 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 15 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 14 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
@@ -76,18 +76,18 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-25T18:44:20.182Z",
+      "verifiedAt": "2026-09-25T22:28:02.115Z",
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
-      "validSnapshots": 2,
-      "pendingBeforeKickoff": 69,
+      "validSnapshots": 4,
+      "pendingBeforeKickoff": 67,
       "permanentFailures": [],
-      "detail": "2 valid immutable snapshots; 69 games remain pending before kickoff."
+      "detail": "4 valid immutable snapshots; 67 games remain pending before kickoff."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "blocking": false,
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
-      "detail": "2 valid immutable snapshots; 69 games remain pending before kickoff."
+      "detail": "4 valid immutable snapshots; 67 games remain pending before kickoff."
     }
   },
   "failures": [],

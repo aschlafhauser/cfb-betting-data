@@ -3,33 +3,17 @@
   "sport": "CFB",
   "season": 2026,
   "week": 4,
-  "verifiedAt": "2026-09-25T18:44:20.182Z",
+  "verifiedAt": "2026-09-25T22:28:02.115Z",
   "status": "IN_PROGRESS",
   "blocking": false,
   "counts": {
     "selectedWeekGames": 71,
-    "validPreKickoffSnapshots": 2,
-    "pendingBeforeKickoff": 69,
+    "validPreKickoffSnapshots": 4,
+    "pendingBeforeKickoff": 67,
     "permanentFailures": 0
   },
   "permanentFailures": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401858468",
-      "game": "Howard at Rutgers",
-      "kickoff": "2026-09-25T23:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401862778",
-      "game": "Navy at UAB",
-      "kickoff": "2026-09-25T23:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401858461",
       "game": "Northwestern at Indiana",
@@ -583,6 +567,22 @@
       "status": "PASS",
       "snapshotFile": "data/final-snapshots/2026-w4-ESPN-401862779.json",
       "frozenAt": "2026-09-25T18:44:20.145Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401858468",
+      "game": "Howard at Rutgers",
+      "kickoff": "2026-09-25T23:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w4-ESPN-401858468.json",
+      "frozenAt": "2026-09-25T22:28:02.052Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401862778",
+      "game": "Navy at UAB",
+      "kickoff": "2026-09-25T23:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w4-ESPN-401862778.json",
+      "frozenAt": "2026-09-25T22:28:02.052Z"
     }
   ],
   "governance": "A missed or invalid pre-kickoff snapshot becomes a permanent hard failure after kickoff. Never reconstruct or backfill historical market, model, personnel, recommendation or ledger state from results or later observations."
