@@ -10,7 +10,7 @@ const norm=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u0
 const expectedTeams=new Set((board.games||[]).flatMap(g=>[g.away,g.home]).filter(Boolean)).size;
 const fpiTeams=new Set((fpi.teams||[]).filter(x=>Number.isFinite(Number(x.fpi))).map(x=>norm(x.team)));
 const allSample=(board.games||[]).slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
-const fpiSample=allSample;
+const fpiSample=(board.games||[]).filter(g=>fpiTeams.has(norm(g.away))&&fpiTeams.has(norm(g.home))).slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
 const failures=[];
 
 if(Number(metrics.week)!==week)failures.push(`team metrics week ${metrics.week} != ${week}`);

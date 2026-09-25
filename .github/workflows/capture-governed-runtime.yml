@@ -103,7 +103,14 @@ jobs:
         timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
-        run: node scripts/capture-governed-runtime.mjs
+        run: |
+          set -e
+          for attempt in 1 2 3 4; do
+            echo "Governed capture attempt ${attempt}/4"
+            if node scripts/capture-governed-runtime.mjs; then exit 0; fi
+            if [ "$attempt" -lt 4 ]; then sleep 30; fi
+          done
+          exit 1
 
       - name: Reconcile canonical team identities across schedule, ESPN and Phil Steele
         id: identity
@@ -248,7 +255,7 @@ jobs:
         run: node scripts/verify-model-specialty-stability.mjs
 
       - name: Certify clean live-browser verification
-        if: ${{ always() && steps.phil_verify.outcome == 'success' && steps.multimodel_verify.outcome == 'success' && steps.stats_verify.outcome == 'success' && steps.market_verify.outcome == 'success' && steps.live_verify.outcome == 'success' && steps.completeness_verify.outcome == 'success' && steps.stability_verify.outcome == 'success' }}
+        if: ${{ always() && steps.capture_runtime.outcome == 'success' && steps.phil_verify.outcome == 'success' && steps.multimodel_verify.outcome == 'success' && steps.stats_verify.outcome == 'success' && steps.market_verify.outcome == 'success' && steps.live_verify.outcome == 'success' && steps.completeness_verify.outcome == 'success' && steps.stability_verify.outcome == 'success' }}
         run: |
           node - <<'NODE'
           const fs=require('fs');const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;const m=JSON.parse(fs.readFileSync(p,'utf8'));m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed.'};const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';m.updatedAt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(m,null,2)+'\n');
