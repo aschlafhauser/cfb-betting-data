@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-25T07:56:49.626Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-25T13:51:11.223Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -27,15 +27,16 @@
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
     "statisticalDisplay": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-25T13:51:04.210Z",
       "artifact": "data/statistical-display-integrity-2026-w4.json",
-      "detail": "Team/stat coverage 142/142; ESPN FPI 138 numeric teams; browser-verified sampled statistical panels 12/12 and FPI context panels 8/12. Four sampled FCS opponents correctly show unavailable FPI rather than fabricated values."
+      "detail": "Team/stat coverage 142/142; ESPN FPI 130 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/12."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-25T07:56:49.567Z",
+      "verifiedAt": "2026-09-25T13:51:11.164Z",
       "artifact": "data/market-derived-integrity-2026-w4.json",
       "detail": "Independently reconciled 168 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -75,7 +76,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-25T07:55:20.925Z",
+      "verifiedAt": "2026-09-25T13:49:23.248Z",
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
       "validSnapshots": 1,
       "pendingBeforeKickoff": 70,
@@ -89,11 +90,11 @@
       "detail": "1 valid immutable snapshots; 70 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "statisticalDisplay"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "statisticalDisplay: Team/stat coverage 142/142; ESPN FPI 138 numeric teams; browser-verified sampled statistical panels 12/12 and FPI context panels 8/12. Four sampled FCS opponents correctly show unavailable FPI rather than fabricated values."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
