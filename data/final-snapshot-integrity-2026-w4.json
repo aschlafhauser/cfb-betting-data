@@ -3,33 +3,29 @@
   "sport": "CFB",
   "season": 2026,
   "week": 4,
-  "verifiedAt": "2026-09-25T22:28:02.115Z",
-  "status": "IN_PROGRESS",
-  "blocking": false,
+  "verifiedAt": "2026-09-26T01:40:40.535Z",
+  "status": "FAIL",
+  "blocking": true,
   "counts": {
     "selectedWeekGames": 71,
-    "validPreKickoffSnapshots": 4,
-    "pendingBeforeKickoff": 67,
-    "permanentFailures": 0
+    "validPreKickoffSnapshots": 5,
+    "pendingBeforeKickoff": 65,
+    "permanentFailures": 1
   },
-  "permanentFailures": [],
-  "pendingGames": [
+  "permanentFailures": [
     {
       "canonicalGameId": "ESPN-401858461",
       "game": "Northwestern at Indiana",
       "kickoff": "2026-09-26T00:00:00.000Z",
-      "status": "PENDING",
+      "status": "FINAL_SNAPSHOT_MISSING",
       "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401858234",
-      "game": "Clemson at California",
-      "kickoff": "2026-09-26T02:30:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
+      "frozenAt": null,
+      "firstDetectedAt": "2026-09-26T01:40:40.535Z",
+      "immutable": true,
+      "remediation": "Historical pre-kickoff state may not be backfilled after kickoff."
+    }
+  ],
+  "pendingGames": [
     {
       "canonicalGameId": "ESPN-401856704",
       "game": "Texas at Tennessee",
@@ -583,6 +579,14 @@
       "status": "PASS",
       "snapshotFile": "data/final-snapshots/2026-w4-ESPN-401862778.json",
       "frozenAt": "2026-09-25T22:28:02.052Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401858234",
+      "game": "Clemson at California",
+      "kickoff": "2026-09-26T02:30:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w4-ESPN-401858234.json",
+      "frozenAt": "2026-09-26T01:40:40.477Z"
     }
   ],
   "governance": "A missed or invalid pre-kickoff snapshot becomes a permanent hard failure after kickoff. Never reconstruct or backfill historical market, model, personnel, recommendation or ledger state from results or later observations."
