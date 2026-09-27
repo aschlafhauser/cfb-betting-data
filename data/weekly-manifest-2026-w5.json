@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 5,
-  "updatedAt": "2026-09-27T13:57:38.920Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-27T14:06:07.332Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -15,7 +15,7 @@
       "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 59,
       "actualMarketGames": 18,
-      "hoursToFirstKickoff": 106,
+      "hoursToFirstKickoff": 105.9,
       "detail": "Early-week source-limited market set; all currently published prices are retained and full-slate coverage becomes blocking inside 72 hours."
     },
     "deepDiveEvidence": {
@@ -28,16 +28,18 @@
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
     "statisticalDisplay": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-27T14:06:03.373Z",
       "artifact": "data/statistical-display-integrity-2026-w5.json",
-      "detail": "No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes."
+      "detail": "Team/stat coverage 118/118; ESPN FPI 116 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 11/12."
     },
     "marketDerivedIntegrity": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-09-27T14:06:07.287Z",
       "artifact": "data/market-derived-integrity-2026-w5.json",
-      "detail": "Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: browser pageerror: Identifier 'label' has already been declared"
+      "detail": "Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -75,7 +77,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-27T13:57:01.143Z",
+      "verifiedAt": "2026-09-27T14:05:25.470Z",
       "artifact": "data/final-snapshot-integrity-2026-w5.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 59,
@@ -89,13 +91,11 @@
       "detail": "0 valid immutable snapshots; 59 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "statisticalDisplay",
-    "marketDerivedIntegrity"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
-    "marketDerivedIntegrity: Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: browser pageerror: Identifier 'label' has already been declared"
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
