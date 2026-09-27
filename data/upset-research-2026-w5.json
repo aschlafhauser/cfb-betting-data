@@ -2,7 +2,7 @@
   "version": "2.0-25pt-directional-research",
   "season": 2026,
   "week": 5,
-  "updatedAt": "2026-09-27T13:52:19.313Z",
+  "updatedAt": "2026-09-27T13:56:45.685Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -54,10 +54,10 @@
       "opponent": "Virginia Tech",
       "currentSpread": "+6",
       "band": "UNDERDOG-SPECIAL",
-      "profileScore": 14.5,
-      "score25": 14.5,
+      "profileScore": 16.5,
+      "score25": 16.5,
       "scoreMax": 25,
-      "tier": "C",
+      "tier": "B",
       "components": {
         "qbStability": 4,
         "trenchResistance": 4,
@@ -66,7 +66,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
+        "productionModel": 2,
         "independentModel": 2
       },
       "narrative": {
@@ -83,13 +83,13 @@
           "Pittsburgh QB/WR vs Virginia Tech DB — Pittsburgh +",
           "Virginia Tech QB/WR vs Pittsburgh DB — Even",
           "Phil Steele current power rating: Pittsburgh 130 vs Virginia Tech 131.",
-          "Canonical selected-week market: Pittsburgh +6, total 53.5; production model no directional support edge 7.682405819025229; Football Independent Pittsburgh edge 12.137343031708715."
+          "Canonical selected-week market: Pittsburgh +6, total 53.5; production model Pittsburgh ATS edge 7.682405819025229; Football Independent Pittsburgh edge 12.137343031708715."
         ]
       },
       "deepDiveStatus": "COMPLETE",
       "informationQuality": "standard",
       "researchFlags": {
-        "highProfile": false,
+        "highProfile": true,
         "modelSupport": true,
         "volatilityPath": true
       },
@@ -135,7 +135,7 @@
           "BYU OL/RB vs TCU DL/LB — BYU +",
           "Only 10 points; 11 penalties for 100 yards and a lost fumble materially hurt the result.",
           "Phil Steele current power rating: TCU 129 vs BYU 135.",
-          "Canonical selected-week market: TCU +6.5, total 52.5; production model no directional support edge 1.3452723345939717; Football Independent BYU edge 2.4459496992617655."
+          "Canonical selected-week market: TCU +6.5, total 52.5; production model Lean BYU edge 1.3452723345939717; Football Independent BYU edge 2.4459496992617655."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -143,6 +143,57 @@
       "researchFlags": {
         "highProfile": false,
         "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 5,
+      "canonicalGameId": "ESPN-401858248",
+      "team": "NC State",
+      "opponent": "Louisville",
+      "currentSpread": "+6.5",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 6.5,
+      "score25": 6.5,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 0.5,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 2,
+        "productionModel": 2,
+        "independentModel": 2
+      },
+      "narrative": {
+        "upsetCase": "NC State has an upset path built around support from at least one independent pricing view. Louisville OL/RB vs NC State DL/LB — Louisville ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Louisville OL/RB vs NC State DL/LB — Louisville ++",
+          "NC State OL/RB vs Louisville DL/LB — Louisville ++",
+          "NC State QB/WR vs Louisville DB — Even",
+          "Only 168 yards and 84 passing yards in a 34-8 loss; broad pregame absence list tempers the downgrade.",
+          "Phil Steele current power rating: NC State 124 vs Louisville 129.",
+          "Canonical selected-week market: NC State +6.5, total 59.5; production model Lean NC State edge 6.405570209806457; Football Independent NC State edge 10.342617016344095."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": true,
         "volatilityPath": false
       },
       "scoreAudit": {
@@ -186,7 +237,7 @@
           "South Carolina OL/RB vs Kentucky DL/LB — Kentucky ++",
           "South Carolina QB/WR vs Kentucky DB — South Carolina +",
           "Phil Steele current power rating: Kentucky 125 vs South Carolina 139.",
-          "Canonical selected-week market: Kentucky +3.5, total 51.5; production model no directional support edge 1.5568566187295616; Football Independent South Carolina edge 1.5947610312159357."
+          "Canonical selected-week market: Kentucky +3.5, total 51.5; production model South Carolina ATS edge 1.5568566187295616; Football Independent South Carolina edge 1.5947610312159357."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -236,58 +287,7 @@
           "Penn State OL/RB vs Northwestern DL/LB — Penn State ++",
           "Northwestern OL/RB vs Penn State DL/LB — Penn State +",
           "Phil Steele current power rating: Northwestern 128 vs Penn State 138.",
-          "Canonical selected-week market: Northwestern +4.5, total 48.5; production model no directional support edge 0.3688929839140771; Football Independent Northwestern edge 0.9656491201562236."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": true,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v2.0-25pt-directional",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 5,
-      "canonicalGameId": "ESPN-401858248",
-      "team": "NC State",
-      "opponent": "Louisville",
-      "currentSpread": "+6.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 4.5,
-      "score25": 4.5,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 0.5,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 2,
-        "productionModel": 0,
-        "independentModel": 2
-      },
-      "narrative": {
-        "upsetCase": "NC State has an upset path built around support from at least one independent pricing view. Louisville OL/RB vs NC State DL/LB — Louisville ++",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Louisville OL/RB vs NC State DL/LB — Louisville ++",
-          "NC State OL/RB vs Louisville DL/LB — Louisville ++",
-          "NC State QB/WR vs Louisville DB — Even",
-          "Only 168 yards and 84 passing yards in a 34-8 loss; broad pregame absence list tempers the downgrade.",
-          "Phil Steele current power rating: NC State 124 vs Louisville 129.",
-          "Canonical selected-week market: NC State +6.5, total 59.5; production model no directional support edge 6.405570209806457; Football Independent NC State edge 10.342617016344095."
+          "Canonical selected-week market: Northwestern +4.5, total 48.5; production model Penn State ATS edge 0.3688929839140771; Football Independent Northwestern edge 0.9656491201562236."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -338,7 +338,7 @@
           "Missouri OL/RB vs Florida DL/LB — Missouri +",
           "Missouri QB/WR vs Florida DB — Florida +",
           "Phil Steele current power rating: Missouri 123 vs Florida 131.",
-          "Canonical selected-week market: Missouri +5.5, total 56.5; production model no directional support edge 0.9070248422207756; Football Independent Florida edge 1.6491360767650463."
+          "Canonical selected-week market: Missouri +5.5, total 56.5; production model Lean Florida edge 0.9070248422207756; Football Independent Florida edge 1.6491360767650463."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -361,8 +361,8 @@
       "opponent": "Alabama",
       "currentSpread": "+4.5",
       "band": "UNDERDOG-SPECIAL",
-      "profileScore": 3,
-      "score25": 3,
+      "profileScore": 3.3,
+      "score25": 3.3,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -373,7 +373,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 2,
-        "productionModel": 0,
+        "productionModel": 0.3,
         "independentModel": 0.5
       },
       "narrative": {
@@ -388,7 +388,7 @@
           "Mississippi State QB/WR vs Alabama DB — Alabama ++",
           "Alabama QB/WR vs Mississippi State DB — Alabama +",
           "Phil Steele current power rating: Mississippi State 137 vs Alabama 141.",
-          "Canonical selected-week market: Mississippi State +4.5, total 59.5; production model no directional support edge 0.5109116158972844; Football Independent Mississippi State edge 0.9289302107223358."
+          "Canonical selected-week market: Mississippi State +4.5, total 59.5; production model Lean Mississippi State edge 0.5109116158972844; Football Independent Mississippi State edge 0.9289302107223358."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -413,10 +413,10 @@
       "opponent": "Wisconsin",
       "currentSpread": "+10",
       "band": "UPSET-LAB",
-      "profileScore": 12.5,
-      "score25": 12.5,
+      "profileScore": 14.2,
+      "score25": 14.2,
       "scoreMax": 25,
-      "tier": "D",
+      "tier": "C",
       "components": {
         "qbStability": 2,
         "trenchResistance": 2,
@@ -425,7 +425,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 2,
-        "productionModel": 0,
+        "productionModel": 1.7,
         "independentModel": 2
       },
       "narrative": {
@@ -442,7 +442,7 @@
           "Wisconsin QB/WR vs Michigan State DB — Wisconsin ++",
           "Wisconsin OL/RB vs Michigan State DL/LB — Michigan State +",
           "Phil Steele current power rating: Michigan State 126 vs Wisconsin 133.",
-          "Canonical selected-week market: Michigan State +10, total 44.5; production model no directional support edge 3.381529919719717; Football Independent Michigan State edge 6.1482362176722125."
+          "Canonical selected-week market: Michigan State +10, total 44.5; production model Michigan State ATS edge 3.381529919719717; Football Independent Michigan State edge 6.1482362176722125."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -465,8 +465,8 @@
       "opponent": "Notre Dame",
       "currentSpread": "+21.5",
       "band": "UPSET-LAB",
-      "profileScore": 6.3,
-      "score25": 6.3,
+      "profileScore": 8.3,
+      "score25": 8.3,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -477,7 +477,7 @@
         "havocVolatility": 0.8,
         "coachingSituational": 0,
         "availability": 2,
-        "productionModel": 0,
+        "productionModel": 2,
         "independentModel": 2
       },
       "narrative": {
@@ -494,107 +494,7 @@
           "Notre Dame OL/RB vs North Carolina DL/LB — Notre Dame ++",
           "Held TCU to 10 points and shut down the run after halftime; 322 total yards on offense.",
           "Phil Steele current power rating: North Carolina 122 vs Notre Dame 151.",
-          "Canonical selected-week market: North Carolina +21.5, total 50.5; production model no directional support edge 4.0051476855238555; Football Independent North Carolina edge 9.32754124640701."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": true,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v2.0-25pt-directional",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 5,
-      "canonicalGameId": "ESPN-401858477",
-      "team": "Rutgers",
-      "opponent": "Indiana",
-      "currentSpread": "+23.5",
-      "band": "UPSET-LAB",
-      "profileScore": 5.5,
-      "score25": 5.5,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 1.5,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 2,
-        "productionModel": 0,
-        "independentModel": 2
-      },
-      "narrative": {
-        "upsetCase": "Rutgers has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Indiana QB/WR vs Rutgers DB — Indiana ++",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Indiana QB/WR vs Rutgers DB — Indiana ++",
-          "Rutgers QB/WR vs Indiana DB — Indiana ++",
-          "Indiana OL/RB vs Rutgers DL/LB — Indiana ++",
-          "Phil Steele current power rating: Rutgers 123 vs Indiana 149.",
-          "Canonical selected-week market: Rutgers +23.5, total 54.5; production model no directional support edge 5.12195295537839; Football Independent Rutgers edge 10.539914464324342."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": true,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v2.0-25pt-directional",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 5,
-      "canonicalGameId": "ESPN-401858473",
-      "team": "Iowa",
-      "opponent": "Ohio State",
-      "currentSpread": "+14",
-      "band": "UPSET-LAB",
-      "profileScore": 5,
-      "score25": 5,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 3,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 2
-      },
-      "narrative": {
-        "upsetCase": "Iowa has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Iowa QB/WR vs Ohio State DB — Ohio State ++",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Iowa QB/WR vs Ohio State DB — Ohio State ++",
-          "Ohio State OL/RB vs Iowa DL/LB — Ohio State +",
-          "Iowa OL/RB vs Ohio State DL/LB — Even",
-          "Phil Steele current power rating: Iowa 134 vs Ohio State 147.",
-          "Canonical selected-week market: Iowa +14, total 44.5; production model no directional support edge 4.53065288149679; Football Independent Iowa edge 7.2177548024946505."
+          "Canonical selected-week market: North Carolina +21.5, total 50.5; production model North Carolina ATS edge 4.0051476855238555; Football Independent North Carolina edge 9.32754124640701."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -617,23 +517,23 @@
       "opponent": "Georgia",
       "currentSpread": "+24.5",
       "band": "UPSET-LAB",
-      "profileScore": 4.5,
-      "score25": 4.5,
+      "profileScore": 7.5,
+      "score25": 7.5,
       "scoreMax": 25,
       "tier": "D",
       "components": {
         "qbStability": 0,
         "trenchResistance": 0,
         "explosivePath": 0,
-        "compression": 0.5,
+        "compression": 1.5,
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 2,
-        "productionModel": 0,
+        "productionModel": 2,
         "independentModel": 2
       },
       "narrative": {
-        "upsetCase": "Vanderbilt has an upset path built around support from at least one independent pricing view. Georgia QB/WR vs Vanderbilt DB — Georgia ++",
+        "upsetCase": "Vanderbilt has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Georgia QB/WR vs Vanderbilt DB — Georgia ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
         "keyThingsToWatch": [
           "game pace / possession count",
@@ -644,7 +544,107 @@
           "Vanderbilt QB/WR vs Georgia DB — Georgia ++",
           "Vanderbilt OL/RB vs Georgia DL/LB — Georgia ++",
           "Phil Steele current power rating: Vanderbilt 129 vs Georgia 147.",
-          "Canonical selected-week market: Vanderbilt +24.5, total 55.5; production model no directional support edge 6.118631322049293; Football Independent Vanderbilt edge 11.124784221907802."
+          "Canonical selected-week market: Vanderbilt +24.5, total 54.5; production model Vanderbilt ATS edge 6.118631322049293; Football Independent Vanderbilt edge 11.124784221907802."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": true,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 5,
+      "canonicalGameId": "ESPN-401858477",
+      "team": "Rutgers",
+      "opponent": "Indiana",
+      "currentSpread": "+23.5",
+      "band": "UPSET-LAB",
+      "profileScore": 7.5,
+      "score25": 7.5,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 1.5,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 2,
+        "productionModel": 2,
+        "independentModel": 2
+      },
+      "narrative": {
+        "upsetCase": "Rutgers has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Indiana QB/WR vs Rutgers DB — Indiana ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Indiana QB/WR vs Rutgers DB — Indiana ++",
+          "Rutgers QB/WR vs Indiana DB — Indiana ++",
+          "Indiana OL/RB vs Rutgers DL/LB — Indiana ++",
+          "Phil Steele current power rating: Rutgers 123 vs Indiana 149.",
+          "Canonical selected-week market: Rutgers +23.5, total 54.5; production model Rutgers ATS edge 5.12195295537839; Football Independent Rutgers edge 10.539914464324342."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": true,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v2.0-25pt-directional",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 5,
+      "canonicalGameId": "ESPN-401858473",
+      "team": "Iowa",
+      "opponent": "Ohio State",
+      "currentSpread": "+14",
+      "band": "UPSET-LAB",
+      "profileScore": 7,
+      "score25": 7,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 3,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 2,
+        "independentModel": 2
+      },
+      "narrative": {
+        "upsetCase": "Iowa has an upset path built around a lower-total environment that can compress possessions, support from at least one independent pricing view. Iowa QB/WR vs Ohio State DB — Ohio State ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Iowa QB/WR vs Ohio State DB — Ohio State ++",
+          "Ohio State OL/RB vs Iowa DL/LB — Ohio State +",
+          "Iowa OL/RB vs Ohio State DL/LB — Even",
+          "Phil Steele current power rating: Iowa 134 vs Ohio State 147.",
+          "Canonical selected-week market: Iowa +14, total 44.5; production model Iowa ATS edge 4.53065288149679; Football Independent Iowa edge 7.2177548024946505."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -667,8 +667,8 @@
       "opponent": "Miami",
       "currentSpread": "+18.5",
       "band": "UPSET-LAB",
-      "profileScore": 3.5,
-      "score25": 3.5,
+      "profileScore": 5.5,
+      "score25": 5.5,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -679,7 +679,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
+        "productionModel": 2,
         "independentModel": 2
       },
       "narrative": {
@@ -695,7 +695,7 @@
           "Miami OL/RB vs Clemson DL/LB — Even",
           "Lost 51-10 to LSU. Opponent quality and preseason OL uncertainty were already known, so downgrade is capped.",
           "Phil Steele current power rating: Clemson 127 vs Miami 145.",
-          "Canonical selected-week market: Clemson +18.5, total 51.5; production model no directional support edge 6.733422517701467; Football Independent Clemson edge 12.242586395820846."
+          "Canonical selected-week market: Clemson +18.5, total 51.5; production model Clemson ATS edge 6.733422517701467; Football Independent Clemson edge 12.242586395820846."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -718,8 +718,8 @@
       "opponent": "USC",
       "currentSpread": "+10",
       "band": "UPSET-LAB",
-      "profileScore": 2.4,
-      "score25": 2.4,
+      "profileScore": 3.6,
+      "score25": 3.6,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -730,7 +730,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
+        "productionModel": 1.2,
         "independentModel": 1.9
       },
       "narrative": {
@@ -745,7 +745,7 @@
           "USC OL/RB vs Washington DL/LB — Even",
           "USC QB/WR vs Washington DB — Even",
           "Phil Steele current power rating: Washington 133 vs USC 140.",
-          "Canonical selected-week market: Washington +10, total 57.5; production model no directional support edge 2.426285781360754; Football Independent Washington edge 3.7104763022679244."
+          "Canonical selected-week market: Washington +10, total 57.5; production model Washington ATS edge 2.426285781360754; Football Independent Washington edge 3.7104763022679244."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -768,10 +768,10 @@
       "canonicalGameId": "ESPN-401858253",
       "team": "Florida State",
       "opponent": "Virginia",
-      "currentSpread": "+1.5",
+      "currentSpread": "+3",
       "band": "INTERMEDIATE",
-      "profileScore": 9.3,
-      "score25": 9.3,
+      "profileScore": 9.9,
+      "score25": 9.9,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -782,12 +782,12 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
+        "productionModel": 0.1,
+        "independentModel": 0.5
       },
       "narrative": {
         "upsetCase": "Florida State has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Virginia QB/WR vs Florida State DB — Florida State +",
-        "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
+        "whyItCouldFail": "The case can fail if the favorite’s talent and depth advantages dominate the matchup.",
         "keyThingsToWatch": [
           "Florida State QB efficiency and early-down success",
           "pressure rate and line-of-scrimmage control",
@@ -800,14 +800,14 @@
           "Virginia OL/RB vs Florida State DL/LB — Even",
           "419 yards and strong red-zone execution, but allowed efficient passing and did not separate enough to justify an overall upgrade.",
           "Phil Steele current power rating: Florida State 124 vs Virginia 125.",
-          "Canonical selected-week market: Florida State +1.5, total 51.5; production model no directional support edge 1.7616174256548338; Football Independent Virginia edge 3.20294077391788."
+          "Canonical selected-week market: Florida State +3, total 51.5; production model Lean Florida State edge 0.2616174256548338; Football Independent Virginia edge 1.70294077391788."
         ]
       },
       "deepDiveStatus": "COMPLETE",
       "informationQuality": "standard",
       "researchFlags": {
         "highProfile": false,
-        "modelSupport": false,
+        "modelSupport": true,
         "volatilityPath": true
       },
       "scoreAudit": {
@@ -823,8 +823,8 @@
       "opponent": "Michigan",
       "currentSpread": "+7.5",
       "band": "INTERMEDIATE",
-      "profileScore": 4,
-      "score25": 4,
+      "profileScore": 4.7,
+      "score25": 4.7,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -835,7 +835,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
+        "productionModel": 0.7,
         "independentModel": 1
       },
       "narrative": {
@@ -850,7 +850,7 @@
           "Michigan QB/WR vs Minnesota DB — Michigan ++",
           "Minnesota OL/RB vs Michigan DL/LB — Michigan +",
           "Phil Steele current power rating: Minnesota 129 vs Michigan 137.",
-          "Canonical selected-week market: Minnesota +7.5, total 42.5; production model no directional support edge 1.4340791173169318; Football Independent Minnesota edge 2.0567985288615525."
+          "Canonical selected-week market: Minnesota +7.5, total 42.5; production model Lean Minnesota edge 1.4340791173169318; Football Independent Minnesota edge 2.0567985288615525."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -873,8 +873,8 @@
       "opponent": "Arizona",
       "currentSpread": "+8.5",
       "band": "INTERMEDIATE",
-      "profileScore": 3.5,
-      "score25": 3.5,
+      "profileScore": 4.7,
+      "score25": 4.7,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -885,7 +885,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
+        "productionModel": 1.2,
         "independentModel": 2
       },
       "narrative": {
@@ -900,7 +900,7 @@
           "Cincinnati QB/WR vs Arizona DB — Arizona +",
           "Cincinnati OL/RB vs Arizona DL/LB — Even",
           "Phil Steele current power rating: Cincinnati 117 vs Arizona 127.",
-          "Canonical selected-week market: Cincinnati +8.5, total 54.5; production model no directional support edge 2.333652136585629; Football Independent Cincinnati edge 5.06118570288296."
+          "Canonical selected-week market: Cincinnati +8.5, total 54.5; production model Lean Cincinnati edge 2.333652136585629; Football Independent Cincinnati edge 5.06118570288296."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -950,7 +950,7 @@
           "Tennessee OL/RB vs Auburn DL/LB — Even",
           "Auburn QB/WR vs Tennessee DB — Even",
           "Phil Steele current power rating: Auburn 125 vs Tennessee 133.",
-          "Canonical selected-week market: Auburn +7.5, total 56.5; production model no directional support edge 0.5936455016155424; Football Independent Auburn edge 1.8975372756646216."
+          "Canonical selected-week market: Auburn +7.5, total 56.5; production model Lean Tennessee edge 0.5936455016155424; Football Independent Auburn edge 1.8975372756646216."
         ]
       },
       "deepDiveStatus": "COMPLETE",

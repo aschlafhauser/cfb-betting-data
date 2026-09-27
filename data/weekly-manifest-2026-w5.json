@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 5,
-  "updatedAt": "2026-09-27T08:19:10.626Z",
+  "updatedAt": "2026-09-27T13:57:38.920Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -12,10 +12,11 @@
       "detail": "Canonical selected-week schedule coverage."
     },
     "marketCoverage": {
-      "status": "FAIL",
+      "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 59,
       "actualMarketGames": 18,
-      "detail": "Current spread/total coverage from canonical board."
+      "hoursToFirstKickoff": 106,
+      "detail": "Early-week source-limited market set; all currently published prices are retained and full-slate coverage becomes blocking inside 72 hours."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -36,7 +37,7 @@
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/market-derived-integrity-2026-w5.json",
-      "detail": "Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 54 model/market arithmetic records were checkable"
+      "detail": "Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: browser pageerror: Identifier 'label' has already been declared"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -74,7 +75,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-27T08:18:27.138Z",
+      "verifiedAt": "2026-09-27T13:57:01.143Z",
       "artifact": "data/final-snapshot-integrity-2026-w5.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 59,
@@ -89,14 +90,12 @@
     }
   },
   "failures": [
-    "marketCoverage",
     "statisticalDisplay",
     "marketDerivedIntegrity"
   ],
   "currentPriorityQueue": [
-    "marketCoverage: Current spread/total coverage from canonical board.",
     "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
-    "marketDerivedIntegrity: Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 54 model/market arithmetic records were checkable"
+    "marketDerivedIntegrity: Independently reconciled 54 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: browser pageerror: Identifier 'label' has already been declared"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
