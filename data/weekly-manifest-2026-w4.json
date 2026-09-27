@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 4,
-  "updatedAt": "2026-09-26T23:00:09.844Z",
+  "updatedAt": "2026-09-27T01:36:33.341Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -14,7 +14,7 @@
     "marketCoverage": {
       "status": "FAIL",
       "minimumRequired": 60,
-      "actualMarketGames": 23,
+      "actualMarketGames": 4,
       "detail": "Current spread/total coverage from canonical board."
     },
     "deepDiveEvidence": {
@@ -29,7 +29,7 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-26T23:00:01.967Z",
+      "verifiedAt": "2026-09-27T01:36:25.692Z",
       "artifact": "data/statistical-display-integrity-2026-w4.json",
       "detail": "Team/stat coverage 142/142; ESPN FPI 130 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/12."
     },
@@ -37,7 +37,7 @@
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/market-derived-integrity-2026-w4.json",
-      "detail": "Independently reconciled 60 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 60 model/market arithmetic records were checkable"
+      "detail": "Independently reconciled 9 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 9 model/market arithmetic records were checkable"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -49,11 +49,11 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 7 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 0 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 11 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 2 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -75,10 +75,10 @@
     "finalSnapshotIntegrity": {
       "status": "FAIL",
       "blocking": true,
-      "verifiedAt": "2026-09-26T22:58:55.738Z",
+      "verifiedAt": "2026-09-27T01:35:12.286Z",
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
-      "validSnapshots": 30,
-      "pendingBeforeKickoff": 7,
+      "validSnapshots": 34,
+      "pendingBeforeKickoff": 0,
       "permanentFailures": [
         "ESPN-401858461",
         "ESPN-401856704",
@@ -113,15 +113,18 @@
         "ESPN-401867909",
         "ESPN-401869961",
         "ESPN-401858238",
-        "ESPN-401862780"
+        "ESPN-401862780",
+        "ESPN-401858241",
+        "ESPN-401860895",
+        "ESPN-401866429"
       ],
-      "detail": "34 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780."
+      "detail": "37 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780, ESPN-401858241, ESPN-401860895, ESPN-401866429."
     },
     "preKickoffSnapshots": {
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/final-snapshot-integrity-2026-w4.json",
-      "detail": "34 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780."
+      "detail": "37 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780, ESPN-401858241, ESPN-401860895, ESPN-401866429."
     }
   },
   "failures": [
@@ -132,9 +135,9 @@
   ],
   "currentPriorityQueue": [
     "marketCoverage: Current spread/total coverage from canonical board.",
-    "marketDerivedIntegrity: Independently reconciled 60 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 60 model/market arithmetic records were checkable",
-    "finalSnapshotIntegrity: 34 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780.",
-    "preKickoffSnapshots: 34 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780."
+    "marketDerivedIntegrity: Independently reconciled 9 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 9 model/market arithmetic records were checkable",
+    "finalSnapshotIntegrity: 37 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780, ESPN-401858241, ESPN-401860895, ESPN-401866429.",
+    "preKickoffSnapshots: 37 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401858461, ESPN-401856704, ESPN-401858465, ESPN-401856805, ESPN-401858243, ESPN-401856813, ESPN-401858236, ESPN-401858242, ESPN-401860893, ESPN-401860896, ESPN-401864512, ESPN-401866425, ESPN-401864576, ESPN-401866427, ESPN-401858237, ESPN-401864510, ESPN-401856700, ESPN-401856699, ESPN-401856816, ESPN-401858463, ESPN-401856815, ESPN-401858244, ESPN-401860897, ESPN-401861970, ESPN-401864579, ESPN-401866426, ESPN-401866428, ESPN-401868188, ESPN-401858239, ESPN-401860892, ESPN-401867909, ESPN-401869961, ESPN-401858238, ESPN-401862780, ESPN-401858241, ESPN-401860895, ESPN-401866429."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
