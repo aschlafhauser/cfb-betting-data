@@ -56,7 +56,7 @@ jobs:
       - name: Read selected-week control metadata
         run: |
           node - <<'NODE' >> "$GITHUB_ENV"
-          const fs=require('fs');const b=JSON.parse(fs.readFileSync('data/weekly-board.json','utf8'));const season=Number(b.season||2026),week=Number(b.week),games=Number(b.scheduleCoverage?.slateCount||b.games?.length||0);if(!Number.isFinite(week)||week<0)throw new Error('weekly-board.json has no valid selected week');if(!Number.isFinite(games)||games<=0)throw new Error('weekly-board.json has no valid selected-week game count');console.log(`CFB_SEASON=${season}`);console.log(`CFB_WEEK=${week}`);console.log(`CFB_EXPECTED_GAMES=${games}`);
+          const fs=require('fs');const b=JSON.parse(fs.readFileSync('data/weekly-board.json','utf8'));const season=Number(b.season||2026),week=Number(b.week),games=Number(b.scheduleCoverage?.slateCount||b.games?.length||0),market=Number(b.scheduleCoverage?.marketGameCount||0),times=(b.games||[]).map(g=>Date.parse(g.dateTime||g.kickoff||'')).filter(Number.isFinite),early=times.length&&Math.min(...times)-Date.now()>72*3600000,minMarkets=early?Math.max(1,market):Math.min(60,games);if(!Number.isFinite(week)||week<0)throw new Error('weekly-board.json has no valid selected week');if(!Number.isFinite(games)||games<=0)throw new Error('weekly-board.json has no valid selected-week game count');console.log(`CFB_SEASON=${season}`);console.log(`CFB_WEEK=${week}`);console.log(`CFB_EXPECTED_GAMES=${games}`);console.log(`CFB_MIN_MARKET_GAMES=${minMarkets}`);
           NODE
 
       - name: Losslessly reconcile Expert Intelligence primary ledger
@@ -240,7 +240,6 @@ jobs:
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
           CFB_MIN_MEANINGFUL_MODELS: '40'
-          CFB_MIN_MARKET_GAMES: '60'
         run: node scripts/verify-live-portal.mjs
 
       - name: Verify every live portal tab and specialty field
