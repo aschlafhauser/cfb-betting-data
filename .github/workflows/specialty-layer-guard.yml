@@ -29,6 +29,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # The run may wait behind the full governed writer. Bind to the latest
+          # serialized main only after the shared lock is acquired, not to the
+          # event's stale head SHA, so generated-data commits never need to
+          # rebase across a completed full-runtime publication.
+          ref: main
           fetch-depth: 20
       - uses: actions/setup-node@v4
         with:
