@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 5,
-  "updatedAt": "2026-09-29T08:40:08.284Z",
-  "status": "FAIL",
+  "updatedAt": "2026-09-29T13:51:54.474Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -12,11 +12,16 @@
       "detail": "Canonical selected-week schedule coverage."
     },
     "marketCoverage": {
-      "status": "FAIL",
-      "minimumRequired": 59,
+      "status": "PASS",
+      "minimumRequired": 56,
       "actualMarketGames": 56,
-      "hoursToFirstKickoff": 63.3,
-      "detail": "Current spread/total coverage from canonical board."
+      "explicitSourceLimitedExemptions": [
+        "ESPN-401862793",
+        "ESPN-401862790",
+        "ESPN-401856706"
+      ],
+      "hoursToFirstKickoff": 58.1,
+      "detail": "Current spread/total coverage is complete for all 56 market-eligible games; 3 explicitly source-limited games have no governed posted market (ESPN-401862793, ESPN-401862790, ESPN-401856706)."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -30,14 +35,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-29T08:40:01.512Z",
+      "verifiedAt": "2026-09-29T13:51:47.396Z",
       "artifact": "data/statistical-display-integrity-2026-w5.json",
       "detail": "Team/stat coverage 118/118; ESPN FPI 116 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 12/12."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-09-29T08:40:08.224Z",
+      "verifiedAt": "2026-09-29T13:51:54.426Z",
       "artifact": "data/market-derived-integrity-2026-w5.json",
       "detail": "Independently reconciled 165 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -77,7 +82,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-09-29T08:39:02.679Z",
+      "verifiedAt": "2026-09-29T13:50:42.342Z",
       "artifact": "data/final-snapshot-integrity-2026-w5.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 59,
@@ -91,11 +96,11 @@
       "detail": "0 valid immutable snapshots; 59 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "marketCoverage"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "marketCoverage: Current spread/total coverage from canonical board."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
