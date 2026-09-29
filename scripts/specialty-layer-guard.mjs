@@ -48,7 +48,7 @@ const missingSpecial = expectedSpecial.filter(x=>!specialIds.has(String(x.gameId
 const missingLongshot = expectedLongshot.filter(x=>!longshotIds.has(String(x.gameId)));
 const incompleteSpecial = currentSpecial.filter(c=>{
   const q=c.qualifiers||{};
-  return c.criterionAssessmentStatus!=='COMPLETE' || !['rest','nonExplosive','qbYpa'].every(k=>q[k]&&typeof q[k].qualifies==='boolean'&&String(q[k].reason||'').trim());
+  return c.criterionAssessmentStatus!=='COMPLETE' || !['rest','nonExplosive','qbYpa'].every(k=>q[k]&&typeof q[k].qualifies==='boolean'&&q[k].status===(q[k].qualifies?'PASS':'FAIL')&&String(q[k].reason||'').trim()&&String(q[k].source||'').trim());
 });
 const incompleteLongshot = currentLongshot.filter(c=>{
   const comps=c.researchComponents||{};
