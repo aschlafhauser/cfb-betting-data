@@ -50,6 +50,7 @@ const incompleteSpecial = currentSpecial.filter(c=>{
   const q=c.qualifiers||{};
   return c.criterionAssessmentStatus!=='COMPLETE' || !['rest','nonExplosive','qbYpa'].every(k=>q[k]&&typeof q[k].qualifies==='boolean'&&q[k].status===(q[k].qualifies?'PASS':'FAIL')&&String(q[k].reason||'').trim()&&String(q[k].source||'').trim());
 });
+const leakedHistoricalSpecial = (underdog.candidates||[]).filter(c=>Number(c.week)!==week&&/^CURRENT-SCREEN/.test(String(c.status||'')));
 const incompleteLongshot = currentLongshot.filter(c=>{
   const comps=c.researchComponents||{};
   const narrative=c.narrative||{};
@@ -64,11 +65,11 @@ const incompleteLongshot = currentLongshot.filter(c=>{
 
 const report = {
   season, week, updatedAt: now,
-  status: missingSpecial.length || missingLongshot.length || incompleteSpecial.length || incompleteLongshot.length ? 'FAIL' : 'PASS',
+  status: missingSpecial.length || missingLongshot.length || incompleteSpecial.length || incompleteLongshot.length || leakedHistoricalSpecial.length ? 'FAIL' : 'PASS',
   expected: {underdogSpecial: expectedSpecial.length, longshotUpsetLab: expectedLongshot.length},
   populated: {underdogSpecial: currentSpecial.length, longshotUpsetLab: currentLongshot.length},
   missing: {underdogSpecial: missingSpecial, longshotUpsetLab: missingLongshot},
-  incomplete: {underdogSpecial: incompleteSpecial.map(x=>({gameId:x.canonicalGameId,team:x.team})), longshotUpsetLab: incompleteLongshot.map(x=>({gameId:x.canonicalGameId,team:x.team,deepDiveStatus:x.deepDiveStatus,informationQuality:x.informationQuality}))},
+  incomplete: {underdogSpecial: incompleteSpecial.map(x=>({gameId:x.canonicalGameId,team:x.team})), longshotUpsetLab: incompleteLongshot.map(x=>({gameId:x.canonicalGameId,team:x.team,deepDiveStatus:x.deepDiveStatus,informationQuality:x.informationQuality})), historicalCurrentStatus: leakedHistoricalSpecial.map(x=>({week:x.week,gameId:x.canonicalGameId||x.gameId,team:x.team,status:x.status}))},
   governance: 'Specialty layers must be selected-week complete independent of browser/model-capture success. Population is independent of browser/model capture, but PASS requires governed research completeness. A browser failure may produce SOURCE-LIMITED records with explicit evidence; it may never certify PENDING/unknown/empty-evidence specialty candidates.'
 };
 await fs.writeFile(`data/specialty-layer-guard-${season}-w${week}.json`, JSON.stringify(report,null,2)+'\n');
