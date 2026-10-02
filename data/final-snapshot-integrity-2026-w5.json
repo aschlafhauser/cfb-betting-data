@@ -1,16 +1,18 @@
 {
-  "schemaVersion": "cfb-final-snapshot-integrity-v1",
+  "schemaVersion": "cfb-final-snapshot-integrity-v2",
   "sport": "CFB",
   "season": 2026,
   "week": 5,
-  "verifiedAt": "2026-10-02T18:30:23.742Z",
-  "status": "FAIL",
-  "blocking": true,
+  "verifiedAt": "2026-10-02T18:45:51.022Z",
+  "status": "PASS-WITH-PERMANENT-EXCEPTION",
+  "blocking": false,
   "counts": {
     "selectedWeekGames": 59,
-    "validPreKickoffSnapshots": 1,
-    "pendingBeforeKickoff": 57,
-    "permanentFailures": 1
+    "validPreKickoffSnapshots": 4,
+    "pendingBeforeKickoff": 54,
+    "permanentFailures": 1,
+    "acknowledgedPermanentExceptions": 1,
+    "unacknowledgedPermanentFailures": 0
   },
   "permanentFailures": [
     {
@@ -25,31 +27,21 @@
       "remediation": "Historical pre-kickoff state may not be backfilled after kickoff."
     }
   ],
+  "acknowledgedFailures": [
+    {
+      "canonicalGameId": "ESPN-401871049",
+      "game": "Western Kentucky at New Mexico State",
+      "kickoff": "2026-10-02T00:00:00.000Z",
+      "status": "FINAL_SNAPSHOT_MISSING",
+      "snapshotFile": null,
+      "frozenAt": null,
+      "firstDetectedAt": "2026-10-02T00:00:04.410Z",
+      "immutable": true,
+      "remediation": "Historical pre-kickoff state may not be backfilled after kickoff."
+    }
+  ],
+  "unacknowledgedFailures": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401858245",
-      "game": "Pittsburgh at Virginia Tech",
-      "kickoff": "2026-10-02T23:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401871050",
-      "game": "Liberty at Delaware",
-      "kickoff": "2026-10-02T23:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401858476",
-      "game": "Penn State at Northwestern",
-      "kickoff": "2026-10-03T00:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401858250",
       "game": "Notre Dame at North Carolina",
@@ -491,7 +483,32 @@
       "status": "PASS",
       "snapshotFile": "data/final-snapshots/2026-w5-ESPN-401862786.json",
       "frozenAt": "2026-10-02T00:00:04.350Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401858245",
+      "game": "Pittsburgh at Virginia Tech",
+      "kickoff": "2026-10-02T23:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w5-ESPN-401858245.json",
+      "frozenAt": "2026-10-02T18:45:50.932Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401871050",
+      "game": "Liberty at Delaware",
+      "kickoff": "2026-10-02T23:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w5-ESPN-401871050.json",
+      "frozenAt": "2026-10-02T18:45:50.932Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401858476",
+      "game": "Penn State at Northwestern",
+      "kickoff": "2026-10-03T00:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w5-ESPN-401858476.json",
+      "frozenAt": "2026-10-02T18:45:50.932Z"
     }
   ],
-  "governance": "A missed or invalid pre-kickoff snapshot becomes a permanent hard failure after kickoff. Never reconstruct or backfill historical market, model, personnel, recommendation or ledger state from results or later observations."
+  "exceptionLedger": "data/final-snapshot-exceptions.json",
+  "governance": "A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure."
 }

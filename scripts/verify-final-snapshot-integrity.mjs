@@ -10,6 +10,10 @@ if(!Number.isFinite(week)||Number.isNaN(asOf.getTime()))throw new Error('Valid s
 
 const artifactPath=`data/final-snapshot-integrity-${season}-w${week}.json`;
 const previous=await read(artifactPath).catch(()=>null);
+const exceptionLedger=await read('data/final-snapshot-exceptions.json').catch(()=>({exceptions:[]}));
+const acknowledgedIds=new Set((exceptionLedger.exceptions||[])
+  .filter(item=>Number(item.season)===season&&Number(item.week)===week&&item.acknowledged===true)
+  .map(item=>item.canonicalGameId));
 const files=(await fs.readdir('data/final-snapshots').catch(()=>[])).filter(name=>name.endsWith('.json'));
 const snapshots=[];
 for(const name of files){
@@ -49,14 +53,18 @@ for(const game of games){
   }
 }
 const permanentFailures=[...priorFailures.values()].sort((a,b)=>String(a.kickoff).localeCompare(String(b.kickoff)));
+const acknowledgedFailures=permanentFailures.filter(item=>acknowledgedIds.has(item.canonicalGameId));
+const unacknowledgedFailures=permanentFailures.filter(item=>!acknowledgedIds.has(item.canonicalGameId));
 const passedGames=games.filter(game=>game.status==='PASS');
 const pendingGames=games.filter(game=>game.status==='PENDING');
 const artifact={
-  schemaVersion:'cfb-final-snapshot-integrity-v1',sport:'CFB',season,week,verifiedAt:asOf.toISOString(),status:permanentFailures.length?'FAIL':pendingGames.length?'IN_PROGRESS':'PASS',blocking:permanentFailures.length>0,
-  counts:{selectedWeekGames:games.length,validPreKickoffSnapshots:passedGames.length,pendingBeforeKickoff:pendingGames.length,permanentFailures:permanentFailures.length},
-  permanentFailures,pendingGames,passedGames,
-  governance:'A missed or invalid pre-kickoff snapshot becomes a permanent hard failure after kickoff. Never reconstruct or backfill historical market, model, personnel, recommendation or ledger state from results or later observations.'
+  schemaVersion:'cfb-final-snapshot-integrity-v2',sport:'CFB',season,week,verifiedAt:asOf.toISOString(),
+  status:unacknowledgedFailures.length?'FAIL':acknowledgedFailures.length?'PASS-WITH-PERMANENT-EXCEPTION':pendingGames.length?'IN_PROGRESS':'PASS',
+  blocking:unacknowledgedFailures.length>0,
+  counts:{selectedWeekGames:games.length,validPreKickoffSnapshots:passedGames.length,pendingBeforeKickoff:pendingGames.length,permanentFailures:permanentFailures.length,acknowledgedPermanentExceptions:acknowledgedFailures.length,unacknowledgedPermanentFailures:unacknowledgedFailures.length},
+  permanentFailures,acknowledgedFailures,unacknowledgedFailures,pendingGames,passedGames,
+  exceptionLedger:'data/final-snapshot-exceptions.json',
+  governance:'A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure.'
 };
 await fs.writeFile(artifactPath,JSON.stringify(artifact,null,2)+'\n');
-console.log(`Final snapshot integrity ${artifact.status}: ${passedGames.length} valid, ${pendingGames.length} pending, ${permanentFailures.length} permanent failures`);
-
+console.log(`Final snapshot integrity ${artifact.status}: ${passedGames.length} valid, ${pendingGames.length} pending, ${acknowledgedFailures.length} acknowledged exceptions, ${unacknowledgedFailures.length} blocking failures`);

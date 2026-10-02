@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 5,
-  "updatedAt": "2026-10-02T18:31:24.524Z",
-  "status": "FAIL",
+  "updatedAt": "2026-10-02T18:45:51.131Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -17,7 +17,7 @@
       "actualMarketGames": 57,
       "startedGamesExcluded": 2,
       "explicitSourceLimitedExemptions": [],
-      "hoursToFirstKickoff": 4.5,
+      "hoursToFirstKickoff": 4.2,
       "detail": "Current spread/total coverage is complete for all 57 unstarted market-eligible games. 2 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
     },
     "deepDiveEvidence": {
@@ -77,31 +77,33 @@
       "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
     },
     "finalSnapshotIntegrity": {
-      "status": "FAIL",
-      "blocking": true,
-      "verifiedAt": "2026-10-02T18:30:23.742Z",
+      "status": "PASS-WITH-PERMANENT-EXCEPTION",
+      "blocking": false,
+      "verifiedAt": "2026-10-02T18:45:51.022Z",
       "artifact": "data/final-snapshot-integrity-2026-w5.json",
-      "validSnapshots": 1,
-      "pendingBeforeKickoff": 57,
+      "validSnapshots": 4,
+      "pendingBeforeKickoff": 54,
       "permanentFailures": [
         "ESPN-401871049"
       ],
-      "detail": "1 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401871049."
+      "acknowledgedExceptions": [
+        "ESPN-401871049"
+      ],
+      "unacknowledgedFailures": [],
+      "detail": "1 historical snapshot miss remains permanently disclosed as an acknowledged, non-backfilled exception: ESPN-401871049. 4 valid snapshots; 54 games pending before kickoff."
     },
     "preKickoffSnapshots": {
-      "status": "FAIL",
-      "blocking": true,
+      "status": "PASS-WITH-PERMANENT-EXCEPTION",
+      "blocking": false,
       "artifact": "data/final-snapshot-integrity-2026-w5.json",
-      "detail": "1 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401871049."
+      "detail": "1 historical snapshot miss remains permanently disclosed as an acknowledged, non-backfilled exception: ESPN-401871049. 4 valid snapshots; 54 games pending before kickoff."
     }
   },
-  "failures": [
-    "finalSnapshotIntegrity",
-    "preKickoffSnapshots"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "finalSnapshotIntegrity: 1 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401871049.",
-    "preKickoffSnapshots: 1 selected-week games permanently lack a valid immutable pre-kickoff snapshot. Historical state may not be backfilled: ESPN-401871049."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }

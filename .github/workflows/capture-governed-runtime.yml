@@ -187,7 +187,9 @@ jobs:
         if: ${{ always() }}
         continue-on-error: true
         env:
-          CFB_SNAPSHOT_LOOKAHEAD_MINUTES: '90'
+          # A six-hour prospective window survives several delayed/failed hourly
+          # runs while remaining close enough to kickoff to preserve decision state.
+          CFB_SNAPSHOT_LOOKAHEAD_MINUTES: '360'
         run: node scripts/freeze-pre-kickoff-snapshots.mjs
 
       - name: Audit immutable pre-kickoff snapshot integrity
@@ -261,8 +263,23 @@ jobs:
         run: node scripts/verify-model-specialty-stability.mjs
 
       - name: Certify clean live-browser verification
-        if: ${{ always() && steps.capture_runtime.outcome == 'success' && steps.phil_verify.outcome == 'success' && steps.multimodel_verify.outcome == 'success' && steps.stats_verify.outcome == 'success' && steps.market_verify.outcome == 'success' && steps.live_verify.outcome == 'success' && steps.completeness_verify.outcome == 'success' && steps.stability_verify.outcome == 'success' }}
+        if: ${{ always() }}
+        env:
+          CAPTURE_OUTCOME: ${{ steps.capture_runtime.outcome }}
+          PHIL_OUTCOME: ${{ steps.phil_verify.outcome }}
+          MULTIMODEL_OUTCOME: ${{ steps.multimodel_verify.outcome }}
+          STATS_OUTCOME: ${{ steps.stats_verify.outcome }}
+          MARKET_OUTCOME: ${{ steps.market_verify.outcome }}
+          LIVE_OUTCOME: ${{ steps.live_verify.outcome }}
+          COMPLETENESS_OUTCOME: ${{ steps.completeness_verify.outcome }}
+          STABILITY_OUTCOME: ${{ steps.stability_verify.outcome }}
         run: |
+          for outcome in "$CAPTURE_OUTCOME" "$PHIL_OUTCOME" "$MULTIMODEL_OUTCOME" "$STATS_OUTCOME" "$MARKET_OUTCOME" "$LIVE_OUTCOME" "$COMPLETENESS_OUTCOME" "$STABILITY_OUTCOME"; do
+            if [ "$outcome" != "success" ]; then
+              echo "Live certification prerequisite did not succeed: $outcome"
+              exit 0
+            fi
+          done
           node - <<'NODE'
           const fs=require('fs');const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;const m=JSON.parse(fs.readFileSync(p,'utf8'));m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed.'};const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';m.updatedAt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(m,null,2)+'\n');
           NODE
