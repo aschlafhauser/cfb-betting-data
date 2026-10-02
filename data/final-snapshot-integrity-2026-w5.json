@@ -3,33 +3,29 @@
   "sport": "CFB",
   "season": 2026,
   "week": 5,
-  "verifiedAt": "2026-10-01T19:38:44.572Z",
-  "status": "IN_PROGRESS",
-  "blocking": false,
+  "verifiedAt": "2026-10-02T00:00:04.410Z",
+  "status": "FAIL",
+  "blocking": true,
   "counts": {
     "selectedWeekGames": 59,
-    "validPreKickoffSnapshots": 0,
-    "pendingBeforeKickoff": 59,
-    "permanentFailures": 0
+    "validPreKickoffSnapshots": 1,
+    "pendingBeforeKickoff": 57,
+    "permanentFailures": 1
   },
-  "permanentFailures": [],
-  "pendingGames": [
+  "permanentFailures": [
     {
       "canonicalGameId": "ESPN-401871049",
       "game": "Western Kentucky at New Mexico State",
       "kickoff": "2026-10-02T00:00:00.000Z",
-      "status": "PENDING",
+      "status": "FINAL_SNAPSHOT_MISSING",
       "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401862786",
-      "game": "North Texas at Tulsa",
-      "kickoff": "2026-10-02T01:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
+      "frozenAt": null,
+      "firstDetectedAt": "2026-10-02T00:00:04.410Z",
+      "immutable": true,
+      "remediation": "Historical pre-kickoff state may not be backfilled after kickoff."
+    }
+  ],
+  "pendingGames": [
     {
       "canonicalGameId": "ESPN-401858245",
       "game": "Pittsburgh at Virginia Tech",
@@ -487,6 +483,15 @@
       "frozenAt": null
     }
   ],
-  "passedGames": [],
+  "passedGames": [
+    {
+      "canonicalGameId": "ESPN-401862786",
+      "game": "North Texas at Tulsa",
+      "kickoff": "2026-10-02T01:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w5-ESPN-401862786.json",
+      "frozenAt": "2026-10-02T00:00:04.350Z"
+    }
+  ],
   "governance": "A missed or invalid pre-kickoff snapshot becomes a permanent hard failure after kickoff. Never reconstruct or backfill historical market, model, personnel, recommendation or ledger state from results or later observations."
 }
