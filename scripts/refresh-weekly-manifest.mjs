@@ -46,16 +46,19 @@ const gates={
     const rows=board.games||[],nowMs=Date.now();
     const unstarted=rows.filter(g=>{const t=Date.parse(g.dateTime||g.kickoff||'');return !Number.isFinite(t)||t>nowMs});
     const started=rows.length-unstarted.length;
-    const explicitSourceLimited=unstarted.filter(g=>/SOURCE-LIMITED/i.test(String(g.deepDiveStatus||g.stage||''))&&g.currentSpread==null&&g.currentTotal==null);
-    const required=Math.min(60,Math.max(0,unstarted.length-explicitSourceLimited.length));
-    const liveMarketGames=unstarted.filter(g=>g.currentSpread!=null||g.currentTotal!=null).length;
-    const times=unstarted.map(g=>Date.parse(g.dateTime||g.kickoff||'')).filter(Number.isFinite);
-    const hoursToFirst=times.length?(Math.min(...times)-nowMs)/3600000:null;
-    const early=Number.isFinite(hoursToFirst)&&hoursToFirst>72;
-    const status=liveMarketGames>=required?'PASS':(early&&liveMarketGames>0?'PASS-SOURCE-LIMITED':'FAIL');
+    const due=unstarted.filter(g=>{const t=Date.parse(g.dateTime||g.kickoff||'');return !Number.isFinite(t)||t-nowMs<=72*3600000});
+    const later=unstarted.filter(g=>{const t=Date.parse(g.dateTime||g.kickoff||'');return Number.isFinite(t)&&t-nowMs>72*3600000});
+    const isMissing=g=>g.currentSpread==null&&g.currentTotal==null;
+    const explicitSourceLimited=due.filter(g=>/SOURCE-LIMITED/i.test(String(g.deepDiveStatus||g.stage||''))&&isMissing(g));
+    const dueRequired=Math.max(0,due.length-explicitSourceLimited.length);
+    const dueMarketGames=due.filter(g=>!isMissing(g)).length;
+    const liveMarketGames=unstarted.filter(g=>!isMissing(g)).length;
+    const totalRequired=Math.max(0,unstarted.length-explicitSourceLimited.length);
+    const status=dueMarketGames<dueRequired?'FAIL':(liveMarketGames>=totalRequired?'PASS':'PASS-SOURCE-LIMITED');
     const ids=explicitSourceLimited.map(g=>g.canonicalGameId||g.gameId||g.id).filter(Boolean);
     const startedDetail=started?(` ${started} started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity.`):'';
-    return{status,minimumRequired:required,actualMarketGames:liveMarketGames,startedGamesExcluded:started,explicitSourceLimitedExemptions:ids,hoursToFirstKickoff:hoursToFirst==null?null:Number(hoursToFirst.toFixed(1)),detail:status==='PASS'&&ids.length?'Current spread/total coverage is complete for all '+required+' market-eligible unstarted games; '+ids.length+' explicitly source-limited games have no governed posted market ('+ids.join(', ')+').'+startedDetail:status==='PASS'?'Current spread/total coverage is complete for all '+required+' unstarted market-eligible games.'+startedDetail:status==='PASS-SOURCE-LIMITED'?'Early-week source-limited market set; all currently published prices are retained and unexplained market omissions become blocking inside 72 hours.'+startedDetail:'Current spread/total coverage from canonical unstarted-game board.'+startedDetail}
+    const laterDetail=later.length?(` ${later.length} later-week game(s) remain outside the 72-hour blocking window; unpublished prices stay null and source-limited.`):'';
+    return{status,minimumRequired:dueRequired,actualMarketGames:liveMarketGames,dueGames:due.length,dueMarketGames,startedGamesExcluded:started,laterGamesOutsideBlockingWindow:later.length,explicitSourceLimitedExemptions:ids,deadlineHours:72,detail:status==='FAIL'?'One or more unstarted games inside the 72-hour market deadline lack a governed spread/total.'+startedDetail+laterDetail:status==='PASS'?'Current spread/total coverage is complete for every unstarted market-eligible game.'+startedDetail:status==='PASS-SOURCE-LIMITED'?'Every game inside the 72-hour market deadline has governed spread/total coverage; later-week unpublished prices remain explicitly source-limited.'+startedDetail+laterDetail:'Current selected-week market coverage.'}
   })(),
  deepDiveEvidence:{status:Number(deep.completedGameCount)===expected&&Number(deep.pendingGameCount)===0?'PASS':'FAIL',required:expected,complete:Number(deep.completedGameCount||0),pending:Number(deep.pendingGameCount||0),fullEvidence:Number(deep.fullEvidenceCount||0),sourceLimited:Number(deep.sourceLimitedCount||0),detail:'Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence.'},
  statisticalDisplay,marketDerivedIntegrity,
