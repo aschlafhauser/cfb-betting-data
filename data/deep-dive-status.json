@@ -1,35 +1,19 @@
 {
   "season": 2026,
-  "week": 5,
-  "status": "COMPLETE_WITH_SOURCE_LIMITS",
-  "updatedAt": "2026-10-04T00:45:03.807Z",
-  "gameCount": 59,
-  "completedGameCount": 59,
+  "week": 6,
+  "status": "COMPLETE",
+  "updatedAt": "2026-10-04T07:06:07.237Z",
+  "gameCount": 58,
+  "completedGameCount": 58,
   "pendingGameCount": 0,
-  "fullEvidenceCount": 56,
-  "sourceLimitedCount": 3,
+  "fullEvidenceCount": 58,
+  "sourceLimitedCount": 0,
   "stage": "thursday-universal-evidence-backed-complete",
   "coverageRule": "Every selected-week game has a structured dossier. COMPLETE-SOURCE-LIMITED means the research pass is complete but one or more dimensions are explicitly source-limited; it never masquerades as full evidence.",
-  "sourceDataFailures": [
-    {
-      "gameId": "ESPN-401862793",
-      "matchup": "Samford at UAB",
-      "reason": "One or more matchup dimensions lack direct governed source depth; limitation is explicit rather than silently filled."
-    },
-    {
-      "gameId": "ESPN-401862790",
-      "matchup": "Texas Southern at Florida Atlantic",
-      "reason": "One or more matchup dimensions lack direct governed source depth; limitation is explicit rather than silently filled."
-    },
-    {
-      "gameId": "ESPN-401856706",
-      "matchup": "McNeese at LSU",
-      "reason": "One or more matchup dimensions lack direct governed source depth; limitation is explicit rather than silently filled."
-    }
-  ],
+  "sourceDataFailures": [],
   "qc": {
     "priorIssue": "Schedule/checkpoint coverage had been conflated with Deep Dive completion and stale-schema dossiers could be reused.",
     "resolution": "All games require current-schema dossier evidence before reuse; stale records are rebuilt and evidence depth is separately graded.",
-    "severity": "transparent source limits remain"
+    "severity": "none"
   }
 }
