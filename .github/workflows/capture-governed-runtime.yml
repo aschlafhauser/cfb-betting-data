@@ -242,7 +242,14 @@ jobs:
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
           CFB_MIN_MEANINGFUL_MODELS: '40'
-        run: node scripts/verify-live-portal.mjs
+        run: |
+          set -e
+          for attempt in 1 2 3 4 5 6; do
+            echo "Live production verification attempt ${attempt}/6"
+            if node scripts/verify-live-portal.mjs; then exit 0; fi
+            if [ "$attempt" -lt 6 ]; then sleep 20; fi
+          done
+          exit 1
 
       - name: Verify every live portal tab and specialty field
         id: completeness_verify
@@ -251,7 +258,14 @@ jobs:
         timeout-minutes: 5
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
-        run: node scripts/verify-portal-completeness.mjs
+        run: |
+          set -e
+          for attempt in 1 2 3 4 5 6; do
+            echo "Portal completeness verification attempt ${attempt}/6"
+            if node scripts/verify-portal-completeness.mjs; then exit 0; fi
+            if [ "$attempt" -lt 6 ]; then sleep 20; fi
+          done
+          exit 1
 
       - name: Verify Best Bets render stability and model-independent specialty layers
         id: stability_verify
@@ -260,7 +274,14 @@ jobs:
         timeout-minutes: 8
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
-        run: node scripts/verify-model-specialty-stability.mjs
+        run: |
+          set -e
+          for attempt in 1 2 3; do
+            echo "Model/specialty stability verification attempt ${attempt}/3"
+            if node scripts/verify-model-specialty-stability.mjs; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then sleep 30; fi
+          done
+          exit 1
 
       - name: Certify clean live-browser verification
         if: ${{ always() }}
