@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 6,
-  "updatedAt": "2026-10-04T21:35:07.334Z",
+  "updatedAt": "2026-10-05T01:03:44.068Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -13,12 +13,12 @@
     },
     "marketCoverage": {
       "status": "PASS",
-      "minimumRequired": 1,
+      "minimumRequired": 3,
       "actualMarketGames": 58,
-      "dueGames": 1,
-      "dueMarketGames": 1,
+      "dueGames": 3,
+      "dueMarketGames": 3,
       "startedGamesExcluded": 0,
-      "laterGamesOutsideBlockingWindow": 57,
+      "laterGamesOutsideBlockingWindow": 55,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
       "detail": "Current spread/total coverage is complete for every unstarted market-eligible game."
@@ -35,14 +35,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-10-04T21:35:03.529Z",
+      "verifiedAt": "2026-10-05T01:03:39.657Z",
       "artifact": "data/statistical-display-integrity-2026-w6.json",
-      "detail": "Team/stat coverage 116/116; ESPN FPI 117 numeric teams; sampled rendered statistical panels 11/11; FPI-eligible panels 9/12."
+      "detail": "Team/stat coverage 116/116; ESPN FPI 117 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 12/12."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-10-04T21:35:07.287Z",
+      "verifiedAt": "2026-10-05T01:03:44.019Z",
       "artifact": "data/market-derived-integrity-2026-w6.json",
       "detail": "Independently reconciled 168 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -82,7 +82,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-10-04T21:34:32.933Z",
+      "verifiedAt": "2026-10-05T01:02:55.594Z",
       "artifact": "data/final-snapshot-integrity-2026-w6.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 58,
