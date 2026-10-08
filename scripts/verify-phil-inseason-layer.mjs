@@ -30,7 +30,7 @@ const key=s=>alias[raw(s)]||raw(s);
 const index=d=>new Map((d.rows||[]).map(r=>[key(r.team),r]));
 const ai=index(agg),pi=index(power),di=index(passD),si=index(st);
 const covered=name=>ai.has(key(name))&&pi.has(key(name))&&di.has(key(name))&&si.has(key(name));
-const target=(board.games||[]).find(g=>covered(g.away)&&covered(g.home))||null;
+const games=board.games||[];\nconst target=games.filter(g=>{const kickoff=Date.parse(g.dateTime||'');return !Number.isFinite(kickoff)||kickoff>Date.now()}).find(g=>covered(g.away)&&covered(g.home))||games.find(g=>covered(g.away)&&covered(g.home))||null;
 if(!target)failures.push(`No selected-week Week ${board.week} matchup has complete Phil in-season coverage on both teams`);
 if(target){
   for(const team of [target.away,target.home])for(const [label,map] of [['AGG',ai],['Power',pi],['PassD',di],['ST',si]])if(!map.has(key(team)))failures.push(`${team} missing ${label} Phil in-season row`);
