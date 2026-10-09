@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 6,
-  "updatedAt": "2026-10-09T20:51:18.688Z",
+  "updatedAt": "2026-10-09T21:03:34.075Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 50,
-    "underdogSpecial": 11,
+    "underdogSpecial": 13,
     "upsetLab": 22,
-    "intermediate": 17,
+    "intermediate": 15,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -225,7 +225,7 @@
         "teamOffenseYppRank": 66,
         "teamAggregateRank": 60,
         "teamDefensiveYppRank": 33,
-        "marketTotal": 46.5,
+        "marketTotal": 47.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -251,7 +251,7 @@
           "Pittsburgh QB/WR vs North Carolina DB — Even",
           "Held TCU to 10 points and shut down the run after halftime; 322 total yards on offense.",
           "Phil Steele current power rating: North Carolina 125 vs Pittsburgh 132.",
-          "Canonical selected-week market: North Carolina +3.5, total 46.5; production model Pittsburgh ATS edge 5.011277191079921; Football Independent Pittsburgh edge 10.747776711054401."
+          "Canonical selected-week market: North Carolina +3.5, total 47.5; production model Pittsburgh ATS edge 5.011277191079921; Football Independent Pittsburgh edge 10.747776711054401."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -378,10 +378,118 @@
     },
     {
       "week": 6,
+      "canonicalGameId": "ESPN-401866440",
+      "team": "Massachusetts",
+      "opponent": "Miami (OH)",
+      "currentSpread": "+3.5",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 3.9,
+      "score25": 3.9,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 1.6,
+        "explosivePath": 1.3,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "PARTIAL",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "PARTIAL",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": 128,
+        "teamOffenseYppRank": 43,
+        "teamAggregateRank": 105,
+        "teamDefensiveYppRank": 18,
+        "marketTotal": 45.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.43554580738864324,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.43554580738864324,
+      "narrative": {
+        "upsetCase": "Massachusetts has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Massachusetts OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Massachusetts OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
+          "Massachusetts QB/WR vs Miami (OH) DB — Miami (OH) +",
+          "Miami (OH) OL/RB vs Massachusetts DL/LB — Even",
+          "Canonical selected-week market: Massachusetts +3.5, total 45.5; production model Lean Massachusetts edge 1.6064585276054215; Football Independent Massachusetts edge 1.2844700501916755."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 6,
       "canonicalGameId": "ESPN-401860901",
       "team": "Fresno State",
       "opponent": "Boise State",
-      "currentSpread": "+6.5",
+      "currentSpread": "+7",
       "band": "UNDERDOG-SPECIAL",
       "profileScore": 3.9,
       "score25": 3.9,
@@ -449,13 +557,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3819023560304163,
+        "marketWinProbability": 0.3731987188091081,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3819023560304163,
+      "marketWinProbability": 0.3731987188091081,
       "narrative": {
         "upsetCase": "Fresno State has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Boise State OL/RB vs Fresno State DL/LB — Boise State ++",
         "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
@@ -469,7 +577,7 @@
           "Boise State OL/RB vs Fresno State DL/LB — Boise State ++",
           "Boise State QB/WR vs Fresno State DB — Fresno State +",
           "Fresno State QB/WR vs Boise State DB — Boise State +",
-          "Canonical selected-week market: Fresno State +6.5, total 48.5; production model Fresno State ATS edge 3.4687992087595916; Football Independent Fresno State edge 2.2159985613810758."
+          "Canonical selected-week market: Fresno State +7, total 48.5; production model Fresno State ATS edge 3.9687992087595916; Football Independent Fresno State edge 2.7159985613810758."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -553,7 +661,7 @@
         "teamOffenseYppRank": 129,
         "teamAggregateRank": 35,
         "teamDefensiveYppRank": 111,
-        "marketTotal": 48.5,
+        "marketTotal": 49.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -578,7 +686,117 @@
           "Texas A&M OL/RB vs Missouri DL/LB — Texas A&M ++",
           "Texas A&M QB/WR vs Missouri DB — Texas A&M +",
           "Phil Steele current power rating: Texas A&M 130 vs Missouri 130.",
-          "Canonical selected-week market: Texas A&M +3.5, total 48.5; production model Lean Texas A&M edge 3.26348708970591; Football Independent Texas A&M edge 4.43914514950985."
+          "Canonical selected-week market: Texas A&M +3.5, total 49.5; production model Lean Texas A&M edge 3.26348708970591; Football Independent Texas A&M edge 4.43914514950985."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 6,
+      "canonicalGameId": "ESPN-401862795",
+      "team": "Tulane",
+      "opponent": "Army",
+      "currentSpread": "+3.5",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 3.3,
+      "score25": 3.3,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0.6,
+        "trenchResistance": 0.6,
+        "explosivePath": 1.1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "PARTIAL",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "PARTIAL",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": 96,
+        "teamOffenseYppRank": 89,
+        "teamAggregateRank": 109,
+        "teamDefensiveYppRank": 113,
+        "marketTotal": 48.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.43554580738864324,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.43554580738864324,
+      "narrative": {
+        "upsetCase": "Tulane has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Army OL/RB vs Tulane DL/LB — Army +",
+        "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "Tulane QB efficiency and early-down success",
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Army OL/RB vs Tulane DL/LB — Army +",
+          "Tulane QB/WR vs Army DB — Tulane +",
+          "Army QB/WR vs Tulane DB — Even",
+          "Phil Steele current power rating: Tulane 109 vs Army 114.",
+          "Canonical selected-week market: Tulane +3.5, total 48.5; production model Lean Tulane edge 1.816097563753839; Football Independent Tulane edge 1.25654102500698."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -688,116 +906,6 @@
           "UConn QB/WR vs Temple DB — Even",
           "Produced 671 yards in a 56-7 win with Kalieb Osborne contributing as passer and runner, but 10 penalties for 134 yards and opponent quality temper the upgrade.",
           "Canonical selected-week market: UConn +3.5, total 54.5; production model Lean Temple edge 1.1415242565056776; Football Independent UConn edge 0.4391350118285051."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 6,
-      "canonicalGameId": "ESPN-401858254",
-      "team": "Florida State",
-      "opponent": "Louisville",
-      "currentSpread": "+3.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 2.6,
-      "score25": 2.6,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0.9,
-        "explosivePath": 1.4,
-        "compression": 0.3,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 39,
-        "teamOffenseYppRank": 35,
-        "teamAggregateRank": 77,
-        "teamDefensiveYppRank": 123,
-        "marketTotal": 59.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.43554580738864324,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.43554580738864324,
-      "narrative": {
-        "upsetCase": "Florida State has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Louisville OL/RB vs Florida State DL/LB — Louisville +",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Louisville OL/RB vs Florida State DL/LB — Louisville +",
-          "Florida State QB/WR vs Louisville DB — Louisville +",
-          "Louisville QB/WR vs Florida State DB — Even",
-          "419 yards and strong red-zone execution, but allowed efficient passing and did not separate enough to justify an overall upgrade.",
-          "Phil Steele current power rating: Florida State 127 vs Louisville 124.",
-          "Canonical selected-week market: Florida State +3.5, total 59.5; production model Lean Louisville edge 1.597344853033567; Football Independent Louisville edge 0.44971791460648447."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -927,7 +1035,7 @@
       "canonicalGameId": "ESPN-401860922",
       "team": "Washington State",
       "opponent": "Utah State",
-      "currentSpread": "+5.5",
+      "currentSpread": "+4",
       "band": "UNDERDOG-SPECIAL",
       "profileScore": 2.4,
       "score25": 2.4,
@@ -990,18 +1098,18 @@
         "teamOffenseYppRank": 113,
         "teamAggregateRank": 113,
         "teamDefensiveYppRank": 91,
-        "marketTotal": 43.5,
+        "marketTotal": 44.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3995339388377276,
+        "marketWinProbability": 0.4264631330069377,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3995339388377276,
+      "marketWinProbability": 0.4264631330069377,
       "narrative": {
         "upsetCase": "Washington State has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Washington State QB/WR vs Utah State DB — Even",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -1014,7 +1122,117 @@
           "Washington State QB/WR vs Utah State DB — Even",
           "Washington State OL/RB vs Utah State DL/LB — Even",
           "Utah State QB/WR vs Washington State DB — Even",
-          "Canonical selected-week market: Washington State +5.5, total 43.5; production model Lean Washington State edge 4.4450428979486105; Football Independent Washington State edge 4.4000779962702."
+          "Canonical selected-week market: Washington State +4, total 44.5; production model Lean Washington State edge 2.9450428979486105; Football Independent Washington State edge 2.9000779962702006."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 6,
+      "canonicalGameId": "ESPN-401858254",
+      "team": "Florida State",
+      "opponent": "Louisville",
+      "currentSpread": "+4",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 2.3,
+      "score25": 2.3,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0.9,
+        "explosivePath": 1.4,
+        "compression": 0,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "PARTIAL",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "PARTIAL",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": 39,
+        "teamOffenseYppRank": 35,
+        "teamAggregateRank": 77,
+        "teamDefensiveYppRank": 123,
+        "marketTotal": 60.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.4264631330069377,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.4264631330069377,
+      "narrative": {
+        "upsetCase": "Florida State has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Louisville OL/RB vs Florida State DL/LB — Louisville +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog, a high-total script increases the favorite’s separation ceiling.",
+        "keyThingsToWatch": [
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Louisville OL/RB vs Florida State DL/LB — Louisville +",
+          "Florida State QB/WR vs Louisville DB — Louisville +",
+          "Louisville QB/WR vs Florida State DB — Even",
+          "419 yards and strong red-zone execution, but allowed efficient passing and did not separate enough to justify an overall upgrade.",
+          "Phil Steele current power rating: Florida State 127 vs Louisville 124.",
+          "Canonical selected-week market: Florida State +4, total 60.5; production model Lean Louisville edge 1.097344853033567; Football Independent Florida State edge 0.05028208539351553."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -1144,7 +1362,7 @@
       "canonicalGameId": "ESPN-401866435",
       "team": "Akron",
       "opponent": "Eastern Michigan",
-      "currentSpread": "+6.5",
+      "currentSpread": "+5.5",
       "band": "UNDERDOG-SPECIAL",
       "profileScore": 1.1,
       "score25": 1.1,
@@ -1212,13 +1430,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3819023560304163,
+        "marketWinProbability": 0.3995339388377276,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3819023560304163,
+      "marketWinProbability": 0.3995339388377276,
       "narrative": {
         "upsetCase": "Akron has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Eastern Michigan QB/WR vs Akron DB — Eastern Michigan +",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -1232,7 +1450,7 @@
           "Akron OL/RB vs Eastern Michigan DL/LB — Even",
           "Eastern Michigan OL/RB vs Akron DL/LB — Even",
           "Phil Steele current power rating: Akron 96 vs Eastern Michigan 104.",
-          "Canonical selected-week market: Akron +6.5, total 51.5; production model Akron ATS edge 7.2354490576230495; Football Independent Akron edge 7.428089195678271."
+          "Canonical selected-week market: Akron +5.5, total 51.5; production model Akron ATS edge 6.2354490576230495; Football Independent Akron edge 6.428089195678271."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -1364,7 +1582,7 @@
       "canonicalGameId": "ESPN-401858484",
       "team": "UCLA",
       "opponent": "Oregon",
-      "currentSpread": "+11.5",
+      "currentSpread": "+10.5",
       "band": "UPSET-LAB",
       "profileScore": 4.3,
       "score25": 4.3,
@@ -1427,18 +1645,18 @@
         "teamOffenseYppRank": 11,
         "teamAggregateRank": 13,
         "teamDefensiveYppRank": 37,
-        "marketTotal": 59.5,
+        "marketTotal": 58.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.2990445336807876,
+        "marketWinProbability": 0.31479902333468435,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.2990445336807876,
+      "marketWinProbability": 0.31479902333468435,
       "narrative": {
         "upsetCase": "UCLA has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Oregon QB/WR vs UCLA DB — Oregon ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -1452,7 +1670,7 @@
           "Oregon OL/RB vs UCLA DL/LB — Oregon ++",
           "UCLA QB/WR vs Oregon DB — Oregon +",
           "Phil Steele current power rating: UCLA 136 vs Oregon 146.",
-          "Canonical selected-week market: UCLA +11.5, total 59.5; production model Oregon ATS edge 3.9801650464458085; Football Independent Oregon edge 6.418481902628741."
+          "Canonical selected-week market: UCLA +10.5, total 58.5; production model Oregon ATS edge 4.9801650464458085; Football Independent Oregon edge 7.418481902628741."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -1473,7 +1691,7 @@
       "canonicalGameId": "ESPN-401856714",
       "team": "South Carolina",
       "opponent": "Florida",
-      "currentSpread": "+11.5",
+      "currentSpread": "+10.5",
       "band": "UPSET-LAB",
       "profileScore": 4.2,
       "score25": 4.2,
@@ -1541,13 +1759,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.2990445336807876,
+        "marketWinProbability": 0.31479902333468435,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.2990445336807876,
+      "marketWinProbability": 0.31479902333468435,
       "narrative": {
         "upsetCase": "South Carolina has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. South Carolina OL/RB vs Florida DL/LB — Florida ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -1561,7 +1779,7 @@
           "South Carolina QB/WR vs Florida DB — South Carolina +",
           "Florida QB/WR vs South Carolina DB — South Carolina +",
           "Phil Steele current power rating: South Carolina 132 vs Florida 131.",
-          "Canonical selected-week market: South Carolina +11.5, total 58.5; production model Lean Florida edge 1.25790158355926; Football Independent Florida edge 1.0965026392654327."
+          "Canonical selected-week market: South Carolina +10.5, total 58.5; production model Florida ATS edge 2.25790158355926; Football Independent Florida edge 2.0965026392654327."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -1910,7 +2128,7 @@
       "canonicalGameId": "ESPN-401856826",
       "team": "Iowa State",
       "opponent": "BYU",
-      "currentSpread": "+10.5",
+      "currentSpread": "+11.5",
       "band": "UPSET-LAB",
       "profileScore": 3.8,
       "score25": 3.8,
@@ -1978,13 +2196,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.31479902333468435,
+        "marketWinProbability": 0.2990445336807876,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.31479902333468435,
+      "marketWinProbability": 0.2990445336807876,
       "narrative": {
         "upsetCase": "Iowa State has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Iowa State QB/WR vs BYU DB — BYU ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -1998,7 +2216,7 @@
           "Iowa State OL/RB vs BYU DL/LB — BYU ++",
           "BYU OL/RB vs Iowa State DL/LB — BYU ++",
           "Phil Steele current power rating: Iowa State 119 vs BYU 135.",
-          "Canonical selected-week market: Iowa State +10.5, total 46.5; production model BYU ATS edge 5.561074266112701; Football Independent BYU edge 4.9351237768545015."
+          "Canonical selected-week market: Iowa State +11.5, total 46.5; production model BYU ATS edge 4.561074266112701; Football Independent BYU edge 3.9351237768545015."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -2019,7 +2237,7 @@
       "canonicalGameId": "ESPN-401858258",
       "team": "Syracuse",
       "opponent": "Virginia",
-      "currentSpread": "+10",
+      "currentSpread": "+9.5",
       "band": "UPSET-LAB",
       "profileScore": 3.6,
       "score25": 3.6,
@@ -2087,13 +2305,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.32284218539783427,
+        "marketWinProbability": 0.3309915811752626,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.32284218539783427,
+      "marketWinProbability": 0.3309915811752626,
       "narrative": {
         "upsetCase": "Syracuse has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Syracuse OL/RB vs Virginia DL/LB — Virginia ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -2107,7 +2325,7 @@
           "Virginia OL/RB vs Syracuse DL/LB — Virginia +",
           "Syracuse QB/WR vs Virginia DB — Virginia +",
           "Phil Steele current power rating: Syracuse 114 vs Virginia 122.",
-          "Canonical selected-week market: Syracuse +10, total 50.5; production model Lean Virginia edge 0.6183801672626323; Football Independent Virginia edge 5.421126968613395."
+          "Canonical selected-week market: Syracuse +9.5, total 50.5; production model Lean Virginia edge 0.11838016726263234; Football Independent Virginia edge 5.921126968613395."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -2128,7 +2346,7 @@
       "canonicalGameId": "ESPN-401860902",
       "team": "San Diego State",
       "opponent": "Oregon State",
-      "currentSpread": "+15.5",
+      "currentSpread": "+16.5",
       "band": "UPSET-LAB",
       "profileScore": 3.4,
       "score25": 3.4,
@@ -2196,13 +2414,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.2408274938899028,
+        "marketWinProbability": 0.22754561719281616,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.2408274938899028,
+      "marketWinProbability": 0.22754561719281616,
       "narrative": {
         "upsetCase": "San Diego State has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Oregon State OL/RB vs San Diego State DL/LB — San Diego State ++",
         "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
@@ -2216,7 +2434,7 @@
           "Oregon State OL/RB vs San Diego State DL/LB — San Diego State ++",
           "Oregon State QB/WR vs San Diego State DB — San Diego State +",
           "San Diego State QB/WR vs Oregon State DB — San Diego State +",
-          "Canonical selected-week market: San Diego State +15.5, total 53.5; production model San Diego State ATS edge 13.693604333593175; Football Independent San Diego State edge 12.215644242896682."
+          "Canonical selected-week market: San Diego State +16.5, total 53.5; production model San Diego State ATS edge 14.693604333593175; Football Independent San Diego State edge 13.215644242896682."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -2454,7 +2672,7 @@
       "canonicalGameId": "ESPN-401869843",
       "team": "Old Dominion",
       "opponent": "App State",
-      "currentSpread": "+9.5",
+      "currentSpread": "+10",
       "band": "UPSET-LAB",
       "profileScore": 2.5,
       "score25": 2.5,
@@ -2522,13 +2740,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3309915811752626,
+        "marketWinProbability": 0.32284218539783427,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3309915811752626,
+      "marketWinProbability": 0.32284218539783427,
       "narrative": {
         "upsetCase": "Old Dominion has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Old Dominion OL/RB vs App State DL/LB — Even",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -2541,7 +2759,7 @@
           "Old Dominion OL/RB vs App State DL/LB — Even",
           "App State OL/RB vs Old Dominion DL/LB — Even",
           "Old Dominion QB/WR vs App State DB — Even",
-          "Canonical selected-week market: Old Dominion +9.5, total 47.5; production model Lean Old Dominion edge 8.11271510716648; Football Independent Old Dominion edge 7.386754740302689."
+          "Canonical selected-week market: Old Dominion +10, total 47.5; production model Lean Old Dominion edge 8.61271510716648; Football Independent Old Dominion edge 7.886754740302689."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -2672,7 +2890,7 @@
       "canonicalGameId": "ESPN-401862798",
       "team": "UAB",
       "opponent": "Memphis",
-      "currentSpread": "+14",
+      "currentSpread": "+14.5",
       "band": "UPSET-LAB",
       "profileScore": 2.2,
       "score25": 2.2,
@@ -2740,13 +2958,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.26172210408419255,
+        "marketWinProbability": 0.25462908030684506,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.26172210408419255,
+      "marketWinProbability": 0.25462908030684506,
       "narrative": {
         "upsetCase": "UAB has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. UAB OL/RB vs Memphis DL/LB — Memphis +",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -2760,7 +2978,7 @@
           "UAB QB/WR vs Memphis DB — Even",
           "Memphis QB/WR vs UAB DB — Even",
           "Phil Steele current power rating: UAB 103 vs Memphis 114.",
-          "Canonical selected-week market: UAB +14, total 53.5; production model Lean UAB edge 4.615483025549475; Football Independent Memphis edge 1.8354854080918628."
+          "Canonical selected-week market: UAB +14.5, total 53.5; production model Lean UAB edge 5.115483025549475; Football Independent Memphis edge 1.3354854080918628."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3000,7 +3218,7 @@
       "canonicalGameId": "ESPN-401864517",
       "team": "UTEP",
       "opponent": "Nevada",
-      "currentSpread": "+10",
+      "currentSpread": "+9.5",
       "band": "UPSET-LAB",
       "profileScore": 1.5,
       "score25": 1.5,
@@ -3068,13 +3286,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.32284218539783427,
+        "marketWinProbability": 0.3309915811752626,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.32284218539783427,
+      "marketWinProbability": 0.3309915811752626,
       "narrative": {
         "upsetCase": "UTEP has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Nevada QB/WR vs UTEP DB — Even",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -3088,7 +3306,7 @@
           "Nevada OL/RB vs UTEP DL/LB — Even",
           "UTEP QB/WR vs Nevada DB — Even",
           "Phil Steele current power rating: UTEP 93 vs Nevada 106.",
-          "Canonical selected-week market: UTEP +10, total 49.5; production model Lean UTEP edge 7.99583031149289; Football Independent UTEP edge 7.174236929987073."
+          "Canonical selected-week market: UTEP +9.5, total 49.5; production model Lean UTEP edge 7.49583031149289; Football Independent UTEP edge 6.674236929987073."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3109,7 +3327,7 @@
       "canonicalGameId": "ESPN-401866439",
       "team": "Kent State",
       "opponent": "Western Michigan",
-      "currentSpread": "+14",
+      "currentSpread": "+13.5",
       "band": "UPSET-LAB",
       "profileScore": 1.4,
       "score25": 1.4,
@@ -3177,13 +3395,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.26172210408419255,
+        "marketWinProbability": 0.2689414213699951,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.26172210408419255,
+      "marketWinProbability": 0.2689414213699951,
       "narrative": {
         "upsetCase": "Kent State has an upset path built around enough trench resistance to avoid a one-sided game. Western Michigan OL/RB vs Kent State DL/LB — Western Michigan +",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -3197,7 +3415,7 @@
           "Kent State QB/WR vs Western Michigan DB — Even",
           "Western Michigan QB/WR vs Kent State DB — Even",
           "Phil Steele current power rating: Kent State 103 vs Western Michigan 112.",
-          "Canonical selected-week market: Kent State +14, total 43.5; production model Kent State ATS edge 6.656362938294067; Football Independent Kent State edge 1.8752053423528494."
+          "Canonical selected-week market: Kent State +13.5, total 43.5; production model Kent State ATS edge 6.156362938294067; Football Independent Kent State edge 1.3752053423528494."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3327,7 +3545,7 @@
       "canonicalGameId": "ESPN-401856808",
       "team": "Hawai'i",
       "opponent": "Arizona State",
-      "currentSpread": "+20.5",
+      "currentSpread": "+21",
       "band": "UPSET-LAB",
       "profileScore": 1.1,
       "score25": 1.1,
@@ -3395,13 +3613,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.17967977869030857,
+        "marketWinProbability": 0.17428532117858545,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.17967977869030857,
+      "marketWinProbability": 0.17428532117858545,
       "narrative": {
         "upsetCase": "Hawai'i has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Hawai'i OL/RB vs Arizona State DL/LB — Arizona State ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -3416,7 +3634,7 @@
           "Hawai'i QB/WR vs Arizona State DB — Even",
           "Followed the Stanford loss with only six points against UNLV. Passing-upside thesis remains but has not translated; cap downgrade because weather/travel and opponent context matter.",
           "Phil Steele current power rating: Hawai'i 101 vs Arizona State 114.",
-          "Canonical selected-week market: Hawai'i +20.5, total 50.5; production model Lean Hawai'i edge 18.118500822530777; Football Independent Hawai'i edge 17.397274222783228."
+          "Canonical selected-week market: Hawai'i +21, total 50.5; production model Lean Hawai'i edge 18.618500822530777; Football Independent Hawai'i edge 17.897274222783228."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3545,7 +3763,7 @@
       "canonicalGameId": "ESPN-401866437",
       "team": "Buffalo",
       "opponent": "Toledo",
-      "currentSpread": "+20.5",
+      "currentSpread": "+18.5",
       "band": "UPSET-LAB",
       "profileScore": 0.4,
       "score25": 0.4,
@@ -3613,13 +3831,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.17967977869030857,
+        "marketWinProbability": 0.20256001411651053,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.17967977869030857,
+      "marketWinProbability": 0.20256001411651053,
       "narrative": {
         "upsetCase": "Buffalo has an upset path built around enough trench resistance to avoid a one-sided game. Buffalo OL/RB vs Toledo DL/LB — Even",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -3633,7 +3851,7 @@
           "Toledo OL/RB vs Buffalo DL/LB — Even",
           "Buffalo QB/WR vs Toledo DB — Even",
           "Phil Steele current power rating: Buffalo 93 vs Toledo 112.",
-          "Canonical selected-week market: Buffalo +20.5, total 55.5; production model Lean Buffalo edge 12.565062749479313; Football Independent Buffalo edge 7.300114089962387."
+          "Canonical selected-week market: Buffalo +18.5, total 55.5; production model Lean Buffalo edge 10.565062749479313; Football Independent Buffalo edge 5.300114089962387."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3876,7 +4094,7 @@
       "canonicalGameId": "ESPN-401858487",
       "team": "Iowa",
       "opponent": "Washington",
-      "currentSpread": "+2.5",
+      "currentSpread": "+3",
       "band": "INTERMEDIATE",
       "profileScore": 5.2,
       "score25": 5.2,
@@ -3944,13 +4162,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.4538355569241225,
+        "marketWinProbability": 0.44467194473763105,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.4538355569241225,
+      "marketWinProbability": 0.44467194473763105,
       "narrative": {
         "upsetCase": "Iowa has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Iowa QB/WR vs Washington DB — Washington ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -3964,7 +4182,7 @@
           "Washington QB/WR vs Iowa DB — Iowa +",
           "Washington OL/RB vs Iowa DL/LB — Even",
           "Phil Steele current power rating: Iowa 135 vs Washington 130.",
-          "Canonical selected-week market: Iowa +2.5, total 41.5; production model Lean Iowa edge 2.524436123145835; Football Independent Iowa edge 3.540726871909725."
+          "Canonical selected-week market: Iowa +3, total 41.5; production model Lean Iowa edge 3.024436123145835; Football Independent Iowa edge 4.040726871909725."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -4530,114 +4748,6 @@
     },
     {
       "week": 6,
-      "canonicalGameId": "ESPN-401866440",
-      "team": "Massachusetts",
-      "opponent": "Miami (OH)",
-      "currentSpread": "+2.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 3.9,
-      "score25": 3.9,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 1.6,
-        "explosivePath": 1.3,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 128,
-        "teamOffenseYppRank": 43,
-        "teamAggregateRank": 105,
-        "teamDefensiveYppRank": 18,
-        "marketTotal": 47.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.4538355569241225,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.4538355569241225,
-      "narrative": {
-        "upsetCase": "Massachusetts has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Massachusetts OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Massachusetts OL/RB vs Miami (OH) DL/LB — Miami (OH) +",
-          "Massachusetts QB/WR vs Miami (OH) DB — Miami (OH) +",
-          "Miami (OH) OL/RB vs Massachusetts DL/LB — Even",
-          "Canonical selected-week market: Massachusetts +2.5, total 47.5; production model Lean Miami (OH) edge 0.6064585276054215; Football Independent Massachusetts edge 0.2844700501916755."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 6,
       "canonicalGameId": "ESPN-401858480",
       "team": "Michigan State",
       "opponent": "Illinois",
@@ -4857,116 +4967,6 @@
     },
     {
       "week": 6,
-      "canonicalGameId": "ESPN-401862795",
-      "team": "Tulane",
-      "opponent": "Army",
-      "currentSpread": "+3",
-      "band": "INTERMEDIATE",
-      "profileScore": 3.3,
-      "score25": 3.3,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0.6,
-        "trenchResistance": 0.6,
-        "explosivePath": 1.1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 96,
-        "teamOffenseYppRank": 89,
-        "teamAggregateRank": 109,
-        "teamDefensiveYppRank": 113,
-        "marketTotal": 48.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.44467194473763105,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.44467194473763105,
-      "narrative": {
-        "upsetCase": "Tulane has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Army OL/RB vs Tulane DL/LB — Army +",
-        "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "Tulane QB efficiency and early-down success",
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Army OL/RB vs Tulane DL/LB — Army +",
-          "Tulane QB/WR vs Army DB — Tulane +",
-          "Army QB/WR vs Tulane DB — Even",
-          "Phil Steele current power rating: Tulane 109 vs Army 114.",
-          "Canonical selected-week market: Tulane +3, total 48.5; production model Lean Tulane edge 1.316097563753839; Football Independent Tulane edge 0.75654102500698."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 6,
       "canonicalGameId": "ESPN-401856823",
       "team": "West Virginia",
       "opponent": "Arizona",
@@ -5059,6 +5059,115 @@
           "West Virginia OL/RB vs Arizona DL/LB — West Virginia +",
           "Phil Steele current power rating: West Virginia 121 vs Arizona 131.",
           "Canonical selected-week market: West Virginia +3, total 60.5; production model Lean West Virginia edge 2.2236156456876612; Football Independent West Virginia edge 2.4065739012502934."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 6,
+      "canonicalGameId": "ESPN-401858486",
+      "team": "Purdue",
+      "opponent": "Minnesota",
+      "currentSpread": "+2.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 2.8,
+      "score25": 2.8,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 1,
+        "explosivePath": 0.8,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "PARTIAL",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "PARTIAL",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": 52,
+        "teamOffenseYppRank": 74,
+        "teamAggregateRank": 63,
+        "teamDefensiveYppRank": 129,
+        "marketTotal": 49.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.4538355569241225,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.4538355569241225,
+      "narrative": {
+        "upsetCase": "Purdue has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Purdue OL/RB vs Minnesota DL/LB — Minnesota ++",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Purdue OL/RB vs Minnesota DL/LB — Minnesota ++",
+          "Minnesota OL/RB vs Purdue DL/LB — Minnesota +",
+          "Minnesota QB/WR vs Purdue DB — Minnesota +",
+          "Phil Steele current power rating: Purdue 121 vs Minnesota 134.",
+          "Canonical selected-week market: Purdue +2.5, total 49.5; production model Lean Minnesota edge 0.6430796840180864; Football Independent Purdue edge 0.7601448800328843."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -5185,119 +5294,10 @@
     },
     {
       "week": 6,
-      "canonicalGameId": "ESPN-401858486",
-      "team": "Purdue",
-      "opponent": "Minnesota",
-      "currentSpread": "+2.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 2.5,
-      "score25": 2.5,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 1,
-        "explosivePath": 0.8,
-        "compression": 0.7,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 52,
-        "teamOffenseYppRank": 74,
-        "teamAggregateRank": 63,
-        "teamDefensiveYppRank": 129,
-        "marketTotal": 50.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.4538355569241225,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.4538355569241225,
-      "narrative": {
-        "upsetCase": "Purdue has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Purdue OL/RB vs Minnesota DL/LB — Minnesota ++",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Purdue OL/RB vs Minnesota DL/LB — Minnesota ++",
-          "Minnesota OL/RB vs Purdue DL/LB — Minnesota +",
-          "Minnesota QB/WR vs Purdue DB — Minnesota +",
-          "Phil Steele current power rating: Purdue 121 vs Minnesota 134.",
-          "Canonical selected-week market: Purdue +2.5, total 50.5; production model Lean Minnesota edge 0.6430796840180864; Football Independent Purdue edge 0.7601448800328843."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 6,
       "canonicalGameId": "ESPN-401866436",
       "team": "Sacramento State",
       "opponent": "Bowling Green",
-      "currentSpread": "+8.5",
+      "currentSpread": "+7.5",
       "band": "INTERMEDIATE",
       "profileScore": 1.8,
       "score25": 1.8,
@@ -5365,13 +5365,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.347594522906578,
+        "marketWinProbability": 0.3645764407416393,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.347594522906578,
+      "marketWinProbability": 0.3645764407416393,
       "narrative": {
         "upsetCase": "Sacramento State has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Sacramento State QB/WR vs Bowling Green DB — Even",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -5385,7 +5385,7 @@
           "Sacramento State OL/RB vs Bowling Green DL/LB — Even",
           "Bowling Green QB/WR vs Sacramento State DB — Even",
           "257 total yards, 13 first downs and two turnovers in FBS debut; small move only.",
-          "Canonical selected-week market: Sacramento State +8.5, total 43.5; production model Lean Sacramento State edge 4.7734113970588234; Football Independent Sacramento State edge 2.542566176470589."
+          "Canonical selected-week market: Sacramento State +7.5, total 43.5; production model Lean Sacramento State edge 3.7734113970588234; Football Independent Sacramento State edge 1.5425661764705891."
         ]
       },
       "deepDiveStatus": "COMPLETE",
