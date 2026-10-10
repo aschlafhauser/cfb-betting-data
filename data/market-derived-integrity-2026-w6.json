@@ -1,18 +1,20 @@
 {
   "season": 2026,
   "week": 6,
-  "verifiedAt": "2026-10-10T13:52:08.451Z",
-  "status": "PASS",
-  "detail": "Independently reconciled 135 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
+  "verifiedAt": "2026-10-10T18:45:15.886Z",
+  "status": "FAIL",
+  "detail": "Independently reconciled 96 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
   "dependencies": {
-    "canonicalBoardUpdatedAt": "2026-10-10T13:47:24.473Z",
-    "verifiedAt": "2026-10-10T13:52:08.451Z"
+    "canonicalBoardUpdatedAt": "2026-10-10T18:39:32.512Z",
+    "verifiedAt": "2026-10-10T18:45:15.886Z"
   },
   "checks": {
-    "records": 135,
+    "records": 96,
     "mathFailures": 0,
     "independentMarketLeakage": 0,
     "renderFailures": 0
   },
-  "failures": []
+  "failures": [
+    "only 96/99 expected model/market arithmetic records were checkable for 33 currently priced games"
+  ]
 }
