@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 7,
-  "updatedAt": "2026-10-14T13:29:22.608Z",
+  "updatedAt": "2026-10-14T13:34:20.046Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 56,
-    "underdogSpecial": 21,
+    "underdogSpecial": 22,
     "upsetLab": 21,
-    "intermediate": 14,
+    "intermediate": 13,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -908,6 +908,116 @@
           "Missouri QB/WR vs Ole Miss DB — Ole Miss ++",
           "Ole Miss QB/WR vs Missouri DB — Ole Miss +",
           "Canonical selected-week market: Missouri +6, total 59.5; production model Missouri ATS edge 1.4523414878720002; Football Independent Missouri edge 2.6406208870400008."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 7,
+      "canonicalGameId": "ESPN-401858266",
+      "team": "North Carolina",
+      "opponent": "Duke",
+      "currentSpread": "+3.5",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 3.8,
+      "score25": 3.8,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 1.9,
+        "explosivePath": 0.9,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "PARTIAL",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "PARTIAL",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": 48,
+        "teamOffenseYppRank": 68,
+        "teamAggregateRank": 58,
+        "teamDefensiveYppRank": 55,
+        "marketTotal": 47.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.43554580738864324,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.43554580738864324,
+      "narrative": {
+        "upsetCase": "North Carolina has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Duke QB/WR vs North Carolina DB — Even",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Duke QB/WR vs North Carolina DB — Even",
+          "North Carolina OL/RB vs Duke DL/LB — Even",
+          "Duke OL/RB vs North Carolina DL/LB — Even",
+          "Held TCU to 10 points and shut down the run after halftime; 322 total yards on offense.",
+          "Phil Steele current power rating: North Carolina 125 vs Duke 129.",
+          "Canonical selected-week market: North Carolina +3.5, total 47.5; production model Lean Duke edge 0.8688610397286123; Football Independent Duke edge 1.1147683995476863."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -4946,116 +5056,6 @@
           "Tennessee OL/RB vs Alabama DL/LB — Even",
           "Phil Steele current power rating: Tennessee 134 vs Alabama 149.",
           "Canonical selected-week market: Tennessee +8.5, total 51.5; production model Tennessee ATS edge 3.7056334048331525; Football Independent Tennessee edge 5.919333463333003."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 7,
-      "canonicalGameId": "ESPN-401858266",
-      "team": "North Carolina",
-      "opponent": "Duke",
-      "currentSpread": "+3",
-      "band": "INTERMEDIATE",
-      "profileScore": 3.8,
-      "score25": 3.8,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 1.9,
-        "explosivePath": 0.9,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 48,
-        "teamOffenseYppRank": 68,
-        "teamAggregateRank": 58,
-        "teamDefensiveYppRank": 55,
-        "marketTotal": 47.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.44467194473763105,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.44467194473763105,
-      "narrative": {
-        "upsetCase": "North Carolina has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Duke QB/WR vs North Carolina DB — Even",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Duke QB/WR vs North Carolina DB — Even",
-          "North Carolina OL/RB vs Duke DL/LB — Even",
-          "Duke OL/RB vs North Carolina DL/LB — Even",
-          "Held TCU to 10 points and shut down the run after halftime; 322 total yards on offense.",
-          "Phil Steele current power rating: North Carolina 125 vs Duke 129.",
-          "Canonical selected-week market: North Carolina +3, total 47.5; production model Lean Duke edge 1.3688610397286123; Football Independent Duke edge 1.6147683995476863."
         ]
       },
       "deepDiveStatus": "COMPLETE",
