@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import {refreshSecondaryMarkets} from './secondary-markets.mjs';
 
 const boardPath='data/weekly-board.json';
 const board=JSON.parse(await fs.readFile(boardPath,'utf8'));
@@ -23,15 +24,15 @@ const teamLabel=c=>c?.team?.location||c?.team?.shortDisplayName||c?.team?.displa
 const ml=v=>{const n=Number(v);return Number.isFinite(n)?(n>0?`+${n}`:String(n)):null};
 function spread(o,a,h,al,hl){const d=String(o?.details||'').trim();if(!d)return null;const m=d.match(/^([^\s]+)\s+(-?\d+(?:\.\d+)?)/);if(!m)return d;const t=m[1].toUpperCase(),line=m[2];if(t===String(a?.team?.abbreviation||'').toUpperCase())return `${al} ${line}`;if(t===String(h?.team?.abbreviation||'').toUpperCase())return `${hl} ${line}`;return d}
 function row(ev){const c=ev?.competitions?.[0]||{},cs=c.competitors||[],a=cs.find(x=>x.homeAway==='away'),h=cs.find(x=>x.homeAway==='home');if(!a||!h)return null;const al=teamLabel(a)||'Away',hl=teamLabel(h)||'Home',o=Array.isArray(c.odds)?c.odds[0]:null,ou=Number(o?.overUnder),am=ml(o?.awayTeamOdds?.moneyLine),hm=ml(o?.homeTeamOdds?.moneyLine);return {gameId:`ESPN-${ev.id}`,dateTime:ev.date||c.date||null,away:al,home:hl,neutral:!!c.neutralSite,tv:(c.broadcasts||[]).flatMap(b=>b.names||[])[0]||null,currentSpread:spread(o,a,h,al,hl),currentTotal:Number.isFinite(ou)&&ou>0?ou:null,currentMoneyline:am||hm?`${al} ${am||'—'} / ${hl} ${hm||'—'}`:null,marketSource:o?.provider?.name?`ESPN ${o.provider.name}`:(o?'ESPN odds feed':null),modelSpread:null,modelTotal:null,modelEdgeMagnitude:null,finalExecutableEdge:null,independentFootballFair:null,independentFootballHomeMargin:null,independentFootballEdge:null,independentFootballSide:null,independentFootballConfidence:null,priority:'low',stage:'deep-dive-pending',deepDiveStatus:'PENDING',deepDiveEvidenceCount:0,confidence:'pending',informationQuality:o?'market-available':'source-limited',thresholdStatus:o?'MARKET AVAILABLE · DEEP DIVE PENDING':'MARKET/EXECUTION PENDING · DEEP DIVE PENDING',action:'RESEARCH — Deep Dive not yet evidence-complete',notes:`Canonical Week ${targetWeek} schedule row. No prior-week model, expert, injury or execution state carried forward.`}}
-const nextGames=events.map(row).filter(Boolean).sort((a,b)=>new Date(a.dateTime||0)-new Date(b.dateTime||0));
+const nextGames=await refreshSecondaryMarkets(events.map(row).filter(Boolean).sort((a,b)=>new Date(a.dateTime||0)-new Date(b.dateTime||0)));
 if(!nextGames.length)throw new Error(`ESPN Week ${targetWeek} produced no canonical games`);
 if(!isRollover){
   const fetchedAt=new Date().toISOString();
   const freshById=new Map(nextGames.map(g=>[String(g.gameId),g]));
   const refreshed=games.map(old=>{
     const fresh=freshById.get(String(old.gameId));
-    if(!fresh)return {...old,currentSpread:null,currentTotal:null,currentMoneyline:null,marketSource:null,marketUpdatedAt:fetchedAt};
-    return {...old,dateTime:fresh.dateTime||old.dateTime,tv:fresh.tv||old.tv,neutral:fresh.neutral,currentSpread:fresh.currentSpread,currentTotal:fresh.currentTotal,currentMoneyline:fresh.currentMoneyline,marketSource:fresh.marketSource,marketUpdatedAt:fetchedAt};
+    if(!fresh)return {...old,currentSpread:null,currentTotal:null,currentMoneyline:null,marketSource:null,marketUpdatedAt:fetchedAt,marketProvenance:null};
+    return {...old,dateTime:fresh.dateTime||old.dateTime,tv:fresh.tv||old.tv,neutral:fresh.neutral,currentSpread:fresh.currentSpread,currentTotal:fresh.currentTotal,currentMoneyline:fresh.currentMoneyline,marketSource:fresh.marketSource,marketUpdatedAt:fetchedAt,marketProvenance:fresh.marketProvenance||null};
   });
   const marketGameCount=refreshed.filter(g=>g.currentSpread||Number.isFinite(g.currentTotal)).length;
   const currentIds=new Set(refreshed.map(g=>String(g.gameId)));
@@ -40,7 +41,7 @@ if(!isRollover){
   const priorOfficial=board.officialPortfolio||{count:0,units:0};
   const staleOfficialCopy=Number(priorOfficial.count||0)===0&&(/Week\\s+\\d+/i.test(String(priorOfficial.reason||''))||/Sunday morning/i.test(String(priorOfficial.reason||'')));
   const officialPortfolio=staleOfficialCopy?{...priorOfficial,reason:'No selected-week official bet has cleared the governed Bet Activation Gate. Market observations or raw model discrepancies alone cannot satisfy Final Executable Edge.'}:priorOfficial;
-  const updated={...board,updatedAt:fetchedAt,games:refreshed,watchlist,bestBets,officialPortfolio,scheduleCoverage:{...(board.scheduleCoverage||{}),completeSlate:refreshed.length===nextGames.length,slateCount:refreshed.length,marketGameCount,runtimeSource:'ESPN selected-week schedule and odds refresh',marketSnapshotAt:fetchedAt,scheduleHydration:'CURRENT-WEEK-REFRESH',scheduleHydrationError:null,note:`Canonical Week ${currentWeek} refreshed from one ESPN snapshot: schedule=${refreshed.length}; priced markets=${marketGameCount}. Missing quotes remain null and are never carried forward as a mixed snapshot.`}};
+  const updated={...board,updatedAt:fetchedAt,games:refreshed,watchlist,bestBets,officialPortfolio,scheduleCoverage:{...(board.scheduleCoverage||{}),completeSlate:refreshed.length===nextGames.length,slateCount:refreshed.length,marketGameCount,runtimeSource:'ESPN selected-week schedule and odds refresh',marketSnapshotAt:fetchedAt,scheduleHydration:'CURRENT-WEEK-REFRESH',scheduleHydrationError:null,note:`Canonical Week ${currentWeek} refreshed from one ESPN snapshot: schedule=${refreshed.length}; priced markets=${marketGameCount}. Fresh indicative CBS fallback quotes retain their own source and timestamp. Missing quotes remain null and are never carried forward as a mixed snapshot.`}};
   await fs.writeFile(boardPath,JSON.stringify(updated,null,2)+'\n');
   console.log(`CFB Week ${currentWeek} current snapshot refreshed: ${refreshed.length} games, ${marketGameCount} priced markets.`);
   process.exit(0);

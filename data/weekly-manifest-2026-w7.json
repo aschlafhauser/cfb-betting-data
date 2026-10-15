@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 7,
-  "updatedAt": "2026-10-15T10:03:36.467Z",
-  "status": "FAIL",
+  "updatedAt": "2026-10-15T12:36:55.971Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "canonicalSchedule": {
@@ -12,16 +12,16 @@
       "detail": "Canonical selected-week schedule coverage."
     },
     "marketCoverage": {
-      "status": "FAIL",
+      "status": "PASS",
       "minimumRequired": 58,
-      "actualMarketGames": 55,
+      "actualMarketGames": 58,
       "dueGames": 58,
-      "dueMarketGames": 55,
+      "dueMarketGames": 58,
       "startedGamesExcluded": 4,
       "laterGamesOutsideBlockingWindow": 0,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
-      "detail": "One or more unstarted games inside the 72-hour market deadline lack a governed spread/total. 4 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
+      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 4 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -98,11 +98,11 @@
       "detail": "4 valid immutable snapshots; 58 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "marketCoverage"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "marketCoverage: One or more unstarted games inside the 72-hour market deadline lack a governed spread/total. 4 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
