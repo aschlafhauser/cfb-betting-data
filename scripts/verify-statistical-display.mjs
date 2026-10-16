@@ -62,7 +62,9 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
       try{signedId=String(JSON.parse(p?.dataset?.signature||'[]')?.[0]||'');}catch{}
       const panelText=p?.innerText||'';
       const teamMatch=panelText.toLowerCase().includes(String(g.away).toLowerCase())&&panelText.toLowerCase().includes(String(g.home).toLowerCase());
-      const selectedPanel=p&&(signedId===String(g.id)||teamMatch);\n      const fpiReady=/ESPN FPI/.test(panelText)&&/FPI\\s+[+-]?\\d/i.test(panelText);\n      if(selectedPanel&&(!requireFpi||fpiReady))return{panelText,signedId};
+      const selectedPanel=p&&(signedId===String(g.id)||teamMatch);
+      const fpiReady=/ESPN FPI/.test(panelText)&&/FPI\s+[+-]?\d/i.test(panelText);
+      if(selectedPanel&&(!requireFpi||fpiReady))return{panelText,signedId};
       if(n===10&&typeof window.CFB_MATCHUP_CENTER_V2?.render==='function')window.CFB_MATCHUP_CENTER_V2.render();
       await sleep(100);
     }
@@ -70,7 +72,7 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
   };
   let checked=0,statsWithValues=0,fpiChecked=0,fpiPanels=0;
   for(const g of allSample){const snapshot=await render(g);if(!snapshot)continue;checked++;const t=snapshot.panelText;if(/Yds\/play|Success|Explosive|PPG|YPG/i.test(t)&&/\d/.test(t))statsWithValues++;}
-  for(const g of fpiSample){const snapshot=await render(g);if(!snapshot)continue;fpiChecked++;const t=snapshot.panelText;if(/ESPN FPI/.test(t)&&/FPI\s+[+-]?\d/i.test(t))fpiPanels++;}
+  for(const g of fpiSample){fpiChecked++;const snapshot=await render(g,{requireFpi:true});if(!snapshot)continue;fpiPanels++;}
   return{options:sel?.options?.length||0,checked,statsWithValues,fpiChecked,fpiPanels};
 },{allSample,fpiSample});
 await browser.close();
