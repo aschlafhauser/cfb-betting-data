@@ -51,7 +51,7 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
   // The selector change is the single render trigger. Both legacy and v2 matchup
   // owners are asynchronous, so grade only a panel whose signed game id (or team
   // labels for older deploys) matches the selected canonical game.
-  const render=async g=>{
+  const render=async(g,{requireFpi=false}={})=>{
     const i=choose(g);
     if(i<0)return null;
     sel.selectedIndex=i;
@@ -62,7 +62,7 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
       try{signedId=String(JSON.parse(p?.dataset?.signature||'[]')?.[0]||'');}catch{}
       const panelText=p?.innerText||'';
       const teamMatch=panelText.toLowerCase().includes(String(g.away).toLowerCase())&&panelText.toLowerCase().includes(String(g.home).toLowerCase());
-      if(p&&(signedId===String(g.id)||teamMatch))return{panelText,signedId};
+      const selectedPanel=p&&(signedId===String(g.id)||teamMatch);\n      const fpiReady=/ESPN FPI/.test(panelText)&&/FPI\\s+[+-]?\\d/i.test(panelText);\n      if(selectedPanel&&(!requireFpi||fpiReady))return{panelText,signedId};
       if(n===10&&typeof window.CFB_MATCHUP_CENTER_V2?.render==='function')window.CFB_MATCHUP_CENTER_V2.render();
       await sleep(100);
     }
