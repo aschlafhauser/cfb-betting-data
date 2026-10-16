@@ -7,10 +7,21 @@ const metrics=JSON.parse(await fs.readFile('data/team-metrics-current.json','utf
 const fpi=JSON.parse(await fs.readFile('data/espn-fpi-current.json','utf8'));
 const season=Number(board.season||2026),week=Number(board.week);
 const norm=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
-const expectedTeams=new Set((board.games||[]).flatMap(g=>[g.away,g.home]).filter(Boolean)).size;
+const games=board.games||[];
+const expectedTeams=new Set(games.flatMap(g=>[g.away,g.home]).filter(Boolean)).size;
 const fpiTeams=new Set((fpi.teams||[]).filter(x=>Number.isFinite(Number(x.fpi))).map(x=>norm(x.team)));
-const allSample=(board.games||[]).slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
-const fpiSample=(board.games||[]).filter(g=>fpiTeams.has(norm(g.away))&&fpiTeams.has(norm(g.home))).slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
+const now=Date.now();
+const isUpcoming=g=>{
+  const status=String(g.status||g.gameStatus||g.state||'').toUpperCase();
+  const kickoff=Date.parse(g.dateTime||g.kickoff||'');
+  return !/(FINAL|COMPLETED|IN_PROGRESS|LIVE|HALFTIME)/.test(status)&&(!Number.isFinite(kickoff)||kickoff>now);
+};
+// Matchup Center production QA is prospective: sample current/future rows first.
+// Earlier-week rows remain governed by immutable snapshots and must not crowd
+// active matchups out of the statistical/FPI display sample late in the week.
+const verificationGames=[...games.filter(isUpcoming),...games.filter(g=>!isUpcoming(g))];
+const allSample=verificationGames.slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
+const fpiSample=verificationGames.filter(g=>fpiTeams.has(norm(g.away))&&fpiTeams.has(norm(g.home))).slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
 const failures=[];
 
 if(Number(metrics.week)!==week)failures.push(`team metrics week ${metrics.week} != ${week}`);
