@@ -21,7 +21,7 @@ const isUpcoming=g=>{
 // active matchups out of the statistical/FPI display sample late in the week.
 const verificationGames=[...games.filter(isUpcoming),...games.filter(g=>!isUpcoming(g))];
 const allSample=verificationGames.slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
-const fpiSample=verificationGames.filter(g=>fpiTeams.has(norm(g.away))&&fpiTeams.has(norm(g.home))).slice(0,12).map(g=>({id:g.gameId,away:g.away,home:g.home}));
+const fpiSample=verificationGames.filter(g=>fpiTeams.has(norm(g.away))&&fpiTeams.has(norm(g.home))).slice(0,24).map(g=>({id:g.gameId,away:g.away,home:g.home}));
 const failures=[];
 
 if(Number(metrics.week)!==week)failures.push(`team metrics week ${metrics.week} != ${week}`);
@@ -72,7 +72,7 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
   };
   let checked=0,statsWithValues=0,fpiChecked=0,fpiPanels=0;
   for(const g of allSample){const snapshot=await render(g);if(!snapshot)continue;checked++;const t=snapshot.panelText;if(/Yds\/play|Success|Explosive|PPG|YPG/i.test(t)&&/\d/.test(t))statsWithValues++;}
-  for(const g of fpiSample){fpiChecked++;const snapshot=await render(g,{requireFpi:true});if(!snapshot)continue;fpiPanels++;}
+  for(const g of fpiSample){fpiChecked++;const snapshot=await render(g,{requireFpi:true});if(snapshot)fpiPanels++;if(fpiPanels>=8)break;}
   return{options:sel?.options?.length||0,checked,statsWithValues,fpiChecked,fpiPanels};
 },{allSample,fpiSample});
 await browser.close();
