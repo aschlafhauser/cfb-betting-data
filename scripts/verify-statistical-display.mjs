@@ -48,10 +48,29 @@ const live=await page.evaluate(async({allSample,fpiSample})=>{
     if(byId>=0)return byId;
     return opts.findIndex(o=>{const t=(o.textContent||'').toLowerCase();return t.includes(String(g.away).toLowerCase())&&t.includes(String(g.home).toLowerCase())});
   };
-  const render=async g=>{const i=choose(g);if(i<0)return false;sel.selectedIndex=i;sel.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch(sel.value);await sleep(650);return true};
+  // The selector change is the single render trigger. Both legacy and v2 matchup
+  // owners are asynchronous, so grade only a panel whose signed game id (or team
+  // labels for older deploys) matches the selected canonical game.
+  const render=async g=>{
+    const i=choose(g);
+    if(i<0)return null;
+    sel.selectedIndex=i;
+    sel.dispatchEvent(new Event('change',{bubbles:true}));
+    for(let n=0;n<50;n++){
+      const p=document.getElementById('cfbMatchupStatsPanel');
+      let signedId='';
+      try{signedId=String(JSON.parse(p?.dataset?.signature||'[]')?.[0]||'');}catch{}
+      const panelText=p?.innerText||'';
+      const teamMatch=panelText.toLowerCase().includes(String(g.away).toLowerCase())&&panelText.toLowerCase().includes(String(g.home).toLowerCase());
+      if(p&&(signedId===String(g.id)||teamMatch))return{panelText,signedId};
+      if(n===10&&typeof window.CFB_MATCHUP_CENTER_V2?.render==='function')window.CFB_MATCHUP_CENTER_V2.render();
+      await sleep(100);
+    }
+    return null;
+  };
   let checked=0,statsWithValues=0,fpiChecked=0,fpiPanels=0;
-  for(const g of allSample){if(!await render(g))continue;const p=document.getElementById('cfbMatchupStatsPanel');if(p){checked++;const t=p.innerText||'';if(/Yds\/play|Success|Explosive|PPG|YPG/i.test(t)&&/\d/.test(t))statsWithValues++;}}
-  for(const g of fpiSample){if(!await render(g))continue;fpiChecked++;const m=document.getElementById('cfbMatchupStatsPanel');if(m&&/ESPN FPI/.test(m.innerText||'')&&/FPI\s+[+-]?\d/i.test(m.innerText||''))fpiPanels++;}
+  for(const g of allSample){const snapshot=await render(g);if(!snapshot)continue;checked++;const t=snapshot.panelText;if(/Yds\/play|Success|Explosive|PPG|YPG/i.test(t)&&/\d/.test(t))statsWithValues++;}
+  for(const g of fpiSample){const snapshot=await render(g);if(!snapshot)continue;fpiChecked++;const t=snapshot.panelText;if(/ESPN FPI/.test(t)&&/FPI\s+[+-]?\d/i.test(t))fpiPanels++;}
   return{options:sel?.options?.length||0,checked,statsWithValues,fpiChecked,fpiPanels};
 },{allSample,fpiSample});
 await browser.close();
