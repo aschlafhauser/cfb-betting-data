@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 8,
-  "updatedAt": "2026-10-18T06:06:18.632Z",
+  "updatedAt": "2026-10-18T11:20:56.743Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -14,7 +14,7 @@
     "marketCoverage": {
       "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 3,
-      "actualMarketGames": 28,
+      "actualMarketGames": 32,
       "dueGames": 3,
       "dueMarketGames": 3,
       "startedGamesExcluded": 0,
@@ -35,15 +35,15 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-10-18T06:06:07.734Z",
+      "verifiedAt": "2026-10-18T11:20:51.889Z",
       "artifact": "data/statistical-display-integrity-2026-w8.json",
-      "detail": "Team/stat coverage 112/112; ESPN FPI 113 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/15."
+      "detail": "Team/stat coverage 112/112; ESPN FPI 113 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/market-derived-integrity-2026-w8.json",
-      "detail": "Independently reconciled 81 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 81/84 expected model/market arithmetic records were checkable for 28 currently priced games"
+      "detail": "Independently reconciled 93 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 93/96 expected model/market arithmetic records were checkable for 32 currently priced games"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -55,11 +55,11 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 5 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 6 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 12 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 14 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -81,7 +81,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-10-18T06:04:59.455Z",
+      "verifiedAt": "2026-10-18T11:20:06.672Z",
       "artifact": "data/final-snapshot-integrity-2026-w8.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 56,
@@ -101,7 +101,7 @@
     "marketDerivedIntegrity"
   ],
   "currentPriorityQueue": [
-    "marketDerivedIntegrity: Independently reconciled 81 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 81/84 expected model/market arithmetic records were checkable for 28 currently priced games"
+    "marketDerivedIntegrity: Independently reconciled 93 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 93/96 expected model/market arithmetic records were checkable for 32 currently priced games"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
