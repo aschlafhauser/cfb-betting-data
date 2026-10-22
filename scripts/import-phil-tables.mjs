@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 assert(process.argv[2],'Provide the browser table capture JSON path');
 const raw=JSON.parse(await fs.readFile(process.argv[2],'utf8'));
 const names={power:'power-ratings',pass:'pass-efficiency-defense',agg:'average-game-grade',st:'special-teams',off:'offensive-ypp',def:'defensive-ypp',offavg:'off-yards-vs-opp-avg',defavg:'def-yards-vs-opp-avg'};
-const key=s=>String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const key=s=>{const k=String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');return k==='sanjosest'?'sanjosestate':k};
 const extra={army:'Army West Point',middletenn:'Middle Tennessee',ndakotast:'North Dakota St',nillinois:'Northern Illinois',samhouston:'Sam Houston St',floridaatlantic:'FAU',floridainternational:'FIU',louisianalft:'Louisiana',applalachianst:'Appalachian St',smississippi:'Southern Miss',missst:'Mississippi St',deleware:'Delaware'};
 const previous={},globalNames=new Map();
 for(const [k,n] of Object.entries(names)){
@@ -27,7 +27,13 @@ for(const [k] of Object.entries(names)){
  const localNames=new Map(previous[k].data.rows.flatMap(r=>[r.team,r.sourceTeam].filter(Boolean).map(s=>[key(s),r.team])));
  const resolve=s=>localNames.get(key(s))||localNames.get(key(extra[key(s)]||''))||globalNames.get(key(extra[key(s)]||s));
  const rows=[];
- const add=(sourceTeam,fields)=>{const team=resolve(sourceTeam);assert(team,`Unresolved ${k} team: ${sourceTeam}`);rows.push({...fields,team,...(key(sourceTeam)!==key(team)?{sourceTeam}:{})});};
+ const add=(sourceTeam,fields)=>{
+  const resolved=resolve(sourceTeam);assert(resolved,`Unresolved ${k} team: ${sourceTeam}`);
+  // Match the selected-week ESPN spelling. The live shared resolver strips accents
+  // before the Phil layer sees names, so its source and display keys must agree.
+  const team=key(resolved)==='sanjosestate'?'San José State':resolved;
+  rows.push({...fields,team,...(key(sourceTeam)!==key(team)||team!==resolved?{sourceTeam}:{})});
+ };
  if(k==='power'){
   for(const r of capture.tables[1])for(const i of [0,4,8])if(r[i]&&/^\d+$/.test(r[i+1]||'')&&/^\d+$/.test(r[i+2]||'')){const start=num(r[i+1]),current=num(r[i+2]);add(r[i],{start,current,delta:current-start});}
  }else if(k==='agg'){
