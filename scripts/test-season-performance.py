@@ -18,6 +18,23 @@ class MeasurementTests(unittest.TestCase):
         self.assertEqual(s['homeMarginBias'],-4)
     def test_ungraded_excluded(self):
         self.assertEqual(r.summarize([{'models':{'a':10},'result':{'status':'pending'}}],'a')['n'],0)
+    def test_shadow_grades_only_prospective_published_predictions(self):
+        original_root,original_git=r.ROOT,r.git
+        try:
+            with tempfile.TemporaryDirectory() as temp:
+                root=pathlib.Path(temp);folder=root/'data/final-snapshots';folder.mkdir(parents=True)
+                for name,frozen in [('valid','2026-10-24T16:00Z'),('after-kickoff','2026-10-24T18:00Z'),('late-publication','2026-10-24T16:00Z')]:
+                    value={'canonicalGameId':name,'week':8,'matchup':'Away at Home','kickoff':'2026-10-24T17:00Z','frozenAt':frozen,'market':{'spread':'Home -10'},'shadowModels':{'researchOnly':True,'promoted':False,'candidate':{'homeMargin':11}}}
+                    (folder/(name+'.json')).write_text(json.dumps(value))
+                (root/'data/model-input-diagnosis-2026.json').write_text(json.dumps({'counterfactualGames':9999}))
+                r.ROOT=root;r.git=lambda *args:'2026-10-24T18:00Z' if 'late-publication' in args[-1] else '2026-10-24T16:01Z'
+                results={k:{'status':'final','actualMargin':12} for k in ['valid','after-kickoff','late-publication']}
+                r.grade_shadow_predictions(results,r.stamp('2026-10-25T12:00Z'))
+                saved=json.loads((root/'data/shadow-model-performance-2026.json').read_text())
+                self.assertEqual((saved['prospectiveSnapshotCount'],saved['gradedGames'],saved['excludedInvalidSnapshots']),(1,1,2))
+                self.assertEqual(saved['models']['candidate']['wins'],1)
+                self.assertEqual(saved['models']['candidate']['mae'],1)
+        finally:r.ROOT,r.git=original_root,original_git
     def test_snapshot_uses_named_models_and_is_immutable(self):
         with tempfile.TemporaryDirectory() as temp:
             d=pathlib.Path(temp);(d/'data').mkdir()
