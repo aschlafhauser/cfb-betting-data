@@ -173,6 +173,26 @@ def append_verified_results(results,inventory,asof):
         rows.append({'gameId':gid,'week':i.get('week'),'date':i.get('kickoff','')[:10],'away':r['away'],'home':r['home'],'neutral':i.get('neutral',False),'awayScore':r['awayScore'],'homeScore':r['homeScore'],'closingSpread':None,'closingTotal':None,'officialBet':False,'source':r.get('source'),'resultObservedAt':iso(asof),'notes':'Verified final result for model measurement. No retrospective official bet, closing price, or CLV is inferred.'})
     path.write_text(json.dumps(rows,indent=2)+'\n')
 
+def grade_shadow_predictions(results,asof):
+    rows=[];prospective=0;excluded=0
+    for p in sorted((ROOT/'data/final-snapshots').glob('*.json')):
+        snapshot=read_json(p);shadow=(snapshot or {}).get('shadowModels')
+        if not shadow or shadow.get('researchOnly') is not True:continue
+        kickoff=stamp(snapshot.get('kickoff'));frozen=stamp(snapshot.get('frozenAt'))
+        if not kickoff or not frozen or frozen>=kickoff:excluded+=1;continue
+        published=git('log','--diff-filter=A','--format=%cI','--',str(p.relative_to(ROOT))).strip().splitlines()
+        if not published or stamp(published[-1])>=kickoff:excluded+=1;continue
+        prospective+=1;gid=snapshot.get('canonicalGameId');r=results.get(gid)
+        if not r or r.get('status')!='final':continue
+        matchup=snapshot.get('matchup','').split(' at ')
+        if len(matchup)!=2:continue
+        market=margin(snapshot.get('market',{}).get('spread'),*matchup)
+        models={k:v.get('homeMargin') for k,v in shadow.items() if isinstance(v,dict) and finite(v.get('homeMargin'))}
+        rows.append({'gameId':gid,'week':snapshot.get('week'),'models':models,'marketMargin':market,'result':r,'sourcePath':str(p.relative_to(ROOT)),'frozenAt':snapshot.get('frozenAt')})
+    models=sorted({m for r in rows for m in r['models']})
+    out={'schemaVersion':'cfb-prospective-shadow-performance-v1','asOf':iso(asof),'researchOnly':True,'promoted':False,'prospectiveSnapshotCount':prospective,'gradedGames':len(rows),'excludedInvalidSnapshots':excluded,'models':{m:summarize(rows,m) for m in models},'games':rows,'governance':'Only actual pre-kickoff candidate snapshots are graded here. Counterfactual replay results are separate in model-input-diagnosis-2026.json. No official wagers or production weight changes.'}
+    (ROOT/'data/shadow-model-performance-2026.json').write_text(json.dumps(out,indent=2)+'\n')
+
 def wilson(w,n):
     if not n:return [None,None]
     z=1.96;p=w/n;d=1+z*z/n;c=(p+z*z/(2*n))/d;r=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d
@@ -307,5 +327,6 @@ def main():
     print('RESULT STATUS',collections.Counter(x['status'] for x in results.values()),flush=True)
     analyze(observations,inventory,results,asof,cache)
     append_verified_results(read_json(cache/'resolved-results.json'),inventory,asof)
+    grade_shadow_predictions(read_json(cache/'resolved-results.json'),asof)
 
 if __name__=='__main__':main()
