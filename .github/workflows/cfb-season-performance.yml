@@ -1,0 +1,37 @@
+name: CFB season performance review
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 13 * * 1,5'
+permissions:
+  contents: write
+concurrency:
+  group: cfb-season-performance
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify measurement and named-model freezing
+        run: python scripts/test-season-performance.py
+      - name: Grade all recoverable prospective predictions
+        run: python scripts/review-season-performance.py > /tmp/cfb-season-review.log
+      - name: Persist measurement only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/results-2026.json data/season-performance-2026.json data/season-performance-summary-2026.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: grade CFB season model performance [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
