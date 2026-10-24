@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 8,
-  "updatedAt": "2026-10-24T16:41:14.189Z",
+  "updatedAt": "2026-10-24T19:34:27.341Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -13,15 +13,15 @@
     },
     "marketCoverage": {
       "status": "PASS",
-      "minimumRequired": 35,
-      "actualMarketGames": 35,
-      "dueGames": 35,
-      "dueMarketGames": 35,
-      "startedGamesExcluded": 21,
+      "minimumRequired": 20,
+      "actualMarketGames": 20,
+      "dueGames": 20,
+      "dueMarketGames": 20,
+      "startedGamesExcluded": 36,
       "laterGamesOutsideBlockingWindow": 0,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
-      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 21 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
+      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 36 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -54,11 +54,11 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 7 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 4 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 14 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 13 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -80,20 +80,20 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-10-24T16:41:13.457Z",
+      "verifiedAt": "2026-10-24T19:34:26.783Z",
       "artifact": "data/final-snapshot-integrity-2026-w8.json",
-      "validSnapshots": 44,
-      "pendingBeforeKickoff": 12,
+      "validSnapshots": 54,
+      "pendingBeforeKickoff": 2,
       "permanentFailures": [],
       "acknowledgedExceptions": [],
       "unacknowledgedFailures": [],
-      "detail": "44 valid immutable snapshots; 12 games remain pending before kickoff."
+      "detail": "54 valid immutable snapshots; 2 games remain pending before kickoff."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "blocking": false,
       "artifact": "data/final-snapshot-integrity-2026-w8.json",
-      "detail": "44 valid immutable snapshots; 12 games remain pending before kickoff."
+      "detail": "54 valid immutable snapshots; 2 games remain pending before kickoff."
     }
   },
   "failures": [
