@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 8,
-  "updatedAt": "2026-10-24T12:46:16.914Z",
+  "updatedAt": "2026-10-24T16:41:14.189Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -13,15 +13,15 @@
     },
     "marketCoverage": {
       "status": "PASS",
-      "minimumRequired": 44,
-      "actualMarketGames": 44,
-      "dueGames": 44,
-      "dueMarketGames": 44,
-      "startedGamesExcluded": 12,
+      "minimumRequired": 35,
+      "actualMarketGames": 35,
+      "dueGames": 35,
+      "dueMarketGames": 35,
+      "startedGamesExcluded": 21,
       "laterGamesOutsideBlockingWindow": 0,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
-      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 12 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
+      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 21 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -58,7 +58,7 @@
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 19 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 14 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -80,20 +80,20 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-10-24T12:46:16.343Z",
+      "verifiedAt": "2026-10-24T16:41:13.457Z",
       "artifact": "data/final-snapshot-integrity-2026-w8.json",
-      "validSnapshots": 24,
-      "pendingBeforeKickoff": 32,
+      "validSnapshots": 44,
+      "pendingBeforeKickoff": 12,
       "permanentFailures": [],
       "acknowledgedExceptions": [],
       "unacknowledgedFailures": [],
-      "detail": "24 valid immutable snapshots; 32 games remain pending before kickoff."
+      "detail": "44 valid immutable snapshots; 12 games remain pending before kickoff."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "blocking": false,
       "artifact": "data/final-snapshot-integrity-2026-w8.json",
-      "detail": "24 valid immutable snapshots; 32 games remain pending before kickoff."
+      "detail": "44 valid immutable snapshots; 12 games remain pending before kickoff."
     }
   },
   "failures": [
