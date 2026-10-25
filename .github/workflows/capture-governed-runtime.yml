@@ -238,7 +238,7 @@ jobs:
         id: live_verify
         if: ${{ always() }}
         continue-on-error: true
-        timeout-minutes: 5
+        timeout-minutes: 10
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
           CFB_MIN_MEANINGFUL_MODELS: '40'
