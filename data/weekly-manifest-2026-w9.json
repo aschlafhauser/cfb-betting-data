@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-25T11:47:18.277Z",
+  "updatedAt": "2026-10-25T13:29:59.703Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -33,16 +33,17 @@
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
     "statisticalDisplay": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-10-25T13:29:49.062Z",
       "artifact": "data/statistical-display-integrity-2026-w9.json",
-      "detail": "No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes."
+      "detail": "Team/stat coverage 112/112; ESPN FPI 113 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/15."
     },
     "marketDerivedIntegrity": {
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/market-derived-integrity-2026-w9.json",
-      "detail": "No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+      "detail": "Independently reconciled 37 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 37/100 expected model/market arithmetic records were checkable for 38 currently priced games"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -54,7 +55,7 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 13 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 12 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
@@ -80,7 +81,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-10-25T11:47:17.837Z",
+      "verifiedAt": "2026-10-25T13:28:19.101Z",
       "artifact": "data/final-snapshot-integrity-2026-w9.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 56,
@@ -97,12 +98,10 @@
     }
   },
   "failures": [
-    "statisticalDisplay",
     "marketDerivedIntegrity"
   ],
   "currentPriorityQueue": [
-    "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
-    "marketDerivedIntegrity: No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
+    "marketDerivedIntegrity: Independently reconciled 37 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 37/100 expected model/market arithmetic records were checkable for 38 currently priced games"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
