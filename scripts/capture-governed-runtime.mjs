@@ -1,4 +1,5 @@
 // Persist governed selected-week multi-model outputs into the public CFB runtime.
+// Runtime-created weeks initialize auditable Market-Calibrated anchors from the first selected-week quote.
 // Browser DOM completeness is certified later by dedicated live-portal QA; this capture
 // must not block stats/FPI/research refresh merely because a renderer is temporarily stale.
 import fs from 'node:fs/promises';
