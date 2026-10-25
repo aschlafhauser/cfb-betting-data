@@ -25,7 +25,7 @@ concurrency:
 jobs:
   capture:
     if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Browser installation plus the full desktop/mobile verification matrix can
     # legitimately exceed 30 minutes.  A timeout before the gate steps leaves no
     # selected-week manifest and must never masquerade as a completed checkpoint.
