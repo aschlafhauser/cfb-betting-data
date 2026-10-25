@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-25T06:17:11.883Z",
+  "updatedAt": "2026-10-25T11:47:18.277Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -14,7 +14,7 @@
     "marketCoverage": {
       "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 2,
-      "actualMarketGames": 31,
+      "actualMarketGames": 38,
       "dueGames": 2,
       "dueMarketGames": 2,
       "startedGamesExcluded": 0,
@@ -45,8 +45,8 @@
       "detail": "No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
     },
     "unifiedUpsetResearch": {
-      "status": "FAIL",
-      "detail": "Missing current unified upset-research artifact."
+      "status": "PASS",
+      "detail": "Research artifact week=9; routingViolations=0; +3.5-to-+7 only to Underdog Special, +9.5+ only to Upset Lab, all others calibration."
     },
     "marketMovers": {
       "status": "PASS-SOURCE-LIMITED",
@@ -54,11 +54,11 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 9 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 13 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 0 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 18 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -80,7 +80,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-10-25T06:17:11.322Z",
+      "verifiedAt": "2026-10-25T11:47:17.837Z",
       "artifact": "data/final-snapshot-integrity-2026-w9.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 56,
@@ -98,13 +98,11 @@
   },
   "failures": [
     "statisticalDisplay",
-    "marketDerivedIntegrity",
-    "unifiedUpsetResearch"
+    "marketDerivedIntegrity"
   ],
   "currentPriorityQueue": [
     "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
-    "marketDerivedIntegrity: No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate.",
-    "unifiedUpsetResearch: Missing current unified upset-research artifact."
+    "marketDerivedIntegrity: No persisted independent reconciliation artifact currently proves spread/total/ML-derived arithmetic, dependency timestamps, stored-runtime agreement and rendered-portal agreement against the newest canonical market snapshot. Non-null fields alone do not satisfy the Market-Derived Integrity Gate."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
