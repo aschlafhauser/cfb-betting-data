@@ -1,12 +1,1224 @@
 {
   "schemaVersion": "cfb-prospective-shadow-performance-v1",
-  "asOf": "2026-10-23T15:04:02.996257Z",
+  "asOf": "2026-10-26T19:22:14.250102Z",
   "researchOnly": true,
   "promoted": false,
-  "prospectiveSnapshotCount": 0,
-  "gradedGames": 0,
+  "prospectiveSnapshotCount": 49,
+  "gradedGames": 49,
   "excludedInvalidSnapshots": 0,
-  "models": {},
-  "games": [],
+  "models": {
+    "ensembleAnchorCandidate": {
+      "n": 49,
+      "mae": 11.5606,
+      "rmse": 14.0521,
+      "homeMarginBias": -3.5358,
+      "wins": 22,
+      "losses": 25,
+      "pushes": 0,
+      "atsDecisions": 47,
+      "atsWinPct": 46.81,
+      "ats95PctInterval": [
+        33.33,
+        60.77
+      ],
+      "hypotheticalRoiAtMinus110Pct": -10.64,
+      "outrightWinnerAccuracyPct": 61.22
+    },
+    "marketAnchorCandidate": {
+      "n": 49,
+      "mae": 10.897,
+      "rmse": 13.4016,
+      "homeMarginBias": -2.7734,
+      "wins": 18,
+      "losses": 29,
+      "pushes": 0,
+      "atsDecisions": 47,
+      "atsWinPct": 38.3,
+      "ats95PctInterval": [
+        25.79,
+        52.57
+      ],
+      "hypotheticalRoiAtMinus110Pct": -26.89,
+      "outrightWinnerAccuracyPct": 61.22
+    }
+  },
+  "games": [
+    {
+      "gameId": "ESPN-401856727",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 14.15935652173913,
+        "ensembleAnchorCandidate": 10.809710451821882
+      },
+      "marketMargin": 13.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856727",
+        "home": "Alabama",
+        "away": "Texas A&M",
+        "homeScore": 31,
+        "awayScore": 20,
+        "actualMargin": 11,
+        "actualTotal": 51,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856727",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856727.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401856728",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -6.525224430641822,
+        "ensembleAnchorCandidate": -3.8708249094936504
+      },
+      "marketMargin": -7.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856728",
+        "home": "Auburn",
+        "away": "LSU",
+        "homeScore": 17,
+        "awayScore": 38,
+        "actualMargin": -21,
+        "actualTotal": 55,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856728",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856728.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401856729",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 11.223528755778666,
+        "ensembleAnchorCandidate": 8.515794134537254
+      },
+      "marketMargin": 10.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856729",
+        "home": "Kentucky",
+        "away": "Vanderbilt",
+        "homeScore": 34,
+        "awayScore": 17,
+        "actualMargin": 17,
+        "actualTotal": 51,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856729",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856729.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401856730",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -4.125381811909325,
+        "ensembleAnchorCandidate": -2.8611745919958764
+      },
+      "marketMargin": -1.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856730",
+        "home": "Mississippi State",
+        "away": "Oklahoma",
+        "homeScore": 15,
+        "awayScore": 23,
+        "actualMargin": -8,
+        "actualTotal": 38,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856730",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856730.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401856731",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 1.561754016503257,
+        "ensembleAnchorCandidate": -0.1154169930254868
+      },
+      "marketMargin": 2.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856731",
+        "home": "South Carolina",
+        "away": "Tennessee",
+        "homeScore": 27,
+        "awayScore": 24,
+        "actualMargin": 3,
+        "actualTotal": 51,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856731",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856731.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401856732",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 2.711202658838744,
+        "ensembleAnchorCandidate": 3.2496897240781566
+      },
+      "marketMargin": 3.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856732",
+        "home": "Texas",
+        "away": "Ole Miss",
+        "homeScore": 34,
+        "awayScore": 27,
+        "actualMargin": 7,
+        "actualTotal": 61,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856732",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856732.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401856834",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -2.6891844720496896,
+        "ensembleAnchorCandidate": -1.4553661169570398
+      },
+      "marketMargin": -1.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856834",
+        "home": "Kansas",
+        "away": "Baylor",
+        "homeScore": 25,
+        "awayScore": 24,
+        "actualMargin": 1,
+        "actualTotal": 49,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856834",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T17:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856834.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401856835",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -9.093026915113871,
+        "ensembleAnchorCandidate": -11.124675481937398
+      },
+      "marketMargin": -7.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856835",
+        "home": "UCF",
+        "away": "BYU",
+        "homeScore": 39,
+        "awayScore": 31,
+        "actualMargin": 8,
+        "actualTotal": 70,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856835",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856835.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401856836",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 13.089419458188146,
+        "ensembleAnchorCandidate": 8.825949875545184
+      },
+      "marketMargin": 13.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856836",
+        "home": "Oklahoma State",
+        "away": "Colorado",
+        "homeScore": 57,
+        "awayScore": 24,
+        "actualMargin": 33,
+        "actualTotal": 81,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856836",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856836.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401856837",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 6.396484368770979,
+        "ensembleAnchorCandidate": 1.943530855676744
+      },
+      "marketMargin": 6.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856837",
+        "home": "Utah",
+        "away": "Houston",
+        "homeScore": 21,
+        "awayScore": 13,
+        "actualMargin": 8,
+        "actualTotal": 34,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856837",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-25T02:15Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856837.json",
+      "frozenAt": "2026-10-24T22:34:33.848Z"
+    },
+    {
+      "gameId": "ESPN-401856838",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 12.386354364171298,
+        "ensembleAnchorCandidate": 8.515976856178213
+      },
+      "marketMargin": 12.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856838",
+        "home": "Arizona",
+        "away": "Iowa State",
+        "homeScore": 39,
+        "awayScore": 3,
+        "actualMargin": 36,
+        "actualTotal": 42,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856838",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856838.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401856839",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -3.708693349215803,
+        "ensembleAnchorCandidate": -3.109381637975453
+      },
+      "marketMargin": -1.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856839",
+        "home": "Arizona State",
+        "away": "Kansas State",
+        "homeScore": 28,
+        "awayScore": 17,
+        "actualMargin": 11,
+        "actualTotal": 45,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856839",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:45Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856839.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401856840",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -13.346148760812197,
+        "ensembleAnchorCandidate": -13.580892856837924
+      },
+      "marketMargin": -11.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856840",
+        "home": "Cincinnati",
+        "away": "Texas Tech",
+        "homeScore": 37,
+        "awayScore": 24,
+        "actualMargin": 13,
+        "actualTotal": 61,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856840",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856840.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401856841",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 11.877423416490158,
+        "ensembleAnchorCandidate": 9.305713650368226
+      },
+      "marketMargin": 10.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401856841",
+        "home": "TCU",
+        "away": "West Virginia",
+        "homeScore": 20,
+        "awayScore": 24,
+        "actualMargin": -4,
+        "actualTotal": 44,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856841",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856841.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401858270",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 18.696046790890268,
+        "ensembleAnchorCandidate": 13.607941269448991
+      },
+      "marketMargin": 18.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858270",
+        "home": "SMU",
+        "away": "California",
+        "homeScore": 59,
+        "awayScore": 20,
+        "actualMargin": 39,
+        "actualTotal": 79,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858270",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858270.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401858271",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 2.389286956521739,
+        "ensembleAnchorCandidate": 5.798172075476454
+      },
+      "marketMargin": 2.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858271",
+        "home": "Virginia",
+        "away": "Duke",
+        "homeScore": 16,
+        "awayScore": 19,
+        "actualMargin": -3,
+        "actualTotal": 35,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858271",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-23T23:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858271.json",
+      "frozenAt": "2026-10-23T19:21:38.548Z"
+    },
+    {
+      "gameId": "ESPN-401858272",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -8.596755999451288,
+        "ensembleAnchorCandidate": -6.6267813969016345
+      },
+      "marketMargin": -7.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858272",
+        "home": "Stanford",
+        "away": "NC State",
+        "homeScore": 31,
+        "awayScore": 28,
+        "actualMargin": 3,
+        "actualTotal": 59,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858272",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T02:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858272.json",
+      "frozenAt": "2026-10-23T23:14:43.145Z"
+    },
+    {
+      "gameId": "ESPN-401858273",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 6.618089355734346,
+        "ensembleAnchorCandidate": 5.683528642623559
+      },
+      "marketMargin": 6.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858273",
+        "home": "Georgia Tech",
+        "away": "Boston College",
+        "homeScore": 27,
+        "awayScore": 49,
+        "actualMargin": -22,
+        "actualTotal": 76,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858273",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858273.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401858274",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 20.847404223415822,
+        "ensembleAnchorCandidate": 11.840770082926472
+      },
+      "marketMargin": 20.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858274",
+        "home": "Miami",
+        "away": "Pittsburgh",
+        "homeScore": 52,
+        "awayScore": 23,
+        "actualMargin": 29,
+        "actualTotal": 75,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858274",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858274.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401858275",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 10.456188975615786,
+        "ensembleAnchorCandidate": 8.012543956949484
+      },
+      "marketMargin": 9.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858275",
+        "home": "North Carolina",
+        "away": "Syracuse",
+        "homeScore": 30,
+        "awayScore": 31,
+        "actualMargin": -1,
+        "actualTotal": 61,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858275",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858275.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401858276",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 2.9199150551144983,
+        "ensembleAnchorCandidate": 3.5028951845409564
+      },
+      "marketMargin": 3.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858276",
+        "home": "Clemson",
+        "away": "Virginia Tech",
+        "homeScore": 16,
+        "awayScore": 20,
+        "actualMargin": -4,
+        "actualTotal": 36,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858276",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858276.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401858495",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -11.960952380952381,
+        "ensembleAnchorCandidate": -9.495895329051262
+      },
+      "marketMargin": -10.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858495",
+        "home": "Illinois",
+        "away": "Oregon",
+        "homeScore": 21,
+        "awayScore": 10,
+        "actualMargin": 11,
+        "actualTotal": 31,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858495",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858495.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401858496",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -8.473339130434782,
+        "ensembleAnchorCandidate": -6.310991743492405
+      },
+      "marketMargin": -7.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858496",
+        "home": "Michigan",
+        "away": "Indiana",
+        "homeScore": 6,
+        "awayScore": 13,
+        "actualMargin": -7,
+        "actualTotal": 19,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858496",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858496.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401858497",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -7.206743188665473,
+        "ensembleAnchorCandidate": -5.7465985825943635
+      },
+      "marketMargin": -7.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858497",
+        "home": "Minnesota",
+        "away": "Iowa",
+        "homeScore": 13,
+        "awayScore": 10,
+        "actualMargin": 3,
+        "actualTotal": 23,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858497",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858497.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401858498",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 15.096789274301656,
+        "ensembleAnchorCandidate": 11.673741048323667
+      },
+      "marketMargin": 15.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858498",
+        "home": "Northwestern",
+        "away": "Rutgers",
+        "homeScore": 42,
+        "awayScore": 14,
+        "actualMargin": 28,
+        "actualTotal": 56,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858498",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858498.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401858499",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 16.05884534161491,
+        "ensembleAnchorCandidate": 11.218537944530384
+      },
+      "marketMargin": 16.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858499",
+        "home": "UCLA",
+        "away": "Michigan State",
+        "homeScore": 28,
+        "awayScore": 10,
+        "actualMargin": 18,
+        "actualTotal": 38,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858499",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858499.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401858500",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -2.9556072463768115,
+        "ensembleAnchorCandidate": -2.24409563480337
+      },
+      "marketMargin": -2.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401858500",
+        "home": "Wisconsin",
+        "away": "USC",
+        "homeScore": 24,
+        "awayScore": 7,
+        "actualMargin": 17,
+        "actualTotal": 31,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858500",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858500.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401860905",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -2.7214093904155217,
+        "ensembleAnchorCandidate": -1.924820620401912
+      },
+      "marketMargin": -1.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401860905",
+        "home": "Colorado State",
+        "away": "San Diego State",
+        "homeScore": 56,
+        "awayScore": 49,
+        "actualMargin": 7,
+        "actualTotal": 105,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860905",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T22:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401860905.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401860906",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 13.281896861719515,
+        "ensembleAnchorCandidate": 8.899053130413597
+      },
+      "marketMargin": 14.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401860906",
+        "home": "Texas State",
+        "away": "Utah State",
+        "homeScore": 20,
+        "awayScore": 17,
+        "actualMargin": 3,
+        "actualTotal": 37,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860906",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401860906.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401860907",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -16.099239655781336,
+        "ensembleAnchorCandidate": -10.796454077466468
+      },
+      "marketMargin": -14.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401860907",
+        "home": "Washington State",
+        "away": "Boise State",
+        "homeScore": 10,
+        "awayScore": 31,
+        "actualMargin": -21,
+        "actualTotal": 41,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860907",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T22:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401860907.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401861965",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 13.513544438587287,
+        "ensembleAnchorCandidate": 11.006699311189166
+      },
+      "marketMargin": 13.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401861965",
+        "home": "UConn",
+        "away": "Massachusetts",
+        "homeScore": 35,
+        "awayScore": 16,
+        "actualMargin": 19,
+        "actualTotal": 51,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401861965",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-23T23:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401861965.json",
+      "frozenAt": "2026-10-23T19:21:38.548Z"
+    },
+    {
+      "gameId": "ESPN-401862808",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 0.4927942001287938,
+        "ensembleAnchorCandidate": -0.6932498173616312
+      },
+      "marketMargin": 1.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401862808",
+        "home": "Tulsa",
+        "away": "Army",
+        "homeScore": 35,
+        "awayScore": 38,
+        "actualMargin": -3,
+        "actualTotal": 73,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862808",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T00:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862808.json",
+      "frozenAt": "2026-10-23T19:21:38.548Z"
+    },
+    {
+      "gameId": "ESPN-401862809",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 10.011443359952676,
+        "ensembleAnchorCandidate": 7.387110303109761
+      },
+      "marketMargin": 8.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401862809",
+        "home": "Florida Atlantic",
+        "away": "Rice",
+        "homeScore": 51,
+        "awayScore": 49,
+        "actualMargin": 2,
+        "actualTotal": 100,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862809",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862809.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401862810",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -2.398611554426047,
+        "ensembleAnchorCandidate": -1.3941088542720816
+      },
+      "marketMargin": -3.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401862810",
+        "home": "Navy",
+        "away": "North Texas",
+        "homeScore": 39,
+        "awayScore": 49,
+        "actualMargin": -10,
+        "actualTotal": 88,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862810",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862810.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401862811",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -3.6183762067049074,
+        "ensembleAnchorCandidate": -0.38055536068172047
+      },
+      "marketMargin": -3.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401862811",
+        "home": "Tulane",
+        "away": "UTSA",
+        "homeScore": 19,
+        "awayScore": 42,
+        "actualMargin": -23,
+        "actualTotal": 61,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862811",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-25T00:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862811.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401864525",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -6.605894202898551,
+        "ensembleAnchorCandidate": -5.264081781855577
+      },
+      "marketMargin": null,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401864525",
+        "home": "Wyoming",
+        "away": "Air Force",
+        "homeScore": 28,
+        "awayScore": 14,
+        "actualMargin": 14,
+        "actualTotal": 42,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864525",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T01:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864525.json",
+      "frozenAt": "2026-10-23T19:21:38.548Z"
+    },
+    {
+      "gameId": "ESPN-401864526",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -5.343959627329192,
+        "ensembleAnchorCandidate": -7.681766003201275
+      },
+      "marketMargin": -3.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401864526",
+        "home": "Northern Illinois",
+        "away": "Hawai'i",
+        "homeScore": 21,
+        "awayScore": 56,
+        "actualMargin": -35,
+        "actualTotal": 77,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864526",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864526.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401864527",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 5.387563329679698,
+        "ensembleAnchorCandidate": 6.71125979408275
+      },
+      "marketMargin": 4.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401864527",
+        "home": "New Mexico",
+        "away": "North Dakota State",
+        "homeScore": 21,
+        "awayScore": 16,
+        "actualMargin": 5,
+        "actualTotal": 37,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864527",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-25T02:20Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864527.json",
+      "frozenAt": "2026-10-24T22:34:33.848Z"
+    },
+    {
+      "gameId": "ESPN-401864528",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 6.759002436262222,
+        "ensembleAnchorCandidate": 4.910327735807996
+      },
+      "marketMargin": 5.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401864528",
+        "home": "Nevada",
+        "away": "San Jos\u00e9 State",
+        "homeScore": 28,
+        "awayScore": 13,
+        "actualMargin": 15,
+        "actualTotal": 41,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864528",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T21:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864528.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401866446",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 2.4580981163654547,
+        "ensembleAnchorCandidate": 2.2030452152749858
+      },
+      "marketMargin": 3.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866446",
+        "home": "Kent State",
+        "away": "Akron",
+        "homeScore": 35,
+        "awayScore": 20,
+        "actualMargin": 15,
+        "actualTotal": 55,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866446",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T17:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866446.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401866447",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 15.344999999999999,
+        "ensembleAnchorCandidate": 11.100287191913047
+      },
+      "marketMargin": 14.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866447",
+        "home": "Ball State",
+        "away": "Sacramento State",
+        "homeScore": 34,
+        "awayScore": 17,
+        "actualMargin": 17,
+        "actualTotal": 51,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866447",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866447.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401866448",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 3.6336764002956428,
+        "ensembleAnchorCandidate": 3.8106049653716454
+      },
+      "marketMargin": null,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866448",
+        "home": "Buffalo",
+        "away": "Bowling Green",
+        "homeScore": 31,
+        "awayScore": 24,
+        "actualMargin": 7,
+        "actualTotal": 55,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866448",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T19:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866448.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401866449",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 10.529419550428868,
+        "ensembleAnchorCandidate": 8.928418551175827
+      },
+      "marketMargin": 9.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866449",
+        "home": "Ohio",
+        "away": "Eastern Michigan",
+        "homeScore": 24,
+        "awayScore": 20,
+        "actualMargin": 4,
+        "actualTotal": 44,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866449",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T20:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866449.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401866450",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 1.7978284182761848,
+        "ensembleAnchorCandidate": 2.1373468743395634
+      },
+      "marketMargin": 2.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866450",
+        "home": "Toledo",
+        "away": "Western Michigan",
+        "homeScore": 45,
+        "awayScore": 38,
+        "actualMargin": 7,
+        "actualTotal": 83,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866450",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T16:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866450.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401866476",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -3.132548654244306,
+        "ensembleAnchorCandidate": -1.6853008046816393
+      },
+      "marketMargin": -3.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866476",
+        "home": "Central Michigan",
+        "away": "Miami (OH)",
+        "homeScore": 27,
+        "awayScore": 28,
+        "actualMargin": -1,
+        "actualTotal": 55,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866476",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T17:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866476.json",
+      "frozenAt": "2026-10-24T12:46:16.291Z"
+    },
+    {
+      "gameId": "ESPN-401869935",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -3.221071428571429,
+        "ensembleAnchorCandidate": -0.8619187366293729
+      },
+      "marketMargin": -2.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401869935",
+        "home": "Arkansas State",
+        "away": "Georgia State",
+        "homeScore": 38,
+        "awayScore": 32,
+        "actualMargin": 6,
+        "actualTotal": 70,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869935",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T23:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401869935.json",
+      "frozenAt": "2026-10-24T19:34:26.734Z"
+    },
+    {
+      "gameId": "ESPN-401869967",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": -11.364001035196686,
+        "ensembleAnchorCandidate": -7.844901804485724
+      },
+      "marketMargin": -10.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401869967",
+        "home": "Southern Miss",
+        "away": "Louisiana",
+        "homeScore": 35,
+        "awayScore": 31,
+        "actualMargin": 4,
+        "actualTotal": 66,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869967",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T21:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401869967.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401871093",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 12.575136844493604,
+        "ensembleAnchorCandidate": 7.848362531592592
+      },
+      "marketMargin": 14.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401871093",
+        "home": "Louisiana Tech",
+        "away": "Old Dominion",
+        "homeScore": 26,
+        "awayScore": 0,
+        "actualMargin": 26,
+        "actualTotal": 26,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871093",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T21:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401871093.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    },
+    {
+      "gameId": "ESPN-401871094",
+      "week": 8,
+      "models": {
+        "marketAnchorCandidate": 12.015952380952381,
+        "ensembleAnchorCandidate": 11.369248094439858
+      },
+      "marketMargin": 12.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401871094",
+        "home": "Troy",
+        "away": "UL Monroe",
+        "homeScore": 14,
+        "awayScore": 21,
+        "actualMargin": -7,
+        "actualTotal": 35,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871094",
+        "retrievedAt": "2026-10-26T19:22:14.250102Z",
+        "sourceKickoff": "2026-10-24T20:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w8-ESPN-401871094.json",
+      "frozenAt": "2026-10-24T16:41:13.388Z"
+    }
+  ],
   "governance": "Only actual pre-kickoff candidate snapshots are graded here. Counterfactual replay results are separate in model-input-diagnosis-2026.json. No official wagers or production weight changes."
 }
