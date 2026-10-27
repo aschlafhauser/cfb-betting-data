@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-27T04:52:21.423Z",
+  "updatedAt": "2026-10-27T06:24:09.376Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 55,
-    "underdogSpecial": 19,
+    "underdogSpecial": 20,
     "upsetLab": 23,
-    "intermediate": 13,
+    "intermediate": 12,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -574,6 +574,114 @@
           "Oregon State OL/RB vs Fresno State DL/LB — Fresno State +",
           "Fresno State OL/RB vs Oregon State DL/LB — Fresno State +",
           "Canonical selected-week market: Fresno State +5.5, total 58.5; production model Lean Oregon State edge 3.156494088023352; Football Independent Fresno State edge 5.751637355127461."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 9,
+      "canonicalGameId": "ESPN-401871057",
+      "team": "New Mexico State",
+      "opponent": "Jacksonville State",
+      "currentSpread": "+3.5",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 1,
+      "score25": 1,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "LIMITED",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "LIMITED",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": null,
+        "teamOffenseYppRank": null,
+        "teamAggregateRank": null,
+        "teamDefensiveYppRank": null,
+        "marketTotal": 49.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.43554580738864324,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.43554580738864324,
+      "narrative": {
+        "upsetCase": "New Mexico State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Jacksonville State QB/WR vs New Mexico State DB — Jacksonville State +",
+          "Jacksonville State OL/RB vs New Mexico State DL/LB — Even",
+          "New Mexico State QB/WR vs Jacksonville State DB — Even",
+          "Trey Hedden was efficient through the air but the Aggies managed only 47 rushing yards.",
+          "Canonical selected-week market: New Mexico State +3.5, total 49.5; production model Lean New Mexico State edge 1.764306120900526; Football Independent New Mexico State edge 2.846144522983163."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3946,7 +4054,7 @@
       "canonicalGameId": "ESPN-401858278",
       "team": "Syracuse",
       "opponent": "SMU",
-      "currentSpread": "+9.5",
+      "currentSpread": "+10",
       "band": "UPSET-LAB",
       "profileScore": 0.3,
       "score25": 0.3,
@@ -4014,13 +4122,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3309915811752626,
+        "marketWinProbability": 0.32284218539783427,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3309915811752626,
+      "marketWinProbability": 0.32284218539783427,
       "narrative": {
         "upsetCase": "Syracuse is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
@@ -4033,7 +4141,7 @@
           "SMU QB/WR vs Syracuse DB — SMU ++",
           "SMU OL/RB vs Syracuse DL/LB — SMU +",
           "Phil Steele current power rating: Syracuse 115 vs SMU 125.",
-          "Canonical selected-week market: Syracuse +9.5, total 58.5; production model Lean SMU edge 2.567613985521797; Football Independent Syracuse edge 4.971738737125423."
+          "Canonical selected-week market: Syracuse +10, total 58.5; production model Lean Syracuse edge 3.067613985521797; Football Independent Syracuse edge 5.471738737125423."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -4332,7 +4440,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 76.5,
+        "marketTotal": 77.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -4355,7 +4463,7 @@
           "Florida Atlantic QB/WR vs North Texas DB — Florida Atlantic ++",
           "Florida Atlantic OL/RB vs North Texas DL/LB — Even",
           "North Texas QB/WR vs Florida Atlantic DB — Even",
-          "Canonical selected-week market: Florida Atlantic +13.5, total 76.5; production model Lean Florida Atlantic edge 3.59896464365098; Football Independent Florida Atlantic edge 4.297860820360825."
+          "Canonical selected-week market: Florida Atlantic +13.5, total 77.5; production model Lean Florida Atlantic edge 3.59896464365098; Football Independent Florida Atlantic edge 4.297860820360825."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -5024,114 +5132,6 @@
     },
     {
       "week": 9,
-      "canonicalGameId": "ESPN-401871057",
-      "team": "New Mexico State",
-      "opponent": "Jacksonville State",
-      "currentSpread": "+3",
-      "band": "INTERMEDIATE",
-      "profileScore": 1,
-      "score25": 1,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "LIMITED",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "LIMITED",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": null,
-        "teamOffenseYppRank": null,
-        "teamAggregateRank": null,
-        "teamDefensiveYppRank": null,
-        "marketTotal": 49.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.44467194473763105,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.44467194473763105,
-      "narrative": {
-        "upsetCase": "New Mexico State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Jacksonville State QB/WR vs New Mexico State DB — Jacksonville State +",
-          "Jacksonville State OL/RB vs New Mexico State DL/LB — Even",
-          "New Mexico State QB/WR vs Jacksonville State DB — Even",
-          "Trey Hedden was efficient through the air but the Aggies managed only 47 rushing yards.",
-          "Canonical selected-week market: New Mexico State +3, total 49.5; production model Lean Jacksonville State edge 1.264306120900526; Football Independent New Mexico State edge 2.346144522983163."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 9,
       "canonicalGameId": "ESPN-401856844",
       "team": "Baylor",
       "opponent": "UCF",
@@ -5780,8 +5780,8 @@
     {
       "week": 9,
       "canonicalGameId": "ESPN-401871071",
-      "team": "Delaware",
-      "opponent": "Western Kentucky",
+      "team": "Western Kentucky",
+      "opponent": "Delaware",
       "currentSpread": "+1.5",
       "band": "INTERMEDIATE",
       "profileScore": 0.3,
@@ -5858,7 +5858,7 @@
       "estimatedWinProbability": null,
       "marketWinProbability": 0.47225076494548685,
       "narrative": {
-        "upsetCase": "Delaware is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "upsetCase": "Western Kentucky is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
         "keyThingsToWatch": [
           "game pace / possession count",
@@ -5868,7 +5868,7 @@
           "Delaware QB/WR vs Western Kentucky DB — Even",
           "Delaware OL/RB vs Western Kentucky DL/LB — Even",
           "Western Kentucky QB/WR vs Delaware DB — Even",
-          "Canonical selected-week market: Delaware +1.5, total 57.5; production model Delaware ATS edge 0.16812218498437304; Football Independent Western Kentucky edge 2.060020646160541."
+          "Canonical selected-week market: Western Kentucky +1.5, total 57.5; production model Lean Western Kentucky edge 2.831877815015627; Football Independent Western Kentucky edge 5.060020646160541."
         ]
       },
       "deepDiveStatus": "COMPLETE",
