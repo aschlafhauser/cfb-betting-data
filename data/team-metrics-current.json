@@ -1,11 +1,12 @@
 {
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-29T22:25:19.030Z",
+  "updatedAt": "2026-10-29T22:31:49.277Z",
   "source": {
     "standard": "ESPN team statistics endpoint",
     "advanced": "Derived from ESPN completed-game play-by-play where available",
-    "note": "Success rate uses 50%/70%/100% yards-to-go thresholds by down; explosive pass >=15 yards; explosive rush >=10 yards. EPA/pressure/CPOE are not inferred."
+    "note": "Success rate uses 50%/70%/100% yards-to-go thresholds by down; explosive pass >=15 yards; explosive rush >=10 yards. EPA/pressure/CPOE are not inferred.",
+    "defense": "Derived from opponent ESPN completed-game box scores; missing values remain null."
   },
   "governance": "Display/research metrics only. No automatic production-fair impact unless separately validated.",
   "coverage": {
@@ -42,12 +43,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 27.5,
-        "yardsAllowedPerGame": 406.5,
+        "yardsAllowedPerGame": 408.375,
         "sacks": 19,
         "successRateAllowed": 0.43830570902394106,
         "explosivePassRateAllowed": 0.152317880794702,
         "explosiveRushRateAllowed": 0.16182572614107885,
-        "sackRate": 0.06291390728476821
+        "sackRate": 0.06291390728476821,
+        "passingYardsAllowedPerGame": 269,
+        "rushingYardsAllowedPerGame": 139.375,
+        "thirdDownRateAllowed": 0.3619047619047619
       },
       "units": {
         "QB": {
@@ -76,7 +80,13 @@
       },
       "context": {
         "plays": 526,
-        "completedGames": 8
+        "passPlays": 297,
+        "rushPlays": 229,
+        "defensivePlays": 543,
+        "defensivePassPlays": 302,
+        "redZoneTrips": 33,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -106,12 +116,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 31.125,
-        "yardsAllowedPerGame": 389.875,
+        "yardsAllowedPerGame": 390,
         "sacks": 9,
         "successRateAllowed": 0.41140529531568226,
         "explosivePassRateAllowed": 0.1532258064516129,
         "explosiveRushRateAllowed": 0.13934426229508196,
-        "sackRate": 0.036290322580645164
+        "sackRate": 0.036290322580645164,
+        "passingYardsAllowedPerGame": 218.75,
+        "rushingYardsAllowedPerGame": 171.25,
+        "thirdDownRateAllowed": 0.33663366336633666
       },
       "units": {
         "QB": {
@@ -140,7 +153,13 @@
       },
       "context": {
         "plays": 571,
-        "completedGames": 8
+        "passPlays": 304,
+        "rushPlays": 267,
+        "defensivePlays": 492,
+        "defensivePassPlays": 248,
+        "redZoneTrips": 25,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -175,7 +194,10 @@
         "successRateAllowed": 0.3941176470588235,
         "explosivePassRateAllowed": 0.12206572769953052,
         "explosiveRushRateAllowed": 0.16161616161616163,
-        "sackRate": 0.051643192488262914
+        "sackRate": 0.051643192488262914,
+        "passingYardsAllowedPerGame": 146.375,
+        "rushingYardsAllowedPerGame": 191.75,
+        "thirdDownRateAllowed": 0.3113207547169811
       },
       "units": {
         "QB": {
@@ -204,7 +226,13 @@
       },
       "context": {
         "plays": 499,
-        "completedGames": 8
+        "passPlays": 299,
+        "rushPlays": 200,
+        "defensivePlays": 510,
+        "defensivePassPlays": 213,
+        "redZoneTrips": 20,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -239,7 +267,10 @@
         "successRateAllowed": 0.4712230215827338,
         "explosivePassRateAllowed": 0.17518248175182483,
         "explosiveRushRateAllowed": 0.14184397163120568,
-        "sackRate": 0.051094890510948905
+        "sackRate": 0.051094890510948905,
+        "passingYardsAllowedPerGame": 251.125,
+        "rushingYardsAllowedPerGame": 164.625,
+        "thirdDownRateAllowed": 0.4339622641509434
       },
       "units": {
         "QB": {
@@ -268,7 +299,13 @@
       },
       "context": {
         "plays": 493,
-        "completedGames": 8
+        "passPlays": 248,
+        "rushPlays": 245,
+        "defensivePlays": 556,
+        "defensivePassPlays": 274,
+        "redZoneTrips": 30,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -303,7 +340,10 @@
         "successRateAllowed": 0.42723880597014924,
         "explosivePassRateAllowed": 0.15057915057915058,
         "explosiveRushRateAllowed": 0.15162454873646208,
-        "sackRate": 0.019305019305019305
+        "sackRate": 0.019305019305019305,
+        "passingYardsAllowedPerGame": 221.25,
+        "rushingYardsAllowedPerGame": 158.75,
+        "thirdDownRateAllowed": 0.4095238095238095
       },
       "units": {
         "QB": {
@@ -332,7 +372,13 @@
       },
       "context": {
         "plays": 504,
-        "completedGames": 8
+        "passPlays": 270,
+        "rushPlays": 234,
+        "defensivePlays": 536,
+        "defensivePassPlays": 259,
+        "redZoneTrips": 28,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -367,7 +413,10 @@
         "successRateAllowed": 0.4824016563146998,
         "explosivePassRateAllowed": 0.21962616822429906,
         "explosiveRushRateAllowed": 0.1821561338289963,
-        "sackRate": 0.04205607476635514
+        "sackRate": 0.04205607476635514,
+        "passingYardsAllowedPerGame": 210.5,
+        "rushingYardsAllowedPerGame": 184.375,
+        "thirdDownRateAllowed": 0.38461538461538464
       },
       "units": {
         "QB": {
@@ -396,7 +445,13 @@
       },
       "context": {
         "plays": 494,
-        "completedGames": 8
+        "passPlays": 270,
+        "rushPlays": 224,
+        "defensivePlays": 483,
+        "defensivePassPlays": 214,
+        "redZoneTrips": 19,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -431,7 +486,10 @@
         "successRateAllowed": 0.41865079365079366,
         "explosivePassRateAllowed": 0.12554112554112554,
         "explosiveRushRateAllowed": 0.12363636363636364,
-        "sackRate": 0.05194805194805195
+        "sackRate": 0.05194805194805195,
+        "passingYardsAllowedPerGame": 169.5,
+        "rushingYardsAllowedPerGame": 160.875,
+        "thirdDownRateAllowed": 0.4636363636363636
       },
       "units": {
         "QB": {
@@ -460,7 +518,13 @@
       },
       "context": {
         "plays": 488,
-        "completedGames": 8
+        "passPlays": 222,
+        "rushPlays": 266,
+        "defensivePlays": 506,
+        "defensivePassPlays": 231,
+        "redZoneTrips": 33,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -495,7 +559,10 @@
         "successRateAllowed": 0.4066147859922179,
         "explosivePassRateAllowed": 0.14624505928853754,
         "explosiveRushRateAllowed": 0.13793103448275862,
-        "sackRate": 0.06719367588932806
+        "sackRate": 0.06719367588932806,
+        "passingYardsAllowedPerGame": 209.75,
+        "rushingYardsAllowedPerGame": 136,
+        "thirdDownRateAllowed": 0.40540540540540543
       },
       "units": {
         "QB": {
@@ -524,7 +591,13 @@
       },
       "context": {
         "plays": 500,
-        "completedGames": 8
+        "passPlays": 254,
+        "rushPlays": 246,
+        "defensivePlays": 514,
+        "defensivePassPlays": 253,
+        "redZoneTrips": 25,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -554,12 +627,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 34,
-        "yardsAllowedPerGame": 443.857,
+        "yardsAllowedPerGame": 443.85714285714283,
         "sacks": 8,
         "successRateAllowed": 0.44170403587443946,
         "explosivePassRateAllowed": 0.18674698795180722,
         "explosiveRushRateAllowed": 0.14285714285714285,
-        "sackRate": 0.04819277108433735
+        "sackRate": 0.04819277108433735,
+        "passingYardsAllowedPerGame": 185.57142857142858,
+        "rushingYardsAllowedPerGame": 258.2857142857143,
+        "thirdDownRateAllowed": 0.3956043956043956
       },
       "units": {
         "QB": {
@@ -588,7 +664,13 @@
       },
       "context": {
         "plays": 526,
-        "completedGames": 7
+        "passPlays": 290,
+        "rushPlays": 236,
+        "defensivePlays": 446,
+        "defensivePassPlays": 166,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -617,13 +699,16 @@
         "sackRateAllowed": 0.020161290322580645
       },
       "defense": {
-        "pointsAllowedPerGame": 30.571,
-        "yardsAllowedPerGame": 377.286,
+        "pointsAllowedPerGame": 30.571428571428573,
+        "yardsAllowedPerGame": 377.2857142857143,
         "sacks": 10,
         "successRateAllowed": 0.4336283185840708,
         "explosivePassRateAllowed": 0.20652173913043478,
         "explosiveRushRateAllowed": 0.13805970149253732,
-        "sackRate": 0.05434782608695652
+        "sackRate": 0.05434782608695652,
+        "passingYardsAllowedPerGame": 203.14285714285714,
+        "rushingYardsAllowedPerGame": 174.14285714285714,
+        "thirdDownRateAllowed": 0.34408602150537637
       },
       "units": {
         "QB": {
@@ -652,7 +737,13 @@
       },
       "context": {
         "plays": 488,
-        "completedGames": 7
+        "passPlays": 248,
+        "rushPlays": 240,
+        "defensivePlays": 452,
+        "defensivePassPlays": 184,
+        "redZoneTrips": 37,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -681,13 +772,16 @@
         "sackRateAllowed": 0.05687203791469194
       },
       "defense": {
-        "pointsAllowedPerGame": 24.857,
-        "yardsAllowedPerGame": 334.857,
+        "pointsAllowedPerGame": 24.857142857142858,
+        "yardsAllowedPerGame": 334.85714285714283,
         "sacks": 9,
         "successRateAllowed": 0.4069767441860465,
         "explosivePassRateAllowed": 0.15,
         "explosiveRushRateAllowed": 0.12380952380952381,
-        "sackRate": 0.04090909090909091
+        "sackRate": 0.04090909090909091,
+        "passingYardsAllowedPerGame": 205.42857142857142,
+        "rushingYardsAllowedPerGame": 129.42857142857142,
+        "thirdDownRateAllowed": 0.34831460674157305
       },
       "units": {
         "QB": {
@@ -716,7 +810,13 @@
       },
       "context": {
         "plays": 480,
-        "completedGames": 7
+        "passPlays": 211,
+        "rushPlays": 269,
+        "defensivePlays": 430,
+        "defensivePassPlays": 220,
+        "redZoneTrips": 22,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -751,7 +851,10 @@
         "successRateAllowed": 0.3667262969588551,
         "explosivePassRateAllowed": 0.14790996784565916,
         "explosiveRushRateAllowed": 0.08870967741935484,
-        "sackRate": 0.06752411575562701
+        "sackRate": 0.06752411575562701,
+        "passingYardsAllowedPerGame": 242.5,
+        "rushingYardsAllowedPerGame": 110.125,
+        "thirdDownRateAllowed": 0.3779527559055118
       },
       "units": {
         "QB": {
@@ -780,7 +883,13 @@
       },
       "context": {
         "plays": 544,
-        "completedGames": 8
+        "passPlays": 255,
+        "rushPlays": 289,
+        "defensivePlays": 559,
+        "defensivePassPlays": 311,
+        "redZoneTrips": 42,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -809,13 +918,16 @@
         "sackRateAllowed": 0.07042253521126761
       },
       "defense": {
-        "pointsAllowedPerGame": 24.571,
-        "yardsAllowedPerGame": 416.286,
+        "pointsAllowedPerGame": 24.571428571428573,
+        "yardsAllowedPerGame": 417.14285714285717,
         "sacks": 10,
         "successRateAllowed": 0.44214876033057854,
         "explosivePassRateAllowed": 0.171875,
         "explosiveRushRateAllowed": 0.1541095890410959,
-        "sackRate": 0.052083333333333336
+        "sackRate": 0.052083333333333336,
+        "passingYardsAllowedPerGame": 203.14285714285714,
+        "rushingYardsAllowedPerGame": 214,
+        "thirdDownRateAllowed": 0.5
       },
       "units": {
         "QB": {
@@ -844,7 +956,13 @@
       },
       "context": {
         "plays": 410,
-        "completedGames": 7
+        "passPlays": 213,
+        "rushPlays": 197,
+        "defensivePlays": 484,
+        "defensivePassPlays": 192,
+        "redZoneTrips": 15,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -873,13 +991,16 @@
         "sackRateAllowed": 0.052132701421800945
       },
       "defense": {
-        "pointsAllowedPerGame": 40.571,
-        "yardsAllowedPerGame": 465.143,
+        "pointsAllowedPerGame": 40.57142857142857,
+        "yardsAllowedPerGame": 465.14285714285717,
         "sacks": 11,
         "successRateAllowed": 0.49287169042769857,
         "explosivePassRateAllowed": 0.1894273127753304,
         "explosiveRushRateAllowed": 0.1660377358490566,
-        "sackRate": 0.048458149779735685
+        "sackRate": 0.048458149779735685,
+        "passingYardsAllowedPerGame": 278,
+        "rushingYardsAllowedPerGame": 187.14285714285714,
+        "thirdDownRateAllowed": 0.45054945054945056
       },
       "units": {
         "QB": {
@@ -908,7 +1029,13 @@
       },
       "context": {
         "plays": 395,
-        "completedGames": 7
+        "passPlays": 211,
+        "rushPlays": 184,
+        "defensivePlays": 492,
+        "defensivePassPlays": 227,
+        "redZoneTrips": 18,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -937,13 +1064,16 @@
         "sackRateAllowed": 0.04391891891891892
       },
       "defense": {
-        "pointsAllowedPerGame": 16.143,
-        "yardsAllowedPerGame": 340.143,
+        "pointsAllowedPerGame": 16.142857142857142,
+        "yardsAllowedPerGame": 340.14285714285717,
         "sacks": 27,
         "successRateAllowed": 0.35247524752475246,
         "explosivePassRateAllowed": 0.11785714285714285,
         "explosiveRushRateAllowed": 0.12444444444444444,
-        "sackRate": 0.09642857142857143
+        "sackRate": 0.09642857142857143,
+        "passingYardsAllowedPerGame": 236,
+        "rushingYardsAllowedPerGame": 104.14285714285714,
+        "thirdDownRateAllowed": 0.34782608695652173
       },
       "units": {
         "QB": {
@@ -972,7 +1102,13 @@
       },
       "context": {
         "plays": 546,
-        "completedGames": 7
+        "passPlays": 296,
+        "rushPlays": 250,
+        "defensivePlays": 505,
+        "defensivePassPlays": 280,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1002,12 +1138,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 23,
-        "yardsAllowedPerGame": 357.714,
+        "yardsAllowedPerGame": 357.7142857142857,
         "sacks": 12,
         "successRateAllowed": 0.4041666666666667,
         "explosivePassRateAllowed": 0.17916666666666667,
         "explosiveRushRateAllowed": 0.07083333333333333,
-        "sackRate": 0.05
+        "sackRate": 0.05,
+        "passingYardsAllowedPerGame": 239.71428571428572,
+        "rushingYardsAllowedPerGame": 118,
+        "thirdDownRateAllowed": 0.39814814814814814
       },
       "units": {
         "QB": {
@@ -1036,7 +1175,13 @@
       },
       "context": {
         "plays": 440,
-        "completedGames": 7
+        "passPlays": 219,
+        "rushPlays": 221,
+        "defensivePlays": 480,
+        "defensivePassPlays": 240,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1071,7 +1216,10 @@
         "successRateAllowed": 0.47216494845360824,
         "explosivePassRateAllowed": 0.19047619047619047,
         "explosiveRushRateAllowed": 0.1377952755905512,
-        "sackRate": 0.06926406926406926
+        "sackRate": 0.06926406926406926,
+        "passingYardsAllowedPerGame": 228.875,
+        "rushingYardsAllowedPerGame": 142.125,
+        "thirdDownRateAllowed": 0.375
       },
       "units": {
         "QB": {
@@ -1100,7 +1248,13 @@
       },
       "context": {
         "plays": 492,
-        "completedGames": 8
+        "passPlays": 245,
+        "rushPlays": 247,
+        "defensivePlays": 485,
+        "defensivePassPlays": 231,
+        "redZoneTrips": 26,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1135,7 +1289,10 @@
         "successRateAllowed": 0.41286307053941906,
         "explosivePassRateAllowed": 0.1890547263681592,
         "explosiveRushRateAllowed": 0.13523131672597866,
-        "sackRate": 0.03482587064676617
+        "sackRate": 0.03482587064676617,
+        "passingYardsAllowedPerGame": 194.5,
+        "rushingYardsAllowedPerGame": 177,
+        "thirdDownRateAllowed": 0.40217391304347827
       },
       "units": {
         "QB": {
@@ -1164,7 +1321,13 @@
       },
       "context": {
         "plays": 508,
-        "completedGames": 8
+        "passPlays": 289,
+        "rushPlays": 219,
+        "defensivePlays": 482,
+        "defensivePassPlays": 201,
+        "redZoneTrips": 21,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1193,13 +1356,16 @@
         "sackRateAllowed": 0.0045662100456621
       },
       "defense": {
-        "pointsAllowedPerGame": 13.429,
+        "pointsAllowedPerGame": 13.428571428571429,
         "yardsAllowedPerGame": 235,
         "sacks": 12,
         "successRateAllowed": 0.3699731903485255,
         "explosivePassRateAllowed": 0.12626262626262627,
         "explosiveRushRateAllowed": 0.05714285714285714,
-        "sackRate": 0.06060606060606061
+        "sackRate": 0.06060606060606061,
+        "passingYardsAllowedPerGame": 167.71428571428572,
+        "rushingYardsAllowedPerGame": 67.28571428571429,
+        "thirdDownRateAllowed": 0.39080459770114945
       },
       "units": {
         "QB": {
@@ -1228,7 +1394,13 @@
       },
       "context": {
         "plays": 477,
-        "completedGames": 7
+        "passPlays": 219,
+        "rushPlays": 258,
+        "defensivePlays": 373,
+        "defensivePassPlays": 198,
+        "redZoneTrips": 36,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1257,13 +1429,16 @@
         "sackRateAllowed": 0.07608695652173914
       },
       "defense": {
-        "pointsAllowedPerGame": 29.143,
-        "yardsAllowedPerGame": 365.143,
+        "pointsAllowedPerGame": 29.142857142857142,
+        "yardsAllowedPerGame": 365.14285714285717,
         "sacks": 15,
         "successRateAllowed": 0.41784037558685444,
         "explosivePassRateAllowed": 0.19796954314720813,
         "explosiveRushRateAllowed": 0.09170305676855896,
-        "sackRate": 0.07614213197969544
+        "sackRate": 0.07614213197969544,
+        "passingYardsAllowedPerGame": 255.85714285714286,
+        "rushingYardsAllowedPerGame": 109.28571428571429,
+        "thirdDownRateAllowed": 0.4444444444444444
       },
       "units": {
         "QB": {
@@ -1292,7 +1467,13 @@
       },
       "context": {
         "plays": 447,
-        "completedGames": 7
+        "passPlays": 92,
+        "rushPlays": 355,
+        "defensivePlays": 426,
+        "defensivePassPlays": 197,
+        "redZoneTrips": 26,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1321,13 +1502,16 @@
         "sackRateAllowed": 0.06692913385826772
       },
       "defense": {
-        "pointsAllowedPerGame": 16.714,
-        "yardsAllowedPerGame": 314.857,
+        "pointsAllowedPerGame": 16.714285714285715,
+        "yardsAllowedPerGame": 314.85714285714283,
         "sacks": 18,
         "successRateAllowed": 0.34934497816593885,
         "explosivePassRateAllowed": 0.12396694214876033,
         "explosiveRushRateAllowed": 0.12962962962962962,
-        "sackRate": 0.0743801652892562
+        "sackRate": 0.0743801652892562,
+        "passingYardsAllowedPerGame": 207.71428571428572,
+        "rushingYardsAllowedPerGame": 107.14285714285714,
+        "thirdDownRateAllowed": 0.38095238095238093
       },
       "units": {
         "QB": {
@@ -1356,7 +1540,13 @@
       },
       "context": {
         "plays": 468,
-        "completedGames": 7
+        "passPlays": 254,
+        "rushPlays": 214,
+        "defensivePlays": 458,
+        "defensivePassPlays": 242,
+        "redZoneTrips": 29,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1385,13 +1575,16 @@
         "sackRateAllowed": 0.05429864253393665
       },
       "defense": {
-        "pointsAllowedPerGame": 20.429,
-        "yardsAllowedPerGame": 372.857,
+        "pointsAllowedPerGame": 20.428571428571427,
+        "yardsAllowedPerGame": 372.85714285714283,
         "sacks": 19,
         "successRateAllowed": 0.4061224489795918,
         "explosivePassRateAllowed": 0.15614617940199335,
         "explosiveRushRateAllowed": 0.15873015873015872,
-        "sackRate": 0.06312292358803986
+        "sackRate": 0.06312292358803986,
+        "passingYardsAllowedPerGame": 266.14285714285717,
+        "rushingYardsAllowedPerGame": 106.71428571428571,
+        "thirdDownRateAllowed": 0.375
       },
       "units": {
         "QB": {
@@ -1420,7 +1613,13 @@
       },
       "context": {
         "plays": 469,
-        "completedGames": 7
+        "passPlays": 221,
+        "rushPlays": 248,
+        "defensivePlays": 490,
+        "defensivePassPlays": 301,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1449,13 +1648,16 @@
         "sackRateAllowed": 0.03910614525139665
       },
       "defense": {
-        "pointsAllowedPerGame": 15.286,
-        "yardsAllowedPerGame": 279.857,
+        "pointsAllowedPerGame": 15.285714285714286,
+        "yardsAllowedPerGame": 280.14285714285717,
         "sacks": 10,
         "successRateAllowed": 0.3875802997858672,
         "explosivePassRateAllowed": 0.1087866108786611,
         "explosiveRushRateAllowed": 0.06578947368421052,
-        "sackRate": 0.04184100418410042
+        "sackRate": 0.04184100418410042,
+        "passingYardsAllowedPerGame": 183.57142857142858,
+        "rushingYardsAllowedPerGame": 96.57142857142857,
+        "thirdDownRateAllowed": 0.3925233644859813
       },
       "units": {
         "QB": {
@@ -1484,7 +1686,13 @@
       },
       "context": {
         "plays": 404,
-        "completedGames": 7
+        "passPlays": 179,
+        "rushPlays": 225,
+        "defensivePlays": 467,
+        "defensivePassPlays": 239,
+        "redZoneTrips": 23,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1513,13 +1721,16 @@
         "sackRateAllowed": 0.018518518518518517
       },
       "defense": {
-        "pointsAllowedPerGame": 14.286,
-        "yardsAllowedPerGame": 281.286,
+        "pointsAllowedPerGame": 14.285714285714286,
+        "yardsAllowedPerGame": 281.2857142857143,
         "sacks": 20,
         "successRateAllowed": 0.35374149659863946,
         "explosivePassRateAllowed": 0.16593886462882096,
         "explosiveRushRateAllowed": 0.04245283018867924,
-        "sackRate": 0.08733624454148471
+        "sackRate": 0.08733624454148471,
+        "passingYardsAllowedPerGame": 198.42857142857142,
+        "rushingYardsAllowedPerGame": 82.85714285714286,
+        "thirdDownRateAllowed": 0.3106796116504854
       },
       "units": {
         "QB": {
@@ -1548,7 +1759,13 @@
       },
       "context": {
         "plays": 429,
-        "completedGames": 7
+        "passPlays": 216,
+        "rushPlays": 213,
+        "defensivePlays": 441,
+        "defensivePassPlays": 229,
+        "redZoneTrips": 23,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1577,13 +1794,16 @@
         "sackRateAllowed": 0.03361344537815126
       },
       "defense": {
-        "pointsAllowedPerGame": 21.143,
-        "yardsAllowedPerGame": 303.286,
+        "pointsAllowedPerGame": 21.142857142857142,
+        "yardsAllowedPerGame": 303.2857142857143,
         "sacks": 19,
         "successRateAllowed": 0.37089201877934275,
         "explosivePassRateAllowed": 0.14222222222222222,
         "explosiveRushRateAllowed": 0.12315270935960591,
-        "sackRate": 0.08444444444444445
+        "sackRate": 0.08444444444444445,
+        "passingYardsAllowedPerGame": 179.14285714285714,
+        "rushingYardsAllowedPerGame": 124.14285714285714,
+        "thirdDownRateAllowed": 0.2727272727272727
       },
       "units": {
         "QB": {
@@ -1612,7 +1832,13 @@
       },
       "context": {
         "plays": 474,
-        "completedGames": 7
+        "passPlays": 238,
+        "rushPlays": 236,
+        "defensivePlays": 428,
+        "defensivePassPlays": 225,
+        "redZoneTrips": 35,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1641,13 +1867,16 @@
         "sackRateAllowed": 0.05985915492957746
       },
       "defense": {
-        "pointsAllowedPerGame": 26.286,
-        "yardsAllowedPerGame": 336.286,
+        "pointsAllowedPerGame": 26.285714285714285,
+        "yardsAllowedPerGame": 336.2857142857143,
         "sacks": 15,
         "successRateAllowed": 0.418013856812933,
         "explosivePassRateAllowed": 0.14912280701754385,
         "explosiveRushRateAllowed": 0.13658536585365855,
-        "sackRate": 0.06578947368421052
+        "sackRate": 0.06578947368421052,
+        "passingYardsAllowedPerGame": 202.28571428571428,
+        "rushingYardsAllowedPerGame": 134,
+        "thirdDownRateAllowed": 0.39080459770114945
       },
       "units": {
         "QB": {
@@ -1676,7 +1905,13 @@
       },
       "context": {
         "plays": 561,
-        "completedGames": 7
+        "passPlays": 284,
+        "rushPlays": 277,
+        "defensivePlays": 433,
+        "defensivePassPlays": 228,
+        "redZoneTrips": 37,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1706,12 +1941,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 31.625,
-        "yardsAllowedPerGame": 400.75,
+        "yardsAllowedPerGame": 399.375,
         "sacks": 13,
         "successRateAllowed": 0.4108527131782946,
         "explosivePassRateAllowed": 0.19672131147540983,
         "explosiveRushRateAllowed": 0.15808823529411764,
-        "sackRate": 0.05327868852459016
+        "sackRate": 0.05327868852459016,
+        "passingYardsAllowedPerGame": 210,
+        "rushingYardsAllowedPerGame": 189.375,
+        "thirdDownRateAllowed": 0.4074074074074074
       },
       "units": {
         "QB": {
@@ -1740,7 +1978,13 @@
       },
       "context": {
         "plays": 562,
-        "completedGames": 8
+        "passPlays": 353,
+        "rushPlays": 209,
+        "defensivePlays": 516,
+        "defensivePassPlays": 244,
+        "redZoneTrips": 29,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1769,13 +2013,16 @@
         "sackRateAllowed": 0.053061224489795916
       },
       "defense": {
-        "pointsAllowedPerGame": 28.143,
+        "pointsAllowedPerGame": 28.142857142857142,
         "yardsAllowedPerGame": 380,
         "sacks": 7,
         "successRateAllowed": 0.4357142857142857,
         "explosivePassRateAllowed": 0.17889908256880735,
         "explosiveRushRateAllowed": 0.15841584158415842,
-        "sackRate": 0.03211009174311927
+        "sackRate": 0.03211009174311927,
+        "passingYardsAllowedPerGame": 240.71428571428572,
+        "rushingYardsAllowedPerGame": 139.28571428571428,
+        "thirdDownRateAllowed": 0.3522727272727273
       },
       "units": {
         "QB": {
@@ -1804,7 +2051,13 @@
       },
       "context": {
         "plays": 482,
-        "completedGames": 7
+        "passPlays": 245,
+        "rushPlays": 237,
+        "defensivePlays": 420,
+        "defensivePassPlays": 218,
+        "redZoneTrips": 31,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1833,13 +2086,16 @@
         "sackRateAllowed": 0.07106598984771574
       },
       "defense": {
-        "pointsAllowedPerGame": 23.571,
-        "yardsAllowedPerGame": 333.286,
+        "pointsAllowedPerGame": 23.571428571428573,
+        "yardsAllowedPerGame": 333.2857142857143,
         "sacks": 15,
         "successRateAllowed": 0.4105960264900662,
         "explosivePassRateAllowed": 0.10476190476190476,
         "explosiveRushRateAllowed": 0.1440329218106996,
-        "sackRate": 0.07142857142857142
+        "sackRate": 0.07142857142857142,
+        "passingYardsAllowedPerGame": 182.14285714285714,
+        "rushingYardsAllowedPerGame": 151.14285714285714,
+        "thirdDownRateAllowed": 0.34831460674157305
       },
       "units": {
         "QB": {
@@ -1868,7 +2124,13 @@
       },
       "context": {
         "plays": 442,
-        "completedGames": 7
+        "passPlays": 197,
+        "rushPlays": 245,
+        "defensivePlays": 453,
+        "defensivePassPlays": 210,
+        "redZoneTrips": 27,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1898,12 +2160,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 16,
-        "yardsAllowedPerGame": 301.286,
+        "yardsAllowedPerGame": 301.2857142857143,
         "sacks": 15,
         "successRateAllowed": 0.3886255924170616,
         "explosivePassRateAllowed": 0.13953488372093023,
         "explosiveRushRateAllowed": 0.09178743961352658,
-        "sackRate": 0.06976744186046512
+        "sackRate": 0.06976744186046512,
+        "passingYardsAllowedPerGame": 194.14285714285714,
+        "rushingYardsAllowedPerGame": 107.14285714285714,
+        "thirdDownRateAllowed": 0.29213483146067415
       },
       "units": {
         "QB": {
@@ -1932,7 +2197,13 @@
       },
       "context": {
         "plays": 468,
-        "completedGames": 7
+        "passPlays": 222,
+        "rushPlays": 246,
+        "defensivePlays": 422,
+        "defensivePassPlays": 215,
+        "redZoneTrips": 33,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -1961,13 +2232,16 @@
         "sackRateAllowed": 0.03619909502262444
       },
       "defense": {
-        "pointsAllowedPerGame": 25.286,
-        "yardsAllowedPerGame": 382.429,
+        "pointsAllowedPerGame": 25.285714285714285,
+        "yardsAllowedPerGame": 382.42857142857144,
         "sacks": 4,
         "successRateAllowed": 0.4666666666666667,
         "explosivePassRateAllowed": 0.17699115044247787,
         "explosiveRushRateAllowed": 0.10714285714285714,
-        "sackRate": 0.017699115044247787
+        "sackRate": 0.017699115044247787,
+        "passingYardsAllowedPerGame": 248,
+        "rushingYardsAllowedPerGame": 134.42857142857142,
+        "thirdDownRateAllowed": 0.4175824175824176
       },
       "units": {
         "QB": {
@@ -1996,7 +2270,13 @@
       },
       "context": {
         "plays": 429,
-        "completedGames": 7
+        "passPlays": 221,
+        "rushPlays": 208,
+        "defensivePlays": 450,
+        "defensivePassPlays": 226,
+        "redZoneTrips": 25,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2025,13 +2305,16 @@
         "sackRateAllowed": 0.021897810218978103
       },
       "defense": {
-        "pointsAllowedPerGame": 33.286,
-        "yardsAllowedPerGame": 366.571,
+        "pointsAllowedPerGame": 33.285714285714285,
+        "yardsAllowedPerGame": 366.57142857142856,
         "sacks": 12,
         "successRateAllowed": 0.44320712694877507,
         "explosivePassRateAllowed": 0.1722488038277512,
         "explosiveRushRateAllowed": 0.1125,
-        "sackRate": 0.05741626794258373
+        "sackRate": 0.05741626794258373,
+        "passingYardsAllowedPerGame": 217.85714285714286,
+        "rushingYardsAllowedPerGame": 148.71428571428572,
+        "thirdDownRateAllowed": 0.42391304347826086
       },
       "units": {
         "QB": {
@@ -2060,7 +2343,13 @@
       },
       "context": {
         "plays": 472,
-        "completedGames": 7
+        "passPlays": 274,
+        "rushPlays": 198,
+        "defensivePlays": 449,
+        "defensivePassPlays": 209,
+        "redZoneTrips": 32,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2089,13 +2378,16 @@
         "sackRateAllowed": 0.1
       },
       "defense": {
-        "pointsAllowedPerGame": 24.571,
-        "yardsAllowedPerGame": 316.571,
+        "pointsAllowedPerGame": 24.571428571428573,
+        "yardsAllowedPerGame": 316.57142857142856,
         "sacks": 11,
         "successRateAllowed": 0.4383561643835616,
         "explosivePassRateAllowed": 0.11392405063291139,
         "explosiveRushRateAllowed": 0.1357142857142857,
-        "sackRate": 0.06962025316455696
+        "sackRate": 0.06962025316455696,
+        "passingYardsAllowedPerGame": 126,
+        "rushingYardsAllowedPerGame": 190.57142857142858,
+        "thirdDownRateAllowed": 0.40860215053763443
       },
       "units": {
         "QB": {
@@ -2124,7 +2416,13 @@
       },
       "context": {
         "plays": 462,
-        "completedGames": 7
+        "passPlays": 190,
+        "rushPlays": 272,
+        "defensivePlays": 438,
+        "defensivePassPlays": 158,
+        "redZoneTrips": 20,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2153,13 +2451,16 @@
         "sackRateAllowed": 0.05759162303664921
       },
       "defense": {
-        "pointsAllowedPerGame": 15.143,
-        "yardsAllowedPerGame": 325.143,
+        "pointsAllowedPerGame": 15.142857142857142,
+        "yardsAllowedPerGame": 325.14285714285717,
         "sacks": 12,
         "successRateAllowed": 0.41855203619909503,
         "explosivePassRateAllowed": 0.1407766990291262,
         "explosiveRushRateAllowed": 0.1271186440677966,
-        "sackRate": 0.05825242718446602
+        "sackRate": 0.05825242718446602,
+        "passingYardsAllowedPerGame": 181,
+        "rushingYardsAllowedPerGame": 144.14285714285714,
+        "thirdDownRateAllowed": 0.3673469387755102
       },
       "units": {
         "QB": {
@@ -2188,7 +2489,13 @@
       },
       "context": {
         "plays": 408,
-        "completedGames": 7
+        "passPlays": 191,
+        "rushPlays": 217,
+        "defensivePlays": 442,
+        "defensivePassPlays": 206,
+        "redZoneTrips": 22,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2223,7 +2530,10 @@
         "successRateAllowed": 0.470954356846473,
         "explosivePassRateAllowed": 0.1377551020408163,
         "explosiveRushRateAllowed": 0.15384615384615385,
-        "sackRate": 0.08163265306122448
+        "sackRate": 0.08163265306122448,
+        "passingYardsAllowedPerGame": 168.375,
+        "rushingYardsAllowedPerGame": 214.75,
+        "thirdDownRateAllowed": 0.35555555555555557
       },
       "units": {
         "QB": {
@@ -2252,7 +2562,13 @@
       },
       "context": {
         "plays": 457,
-        "completedGames": 8
+        "passPlays": 211,
+        "rushPlays": 246,
+        "defensivePlays": 482,
+        "defensivePassPlays": 196,
+        "redZoneTrips": 20,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2287,7 +2603,10 @@
         "successRateAllowed": 0.4444444444444444,
         "explosivePassRateAllowed": 0.164,
         "explosiveRushRateAllowed": 0.11036789297658862,
-        "sackRate": 0.06
+        "sackRate": 0.06,
+        "passingYardsAllowedPerGame": 216.375,
+        "rushingYardsAllowedPerGame": 152.25,
+        "thirdDownRateAllowed": 0.39622641509433965
       },
       "units": {
         "QB": {
@@ -2316,7 +2635,13 @@
       },
       "context": {
         "plays": 472,
-        "completedGames": 8
+        "passPlays": 191,
+        "rushPlays": 281,
+        "defensivePlays": 549,
+        "defensivePassPlays": 250,
+        "redZoneTrips": 29,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2345,13 +2670,16 @@
         "sackRateAllowed": 0.0670391061452514
       },
       "defense": {
-        "pointsAllowedPerGame": 15.714,
-        "yardsAllowedPerGame": 250.143,
+        "pointsAllowedPerGame": 15.714285714285714,
+        "yardsAllowedPerGame": 250.14285714285714,
         "sacks": 14,
         "successRateAllowed": 0.3515439429928741,
         "explosivePassRateAllowed": 0.12807881773399016,
         "explosiveRushRateAllowed": 0.06422018348623854,
-        "sackRate": 0.06896551724137931
+        "sackRate": 0.06896551724137931,
+        "passingYardsAllowedPerGame": 154.57142857142858,
+        "rushingYardsAllowedPerGame": 95.57142857142857,
+        "thirdDownRateAllowed": 0.31958762886597936
       },
       "units": {
         "QB": {
@@ -2380,7 +2708,13 @@
       },
       "context": {
         "plays": 414,
-        "completedGames": 7
+        "passPlays": 179,
+        "rushPlays": 235,
+        "defensivePlays": 421,
+        "defensivePassPlays": 203,
+        "redZoneTrips": 20,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2409,13 +2743,16 @@
         "sackRateAllowed": 0.06726457399103139
       },
       "defense": {
-        "pointsAllowedPerGame": 33.286,
-        "yardsAllowedPerGame": 416.714,
+        "pointsAllowedPerGame": 33.285714285714285,
+        "yardsAllowedPerGame": 416.7142857142857,
         "sacks": 9,
         "successRateAllowed": 0.4776470588235294,
         "explosivePassRateAllowed": 0.1625615763546798,
         "explosiveRushRateAllowed": 0.23873873873873874,
-        "sackRate": 0.04433497536945813
+        "sackRate": 0.04433497536945813,
+        "passingYardsAllowedPerGame": 217.57142857142858,
+        "rushingYardsAllowedPerGame": 199.14285714285714,
+        "thirdDownRateAllowed": 0.425
       },
       "units": {
         "QB": {
@@ -2444,7 +2781,13 @@
       },
       "context": {
         "plays": 461,
-        "completedGames": 7
+        "passPlays": 223,
+        "rushPlays": 238,
+        "defensivePlays": 425,
+        "defensivePassPlays": 203,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2473,13 +2816,16 @@
         "sackRateAllowed": 0.11952191235059761
       },
       "defense": {
-        "pointsAllowedPerGame": 24.143,
-        "yardsAllowedPerGame": 396.857,
+        "pointsAllowedPerGame": 24.142857142857142,
+        "yardsAllowedPerGame": 396.85714285714283,
         "sacks": 16,
         "successRateAllowed": 0.42661448140900193,
         "explosivePassRateAllowed": 0.1417624521072797,
         "explosiveRushRateAllowed": 0.124,
-        "sackRate": 0.06130268199233716
+        "sackRate": 0.06130268199233716,
+        "passingYardsAllowedPerGame": 250.85714285714286,
+        "rushingYardsAllowedPerGame": 146,
+        "thirdDownRateAllowed": 0.3490566037735849
       },
       "units": {
         "QB": {
@@ -2508,7 +2854,13 @@
       },
       "context": {
         "plays": 483,
-        "completedGames": 7
+        "passPlays": 251,
+        "rushPlays": 232,
+        "defensivePlays": 511,
+        "defensivePassPlays": 261,
+        "redZoneTrips": 23,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2537,13 +2889,16 @@
         "sackRateAllowed": 0.018115942028985508
       },
       "defense": {
-        "pointsAllowedPerGame": 25.286,
-        "yardsAllowedPerGame": 394.143,
+        "pointsAllowedPerGame": 25.285714285714285,
+        "yardsAllowedPerGame": 394.14285714285717,
         "sacks": 11,
         "successRateAllowed": 0.42299794661190965,
         "explosivePassRateAllowed": 0.19130434782608696,
         "explosiveRushRateAllowed": 0.11284046692607004,
-        "sackRate": 0.04782608695652174
+        "sackRate": 0.04782608695652174,
+        "passingYardsAllowedPerGame": 233,
+        "rushingYardsAllowedPerGame": 161.14285714285714,
+        "thirdDownRateAllowed": 0.41346153846153844
       },
       "units": {
         "QB": {
@@ -2572,7 +2927,13 @@
       },
       "context": {
         "plays": 484,
-        "completedGames": 7
+        "passPlays": 276,
+        "rushPlays": 208,
+        "defensivePlays": 487,
+        "defensivePassPlays": 230,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2601,13 +2962,16 @@
         "sackRateAllowed": 0.04819277108433735
       },
       "defense": {
-        "pointsAllowedPerGame": 30.714,
+        "pointsAllowedPerGame": 30.714285714285715,
         "yardsAllowedPerGame": 430,
         "sacks": 4,
         "successRateAllowed": 0.43683083511777304,
         "explosivePassRateAllowed": 0.17040358744394618,
         "explosiveRushRateAllowed": 0.12704918032786885,
-        "sackRate": 0.017937219730941704
+        "sackRate": 0.017937219730941704,
+        "passingYardsAllowedPerGame": 238.42857142857142,
+        "rushingYardsAllowedPerGame": 191.57142857142858,
+        "thirdDownRateAllowed": 0.39361702127659576
       },
       "units": {
         "QB": {
@@ -2636,7 +3000,13 @@
       },
       "context": {
         "plays": 475,
-        "completedGames": 7
+        "passPlays": 249,
+        "rushPlays": 226,
+        "defensivePlays": 467,
+        "defensivePassPlays": 223,
+        "redZoneTrips": 32,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2671,7 +3041,10 @@
         "successRateAllowed": 0.38256227758007116,
         "explosivePassRateAllowed": 0.15355805243445692,
         "explosiveRushRateAllowed": 0.09152542372881356,
-        "sackRate": 0.052434456928838954
+        "sackRate": 0.052434456928838954,
+        "passingYardsAllowedPerGame": 211.375,
+        "rushingYardsAllowedPerGame": 137.25,
+        "thirdDownRateAllowed": 0.36
       },
       "units": {
         "QB": {
@@ -2700,7 +3073,13 @@
       },
       "context": {
         "plays": 474,
-        "completedGames": 8
+        "passPlays": 228,
+        "rushPlays": 246,
+        "defensivePlays": 562,
+        "defensivePassPlays": 267,
+        "redZoneTrips": 19,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2729,13 +3108,16 @@
         "sackRateAllowed": 0.02100840336134454
       },
       "defense": {
-        "pointsAllowedPerGame": 21.143,
-        "yardsAllowedPerGame": 305.286,
+        "pointsAllowedPerGame": 21.142857142857142,
+        "yardsAllowedPerGame": 305.2857142857143,
         "sacks": 16,
         "successRateAllowed": 0.3566265060240964,
         "explosivePassRateAllowed": 0.1270718232044199,
         "explosiveRushRateAllowed": 0.18376068376068377,
-        "sackRate": 0.08839779005524862
+        "sackRate": 0.08839779005524862,
+        "passingYardsAllowedPerGame": 147.14285714285714,
+        "rushingYardsAllowedPerGame": 158.14285714285714,
+        "thirdDownRateAllowed": 0.3404255319148936
       },
       "units": {
         "QB": {
@@ -2764,7 +3146,13 @@
       },
       "context": {
         "plays": 492,
-        "completedGames": 7
+        "passPlays": 238,
+        "rushPlays": 254,
+        "defensivePlays": 415,
+        "defensivePassPlays": 181,
+        "redZoneTrips": 38,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2793,13 +3181,16 @@
         "sackRateAllowed": 0.0546875
       },
       "defense": {
-        "pointsAllowedPerGame": 30.143,
-        "yardsAllowedPerGame": 391.571,
+        "pointsAllowedPerGame": 30.142857142857142,
+        "yardsAllowedPerGame": 391.57142857142856,
         "sacks": 15,
         "successRateAllowed": 0.4,
         "explosivePassRateAllowed": 0.2047244094488189,
         "explosiveRushRateAllowed": 0.16182572614107885,
-        "sackRate": 0.05905511811023622
+        "sackRate": 0.05905511811023622,
+        "passingYardsAllowedPerGame": 253,
+        "rushingYardsAllowedPerGame": 138.57142857142858,
+        "thirdDownRateAllowed": 0.39805825242718446
       },
       "units": {
         "QB": {
@@ -2828,7 +3219,13 @@
       },
       "context": {
         "plays": 477,
-        "completedGames": 7
+        "passPlays": 256,
+        "rushPlays": 221,
+        "defensivePlays": 495,
+        "defensivePassPlays": 254,
+        "redZoneTrips": 21,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2857,13 +3254,16 @@
         "sackRateAllowed": 0.0730593607305936
       },
       "defense": {
-        "pointsAllowedPerGame": 25.857,
-        "yardsAllowedPerGame": 419.429,
+        "pointsAllowedPerGame": 25.857142857142858,
+        "yardsAllowedPerGame": 419.42857142857144,
         "sacks": 13,
         "successRateAllowed": 0.4682713347921225,
         "explosivePassRateAllowed": 0.2198952879581152,
         "explosiveRushRateAllowed": 0.14285714285714285,
-        "sackRate": 0.06806282722513089
+        "sackRate": 0.06806282722513089,
+        "passingYardsAllowedPerGame": 220.71428571428572,
+        "rushingYardsAllowedPerGame": 198.71428571428572,
+        "thirdDownRateAllowed": 0.44565217391304346
       },
       "units": {
         "QB": {
@@ -2892,7 +3292,13 @@
       },
       "context": {
         "plays": 443,
-        "completedGames": 7
+        "passPlays": 219,
+        "rushPlays": 224,
+        "defensivePlays": 457,
+        "defensivePassPlays": 191,
+        "redZoneTrips": 17,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2922,12 +3328,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 26,
-        "yardsAllowedPerGame": 355.571,
+        "yardsAllowedPerGame": 355.57142857142856,
         "sacks": 16,
         "successRateAllowed": 0.3916083916083916,
         "explosivePassRateAllowed": 0.15,
         "explosiveRushRateAllowed": 0.20095693779904306,
-        "sackRate": 0.07272727272727272
+        "sackRate": 0.07272727272727272,
+        "passingYardsAllowedPerGame": 206.28571428571428,
+        "rushingYardsAllowedPerGame": 149.28571428571428,
+        "thirdDownRateAllowed": 0.28735632183908044
       },
       "units": {
         "QB": {
@@ -2956,7 +3365,13 @@
       },
       "context": {
         "plays": 471,
-        "completedGames": 7
+        "passPlays": 215,
+        "rushPlays": 256,
+        "defensivePlays": 429,
+        "defensivePassPlays": 220,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -2985,13 +3400,16 @@
         "sackRateAllowed": 0.08571428571428572
       },
       "defense": {
-        "pointsAllowedPerGame": 23.857,
-        "yardsAllowedPerGame": 392.286,
+        "pointsAllowedPerGame": 23.857142857142858,
+        "yardsAllowedPerGame": 392.57142857142856,
         "sacks": 12,
         "successRateAllowed": 0.41414141414141414,
         "explosivePassRateAllowed": 0.15789473684210525,
         "explosiveRushRateAllowed": 0.06666666666666667,
-        "sackRate": 0.042105263157894736
+        "sackRate": 0.042105263157894736,
+        "passingYardsAllowedPerGame": 284.7142857142857,
+        "rushingYardsAllowedPerGame": 107.85714285714286,
+        "thirdDownRateAllowed": 0.3942307692307692
       },
       "units": {
         "QB": {
@@ -3020,7 +3438,13 @@
       },
       "context": {
         "plays": 450,
-        "completedGames": 7
+        "passPlays": 210,
+        "rushPlays": 240,
+        "defensivePlays": 495,
+        "defensivePassPlays": 285,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3049,13 +3473,16 @@
         "sackRateAllowed": 0.07042253521126761
       },
       "defense": {
-        "pointsAllowedPerGame": 20.857,
-        "yardsAllowedPerGame": 296.429,
+        "pointsAllowedPerGame": 20.857142857142858,
+        "yardsAllowedPerGame": 296.42857142857144,
         "sacks": 9,
         "successRateAllowed": 0.39944903581267216,
         "explosivePassRateAllowed": 0.12209302325581395,
         "explosiveRushRateAllowed": 0.14136125654450263,
-        "sackRate": 0.05232558139534884
+        "sackRate": 0.05232558139534884,
+        "passingYardsAllowedPerGame": 163.85714285714286,
+        "rushingYardsAllowedPerGame": 132.57142857142858,
+        "thirdDownRateAllowed": 0.35064935064935066
       },
       "units": {
         "QB": {
@@ -3084,7 +3511,13 @@
       },
       "context": {
         "plays": 506,
-        "completedGames": 7
+        "passPlays": 71,
+        "rushPlays": 435,
+        "defensivePlays": 363,
+        "defensivePassPlays": 172,
+        "redZoneTrips": 34,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3114,12 +3547,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 28,
-        "yardsAllowedPerGame": 404.571,
+        "yardsAllowedPerGame": 404.57142857142856,
         "sacks": 9,
         "successRateAllowed": 0.4638949671772429,
         "explosivePassRateAllowed": 0.21634615384615385,
         "explosiveRushRateAllowed": 0.13253012048192772,
-        "sackRate": 0.04326923076923077
+        "sackRate": 0.04326923076923077,
+        "passingYardsAllowedPerGame": 238.71428571428572,
+        "rushingYardsAllowedPerGame": 165.85714285714286,
+        "thirdDownRateAllowed": 0.5
       },
       "units": {
         "QB": {
@@ -3148,7 +3584,13 @@
       },
       "context": {
         "plays": 404,
-        "completedGames": 7
+        "passPlays": 160,
+        "rushPlays": 244,
+        "defensivePlays": 457,
+        "defensivePassPlays": 208,
+        "redZoneTrips": 19,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3177,13 +3619,16 @@
         "sackRateAllowed": 0.05726872246696035
       },
       "defense": {
-        "pointsAllowedPerGame": 26.286,
-        "yardsAllowedPerGame": 348.857,
+        "pointsAllowedPerGame": 26.285714285714285,
+        "yardsAllowedPerGame": 348.85714285714283,
         "sacks": 17,
         "successRateAllowed": 0.36645962732919257,
         "explosivePassRateAllowed": 0.1926605504587156,
         "explosiveRushRateAllowed": 0.13138686131386862,
-        "sackRate": 0.0779816513761468
+        "sackRate": 0.0779816513761468,
+        "passingYardsAllowedPerGame": 206.42857142857142,
+        "rushingYardsAllowedPerGame": 142.42857142857142,
+        "thirdDownRateAllowed": 0.32710280373831774
       },
       "units": {
         "QB": {
@@ -3212,7 +3657,13 @@
       },
       "context": {
         "plays": 459,
-        "completedGames": 7
+        "passPlays": 227,
+        "rushPlays": 232,
+        "defensivePlays": 492,
+        "defensivePassPlays": 218,
+        "redZoneTrips": 32,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3242,12 +3693,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 21,
-        "yardsAllowedPerGame": 323.429,
+        "yardsAllowedPerGame": 323.42857142857144,
         "sacks": 17,
         "successRateAllowed": 0.3673469387755102,
         "explosivePassRateAllowed": 0.17560975609756097,
         "explosiveRushRateAllowed": 0.11864406779661017,
-        "sackRate": 0.08292682926829269
+        "sackRate": 0.08292682926829269,
+        "passingYardsAllowedPerGame": 198,
+        "rushingYardsAllowedPerGame": 125.42857142857143,
+        "thirdDownRateAllowed": 0.3711340206185567
       },
       "units": {
         "QB": {
@@ -3276,7 +3730,13 @@
       },
       "context": {
         "plays": 463,
-        "completedGames": 7
+        "passPlays": 226,
+        "rushPlays": 237,
+        "defensivePlays": 441,
+        "defensivePassPlays": 205,
+        "redZoneTrips": 31,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3305,13 +3765,16 @@
         "sackRateAllowed": 0.031746031746031744
       },
       "defense": {
-        "pointsAllowedPerGame": 32.429,
-        "yardsAllowedPerGame": 414.571,
+        "pointsAllowedPerGame": 32.42857142857143,
+        "yardsAllowedPerGame": 414.57142857142856,
         "sacks": 10,
         "successRateAllowed": 0.5204819277108433,
         "explosivePassRateAllowed": 0.18141592920353983,
         "explosiveRushRateAllowed": 0.18518518518518517,
-        "sackRate": 0.04424778761061947
+        "sackRate": 0.04424778761061947,
+        "passingYardsAllowedPerGame": 252.85714285714286,
+        "rushingYardsAllowedPerGame": 161.71428571428572,
+        "thirdDownRateAllowed": 0.4189189189189189
       },
       "units": {
         "QB": {
@@ -3340,7 +3803,13 @@
       },
       "context": {
         "plays": 497,
-        "completedGames": 7
+        "passPlays": 189,
+        "rushPlays": 308,
+        "defensivePlays": 415,
+        "defensivePassPlays": 226,
+        "redZoneTrips": 31,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3370,12 +3839,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 35.5,
-        "yardsAllowedPerGame": 443.125,
+        "yardsAllowedPerGame": 442.75,
         "sacks": 7,
         "successRateAllowed": 0.48161764705882354,
         "explosivePassRateAllowed": 0.1821561338289963,
         "explosiveRushRateAllowed": 0.14909090909090908,
-        "sackRate": 0.026022304832713755
+        "sackRate": 0.026022304832713755,
+        "passingYardsAllowedPerGame": 255.5,
+        "rushingYardsAllowedPerGame": 187.625,
+        "thirdDownRateAllowed": 0.49056603773584906
       },
       "units": {
         "QB": {
@@ -3404,7 +3876,13 @@
       },
       "context": {
         "plays": 516,
-        "completedGames": 8
+        "passPlays": 291,
+        "rushPlays": 225,
+        "defensivePlays": 544,
+        "defensivePassPlays": 269,
+        "redZoneTrips": 28,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3433,13 +3911,16 @@
         "sackRateAllowed": 0.06532663316582915
       },
       "defense": {
-        "pointsAllowedPerGame": 27.429,
-        "yardsAllowedPerGame": 419.857,
+        "pointsAllowedPerGame": 27.428571428571427,
+        "yardsAllowedPerGame": 419.85714285714283,
         "sacks": 16,
         "successRateAllowed": 0.41472868217054265,
         "explosivePassRateAllowed": 0.1520912547528517,
         "explosiveRushRateAllowed": 0.08695652173913043,
-        "sackRate": 0.060836501901140684
+        "sackRate": 0.060836501901140684,
+        "passingYardsAllowedPerGame": 268.85714285714283,
+        "rushingYardsAllowedPerGame": 151,
+        "thirdDownRateAllowed": 0.35294117647058826
       },
       "units": {
         "QB": {
@@ -3468,7 +3949,13 @@
       },
       "context": {
         "plays": 432,
-        "completedGames": 7
+        "passPlays": 199,
+        "rushPlays": 233,
+        "defensivePlays": 516,
+        "defensivePassPlays": 263,
+        "redZoneTrips": 26,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3497,13 +3984,16 @@
         "sackRateAllowed": 0.0622568093385214
       },
       "defense": {
-        "pointsAllowedPerGame": 29.857,
-        "yardsAllowedPerGame": 359.571,
+        "pointsAllowedPerGame": 29.857142857142858,
+        "yardsAllowedPerGame": 359.57142857142856,
         "sacks": 13,
         "successRateAllowed": 0.40086206896551724,
         "explosivePassRateAllowed": 0.13671875,
         "explosiveRushRateAllowed": 0.1346153846153846,
-        "sackRate": 0.05078125
+        "sackRate": 0.05078125,
+        "passingYardsAllowedPerGame": 213.14285714285714,
+        "rushingYardsAllowedPerGame": 146.42857142857142,
+        "thirdDownRateAllowed": 0.36
       },
       "units": {
         "QB": {
@@ -3532,7 +4022,13 @@
       },
       "context": {
         "plays": 471,
-        "completedGames": 7
+        "passPlays": 257,
+        "rushPlays": 214,
+        "defensivePlays": 464,
+        "defensivePassPlays": 256,
+        "redZoneTrips": 25,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3561,13 +4057,16 @@
         "sackRateAllowed": 0.020833333333333332
       },
       "defense": {
-        "pointsAllowedPerGame": 18.571,
-        "yardsAllowedPerGame": 301.571,
+        "pointsAllowedPerGame": 18.571428571428573,
+        "yardsAllowedPerGame": 301.57142857142856,
         "sacks": 12,
         "successRateAllowed": 0.3973509933774834,
         "explosivePassRateAllowed": 0.10810810810810811,
         "explosiveRushRateAllowed": 0.1134020618556701,
-        "sackRate": 0.04633204633204633
+        "sackRate": 0.04633204633204633,
+        "passingYardsAllowedPerGame": 203.42857142857142,
+        "rushingYardsAllowedPerGame": 98.14285714285714,
+        "thirdDownRateAllowed": 0.4
       },
       "units": {
         "QB": {
@@ -3596,7 +4095,13 @@
       },
       "context": {
         "plays": 439,
-        "completedGames": 7
+        "passPlays": 192,
+        "rushPlays": 247,
+        "defensivePlays": 453,
+        "defensivePassPlays": 259,
+        "redZoneTrips": 32,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3625,13 +4130,16 @@
         "sackRateAllowed": 0.04035874439461883
       },
       "defense": {
-        "pointsAllowedPerGame": 28.286,
-        "yardsAllowedPerGame": 376.571,
+        "pointsAllowedPerGame": 28.285714285714285,
+        "yardsAllowedPerGame": 376.57142857142856,
         "sacks": 18,
         "successRateAllowed": 0.4282608695652174,
         "explosivePassRateAllowed": 0.1520912547528517,
         "explosiveRushRateAllowed": 0.1116751269035533,
-        "sackRate": 0.06844106463878327
+        "sackRate": 0.06844106463878327,
+        "passingYardsAllowedPerGame": 255,
+        "rushingYardsAllowedPerGame": 121.57142857142857,
+        "thirdDownRateAllowed": 0.4411764705882353
       },
       "units": {
         "QB": {
@@ -3660,7 +4168,13 @@
       },
       "context": {
         "plays": 497,
-        "completedGames": 7
+        "passPlays": 223,
+        "rushPlays": 274,
+        "defensivePlays": 460,
+        "defensivePassPlays": 263,
+        "redZoneTrips": 33,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3689,13 +4203,16 @@
         "sackRateAllowed": 0.03940886699507389
       },
       "defense": {
-        "pointsAllowedPerGame": 15.857,
-        "yardsAllowedPerGame": 276.429,
+        "pointsAllowedPerGame": 15.857142857142858,
+        "yardsAllowedPerGame": 276.42857142857144,
         "sacks": 18,
         "successRateAllowed": 0.363013698630137,
         "explosivePassRateAllowed": 0.1375,
         "explosiveRushRateAllowed": 0.08585858585858586,
-        "sackRate": 0.075
+        "sackRate": 0.075,
+        "passingYardsAllowedPerGame": 185,
+        "rushingYardsAllowedPerGame": 91.42857142857143,
+        "thirdDownRateAllowed": 0.3592233009708738
       },
       "units": {
         "QB": {
@@ -3724,7 +4241,13 @@
       },
       "context": {
         "plays": 418,
-        "completedGames": 7
+        "passPlays": 203,
+        "rushPlays": 215,
+        "defensivePlays": 438,
+        "defensivePassPlays": 240,
+        "redZoneTrips": 35,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3753,13 +4276,16 @@
         "sackRateAllowed": 0.0211864406779661
       },
       "defense": {
-        "pointsAllowedPerGame": 20.143,
-        "yardsAllowedPerGame": 288.714,
+        "pointsAllowedPerGame": 20.142857142857142,
+        "yardsAllowedPerGame": 288.7142857142857,
         "sacks": 13,
         "successRateAllowed": 0.38957816377171217,
         "explosivePassRateAllowed": 0.15384615384615385,
         "explosiveRushRateAllowed": 0.125,
-        "sackRate": 0.06666666666666667
+        "sackRate": 0.06666666666666667,
+        "passingYardsAllowedPerGame": 165.14285714285714,
+        "rushingYardsAllowedPerGame": 123.57142857142857,
+        "thirdDownRateAllowed": 0.2976190476190476
       },
       "units": {
         "QB": {
@@ -3788,7 +4314,13 @@
       },
       "context": {
         "plays": 435,
-        "completedGames": 7
+        "passPlays": 236,
+        "rushPlays": 199,
+        "defensivePlays": 403,
+        "defensivePassPlays": 195,
+        "redZoneTrips": 27,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3823,7 +4355,10 @@
         "successRateAllowed": 0.34331337325349304,
         "explosivePassRateAllowed": 0.16153846153846155,
         "explosiveRushRateAllowed": 0.07468879668049792,
-        "sackRate": 0.09615384615384616
+        "sackRate": 0.09615384615384616,
+        "passingYardsAllowedPerGame": 191.625,
+        "rushingYardsAllowedPerGame": 73.125,
+        "thirdDownRateAllowed": 0.3305785123966942
       },
       "units": {
         "QB": {
@@ -3852,7 +4387,13 @@
       },
       "context": {
         "plays": 472,
-        "completedGames": 8
+        "passPlays": 202,
+        "rushPlays": 270,
+        "defensivePlays": 501,
+        "defensivePassPlays": 260,
+        "redZoneTrips": 37,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3881,13 +4422,16 @@
         "sackRateAllowed": 0.07777777777777778
       },
       "defense": {
-        "pointsAllowedPerGame": 16.571,
-        "yardsAllowedPerGame": 364.571,
+        "pointsAllowedPerGame": 16.571428571428573,
+        "yardsAllowedPerGame": 364.57142857142856,
         "sacks": 11,
         "successRateAllowed": 0.42588726513569936,
         "explosivePassRateAllowed": 0.1297709923664122,
         "explosiveRushRateAllowed": 0.14746543778801843,
-        "sackRate": 0.04198473282442748
+        "sackRate": 0.04198473282442748,
+        "passingYardsAllowedPerGame": 211.85714285714286,
+        "rushingYardsAllowedPerGame": 152.71428571428572,
+        "thirdDownRateAllowed": 0.37735849056603776
       },
       "units": {
         "QB": {
@@ -3916,7 +4460,13 @@
       },
       "context": {
         "plays": 435,
-        "completedGames": 7
+        "passPlays": 180,
+        "rushPlays": 255,
+        "defensivePlays": 479,
+        "defensivePassPlays": 262,
+        "redZoneTrips": 33,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -3945,13 +4495,16 @@
         "sackRateAllowed": 0.03018867924528302
       },
       "defense": {
-        "pointsAllowedPerGame": 20.714,
-        "yardsAllowedPerGame": 325.429,
+        "pointsAllowedPerGame": 20.714285714285715,
+        "yardsAllowedPerGame": 325.42857142857144,
         "sacks": 14,
         "successRateAllowed": 0.35824175824175825,
         "explosivePassRateAllowed": 0.1504424778761062,
         "explosiveRushRateAllowed": 0.09170305676855896,
-        "sackRate": 0.061946902654867256
+        "sackRate": 0.061946902654867256,
+        "passingYardsAllowedPerGame": 197.57142857142858,
+        "rushingYardsAllowedPerGame": 127.85714285714286,
+        "thirdDownRateAllowed": 0.297029702970297
       },
       "units": {
         "QB": {
@@ -3980,7 +4533,13 @@
       },
       "context": {
         "plays": 484,
-        "completedGames": 7
+        "passPlays": 265,
+        "rushPlays": 219,
+        "defensivePlays": 455,
+        "defensivePassPlays": 226,
+        "redZoneTrips": 32,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4015,7 +4574,10 @@
         "successRateAllowed": 0.3786848072562358,
         "explosivePassRateAllowed": 0.13402061855670103,
         "explosiveRushRateAllowed": 0.12955465587044535,
-        "sackRate": 0.05154639175257732
+        "sackRate": 0.05154639175257732,
+        "passingYardsAllowedPerGame": 183.14285714285714,
+        "rushingYardsAllowedPerGame": 166.85714285714286,
+        "thirdDownRateAllowed": 0.32989690721649484
       },
       "units": {
         "QB": {
@@ -4044,7 +4606,13 @@
       },
       "context": {
         "plays": 493,
-        "completedGames": 7
+        "passPlays": 214,
+        "rushPlays": 279,
+        "defensivePlays": 441,
+        "defensivePassPlays": 194,
+        "redZoneTrips": 29,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4073,13 +4641,16 @@
         "sackRateAllowed": 0.07058823529411765
       },
       "defense": {
-        "pointsAllowedPerGame": 13.857,
-        "yardsAllowedPerGame": 264.286,
+        "pointsAllowedPerGame": 13.857142857142858,
+        "yardsAllowedPerGame": 264.2857142857143,
         "sacks": 15,
         "successRateAllowed": 0.34057971014492755,
         "explosivePassRateAllowed": 0.12871287128712872,
         "explosiveRushRateAllowed": 0.09905660377358491,
-        "sackRate": 0.07425742574257425
+        "sackRate": 0.07425742574257425,
+        "passingYardsAllowedPerGame": 158.85714285714286,
+        "rushingYardsAllowedPerGame": 105.42857142857143,
+        "thirdDownRateAllowed": 0.30612244897959184
       },
       "units": {
         "QB": {
@@ -4108,7 +4679,13 @@
       },
       "context": {
         "plays": 465,
-        "completedGames": 7
+        "passPlays": 255,
+        "rushPlays": 210,
+        "defensivePlays": 414,
+        "defensivePassPlays": 202,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4138,12 +4715,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 44,
-        "yardsAllowedPerGame": 535.286,
+        "yardsAllowedPerGame": 535.2857142857143,
         "sacks": 6,
         "successRateAllowed": 0.5515021459227468,
         "explosivePassRateAllowed": 0.2786885245901639,
         "explosiveRushRateAllowed": 0.18374558303886926,
-        "sackRate": 0.03278688524590164
+        "sackRate": 0.03278688524590164,
+        "passingYardsAllowedPerGame": 272.14285714285717,
+        "rushingYardsAllowedPerGame": 263.14285714285717,
+        "thirdDownRateAllowed": 0.5064935064935064
       },
       "units": {
         "QB": {
@@ -4172,7 +4752,13 @@
       },
       "context": {
         "plays": 485,
-        "completedGames": 7
+        "passPlays": 264,
+        "rushPlays": 221,
+        "defensivePlays": 466,
+        "defensivePassPlays": 183,
+        "redZoneTrips": 34,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4207,7 +4793,10 @@
         "successRateAllowed": 0.4094650205761317,
         "explosivePassRateAllowed": 0.11278195488721804,
         "explosiveRushRateAllowed": 0.1,
-        "sackRate": 0.045112781954887216
+        "sackRate": 0.045112781954887216,
+        "passingYardsAllowedPerGame": 211.42857142857142,
+        "rushingYardsAllowedPerGame": 132.57142857142858,
+        "thirdDownRateAllowed": 0.42857142857142855
       },
       "units": {
         "QB": {
@@ -4236,7 +4825,13 @@
       },
       "context": {
         "plays": 441,
-        "completedGames": 7
+        "passPlays": 239,
+        "rushPlays": 202,
+        "defensivePlays": 486,
+        "defensivePassPlays": 266,
+        "redZoneTrips": 19,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4265,13 +4860,16 @@
         "sackRateAllowed": 0.1711229946524064
       },
       "defense": {
-        "pointsAllowedPerGame": 37.286,
-        "yardsAllowedPerGame": 398.286,
+        "pointsAllowedPerGame": 37.285714285714285,
+        "yardsAllowedPerGame": 398.2857142857143,
         "sacks": 6,
         "successRateAllowed": 0.47586206896551725,
         "explosivePassRateAllowed": 0.1797752808988764,
         "explosiveRushRateAllowed": 0.14007782101167315,
-        "sackRate": 0.033707865168539325
+        "sackRate": 0.033707865168539325,
+        "passingYardsAllowedPerGame": 204.85714285714286,
+        "rushingYardsAllowedPerGame": 193.42857142857142,
+        "thirdDownRateAllowed": 0.4827586206896552
       },
       "units": {
         "QB": {
@@ -4300,7 +4898,13 @@
       },
       "context": {
         "plays": 402,
-        "completedGames": 7
+        "passPlays": 187,
+        "rushPlays": 215,
+        "defensivePlays": 435,
+        "defensivePassPlays": 178,
+        "redZoneTrips": 17,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4335,7 +4939,10 @@
         "successRateAllowed": 0.381057268722467,
         "explosivePassRateAllowed": 0.16666666666666666,
         "explosiveRushRateAllowed": 0.11068702290076336,
-        "sackRate": 0.0625
+        "sackRate": 0.0625,
+        "passingYardsAllowedPerGame": 128.625,
+        "rushingYardsAllowedPerGame": 121.5,
+        "thirdDownRateAllowed": 0.33653846153846156
       },
       "units": {
         "QB": {
@@ -4364,7 +4971,13 @@
       },
       "context": {
         "plays": 514,
-        "completedGames": 8
+        "passPlays": 213,
+        "rushPlays": 301,
+        "defensivePlays": 454,
+        "defensivePassPlays": 192,
+        "redZoneTrips": 30,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4393,13 +5006,16 @@
         "sackRateAllowed": 0.024096385542168676
       },
       "defense": {
-        "pointsAllowedPerGame": 16.286,
-        "yardsAllowedPerGame": 292,
+        "pointsAllowedPerGame": 16.285714285714285,
+        "yardsAllowedPerGame": 292.85714285714283,
         "sacks": 11,
         "successRateAllowed": 0.3794749403341289,
         "explosivePassRateAllowed": 0.1262135922330097,
         "explosiveRushRateAllowed": 0.14084507042253522,
-        "sackRate": 0.05339805825242718
+        "sackRate": 0.05339805825242718,
+        "passingYardsAllowedPerGame": 170.85714285714286,
+        "rushingYardsAllowedPerGame": 122,
+        "thirdDownRateAllowed": 0.28421052631578947
       },
       "units": {
         "QB": {
@@ -4428,7 +5044,13 @@
       },
       "context": {
         "plays": 483,
-        "completedGames": 7
+        "passPlays": 249,
+        "rushPlays": 234,
+        "defensivePlays": 419,
+        "defensivePassPlays": 206,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4458,12 +5080,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 14,
-        "yardsAllowedPerGame": 292.429,
+        "yardsAllowedPerGame": 292.42857142857144,
         "sacks": 12,
         "successRateAllowed": 0.35141509433962265,
         "explosivePassRateAllowed": 0.14912280701754385,
         "explosiveRushRateAllowed": 0.12755102040816327,
-        "sackRate": 0.05263157894736842
+        "sackRate": 0.05263157894736842,
+        "passingYardsAllowedPerGame": 177.14285714285714,
+        "rushingYardsAllowedPerGame": 115.28571428571429,
+        "thirdDownRateAllowed": 0.3
       },
       "units": {
         "QB": {
@@ -4492,7 +5117,13 @@
       },
       "context": {
         "plays": 436,
-        "completedGames": 7
+        "passPlays": 160,
+        "rushPlays": 276,
+        "defensivePlays": 424,
+        "defensivePassPlays": 228,
+        "redZoneTrips": 32,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4521,13 +5152,16 @@
         "sackRateAllowed": 0.045454545454545456
       },
       "defense": {
-        "pointsAllowedPerGame": 32.429,
-        "yardsAllowedPerGame": 442.857,
+        "pointsAllowedPerGame": 32.42857142857143,
+        "yardsAllowedPerGame": 442.85714285714283,
         "sacks": 17,
         "successRateAllowed": 0.4307400379506641,
         "explosivePassRateAllowed": 0.1712962962962963,
         "explosiveRushRateAllowed": 0.12218649517684887,
-        "sackRate": 0.0787037037037037
+        "sackRate": 0.0787037037037037,
+        "passingYardsAllowedPerGame": 210,
+        "rushingYardsAllowedPerGame": 232.85714285714286,
+        "thirdDownRateAllowed": 0.411214953271028
       },
       "units": {
         "QB": {
@@ -4556,7 +5190,13 @@
       },
       "context": {
         "plays": 486,
-        "completedGames": 7
+        "passPlays": 264,
+        "rushPlays": 222,
+        "defensivePlays": 527,
+        "defensivePassPlays": 216,
+        "redZoneTrips": 29,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4585,13 +5225,16 @@
         "sackRateAllowed": 0.05084745762711865
       },
       "defense": {
-        "pointsAllowedPerGame": 37.286,
-        "yardsAllowedPerGame": 442.714,
+        "pointsAllowedPerGame": 37.285714285714285,
+        "yardsAllowedPerGame": 442.7142857142857,
         "sacks": 13,
         "successRateAllowed": 0.4699792960662526,
         "explosivePassRateAllowed": 0.18877551020408162,
         "explosiveRushRateAllowed": 0.1254355400696864,
-        "sackRate": 0.0663265306122449
+        "sackRate": 0.0663265306122449,
+        "passingYardsAllowedPerGame": 224,
+        "rushingYardsAllowedPerGame": 218.71428571428572,
+        "thirdDownRateAllowed": 0.44660194174757284
       },
       "units": {
         "QB": {
@@ -4620,7 +5263,13 @@
       },
       "context": {
         "plays": 448,
-        "completedGames": 7
+        "passPlays": 236,
+        "rushPlays": 212,
+        "defensivePlays": 483,
+        "defensivePassPlays": 196,
+        "redZoneTrips": 22,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4649,13 +5298,16 @@
         "sackRateAllowed": 0.04017857142857143
       },
       "defense": {
-        "pointsAllowedPerGame": 14.571,
-        "yardsAllowedPerGame": 312.429,
+        "pointsAllowedPerGame": 14.571428571428571,
+        "yardsAllowedPerGame": 312.42857142857144,
         "sacks": 12,
         "successRateAllowed": 0.3462414578587699,
         "explosivePassRateAllowed": 0.1346153846153846,
         "explosiveRushRateAllowed": 0.10614525139664804,
-        "sackRate": 0.046153846153846156
+        "sackRate": 0.046153846153846156,
+        "passingYardsAllowedPerGame": 224.14285714285714,
+        "rushingYardsAllowedPerGame": 88.28571428571429,
+        "thirdDownRateAllowed": 0.3434343434343434
       },
       "units": {
         "QB": {
@@ -4684,7 +5336,13 @@
       },
       "context": {
         "plays": 485,
-        "completedGames": 7
+        "passPlays": 224,
+        "rushPlays": 261,
+        "defensivePlays": 439,
+        "defensivePassPlays": 260,
+        "redZoneTrips": 36,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4713,13 +5371,16 @@
         "sackRateAllowed": 0.0594059405940594
       },
       "defense": {
-        "pointsAllowedPerGame": 26.429,
-        "yardsAllowedPerGame": 429.429,
+        "pointsAllowedPerGame": 26.428571428571427,
+        "yardsAllowedPerGame": 429.42857142857144,
         "sacks": 14,
         "successRateAllowed": 0.43121149897330596,
         "explosivePassRateAllowed": 0.16356877323420074,
         "explosiveRushRateAllowed": 0.1651376146788991,
-        "sackRate": 0.05204460966542751
+        "sackRate": 0.05204460966542751,
+        "passingYardsAllowedPerGame": 284.42857142857144,
+        "rushingYardsAllowedPerGame": 145,
+        "thirdDownRateAllowed": 0.4166666666666667
       },
       "units": {
         "QB": {
@@ -4748,7 +5409,13 @@
       },
       "context": {
         "plays": 457,
-        "completedGames": 7
+        "passPlays": 202,
+        "rushPlays": 255,
+        "defensivePlays": 487,
+        "defensivePassPlays": 269,
+        "redZoneTrips": 31,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4783,7 +5450,10 @@
         "successRateAllowed": 0.38613861386138615,
         "explosivePassRateAllowed": 0.12033195020746888,
         "explosiveRushRateAllowed": 0.11363636363636363,
-        "sackRate": 0.06224066390041494
+        "sackRate": 0.06224066390041494,
+        "passingYardsAllowedPerGame": 184.75,
+        "rushingYardsAllowedPerGame": 141.875,
+        "thirdDownRateAllowed": 0.3302752293577982
       },
       "units": {
         "QB": {
@@ -4812,7 +5482,13 @@
       },
       "context": {
         "plays": 537,
-        "completedGames": 8
+        "passPlays": 235,
+        "rushPlays": 302,
+        "defensivePlays": 505,
+        "defensivePassPlays": 241,
+        "redZoneTrips": 35,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4841,13 +5517,16 @@
         "sackRateAllowed": 0.044444444444444446
       },
       "defense": {
-        "pointsAllowedPerGame": 19.429,
-        "yardsAllowedPerGame": 322.571,
+        "pointsAllowedPerGame": 19.428571428571427,
+        "yardsAllowedPerGame": 322.57142857142856,
         "sacks": 18,
         "successRateAllowed": 0.42418032786885246,
         "explosivePassRateAllowed": 0.09574468085106383,
         "explosiveRushRateAllowed": 0.09223300970873786,
-        "sackRate": 0.06382978723404255
+        "sackRate": 0.06382978723404255,
+        "passingYardsAllowedPerGame": 230.14285714285714,
+        "rushingYardsAllowedPerGame": 92.42857142857143,
+        "thirdDownRateAllowed": 0.42574257425742573
       },
       "units": {
         "QB": {
@@ -4876,7 +5555,13 @@
       },
       "context": {
         "plays": 451,
-        "completedGames": 7
+        "passPlays": 225,
+        "rushPlays": 226,
+        "defensivePlays": 488,
+        "defensivePassPlays": 282,
+        "redZoneTrips": 37,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4905,13 +5590,16 @@
         "sackRateAllowed": 0.11188811188811189
       },
       "defense": {
-        "pointsAllowedPerGame": 11.286,
+        "pointsAllowedPerGame": 11.285714285714286,
         "yardsAllowedPerGame": 261,
         "sacks": 14,
         "successRateAllowed": 0.3407960199004975,
         "explosivePassRateAllowed": 0.16279069767441862,
         "explosiveRushRateAllowed": 0.11229946524064172,
-        "sackRate": 0.06511627906976744
+        "sackRate": 0.06511627906976744,
+        "passingYardsAllowedPerGame": 174.57142857142858,
+        "rushingYardsAllowedPerGame": 86.42857142857143,
+        "thirdDownRateAllowed": 0.3118279569892473
       },
       "units": {
         "QB": {
@@ -4940,7 +5628,13 @@
       },
       "context": {
         "plays": 439,
-        "completedGames": 7
+        "passPlays": 143,
+        "rushPlays": 296,
+        "defensivePlays": 402,
+        "defensivePassPlays": 215,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -4975,7 +5669,10 @@
         "successRateAllowed": 0.4365217391304348,
         "explosivePassRateAllowed": 0.1461794019933555,
         "explosiveRushRateAllowed": 0.14963503649635038,
-        "sackRate": 0.08970099667774087
+        "sackRate": 0.08970099667774087,
+        "passingYardsAllowedPerGame": 237.125,
+        "rushingYardsAllowedPerGame": 142.75,
+        "thirdDownRateAllowed": 0.371900826446281
       },
       "units": {
         "QB": {
@@ -5004,7 +5701,13 @@
       },
       "context": {
         "plays": 519,
-        "completedGames": 8
+        "passPlays": 276,
+        "rushPlays": 243,
+        "defensivePlays": 575,
+        "defensivePassPlays": 301,
+        "redZoneTrips": 25,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5034,12 +5737,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 22,
-        "yardsAllowedPerGame": 320.286,
+        "yardsAllowedPerGame": 320.2857142857143,
         "sacks": 15,
         "successRateAllowed": 0.3803418803418803,
         "explosivePassRateAllowed": 0.11282051282051282,
         "explosiveRushRateAllowed": 0.10989010989010989,
-        "sackRate": 0.07692307692307693
+        "sackRate": 0.07692307692307693,
+        "passingYardsAllowedPerGame": 153,
+        "rushingYardsAllowedPerGame": 167.28571428571428,
+        "thirdDownRateAllowed": 0.29245283018867924
       },
       "units": {
         "QB": {
@@ -5068,7 +5774,13 @@
       },
       "context": {
         "plays": 450,
-        "completedGames": 7
+        "passPlays": 202,
+        "rushPlays": 248,
+        "defensivePlays": 468,
+        "defensivePassPlays": 195,
+        "redZoneTrips": 25,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5097,13 +5809,16 @@
         "sackRateAllowed": 0.04568527918781726
       },
       "defense": {
-        "pointsAllowedPerGame": 15.286,
-        "yardsAllowedPerGame": 272.857,
+        "pointsAllowedPerGame": 15.285714285714286,
+        "yardsAllowedPerGame": 272.85714285714283,
         "sacks": 12,
         "successRateAllowed": 0.34360189573459715,
         "explosivePassRateAllowed": 0.16589861751152074,
         "explosiveRushRateAllowed": 0.1024390243902439,
-        "sackRate": 0.055299539170506916
+        "sackRate": 0.055299539170506916,
+        "passingYardsAllowedPerGame": 182.42857142857142,
+        "rushingYardsAllowedPerGame": 90.42857142857143,
+        "thirdDownRateAllowed": 0.25555555555555554
       },
       "units": {
         "QB": {
@@ -5132,7 +5847,13 @@
       },
       "context": {
         "plays": 475,
-        "completedGames": 7
+        "passPlays": 197,
+        "rushPlays": 278,
+        "defensivePlays": 422,
+        "defensivePassPlays": 217,
+        "redZoneTrips": 38,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5161,13 +5882,16 @@
         "sackRateAllowed": 0.060240963855421686
       },
       "defense": {
-        "pointsAllowedPerGame": 25.286,
-        "yardsAllowedPerGame": 337.857,
+        "pointsAllowedPerGame": 25.285714285714285,
+        "yardsAllowedPerGame": 337.85714285714283,
         "sacks": 16,
         "successRateAllowed": 0.42538975501113585,
         "explosivePassRateAllowed": 0.15418502202643172,
         "explosiveRushRateAllowed": 0.0945945945945946,
-        "sackRate": 0.07048458149779736
+        "sackRate": 0.07048458149779736,
+        "passingYardsAllowedPerGame": 222.71428571428572,
+        "rushingYardsAllowedPerGame": 115.14285714285714,
+        "thirdDownRateAllowed": 0.3763440860215054
       },
       "units": {
         "QB": {
@@ -5196,7 +5920,13 @@
       },
       "context": {
         "plays": 490,
-        "completedGames": 7
+        "passPlays": 249,
+        "rushPlays": 241,
+        "defensivePlays": 449,
+        "defensivePassPlays": 227,
+        "redZoneTrips": 31,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5225,13 +5955,16 @@
         "sackRateAllowed": 0.06818181818181818
       },
       "defense": {
-        "pointsAllowedPerGame": 17.714,
-        "yardsAllowedPerGame": 273.714,
+        "pointsAllowedPerGame": 17.714285714285715,
+        "yardsAllowedPerGame": 273.7142857142857,
         "sacks": 23,
         "successRateAllowed": 0.3391959798994975,
         "explosivePassRateAllowed": 0.13541666666666666,
         "explosiveRushRateAllowed": 0.12135922330097088,
-        "sackRate": 0.11979166666666667
+        "sackRate": 0.11979166666666667,
+        "passingYardsAllowedPerGame": 156.28571428571428,
+        "rushingYardsAllowedPerGame": 117.42857142857143,
+        "thirdDownRateAllowed": 0.23595505617977527
       },
       "units": {
         "QB": {
@@ -5260,7 +5993,13 @@
       },
       "context": {
         "plays": 439,
-        "completedGames": 7
+        "passPlays": 220,
+        "rushPlays": 219,
+        "defensivePlays": 398,
+        "defensivePassPlays": 192,
+        "redZoneTrips": 17,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5289,13 +6028,16 @@
         "sackRateAllowed": 0.05241935483870968
       },
       "defense": {
-        "pointsAllowedPerGame": 32.286,
-        "yardsAllowedPerGame": 413.143,
+        "pointsAllowedPerGame": 32.285714285714285,
+        "yardsAllowedPerGame": 413.14285714285717,
         "sacks": 8,
         "successRateAllowed": 0.4671361502347418,
         "explosivePassRateAllowed": 0.2511415525114155,
         "explosiveRushRateAllowed": 0.1497584541062802,
-        "sackRate": 0.0365296803652968
+        "sackRate": 0.0365296803652968,
+        "passingYardsAllowedPerGame": 251.57142857142858,
+        "rushingYardsAllowedPerGame": 161.57142857142858,
+        "thirdDownRateAllowed": 0.48717948717948717
       },
       "units": {
         "QB": {
@@ -5324,7 +6066,13 @@
       },
       "context": {
         "plays": 475,
-        "completedGames": 7
+        "passPlays": 248,
+        "rushPlays": 227,
+        "defensivePlays": 426,
+        "defensivePassPlays": 219,
+        "redZoneTrips": 36,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5353,13 +6101,16 @@
         "sackRateAllowed": 0.042735042735042736
       },
       "defense": {
-        "pointsAllowedPerGame": 18.857,
-        "yardsAllowedPerGame": 313.571,
+        "pointsAllowedPerGame": 18.857142857142858,
+        "yardsAllowedPerGame": 313.57142857142856,
         "sacks": 8,
         "successRateAllowed": 0.40145985401459855,
         "explosivePassRateAllowed": 0.11351351351351352,
         "explosiveRushRateAllowed": 0.1592920353982301,
-        "sackRate": 0.043243243243243246
+        "sackRate": 0.043243243243243246,
+        "passingYardsAllowedPerGame": 141.28571428571428,
+        "rushingYardsAllowedPerGame": 172.28571428571428,
+        "thirdDownRateAllowed": 0.28735632183908044
       },
       "units": {
         "QB": {
@@ -5388,7 +6139,13 @@
       },
       "context": {
         "plays": 464,
-        "completedGames": 7
+        "passPlays": 234,
+        "rushPlays": 230,
+        "defensivePlays": 411,
+        "defensivePassPlays": 185,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5417,13 +6174,16 @@
         "sackRateAllowed": 0.04
       },
       "defense": {
-        "pointsAllowedPerGame": 23.143,
-        "yardsAllowedPerGame": 362.429,
+        "pointsAllowedPerGame": 23.142857142857142,
+        "yardsAllowedPerGame": 362.42857142857144,
         "sacks": 8,
         "successRateAllowed": 0.4178794178794179,
         "explosivePassRateAllowed": 0.15833333333333333,
         "explosiveRushRateAllowed": 0.1078838174273859,
-        "sackRate": 0.03333333333333333
+        "sackRate": 0.03333333333333333,
+        "passingYardsAllowedPerGame": 231.14285714285714,
+        "rushingYardsAllowedPerGame": 131.28571428571428,
+        "thirdDownRateAllowed": 0.3465346534653465
       },
       "units": {
         "QB": {
@@ -5452,7 +6212,13 @@
       },
       "context": {
         "plays": 483,
-        "completedGames": 7
+        "passPlays": 250,
+        "rushPlays": 233,
+        "defensivePlays": 481,
+        "defensivePassPlays": 240,
+        "redZoneTrips": 34,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5482,12 +6248,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 23,
-        "yardsAllowedPerGame": 326.714,
+        "yardsAllowedPerGame": 326.7142857142857,
         "sacks": 16,
         "successRateAllowed": 0.38496583143507973,
         "explosivePassRateAllowed": 0.13744075829383887,
         "explosiveRushRateAllowed": 0.13596491228070176,
-        "sackRate": 0.07582938388625593
+        "sackRate": 0.07582938388625593,
+        "passingYardsAllowedPerGame": 200.42857142857142,
+        "rushingYardsAllowedPerGame": 126.28571428571429,
+        "thirdDownRateAllowed": 0.32967032967032966
       },
       "units": {
         "QB": {
@@ -5516,7 +6285,13 @@
       },
       "context": {
         "plays": 474,
-        "completedGames": 7
+        "passPlays": 284,
+        "rushPlays": 190,
+        "defensivePlays": 439,
+        "defensivePassPlays": 211,
+        "redZoneTrips": 27,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5545,13 +6320,16 @@
         "sackRateAllowed": 0.0199203187250996
       },
       "defense": {
-        "pointsAllowedPerGame": 23.714,
+        "pointsAllowedPerGame": 23.714285714285715,
         "yardsAllowedPerGame": 364,
         "sacks": 15,
         "successRateAllowed": 0.4319654427645788,
         "explosivePassRateAllowed": 0.19545454545454546,
         "explosiveRushRateAllowed": 0.0823045267489712,
-        "sackRate": 0.06818181818181818
+        "sackRate": 0.06818181818181818,
+        "passingYardsAllowedPerGame": 226.42857142857142,
+        "rushingYardsAllowedPerGame": 137.57142857142858,
+        "thirdDownRateAllowed": 0.3541666666666667
       },
       "units": {
         "QB": {
@@ -5580,7 +6358,13 @@
       },
       "context": {
         "plays": 498,
-        "completedGames": 7
+        "passPlays": 251,
+        "rushPlays": 247,
+        "defensivePlays": 463,
+        "defensivePassPlays": 220,
+        "redZoneTrips": 42,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5609,13 +6393,16 @@
         "sackRateAllowed": 0.06315789473684211
       },
       "defense": {
-        "pointsAllowedPerGame": 24.143,
-        "yardsAllowedPerGame": 370.143,
+        "pointsAllowedPerGame": 24.142857142857142,
+        "yardsAllowedPerGame": 370.14285714285717,
         "sacks": 8,
         "successRateAllowed": 0.4225352112676056,
         "explosivePassRateAllowed": 0.1377551020408163,
         "explosiveRushRateAllowed": 0.10434782608695652,
-        "sackRate": 0.04081632653061224
+        "sackRate": 0.04081632653061224,
+        "passingYardsAllowedPerGame": 218.14285714285714,
+        "rushingYardsAllowedPerGame": 152,
+        "thirdDownRateAllowed": 0.34444444444444444
       },
       "units": {
         "QB": {
@@ -5644,7 +6431,13 @@
       },
       "context": {
         "plays": 425,
-        "completedGames": 7
+        "passPlays": 190,
+        "rushPlays": 235,
+        "defensivePlays": 426,
+        "defensivePassPlays": 196,
+        "redZoneTrips": 25,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5673,13 +6466,16 @@
         "sackRateAllowed": 0.08403361344537816
       },
       "defense": {
-        "pointsAllowedPerGame": 21.286,
+        "pointsAllowedPerGame": 21.285714285714285,
         "yardsAllowedPerGame": 317,
         "sacks": 20,
         "successRateAllowed": 0.39913232104121477,
         "explosivePassRateAllowed": 0.10548523206751055,
         "explosiveRushRateAllowed": 0.15178571428571427,
-        "sackRate": 0.08438818565400844
+        "sackRate": 0.08438818565400844,
+        "passingYardsAllowedPerGame": 185.71428571428572,
+        "rushingYardsAllowedPerGame": 131.28571428571428,
+        "thirdDownRateAllowed": 0.3333333333333333
       },
       "units": {
         "QB": {
@@ -5708,7 +6504,13 @@
       },
       "context": {
         "plays": 470,
-        "completedGames": 7
+        "passPlays": 238,
+        "rushPlays": 232,
+        "defensivePlays": 461,
+        "defensivePassPlays": 237,
+        "redZoneTrips": 25,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5737,13 +6539,16 @@
         "sackRateAllowed": 0.08823529411764706
       },
       "defense": {
-        "pointsAllowedPerGame": 27.857,
-        "yardsAllowedPerGame": 434.857,
+        "pointsAllowedPerGame": 27.857142857142858,
+        "yardsAllowedPerGame": 434.85714285714283,
         "sacks": 18,
         "successRateAllowed": 0.425531914893617,
         "explosivePassRateAllowed": 0.16806722689075632,
         "explosiveRushRateAllowed": 0.14522821576763487,
-        "sackRate": 0.07563025210084033
+        "sackRate": 0.07563025210084033,
+        "passingYardsAllowedPerGame": 256.2857142857143,
+        "rushingYardsAllowedPerGame": 178.57142857142858,
+        "thirdDownRateAllowed": 0.42857142857142855
       },
       "units": {
         "QB": {
@@ -5772,7 +6577,13 @@
       },
       "context": {
         "plays": 450,
-        "completedGames": 7
+        "passPlays": 204,
+        "rushPlays": 246,
+        "defensivePlays": 479,
+        "defensivePassPlays": 238,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5807,7 +6618,10 @@
         "successRateAllowed": 0.40847784200385356,
         "explosivePassRateAllowed": 0.14960629921259844,
         "explosiveRushRateAllowed": 0.1471698113207547,
-        "sackRate": 0.03543307086614173
+        "sackRate": 0.03543307086614173,
+        "passingYardsAllowedPerGame": 214.875,
+        "rushingYardsAllowedPerGame": 171.875,
+        "thirdDownRateAllowed": 0.39285714285714285
       },
       "units": {
         "QB": {
@@ -5836,7 +6650,13 @@
       },
       "context": {
         "plays": 512,
-        "completedGames": 8
+        "passPlays": 291,
+        "rushPlays": 221,
+        "defensivePlays": 519,
+        "defensivePassPlays": 254,
+        "redZoneTrips": 19,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5871,7 +6691,10 @@
         "successRateAllowed": 0.5008130081300813,
         "explosivePassRateAllowed": 0.18947368421052632,
         "explosiveRushRateAllowed": 0.0755287009063444,
-        "sackRate": 0.056140350877192984
+        "sackRate": 0.056140350877192984,
+        "passingYardsAllowedPerGame": 283.625,
+        "rushingYardsAllowedPerGame": 177.875,
+        "thirdDownRateAllowed": 0.47058823529411764
       },
       "units": {
         "QB": {
@@ -5900,7 +6723,13 @@
       },
       "context": {
         "plays": 488,
-        "completedGames": 8
+        "passPlays": 223,
+        "rushPlays": 265,
+        "defensivePlays": 616,
+        "defensivePassPlays": 285,
+        "redZoneTrips": 31,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5929,13 +6758,16 @@
         "sackRateAllowed": 0.0379746835443038
       },
       "defense": {
-        "pointsAllowedPerGame": 15.286,
-        "yardsAllowedPerGame": 299.143,
+        "pointsAllowedPerGame": 15.285714285714286,
+        "yardsAllowedPerGame": 299.14285714285717,
         "sacks": 19,
         "successRateAllowed": 0.3556085918854415,
         "explosivePassRateAllowed": 0.15671641791044777,
         "explosiveRushRateAllowed": 0.07947019867549669,
-        "sackRate": 0.0708955223880597
+        "sackRate": 0.0708955223880597,
+        "passingYardsAllowedPerGame": 239.14285714285714,
+        "rushingYardsAllowedPerGame": 60,
+        "thirdDownRateAllowed": 0.3402061855670103
       },
       "units": {
         "QB": {
@@ -5964,7 +6796,13 @@
       },
       "context": {
         "plays": 488,
-        "completedGames": 7
+        "passPlays": 237,
+        "rushPlays": 251,
+        "defensivePlays": 419,
+        "defensivePassPlays": 268,
+        "redZoneTrips": 45,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -5993,13 +6831,16 @@
         "sackRateAllowed": 0.0639269406392694
       },
       "defense": {
-        "pointsAllowedPerGame": 20.857,
-        "yardsAllowedPerGame": 372.714,
+        "pointsAllowedPerGame": 20.857142857142858,
+        "yardsAllowedPerGame": 372.7142857142857,
         "sacks": 13,
         "successRateAllowed": 0.43529411764705883,
         "explosivePassRateAllowed": 0.10546875,
         "explosiveRushRateAllowed": 0.07874015748031496,
-        "sackRate": 0.05078125
+        "sackRate": 0.05078125,
+        "passingYardsAllowedPerGame": 218,
+        "rushingYardsAllowedPerGame": 154.71428571428572,
+        "thirdDownRateAllowed": 0.43119266055045874
       },
       "units": {
         "QB": {
@@ -6028,7 +6869,13 @@
       },
       "context": {
         "plays": 408,
-        "completedGames": 7
+        "passPlays": 219,
+        "rushPlays": 189,
+        "defensivePlays": 510,
+        "defensivePassPlays": 256,
+        "redZoneTrips": 26,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6057,13 +6904,16 @@
         "sackRateAllowed": 0.04932735426008968
       },
       "defense": {
-        "pointsAllowedPerGame": 13.429,
-        "yardsAllowedPerGame": 264.286,
+        "pointsAllowedPerGame": 13.428571428571429,
+        "yardsAllowedPerGame": 264.2857142857143,
         "sacks": 8,
         "successRateAllowed": 0.3488372093023256,
         "explosivePassRateAllowed": 0.14042553191489363,
         "explosiveRushRateAllowed": 0.08717948717948718,
-        "sackRate": 0.03404255319148936
+        "sackRate": 0.03404255319148936,
+        "passingYardsAllowedPerGame": 171.42857142857142,
+        "rushingYardsAllowedPerGame": 92.85714285714286,
+        "thirdDownRateAllowed": 0.3838383838383838
       },
       "units": {
         "QB": {
@@ -6092,7 +6942,13 @@
       },
       "context": {
         "plays": 476,
-        "completedGames": 7
+        "passPlays": 223,
+        "rushPlays": 253,
+        "defensivePlays": 430,
+        "defensivePassPlays": 235,
+        "redZoneTrips": 36,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6127,7 +6983,10 @@
         "successRateAllowed": 0.42701525054466233,
         "explosivePassRateAllowed": 0.17410714285714285,
         "explosiveRushRateAllowed": 0.09787234042553192,
-        "sackRate": 0.05357142857142857
+        "sackRate": 0.05357142857142857,
+        "passingYardsAllowedPerGame": 216.375,
+        "rushingYardsAllowedPerGame": 114.875,
+        "thirdDownRateAllowed": 0.34444444444444444
       },
       "units": {
         "QB": {
@@ -6156,7 +7015,13 @@
       },
       "context": {
         "plays": 557,
-        "completedGames": 8
+        "passPlays": 299,
+        "rushPlays": 258,
+        "defensivePlays": 459,
+        "defensivePassPlays": 224,
+        "redZoneTrips": 41,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6185,13 +7050,16 @@
         "sackRateAllowed": 0.0743801652892562
       },
       "defense": {
-        "pointsAllowedPerGame": 27.714,
+        "pointsAllowedPerGame": 27.714285714285715,
         "yardsAllowedPerGame": 392,
         "sacks": 16,
         "successRateAllowed": 0.4365904365904366,
         "explosivePassRateAllowed": 0.13409961685823754,
         "explosiveRushRateAllowed": 0.09090909090909091,
-        "sackRate": 0.06130268199233716
+        "sackRate": 0.06130268199233716,
+        "passingYardsAllowedPerGame": 267.42857142857144,
+        "rushingYardsAllowedPerGame": 124.57142857142857,
+        "thirdDownRateAllowed": 0.40594059405940597
       },
       "units": {
         "QB": {
@@ -6220,7 +7088,13 @@
       },
       "context": {
         "plays": 481,
-        "completedGames": 7
+        "passPlays": 242,
+        "rushPlays": 239,
+        "defensivePlays": 481,
+        "defensivePassPlays": 261,
+        "redZoneTrips": 24,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6249,13 +7123,16 @@
         "sackRateAllowed": 0.07623318385650224
       },
       "defense": {
-        "pointsAllowedPerGame": 19.143,
-        "yardsAllowedPerGame": 285.429,
+        "pointsAllowedPerGame": 19.142857142857142,
+        "yardsAllowedPerGame": 285.42857142857144,
         "sacks": 16,
         "successRateAllowed": 0.34968017057569295,
         "explosivePassRateAllowed": 0.08163265306122448,
         "explosiveRushRateAllowed": 0.09821428571428571,
-        "sackRate": 0.0653061224489796
+        "sackRate": 0.0653061224489796,
+        "passingYardsAllowedPerGame": 178.14285714285714,
+        "rushingYardsAllowedPerGame": 107.28571428571429,
+        "thirdDownRateAllowed": 0.3333333333333333
       },
       "units": {
         "QB": {
@@ -6284,7 +7161,13 @@
       },
       "context": {
         "plays": 467,
-        "completedGames": 7
+        "passPlays": 223,
+        "rushPlays": 244,
+        "defensivePlays": 469,
+        "defensivePassPlays": 245,
+        "redZoneTrips": 29,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6313,13 +7196,16 @@
         "sackRateAllowed": 0.06276150627615062
       },
       "defense": {
-        "pointsAllowedPerGame": 30.286,
-        "yardsAllowedPerGame": 407.571,
+        "pointsAllowedPerGame": 30.285714285714285,
+        "yardsAllowedPerGame": 407.57142857142856,
         "sacks": 10,
         "successRateAllowed": 0.4423076923076923,
         "explosivePassRateAllowed": 0.1595744680851064,
         "explosiveRushRateAllowed": 0.17142857142857143,
-        "sackRate": 0.05319148936170213
+        "sackRate": 0.05319148936170213,
+        "passingYardsAllowedPerGame": 197.14285714285714,
+        "rushingYardsAllowedPerGame": 210.42857142857142,
+        "thirdDownRateAllowed": 0.4329896907216495
       },
       "units": {
         "QB": {
@@ -6348,7 +7234,13 @@
       },
       "context": {
         "plays": 427,
-        "completedGames": 7
+        "passPlays": 239,
+        "rushPlays": 188,
+        "defensivePlays": 468,
+        "defensivePassPlays": 188,
+        "redZoneTrips": 29,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6383,7 +7275,10 @@
         "successRateAllowed": 0.3597560975609756,
         "explosivePassRateAllowed": 0.16727272727272727,
         "explosiveRushRateAllowed": 0.10138248847926268,
-        "sackRate": 0.05454545454545454
+        "sackRate": 0.05454545454545454,
+        "passingYardsAllowedPerGame": 266.25,
+        "rushingYardsAllowedPerGame": 65,
+        "thirdDownRateAllowed": 0.3853211009174312
       },
       "units": {
         "QB": {
@@ -6412,7 +7307,13 @@
       },
       "context": {
         "plays": 555,
-        "completedGames": 8
+        "passPlays": 292,
+        "rushPlays": 263,
+        "defensivePlays": 492,
+        "defensivePassPlays": 275,
+        "redZoneTrips": 29,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6441,13 +7342,16 @@
         "sackRateAllowed": 0.026200873362445413
       },
       "defense": {
-        "pointsAllowedPerGame": 19.571,
-        "yardsAllowedPerGame": 330.429,
+        "pointsAllowedPerGame": 19.571428571428573,
+        "yardsAllowedPerGame": 330.42857142857144,
         "sacks": 15,
         "successRateAllowed": 0.3790849673202614,
         "explosivePassRateAllowed": 0.15873015873015872,
         "explosiveRushRateAllowed": 0.13526570048309178,
-        "sackRate": 0.05952380952380952
+        "sackRate": 0.05952380952380952,
+        "passingYardsAllowedPerGame": 226.57142857142858,
+        "rushingYardsAllowedPerGame": 103.85714285714286,
+        "thirdDownRateAllowed": 0.35514018691588783
       },
       "units": {
         "QB": {
@@ -6476,7 +7380,13 @@
       },
       "context": {
         "plays": 473,
-        "completedGames": 7
+        "passPlays": 229,
+        "rushPlays": 244,
+        "defensivePlays": 459,
+        "defensivePassPlays": 252,
+        "redZoneTrips": 30,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6505,13 +7415,16 @@
         "sackRateAllowed": 0.05058365758754864
       },
       "defense": {
-        "pointsAllowedPerGame": 26.714,
-        "yardsAllowedPerGame": 357.714,
+        "pointsAllowedPerGame": 26.714285714285715,
+        "yardsAllowedPerGame": 357.7142857142857,
         "sacks": 9,
         "successRateAllowed": 0.4474327628361858,
         "explosivePassRateAllowed": 0.16753926701570682,
         "explosiveRushRateAllowed": 0.14220183486238533,
-        "sackRate": 0.04712041884816754
+        "sackRate": 0.04712041884816754,
+        "passingYardsAllowedPerGame": 213,
+        "rushingYardsAllowedPerGame": 144.71428571428572,
+        "thirdDownRateAllowed": 0.42857142857142855
       },
       "units": {
         "QB": {
@@ -6540,7 +7453,13 @@
       },
       "context": {
         "plays": 475,
-        "completedGames": 7
+        "passPlays": 257,
+        "rushPlays": 218,
+        "defensivePlays": 409,
+        "defensivePassPlays": 191,
+        "redZoneTrips": 27,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6569,13 +7488,16 @@
         "sackRateAllowed": 0.07984790874524715
       },
       "defense": {
-        "pointsAllowedPerGame": 22.714,
-        "yardsAllowedPerGame": 336.143,
+        "pointsAllowedPerGame": 22.714285714285715,
+        "yardsAllowedPerGame": 336.14285714285717,
         "sacks": 11,
         "successRateAllowed": 0.3968253968253968,
         "explosivePassRateAllowed": 0.14351851851851852,
         "explosiveRushRateAllowed": 0.1288888888888889,
-        "sackRate": 0.05092592592592592
+        "sackRate": 0.05092592592592592,
+        "passingYardsAllowedPerGame": 205,
+        "rushingYardsAllowedPerGame": 131.14285714285714,
+        "thirdDownRateAllowed": 0.3146067415730337
       },
       "units": {
         "QB": {
@@ -6604,7 +7526,13 @@
       },
       "context": {
         "plays": 443,
-        "completedGames": 7
+        "passPlays": 263,
+        "rushPlays": 180,
+        "defensivePlays": 441,
+        "defensivePassPlays": 216,
+        "redZoneTrips": 37,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6633,13 +7561,16 @@
         "sackRateAllowed": 0.052845528455284556
       },
       "defense": {
-        "pointsAllowedPerGame": 15.429,
-        "yardsAllowedPerGame": 271.286,
+        "pointsAllowedPerGame": 15.428571428571429,
+        "yardsAllowedPerGame": 271.2857142857143,
         "sacks": 15,
         "successRateAllowed": 0.35121951219512193,
         "explosivePassRateAllowed": 0.1261682242990654,
         "explosiveRushRateAllowed": 0.12244897959183673,
-        "sackRate": 0.07009345794392523
+        "sackRate": 0.07009345794392523,
+        "passingYardsAllowedPerGame": 171.71428571428572,
+        "rushingYardsAllowedPerGame": 99.57142857142857,
+        "thirdDownRateAllowed": 0.19318181818181818
       },
       "units": {
         "QB": {
@@ -6668,7 +7599,13 @@
       },
       "context": {
         "plays": 499,
-        "completedGames": 7
+        "passPlays": 246,
+        "rushPlays": 253,
+        "defensivePlays": 410,
+        "defensivePassPlays": 214,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6697,13 +7634,16 @@
         "sackRateAllowed": 0.03896103896103896
       },
       "defense": {
-        "pointsAllowedPerGame": 22.143,
+        "pointsAllowedPerGame": 22.142857142857142,
         "yardsAllowedPerGame": 374,
         "sacks": 8,
         "successRateAllowed": 0.44168734491315137,
         "explosivePassRateAllowed": 0.17289719626168223,
         "explosiveRushRateAllowed": 0.15343915343915343,
-        "sackRate": 0.037383177570093455
+        "sackRate": 0.037383177570093455,
+        "passingYardsAllowedPerGame": 226,
+        "rushingYardsAllowedPerGame": 148,
+        "thirdDownRateAllowed": 0.4625
       },
       "units": {
         "QB": {
@@ -6732,7 +7672,13 @@
       },
       "context": {
         "plays": 452,
-        "completedGames": 7
+        "passPlays": 77,
+        "rushPlays": 375,
+        "defensivePlays": 403,
+        "defensivePassPlays": 214,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6767,7 +7713,10 @@
         "successRateAllowed": 0.3858267716535433,
         "explosivePassRateAllowed": 0.19421487603305784,
         "explosiveRushRateAllowed": 0.15037593984962405,
-        "sackRate": 0.07851239669421488
+        "sackRate": 0.07851239669421488,
+        "passingYardsAllowedPerGame": 207.125,
+        "rushingYardsAllowedPerGame": 171.375,
+        "thirdDownRateAllowed": 0.3119266055045872
       },
       "units": {
         "QB": {
@@ -6796,7 +7745,13 @@
       },
       "context": {
         "plays": 557,
-        "completedGames": 8
+        "passPlays": 244,
+        "rushPlays": 313,
+        "defensivePlays": 508,
+        "defensivePassPlays": 242,
+        "redZoneTrips": 40,
+        "completedGames": 8,
+        "defenseBoxscoreGames": 8
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6826,12 +7781,15 @@
       },
       "defense": {
         "pointsAllowedPerGame": 30,
-        "yardsAllowedPerGame": 404.429,
+        "yardsAllowedPerGame": 405.42857142857144,
         "sacks": 7,
         "successRateAllowed": 0.43452380952380953,
         "explosivePassRateAllowed": 0.14726027397260275,
         "explosiveRushRateAllowed": 0.11737089201877934,
-        "sackRate": 0.023972602739726026
+        "sackRate": 0.023972602739726026,
+        "passingYardsAllowedPerGame": 286.14285714285717,
+        "rushingYardsAllowedPerGame": 119.28571428571429,
+        "thirdDownRateAllowed": 0.375
       },
       "units": {
         "QB": {
@@ -6860,7 +7818,13 @@
       },
       "context": {
         "plays": 522,
-        "completedGames": 7
+        "passPlays": 210,
+        "rushPlays": 312,
+        "defensivePlays": 505,
+        "defensivePassPlays": 292,
+        "redZoneTrips": 36,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6889,13 +7853,16 @@
         "sackRateAllowed": 0.02577319587628866
       },
       "defense": {
-        "pointsAllowedPerGame": 20.571,
-        "yardsAllowedPerGame": 350.429,
+        "pointsAllowedPerGame": 20.571428571428573,
+        "yardsAllowedPerGame": 350.42857142857144,
         "sacks": 18,
         "successRateAllowed": 0.37593984962406013,
         "explosivePassRateAllowed": 0.16666666666666666,
         "explosiveRushRateAllowed": 0.12578616352201258,
-        "sackRate": 0.075
+        "sackRate": 0.075,
+        "passingYardsAllowedPerGame": 251.28571428571428,
+        "rushingYardsAllowedPerGame": 99.14285714285714,
+        "thirdDownRateAllowed": 0.2911392405063291
       },
       "units": {
         "QB": {
@@ -6924,7 +7891,13 @@
       },
       "context": {
         "plays": 484,
-        "completedGames": 7
+        "passPlays": 194,
+        "rushPlays": 290,
+        "defensivePlays": 399,
+        "defensivePassPlays": 240,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -6953,13 +7926,16 @@
         "sackRateAllowed": 0.08764940239043825
       },
       "defense": {
-        "pointsAllowedPerGame": 38.571,
-        "yardsAllowedPerGame": 428.143,
+        "pointsAllowedPerGame": 38.57142857142857,
+        "yardsAllowedPerGame": 427.2857142857143,
         "sacks": 8,
         "successRateAllowed": 0.513978494623656,
         "explosivePassRateAllowed": 0.17647058823529413,
         "explosiveRushRateAllowed": 0.17625899280575538,
-        "sackRate": 0.0427807486631016
+        "sackRate": 0.0427807486631016,
+        "passingYardsAllowedPerGame": 207.28571428571428,
+        "rushingYardsAllowedPerGame": 220.85714285714286,
+        "thirdDownRateAllowed": 0.6136363636363636
       },
       "units": {
         "QB": {
@@ -6988,7 +7964,13 @@
       },
       "context": {
         "plays": 421,
-        "completedGames": 7
+        "passPlays": 251,
+        "rushPlays": 170,
+        "defensivePlays": 465,
+        "defensivePassPlays": 187,
+        "redZoneTrips": 19,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -7017,13 +7999,16 @@
         "sackRateAllowed": 0.07352941176470588
       },
       "defense": {
-        "pointsAllowedPerGame": 23.714,
-        "yardsAllowedPerGame": 381.286,
+        "pointsAllowedPerGame": 23.714285714285715,
+        "yardsAllowedPerGame": 381.2857142857143,
         "sacks": 16,
         "successRateAllowed": 0.4089935760171306,
         "explosivePassRateAllowed": 0.18018018018018017,
         "explosiveRushRateAllowed": 0.17142857142857143,
-        "sackRate": 0.07207207207207207
+        "sackRate": 0.07207207207207207,
+        "passingYardsAllowedPerGame": 198.71428571428572,
+        "rushingYardsAllowedPerGame": 182.57142857142858,
+        "thirdDownRateAllowed": 0.3854166666666667
       },
       "units": {
         "QB": {
@@ -7052,7 +8037,13 @@
       },
       "context": {
         "plays": 457,
-        "completedGames": 7
+        "passPlays": 204,
+        "rushPlays": 253,
+        "defensivePlays": 467,
+        "defensivePassPlays": 222,
+        "redZoneTrips": 23,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -7081,13 +8072,16 @@
         "sackRateAllowed": 0.026755852842809364
       },
       "defense": {
-        "pointsAllowedPerGame": 23.143,
-        "yardsAllowedPerGame": 345.286,
+        "pointsAllowedPerGame": 23.142857142857142,
+        "yardsAllowedPerGame": 345.2857142857143,
         "sacks": 17,
         "successRateAllowed": 0.4088983050847458,
         "explosivePassRateAllowed": 0.11462450592885376,
         "explosiveRushRateAllowed": 0.1324200913242009,
-        "sackRate": 0.06719367588932806
+        "sackRate": 0.06719367588932806,
+        "passingYardsAllowedPerGame": 204.85714285714286,
+        "rushingYardsAllowedPerGame": 140.42857142857142,
+        "thirdDownRateAllowed": 0.38144329896907214
       },
       "units": {
         "QB": {
@@ -7116,7 +8110,13 @@
       },
       "context": {
         "plays": 511,
-        "completedGames": 7
+        "passPlays": 299,
+        "rushPlays": 212,
+        "defensivePlays": 472,
+        "defensivePassPlays": 253,
+        "redZoneTrips": 34,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
@@ -7145,13 +8145,16 @@
         "sackRateAllowed": 0.05660377358490566
       },
       "defense": {
-        "pointsAllowedPerGame": 20.857,
-        "yardsAllowedPerGame": 384.286,
+        "pointsAllowedPerGame": 20.857142857142858,
+        "yardsAllowedPerGame": 384.2857142857143,
         "sacks": 13,
         "successRateAllowed": 0.43231441048034935,
         "explosivePassRateAllowed": 0.1643835616438356,
         "explosiveRushRateAllowed": 0.12552301255230125,
-        "sackRate": 0.0593607305936073
+        "sackRate": 0.0593607305936073,
+        "passingYardsAllowedPerGame": 213.57142857142858,
+        "rushingYardsAllowedPerGame": 170.71428571428572,
+        "thirdDownRateAllowed": 0.35555555555555557
       },
       "units": {
         "QB": {
@@ -7180,7 +8183,13 @@
       },
       "context": {
         "plays": 420,
-        "completedGames": 7
+        "passPlays": 212,
+        "rushPlays": 208,
+        "defensivePlays": 458,
+        "defensivePassPlays": 219,
+        "redZoneTrips": 28,
+        "completedGames": 7,
+        "defenseBoxscoreGames": 7
       },
       "sourceStatus": "ESPN_STANDARD_PLUS_PLAY_DERIVED",
       "error": null
