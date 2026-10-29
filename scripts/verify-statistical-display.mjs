@@ -28,6 +28,12 @@ if(Number(metrics.week)!==week)failures.push(`team metrics week ${metrics.week} 
 if((metrics.coverage?.resolvedTeams||0)!==expectedTeams)failures.push(`team metrics coverage ${metrics.coverage?.resolvedTeams||0}/${expectedTeams}`);
 if((metrics.coverage?.unresolvedTeams||[]).length)failures.push(`unresolved stat teams: ${metrics.coverage.unresolvedTeams.join(', ')}`);
 if(fpiTeams.size<100)failures.push('ESPN FPI numeric coverage < 100 teams');
+for(const team of metrics.teams||[]){
+ for(const [side,field] of [['offense','thirdDownRate'],['offense','successRate'],['offense','explosivePassRate'],['offense','explosiveRushRate'],['offense','sackRateAllowed'],['defense','pointsAllowedPerGame'],['defense','yardsAllowedPerGame'],['defense','successRateAllowed'],['defense','sackRate']]){const value=team[side]?.[field];if(value==null||!Number.isFinite(Number(value)))failures.push(`${team.team}: missing numeric ${side}.${field}`);}
+ if(!Number(team.context?.plays))failures.push(`${team.team}: no observed play-derived sample`);
+ if(team.context?.redZoneTrips===0&&team.offense?.redZoneRate!=null)failures.push(`${team.team}: red-zone rate lacks a trip denominator`);
+}
+
 const updated=Date.parse(metrics.updatedAt||''),fpiUpdated=Date.parse(fpi.updatedAt||'');
 if(!Number.isFinite(updated)||Date.now()-updated>6*3600000)failures.push('team metrics artifact stale >6h');
 if(!Number.isFinite(fpiUpdated)||Date.now()-fpiUpdated>6*3600000)failures.push('ESPN FPI artifact stale >6h');

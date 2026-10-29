@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {standardMetrics,classifyPlay,playTeamId,empty,addSummary} from './refresh-team-metrics.mjs';
+const row=(name,value)=>({name,value});
+const metrics=standardMetrics({results:{stats:{categories:[{name:'passing',stats:[row('sacks',5)]},{name:'general',stats:[row('thirdDownConvPct',40),row('redzoneEfficiencyPct',0)]}]},opponent:[{stats:[row('totalPointsPerGame',24),row('yardsPerGame',350)]}]}});
+assert.equal(metrics.defense.pointsAllowedPerGame,24);assert.equal(metrics.defense.yardsAllowedPerGame,350);assert.equal(metrics.offense.thirdDownRate,.4);assert.equal(metrics.offense.redZoneRate,null);assert.equal(metrics.offense.sacksAllowed,5);
+const play=(team,type,yards,down=1,distance=10,endzone=50)=>({type:{text:type},text:type+'; extra point good',statYardage:yards,start:{team:{id:team},down,distance,yardsToEndzone:endzone}});
+const td=play('away','Passing Touchdown',18,1,10,18);assert.equal(classifyPlay(td),'pass');assert.equal(playTeamId(td),'away');
+const summary={header:{competitions:[{competitors:[{team:{id:'away'}},{team:{id:'home'}}]}]},drives:{previous:[{team:{id:'away'},result:'TD',plays:[play('away','Rush',2),td]},{team:{id:'home'},result:'PUNT',plays:[play('home','Sack',-6)]}]}};
+const totals=new Map([['home',empty()]]);addSummary(summary,totals);assert.equal(totals.get('home').defPlays,2,'Opponents outside the selected slate still count toward defense');assert.equal(totals.get('home').defPassPlays,1);assert.equal(totals.get('home').explosivePassAllowed,1);assert.equal(totals.get('home').sacksAllowed,1);
+const all=new Map([['away',empty()],['home',empty()]]);addSummary(summary,all);assert.equal(all.get('away').redZoneTrips,1);assert.equal(all.get('away').redZoneScores,1);assert.equal(all.get('home').redZoneTrips,0);assert.equal(all.get('away').successes,1);
+console.log('PASS: possession attribution, opponent-only defense, TD classification, red-zone denominators and standard-stat namespaces');
