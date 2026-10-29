@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-29T17:16:02.326Z",
+  "updatedAt": "2026-10-29T17:25:21.017Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -42,8 +42,8 @@
   "coverage": {
     "allUnderdogs": 51,
     "underdogSpecial": 18,
-    "upsetLab": 23,
-    "intermediate": 10,
+    "upsetLab": 24,
+    "intermediate": 9,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -52,7 +52,7 @@
       "canonicalGameId": "ESPN-401862815",
       "team": "Temple",
       "opponent": "East Carolina",
-      "currentSpread": "+6",
+      "currentSpread": "+5.5",
       "band": "UNDERDOG-SPECIAL",
       "profileScore": 2,
       "score25": 2,
@@ -120,13 +120,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3906824581564393,
+        "marketWinProbability": 0.3995339388377276,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3906824581564393,
+      "marketWinProbability": 0.3995339388377276,
       "narrative": {
         "upsetCase": "Temple has an upset path built around enough trench resistance to avoid a one-sided game. Temple OL/RB vs East Carolina DL/LB — Temple +",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
@@ -140,7 +140,7 @@
           "East Carolina QB/WR vs Temple DB — Even",
           "Temple QB/WR vs East Carolina DB — Even",
           "Phil Steele current power rating: Temple 101 vs East Carolina 111.",
-          "Canonical selected-week market: Temple +6, total 49.5; production model Lean Temple edge 0.05148247732252731; Football Independent East Carolina edge 0.48223965162137894."
+          "Canonical selected-week market: Temple +5.5, total 49.5; production model Lean Temple edge 0.05148247732252731; Football Independent East Carolina edge 0.48223965162137894."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -2863,6 +2863,114 @@
     },
     {
       "week": 9,
+      "canonicalGameId": "ESPN-401862813",
+      "team": "Charlotte",
+      "opponent": "Tulane",
+      "currentSpread": "+9.5",
+      "band": "UPSET-LAB",
+      "profileScore": 1,
+      "score25": 1,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "LIMITED",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "LIMITED",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": null,
+        "teamOffenseYppRank": null,
+        "teamAggregateRank": null,
+        "teamDefensiveYppRank": null,
+        "marketTotal": 47.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.3309915811752626,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.3309915811752626,
+      "narrative": {
+        "upsetCase": "Charlotte is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Tulane QB/WR vs Charlotte DB — Tulane +",
+          "Charlotte OL/RB vs Tulane DL/LB — Tulane +",
+          "Charlotte QB/WR vs Tulane DB — Even",
+          "Phil Steele current power rating: Charlotte 95 vs Tulane 113.",
+          "Canonical selected-week market: Charlotte +9.5, total 47.5; production model Tulane ATS edge 3.0003478478166947; Football Independent Tulane edge 0.36955456984942714."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 9,
       "canonicalGameId": "ESPN-401858507",
       "team": "Rutgers",
       "opponent": "Michigan",
@@ -3145,7 +3253,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 50.5,
+        "marketTotal": 51.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -3169,7 +3277,7 @@
           "Troy OL/RB vs James Madison DL/LB — James Madison +",
           "Troy QB/WR vs James Madison DB — Even",
           "Phil Steele current power rating: Troy 104 vs James Madison 127.",
-          "Canonical selected-week market: Troy +19.5, total 50.5; production model Lean Troy edge 4.437892738762528; Football Independent Troy edge 7.771696320452415."
+          "Canonical selected-week market: Troy +19.5, total 51.5; production model Lean Troy edge 4.437892738762528; Football Independent Troy edge 7.771696320452415."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -5026,117 +5134,9 @@
     },
     {
       "week": 9,
-      "canonicalGameId": "ESPN-401862813",
-      "team": "Charlotte",
-      "opponent": "Tulane",
-      "currentSpread": "+8.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 1,
-      "score25": 1,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "LIMITED",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "LIMITED",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": null,
-        "teamOffenseYppRank": null,
-        "teamAggregateRank": null,
-        "teamDefensiveYppRank": null,
-        "marketTotal": 47.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.347594522906578,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.347594522906578,
-      "narrative": {
-        "upsetCase": "Charlotte is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Tulane QB/WR vs Charlotte DB — Tulane +",
-          "Charlotte OL/RB vs Tulane DL/LB — Tulane +",
-          "Charlotte QB/WR vs Tulane DB — Even",
-          "Phil Steele current power rating: Charlotte 95 vs Tulane 113.",
-          "Canonical selected-week market: Charlotte +8.5, total 47.5; production model Tulane ATS edge 3.0003478478166947; Football Independent Tulane edge 0.36955456984942714."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 9,
       "canonicalGameId": "ESPN-401856844",
-      "team": "Baylor",
-      "opponent": "UCF",
+      "team": "UCF",
+      "opponent": "Baylor",
       "currentSpread": "+1.5",
       "band": "INTERMEDIATE",
       "profileScore": 1,
@@ -5213,7 +5213,7 @@
       "estimatedWinProbability": null,
       "marketWinProbability": 0.47225076494548685,
       "narrative": {
-        "upsetCase": "Baylor is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "upsetCase": "UCF is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
         "keyThingsToWatch": [
           "game pace / possession count",
@@ -5223,8 +5223,8 @@
           "UCF QB/WR vs Baylor DB — Baylor +",
           "Baylor QB/WR vs UCF DB — UCF +",
           "UCF OL/RB vs Baylor DL/LB — Even",
-          "Phil Steele current power rating: Baylor 124 vs UCF 121.",
-          "Canonical selected-week market: Baylor +1.5, total 47.5; production model Lean UCF edge 0.3965007717831468; Football Independent Baylor edge 0.8208191333380761."
+          "Phil Steele current power rating: UCF 121 vs Baylor 124.",
+          "Canonical selected-week market: UCF +1.5, total 47.5; production model Lean UCF edge 0.3965007717831468; Football Independent Baylor edge 0.8208191333380761."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -5245,7 +5245,7 @@
       "canonicalGameId": "ESPN-401866451",
       "team": "Sacramento State",
       "opponent": "Kent State",
-      "currentSpread": "+8.5",
+      "currentSpread": "+7.5",
       "band": "INTERMEDIATE",
       "profileScore": 1,
       "score25": 1,
@@ -5313,13 +5313,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.347594522906578,
+        "marketWinProbability": 0.3645764407416393,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.347594522906578,
+      "marketWinProbability": 0.3645764407416393,
       "narrative": {
         "upsetCase": "Sacramento State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
@@ -5332,7 +5332,7 @@
           "Kent State OL/RB vs Sacramento State DL/LB — Even",
           "Sacramento State QB/WR vs Kent State DB — Even",
           "257 total yards, 13 first downs and two turnovers in FBS debut; small move only.",
-          "Canonical selected-week market: Sacramento State +8.5, total 46.5; production model Kent State ATS edge 2.226547953235352; Football Independent Sacramento State edge 5.523964051979698."
+          "Canonical selected-week market: Sacramento State +7.5, total 46.5; production model Kent State ATS edge 2.226547953235352; Football Independent Sacramento State edge 5.523964051979698."
         ]
       },
       "deepDiveStatus": "COMPLETE",
