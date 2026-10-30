@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-30T02:22:56.947Z",
+  "updatedAt": "2026-10-30T02:31:30.634Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 49,
-    "underdogSpecial": 17,
+    "underdogSpecial": 18,
     "upsetLab": 21,
-    "intermediate": 11,
+    "intermediate": 10,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -375,6 +375,114 @@
     },
     {
       "week": 9,
+      "canonicalGameId": "ESPN-401866451",
+      "team": "Sacramento State",
+      "opponent": "Kent State",
+      "currentSpread": "+7",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 1,
+      "score25": 1,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "LIMITED",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "LIMITED",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": null,
+        "teamOffenseYppRank": null,
+        "teamAggregateRank": null,
+        "teamDefensiveYppRank": null,
+        "marketTotal": 46.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.3731987188091081,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.3731987188091081,
+      "narrative": {
+        "upsetCase": "Sacramento State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Kent State QB/WR vs Sacramento State DB — Even",
+          "Kent State OL/RB vs Sacramento State DL/LB — Even",
+          "Sacramento State QB/WR vs Kent State DB — Even",
+          "257 total yards, 13 first downs and two turnovers in FBS debut; small move only.",
+          "Canonical selected-week market: Sacramento State +7, total 46.5; production model no directional support edge 0.8156436534483777; Football Independent Sacramento State edge 4.229352097178866."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 9,
       "canonicalGameId": "ESPN-401858279",
       "team": "Boston College",
       "opponent": "Duke",
@@ -594,7 +702,7 @@
       "canonicalGameId": "ESPN-401856845",
       "team": "Kansas",
       "opponent": "TCU",
-      "currentSpread": "+5.5",
+      "currentSpread": "+6",
       "band": "UNDERDOG-SPECIAL",
       "profileScore": 1,
       "score25": 1,
@@ -662,13 +770,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3995339388377276,
+        "marketWinProbability": 0.3906824581564393,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.3995339388377276,
+      "marketWinProbability": 0.3906824581564393,
       "narrative": {
         "upsetCase": "Kansas is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
@@ -681,7 +789,7 @@
           "TCU QB/WR vs Kansas DB — TCU +",
           "Kansas OL/RB vs TCU DL/LB — Even",
           "Phil Steele current power rating: Kansas 118 vs TCU 125.",
-          "Canonical selected-week market: Kansas +5.5, total 45.5; production model no directional support edge 0.04969837939960087; Football Independent Kansas edge 1.147143806700572."
+          "Canonical selected-week market: Kansas +6, total 45.5; production model no directional support edge 0.04969837939960087; Football Independent Kansas edge 1.147143806700572."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -1956,7 +2064,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 49.5,
+        "marketTotal": 48.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -1982,7 +2090,7 @@
           "Wake Forest QB/WR vs Virginia DB — Virginia +",
           "Outgained NC State 413-168 and rushed for 258 yards; Beau Pribula produced efficiently as passer and runner.",
           "Phil Steele current power rating: Virginia 120 vs Wake Forest 136.",
-          "Canonical selected-week market: Virginia +12.5, total 49.5; production model no directional support edge 6.697393851083423; Football Independent Virginia edge 13.276124054482564."
+          "Canonical selected-week market: Virginia +12.5, total 48.5; production model no directional support edge 6.697393851083423; Football Independent Virginia edge 13.276124054482564."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -5010,114 +5118,6 @@
           "UCF OL/RB vs Baylor DL/LB — Even",
           "Phil Steele current power rating: UCF 126 vs Baylor 121.",
           "Canonical selected-week market: UCF +1.5, total 47.5; production model no directional support edge 3.5845138965072083; Football Independent UCF edge 2.759449454841206."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 9,
-      "canonicalGameId": "ESPN-401866451",
-      "team": "Sacramento State",
-      "opponent": "Kent State",
-      "currentSpread": "+7.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 1,
-      "score25": 1,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "LIMITED",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "LIMITED",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": null,
-        "teamOffenseYppRank": null,
-        "teamAggregateRank": null,
-        "teamDefensiveYppRank": null,
-        "marketTotal": 46.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3645764407416393,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.3645764407416393,
-      "narrative": {
-        "upsetCase": "Sacramento State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Kent State QB/WR vs Sacramento State DB — Even",
-          "Kent State OL/RB vs Sacramento State DL/LB — Even",
-          "Sacramento State QB/WR vs Kent State DB — Even",
-          "257 total yards, 13 first downs and two turnovers in FBS debut; small move only.",
-          "Canonical selected-week market: Sacramento State +7.5, total 46.5; production model no directional support edge 0.8156436534483777; Football Independent Sacramento State edge 4.229352097178866."
         ]
       },
       "deepDiveStatus": "COMPLETE",
