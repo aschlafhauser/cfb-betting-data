@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-30T15:16:21.896Z",
+  "updatedAt": "2026-10-30T15:25:06.987Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 49,
-    "underdogSpecial": 17,
+    "underdogSpecial": 18,
     "upsetLab": 21,
-    "intermediate": 11,
+    "intermediate": 10,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -358,6 +358,114 @@
           "Oregon State OL/RB vs Fresno State DL/LB — Fresno State +",
           "Fresno State OL/RB vs Oregon State DL/LB — Fresno State +",
           "Canonical selected-week market: Fresno State +6, total 58.5; production model Lean Fresno State edge 3.6619613210458004; Football Independent Fresno State edge 6.254751861621719."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 9,
+      "canonicalGameId": "ESPN-401866451",
+      "team": "Sacramento State",
+      "opponent": "Kent State",
+      "currentSpread": "+7",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 1,
+      "score25": 1,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 0,
+        "explosivePath": 0,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "LIMITED",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "LIMITED",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": null,
+        "teamOffenseYppRank": null,
+        "teamAggregateRank": null,
+        "teamDefensiveYppRank": null,
+        "marketTotal": 46.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.3731987188091081,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.3731987188091081,
+      "narrative": {
+        "upsetCase": "Sacramento State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Kent State QB/WR vs Sacramento State DB — Even",
+          "Kent State OL/RB vs Sacramento State DL/LB — Even",
+          "Sacramento State QB/WR vs Kent State DB — Even",
+          "257 total yards, 13 first downs and two turnovers in FBS debut; small move only.",
+          "Canonical selected-week market: Sacramento State +7, total 46.5; production model Kent State ATS edge 0.3148736534483776; Football Independent Sacramento State edge 3.727952097178866."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -1417,7 +1525,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 55.5,
+        "marketTotal": 56.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -1440,7 +1548,7 @@
           "Coastal Carolina QB/WR vs Georgia State DB — Even",
           "Coastal Carolina OL/RB vs Georgia State DL/LB — Even",
           "Georgia State QB/WR vs Coastal Carolina DB — Even",
-          "Canonical selected-week market: Coastal Carolina +4.5, total 55.5; production model Georgia State ATS edge 0.6522899096437182; Football Independent Coastal Carolina edge 0.9289056602483088."
+          "Canonical selected-week market: Coastal Carolina +4.5, total 56.5; production model Georgia State ATS edge 0.6522899096437182; Football Independent Coastal Carolina edge 0.9289056602483088."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -2283,7 +2391,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 41.5,
+        "marketTotal": 40.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -2307,7 +2415,7 @@
           "Minnesota QB/WR vs Indiana DB — Indiana ++",
           "Minnesota OL/RB vs Indiana DL/LB — Indiana +",
           "Phil Steele current power rating: Minnesota 131 vs Indiana 146.",
-          "Canonical selected-week market: Minnesota +20.5, total 41.5; production model Lean Indiana edge 3.3884566539877135; Football Independent Minnesota edge 6.176638975629833."
+          "Canonical selected-week market: Minnesota +20.5, total 40.5; production model Lean Indiana edge 3.3884566539877135; Football Independent Minnesota edge 6.176638975629833."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3145,7 +3253,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 52.5,
+        "marketTotal": 53.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -3170,7 +3278,7 @@
           "Miami QB/WR vs North Carolina DB — Miami ++",
           "Held TCU to 10 points and shut down the run after halftime; 322 total yards on offense.",
           "Phil Steele current power rating: North Carolina 124 vs Miami 145.",
-          "Canonical selected-week market: North Carolina +14, total 52.5; production model Miami ATS edge 0.5028157178956825; Football Independent North Carolina edge 4.151172596572305."
+          "Canonical selected-week market: North Carolina +14, total 53.5; production model Miami ATS edge 0.5028157178956825; Football Independent North Carolina edge 4.151172596572305."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3578,7 +3686,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 57.5,
+        "marketTotal": 58.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -3602,7 +3710,7 @@
           "SMU QB/WR vs Syracuse DB — SMU ++",
           "SMU OL/RB vs Syracuse DL/LB — SMU +",
           "Phil Steele current power rating: Syracuse 118 vs SMU 129.",
-          "Canonical selected-week market: Syracuse +10.5, total 57.5; production model Lean Syracuse edge 3.343513713457032; Football Independent Syracuse edge 5.836889664822492."
+          "Canonical selected-week market: Syracuse +10.5, total 58.5; production model Lean Syracuse edge 3.343513713457032; Football Independent Syracuse edge 5.836889664822492."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -3730,7 +3838,7 @@
       "canonicalGameId": "ESPN-401856734",
       "team": "Florida",
       "opponent": "Georgia",
-      "currentSpread": "+11.5",
+      "currentSpread": "+12.5",
       "band": "UPSET-LAB",
       "profileScore": 0.3,
       "score25": 0.3,
@@ -3798,13 +3906,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.2990445336807876,
+        "marketWinProbability": 0.2837519862914921,
         "productionWinProbability": null,
         "independentWinProbability": null
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": null,
-      "marketWinProbability": 0.2990445336807876,
+      "marketWinProbability": 0.2837519862914921,
       "narrative": {
         "upsetCase": "Florida is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
@@ -3817,7 +3925,7 @@
           "Georgia QB/WR vs Florida DB — Georgia +",
           "Georgia OL/RB vs Florida DL/LB — Georgia +",
           "Phil Steele current power rating: Florida 133 vs Georgia 145.",
-          "Canonical selected-week market: Florida +11.5, total 56.5; production model Lean Georgia edge 5.8995462097950435; Football Independent Florida edge 10.769886118611284."
+          "Canonical selected-week market: Florida +12.5, total 56.5; production model Lean Georgia edge 7.440695088552403; Football Independent Florida edge 11.769886118611284."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -4877,7 +4985,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 48.5,
+        "marketTotal": 47.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -4901,115 +5009,7 @@
           "Baylor QB/WR vs UCF DB — UCF +",
           "UCF OL/RB vs Baylor DL/LB — Even",
           "Phil Steele current power rating: UCF 126 vs Baylor 121.",
-          "Canonical selected-week market: UCF +1.5, total 48.5; production model UCF ATS edge 3.579683896507208; Football Independent UCF edge 2.751399454841206."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 9,
-      "canonicalGameId": "ESPN-401866451",
-      "team": "Sacramento State",
-      "opponent": "Kent State",
-      "currentSpread": "+7.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 1,
-      "score25": 1,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 0,
-        "explosivePath": 0,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "LIMITED",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "LIMITED",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": null,
-        "teamOffenseYppRank": null,
-        "teamAggregateRank": null,
-        "teamDefensiveYppRank": null,
-        "marketTotal": 46.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3645764407416393,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.3645764407416393,
-      "narrative": {
-        "upsetCase": "Sacramento State is a market longshot, but the governed matchup evidence does not currently show enough directional advantages to call the upset path strong.",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, the trenches do not clearly favor the underdog, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Kent State QB/WR vs Sacramento State DB — Even",
-          "Kent State OL/RB vs Sacramento State DL/LB — Even",
-          "Sacramento State QB/WR vs Kent State DB — Even",
-          "257 total yards, 13 first downs and two turnovers in FBS debut; small move only.",
-          "Canonical selected-week market: Sacramento State +7.5, total 46.5; production model Kent State ATS edge 0.8148736534483776; Football Independent Sacramento State edge 4.227952097178866."
+          "Canonical selected-week market: UCF +1.5, total 47.5; production model UCF ATS edge 3.579683896507208; Football Independent UCF edge 2.751399454841206."
         ]
       },
       "deepDiveStatus": "COMPLETE",
