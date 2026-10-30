@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 9,
+  "canonicalGameId": "ESPN-401856844",
+  "matchup": "Baylor at UCF",
+  "kickoff": "2026-10-30T23:30:00.000Z",
+  "frozenAt": "2026-10-30T18:27:02.667Z",
+  "minutesBeforeKickoff": 303,
+  "immutable": true,
+  "market": {
+    "spread": "Baylor -1.5",
+    "total": 49.5,
+    "moneyline": null,
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-10-30T18:26:37.118Z"
+  },
+  "models": {
+    "marketCalibratedFair": "UCF -3.5",
+    "marketCalibratedHomeMargin": 3.3221105590062114,
+    "marketCalibratedEdge": 4.822110559006211,
+    "independentFair": "UCF -1.5",
+    "independentHomeMargin": 1.2513994548412062,
+    "independentEdge": 2.751399454841206,
+    "independentSide": "UCF",
+    "ensembleFair": "UCF -2",
+    "ensembleHomeMargin": 2.079683896507208,
+    "ensembleEdge": 3.579683896507208,
+    "selectedModel": "ensemble",
+    "governedFair": "UCF -2",
+    "governedTotal": 48
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-10-30T17:21:23.239Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-30T17:21:22.939Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-10-30T17:21:53.908Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -0.6778894409937889
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 0.47968389650720805
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-10-30T17:21:53.908Z",
+    "inputDates": {
+      "fpi": "2026-10-30T17:21:23.239Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-30T17:21:22.939Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "UCF -2.5",
+    "sourceObservedAt": "2026-10-25T13:57:52.300Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-10-30T18:26:37.118Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-10-30T18:26:37.118Z",
+      "selectedWeek": "Week 9",
+      "modelPromotion": {
+        "marketCount": 5,
+        "independentCount": 5,
+        "ensembleCount": 5,
+        "rejected": 50
+      },
+      "renderedRowCount": 56,
+      "deepDiveCompleteCount": 56,
+      "deepDiveFullEvidenceCount": 56,
+      "deepDiveSourceLimitedCount": 0
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

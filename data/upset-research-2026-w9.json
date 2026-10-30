@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-30T18:16:53.059Z",
+  "updatedAt": "2026-10-30T18:26:37.183Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -4270,6 +4270,115 @@
     },
     {
       "week": 9,
+      "canonicalGameId": "ESPN-401858504",
+      "team": "Washington",
+      "opponent": "Nebraska",
+      "currentSpread": "+7.5",
+      "band": "INTERMEDIATE",
+      "profileScore": 2,
+      "score25": 2,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 1,
+        "explosivePath": 0,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "LIMITED",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "LIMITED",
+          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "MISSING",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "MISSING",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": null,
+        "teamOffenseYppRank": null,
+        "teamAggregateRank": null,
+        "teamDefensiveYppRank": null,
+        "marketTotal": 49.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.3645764407416393,
+        "productionWinProbability": null,
+        "independentWinProbability": null
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": null,
+      "marketWinProbability": 0.3645764407416393,
+      "narrative": {
+        "upsetCase": "Washington has an upset path built around enough trench resistance to avoid a one-sided game. Nebraska OL/RB vs Washington DL/LB — Washington +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Nebraska OL/RB vs Washington DL/LB — Washington +",
+          "Washington QB/WR vs Nebraska DB — Nebraska +",
+          "Nebraska QB/WR vs Washington DB — Even",
+          "Phil Steele current power rating: Washington 132 vs Nebraska 136.",
+          "Canonical selected-week market: Washington +7.5, total 49.5; production model Lean Nebraska edge 0.5776195134054918; Football Independent Washington edge 2.2541976484032507."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE",
+      "informationQuality": "standard",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 9,
       "canonicalGameId": "ESPN-401858503",
       "team": "Maryland",
       "opponent": "Illinois",
@@ -4362,115 +4471,6 @@
           "Maryland QB/WR vs Illinois DB — Even",
           "Phil Steele current power rating: Maryland 117 vs Illinois 127.",
           "Canonical selected-week market: Maryland +2.5, total 54.5; production model Illinois ATS edge 5.313644327750746; Football Independent Illinois edge 7.6315696697847155."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE",
-      "informationQuality": "standard",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 9,
-      "canonicalGameId": "ESPN-401858504",
-      "team": "Washington",
-      "opponent": "Nebraska",
-      "currentSpread": "+7.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 1.7,
-      "score25": 1.7,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 1,
-        "explosivePath": 0,
-        "compression": 0.7,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "LIMITED",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "LIMITED",
-          "reason": "Observed offensive YPP and opposing pass defense; explosive-play rate unavailable."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "MISSING",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "MISSING",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": null,
-        "teamOffenseYppRank": null,
-        "teamAggregateRank": null,
-        "teamDefensiveYppRank": null,
-        "marketTotal": 50.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3645764407416393,
-        "productionWinProbability": null,
-        "independentWinProbability": null
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": null,
-      "marketWinProbability": 0.3645764407416393,
-      "narrative": {
-        "upsetCase": "Washington has an upset path built around enough trench resistance to avoid a one-sided game. Nebraska OL/RB vs Washington DL/LB — Washington +",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Nebraska OL/RB vs Washington DL/LB — Washington +",
-          "Washington QB/WR vs Nebraska DB — Nebraska +",
-          "Nebraska QB/WR vs Washington DB — Even",
-          "Phil Steele current power rating: Washington 132 vs Nebraska 136.",
-          "Canonical selected-week market: Washington +7.5, total 50.5; production model Lean Nebraska edge 0.5776195134054918; Football Independent Washington edge 2.2541976484032507."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -4662,7 +4662,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 42.5,
+        "marketTotal": 41.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -4685,7 +4685,7 @@
           "South Florida QB/WR vs UAB DB — South Florida ++",
           "UAB OL/RB vs South Florida DL/LB — Even",
           "South Florida OL/RB vs UAB DL/LB — Even",
-          "Canonical selected-week market: UAB +7.5, total 42.5; production model Lean South Florida edge 1.7715105264584192; Football Independent South Florida edge 1.6574400807674579."
+          "Canonical selected-week market: UAB +7.5, total 41.5; production model Lean South Florida edge 1.7715105264584192; Football Independent South Florida edge 1.6574400807674579."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -4877,7 +4877,7 @@
         "teamOffenseYppRank": null,
         "teamAggregateRank": null,
         "teamDefensiveYppRank": null,
-        "marketTotal": 48.5,
+        "marketTotal": 49.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -4901,7 +4901,7 @@
           "Baylor QB/WR vs UCF DB — UCF +",
           "UCF OL/RB vs Baylor DL/LB — Even",
           "Phil Steele current power rating: UCF 126 vs Baylor 121.",
-          "Canonical selected-week market: UCF +1.5, total 48.5; production model UCF ATS edge 3.579683896507208; Football Independent UCF edge 2.751399454841206."
+          "Canonical selected-week market: UCF +1.5, total 49.5; production model UCF ATS edge 3.579683896507208; Football Independent UCF edge 2.751399454841206."
         ]
       },
       "deepDiveStatus": "COMPLETE",
