@@ -2,16 +2,8 @@ name: CFB specialty layer guard
 # price-sanity revision: 2026-10-26.2
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/specialty-layer-guard.mjs'
-      - 'scripts/build-upset-research.mjs'
-      - 'scripts/build-specialty-layers.mjs'
-      - 'scripts/refresh-free-moneylines.mjs'
-      - 'scripts/apply-free-moneylines.mjs'
-      - 'scripts/apply-longshot-v2.mjs'
-      - '.github/workflows/specialty-layer-guard.yml'
+  # The full runtime handles all push events. Two pending workflows sharing
+  # one writer lock cancel each other even with cancel-in-progress false.
   schedule:
     - cron: '7 * * * *'
   workflow_dispatch:

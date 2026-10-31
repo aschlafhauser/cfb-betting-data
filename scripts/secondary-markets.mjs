@@ -23,7 +23,8 @@ export function parseMarkets(html){
     const homeTotal=sides[1].configs.find(c=>c.marketName==='Total'&&c.operatorName===book);
     const hs=Number(homeSpread.line),as=Number(awaySpread?.line),ou=Number(total?.line);
     if(!book||!awaySpread||!total||!homeTotal||!Number.isFinite(hs)||!Number.isFinite(as)||Math.abs(hs+as)>0.001||!(ou>0)||ou!==Number(homeTotal.line))continue;
-    quotes.push({date:table[1],away:norm(sides[0].name),home:norm(sides[1].name),homeSpread:hs,total:ou,book,spreadPrices:{away:Number(awaySpread.odds),home:Number(homeSpread.odds)},totalPrices:{over:Number(total.odds),under:Number(homeTotal.odds)}});
+    const moneyline=side=>{const m=side.configs.find(c=>/money\s*line/i.test(c.marketName||'')&&c.operatorName===book);const n=Number(m?.odds);return Number.isFinite(n)&&Math.abs(n)>=100?n:null};
+    quotes.push({awayMoneyline:moneyline(sides[0]),homeMoneyline:moneyline(sides[1]),date:table[1],away:norm(sides[0].name),home:norm(sides[1].name),homeSpread:hs,total:ou,book,spreadPrices:{away:Number(awaySpread.odds),home:Number(homeSpread.odds)},totalPrices:{over:Number(total.odds),under:Number(homeTotal.odds)}});
   }
   return quotes;
 }

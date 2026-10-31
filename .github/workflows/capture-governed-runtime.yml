@@ -69,7 +69,9 @@ jobs:
         run: node scripts/sync-expert-ledger.mjs
 
       - name: Verify team-metric parser regression cases
-        run: node scripts/test-team-metrics.mjs
+        run: |
+          node scripts/test-team-metrics.mjs
+          node scripts/test-market-fields.mjs
 
       - name: Refresh team and position-group statistical display metrics
         id: stats_refresh

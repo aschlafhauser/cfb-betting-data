@@ -1,18 +1,18 @@
 {
-  "version": "FREE-ML-v4-all-specialty",
+  "version": "FREE-ML-v5-exact-canonical-identity",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-10-31T13:29:46.481Z",
+  "updatedAt": "2026-10-31T13:34:15.587Z",
   "status": "CURRENT-FREE-SOURCE-SWEEP",
-  "policy": "ESPN provides game identity and spread. Sweep both +3.5 to +7 Underdog Special and +9.5+ Longshot candidates. Retained secondary quotes expire after 24h. All free-source quotes are indicative research prices and require sportsbook re-verification.",
+  "policy": "Canonical ESPN current moneylines first; CBS fallback requires exact date and both-team identity. Previously fuzzy-matched CBS quotes are discarded. Quotes remain indicative and require sportsbook re-verification.",
   "sources": [
     {
-      "name": "CBS Sports",
-      "role": "automated primary free moneyline enrichment"
+      "name": "ESPN",
+      "role": "canonical event-ID-bound current moneylines"
     },
     {
-      "name": "Sportsbook Review",
-      "role": "retained governed secondary cross-check where directly observed"
+      "name": "CBS Sports",
+      "role": "exact date and opponent-pair fallback"
     }
   ],
   "coverage": {
@@ -22,383 +22,411 @@
   },
   "prices": [
     {
-      "canonicalGameId": "ESPN-401856733",
-      "team": "Arkansas",
-      "opponent": "Missouri",
-      "moneyline": "+310",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856734",
-      "team": "Florida",
-      "opponent": "Georgia",
-      "moneyline": "+350",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856735",
-      "team": "Auburn",
-      "opponent": "Ole Miss",
-      "moneyline": "+360",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856736",
-      "team": "South Carolina",
-      "opponent": "Oklahoma",
-      "moneyline": "+455",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856737",
-      "team": "Mississippi State",
-      "opponent": "Texas",
-      "moneyline": "+890",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/msst-tex-score-odds-october-31-2026/289756",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "canonicalGameId": "ESPN-401859185",
+      "team": "Navy",
+      "opponent": "Notre Dame",
+      "moneyline": "+2000",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401856842",
       "team": "Arizona",
       "opponent": "Texas Tech",
       "moneyline": "+150",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856843",
-      "team": "Arizona State",
-      "opponent": "BYU",
-      "moneyline": "+570",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856845",
-      "team": "Kansas",
-      "opponent": "TCU",
-      "moneyline": "+310",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856847",
-      "team": "Iowa State",
-      "opponent": "Oklahoma State",
-      "moneyline": "+285",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401856848",
-      "team": "Cincinnati",
-      "opponent": "Utah",
-      "moneyline": "+225",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401858277",
-      "team": "California",
-      "opponent": "NC State",
-      "moneyline": "+250",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/ACC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401858278",
       "team": "Syracuse",
       "opponent": "SMU",
       "moneyline": "+280",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858277",
+      "team": "California",
+      "opponent": "NC State",
+      "moneyline": "+250",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401858279",
       "team": "Boston College",
       "opponent": "Duke",
-      "moneyline": "+220",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/ACC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "moneyline": "+215",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
-      "canonicalGameId": "ESPN-401858280",
-      "team": "Clemson",
-      "opponent": "Florida State",
-      "moneyline": "+190",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/ACC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401858282",
-      "team": "North Carolina",
-      "opponent": "Miami",
+      "canonicalGameId": "ESPN-401866452",
+      "team": "Bowling Green",
+      "opponent": "Western Michigan",
       "moneyline": "+455",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858507",
+      "team": "Rutgers",
+      "opponent": "Michigan",
+      "moneyline": "+525",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401856735",
+      "team": "Auburn",
+      "opponent": "Ole Miss",
+      "moneyline": "+350",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401869944",
+      "team": "Coastal Carolina",
+      "opponent": "Georgia State",
+      "moneyline": "+154",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401862815",
+      "team": "Temple",
+      "opponent": "East Carolina",
+      "moneyline": "+164",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401871097",
+      "team": "South Alabama",
+      "opponent": "Louisiana Tech",
+      "moneyline": "+200",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401858283",
       "team": "Stanford",
       "opponent": "Louisville",
       "moneyline": "+1100",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/ACC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
-      "canonicalGameId": "ESPN-401858284",
-      "team": "Virginia",
-      "opponent": "Wake Forest",
-      "moneyline": "+400",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "canonicalGameId": "ESPN-401856843",
+      "team": "Arizona State",
+      "opponent": "BYU",
+      "moneyline": "+550",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401856734",
+      "team": "Florida",
+      "opponent": "Georgia",
+      "moneyline": "+340",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401858501",
       "team": "Minnesota",
       "opponent": "Indiana",
-      "moneyline": "+1060",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "moneyline": "+850",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401858505",
       "team": "Northwestern",
       "opponent": "Oregon",
       "moneyline": "+150",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401858506",
-      "team": "Purdue",
-      "opponent": "Penn State",
-      "moneyline": "+360",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/BIG10/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401858507",
-      "team": "Rutgers",
-      "opponent": "Michigan",
-      "moneyline": "+610",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/BIG10/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401858508",
-      "team": "Nevada",
-      "opponent": "UCLA",
-      "moneyline": "+1280",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401858509",
-      "team": "USC",
-      "opponent": "Ohio State",
-      "moneyline": "+200",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401859185",
-      "team": "Navy",
-      "opponent": "Notre Dame",
-      "moneyline": "+3500",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401860908",
-      "team": "Texas State",
-      "opponent": "Boise State",
-      "moneyline": "+350",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401860924",
-      "team": "Fresno State",
-      "opponent": "Oregon State",
-      "moneyline": "+185",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf/oregon-state-beavers-vs-fresno-state-bulldogs-prediction-pick-ncaaf-odds-saturday-october-31",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
-      "canonicalGameId": "ESPN-401862814",
-      "team": "Army",
-      "opponent": "Memphis",
-      "moneyline": "+180",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/army-memphis-score-odds-october-31-2026/289737",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "canonicalGameId": "ESPN-401856845",
+      "team": "Kansas",
+      "opponent": "TCU",
+      "moneyline": "+195",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
-    },
-    {
-      "canonicalGameId": "ESPN-401862815",
-      "team": "Temple",
-      "opponent": "East Carolina",
-      "moneyline": "+160",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/tem-ecu-score-odds-october-31-2026/289740",
-      "observedAt": "2026-10-31T13:27:41.239Z",
-      "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
-    },
-    {
-      "canonicalGameId": "ESPN-401864529",
-      "team": "San José State",
-      "opponent": "New Mexico",
-      "moneyline": "+500",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/new-mexico-san-jose-state-score-odds-october-31-2026/289754",
-      "observedAt": "2026-10-31T13:27:41.239Z",
-      "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
-    },
-    {
-      "canonicalGameId": "ESPN-401864530",
-      "team": "Northern Illinois",
-      "opponent": "UNLV",
-      "moneyline": "+1100",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/MWC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401864531",
       "team": "UTEP",
       "opponent": "North Dakota State",
-      "moneyline": "+1400",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/MWC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401866452",
-      "team": "Bowling Green",
-      "opponent": "Western Michigan",
-      "moneyline": "+520",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/MAC/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
-    },
-    {
-      "canonicalGameId": "ESPN-401869846",
-      "team": "App State",
-      "opponent": "Georgia Southern",
-      "moneyline": "+175",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/appalachian-state-georgia-southern-score-odds-october-31-2026/289722",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "moneyline": "+1300",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
-    },
-    {
-      "canonicalGameId": "ESPN-401869944",
-      "team": "Coastal Carolina",
-      "opponent": "Georgia State",
-      "moneyline": "+455",
-      "source": "CBS Sports Week 9 odds",
-      "sourceUrl": "https://www.cbssports.com/college-football/odds/top25/2026/regular/week-9/",
-      "observedAt": "2026-10-31T13:29:46.481Z",
-      "freshness": "CURRENT-OBSERVED"
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401871059",
       "team": "Florida International",
       "opponent": "Liberty",
-      "moneyline": "+450",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf/fiu-panthers-vs-liberty-flames-prediction-pick-odds-ncaaf-saturday-oct-31",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "moneyline": "+425",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
       "canonicalGameId": "ESPN-401871095",
       "team": "UL Monroe",
       "opponent": "Southern Miss",
       "moneyline": "+140",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/usm-ulm-score-odds-october-31-2026/289738",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
+      "quoteType": "indicative; sportsbook execution recheck required"
     },
     {
-      "canonicalGameId": "ESPN-401871097",
-      "team": "South Alabama",
-      "opponent": "Louisiana Tech",
-      "moneyline": "+185",
-      "source": "Action Network published indicative odds",
-      "sourceUrl": "https://www.actionnetwork.com/ncaaf-game/louisiana-tech-south-alabama-score-odds-october-31-2026/289727",
-      "observedAt": "2026-10-31T13:27:41.239Z",
+      "canonicalGameId": "ESPN-401856848",
+      "team": "Cincinnati",
+      "opponent": "Utah",
+      "moneyline": "+220",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
       "freshness": "CURRENT-OBSERVED",
-      "executionStatus": "Research quote only; current executable sportsbook price must be rechecked."
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858284",
+      "team": "Virginia",
+      "opponent": "Wake Forest",
+      "moneyline": "+390",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401864529",
+      "team": "San José State",
+      "opponent": "New Mexico",
+      "moneyline": "+470",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858508",
+      "team": "Nevada",
+      "opponent": "UCLA",
+      "moneyline": "+1000",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401856736",
+      "team": "South Carolina",
+      "opponent": "Oklahoma",
+      "moneyline": "+142",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858506",
+      "team": "Purdue",
+      "opponent": "Penn State",
+      "moneyline": "+295",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401869846",
+      "team": "App State",
+      "opponent": "Georgia Southern",
+      "moneyline": "+180",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401856847",
+      "team": "Iowa State",
+      "opponent": "Oklahoma State",
+      "moneyline": "+285",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858280",
+      "team": "Clemson",
+      "opponent": "Florida State",
+      "moneyline": "+190",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858282",
+      "team": "North Carolina",
+      "opponent": "Miami",
+      "moneyline": "+455",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401858509",
+      "team": "USC",
+      "opponent": "Ohio State",
+      "moneyline": "+200",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401856737",
+      "team": "Mississippi State",
+      "opponent": "Texas",
+      "moneyline": "+900",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401856733",
+      "team": "Arkansas",
+      "opponent": "Missouri",
+      "moneyline": "+300",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401862814",
+      "team": "Army",
+      "opponent": "Memphis",
+      "moneyline": "+180",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401860908",
+      "team": "Texas State",
+      "opponent": "Boise State",
+      "moneyline": "+340",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401864530",
+      "team": "Northern Illinois",
+      "opponent": "UNLV",
+      "moneyline": "+1000",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
+    },
+    {
+      "canonicalGameId": "ESPN-401860924",
+      "team": "Fresno State",
+      "opponent": "Oregon State",
+      "moneyline": "+190",
+      "source": "ESPN Draft Kings",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=2026&seasontype=2&week=9&limit=200&groups=80",
+      "observedAt": "2026-10-31T13:32:58.843Z",
+      "freshness": "CURRENT-OBSERVED",
+      "quoteType": "indicative; sportsbook execution recheck required"
     }
   ]
 }
