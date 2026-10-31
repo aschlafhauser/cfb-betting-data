@@ -11,6 +11,12 @@ const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 const key=(a,h)=>`${norm(a)}__${norm(h)}`;
 const parseTeams=g=>{const p=String(g||'').split(/ at | vs /);return {away:(p[0]||'').trim(),home:(p[1]||'').trim()}};
 const existingByKey=new Map((existing.dossiers||[]).map(d=>{const p=parseTeams(d.matchup);return [key(p.away,p.home),d]}));
+const readRows=async file=>{const raw=JSON.parse(await fs.readFile('data/'+file,'utf8'));return Array.isArray(raw)?raw:(raw.records||raw.teams||[])};
+const experts=(await readRows('expert-weekly.json')).filter(r=>Number(r.week)===week);
+const injuries=(await readRows('injuries.json')).filter(r=>Number(r.week)===week);
+const metricsDocument=JSON.parse(await fs.readFile('data/team-metrics-current.json','utf8'));
+const metrics=metricsDocument.teams||[];
+const joined=(rows,bg)=>rows.filter(r=>String(r.gameId||r.canonicalGameId||r.game_id||'')===String(bg.gameId));
 const reusablePrior=d=>!!(d&&['COMPLETE','COMPLETE-SOURCE-LIMITED'].includes(d.status)&&Number(d.evidenceCount||0)>=1&&d.evidenceDimensions&&typeof d.evidenceDimensions==='object'&&Array.isArray(d.mechanisms)&&d.mechanisms.length>=1);
 
 const browser=await chromium.launch({headless:true});
@@ -58,15 +64,16 @@ function evidenceFor(bg,ag){
   const modelValid=!!bg?.modelComponents?.sourceValid||Number.isFinite(bg?.modelEdgeMagnitude)||!!bg?.modelSpread;
   const marketValid=!!bg?.currentSpread||Number.isFinite(bg?.currentTotal);
   return {
+    statisticalProfile:{accounted:[bg.away,bg.home].every(t=>metrics.some(m=>norm(m.team)===norm(t))),sourceUpdatedAt:metricsDocument.updatedAt,evidence:metrics.filter(m=>[norm(bg.away),norm(bg.home)].includes(norm(m.team))).map(m=>({team:m.team,offense:m.offense,defense:m.defense,context:m.context}))},
     qbPassing:{accounted:pass.length>0||profileText.length>40,evidence:pass.slice(0,2)},
     olFront:{accounted:trench.length>0,evidence:trench.slice(0,2)},
     receiversCoverage:{accounted:pass.length>0,evidence:pass.slice(0,2)},
     runFront:{accounted:trench.length>0,evidence:trench.slice(0,2)},
-    availability:{accounted:true,evidence:availabilityHit?'Material availability/depth-chart language is present in governed matchup detail.':'No material availability item surfaced in governed matchup detail at capture time; continue late-week recheck.'},
+    availability:{accounted:joined(injuries,bg).length>0,evidence:joined(injuries,bg).length?joined(injuries,bg).map(r=>({team:r.team,player:r.player,status:r.status,checkedAt:r.checkedAt,source:r.source,sourceUrl:r.sourceUrl,note:r.note})):'No current-week availability report is attached; health is unverified.'},
     coachingScheme:{accounted:true,evidence:coachingHit?'Governed team/matchup profile contains coaching/scheme/situational context.':'No matchup-specific coaching change surfaced; baseline system/team identity remains governed context.'},
     marketMovement:{accounted:marketValid,evidence:{spread:bg?.currentSpread??null,total:bg?.currentTotal??null,moneyline:bg?.currentMoneyline??null,source:bg?.marketSource??null}},
     modelFair:{accounted:modelValid,evidence:{fair:bg?.modelSpread??ag?.fair??null,total:bg?.modelTotal??ag?.modelTotal??null,edge:bg?.modelEdgeMagnitude??null,components:bg?.modelComponents??ag?.modelComponents??null}},
-    expertResidual:{accounted:true,evidence:expertHit?'Governed matchup detail contains current expert-source context; same-family repetition remains correlated.':'No new matchup-specific expert residual surfaced in rendered governed detail; explicitly neutral, not positive evidence.'},
+    expertResidual:{accounted:joined(experts,bg).length>0,evidence:joined(experts,bg).length?joined(experts,bg).map(r=>({sourceFamily:r.sourceFamily||r.source,analyst:r.analyst,direction:r.direction,summary:r.sourceAnalysis||r.summary,sourceUrl:r.sourceUrl,sourceDate:r.sourceDate})):'No attributable current-week expert record; coverage remains source-limited.'},
     invalidators:{accounted:true,evidence:['Material QB/OL/secondary availability change','Market move through a key price/number without supporting football evidence','Observed matchup behavior contradicts the leading unit-interaction mechanism']}
   };
 }
@@ -74,7 +81,7 @@ function evidenceFor(bg,ag){
 const dossiers=(board.games||[]).map(bg=>{
   const ag=appByKey.get(key(bg.away,bg.home));
   const prior=existingByKey.get(key(bg.away,bg.home));
-  if(reusablePrior(prior)){
+  if(Date.parse(bg.dateTime||'')<=Date.now()&&reusablePrior(prior)){
     return {...prior,canonicalGameId:bg.gameId,currentBoard:{spread:bg.currentSpread??null,total:bg.currentTotal??null,moneyline:bg.currentMoneyline??null,modelSpread:bg.modelSpread??null,modelTotal:bg.modelTotal??null,modelEdgeMagnitude:bg.modelEdgeMagnitude??null},refreshedAt:new Date().toISOString()};
   }
   const ev=evidenceFor(bg,ag), accounted=Object.values(ev).filter(x=>x?.accounted).length;
@@ -84,8 +91,8 @@ const dossiers=(board.games||[]).map(bg=>{
   for(const d of (ag?.totalDrivers||[]).slice(0,2)) mechanisms.push(`Total driver: ${d}`);
   if(!mechanisms.length&&bg.modelSpread) mechanisms.push(`Governed model ${bg.modelSpread} versus market ${bg.currentSpread||'unavailable'}; matchup-specific unit evidence is source-limited.`);
   if(!mechanisms.length) mechanisms.push(`Canonical market/model dossier reviewed; no sufficiently specific rendered unit-interaction mechanism was available at capture time.`);
-  const full=accounted>=9&&mechanisms.length>=2&&!!ag;
-  return {canonicalGameId:bg.gameId,legacyGameId:null,matchup:`${bg.away} at ${bg.home}`,status:full?'COMPLETE':'COMPLETE-SOURCE-LIMITED',informationQuality:full?'standard':'source-limited',priority:bg.priority||ag?.priority||'low',market:{spread:bg.currentSpread??null,total:bg.currentTotal??null,moneyline:bg.currentMoneyline??null,source:bg.marketSource??null,asOf:board.updatedAt||null},model:{spread:bg.modelSpread??ag?.fair??null,total:bg.modelTotal??ag?.modelTotal??null,edgeMagnitude:bg.modelEdgeMagnitude??null,independentFootballFair:bg.independentFootballFair??null,independentFootballSide:bg.independentFootballSide??null,independentFootballEdge:bg.independentFootballEdge??null},mechanisms:mechanisms.slice(0,7),evidenceDimensions:ev,expertResidual:ev.expertResidual.evidence,invalidators:ev.invalidators.evidence,execution:'No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.',evidenceCount:accounted,sourceLimitedReason:full?null:(!ag?'No matching rendered portal matchup object; dossier is limited to canonical market/model runtime.':'One or more matchup dimensions lack direct governed source depth; limitation is explicit rather than silently filled.'),capturedAt:new Date().toISOString()};
+  const full=accounted>=9&&mechanisms.length>=2&&!!ag&&ev.availability.accounted&&ev.expertResidual.accounted&&joined(experts,bg).some(r=>/written betting analysis|transcript-reviewed/i.test(r.type||''));
+  return {canonicalGameId:bg.gameId,legacyGameId:null,matchup:`${bg.away} at ${bg.home}`,status:full?'COMPLETE':'COMPLETE-SOURCE-LIMITED',informationQuality:full?'standard':'source-limited',priority:bg.priority||ag?.priority||'low',market:{spread:bg.currentSpread??null,total:bg.currentTotal??null,moneyline:bg.currentMoneyline??null,source:bg.marketSource??null,asOf:board.updatedAt||null},model:{spread:bg.modelSpread??ag?.fair??null,total:bg.modelTotal??ag?.modelTotal??null,edgeMagnitude:bg.modelEdgeMagnitude??null,independentFootballFair:bg.independentFootballFair??null,independentFootballSide:bg.independentFootballSide??null,independentFootballEdge:bg.independentFootballEdge??null},mechanisms:mechanisms.slice(0,7),evidenceDimensions:ev,expertResidual:ev.expertResidual.evidence,invalidators:ev.invalidators.evidence,execution:'No official wager solely from dossier completion. Apply Bet Activation Gate v1.1 with current executable book/line/juice and preserve expert evidence as qualitative residual.',evidenceCount:accounted,sourceLimitedReason:full?null:(!ag?'No matching rendered portal matchup object; dossier is limited to canonical market/model runtime.':'One or more matchup dimensions, including current-week expert/availability evidence, lack governed source depth; missing reports do not imply healthy rosters.'),capturedAt:new Date().toISOString()};
 });
 
 const complete=dossiers.filter(d=>d.status==='COMPLETE').length;

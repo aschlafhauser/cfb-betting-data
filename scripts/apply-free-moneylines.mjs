@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 const board=JSON.parse(await fs.readFile('data/weekly-board.json','utf8'));
 const week=Number(board.week||2), now=new Date().toISOString();
 let overlay={prices:[]};try{overlay=JSON.parse(await fs.readFile(`data/free-moneylines-2026-w${week}.json`,'utf8'))}catch{console.log('No free moneyline overlay; nothing to apply.');process.exit(0)}
-const byId=new Map((overlay.prices||[]).map(x=>[String(x.canonicalGameId),x]));
+const byId=new Map((overlay.prices||[]).filter(x=>{const age=Date.now()-Date.parse(x.observedAt||'');return Number.isFinite(age)&&age>=-300000&&age<24*3600000}).map(x=>[String(x.canonicalGameId),x]));
 function mlNum(v){const m=String(v||'').match(/([+-]\d+)/);return m?Number(m[1]):null}
 function spreadNum(v){const m=String(v||'').match(/([+]\d+(?:\.\d+)?)/);return m?Number(m[1]):null}
 function plausibleMoneyline(spread,value){if(!Number.isFinite(spread)||!Number.isFinite(value))return false;if(spread>=9.5)return value>=200;return value>=115}

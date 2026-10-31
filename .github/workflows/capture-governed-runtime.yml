@@ -166,7 +166,9 @@ jobs:
         id: upset
         if: ${{ always() }}
         continue-on-error: true
-        run: node scripts/build-upset-research.mjs
+        run: |
+          node scripts/build-upset-research.mjs
+          node scripts/verify-upset-inputs.mjs
 
       - name: Refresh Market Movers and specialty screens
         id: specialty
