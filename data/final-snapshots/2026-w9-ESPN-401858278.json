@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 9,
+  "canonicalGameId": "ESPN-401858278",
+  "matchup": "SMU at Syracuse",
+  "kickoff": "2026-10-31T16:00:00.000Z",
+  "frozenAt": "2026-10-31T10:24:43.220Z",
+  "minutesBeforeKickoff": 335.3,
+  "immutable": true,
+  "market": {
+    "spread": "SMU -9.5",
+    "total": 58.5,
+    "moneyline": null,
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-10-31T10:24:17.029Z"
+  },
+  "models": {
+    "marketCalibratedFair": "SMU -10",
+    "marketCalibratedHomeMargin": -10.203945782656309,
+    "marketCalibratedEdge": 0.7039457826563087,
+    "independentFair": "SMU -4.5",
+    "independentHomeMargin": -4.677810335177506,
+    "independentEdge": 4.822189664822494,
+    "independentSide": "Syracuse",
+    "ensembleFair": "SMU -7",
+    "ensembleHomeMargin": -7.164571286542967,
+    "ensembleEdge": 2.3354287134570333,
+    "selectedModel": "ensemble",
+    "governedFair": "SMU -7",
+    "governedTotal": 59
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-10-31T10:21:08.322Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T10:21:08.000Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-10-31T10:21:37.217Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -10.203945782656309
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -7.164571286542967
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-10-31T10:21:37.217Z",
+    "inputDates": {
+      "fpi": "2026-10-31T10:21:08.322Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T10:21:08.000Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -9.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "SMU -9.5",
+    "sourceObservedAt": "2026-10-25T13:57:52.300Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-10-31T10:24:17.029Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-10-31T10:24:17.029Z",
+      "selectedWeek": "Week 9",
+      "modelPromotion": {
+        "marketCount": 55,
+        "independentCount": 55,
+        "ensembleCount": 55,
+        "rejected": 0
+      },
+      "renderedRowCount": 56,
+      "deepDiveCompleteCount": 56,
+      "deepDiveFullEvidenceCount": 56,
+      "deepDiveSourceLimitedCount": 0
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
