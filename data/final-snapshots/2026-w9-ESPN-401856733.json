@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 9,
+  "canonicalGameId": "ESPN-401856733",
+  "matchup": "Missouri at Arkansas",
+  "kickoff": "2026-10-31T23:45:00.000Z",
+  "frozenAt": "2026-10-31T18:24:38.051Z",
+  "minutesBeforeKickoff": 320.4,
+  "immutable": true,
+  "market": {
+    "spread": "Missouri -10",
+    "total": 48.5,
+    "moneyline": "Missouri -380 / Arkansas +300",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-10-31T18:24:37.631Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Missouri -11",
+    "marketCalibratedHomeMargin": -11.01573392683901,
+    "marketCalibratedEdge": 1.01573392683901,
+    "independentFair": "Missouri -3",
+    "independentHomeMargin": -3.1239342038000584,
+    "independentEdge": 6.876065796199942,
+    "independentSide": "Arkansas",
+    "ensembleFair": "Missouri -6.5",
+    "ensembleHomeMargin": -6.675244079167586,
+    "ensembleEdge": 3.3247559208324136,
+    "selectedModel": "ensemble",
+    "governedFair": "Missouri -6.5",
+    "governedTotal": 49
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-10-31T18:21:40.400Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T18:21:40.147Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-10-31T18:22:07.271Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -10.66573392683901
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -6.517744079167587
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-10-31T18:22:07.271Z",
+    "inputDates": {
+      "fpi": "2026-10-31T18:21:40.400Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T18:21:40.147Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -10.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Missouri -10.5",
+    "sourceObservedAt": "2026-10-25T13:57:52.300Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-10-31T18:24:37.631Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-10-31T18:24:37.631Z",
+      "selectedWeek": "Week 9",
+      "modelPromotion": {
+        "marketCount": 55,
+        "independentCount": 55,
+        "ensembleCount": 55,
+        "rejected": 0
+      },
+      "renderedRowCount": 56,
+      "deepDiveCompleteCount": 56,
+      "deepDiveFullEvidenceCount": 22,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
