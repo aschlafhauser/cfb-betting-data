@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 9,
+  "canonicalGameId": "ESPN-401856845",
+  "matchup": "Kansas at TCU",
+  "kickoff": "2026-10-31T19:30:00.000Z",
+  "frozenAt": "2026-10-31T13:42:41.265Z",
+  "minutesBeforeKickoff": 347.3,
+  "immutable": true,
+  "market": {
+    "spread": "TCU -6.5",
+    "total": 45.5,
+    "moneyline": "Kansas +195 / TCU -238",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-10-31T13:42:40.912Z"
+  },
+  "models": {
+    "marketCalibratedFair": "TCU -7",
+    "marketCalibratedHomeMargin": 6.791623809523808,
+    "marketCalibratedEdge": 0.2916238095238084,
+    "independentFair": "TCU -4",
+    "independentHomeMargin": 4.199906193299428,
+    "independentEdge": 2.3000938067005716,
+    "independentSide": "Kansas",
+    "ensembleFair": "TCU -5.5",
+    "ensembleHomeMargin": 5.3661791206004,
+    "ensembleEdge": 1.1338208793996003,
+    "selectedModel": "ensemble",
+    "governedFair": "TCU -5.5",
+    "governedTotal": 45.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-10-31T13:21:10.812Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T13:21:10.544Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-10-31T13:21:40.543Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 7.58761343502448
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 5.724374452075701
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-10-31T13:21:40.543Z",
+    "inputDates": {
+      "fpi": "2026-10-31T13:21:10.812Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T13:21:10.544Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 5.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "TCU -5.5",
+    "sourceObservedAt": "2026-10-25T13:57:52.300Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-10-31T13:42:40.912Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-10-31T13:42:40.912Z",
+      "selectedWeek": "Week 9",
+      "modelPromotion": {
+        "marketCount": 8,
+        "independentCount": 8,
+        "ensembleCount": 8,
+        "rejected": 47
+      },
+      "renderedRowCount": 56,
+      "deepDiveCompleteCount": 56,
+      "deepDiveFullEvidenceCount": 22,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 9,
+  "canonicalGameId": "ESPN-401856843",
+  "matchup": "Arizona State at BYU",
+  "kickoff": "2026-10-31T19:30:00.000Z",
+  "frozenAt": "2026-10-31T13:42:41.265Z",
+  "minutesBeforeKickoff": 347.3,
+  "immutable": true,
+  "market": {
+    "spread": "BYU -16.5",
+    "total": 47.5,
+    "moneyline": "Arizona State +550 / BYU -800",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-10-31T13:42:40.912Z"
+  },
+  "models": {
+    "marketCalibratedFair": "BYU -16.5",
+    "marketCalibratedHomeMargin": 16.509966045548655,
+    "marketCalibratedEdge": 0.00996604554865499,
+    "independentFair": "BYU -17.5",
+    "independentHomeMargin": 17.30842784817003,
+    "independentEdge": 0.8084278481700302,
+    "independentSide": "BYU",
+    "ensembleFair": "BYU -17",
+    "ensembleHomeMargin": 16.94912003699041,
+    "ensembleEdge": 0.44912003699041136,
+    "selectedModel": "ensemble",
+    "governedFair": "BYU -17",
+    "governedTotal": 48
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-10-31T13:21:10.812Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T13:21:10.544Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-10-31T13:21:40.508Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 18.509966045548655
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 17.78904312712148
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-10-31T13:21:40.508Z",
+    "inputDates": {
+      "fpi": "2026-10-31T13:21:10.812Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-10-31T13:21:10.544Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 14.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "BYU -14.5",
+    "sourceObservedAt": "2026-10-25T13:57:52.300Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-10-31T13:42:40.912Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-10-31T13:42:40.912Z",
+      "selectedWeek": "Week 9",
+      "modelPromotion": {
+        "marketCount": 8,
+        "independentCount": 8,
+        "ensembleCount": 8,
+        "rejected": 47
+      },
+      "renderedRowCount": 56,
+      "deepDiveCompleteCount": 56,
+      "deepDiveFullEvidenceCount": 22,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
