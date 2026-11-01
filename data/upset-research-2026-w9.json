@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 9,
-  "updatedAt": "2026-11-01T02:20:17.538Z",
+  "updatedAt": "2026-11-01T02:26:49.123Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -40,9 +40,9 @@
     ]
   },
   "coverage": {
-    "allUnderdogs": 3,
+    "allUnderdogs": 2,
     "underdogSpecial": 1,
-    "upsetLab": 2,
+    "upsetLab": 1,
     "intermediate": 0,
     "routingViolations": 0
   },
@@ -112,7 +112,7 @@
         "observedExplosiveRushRate": 0.13942307692307693,
         "observedSackRateAllowed": 0.05660377358490566,
         "observedDefensiveSackRate": 0.0593607305936073,
-        "statisticsUpdatedAt": "2026-11-01T02:20:17.061Z",
+        "statisticsUpdatedAt": "2026-11-01T02:25:07.353Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -120,7 +120,7 @@
         "teamOffenseYppRank": 73,
         "teamAggregateRank": 96,
         "teamDefensiveYppRank": 93,
-        "marketTotal": 57.5,
+        "marketTotal": 56.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -146,7 +146,7 @@
           "Oregon State OL/RB vs Fresno State DL/LB — Fresno State +",
           "Fresno State OL/RB vs Oregon State DL/LB — Fresno State +",
           "Phil Steele current power rating: Fresno State 117 vs Oregon State 121.",
-          "Canonical selected-week market: Fresno State +6, total 57.5; production model Lean Fresno State edge 3.7320313210458003; Football Independent Fresno State edge 6.382151861621718."
+          "Canonical selected-week market: Fresno State +6, total 56.5; production model Lean Fresno State edge 3.7320313210458003; Football Independent Fresno State edge 6.382151861621718."
         ]
       },
       "deepDiveStatus": "COMPLETE",
@@ -166,135 +166,20 @@
   "upsetLab": [
     {
       "week": 9,
-      "canonicalGameId": "ESPN-401860908",
-      "team": "Texas State",
-      "opponent": "Boise State",
-      "currentSpread": "+10",
-      "band": "UPSET-LAB",
-      "profileScore": 4,
-      "score25": 4,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0.4,
-        "trenchResistance": 1.8,
-        "explosivePath": 1.8,
-        "compression": 0,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.2,
-        "observedExplosiveRushRate": 0.15384615384615385,
-        "observedSackRateAllowed": 0.03333333333333333,
-        "observedDefensiveSackRate": 0.023972602739726026,
-        "statisticsUpdatedAt": "2026-11-01T02:20:17.061Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 75,
-        "teamOffenseYppRank": 16,
-        "teamAggregateRank": 49,
-        "teamDefensiveYppRank": 68,
-        "marketTotal": 63.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.32284218539783427,
-        "productionWinProbability": 0.32284218539783427,
-        "independentWinProbability": 0.347594522906578
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.32284218539783427,
-      "marketWinProbability": 0.32284218539783427,
-      "narrative": {
-        "upsetCase": "Texas State has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Boise State OL/RB vs Texas State DL/LB — Boise State ++",
-        "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog, a high-total script increases the favorite’s separation ceiling.",
-        "keyThingsToWatch": [
-          "Texas State QB efficiency and early-down success",
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Boise State OL/RB vs Texas State DL/LB — Boise State ++",
-          "Texas State QB/WR vs Boise State DB — Texas State ++",
-          "Boise State QB/WR vs Texas State DB — Boise State +",
-          "Phil Steele current power rating: Texas State 118 vs Boise State 128.",
-          "Canonical selected-week market: Texas State +10, total 63.5; production model Boise State ATS edge 0.24875970683086024; Football Independent Texas State edge 1.5194819775888835."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 9,
       "canonicalGameId": "ESPN-401864530",
       "team": "Northern Illinois",
       "opponent": "UNLV",
       "currentSpread": "+21.5",
       "band": "UPSET-LAB",
-      "profileScore": 0.9,
-      "score25": 0.9,
+      "profileScore": 0.5,
+      "score25": 0.5,
       "scoreMax": 25,
       "tier": "D",
       "components": {
         "qbStability": 0,
         "trenchResistance": 0.1,
         "explosivePath": 0.1,
-        "compression": 0.7,
+        "compression": 0.3,
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
@@ -344,7 +229,7 @@
         "observedExplosiveRushRate": 0.17647058823529413,
         "observedSackRateAllowed": 0.08764940239043825,
         "observedDefensiveSackRate": 0.0427807486631016,
-        "statisticsUpdatedAt": "2026-11-01T02:20:17.061Z",
+        "statisticsUpdatedAt": "2026-11-01T02:25:07.353Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -352,7 +237,7 @@
         "teamOffenseYppRank": 125,
         "teamAggregateRank": 134,
         "teamDefensiveYppRank": 127,
-        "marketTotal": 54.5,
+        "marketTotal": 55.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -377,7 +262,7 @@
           "UNLV OL/RB vs Northern Illinois DL/LB — UNLV +",
           "Northern Illinois QB/WR vs UNLV DB — UNLV +",
           "Phil Steele current power rating: Northern Illinois 89 vs UNLV 113.",
-          "Canonical selected-week market: Northern Illinois +21.5, total 54.5; production model Lean UNLV edge 0.9421990676789918; Football Independent Northern Illinois edge 1.85705344894793."
+          "Canonical selected-week market: Northern Illinois +21.5, total 55.5; production model Lean UNLV edge 0.9421990676789918; Football Independent Northern Illinois edge 1.85705344894793."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
