@@ -143,7 +143,9 @@ jobs:
         id: multimodel_verify
         if: ${{ always() }}
         continue-on-error: true
-        timeout-minutes: 5
+        # Three full browser attempts include statistical and market-integrity
+        # sub-verifiers; five minutes can terminate a healthy retry matrix.
+        timeout-minutes: 15
         env:
           CFB_PORTAL_URL: https://cfb-betting-intelligence.netlify.app/
         run: |
