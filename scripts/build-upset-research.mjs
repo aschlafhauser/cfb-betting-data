@@ -49,7 +49,7 @@ function perspective(g,d,dd){return canon(d.team)===canon(g.home)?'home':'away'}
 function point(v){return +clamp(v,0,25).toFixed(1)}
 function evidenceFlag(v){return v==null?'MISSING':'OBSERVED'}
 function winProb(margin){return 1/(1+Math.exp(-margin/13.5))}
-function fairMargin(g,d,field){const x=String(g[field]||'');const m=x.match(/^(.*?)\s+(-?\d+(?:\.\d+)?)/);if(!m)return null;const val=Math.abs(Number(m[2]));return canon(m[1])===canon(d.team)?val:-val}
+function fairMargin(g,d,field){const x=String(g[field]||'').trim();const m=x.match(/^(.*?)\s+(-?\d+(?:\.\d+)?)/);if(m){const val=Math.abs(Number(m[2]));return canon(m[1])===canon(d.team)?val:-val}if(/^pick(?:'em)?$/i.test(x)){const homeField=field==='independentFootballFair'?'independentFootballHomeMargin':field==='modelSpread'?'modelHomeMargin':null;const homeMargin=homeField?numeric(g[homeField]):null;if(homeMargin==null)return null;return canon(d.team)===canon(g.home)?homeMargin:-homeMargin}return null}
 function score25(g,d,dd){
  const total=numeric(g.currentTotal??dd?.market?.total),side=perspective(g,d,dd),other=side==='home'?'away':'home';
  const qbMatch=directionalEvidence(dd,'qbPassing',d.team),trMatch=directionalEvidence(dd,'olFront',d.team),exMatch=directionalEvidence(dd,'receiversCoverage',d.team);
