@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-01T05:32:02.378Z",
+  "updatedAt": "2026-11-01T06:36:24.442Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-01T05:32:02.378Z",
+      "checkedAt": "2026-11-01T06:36:24.442Z",
       "unstartedGames": 63,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -220,7 +220,7 @@
     "marketCoverage": {
       "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 2,
-      "actualMarketGames": 25,
+      "actualMarketGames": 28,
       "dueGames": 2,
       "dueMarketGames": 2,
       "startedGamesExcluded": 0,
@@ -241,15 +241,15 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-01T05:31:43.127Z",
+      "verifiedAt": "2026-11-01T06:36:10.517Z",
       "artifact": "data/statistical-display-integrity-2026-w10.json",
-      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 10/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "FAIL",
       "blocking": true,
       "artifact": "data/market-derived-integrity-2026-w10.json",
-      "detail": "Independently reconciled 75 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401866453, ESPN-401866454, ESPN-401866455, ESPN-401866457, ESPN-401866456, ESPN-401862817, ESPN-401869964, ESPN-401858288, ESPN-401862818, ESPN-401858510"
+      "detail": "Independently reconciled 84 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401866453, ESPN-401866454, ESPN-401866455, ESPN-401866457, ESPN-401866456, ESPN-401862817, ESPN-401869964, ESPN-401858288, ESPN-401862818, ESPN-401858510"
     },
     "unifiedUpsetResearch": {
       "status": "FAIL",
@@ -261,7 +261,7 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 13 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 15 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
@@ -287,7 +287,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-01T05:30:01.627Z",
+      "verifiedAt": "2026-11-01T06:34:50.015Z",
       "artifact": "data/final-snapshot-integrity-2026-w10.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 63,
@@ -308,7 +308,7 @@
     "unifiedUpsetResearch"
   ],
   "currentPriorityQueue": [
-    "marketDerivedIntegrity: Independently reconciled 75 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401866453, ESPN-401866454, ESPN-401866455, ESPN-401866457, ESPN-401866456, ESPN-401862817, ESPN-401869964, ESPN-401858288, ESPN-401862818, ESPN-401858510",
+    "marketDerivedIntegrity: Independently reconciled 84 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401866453, ESPN-401866454, ESPN-401866455, ESPN-401866457, ESPN-401866456, ESPN-401862817, ESPN-401869964, ESPN-401858288, ESPN-401862818, ESPN-401858510",
     "unifiedUpsetResearch: Missing current unified upset-research artifact."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
