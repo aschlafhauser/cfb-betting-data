@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-01T18:26:09.317Z",
+  "updatedAt": "2026-11-01T19:26:47.955Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-01T18:26:09.317Z",
+      "checkedAt": "2026-11-01T19:26:47.955Z",
       "unstartedGames": 63,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -218,16 +218,16 @@
       "detail": "Canonical selected-week schedule coverage."
     },
     "marketCoverage": {
-      "status": "PASS-SOURCE-LIMITED",
+      "status": "PASS",
       "minimumRequired": 2,
-      "actualMarketGames": 62,
+      "actualMarketGames": 63,
       "dueGames": 2,
       "dueMarketGames": 2,
       "startedGamesExcluded": 0,
       "laterGamesOutsideBlockingWindow": 61,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
-      "detail": "Every game inside the 72-hour market deadline has governed spread/total coverage; later-week unpublished prices remain explicitly source-limited. 61 later-week game(s) remain outside the 72-hour blocking window; unpublished prices stay null and source-limited."
+      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -241,16 +241,16 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-01T18:26:01.162Z",
+      "verifiedAt": "2026-11-01T19:26:37.086Z",
       "artifact": "data/statistical-display-integrity-2026-w10.json",
-      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-01T18:26:09.272Z",
+      "verifiedAt": "2026-11-01T19:26:47.913Z",
       "artifact": "data/market-derived-integrity-2026-w10.json",
-      "detail": "Independently reconciled 180 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Independently reconciled 183 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -262,11 +262,11 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 25 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 23 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 19 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 21 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -288,7 +288,7 @@
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-01T18:24:49.193Z",
+      "verifiedAt": "2026-11-01T19:25:11.680Z",
       "artifact": "data/final-snapshot-integrity-2026-w10.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 63,
