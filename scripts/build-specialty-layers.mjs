@@ -1,10 +1,12 @@
 import fs from 'node:fs/promises';
 const board=JSON.parse(await fs.readFile('data/weekly-board.json','utf8'));
 const week=Number(board.week||2), now=new Date().toISOString();
-const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const norm=s=>String(s||'').replace(/\bSt\.?$/i,'State').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const aliases={fiu:'floridainternational',fau:'floridaatlantic',wku:'westernkentucky',usf:'southflorida',mtsu:'middletennessee',ulm:'ulmonroe',mississippi:'olemiss',armywestpoint:'army',connecticut:'uconn',appalachianst:'appstate',appalachianstate:'appstate',miamifla:'miami',miamifl:'miami',ohiost:'ohiostate',pennst:'pennstate',floridast:'floridastate',mississippist:'mississippistate',michiganst:'michiganstate',sanjosest:'sanjosestate',coloradost:'coloradostate',kansasst:'kansasstate',arizonast:'arizonastate',iowast:'iowastate',oklahomast:'oklahomastate',boisest:'boisestate',oregonst:'oregonstate',utahst:'utahstate',kentst:'kentstate',massachusetts:'umass',centmichigan:'centralmichigan'};
+const canon=s=>aliases[norm(s)]||norm(s);
 const key=(a,h)=>`${norm(a)}__${norm(h)}`;
 function parseSpread(s){const m=String(s||'').match(/^(.+?)\s+(-?\d+(?:\.\d+)?)/);return m?{fav:m[1].trim(),line:Math.abs(Number(m[2]))}:null}
-function dogFor(g){const p=parseSpread(g.currentSpread);if(!p)return null;const fav=norm(p.fav),away=norm(g.away),home=norm(g.home);if(fav===away)return {team:g.home,opponent:g.away,spread:p.line};if(fav===home)return {team:g.away,opponent:g.home,spread:p.line};return null}
+function dogFor(g){const p=parseSpread(g.currentSpread);if(!p)return null;const fav=canon(p.fav),away=canon(g.away),home=canon(g.home);if(fav===away)return {team:g.home,opponent:g.away,spread:p.line};if(fav===home)return {team:g.away,opponent:g.home,spread:p.line};return null}
 function parseML(text,team){const s=String(text||'');if(!s)return null;const idx=s.toLowerCase().indexOf(String(team).toLowerCase());if(idx<0)return null;const tail=s.slice(idx+String(team).length);const m=tail.match(/([+-]\d+)/);return m?Number(m[1]):null}
 function numericML(text){const m=String(text||'').match(/([+]\d+)/);return m?Number(m[1]):null}
 const boardByKey=new Map((board.games||[]).map(g=>[key(g.away,g.home),g]));
@@ -105,9 +107,7 @@ for(const g of board.games||[]){
   const d=dogFor(g);if(!d||d.spread<9.5)continue;
   const prior=priorLsByTeam.get(norm(d.team+' '+d.opponent));
   const research=upsetById.get(String(g.gameId));
-  // Keep the primary lab focused on games with both-team independent-model coverage, unified upset research, or an existing governed longshot record.
-  const hasFbsCoverage=!!g.independentFootballFair||!!research||!!prior;
-  if(!hasFbsCoverage)continue;
+  // Every canonical +9.5-or-longer underdog remains visible. Missing governed sources lower information quality; they never remove the candidate.
   const currentMl=parseML(g.currentMoneyline,d.team),pairEvidence=governedMlByPair.get(norm(d.team+' '+d.opponent));
   const currentPrice=Number.isFinite(currentMl);
   const evidenceText=currentPrice?(currentMl>0?`+${currentMl}`:`${currentMl}`):(pairEvidence?.moneyline||null);
@@ -118,6 +118,6 @@ for(const g of board.games||[]){
   const classification=research?.tier?(`UNIFIED ${research.tier}`):(prior?.classification||'WATCH / PRICE PENDING');
   ls.push({week,canonicalGameId:g.gameId,legacyGameId:prior?.gameId||null,team:d.team,opponent:d.opponent,modelSpread:g.modelSpread??null,currentSpread:`+${d.spread}`,currentMoneyline:evidenceText,priorMoneyline:prior?.currentMoneyline||prior?.moneyline||null,priceStatus:currentPrice?'CURRENT':(hasEvidence?'LAST-GOVERNED-PRICE / RECHECK REQUIRED':'PRICE-RECHECK-REQUIRED'),moneylineTimestamp:currentPrice?(board.updatedAt||now):(pairEvidence?.timestamp||null),moneylineSource:currentPrice?(g.marketSource||'canonical weekly board'):(pairEvidence?.source||null),screenEligibility:qualifiesPrice?(currentPrice?'VERIFIED CURRENT +300+':'LAST-GOVERNED +300+ / CURRENT RECHECK'):(hasEvidence?'LAST-GOVERNED BELOW +300 / CURRENT RECHECK':'LIKELY LONGSHOT / ML PENDING'),score,unifiedProfileScore:Number.isFinite(research?.profileScore)?research.profileScore:null,researchTier:research?.tier||null,researchComponents:research?.components||null,researchFlags:research?.researchFlags||null,classification,informationQuality:research?.informationQuality||prior?.informationQuality||'standard',qbThesis:prior?.qbThesis||null,compressionThesis:prior?.compressionThesis||null,personnel:prior?.personnel||null,deepDiveStatus:g.deepDiveStatus||'PENDING',action:currentPrice&&qualifiesPrice?'Reconcile mechanism and governed value; classification alone never activates a wager.':(hasEvidence?'Historical governed ML is displayed for context only; re-verify current executable price before any decision.':'Keep visible until current moneyline is verified.'),note:'Unified upset score is research-only with zero production impact. Non-current moneylines are visibly labeled and may not be used for execution.'});
 }
-priorLS.week=week;priorLS.updatedAt=now;priorLS.status='prospective-live-current-screen';priorLS.coverage={...(priorLS.coverage||{}),eligibilityUniverse:`complete ${(board.games||[]).length}-game canonical selected-week schedule; primary display filtered to governed football coverage/unified upset research`,thursdayScreenComplete:true,lastCanonicalRefresh:now,scoredCandidates:ls.filter(x=>Number.isFinite(x.score)).length,pricedCandidates:ls.filter(x=>x.currentMoneyline).length,currentPricedCandidates:ls.filter(x=>x.priceStatus==='CURRENT').length};priorLS.candidates=ls;
+priorLS.week=week;priorLS.updatedAt=now;priorLS.status='prospective-live-current-screen';priorLS.coverage={...(priorLS.coverage||{}),eligibilityUniverse:`complete ${(board.games||[]).length}-game canonical selected-week schedule; every +9.5-or-longer underdog retained with explicit source limits`,thursdayScreenComplete:true,lastCanonicalRefresh:now,scoredCandidates:ls.filter(x=>Number.isFinite(x.score)).length,pricedCandidates:ls.filter(x=>x.currentMoneyline).length,currentPricedCandidates:ls.filter(x=>x.priceStatus==='CURRENT').length};priorLS.candidates=ls;
 await fs.writeFile('data/longshot-upset-lab.json',JSON.stringify(priorLS,null,2)+'\n');
 console.log(`Specialty layers refreshed: movers=${movers.length}/${(sunday.observations||[]).length}, underdog-band=${ud.length}, longshot-primary=${ls.length}, longshot-scored=${ls.filter(x=>Number.isFinite(x.score)).length}, longshot-priced=${ls.filter(x=>x.currentMoneyline).length}.`);
