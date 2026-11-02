@@ -11,9 +11,11 @@ function run(script, {allowFailure=false}={}) {
   if (r.status !== 0 && !allowFailure) throw new Error(`${script} failed with exit ${r.status}`);
   return r.status === 0;
 }
-function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+function norm(s){return String(s||'').replace(/\bSt\.?$/i,'State').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+const aliases={fiu:'floridainternational',fau:'floridaatlantic',wku:'westernkentucky',usf:'southflorida',mtsu:'middletennessee',ulm:'ulmonroe',mississippi:'olemiss',armywestpoint:'army',connecticut:'uconn',appalachianst:'appstate',appalachianstate:'appstate',miamifla:'miami',miamifl:'miami',ohiost:'ohiostate',pennst:'pennstate',floridast:'floridastate',mississippist:'mississippistate',michiganst:'michiganstate',sanjosest:'sanjosestate',coloradost:'coloradostate',kansasst:'kansasstate',arizonast:'arizonastate',iowast:'iowastate',oklahomast:'oklahomastate',boisest:'boisestate',oregonst:'oregonstate',utahst:'utahstate',kentst:'kentstate',massachusetts:'umass',centmichigan:'centralmichigan'};
+function canon(s){return aliases[norm(s)]||norm(s)}
 function parseSpread(s){const m=String(s||'').match(/^(.+?)\s+(-?\d+(?:\.\d+)?)/);return m?{fav:m[1].trim(),line:Math.abs(Number(m[2]))}:null}
-function dogFor(g){const p=parseSpread(g.currentSpread);if(!p)return null;const fav=norm(p.fav);if(fav===norm(g.away))return {team:g.home,opponent:g.away,spread:p.line};if(fav===norm(g.home))return {team:g.away,opponent:g.home,spread:p.line};return null}
+function dogFor(g){const p=parseSpread(g.currentSpread);if(!p)return null;const fav=canon(p.fav);if(fav===canon(g.away))return {team:g.home,opponent:g.away,spread:p.line};if(fav===canon(g.home))return {team:g.away,opponent:g.home,spread:p.line};return null}
 
 const deepDivePath = `data/deep-dives-${season}-w${week}.json`;
 try {
