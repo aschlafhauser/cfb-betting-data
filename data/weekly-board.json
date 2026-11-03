@@ -1,6 +1,6 @@
 {
   "week": 10,
-  "updatedAt": "2026-11-03T21:21:18.027Z",
+  "updatedAt": "2026-11-03T21:26:21.194Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
@@ -11,7 +11,7 @@
     "scheduleHydrationError": null,
     "marketGameCount": 63,
     "deepDiveCompleteCount": 63,
-    "note": "Canonical Week 10 refreshed from one ESPN snapshot: schedule=63; priced markets=63. Fresh indicative CBS fallback quotes retain their own source and timestamp. Missing quotes remain null and are never carried forward as a mixed snapshot.",
+    "note": "Canonical Week 10: schedule=63/63; completed research=63/63; full-evidence=0; source-limited=63.",
     "deepDiveFullEvidenceCount": 0,
     "deepDiveSourceLimitedCount": 63,
     "marketSnapshotAt": "2026-11-03T21:21:18.027Z"
@@ -331,12 +331,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.724Z",
+        "computedAt": "2026-11-03T21:22:32.852Z",
         "marketAnchorCandidate": {
           "homeMargin": -14.35555900621118
         },
@@ -346,11 +346,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.724Z",
+        "computedAt": "2026-11-03T21:22:32.852Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -446,11 +446,11 @@
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Miami (OH) -6",
       "modelTotal": 45,
-      "modelEdgeMagnitude": 0.24272137896208612,
+      "modelEdgeMagnitude": 0.2572786210379139,
       "finalExecutableEdge": null,
       "independentFootballFair": "Miami (OH) -5",
       "independentFootballHomeMargin": 5.04288773455625,
-      "independentFootballEdge": 0.95711226544375,
+      "independentFootballEdge": 1.45711226544375,
       "independentFootballSide": "Buffalo",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -738,33 +738,33 @@
         "sourceValid": true
       },
       "modelHomeMargin": 6.242721378962086,
-      "spreadLean": "Miami (OH)",
+      "spreadLean": "Buffalo",
       "selectedModel": "ensemble",
       "shadowModels": {
         "version": "market-anchor-candidate-v1",
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.733Z",
+        "computedAt": "2026-11-03T21:22:32.861Z",
         "marketAnchorCandidate": {
-          "homeMargin": 7.339215320910973
+          "homeMargin": 7.709184722124775
         },
         "ensembleAnchorCandidate": {
-          "homeMargin": 6.076235148415876
+          "homeMargin": 6.242721378962086
         }
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.733Z",
+        "computedAt": "2026-11-03T21:22:32.861Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -776,7 +776,7 @@
         "market": {
           "fair": "Miami (OH) -7.5",
           "homeMargin": 7.709184722124775,
-          "edge": 1.7091847221247747,
+          "edge": 1.2091847221247747,
           "side": "Miami (OH)",
           "confidence": "Low",
           "modelVersion": "1.2-input-integrity",
@@ -799,7 +799,7 @@
         "independent": {
           "fair": "Miami (OH) -5",
           "homeMargin": 5.04288773455625,
-          "edge": 0.95711226544375,
+          "edge": 1.45711226544375,
           "side": "Buffalo",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -827,8 +827,8 @@
         "ensemble": {
           "fair": "Miami (OH) -6",
           "homeMargin": 6.242721378962086,
-          "edge": 0.24272137896208612,
-          "side": "Miami (OH)",
+          "edge": 0.2572786210379139,
+          "side": "Buffalo",
           "confidence": "Low",
           "modelVersion": "1.2-input-integrity",
           "components": {
@@ -839,7 +839,7 @@
             "agreement": false
           },
           "tags": [],
-          "decisionScore": 0.29612008233374504
+          "decisionScore": 0.31387991766625495
         }
       },
       "marketUpdatedAt": "2026-11-03T21:21:18.027Z",
@@ -1157,12 +1157,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.740Z",
+        "computedAt": "2026-11-03T21:22:32.868Z",
         "marketAnchorCandidate": {
           "homeMargin": 3.456234793187348
         },
@@ -1172,11 +1172,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.740Z",
+        "computedAt": "2026-11-03T21:22:32.868Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -1569,12 +1569,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.752Z",
+        "computedAt": "2026-11-03T21:22:32.879Z",
         "marketAnchorCandidate": {
           "homeMargin": -26.671289092295957
         },
@@ -1584,11 +1584,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.752Z",
+        "computedAt": "2026-11-03T21:22:32.879Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -1981,12 +1981,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.763Z",
+        "computedAt": "2026-11-03T21:22:32.891Z",
         "marketAnchorCandidate": {
           "homeMargin": 0.9703423543330375
         },
@@ -1996,11 +1996,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.763Z",
+        "computedAt": "2026-11-03T21:22:32.891Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -2396,12 +2396,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.770Z",
+        "computedAt": "2026-11-03T21:22:32.898Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.028890291902714
         },
@@ -2411,11 +2411,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.770Z",
+        "computedAt": "2026-11-03T21:22:32.898Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -2809,12 +2809,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.781Z",
+        "computedAt": "2026-11-03T21:22:32.909Z",
         "marketAnchorCandidate": {
           "homeMargin": -16.24770846425527
         },
@@ -2824,11 +2824,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.781Z",
+        "computedAt": "2026-11-03T21:22:32.909Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -3221,12 +3221,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.781Z",
+        "computedAt": "2026-11-03T21:22:32.910Z",
         "marketAnchorCandidate": {
           "homeMargin": 6.743653099452316
         },
@@ -3236,11 +3236,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.781Z",
+        "computedAt": "2026-11-03T21:22:32.910Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -3626,12 +3626,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.791Z",
+        "computedAt": "2026-11-03T21:22:32.920Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.6468030783878134
         },
@@ -3641,11 +3641,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.791Z",
+        "computedAt": "2026-11-03T21:22:32.920Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -4038,12 +4038,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.798Z",
+        "computedAt": "2026-11-03T21:22:32.927Z",
         "marketAnchorCandidate": {
           "homeMargin": -5.810757556935817
         },
@@ -4053,11 +4053,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.798Z",
+        "computedAt": "2026-11-03T21:22:32.927Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -4453,12 +4453,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.808Z",
+        "computedAt": "2026-11-03T21:22:32.937Z",
         "marketAnchorCandidate": {
           "homeMargin": -10.89287784679089
         },
@@ -4468,11 +4468,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.808Z",
+        "computedAt": "2026-11-03T21:22:32.937Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -4865,12 +4865,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.816Z",
+        "computedAt": "2026-11-03T21:22:32.944Z",
         "marketAnchorCandidate": {
           "homeMargin": 10.131427184327734
         },
@@ -4880,11 +4880,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.816Z",
+        "computedAt": "2026-11-03T21:22:32.944Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -5288,12 +5288,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.830Z",
+        "computedAt": "2026-11-03T21:22:32.957Z",
         "marketAnchorCandidate": {
           "homeMargin": -6.479307545474267
         },
@@ -5303,11 +5303,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.830Z",
+        "computedAt": "2026-11-03T21:22:32.957Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -5691,12 +5691,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.837Z",
+        "computedAt": "2026-11-03T21:22:32.965Z",
         "marketAnchorCandidate": {
           "homeMargin": 17.820583850931676
         },
@@ -5706,11 +5706,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.837Z",
+        "computedAt": "2026-11-03T21:22:32.965Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -6103,12 +6103,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.844Z",
+        "computedAt": "2026-11-03T21:22:32.972Z",
         "marketAnchorCandidate": {
           "homeMargin": 12.141837297612115
         },
@@ -6118,11 +6118,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.844Z",
+        "computedAt": "2026-11-03T21:22:32.972Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -6524,12 +6524,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.857Z",
+        "computedAt": "2026-11-03T21:22:32.986Z",
         "marketAnchorCandidate": {
           "homeMargin": 2.129391327206372
         },
@@ -6539,11 +6539,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.857Z",
+        "computedAt": "2026-11-03T21:22:32.986Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -6927,12 +6927,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.873Z",
+        "computedAt": "2026-11-03T21:22:33.002Z",
         "marketAnchorCandidate": {
           "homeMargin": -5.1367350435349834
         },
@@ -6942,11 +6942,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.873Z",
+        "computedAt": "2026-11-03T21:22:33.002Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -7342,12 +7342,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.883Z",
+        "computedAt": "2026-11-03T21:22:33.012Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.338704968944099
         },
@@ -7357,11 +7357,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.883Z",
+        "computedAt": "2026-11-03T21:22:33.012Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -7754,12 +7754,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.897Z",
+        "computedAt": "2026-11-03T21:22:33.026Z",
         "marketAnchorCandidate": {
           "homeMargin": 10.882200007219454
         },
@@ -7769,11 +7769,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.897Z",
+        "computedAt": "2026-11-03T21:22:33.026Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -8168,12 +8168,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.911Z",
+        "computedAt": "2026-11-03T21:22:33.041Z",
         "marketAnchorCandidate": {
           "homeMargin": 14.593662908758171
         },
@@ -8183,11 +8183,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.911Z",
+        "computedAt": "2026-11-03T21:22:33.041Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -8580,12 +8580,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.928Z",
+        "computedAt": "2026-11-03T21:22:33.057Z",
         "marketAnchorCandidate": {
           "homeMargin": 2.4922205736846417
         },
@@ -8595,11 +8595,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.928Z",
+        "computedAt": "2026-11-03T21:22:33.057Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -9002,12 +9002,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.928Z",
+        "computedAt": "2026-11-03T21:22:33.058Z",
         "marketAnchorCandidate": {
           "homeMargin": 4.46418115942029
         },
@@ -9017,11 +9017,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.928Z",
+        "computedAt": "2026-11-03T21:22:33.058Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -9411,12 +9411,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.942Z",
+        "computedAt": "2026-11-03T21:22:33.073Z",
         "marketAnchorCandidate": {
           "homeMargin": -4.060638095238095
         },
@@ -9426,11 +9426,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.943Z",
+        "computedAt": "2026-11-03T21:22:33.073Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -9533,7 +9533,7 @@
       "currentMoneyline": "Clemson -142 / Syracuse +120",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Clemson -3",
-      "modelTotal": 50,
+      "modelTotal": 49,
       "modelEdgeMagnitude": 0.5397831008150931,
       "finalExecutableEdge": null,
       "independentFootballFair": "Clemson -2",
@@ -9826,12 +9826,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.943Z",
+        "computedAt": "2026-11-03T21:22:33.073Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.311251393022903
         },
@@ -9841,11 +9841,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.943Z",
+        "computedAt": "2026-11-03T21:22:33.073Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -10240,12 +10240,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.944Z",
+        "computedAt": "2026-11-03T21:22:33.074Z",
         "marketAnchorCandidate": {
           "homeMargin": -7.130833333333334
         },
@@ -10255,11 +10255,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.944Z",
+        "computedAt": "2026-11-03T21:22:33.074Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -10652,12 +10652,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.948Z",
+        "computedAt": "2026-11-03T21:22:33.078Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.586101667211507
         },
@@ -10667,11 +10667,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.948Z",
+        "computedAt": "2026-11-03T21:22:33.078Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -11064,12 +11064,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.960Z",
+        "computedAt": "2026-11-03T21:22:33.090Z",
         "marketAnchorCandidate": {
           "homeMargin": -0.8117225108658447
         },
@@ -11079,11 +11079,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.960Z",
+        "computedAt": "2026-11-03T21:22:33.090Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -11479,12 +11479,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.972Z",
+        "computedAt": "2026-11-03T21:22:33.103Z",
         "marketAnchorCandidate": {
           "homeMargin": 18.855261064425772
         },
@@ -11494,11 +11494,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.972Z",
+        "computedAt": "2026-11-03T21:22:33.103Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -11891,12 +11891,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.973Z",
+        "computedAt": "2026-11-03T21:22:33.104Z",
         "marketAnchorCandidate": {
           "homeMargin": -4.928516569800839
         },
@@ -11906,11 +11906,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.973Z",
+        "computedAt": "2026-11-03T21:22:33.104Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -12307,12 +12307,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.984Z",
+        "computedAt": "2026-11-03T21:22:33.115Z",
         "marketAnchorCandidate": {
           "homeMargin": 6.696706211180124
         },
@@ -12322,11 +12322,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.984Z",
+        "computedAt": "2026-11-03T21:22:33.115Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -12719,12 +12719,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:37.998Z",
+        "computedAt": "2026-11-03T21:22:33.129Z",
         "marketAnchorCandidate": {
           "homeMargin": 11.868045320047516
         },
@@ -12734,11 +12734,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:37.998Z",
+        "computedAt": "2026-11-03T21:22:33.129Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -13131,12 +13131,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.008Z",
+        "computedAt": "2026-11-03T21:22:33.140Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.749451345755694
         },
@@ -13146,11 +13146,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.008Z",
+        "computedAt": "2026-11-03T21:22:33.140Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -13547,12 +13547,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.017Z",
+        "computedAt": "2026-11-03T21:22:33.149Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.478558119344512
         },
@@ -13562,11 +13562,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.017Z",
+        "computedAt": "2026-11-03T21:22:33.149Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -13962,12 +13962,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.035Z",
+        "computedAt": "2026-11-03T21:22:33.167Z",
         "marketAnchorCandidate": {
           "homeMargin": 7.387708695652174
         },
@@ -13977,11 +13977,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.035Z",
+        "computedAt": "2026-11-03T21:22:33.167Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -14377,12 +14377,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.044Z",
+        "computedAt": "2026-11-03T21:22:33.176Z",
         "marketAnchorCandidate": {
           "homeMargin": 14.404383983227556
         },
@@ -14392,11 +14392,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.044Z",
+        "computedAt": "2026-11-03T21:22:33.176Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -14791,12 +14791,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.055Z",
+        "computedAt": "2026-11-03T21:22:33.186Z",
         "marketAnchorCandidate": {
           "homeMargin": -2.0240306743696
         },
@@ -14806,11 +14806,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.055Z",
+        "computedAt": "2026-11-03T21:22:33.186Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -15212,12 +15212,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.064Z",
+        "computedAt": "2026-11-03T21:22:33.196Z",
         "marketAnchorCandidate": {
           "homeMargin": 8.31233043478261
         },
@@ -15227,11 +15227,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.064Z",
+        "computedAt": "2026-11-03T21:22:33.196Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -15625,12 +15625,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.079Z",
+        "computedAt": "2026-11-03T21:22:33.211Z",
         "marketAnchorCandidate": {
           "homeMargin": 4.861930434782609
         },
@@ -15640,11 +15640,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.079Z",
+        "computedAt": "2026-11-03T21:22:33.211Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -15972,11 +15972,11 @@
       "shadowModels": null,
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.079Z",
+        "computedAt": "2026-11-03T21:22:33.211Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": null,
@@ -16318,12 +16318,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.087Z",
+        "computedAt": "2026-11-03T21:22:33.220Z",
         "marketAnchorCandidate": {
           "homeMargin": 9.373333333333333
         },
@@ -16333,11 +16333,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.087Z",
+        "computedAt": "2026-11-03T21:22:33.220Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -16730,12 +16730,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.098Z",
+        "computedAt": "2026-11-03T21:22:33.230Z",
         "marketAnchorCandidate": {
           "homeMargin": 8.733804347826087
         },
@@ -16745,11 +16745,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.098Z",
+        "computedAt": "2026-11-03T21:22:33.230Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -17142,12 +17142,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.109Z",
+        "computedAt": "2026-11-03T21:22:33.242Z",
         "marketAnchorCandidate": {
           "homeMargin": 10.85206503259098
         },
@@ -17157,11 +17157,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.109Z",
+        "computedAt": "2026-11-03T21:22:33.242Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -17558,12 +17558,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.118Z",
+        "computedAt": "2026-11-03T21:22:33.251Z",
         "marketAnchorCandidate": {
           "homeMargin": 0.9341253225344514
         },
@@ -17573,11 +17573,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.118Z",
+        "computedAt": "2026-11-03T21:22:33.251Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -17973,12 +17973,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.128Z",
+        "computedAt": "2026-11-03T21:22:33.261Z",
         "marketAnchorCandidate": {
           "homeMargin": 16.614721159370774
         },
@@ -17988,11 +17988,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.128Z",
+        "computedAt": "2026-11-03T21:22:33.261Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -18386,12 +18386,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.143Z",
+        "computedAt": "2026-11-03T21:22:33.276Z",
         "marketAnchorCandidate": {
           "homeMargin": 11.055074612806543
         },
@@ -18401,11 +18401,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.143Z",
+        "computedAt": "2026-11-03T21:22:33.276Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -18798,12 +18798,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.151Z",
+        "computedAt": "2026-11-03T21:22:33.284Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.560222567287784
         },
@@ -18813,11 +18813,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.151Z",
+        "computedAt": "2026-11-03T21:22:33.284Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -19210,12 +19210,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.163Z",
+        "computedAt": "2026-11-03T21:22:33.296Z",
         "marketAnchorCandidate": {
           "homeMargin": -5.583066451118863
         },
@@ -19225,11 +19225,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.163Z",
+        "computedAt": "2026-11-03T21:22:33.296Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -19624,12 +19624,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.178Z",
+        "computedAt": "2026-11-03T21:22:33.312Z",
         "marketAnchorCandidate": {
           "homeMargin": 3.6238962732919258
         },
@@ -19639,11 +19639,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.178Z",
+        "computedAt": "2026-11-03T21:22:33.312Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -20039,12 +20039,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.187Z",
+        "computedAt": "2026-11-03T21:22:33.320Z",
         "marketAnchorCandidate": {
           "homeMargin": 9.184865084236371
         },
@@ -20054,11 +20054,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.187Z",
+        "computedAt": "2026-11-03T21:22:33.320Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -20455,12 +20455,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.201Z",
+        "computedAt": "2026-11-03T21:22:33.335Z",
         "marketAnchorCandidate": {
           "homeMargin": -19.034600321914105
         },
@@ -20470,11 +20470,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.201Z",
+        "computedAt": "2026-11-03T21:22:33.335Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -20874,12 +20874,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.215Z",
+        "computedAt": "2026-11-03T21:22:33.349Z",
         "marketAnchorCandidate": {
           "homeMargin": 6.5246130434782605
         },
@@ -20889,11 +20889,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.215Z",
+        "computedAt": "2026-11-03T21:22:33.349Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -21283,11 +21283,11 @@
       "shadowModels": null,
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.216Z",
+        "computedAt": "2026-11-03T21:22:33.350Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": null,
@@ -21615,12 +21615,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.217Z",
+        "computedAt": "2026-11-03T21:22:33.351Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.659980461077699
         },
@@ -21630,11 +21630,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.217Z",
+        "computedAt": "2026-11-03T21:22:33.351Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -22039,12 +22039,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.225Z",
+        "computedAt": "2026-11-03T21:22:33.359Z",
         "marketAnchorCandidate": {
           "homeMargin": -4.161696472060566
         },
@@ -22054,11 +22054,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.225Z",
+        "computedAt": "2026-11-03T21:22:33.359Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -22444,12 +22444,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.233Z",
+        "computedAt": "2026-11-03T21:22:33.367Z",
         "marketAnchorCandidate": {
           "homeMargin": 3.6508399982983066
         },
@@ -22459,11 +22459,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.233Z",
+        "computedAt": "2026-11-03T21:22:33.367Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -22858,12 +22858,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.234Z",
+        "computedAt": "2026-11-03T21:22:33.369Z",
         "marketAnchorCandidate": {
           "homeMargin": -14.418157763975156
         },
@@ -22873,11 +22873,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.234Z",
+        "computedAt": "2026-11-03T21:22:33.369Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -23283,12 +23283,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.246Z",
+        "computedAt": "2026-11-03T21:22:33.381Z",
         "marketAnchorCandidate": {
           "homeMargin": 4.048551919095397
         },
@@ -23298,11 +23298,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.246Z",
+        "computedAt": "2026-11-03T21:22:33.381Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -23698,12 +23698,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.255Z",
+        "computedAt": "2026-11-03T21:22:33.389Z",
         "marketAnchorCandidate": {
           "homeMargin": 4.706786956521739
         },
@@ -23713,11 +23713,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.255Z",
+        "computedAt": "2026-11-03T21:22:33.389Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -24101,12 +24101,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.265Z",
+        "computedAt": "2026-11-03T21:22:33.401Z",
         "marketAnchorCandidate": {
           "homeMargin": -16.721422552559257
         },
@@ -24116,11 +24116,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.265Z",
+        "computedAt": "2026-11-03T21:22:33.401Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -24515,12 +24515,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.278Z",
+        "computedAt": "2026-11-03T21:22:33.414Z",
         "marketAnchorCandidate": {
           "homeMargin": -2.7610649156373324
         },
@@ -24530,11 +24530,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.278Z",
+        "computedAt": "2026-11-03T21:22:33.414Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -24927,12 +24927,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.282Z",
+        "computedAt": "2026-11-03T21:22:33.418Z",
         "marketAnchorCandidate": {
           "homeMargin": -10.847292960662527
         },
@@ -24942,11 +24942,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.282Z",
+        "computedAt": "2026-11-03T21:22:33.418Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -25343,12 +25343,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.295Z",
+        "computedAt": "2026-11-03T21:22:33.431Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.886068842602639
         },
@@ -25358,11 +25358,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.295Z",
+        "computedAt": "2026-11-03T21:22:33.431Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -25755,12 +25755,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-03T20:24:38.301Z",
+        "computedAt": "2026-11-03T21:22:33.437Z",
         "marketAnchorCandidate": {
           "homeMargin": 7.0898106224188036
         },
@@ -25770,11 +25770,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-03T20:24:38.301Z",
+        "computedAt": "2026-11-03T21:22:33.437Z",
         "inputDates": {
-          "fpi": "2026-11-03T20:22:30.592Z",
+          "fpi": "2026-11-03T21:21:53.640Z",
           "phil": "2026-10-25",
-          "metrics": "2026-11-03T20:22:30.341Z",
+          "metrics": "2026-11-03T21:21:53.550Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -25877,7 +25877,7 @@
   "runtimePersistence": {
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "capturedAt": "2026-11-03T20:28:05.811Z",
+    "capturedAt": "2026-11-03T21:26:21.194Z",
     "selectedWeek": "Week 10",
     "modelPromotion": {
       "marketCount": 61,
@@ -25896,7 +25896,7 @@
     "totalPromotedGameCount": 61,
     "independentGameCount": 61,
     "rejectedFallbackCount": 2,
-    "generatedAt": "2026-11-03T20:24:30.264Z",
+    "generatedAt": "2026-11-03T21:22:31.942Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },
