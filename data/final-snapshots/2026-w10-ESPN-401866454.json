@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401866454",
+  "matchup": "Buffalo at Miami (OH)",
+  "kickoff": "2026-11-04T01:00:00.000Z",
+  "frozenAt": "2026-11-03T19:27:56.153Z",
+  "minutesBeforeKickoff": 332.1,
+  "immutable": true,
+  "market": {
+    "spread": "Miami (OH) -6",
+    "total": 44.5,
+    "moneyline": "Buffalo +190 / Miami (OH) -230",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-03T19:27:54.575Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Miami (OH) -7.5",
+    "marketCalibratedHomeMargin": 7.709184722124775,
+    "marketCalibratedEdge": 1.7091847221247747,
+    "independentFair": "Miami (OH) -5",
+    "independentHomeMargin": 5.04288773455625,
+    "independentEdge": 0.95711226544375,
+    "independentSide": "Buffalo",
+    "ensembleFair": "Miami (OH) -6",
+    "ensembleHomeMargin": 6.242721378962086,
+    "ensembleEdge": 0.24272137896208612,
+    "selectedModel": "ensemble",
+    "governedFair": "Miami (OH) -6",
+    "governedTotal": 44
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-03T19:22:19.654Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-03T19:22:19.199Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-03T19:24:15.083Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 7.339215320910973
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 6.076235148415876
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-03T19:24:15.083Z",
+    "inputDates": {
+      "fpi": "2026-11-03T19:22:19.654Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-03T19:22:19.199Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 6.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Miami (OH) -6.5",
+    "sourceObservedAt": "2026-11-01T03:25:20.875Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-03T19:27:54.575Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-03T19:27:54.575Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
