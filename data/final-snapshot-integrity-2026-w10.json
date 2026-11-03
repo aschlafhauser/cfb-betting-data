@@ -3,13 +3,13 @@
   "sport": "CFB",
   "season": 2026,
   "week": 10,
-  "verifiedAt": "2026-11-03T17:28:14.174Z",
+  "verifiedAt": "2026-11-03T18:27:19.951Z",
   "status": "IN_PROGRESS",
   "blocking": false,
   "counts": {
     "selectedWeekGames": 63,
-    "validPreKickoffSnapshots": 0,
-    "pendingBeforeKickoff": 63,
+    "validPreKickoffSnapshots": 1,
+    "pendingBeforeKickoff": 62,
     "permanentFailures": 0,
     "acknowledgedPermanentExceptions": 0,
     "unacknowledgedPermanentFailures": 0
@@ -18,14 +18,6 @@
   "acknowledgedFailures": [],
   "unacknowledgedFailures": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401866453",
-      "game": "Ohio at Akron",
-      "kickoff": "2026-11-04T00:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401866454",
       "game": "Buffalo at Miami (OH)",
@@ -523,7 +515,16 @@
       "frozenAt": null
     }
   ],
-  "passedGames": [],
+  "passedGames": [
+    {
+      "canonicalGameId": "ESPN-401866453",
+      "game": "Ohio at Akron",
+      "kickoff": "2026-11-04T00:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w10-ESPN-401866453.json",
+      "frozenAt": "2026-11-03T18:27:19.904Z"
+    }
+  ],
   "exceptionLedger": "data/final-snapshot-exceptions.json",
   "governance": "A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure."
 }
