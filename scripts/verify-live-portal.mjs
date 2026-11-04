@@ -60,7 +60,7 @@ for(let attempt=1;attempt<=8;attempt++){
  });
  diag.browserErrors=[...browserErrors];
  const canonicalWeek=await page.evaluate(()=>{const w=window.CFB_WEEKLY_BOARD_2026?.week;return Number.isFinite(Number(w))?Number(w):null});
- const bootViolations=bootStates.filter(s=>s.rowCount>0&&canonicalWeek!==null&&s.week!==canonicalWeek);
+ const bootViolations=bootStates.filter(s=>canonicalWeek!==null&&s.week!==null&&s.week!==canonicalWeek);
  const bootUnique=[...new Map(bootStates.map(s=>[JSON.stringify({week:s.week,rowCount:s.rowCount,sample:s.sample}),s])).values()];
  diag.bootRollover={canonicalWeek,observedStates:bootUnique.map(({at,...s})=>s),violationCount:bootViolations.length,firstViolation:bootViolations[0]||null};
  console.log(`Live verification attempt ${attempt}: ${JSON.stringify(diag)}`);
