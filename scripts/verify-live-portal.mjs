@@ -10,9 +10,10 @@ for(let attempt=1;attempt<=8;attempt++){
  await page.goto(`${portal}?verify=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
  // Observe startup before waiting for governed runtime. Rendering any prior-week rows during
  // bootstrap is a rollover failure even if current data later replaces them.
- const bootStates=[];const bootUntil=Date.now()+5500;
+ const bootStates=[];const bootUntil=Date.now()+20000;
  while(Date.now()<bootUntil){
-  bootStates.push(await page.evaluate(()=>{const sel=document.getElementById('weekSel'),m=String(sel?.value||sel?.selectedOptions?.[0]?.textContent||'').match(/\d+/),rows=Array.from(document.querySelectorAll('#scheduleRows tr'));return{at:Date.now(),week:m?Number(m[0]):null,rowCount:rows.length,sample:rows.slice(0,3).map(r=>String(r.dataset?.gameId||r.textContent||'').trim().replace(/\s+/g,' ').slice(0,180))}}));
+  const state=await page.evaluate(n=>{const sel=document.getElementById('weekSel'),m=String(sel?.value||sel?.selectedOptions?.[0]?.textContent||'').match(/\d+/),rows=Array.from(document.querySelectorAll('#scheduleRows tr')),ready=Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&Array.isArray(window.CFB_DEEP_DIVES_CURRENT?.dossiers)&&window.CFB_DEEP_DIVES_CURRENT.dossiers.length===n&&window.CFB_WEEKLY_MANIFEST_CURRENT;return{at:Date.now(),week:m?Number(m[0]):null,rowCount:rows.length,sample:rows.slice(0,3).map(r=>String(r.dataset?.gameId||r.textContent||'').trim().replace(/\s+/g,' ').slice(0,180)),ready:Boolean(ready)}},expected);
+  bootStates.push(state);if(state.ready)break;
   await page.waitForTimeout(75);
  }
  try{await page.waitForFunction(n=>Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&Array.isArray(window.CFB_DEEP_DIVES_CURRENT?.dossiers)&&window.CFB_DEEP_DIVES_CURRENT.dossiers.length===n&&window.CFB_MARKET_MOVERS_CURRENT&&window.CFB_WEEKLY_MANIFEST_CURRENT&&window.CFB_LONGSHOT_UPSET_LAB_2026&&window.CFB_UNDERDOG_SPECIAL_2026,n,{timeout:12000})}catch{}
