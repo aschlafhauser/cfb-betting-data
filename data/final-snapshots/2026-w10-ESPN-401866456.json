@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401866456",
+  "matchup": "Central Michigan at Eastern Michigan",
+  "kickoff": "2026-11-05T00:30:00.000Z",
+  "frozenAt": "2026-11-04T19:25:07.182Z",
+  "minutesBeforeKickoff": 304.9,
+  "immutable": true,
+  "market": {
+    "spread": "Eastern Michigan -1.5",
+    "total": 44.5,
+    "moneyline": "Central Michigan -108 / Eastern Michigan -112",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-04T19:25:06.585Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Eastern Michigan -1",
+    "marketCalibratedHomeMargin": 0.9703423543330375,
+    "marketCalibratedEdge": 0.5296576456669625,
+    "independentFair": "Central Michigan -1",
+    "independentHomeMargin": -1.0094484916812494,
+    "independentEdge": 2.5094484916812494,
+    "independentSide": "Central Michigan",
+    "ensembleFair": "Pick",
+    "ensembleHomeMargin": -0.21753215327553466,
+    "ensembleEdge": 1.7175321532755348,
+    "selectedModel": "ensemble",
+    "governedFair": "Pick",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-04T19:21:54.672Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-04T19:21:54.408Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-04T19:22:41.419Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 0.9703423543330375
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -0.21753215327553466
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-04T19:22:41.419Z",
+    "inputDates": {
+      "fpi": "2026-11-04T19:21:54.672Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-04T19:21:54.408Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Eastern Michigan -1.5",
+    "sourceObservedAt": "2026-11-01T03:25:20.896Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-04T19:25:06.585Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-04T19:25:06.585Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
