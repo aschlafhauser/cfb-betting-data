@@ -8,6 +8,13 @@ page.on('pageerror',err=>browserErrors.push(String(err?.message||err)));
 for(let attempt=1;attempt<=8;attempt++){
  browserErrors=[];
  await page.goto(`${portal}?verify=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
+ // Observe startup before waiting for governed runtime. Rendering any prior-week rows during
+ // bootstrap is a rollover failure even if current data later replaces them.
+ const bootStates=[];const bootUntil=Date.now()+5500;
+ while(Date.now()<bootUntil){
+  bootStates.push(await page.evaluate(()=>{const sel=document.getElementById('weekSel'),m=String(sel?.value||sel?.selectedOptions?.[0]?.textContent||'').match(/\d+/),rows=Array.from(document.querySelectorAll('#scheduleRows tr'));return{at:Date.now(),week:m?Number(m[0]):null,rowCount:rows.length,sample:rows.slice(0,3).map(r=>String(r.dataset?.gameId||r.textContent||'').trim().replace(/\s+/g,' ').slice(0,180))}}));
+  await page.waitForTimeout(75);
+ }
  try{await page.waitForFunction(n=>Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&Array.isArray(window.CFB_DEEP_DIVES_CURRENT?.dossiers)&&window.CFB_DEEP_DIVES_CURRENT.dossiers.length===n&&window.CFB_MARKET_MOVERS_CURRENT&&window.CFB_WEEKLY_MANIFEST_CURRENT&&window.CFB_LONGSHOT_UPSET_LAB_2026&&window.CFB_UNDERDOG_SPECIAL_2026,n,{timeout:12000})}catch{}
  try{await page.waitForFunction(()=>typeof window.renderLongshotUpsetLab==='function'&&typeof window.renderUnderdogSpecial==='function',{timeout:8000})}catch{}
  await page.waitForTimeout(1500);
@@ -51,7 +58,12 @@ for(let attempt=1;attempt<=8;attempt++){
   return{sourceGames:games.length,renderedRows:rows.length,meaningful,markets,picks,fakePicks,pickRows,deepDiveComplete,falseDeepDive,dossierCount:dossiers.length,moverCount:movers.length,integrity,matchPanel,longshotRuntime,longshotRendered,longshotComponents,longshotNarrative,longshotScore25,longshotVisibleOk,underdogRuntime,underdogRendered,underdogVisibleOk,runtime:window.CFB_RUNTIME_DATA||null};
  });
  diag.browserErrors=[...browserErrors];
+ const canonicalWeek=await page.evaluate(()=>{const w=window.CFB_WEEKLY_BOARD_2026?.week;return Number.isFinite(Number(w))?Number(w):null});
+ const bootViolations=bootStates.filter(s=>s.rowCount>0&&canonicalWeek!==null&&s.week!==canonicalWeek);
+ const bootUnique=[...new Map(bootStates.map(s=>[JSON.stringify({week:s.week,rowCount:s.rowCount,sample:s.sample}),s])).values()];
+ diag.bootRollover={canonicalWeek,observedStates:bootUnique.map(({at,...s})=>s),violationCount:bootViolations.length,firstViolation:bootViolations[0]||null};
  console.log(`Live verification attempt ${attempt}: ${JSON.stringify(diag)}`);
+ if(bootViolations.length){await browser.close();throw new Error(`Live production verification failed rollover boot-isolation gate: ${JSON.stringify(diag.bootRollover)}`)}
  const structural=diag.sourceGames===expected&&diag.renderedRows===expected&&diag.meaningful>=minModels&&diag.markets>=minMarkets&&diag.fakePicks===0&&diag.falseDeepDive===0;
  const moverLayerLoaded=diag.moverCount>0||(diag.runtime?.loaded||[]).some(x=>/^market-movers-/.test(String(x)));
  const decisionLayers=diag.dossierCount===expected&&diag.deepDiveComplete===expected&&moverLayerLoaded&&diag.matchPanel;
