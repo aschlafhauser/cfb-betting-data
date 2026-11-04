@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-04T16:35:13.150Z",
+  "updatedAt": "2026-11-04T17:34:55.127Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-04T16:27:32.644Z",
+      "checkedAt": "2026-11-04T17:34:55.127Z",
       "unstartedGames": 61,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -213,12 +213,12 @@
     },
     "marketCoverage": {
       "status": "PASS",
-      "minimumRequired": 10,
+      "minimumRequired": 20,
       "actualMarketGames": 61,
-      "dueGames": 10,
-      "dueMarketGames": 10,
+      "dueGames": 20,
+      "dueMarketGames": 20,
       "startedGamesExcluded": 2,
-      "laterGamesOutsideBlockingWindow": 51,
+      "laterGamesOutsideBlockingWindow": 41,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
       "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 2 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
@@ -235,14 +235,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-04T16:27:18.609Z",
+      "verifiedAt": "2026-11-04T17:34:40.891Z",
       "artifact": "data/statistical-display-integrity-2026-w10.json",
-      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 11/11; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-04T16:27:32.585Z",
+      "verifiedAt": "2026-11-04T17:34:55.073Z",
       "artifact": "data/market-derived-integrity-2026-w10.json",
       "detail": "Independently reconciled 177 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -277,13 +277,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-04T16:35:13.150Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-04T16:25:24.168Z",
+      "verifiedAt": "2026-11-04T17:33:06.907Z",
       "artifact": "data/final-snapshot-integrity-2026-w10.json",
       "validSnapshots": 2,
       "pendingBeforeKickoff": 61,
@@ -299,11 +298,11 @@
       "detail": "2 valid immutable snapshots; 61 games remain pending before kickoff."
     }
   },
-  "failures": [],
+  "failures": [
+    "productionVerifier"
+  ],
   "currentPriorityQueue": [
-    "Run fresh live-browser production verification",
-    "Maintain injury/market/expert refreshes through kickoff",
-    "Freeze each final pre-kickoff snapshot"
+    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
