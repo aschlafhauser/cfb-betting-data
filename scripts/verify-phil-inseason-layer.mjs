@@ -49,14 +49,31 @@ try{
   await page.goto(`${portal}?philSelectedWeek=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:120000});
   await page.waitForFunction(w=>window.CFB_PHIL_INSEASON_READY===true&&window.CFB_RUNTIME_DATA?.status==='remote-active'&&window.CFB_MULTI_MODEL?.state?.ready===true&&Number(window.CFB_WEEKLY_BOARD_2026?.week)===Number(w),Number(board.week),{timeout:60000}).catch(()=>{});await page.waitForTimeout(1500);
   if(target){
-    out=await page.evaluate(async ({away,home,gameId})=>{
+    const targetModel=target.modelComponents?.philInseason||null;
+    const awayAliases=[target.away,targetModel?.away?.power?.team,targetModel?.away?.agg?.team,targetModel?.away?.passD?.team,targetModel?.away?.st?.team].filter(Boolean);
+    const homeAliases=[target.home,targetModel?.home?.power?.team,targetModel?.home?.agg?.team,targetModel?.home?.passD?.team,targetModel?.home?.st?.team].filter(Boolean);
+    out=await page.evaluate(async ({away,home,gameId,awayAliases,homeAliases})=>{
       const sleep=ms=>new Promise(r=>setTimeout(r,ms));document.querySelector('nav button[data-tab="match"]')?.click();await sleep(150);
       const sel=document.getElementById('matchSel'),opts=Array.from(sel?.options||[]),norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,''),wanted=opts.findIndex(o=>{const t=norm(o.textContent);return t.includes(norm(away))&&t.includes(norm(home))});
-      if(sel&&wanted>=0){sel.selectedIndex=wanted;sel.dispatchEvent(new Event('change',{bubbles:true}));for(let i=0;i<40;i++){const txt=document.getElementById('philInseasonPanel')?.innerText||'',selected=norm(sel.selectedOptions?.[0]?.textContent||'');if(sel.selectedIndex===wanted&&selected.includes(norm(away))&&selected.includes(norm(home))&&txt.length>80)break;await sleep(100)}}
+      if(sel&&wanted>=0){
+        sel.selectedIndex=wanted;
+        // One canonical selector event only. Never call a legacy renderer after dispatch.
+        sel.dispatchEvent(new Event('change',{bubbles:true}));
+        let coherentSamples=0;
+        for(let i=0;i<100;i++){
+          const txt=norm(document.getElementById('philInseasonPanel')?.innerText||''),selected=norm(sel.selectedOptions?.[0]?.textContent||'');
+          const selectedMatchup=sel.selectedIndex===wanted&&selected.includes(norm(away))&&selected.includes(norm(home));
+          const awayRendered=awayAliases.some(x=>txt.includes(norm(x))),homeRendered=homeAliases.some(x=>txt.includes(norm(x)));
+          if(selectedMatchup&&awayRendered&&homeRendered&&txt.length>80)coherentSamples++;else coherentSamples=0;
+          // Require two seconds of coherent selector + panel identity state so a late default render cannot pass.
+          if(coherentSamples>=20)break;
+          await sleep(100);
+        }
+      }
       const panel=document.getElementById('philInseasonPanel'),txt=panel?.innerText||'';let model=null;
       try{const x=(window.CFB_WEEKLY_BOARD_2026?.games||[]).find(g=>String(g.gameId||g.id)===String(gameId));model=x?.modelComponents?.philInseason||null}catch{}
       return{ready:window.CFB_PHIL_INSEASON_READY===true,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null,selectedIndex:wanted,matchup:sel?.selectedOptions?.[0]?.textContent||null};
-    },{away:target.away,home:target.home,gameId:target.gameId});
+    },{away:target.away,home:target.home,gameId:target.gameId,awayAliases,homeAliases});
   }
 }finally{await browser.close().catch(()=>{})}
 if(!out.ready)failures.push('CFB_PHIL_INSEASON_READY did not become true');if(sourceDate&&out.updatedAt!==sourceDate)failures.push(`Rendered Phil source date ${out.updatedAt} != ${sourceDate}`);if(target&&out.selectedIndex<0)failures.push(`Selected-week matchup not found in Matchup Center: ${target.away} at ${target.home}`);if(target&&!out.panel)failures.push('Phil Steele in-season quantitative panel missing');
