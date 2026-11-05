@@ -53,7 +53,17 @@ try{
     const awayAliases=[target.away,targetModel?.away?.power?.team,targetModel?.away?.agg?.team,targetModel?.away?.passD?.team,targetModel?.away?.st?.team].filter(Boolean);
     const homeAliases=[target.home,targetModel?.home?.power?.team,targetModel?.home?.agg?.team,targetModel?.home?.passD?.team,targetModel?.home?.st?.team].filter(Boolean);
     out=await page.evaluate(async ({away,home,gameId,awayAliases,homeAliases})=>{
-      const sleep=ms=>new Promise(r=>setTimeout(r,ms));document.querySelector('nav button[data-tab="match"]')?.click();await sleep(150);
+      const sleep=ms=>new Promise(r=>setTimeout(r,ms));document.querySelector('nav button[data-tab="match"]')?.click();
+      // Let the canonical Matchup Center tab activation finish its own default render before
+      // emitting the one governed selector event. Otherwise the pending tab render can race
+      // and overwrite the requested matchup after a superficially coherent sample.
+      let bootstrapState='',bootstrapStable=0;
+      for(let i=0;i<150;i++){
+        const bootstrapSel=document.getElementById('matchSel'),bootstrapPanel=document.getElementById('philInseasonPanel');
+        const state=`${bootstrapSel?.selectedIndex??-1}|${bootstrapSel?.selectedOptions?.[0]?.textContent||''}|${bootstrapPanel?.innerText||''}`;
+        if(bootstrapSel?.options?.length&&String(bootstrapPanel?.innerText||'').length>80&&state===bootstrapState)bootstrapStable++;else bootstrapStable=0;
+        bootstrapState=state;if(bootstrapStable>=20)break;await sleep(100);
+      }
       const sel=document.getElementById('matchSel'),opts=Array.from(sel?.options||[]),norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,''),wanted=opts.findIndex(o=>{const t=norm(o.textContent);return t.includes(norm(away))&&t.includes(norm(home))});
       if(sel&&wanted>=0){
         sel.selectedIndex=wanted;
@@ -65,8 +75,8 @@ try{
           const selectedMatchup=sel.selectedIndex===wanted&&selected.includes(norm(away))&&selected.includes(norm(home));
           const awayRendered=awayAliases.some(x=>txt.includes(norm(x))),homeRendered=homeAliases.some(x=>txt.includes(norm(x)));
           if(selectedMatchup&&awayRendered&&homeRendered&&txt.length>80)coherentSamples++;else coherentSamples=0;
-          // Require two seconds of coherent selector + panel identity state so a late default render cannot pass.
-          if(coherentSamples>=20)break;
+          // Require five seconds of coherent selector + panel identity state so a late default render cannot pass.
+          if(coherentSamples>=50)break;
           await sleep(100);
         }
       }
