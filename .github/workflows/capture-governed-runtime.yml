@@ -321,7 +321,7 @@ jobs:
           NODE
           else
             node - <<'NODE'
-          const fs=require('fs');const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;const m=JSON.parse(fs.readFileSync(p,'utf8'));m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed.'};const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';m.updatedAt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(m,null,2)+'\n');
+          const fs=require('fs');const p=`data/weekly-manifest-${process.env.CFB_SEASON}-w${process.env.CFB_WEEK}.json`;const m=JSON.parse(fs.readFileSync(p,'utf8'));m.gates.productionVerifier={status:'PASS',priorFailure:false,verifiedAt:new Date().toISOString(),detail:'Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed.'};m.failures=(m.failures||[]).filter(x=>String(x)!=='productionVerifier');m.currentPriorityQueue=(m.currentPriorityQueue||[]).filter(x=>!String(x).startsWith('productionVerifier:'));const hardFail=Object.values(m.gates||{}).some(g=>g?.status==='FAIL');m.status=hardFail?'FAIL':'PASS-WITH-IN-PROGRESS-GATES';m.updatedAt=new Date().toISOString();fs.writeFileSync(p,JSON.stringify(m,null,2)+'\n');
           NODE
           fi
           git config user.name 'cfb-runtime-bot'; git config user.email 'cfb-runtime-bot@users.noreply.github.com'; git add data/weekly-manifest-${CFB_SEASON}-w${CFB_WEEK}.json
