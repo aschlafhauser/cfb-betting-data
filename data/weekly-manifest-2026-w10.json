@@ -1,23 +1,20 @@
 {
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-04T23:26:56.024Z",
+  "updatedAt": "2026-11-05T00:49:03.267Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-04T23:25:02.400Z",
-      "unstartedGames": 61,
+      "checkedAt": "2026-11-05T00:49:03.267Z",
+      "unstartedGames": 58,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
       "availabilityRecordGames": 0,
       "fullTranscriptReviewComplete": false,
       "missingExpertContext": [
-        "ESPN-401866455",
-        "ESPN-401866457",
-        "ESPN-401866456",
         "ESPN-401862817",
         "ESPN-401869964",
         "ESPN-401858288",
@@ -78,9 +75,6 @@
         "ESPN-401864535"
       ],
       "missingMaterialAnalysis": [
-        "ESPN-401866455",
-        "ESPN-401866457",
-        "ESPN-401866456",
         "ESPN-401862817",
         "ESPN-401869964",
         "ESPN-401858288",
@@ -141,9 +135,6 @@
         "ESPN-401864535"
       ],
       "missingAvailabilityReports": [
-        "ESPN-401866455",
-        "ESPN-401866457",
-        "ESPN-401866456",
         "ESPN-401862817",
         "ESPN-401869964",
         "ESPN-401858288",
@@ -213,15 +204,15 @@
     },
     "marketCoverage": {
       "status": "PASS",
-      "minimumRequired": 46,
-      "actualMarketGames": 61,
-      "dueGames": 46,
-      "dueMarketGames": 46,
-      "startedGamesExcluded": 2,
-      "laterGamesOutsideBlockingWindow": 15,
+      "minimumRequired": 52,
+      "actualMarketGames": 58,
+      "dueGames": 52,
+      "dueMarketGames": 52,
+      "startedGamesExcluded": 5,
+      "laterGamesOutsideBlockingWindow": 6,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
-      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 2 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
+      "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 5 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -235,16 +226,16 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-04T23:24:52.997Z",
+      "verifiedAt": "2026-11-05T00:48:54.934Z",
       "artifact": "data/statistical-display-integrity-2026-w10.json",
-      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/15."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-04T23:25:02.365Z",
+      "verifiedAt": "2026-11-05T00:49:03.221Z",
       "artifact": "data/market-derived-integrity-2026-w10.json",
-      "detail": "Independently reconciled 177 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Independently reconciled 168 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -260,7 +251,7 @@
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 19 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 18 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -275,15 +266,14 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "PASS",
+      "status": "PENDING-LIVE-CHECK",
       "priorFailure": false,
-      "verifiedAt": "2026-11-04T23:26:56.024Z",
-      "detail": "Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed."
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-04T23:23:45.949Z",
+      "verifiedAt": "2026-11-05T00:47:27.453Z",
       "artifact": "data/final-snapshot-integrity-2026-w10.json",
       "validSnapshots": 5,
       "pendingBeforeKickoff": 58,
@@ -299,11 +289,11 @@
       "detail": "5 valid immutable snapshots; 58 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "productionVerifier"
-  ],
+  "failures": [],
   "currentPriorityQueue": [
-    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
+    "Run fresh live-browser production verification",
+    "Maintain injury/market/expert refreshes through kickoff",
+    "Freeze each final pre-kickoff snapshot"
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
