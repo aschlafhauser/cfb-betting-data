@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-06T15:14:26.000Z",
+  "updatedAt": "2026-11-06T15:24:38.479Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -41,9 +41,9 @@
   },
   "coverage": {
     "allUnderdogs": 56,
-    "underdogSpecial": 21,
+    "underdogSpecial": 22,
     "upsetLab": 16,
-    "intermediate": 19,
+    "intermediate": 18,
     "routingViolations": 0
   },
   "underdogSpecial": [
@@ -112,7 +112,7 @@
         "observedExplosiveRushRate": 0.13043478260869565,
         "observedSackRateAllowed": 0.02252252252252252,
         "observedDefensiveSackRate": 0.05555555555555555,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -145,7 +145,7 @@
           "Utah OL/RB vs BYU DL/LB — BYU +",
           "BYU OL/RB vs Utah DL/LB — BYU +",
           "Phil Steele current power rating: BYU 135 vs Utah 133.",
-          "Canonical selected-week market: BYU +4.5, total 48.5; production model Lean BYU edge 4.932934458079195; Football Independent BYU edge 7.531011536412186."
+          "Canonical selected-week market: BYU +4.5, total 48.5; production model no directional support edge 4.932934458079195; Football Independent BYU edge 7.531011536412186."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -153,6 +153,121 @@
       "researchFlags": {
         "highProfile": false,
         "modelSupport": true,
+        "volatilityPath": false
+      },
+      "scoreAudit": {
+        "version": "v3.0-25pt-evidence-capped",
+        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
+      },
+      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
+    },
+    {
+      "week": 10,
+      "canonicalGameId": "ESPN-401856855",
+      "team": "TCU",
+      "opponent": "Arizona",
+      "currentSpread": "+7",
+      "band": "UNDERDOG-SPECIAL",
+      "profileScore": 5.3,
+      "score25": 5.3,
+      "scoreMax": 25,
+      "tier": "D",
+      "components": {
+        "qbStability": 0,
+        "trenchResistance": 3.3,
+        "explosivePath": 1,
+        "compression": 1,
+        "havocVolatility": 0,
+        "coachingSituational": 0,
+        "availability": 0,
+        "productionModel": 0,
+        "independentModel": 0
+      },
+      "componentEvidence": {
+        "qbStability": {
+          "quality": "LIMITED",
+          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
+        },
+        "trenchResistance": {
+          "quality": "PARTIAL",
+          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
+        },
+        "explosivePath": {
+          "quality": "PARTIAL",
+          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
+        },
+        "compression": {
+          "quality": "PARTIAL",
+          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
+        },
+        "havocVolatility": {
+          "quality": "LIMITED",
+          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
+        },
+        "coachingSituational": {
+          "quality": "MISSING",
+          "reason": "No verified quantified situational advantage; neutral."
+        },
+        "availability": {
+          "quality": "MISSING",
+          "reason": "Verified net impact only; unknown is neutral."
+        },
+        "productionModel": {
+          "quality": "ESTIMATED",
+          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
+        },
+        "independentModel": {
+          "quality": "ESTIMATED-CORRELATED",
+          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
+        }
+      },
+      "signals": {
+        "observedExplosivePassRate": 0.1824561403508772,
+        "observedExplosiveRushRate": 0.12658227848101267,
+        "observedSackRateAllowed": 0.06666666666666667,
+        "observedDefensiveSackRate": 0.06329113924050633,
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
+        "qbSeasonEpa": null,
+        "qbRecentEpa": null,
+        "qbStarterConfirmed": false,
+        "opponentPassDefenseRank": 42,
+        "teamOffenseYppRank": 60,
+        "teamAggregateRank": 33,
+        "teamDefensiveYppRank": 11,
+        "marketTotal": 46.5,
+        "neutralPacePossessions": null,
+        "driveSuccessRate": null,
+        "havocRate": null,
+        "opponentTurnoverWorthyRate": null,
+        "marketWinProbability": 0.3731987188091081,
+        "productionWinProbability": 0.3731987188091081,
+        "independentWinProbability": 0.40845153006066437
+      },
+      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
+      "estimatedWinProbability": 0.3731987188091081,
+      "marketWinProbability": 0.3731987188091081,
+      "narrative": {
+        "upsetCase": "TCU has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Arizona QB/WR vs TCU DB — TCU +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
+        "keyThingsToWatch": [
+          "pressure rate and line-of-scrimmage control",
+          "game pace / possession count",
+          "late availability and inactives"
+        ],
+        "evidence": [
+          "Arizona QB/WR vs TCU DB — TCU +",
+          "TCU QB/WR vs Arizona DB — Arizona +",
+          "Arizona OL/RB vs TCU DL/LB — TCU +",
+          "Only 10 points; 11 penalties for 100 yards and a lost fumble materially hurt the result.",
+          "Phil Steele current power rating: TCU 125 vs Arizona 136.",
+          "Canonical selected-week market: TCU +7, total 46.5; production model no directional support edge 0.2273518047631402; Football Independent TCU edge 2.1487098694260727."
+        ]
+      },
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "informationQuality": "source-limited",
+      "researchFlags": {
+        "highProfile": false,
+        "modelSupport": false,
         "volatilityPath": false
       },
       "scoreAudit": {
@@ -226,7 +341,7 @@
         "observedExplosiveRushRate": 0.13732394366197184,
         "observedSackRateAllowed": 0.054901960784313725,
         "observedDefensiveSackRate": 0.030612244897959183,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -234,7 +349,7 @@
         "teamOffenseYppRank": 120,
         "teamAggregateRank": 36,
         "teamDefensiveYppRank": 76,
-        "marketTotal": 50.5,
+        "marketTotal": 51.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -260,7 +375,7 @@
           "Texas A&M QB/WR vs South Carolina DB — Texas A&M +",
           "South Carolina QB/WR vs Texas A&M DB — Texas A&M +",
           "Phil Steele current power rating: Texas A&M 125 vs South Carolina 136.",
-          "Canonical selected-week market: Texas A&M +7, total 50.5; production model Lean Texas A&M edge 3.707775154392216; Football Independent Texas A&M edge 5.438097721088477."
+          "Canonical selected-week market: Texas A&M +7, total 51.5; production model no directional support edge 3.707775154392216; Football Independent Texas A&M edge 5.438097721088477."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -341,7 +456,7 @@
         "observedExplosiveRushRate": 0.07692307692307693,
         "observedSackRateAllowed": 0.06766917293233082,
         "observedDefensiveSackRate": 0.10909090909090909,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -375,7 +490,7 @@
           "Oklahoma QB/WR vs Florida DB — Oklahoma +",
           "Florida OL/RB vs Oklahoma DL/LB — Oklahoma +",
           "Phil Steele current power rating: Oklahoma 135 vs Florida 133.",
-          "Canonical selected-week market: Oklahoma +6, total 45.5; production model Oklahoma ATS edge 0.05939408482209796; Football Independent Florida edge 2.5864577904420347."
+          "Canonical selected-week market: Oklahoma +6, total 45.5; production model no directional support edge 0.05939408482209796; Football Independent Florida edge 2.5864577904420347."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -456,7 +571,7 @@
         "observedExplosiveRushRate": 0.1597222222222222,
         "observedSackRateAllowed": 0.03663003663003663,
         "observedDefensiveSackRate": 0.08866995073891626,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -490,7 +605,7 @@
           "Oklahoma State OL/RB vs Kansas State DL/LB — Even",
           "Kansas State OL/RB vs Oklahoma State DL/LB — Even",
           "Phil Steele current power rating: Kansas State 116 vs Oklahoma State 130.",
-          "Canonical selected-week market: Kansas State +6.5, total 62.5; production model Lean Kansas State edge 4.614662038790293; Football Independent Kansas State edge 8.093077833420065."
+          "Canonical selected-week market: Kansas State +6.5, total 62.5; production model no directional support edge 4.614662038790293; Football Independent Kansas State edge 8.093077833420065."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -571,7 +686,7 @@
         "observedExplosiveRushRate": 0.16129032258064516,
         "observedSackRateAllowed": 0.08097165991902834,
         "observedDefensiveSackRate": 0.0743801652892562,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -604,7 +719,7 @@
           "Alabama QB/WR vs LSU DB — LSU +",
           "LSU QB/WR vs Alabama DB — Alabama +",
           "Phil Steele current power rating: Alabama 143 vs LSU 140.",
-          "Canonical selected-week market: Alabama +6, total 52.5; production model Alabama ATS edge 4.066309440571478; Football Independent Alabama edge 5.351802690807537."
+          "Canonical selected-week market: Alabama +6, total 52.5; production model no directional support edge 4.066309440571478; Football Independent Alabama edge 5.351802690807537."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -685,7 +800,7 @@
         "observedExplosiveRushRate": 0.1511111111111111,
         "observedSackRateAllowed": 0.023026315789473683,
         "observedDefensiveSackRate": 0.04979253112033195,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -719,7 +834,7 @@
           "Purdue QB/WR vs Maryland DB — Maryland +",
           "Purdue OL/RB vs Maryland DL/LB — Maryland +",
           "Phil Steele current power rating: Maryland 117 vs Purdue 124.",
-          "Canonical selected-week market: Maryland +5.5, total 56.5; production model Lean Purdue edge 0.1259428012118038; Football Independent Maryland edge 1.2081101749870173."
+          "Canonical selected-week market: Maryland +5.5, total 56.5; production model no directional support edge 0.1259428012118038; Football Independent Maryland edge 1.2081101749870173."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -800,7 +915,7 @@
         "observedExplosiveRushRate": 0.0871559633027523,
         "observedSackRateAllowed": 0.028985507246376812,
         "observedDefensiveSackRate": 0.06437768240343347,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -833,7 +948,7 @@
           "UCLA OL/RB vs Minnesota DL/LB — Minnesota +",
           "Minnesota OL/RB vs UCLA DL/LB — Even",
           "Phil Steele current power rating: Minnesota 131 vs UCLA 140.",
-          "Canonical selected-week market: Minnesota +4.5, total 38.5; production model UCLA ATS edge 0.4631770176453207; Football Independent Minnesota edge 3.034300751106801."
+          "Canonical selected-week market: Minnesota +4.5, total 38.5; production model no directional support edge 0.4631770176453207; Football Independent Minnesota edge 3.034300751106801."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -914,7 +1029,7 @@
         "observedExplosiveRushRate": 0.14728682170542637,
         "observedSackRateAllowed": 0.06451612903225806,
         "observedDefensiveSackRate": 0.05642633228840126,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -947,7 +1062,7 @@
           "Kentucky QB/WR vs Tennessee DB — Tennessee ++",
           "Kentucky OL/RB vs Tennessee DL/LB — Even",
           "Phil Steele current power rating: Kentucky 133 vs Tennessee 135.",
-          "Canonical selected-week market: Kentucky +6.5, total 49.5; production model Lean Kentucky edge 1.0364530805686254; Football Independent Kentucky edge 1.1861707551479164."
+          "Canonical selected-week market: Kentucky +6.5, total 49.5; production model no directional support edge 1.0364530805686254; Football Independent Kentucky edge 1.1861707551479164."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1028,7 +1143,7 @@
         "observedExplosiveRushRate": 0.12448132780082988,
         "observedSackRateAllowed": 0.03162055335968379,
         "observedDefensiveSackRate": 0.01953125,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1061,7 +1176,7 @@
           "Nebraska OL/RB vs Illinois DL/LB — Nebraska +",
           "Illinois QB/WR vs Nebraska DB — Nebraska +",
           "Phil Steele current power rating: Illinois 127 vs Nebraska 136.",
-          "Canonical selected-week market: Illinois +4.5, total 50.5; production model Nebraska ATS edge 4.5053183206867455; Football Independent Illinois edge 10.37755910711703."
+          "Canonical selected-week market: Illinois +4.5, total 50.5; production model no directional support edge 4.5053183206867455; Football Independent Illinois edge 10.37755910711703."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1142,7 +1257,7 @@
         "observedExplosiveRushRate": 0.10181818181818182,
         "observedSackRateAllowed": 0.05166051660516605,
         "observedDefensiveSackRate": 0.03759398496240601,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1177,7 +1292,7 @@
           "Duke OL/RB vs NC State DL/LB — Duke +",
           "Only 168 yards and 84 passing yards in a 34-8 loss; broad pregame absence list tempers the downgrade.",
           "Phil Steele current power rating: NC State 118 vs Duke 126.",
-          "Canonical selected-week market: NC State +4, total 51.5; production model Lean Duke edge 4.650640705477699; Football Independent NC State edge 9.788133021614682."
+          "Canonical selected-week market: NC State +4, total 51.5; production model no directional support edge 4.650640705477699; Football Independent NC State edge 9.788133021614682."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1258,7 +1373,7 @@
         "observedExplosiveRushRate": 0.11494252873563218,
         "observedSackRateAllowed": 0.05755395683453238,
         "observedDefensiveSackRate": 0.06920415224913495,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1291,7 +1406,7 @@
           "Colorado OL/RB vs Arizona State DL/LB — Arizona State +",
           "Colorado QB/WR vs Arizona State DB — Colorado +",
           "Phil Steele current power rating: Colorado 113 vs Arizona State 117.",
-          "Canonical selected-week market: Colorado +3.5, total 48.5; production model Lean Arizona State edge 0.9669755136333782; Football Independent Arizona State edge 0.893934399734647."
+          "Canonical selected-week market: Colorado +3.5, total 48.5; production model no directional support edge 0.9669755136333782; Football Independent Arizona State edge 0.893934399734647."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1372,7 +1487,7 @@
         "observedExplosiveRushRate": 0.16140350877192983,
         "observedSackRateAllowed": 0.03937007874015748,
         "observedDefensiveSackRate": 0.06719367588932806,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1405,7 +1520,7 @@
           "Georgia State QB/WR vs App State DB — Even",
           "App State QB/WR vs Georgia State DB — Even",
           "Phil Steele current power rating: Georgia State 109 vs App State 113.",
-          "Canonical selected-week market: Georgia State +6.5, total 54.5; production model Georgia State ATS edge 2.7293514538361148; Football Independent Georgia State edge 2.9346245026231985."
+          "Canonical selected-week market: Georgia State +6.5, total 54.5; production model no directional support edge 2.7293514538361148; Football Independent Georgia State edge 2.9346245026231985."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1486,7 +1601,7 @@
         "observedExplosiveRushRate": 0.14626865671641792,
         "observedSackRateAllowed": 0.032,
         "observedDefensiveSackRate": 0.02359882005899705,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1520,7 +1635,7 @@
           "Texas State OL/RB vs Oregon State DL/LB — Even",
           "Oregon State QB/WR vs Texas State DB — Even",
           "Phil Steele current power rating: Texas State 118 vs Oregon State 121.",
-          "Canonical selected-week market: Texas State +6.5, total 71.5; production model Lean Oregon State edge 1.3729539283526977; Football Independent Texas State edge 3.1394271045888824."
+          "Canonical selected-week market: Texas State +6.5, total 71.5; production model no directional support edge 1.3729539283526977; Football Independent Texas State edge 3.1394271045888824."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1601,7 +1716,7 @@
         "observedExplosiveRushRate": 0.15891472868217055,
         "observedSackRateAllowed": 0.08536585365853659,
         "observedDefensiveSackRate": 0.04498269896193772,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1635,7 +1750,7 @@
           "North Carolina OL/RB vs UConn DL/LB — Even",
           "Produced 671 yards in a 56-7 win with Kalieb Osborne contributing as passer and runner, but 10 penalties for 134 yards and opponent quality temper the upgrade.",
           "Phil Steele current power rating: UConn 108 vs North Carolina 124.",
-          "Canonical selected-week market: UConn +7, total 54.5; production model Lean North Carolina edge 0.4702197981436047; Football Independent UConn edge 2.327676500195313."
+          "Canonical selected-week market: UConn +7, total 54.5; production model no directional support edge 0.4702197981436047; Football Independent UConn edge 2.327676500195313."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1716,7 +1831,7 @@
         "observedExplosiveRushRate": 0.15953307392996108,
         "observedSackRateAllowed": 0.01607717041800643,
         "observedDefensiveSackRate": 0.05434782608695652,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1749,7 +1864,7 @@
           "Ole Miss QB/WR vs Georgia DB — Even",
           "Georgia QB/WR vs Ole Miss DB — Even",
           "Phil Steele current power rating: Ole Miss 139 vs Georgia 145.",
-          "Canonical selected-week market: Ole Miss +3.5, total 56.5; production model Lean Georgia edge 1.3369674448200048; Football Independent Ole Miss edge 2.6858742859041076."
+          "Canonical selected-week market: Ole Miss +3.5, total 56.5; production model no directional support edge 1.3369674448200048; Football Independent Ole Miss edge 2.6858742859041076."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1830,7 +1945,7 @@
         "observedExplosiveRushRate": 0.2029520295202952,
         "observedSackRateAllowed": 0.08296943231441048,
         "observedDefensiveSackRate": 0.06382978723404255,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1863,7 +1978,7 @@
           "Florida State OL/RB vs Boston College DL/LB — Florida State ++",
           "Boston College QB/WR vs Florida State DB — Florida State ++",
           "Phil Steele current power rating: Boston College 122 vs Florida State 125.",
-          "Canonical selected-week market: Boston College +6.5, total 52.5; production model Florida State ATS edge 0.36875036788194215; Football Independent Boston College edge 2.0047733961489858."
+          "Canonical selected-week market: Boston College +6.5, total 52.5; production model no directional support edge 0.36875036788194215; Football Independent Boston College edge 2.0047733961489858."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -1944,7 +2059,7 @@
         "observedExplosiveRushRate": 0.13454545454545455,
         "observedSackRateAllowed": 0.0707070707070707,
         "observedDefensiveSackRate": 0.08235294117647059,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1977,7 +2092,7 @@
           "Virginia Tech OL/RB vs SMU DL/LB — SMU +",
           "SMU OL/RB vs Virginia Tech DL/LB — SMU +",
           "Phil Steele current power rating: Virginia Tech 126 vs SMU 129.",
-          "Canonical selected-week market: Virginia Tech +6.5, total 56.5; production model Lean SMU edge 0.2177860383457908; Football Independent Virginia Tech edge 0.8816907874533335."
+          "Canonical selected-week market: Virginia Tech +6.5, total 56.5; production model no directional support edge 0.2177860383457908; Football Independent Virginia Tech edge 0.8816907874533335."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2058,7 +2173,7 @@
         "observedExplosiveRushRate": 0.12915129151291513,
         "observedSackRateAllowed": 0.12274368231046931,
         "observedDefensiveSackRate": 0.06228373702422145,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2091,7 +2206,7 @@
           "Old Dominion QB/WR vs Coastal Carolina DB — Even",
           "Old Dominion OL/RB vs Coastal Carolina DL/LB — Even",
           "Phil Steele current power rating: Old Dominion 104 vs Coastal Carolina 104.",
-          "Canonical selected-week market: Old Dominion +6.5, total 44.5; production model Lean Old Dominion edge 2.541330177810254; Football Independent Old Dominion edge 3.7351845268542196."
+          "Canonical selected-week market: Old Dominion +6.5, total 44.5; production model no directional support edge 2.541330177810254; Football Independent Old Dominion edge 3.7351845268542196."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2172,7 +2287,7 @@
         "observedExplosiveRushRate": 0.19402985074626866,
         "observedSackRateAllowed": 0.07567567567567568,
         "observedDefensiveSackRate": 0.072,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2206,7 +2321,7 @@
           "UNLV QB/WR vs Wyoming DB — UNLV +",
           "Allowed 35 points and five passing touchdowns at Colorado State; offensive output remained limited. One-game rivalry context caps the downgrade.",
           "Phil Steele current power rating: Wyoming 107 vs UNLV 113.",
-          "Canonical selected-week market: Wyoming +4.5, total 48.5; production model Lean UNLV edge 7.398660897338871; Football Independent UNLV edge 9.437894413952248."
+          "Canonical selected-week market: Wyoming +4.5, total 48.5; production model no directional support edge 7.398660897338871; Football Independent UNLV edge 9.437894413952248."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2287,7 +2402,7 @@
         "observedExplosiveRushRate": 0.14790996784565916,
         "observedSackRateAllowed": 0.05785123966942149,
         "observedDefensiveSackRate": 0.043137254901960784,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2320,7 +2435,7 @@
           "Troy OL/RB vs Louisiana Tech DL/LB — Even",
           "Louisiana Tech QB/WR vs Troy DB — Even",
           "Phil Steele current power rating: Troy 100 vs Louisiana Tech 116.",
-          "Canonical selected-week market: Troy +5.5, total 47.5; production model Lean Louisiana Tech edge 1.3740661581121172; Football Independent Troy edge 4.2026292020283735."
+          "Canonical selected-week market: Troy +5.5, total 47.5; production model no directional support edge 1.3740661581121172; Football Independent Troy edge 4.2026292020283735."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2401,7 +2516,7 @@
         "observedExplosiveRushRate": 0.11836734693877551,
         "observedSackRateAllowed": 0.05241935483870968,
         "observedDefensiveSackRate": 0.051094890510948905,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2434,7 +2549,7 @@
           "Missouri State OL/RB vs Florida International DL/LB — Even",
           "Florida International QB/WR vs Missouri State DB — Even",
           "Phil Steele current power rating: Missouri State 94 vs Florida International 105.",
-          "Canonical selected-week market: Missouri State +4.5, total 49.5; production model Lean Florida International edge 0.1342380774787948; Football Independent Missouri State edge 1.4415674141831056."
+          "Canonical selected-week market: Missouri State +4.5, total 49.5; production model no directional support edge 0.1342380774787948; Football Independent Missouri State edge 1.4415674141831056."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2517,7 +2632,7 @@
         "observedExplosiveRushRate": 0.13821138211382114,
         "observedSackRateAllowed": 0.03543307086614173,
         "observedDefensiveSackRate": 0.06719367588932806,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2551,7 +2666,7 @@
           "New Mexico State QB/WR vs Liberty DB — Even",
           "Trey Hedden was efficient through the air but the Aggies managed only 47 rushing yards.",
           "Phil Steele current power rating: New Mexico State 102 vs Liberty 119.",
-          "Canonical selected-week market: New Mexico State +16.5, total 46.5; production model New Mexico State ATS edge 5.965869707468524; Football Independent New Mexico State edge 8.690731214153711."
+          "Canonical selected-week market: New Mexico State +16.5, total 46.5; production model no directional support edge 5.965869707468524; Football Independent New Mexico State edge 8.690731214153711."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2632,7 +2747,7 @@
         "observedExplosiveRushRate": 0.1392857142857143,
         "observedSackRateAllowed": 0.043668122270742356,
         "observedDefensiveSackRate": 0.07079646017699115,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2665,7 +2780,7 @@
           "New Mexico QB/WR vs Nevada DB — Even",
           "New Mexico OL/RB vs Nevada DL/LB — Even",
           "Phil Steele current power rating: Nevada 106 vs New Mexico 126.",
-          "Canonical selected-week market: Nevada +10, total 38.5; production model New Mexico ATS edge 0.6971218907998402; Football Independent Nevada edge 4.4525762215558915."
+          "Canonical selected-week market: Nevada +10, total 38.5; production model no directional support edge 0.6971218907998402; Football Independent Nevada edge 4.4525762215558915."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2746,7 +2861,7 @@
         "observedExplosiveRushRate": 0.12547528517110265,
         "observedSackRateAllowed": 0.07142857142857142,
         "observedDefensiveSackRate": 0.04329004329004329,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2779,7 +2894,7 @@
           "Rutgers OL/RB vs Wisconsin DL/LB — Wisconsin +",
           "Wisconsin OL/RB vs Rutgers DL/LB — Wisconsin +",
           "Phil Steele current power rating: Rutgers 119 vs Wisconsin 141.",
-          "Canonical selected-week market: Rutgers +18.5, total 46.5; production model Lean Rutgers edge 5.913682046696987; Football Independent Rutgers edge 9.426310787445496."
+          "Canonical selected-week market: Rutgers +18.5, total 46.5; production model no directional support edge 5.913682046696987; Football Independent Rutgers edge 9.426310787445496."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2860,7 +2975,7 @@
         "observedExplosiveRushRate": 0.14130434782608695,
         "observedSackRateAllowed": 0.05904059040590406,
         "observedDefensiveSackRate": 0.025735294117647058,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2894,7 +3009,7 @@
           "Georgia Southern QB/WR vs Marshall DB — Even",
           "Marshall OL/RB vs Georgia Southern DL/LB — Even",
           "Phil Steele current power rating: Marshall 104 vs Georgia Southern 113.",
-          "Canonical selected-week market: Marshall +10.5, total 54.5; production model Lean Marshall edge 3.6192305853266413; Football Independent Marshall edge 5.002117523902877."
+          "Canonical selected-week market: Marshall +10.5, total 54.5; production model no directional support edge 3.6192305853266413; Football Independent Marshall edge 5.002117523902877."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -2915,7 +3030,7 @@
       "canonicalGameId": "ESPN-401858511",
       "team": "Michigan State",
       "opponent": "Michigan",
-      "currentSpread": "+14",
+      "currentSpread": "+14.5",
       "band": "UPSET-LAB",
       "profileScore": 2.9,
       "score25": 2.9,
@@ -2975,7 +3090,7 @@
         "observedExplosiveRushRate": 0.07905138339920949,
         "observedSackRateAllowed": 0.08333333333333333,
         "observedDefensiveSackRate": 0.04932735426008968,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -2988,13 +3103,13 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.26172210408419255,
+        "marketWinProbability": 0.25462908030684506,
         "productionWinProbability": 0.29133917497056444,
         "independentWinProbability": 0.3309915811752626
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": 0.29133917497056444,
-      "marketWinProbability": 0.26172210408419255,
+      "marketWinProbability": 0.25462908030684506,
       "narrative": {
         "upsetCase": "Michigan State has an upset path built around enough trench resistance to avoid a one-sided game, support from at least one independent pricing view. Michigan State QB/WR vs Michigan DB — Michigan ++",
         "whyItCouldFail": "The case can fail if no clear QB/passing advantage.",
@@ -3008,7 +3123,7 @@
           "Michigan State OL/RB vs Michigan DL/LB — Michigan ++",
           "Michigan QB/WR vs Michigan State DB — Michigan ++",
           "Phil Steele current power rating: Michigan State 121 vs Michigan 133.",
-          "Canonical selected-week market: Michigan State +14, total 39.5; production model Lean Michigan edge 1.8416037763973314; Football Independent Michigan State edge 4.406821973342742."
+          "Canonical selected-week market: Michigan State +14.5, total 39.5; production model no directional support edge 2.3416037763973314; Football Independent Michigan State edge 4.906821973342742."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3089,7 +3204,7 @@
         "observedExplosiveRushRate": 0.2049469964664311,
         "observedSackRateAllowed": 0.06382978723404255,
         "observedDefensiveSackRate": 0.04666666666666667,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3097,7 +3212,7 @@
         "teamOffenseYppRank": 11,
         "teamAggregateRank": 54,
         "teamDefensiveYppRank": 109,
-        "marketTotal": 62.5,
+        "marketTotal": 61.5,
         "neutralPacePossessions": null,
         "driveSuccessRate": null,
         "havocRate": null,
@@ -3122,7 +3237,7 @@
           "Cincinnati QB/WR vs Houston DB — Houston +",
           "Houston OL/RB vs Cincinnati DL/LB — Houston +",
           "Phil Steele current power rating: Cincinnati 121 vs Houston 129.",
-          "Canonical selected-week market: Cincinnati +10.5, total 62.5; production model Lean Houston edge 1.7000201308864806; Football Independent Houston edge 2.893078812656416."
+          "Canonical selected-week market: Cincinnati +10.5, total 61.5; production model no directional support edge 1.7000201308864806; Football Independent Houston edge 2.893078812656416."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3203,7 +3318,7 @@
         "observedExplosiveRushRate": 0.16901408450704225,
         "observedSackRateAllowed": 0.06315789473684211,
         "observedDefensiveSackRate": 0.045454545454545456,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3236,7 +3351,7 @@
           "Louisville QB/WR vs Georgia Tech DB — Louisville +",
           "Georgia Tech OL/RB vs Louisville DL/LB — Louisville +",
           "Phil Steele current power rating: Georgia Tech 115 vs Louisville 128.",
-          "Canonical selected-week market: Georgia Tech +14.5, total 62.5; production model Lean Georgia Tech edge 5.456555882965073; Football Independent Georgia Tech edge 8.373031647591892."
+          "Canonical selected-week market: Georgia Tech +14.5, total 62.5; production model no directional support edge 5.456555882965073; Football Independent Georgia Tech edge 8.373031647591892."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3317,7 +3432,7 @@
         "observedExplosiveRushRate": 0.13821138211382114,
         "observedSackRateAllowed": 0.09821428571428571,
         "observedDefensiveSackRate": 0.036734693877551024,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3351,7 +3466,7 @@
           "North Texas QB/WR vs Rice DB — Even",
           "Rushed for 465 yards in a 31-3 win over HCU. Competition level heavily discounts the overall move while preserving a run-game unit signal.",
           "Phil Steele current power rating: Rice 103 vs North Texas 116.",
-          "Canonical selected-week market: Rice +16.5, total 64.5; production model Lean North Texas edge 2.643797999548207; Football Independent Rice edge 4.900768220481918."
+          "Canonical selected-week market: Rice +16.5, total 64.5; production model no directional support edge 2.643797999548207; Football Independent Rice edge 4.900768220481918."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3432,7 +3547,7 @@
         "observedExplosiveRushRate": 0.1624548736462094,
         "observedSackRateAllowed": 0.05963302752293578,
         "observedDefensiveSackRate": 0.03361344537815126,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3465,7 +3580,7 @@
           "Baylor OL/RB vs Iowa State DL/LB — Baylor +",
           "Iowa State OL/RB vs Baylor DL/LB — Even",
           "Phil Steele current power rating: Iowa State 115 vs Baylor 121.",
-          "Canonical selected-week market: Iowa State +9.5, total 51.5; production model Lean Baylor edge 1.8367438207504234; Football Independent Iowa State edge 4.1840614981803235."
+          "Canonical selected-week market: Iowa State +9.5, total 51.5; production model no directional support edge 1.8367438207504234; Football Independent Iowa State edge 4.1840614981803235."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3546,7 +3661,7 @@
         "observedExplosiveRushRate": 0.125,
         "observedSackRateAllowed": 0.07023411371237458,
         "observedDefensiveSackRate": 0.051643192488262914,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3660,7 +3775,7 @@
         "observedExplosiveRushRate": 0.13526570048309178,
         "observedSackRateAllowed": 0.07386363636363637,
         "observedDefensiveSackRate": 0.05185185185185185,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3693,7 +3808,7 @@
           "Texas Tech OL/RB vs West Virginia DL/LB — Texas Tech ++",
           "Texas Tech QB/WR vs West Virginia DB — Texas Tech ++",
           "Phil Steele current power rating: West Virginia 122 vs Texas Tech 127.",
-          "Canonical selected-week market: West Virginia +16.5, total 65.5; production model Lean Texas Tech edge 1.4405413493387726; Football Independent Texas Tech edge 1.5205130149435035."
+          "Canonical selected-week market: West Virginia +16.5, total 65.5; production model no directional support edge 1.4405413493387726; Football Independent Texas Tech edge 1.5205130149435035."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3774,7 +3889,7 @@
         "observedExplosiveRushRate": 0.104,
         "observedSackRateAllowed": 0.048109965635738834,
         "observedDefensiveSackRate": 0.04054054054054054,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3807,7 +3922,7 @@
           "Auburn OL/RB vs Arkansas DL/LB — Auburn +",
           "Arkansas OL/RB vs Auburn DL/LB — Auburn +",
           "Phil Steele current power rating: Arkansas 120 vs Auburn 130.",
-          "Canonical selected-week market: Arkansas +10.5, total 53.5; production model Auburn ATS edge 0.4069503463182542; Football Independent Arkansas edge 3.5774013460720635."
+          "Canonical selected-week market: Arkansas +10.5, total 53.5; production model no directional support edge 0.4069503463182542; Football Independent Arkansas edge 3.5774013460720635."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -3888,7 +4003,7 @@
         "observedExplosiveRushRate": 0.12704918032786885,
         "observedSackRateAllowed": 0.013559322033898305,
         "observedDefensiveSackRate": 0.033816425120772944,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -3922,7 +4037,7 @@
           "Colorado State OL/RB vs Boise State DL/LB — Boise State +",
           "Beat Wyoming 35-13 as Hauss Hejny threw five touchdowns and the defense produced three interceptions. Turnover assistance prevents a larger overall upgrade.",
           "Phil Steele current power rating: Colorado State 106 vs Boise State 128.",
-          "Canonical selected-week market: Colorado State +17.5, total 68.5; production model Lean Boise State edge 3.010940097204756; Football Independent Colorado State edge 7.302745894665643."
+          "Canonical selected-week market: Colorado State +17.5, total 68.5; production model no directional support edge 3.010940097204756; Football Independent Colorado State edge 7.302745894665643."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4003,7 +4118,7 @@
         "observedExplosiveRushRate": 0.116,
         "observedSackRateAllowed": 0.05860805860805861,
         "observedDefensiveSackRate": 0.06167400881057269,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4036,7 +4151,7 @@
           "UL Monroe OL/RB vs Arkansas State DL/LB — Even",
           "Arkansas State QB/WR vs UL Monroe DB — Even",
           "Phil Steele current power rating: UL Monroe 96 vs Arkansas State 107.",
-          "Canonical selected-week market: UL Monroe +14.5, total 53.5; production model Lean UL Monroe edge 2.559320615271581; Football Independent UL Monroe edge 4.575078923134512."
+          "Canonical selected-week market: UL Monroe +14.5, total 53.5; production model no directional support edge 2.559320615271581; Football Independent UL Monroe edge 4.575078923134512."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4117,7 +4232,7 @@
         "observedExplosiveRushRate": 0.18932038834951456,
         "observedSackRateAllowed": 0.07958477508650519,
         "observedDefensiveSackRate": 0.04128440366972477,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4150,7 +4265,7 @@
           "Northern Illinois OL/RB vs San José State DL/LB — Even",
           "San José State QB/WR vs Northern Illinois DB — Even",
           "Phil Steele current power rating: Northern Illinois 89 vs San José State 98.",
-          "Canonical selected-week market: Northern Illinois +10, total 52.5; production model San José State ATS edge 0.939284145529939; Football Independent Northern Illinois edge 3.430123129623425."
+          "Canonical selected-week market: Northern Illinois +10, total 52.5; production model no directional support edge 0.939284145529939; Football Independent Northern Illinois edge 3.430123129623425."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4231,7 +4346,7 @@
         "observedExplosiveRushRate": 0.13183279742765272,
         "observedSackRateAllowed": 0.03787878787878788,
         "observedDefensiveSackRate": 0.05016722408026756,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4345,7 +4460,7 @@
         "observedExplosiveRushRate": 0.1746031746031746,
         "observedSackRateAllowed": 0.020833333333333332,
         "observedDefensiveSackRate": 0.08560311284046693,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4378,122 +4493,7 @@
           "Iowa OL/RB vs Northwestern DL/LB — Iowa ++",
           "Iowa QB/WR vs Northwestern DB — Northwestern +",
           "Phil Steele current power rating: Iowa 133 vs Northwestern 135.",
-          "Canonical selected-week market: Iowa +2.5, total 45.5; production model Lean Iowa edge 1.4182248641242925; Football Independent Iowa edge 2.2753653843039268."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 10,
-      "canonicalGameId": "ESPN-401856855",
-      "team": "TCU",
-      "opponent": "Arizona",
-      "currentSpread": "+7.5",
-      "band": "INTERMEDIATE",
-      "profileScore": 5.3,
-      "score25": 5.3,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 3.3,
-        "explosivePath": 1,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.1824561403508772,
-        "observedExplosiveRushRate": 0.12658227848101267,
-        "observedSackRateAllowed": 0.06666666666666667,
-        "observedDefensiveSackRate": 0.06329113924050633,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 42,
-        "teamOffenseYppRank": 60,
-        "teamAggregateRank": 33,
-        "teamDefensiveYppRank": 11,
-        "marketTotal": 46.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.3645764407416393,
-        "productionWinProbability": 0.3731987188091081,
-        "independentWinProbability": 0.40845153006066437
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.3731987188091081,
-      "marketWinProbability": 0.3645764407416393,
-      "narrative": {
-        "upsetCase": "TCU has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Arizona QB/WR vs TCU DB — TCU +",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Arizona QB/WR vs TCU DB — TCU +",
-          "TCU QB/WR vs Arizona DB — Arizona +",
-          "Arizona OL/RB vs TCU DL/LB — TCU +",
-          "Only 10 points; 11 penalties for 100 yards and a lost fumble materially hurt the result.",
-          "Phil Steele current power rating: TCU 125 vs Arizona 136.",
-          "Canonical selected-week market: TCU +7.5, total 46.5; production model Arizona ATS edge 0.2726481952368598; Football Independent TCU edge 2.6487098694260727."
+          "Canonical selected-week market: Iowa +2.5, total 45.5; production model no directional support edge 1.4182248641242925; Football Independent Iowa edge 2.2753653843039268."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4574,7 +4574,7 @@
         "observedExplosiveRushRate": 0.1696113074204947,
         "observedSackRateAllowed": 0.03745318352059925,
         "observedDefensiveSackRate": 0.07213114754098361,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4608,7 +4608,7 @@
           "Notre Dame QB/WR vs Miami DB — Miami +",
           "Miami QB/WR vs Notre Dame DB — Even",
           "Phil Steele current power rating: Miami 145 vs Notre Dame 148.",
-          "Canonical selected-week market: Miami +7.5, total 54.5; production model Miami ATS edge 3.6916477356112525; Football Independent Miami edge 3.759399866737219."
+          "Canonical selected-week market: Miami +7.5, total 54.5; production model no directional support edge 3.6916477356112525; Football Independent Miami edge 3.759399866737219."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4689,7 +4689,7 @@
         "observedExplosiveRushRate": 0.12589928057553956,
         "observedSackRateAllowed": 0.023076923076923078,
         "observedDefensiveSackRate": 0.055944055944055944,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4722,7 +4722,7 @@
           "Texas QB/WR vs Missouri DB — Texas ++",
           "Missouri QB/WR vs Texas DB — Texas ++",
           "Phil Steele current power rating: Missouri 130 vs Texas 142.",
-          "Canonical selected-week market: Missouri +2.5, total 42.5; production model Texas ATS edge 1.4497949696906152; Football Independent Texas edge 0.7092328859922956."
+          "Canonical selected-week market: Missouri +2.5, total 42.5; production model no directional support edge 1.4497949696906152; Football Independent Texas edge 0.7092328859922956."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4803,7 +4803,7 @@
         "observedExplosiveRushRate": 0.1306122448979592,
         "observedSackRateAllowed": 0.02711864406779661,
         "observedDefensiveSackRate": 0.06367041198501873,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4837,7 +4837,7 @@
           "Oregon OL/RB vs Ohio State DL/LB — Even",
           "Beat Boise State 34-27 behind 378 passing yards but did not dominate the scoreboard. Treat as confirmation of offensive ceiling rather than overall upgrade.",
           "Phil Steele current power rating: Oregon 138 vs Ohio State 147.",
-          "Canonical selected-week market: Oregon +7.5, total 45.5; production model Ohio State ATS edge 1.9945815111138554; Football Independent Oregon edge 8.218418557756415."
+          "Canonical selected-week market: Oregon +7.5, total 45.5; production model no directional support edge 1.9945815111138554; Football Independent Oregon edge 8.218418557756415."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -4918,7 +4918,7 @@
         "observedExplosiveRushRate": 0.13618677042801555,
         "observedSackRateAllowed": 0.06796116504854369,
         "observedDefensiveSackRate": 0.075,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -4952,7 +4952,7 @@
           "East Carolina OL/RB vs South Florida DL/LB — Even",
           "East Carolina QB/WR vs South Florida DB — Even",
           "Phil Steele current power rating: South Florida 111 vs East Carolina 111.",
-          "Canonical selected-week market: South Florida +2.5, total 39.5; production model Lean South Florida edge 1.9898270990135183; Football Independent South Florida edge 1.0258816039459258."
+          "Canonical selected-week market: South Florida +2.5, total 39.5; production model no directional support edge 1.9898270990135183; Football Independent South Florida edge 1.0258816039459258."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5033,7 +5033,7 @@
         "observedExplosiveRushRate": 0.07526881720430108,
         "observedSackRateAllowed": 0.04597701149425287,
         "observedDefensiveSackRate": 0.04186046511627907,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5066,7 +5066,7 @@
           "Washington QB/WR vs Penn State DB — Penn State +",
           "Washington OL/RB vs Penn State DL/LB — Even",
           "Phil Steele current power rating: Penn State 131 vs Washington 132.",
-          "Canonical selected-week market: Penn State +2.5, total 44.5; production model Penn State ATS edge 2.640526273432695; Football Independent Penn State edge 2.3040780885714."
+          "Canonical selected-week market: Penn State +2.5, total 44.5; production model no directional support edge 2.640526273432695; Football Independent Penn State edge 2.3040780885714."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5147,7 +5147,7 @@
         "observedExplosiveRushRate": 0.16049382716049382,
         "observedSackRateAllowed": 0.057034220532319393,
         "observedDefensiveSackRate": 0.055970149253731345,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5181,7 +5181,7 @@
           "UCF QB/WR vs Kansas DB — UCF +",
           "UCF OL/RB vs Kansas DL/LB — Even",
           "Phil Steele current power rating: UCF 126 vs Kansas 118.",
-          "Canonical selected-week market: UCF +3, total 47.5; production model UCF ATS edge 0.8828872497085625; Football Independent UCF edge 0.246008155878922."
+          "Canonical selected-week market: UCF +3, total 47.5; production model no directional support edge 0.8828872497085625; Football Independent UCF edge 0.246008155878922."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5262,7 +5262,7 @@
         "observedExplosiveRushRate": 0.13188976377952755,
         "observedSackRateAllowed": 0.08,
         "observedDefensiveSackRate": 0.057692307692307696,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5296,7 +5296,7 @@
           "Air Force QB/WR vs Army DB — Air Force +",
           "Army QB/WR vs Air Force DB — Army +",
           "Phil Steele current power rating: Air Force 110 vs Army 119.",
-          "Canonical selected-week market: Air Force +3, total 44.5; production model Army ATS edge 2.063944117879056; Football Independent Army edge 1.0742055837348286."
+          "Canonical selected-week market: Air Force +3, total 44.5; production model no directional support edge 2.063944117879056; Football Independent Army edge 1.0742055837348286."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5377,7 +5377,7 @@
         "observedExplosiveRushRate": 0.12554112554112554,
         "observedSackRateAllowed": 0.060240963855421686,
         "observedDefensiveSackRate": 0.05217391304347826,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5411,7 +5411,7 @@
           "Tulsa OL/RB vs Tulane DL/LB — Even",
           "Tulsa QB/WR vs Tulane DB — Even",
           "Phil Steele current power rating: Tulane 110 vs Tulsa 111.",
-          "Canonical selected-week market: Tulane +2.5, total 49.5; production model Lean Tulane edge 4.099033752847902; Football Independent Tulane edge 6.498057466976827."
+          "Canonical selected-week market: Tulane +2.5, total 49.5; production model no directional support edge 4.099033752847902; Football Independent Tulane edge 6.498057466976827."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5492,7 +5492,7 @@
         "observedExplosiveRushRate": 0.10572687224669604,
         "observedSackRateAllowed": 0.04868913857677903,
         "observedDefensiveSackRate": 0.06,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5525,7 +5525,7 @@
           "Mississippi State QB/WR vs Vanderbilt DB — Mississippi State +",
           "Vanderbilt QB/WR vs Mississippi State DB — Even",
           "Phil Steele current power rating: Vanderbilt 120 vs Mississippi State 127.",
-          "Canonical selected-week market: Vanderbilt +3, total 48.5; production model Lean Mississippi State edge 0.9949611767030762; Football Independent Mississippi State edge 1.242337778977177."
+          "Canonical selected-week market: Vanderbilt +3, total 48.5; production model no directional support edge 0.9949611767030762; Football Independent Mississippi State edge 1.242337778977177."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5606,7 +5606,7 @@
         "observedExplosiveRushRate": 0.12179487179487179,
         "observedSackRateAllowed": 0.05642633228840126,
         "observedDefensiveSackRate": 0.07116104868913857,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5639,7 +5639,7 @@
           "Clemson QB/WR vs Syracuse DB — Clemson ++",
           "Syracuse QB/WR vs Clemson DB — Clemson +",
           "Phil Steele current power rating: Syracuse 118 vs Clemson 124.",
-          "Canonical selected-week market: Syracuse +2.5, total 49.5; production model Clemson ATS edge 0.5484456008150933; Football Independent Syracuse edge 0.23930459280947813."
+          "Canonical selected-week market: Syracuse +2.5, total 49.5; production model no directional support edge 0.5484456008150933; Football Independent Syracuse edge 0.23930459280947813."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5720,7 +5720,7 @@
         "observedExplosiveRushRate": 0.1791044776119403,
         "observedSackRateAllowed": 0.07608695652173914,
         "observedDefensiveSackRate": 0.037815126050420166,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5753,7 +5753,7 @@
           "Temple OL/RB vs Navy DL/LB — Temple ++",
           "Navy QB/WR vs Temple DB — Navy +",
           "Phil Steele current power rating: Temple 101 vs Navy 111.",
-          "Canonical selected-week market: Temple +7.5, total 54.5; production model Lean Navy edge 0.02695098330638679; Football Independent Temple edge 1.0584780724147738."
+          "Canonical selected-week market: Temple +7.5, total 54.5; production model no directional support edge 0.02695098330638679; Football Independent Temple edge 1.0584780724147738."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5834,7 +5834,7 @@
         "observedExplosiveRushRate": 0.13692946058091288,
         "observedSackRateAllowed": 0.08365019011406843,
         "observedDefensiveSackRate": 0.04377104377104377,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5867,7 +5867,7 @@
           "Utah State OL/RB vs Fresno State DL/LB — Fresno State +",
           "Fresno State OL/RB vs Utah State DL/LB — Fresno State +",
           "Phil Steele current power rating: Utah State 113 vs Fresno State 117.",
-          "Canonical selected-week market: Utah State +2.5, total 42.5; production model Lean Fresno State edge 0.6446302335808154; Football Independent Utah State edge 1.3856535374865726."
+          "Canonical selected-week market: Utah State +2.5, total 42.5; production model no directional support edge 0.6446302335808154; Football Independent Utah State edge 1.3856535374865726."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -5888,10 +5888,10 @@
       "canonicalGameId": "ESPN-401871076",
       "team": "Middle Tennessee",
       "opponent": "Western Kentucky",
-      "currentSpread": "+1.5",
+      "currentSpread": "+2.5",
       "band": "INTERMEDIATE",
-      "profileScore": 2.6,
-      "score25": 2.6,
+      "profileScore": 2.7,
+      "score25": 2.7,
       "scoreMax": 25,
       "tier": "D",
       "components": {
@@ -5902,7 +5902,7 @@
         "havocVolatility": 0,
         "coachingSituational": 0,
         "availability": 0,
-        "productionModel": 0,
+        "productionModel": 0.1,
         "independentModel": 0
       },
       "componentEvidence": {
@@ -5948,7 +5948,7 @@
         "observedExplosiveRushRate": 0.18303571428571427,
         "observedSackRateAllowed": 0.02962962962962963,
         "observedDefensiveSackRate": 0.04205607476635514,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -5961,16 +5961,16 @@
         "driveSuccessRate": null,
         "havocRate": null,
         "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.47225076494548685,
+        "marketWinProbability": 0.4538355569241225,
         "productionWinProbability": 0.5000656819927116,
         "independentWinProbability": 0.49074179903855786
       },
       "priceStatus": "NO_EXECUTABLE_MONEYLINE",
       "estimatedWinProbability": 0.5000656819927116,
-      "marketWinProbability": 0.47225076494548685,
+      "marketWinProbability": 0.4538355569241225,
       "narrative": {
-        "upsetCase": "Middle Tennessee has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Middle Tennessee QB/WR vs Western Kentucky DB — Middle Tennessee +",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage, neither pricing model currently supports the underdog.",
+        "upsetCase": "Middle Tennessee has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path, support from at least one independent pricing view. Middle Tennessee QB/WR vs Western Kentucky DB — Middle Tennessee +",
+        "whyItCouldFail": "The case can fail if no clear QB/passing advantage.",
         "keyThingsToWatch": [
           "pressure rate and line-of-scrimmage control",
           "game pace / possession count",
@@ -5981,14 +5981,14 @@
           "Western Kentucky QB/WR vs Middle Tennessee DB — Even",
           "Western Kentucky OL/RB vs Middle Tennessee DL/LB — Even",
           "Phil Steele current power rating: Middle Tennessee 105 vs Western Kentucky 107.",
-          "Canonical selected-week market: Middle Tennessee +1.5, total 53.5; production model Middle Tennessee ATS edge 1.5035468276268278; Football Independent Middle Tennessee edge 0.8831611643550785."
+          "Canonical selected-week market: Middle Tennessee +2.5, total 53.5; production model no directional support edge 2.5035468276268276; Football Independent Middle Tennessee edge 1.8831611643550785."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
       "informationQuality": "source-limited",
       "researchFlags": {
         "highProfile": false,
-        "modelSupport": false,
+        "modelSupport": true,
         "volatilityPath": false
       },
       "scoreAudit": {
@@ -6062,7 +6062,7 @@
         "observedExplosiveRushRate": 0.1623931623931624,
         "observedSackRateAllowed": 0.037037037037037035,
         "observedDefensiveSackRate": 0.019305019305019305,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -6095,7 +6095,7 @@
           "Delaware QB/WR vs Kennesaw State DB — Even",
           "Kennesaw State QB/WR vs Delaware DB — Even",
           "Phil Steele current power rating: Kennesaw State 97 vs Delaware 104.",
-          "Canonical selected-week market: Kennesaw State +1.5, total 57.5; production model Delaware ATS edge 0.7680442735949541; Football Independent Kennesaw State edge 2.6842874128386796."
+          "Canonical selected-week market: Kennesaw State +1.5, total 57.5; production model no directional support edge 0.7680442735949541; Football Independent Kennesaw State edge 2.6842874128386796."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -6176,7 +6176,7 @@
         "observedExplosiveRushRate": 0.138328530259366,
         "observedSackRateAllowed": 0.04035874439461883,
         "observedDefensiveSackRate": 0.04897959183673469,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -6209,7 +6209,7 @@
           "South Alabama QB/WR vs Louisiana DB — Even",
           "South Alabama OL/RB vs Louisiana DL/LB — Even",
           "Phil Steele current power rating: South Alabama 105 vs Louisiana 112.",
-          "Canonical selected-week market: South Alabama +7.5, total 57.5; production model Lean South Alabama edge 1.5100457420644302; Football Independent South Alabama edge 2.0760769269051753."
+          "Canonical selected-week market: South Alabama +7.5, total 57.5; production model no directional support edge 1.5100457420644302; Football Independent South Alabama edge 2.0760769269051753."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -6290,7 +6290,7 @@
         "observedExplosiveRushRate": 0.15246636771300448,
         "observedSackRateAllowed": 0.05220883534136546,
         "observedDefensiveSackRate": 0.04182509505703422,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -6322,7 +6322,7 @@
           "Charlotte OL/RB vs UAB DL/LB — Even",
           "UAB QB/WR vs Charlotte DB — Even",
           "Phil Steele current power rating: Charlotte 95 vs UAB 104.",
-          "Canonical selected-week market: Charlotte +8.5, total 47.5; production model Lean UAB edge 0.26937492717523703; Football Independent Charlotte edge 2.431590776682248."
+          "Canonical selected-week market: Charlotte +8.5, total 47.5; production model no directional support edge 0.26937492717523703; Football Independent Charlotte edge 2.431590776682248."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
@@ -6403,7 +6403,7 @@
         "observedExplosiveRushRate": 0.16736401673640167,
         "observedSackRateAllowed": 0.16901408450704225,
         "observedDefensiveSackRate": 0.02857142857142857,
-        "statisticsUpdatedAt": "2026-11-06T15:14:25.509Z",
+        "statisticsUpdatedAt": "2026-11-06T15:21:16.412Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -6436,7 +6436,7 @@
           "Hawai'i OL/RB vs UTEP DL/LB — Even",
           "UTEP QB/WR vs Hawai'i DB — Even",
           "Phil Steele current power rating: UTEP 92 vs Hawai'i 108.",
-          "Canonical selected-week market: UTEP +8.5, total 48.5; production model Lean Hawai'i edge 3.865481924740795; Football Independent Hawai'i edge 4.240447739890838."
+          "Canonical selected-week market: UTEP +8.5, total 48.5; production model no directional support edge 3.865481924740795; Football Independent Hawai'i edge 4.240447739890838."
         ]
       },
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
