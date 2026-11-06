@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401862818",
+  "matchup": "South Florida at East Carolina",
+  "kickoff": "2026-11-07T00:30:00.000Z",
+  "frozenAt": "2026-11-06T19:25:23.274Z",
+  "minutesBeforeKickoff": 304.6,
+  "immutable": true,
+  "market": {
+    "spread": "East Carolina -1.5",
+    "total": 39.5,
+    "moneyline": "South Florida -102 / East Carolina -118",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-06T19:25:22.647Z"
+  },
+  "models": {
+    "marketCalibratedFair": "South Florida -1",
+    "marketCalibratedHomeMargin": -0.9357453416149067,
+    "marketCalibratedEdge": 2.435745341614907,
+    "independentFair": "East Carolina -1.5",
+    "independentHomeMargin": 1.4741183960540742,
+    "independentEdge": 0.025881603945925757,
+    "independentSide": "South Florida",
+    "ensembleFair": "East Carolina -0.5",
+    "ensembleHomeMargin": 0.3896797141030329,
+    "ensembleEdge": 1.1103202858969672,
+    "selectedModel": "ensemble",
+    "governedFair": "East Carolina -0.5",
+    "governedTotal": 39
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-06T19:21:21.173Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-06T19:21:20.974Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-06T19:22:00.880Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 1.6468030783878134
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 1.5518265031042568
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-06T19:22:00.880Z",
+    "inputDates": {
+      "fpi": "2026-11-06T19:21:21.173Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-06T19:21:20.974Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "South Florida -1.5",
+    "sourceObservedAt": "2026-11-01T05:21:08.619Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-06T19:25:22.647Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-06T19:25:22.647Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
