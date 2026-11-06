@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856855",
+  "matchup": "TCU at Arizona",
+  "kickoff": "2026-11-07T03:15:00.000Z",
+  "frozenAt": "2026-11-06T21:25:07.931Z",
+  "minutesBeforeKickoff": 349.9,
+  "immutable": true,
+  "market": {
+    "spread": "Arizona -7",
+    "total": 46.5,
+    "moneyline": "TCU +230 / Arizona -285",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-06T21:25:07.271Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Arizona -10",
+    "marketCalibratedHomeMargin": 10.131427184327734,
+    "marketCalibratedEdge": 3.131427184327734,
+    "independentFair": "Arizona -5",
+    "independentHomeMargin": 4.851290130573927,
+    "independentEdge": 2.1487098694260727,
+    "independentSide": "TCU",
+    "ensembleFair": "Arizona -7",
+    "ensembleHomeMargin": 7.22735180476314,
+    "ensembleEdge": 0.2273518047631402,
+    "selectedModel": "ensemble",
+    "governedFair": "Arizona -7",
+    "governedTotal": 47
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-06T20:21:45.239Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-06T20:21:44.956Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-06T20:22:49.081Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 7.799730641821946
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 6.1780883606355355
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-06T20:22:49.081Z",
+    "inputDates": {
+      "fpi": "2026-11-06T20:21:45.239Z",
+      "phil": "2026-10-25",
+      "metrics": "2026-11-06T20:21:44.956Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 9.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Arizona -9.5",
+    "sourceObservedAt": "2026-11-01T05:21:08.619Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-06T21:25:07.271Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-06T21:25:07.271Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 7,
+        "independentCount": 7,
+        "ensembleCount": 7,
+        "rejected": 56
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
