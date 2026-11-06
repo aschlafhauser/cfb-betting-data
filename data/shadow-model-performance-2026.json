@@ -1,48 +1,216 @@
 {
   "schemaVersion": "cfb-prospective-shadow-performance-v1",
-  "asOf": "2026-11-02T13:22:00.371636Z",
+  "asOf": "2026-11-06T13:20:57.713952Z",
   "researchOnly": true,
   "promoted": false,
-  "prospectiveSnapshotCount": 104,
-  "gradedGames": 104,
+  "prospectiveSnapshotCount": 111,
+  "gradedGames": 111,
   "excludedInvalidSnapshots": 0,
   "models": {
     "ensembleAnchorCandidate": {
-      "n": 104,
-      "mae": 12.2393,
-      "rmse": 14.9047,
-      "homeMarginBias": -2.8034,
-      "wins": 50,
-      "losses": 51,
+      "n": 111,
+      "mae": 12.4869,
+      "rmse": 15.2931,
+      "homeMarginBias": -2.6012,
+      "wins": 54,
+      "losses": 54,
       "pushes": 1,
-      "atsDecisions": 101,
-      "atsWinPct": 49.5,
+      "atsDecisions": 108,
+      "atsWinPct": 50.0,
       "ats95PctInterval": [
-        39.95,
-        59.09
+        40.73,
+        59.27
       ],
-      "hypotheticalRoiAtMinus110Pct": -5.44,
-      "outrightWinnerAccuracyPct": 67.31
+      "hypotheticalRoiAtMinus110Pct": -4.5,
+      "outrightWinnerAccuracyPct": 67.57
     },
     "marketAnchorCandidate": {
-      "n": 104,
-      "mae": 11.9258,
-      "rmse": 14.5123,
-      "homeMarginBias": -2.3772,
-      "wins": 44,
-      "losses": 57,
+      "n": 111,
+      "mae": 12.3063,
+      "rmse": 15.0635,
+      "homeMarginBias": -2.3299,
+      "wins": 46,
+      "losses": 62,
       "pushes": 1,
-      "atsDecisions": 101,
-      "atsWinPct": 43.56,
+      "atsDecisions": 108,
+      "atsWinPct": 42.59,
       "ats95PctInterval": [
-        34.31,
-        53.29
+        33.68,
+        52.01
       ],
-      "hypotheticalRoiAtMinus110Pct": -16.67,
-      "outrightWinnerAccuracyPct": 70.19
+      "hypotheticalRoiAtMinus110Pct": -18.52,
+      "outrightWinnerAccuracyPct": 69.37
     }
   },
   "games": [
+    {
+      "gameId": "ESPN-401862817",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": -7.528890291902714,
+        "ensembleAnchorCandidate": -5.8032476283934695
+      },
+      "marketMargin": -6.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401862817",
+        "home": "Florida Atlantic",
+        "away": "UTSA",
+        "homeScore": 60,
+        "awayScore": 29,
+        "actualMargin": 31,
+        "actualTotal": 89,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862817",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-06T00:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401862817.json",
+      "frozenAt": "2026-11-05T19:33:27.833Z"
+    },
+    {
+      "gameId": "ESPN-401866453",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": -14.35555900621118,
+        "ensembleAnchorCandidate": -10.156827227991156
+      },
+      "marketMargin": -13.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866453",
+        "home": "Akron",
+        "away": "Ohio",
+        "homeScore": 20,
+        "awayScore": 28,
+        "actualMargin": -8,
+        "actualTotal": 48,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866453",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-04T00:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401866453.json",
+      "frozenAt": "2026-11-03T18:27:19.904Z"
+    },
+    {
+      "gameId": "ESPN-401866454",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": 7.339215320910973,
+        "ensembleAnchorCandidate": 6.076235148415876
+      },
+      "marketMargin": 6.0,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866454",
+        "home": "Miami (OH)",
+        "away": "Buffalo",
+        "homeScore": 31,
+        "awayScore": 34,
+        "actualMargin": -3,
+        "actualTotal": 65,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866454",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-04T01:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401866454.json",
+      "frozenAt": "2026-11-03T19:27:56.153Z"
+    },
+    {
+      "gameId": "ESPN-401866455",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": 3.106234793187348,
+        "ensembleAnchorCandidate": 2.698162568699012
+      },
+      "marketMargin": 2.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866455",
+        "home": "Massachusetts",
+        "away": "Ball State",
+        "homeScore": 31,
+        "awayScore": 30,
+        "actualMargin": 1,
+        "actualTotal": 61,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866455",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-05T00:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401866455.json",
+      "frozenAt": "2026-11-04T18:28:48.470Z"
+    },
+    {
+      "gameId": "ESPN-401866456",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": 0.9703423543330375,
+        "ensembleAnchorCandidate": -0.21753215327553466
+      },
+      "marketMargin": 1.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866456",
+        "home": "Eastern Michigan",
+        "away": "Central Michigan",
+        "homeScore": 7,
+        "awayScore": 35,
+        "actualMargin": -28,
+        "actualTotal": 42,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866456",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-05T00:30Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401866456.json",
+      "frozenAt": "2026-11-04T19:25:07.182Z"
+    },
+    {
+      "gameId": "ESPN-401866457",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": -26.671289092295957,
+        "ensembleAnchorCandidate": -19.209650351333824
+      },
+      "marketMargin": -25.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401866457",
+        "home": "Sacramento State",
+        "away": "Toledo",
+        "homeScore": 17,
+        "awayScore": 20,
+        "actualMargin": -3,
+        "actualTotal": 37,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866457",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-05T00:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401866457.json",
+      "frozenAt": "2026-11-04T18:28:48.470Z"
+    },
+    {
+      "gameId": "ESPN-401869964",
+      "week": 10,
+      "models": {
+        "marketAnchorCandidate": -15.247708464255266,
+        "ensembleAnchorCandidate": -11.566645127133405
+      },
+      "marketMargin": -13.5,
+      "result": {
+        "status": "final",
+        "gameId": "ESPN-401869964",
+        "home": "Southern Miss",
+        "away": "James Madison",
+        "homeScore": 23,
+        "awayScore": 54,
+        "actualMargin": -31,
+        "actualTotal": 77,
+        "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869964",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z",
+        "sourceKickoff": "2026-11-06T01:00Z"
+      },
+      "sourcePath": "data/final-snapshots/2026-w10-ESPN-401869964.json",
+      "frozenAt": "2026-11-05T19:33:27.833Z"
+    },
     {
       "gameId": "ESPN-401856727",
       "week": 8,
@@ -62,7 +230,7 @@
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856727",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856727.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -86,7 +254,7 @@
         "actualTotal": 55,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856728",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856728.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -110,7 +278,7 @@
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856729",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856729.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -134,7 +302,7 @@
         "actualTotal": 38,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856730",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856730.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -158,7 +326,7 @@
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856731",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856731.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -182,7 +350,7 @@
         "actualTotal": 61,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856732",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856732.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -206,7 +374,7 @@
         "actualTotal": 49,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856834",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856834.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -230,7 +398,7 @@
         "actualTotal": 70,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856835",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856835.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -254,7 +422,7 @@
         "actualTotal": 81,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856836",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856836.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -278,7 +446,7 @@
         "actualTotal": 34,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856837",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856837.json",
       "frozenAt": "2026-10-24T22:34:33.848Z"
@@ -302,7 +470,7 @@
         "actualTotal": 42,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856838",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856838.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -326,7 +494,7 @@
         "actualTotal": 45,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856839",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856839.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -350,7 +518,7 @@
         "actualTotal": 61,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856840",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856840.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -374,7 +542,7 @@
         "actualTotal": 44,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856841",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401856841.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -398,7 +566,7 @@
         "actualTotal": 79,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858270",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858270.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -422,7 +590,7 @@
         "actualTotal": 35,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858271",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858271.json",
       "frozenAt": "2026-10-23T19:21:38.548Z"
@@ -446,7 +614,7 @@
         "actualTotal": 59,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858272",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858272.json",
       "frozenAt": "2026-10-23T23:14:43.145Z"
@@ -470,7 +638,7 @@
         "actualTotal": 76,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858273",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858273.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -494,7 +662,7 @@
         "actualTotal": 75,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858274",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858274.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -518,7 +686,7 @@
         "actualTotal": 61,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858275",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858275.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -542,7 +710,7 @@
         "actualTotal": 36,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858276",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858276.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -566,7 +734,7 @@
         "actualTotal": 31,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858495",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858495.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -590,7 +758,7 @@
         "actualTotal": 19,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858496",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858496.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -614,7 +782,7 @@
         "actualTotal": 23,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858497",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858497.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -638,7 +806,7 @@
         "actualTotal": 56,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858498",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858498.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -662,7 +830,7 @@
         "actualTotal": 38,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858499",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858499.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -686,7 +854,7 @@
         "actualTotal": 31,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858500",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401858500.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -710,7 +878,7 @@
         "actualTotal": 105,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860905",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401860905.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -734,7 +902,7 @@
         "actualTotal": 37,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860906",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401860906.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -758,7 +926,7 @@
         "actualTotal": 41,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860907",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401860907.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -782,7 +950,7 @@
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401861965",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401861965.json",
       "frozenAt": "2026-10-23T19:21:38.548Z"
@@ -806,7 +974,7 @@
         "actualTotal": 73,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862808",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862808.json",
       "frozenAt": "2026-10-23T19:21:38.548Z"
@@ -830,7 +998,7 @@
         "actualTotal": 100,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862809",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862809.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -854,7 +1022,7 @@
         "actualTotal": 88,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862810",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862810.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -878,7 +1046,7 @@
         "actualTotal": 61,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862811",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401862811.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -902,7 +1070,7 @@
         "actualTotal": 42,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864525",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864525.json",
       "frozenAt": "2026-10-23T19:21:38.548Z"
@@ -926,7 +1094,7 @@
         "actualTotal": 77,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864526",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864526.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -950,7 +1118,7 @@
         "actualTotal": 37,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864527",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864527.json",
       "frozenAt": "2026-10-24T22:34:33.848Z"
@@ -974,7 +1142,7 @@
         "actualTotal": 41,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864528",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401864528.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -998,7 +1166,7 @@
         "actualTotal": 55,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866446",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866446.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -1022,7 +1190,7 @@
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866447",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866447.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -1046,7 +1214,7 @@
         "actualTotal": 55,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866448",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866448.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -1070,7 +1238,7 @@
         "actualTotal": 44,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866449",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866449.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -1094,7 +1262,7 @@
         "actualTotal": 83,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866450",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866450.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -1118,7 +1286,7 @@
         "actualTotal": 55,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866476",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401866476.json",
       "frozenAt": "2026-10-24T12:46:16.291Z"
@@ -1142,7 +1310,7 @@
         "actualTotal": 70,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869935",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401869935.json",
       "frozenAt": "2026-10-24T19:34:26.734Z"
@@ -1166,7 +1334,7 @@
         "actualTotal": 66,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869967",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401869967.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -1190,7 +1358,7 @@
         "actualTotal": 26,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871093",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401871093.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -1214,7 +1382,7 @@
         "actualTotal": 35,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871094",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w8-ESPN-401871094.json",
       "frozenAt": "2026-10-24T16:41:13.388Z"
@@ -1237,8 +1405,8 @@
         "actualMargin": -24,
         "actualTotal": 44,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856733",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:45Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856733.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -1261,8 +1429,8 @@
         "actualMargin": 19,
         "actualTotal": 35,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856734",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856734.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -1285,8 +1453,8 @@
         "actualMargin": 30,
         "actualTotal": 60,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856735",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:45Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856735.json",
       "frozenAt": "2026-10-31T11:23:57.428Z"
@@ -1309,8 +1477,8 @@
         "actualMargin": -17,
         "actualTotal": 67,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856736",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T20:15Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856736.json",
       "frozenAt": "2026-10-31T14:27:33.845Z"
@@ -1333,8 +1501,8 @@
         "actualMargin": 28,
         "actualTotal": 34,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856737",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856737.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -1357,8 +1525,8 @@
         "actualMargin": 8,
         "actualTotal": 60,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856842",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856842.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1381,8 +1549,8 @@
         "actualMargin": 7,
         "actualTotal": 47,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856843",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856843.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -1405,8 +1573,8 @@
         "actualMargin": -32,
         "actualTotal": 50,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856844",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-30T23:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856844.json",
       "frozenAt": "2026-10-30T18:27:02.667Z"
@@ -1429,8 +1597,8 @@
         "actualMargin": 6,
         "actualTotal": 38,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856845",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856845.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -1453,8 +1621,8 @@
         "actualMargin": 3,
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856846",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T18:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856846.json",
       "frozenAt": "2026-10-31T12:27:04.829Z"
@@ -1477,8 +1645,8 @@
         "actualMargin": 2,
         "actualTotal": 100,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856847",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856847.json",
       "frozenAt": "2026-10-31T17:22:33.146Z"
@@ -1501,8 +1669,8 @@
         "actualMargin": -24,
         "actualTotal": 74,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856848",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:45Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401856848.json",
       "frozenAt": "2026-10-31T14:27:33.845Z"
@@ -1525,8 +1693,8 @@
         "actualMargin": 21,
         "actualTotal": 41,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858277",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858277.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1549,8 +1717,8 @@
         "actualMargin": 3,
         "actualTotal": 57,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858278",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858278.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1573,8 +1741,8 @@
         "actualMargin": 45,
         "actualTotal": 49,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858279",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858279.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1597,8 +1765,8 @@
         "actualMargin": -12,
         "actualTotal": 60,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858280",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858280.json",
       "frozenAt": "2026-10-31T17:22:33.146Z"
@@ -1621,8 +1789,8 @@
         "actualMargin": 23,
         "actualTotal": 45,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858281",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858281.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -1645,8 +1813,8 @@
         "actualMargin": -3,
         "actualTotal": 73,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858282",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858282.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -1669,8 +1837,8 @@
         "actualMargin": 28,
         "actualTotal": 76,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858283",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:15Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858283.json",
       "frozenAt": "2026-10-31T13:25:02.832Z"
@@ -1693,8 +1861,8 @@
         "actualMargin": 44,
         "actualTotal": 58,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858284",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:45Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858284.json",
       "frozenAt": "2026-10-31T14:27:33.845Z"
@@ -1717,8 +1885,8 @@
         "actualMargin": 7,
         "actualTotal": 39,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858501",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858501.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -1741,8 +1909,8 @@
         "actualMargin": 30,
         "actualTotal": 30,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858502",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858502.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1765,8 +1933,8 @@
         "actualMargin": -3,
         "actualTotal": 37,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858503",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858503.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1789,8 +1957,8 @@
         "actualMargin": -7,
         "actualTotal": 27,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858504",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-11-01T00:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858504.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -1813,8 +1981,8 @@
         "actualMargin": 8,
         "actualTotal": 60,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858505",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858505.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -1837,8 +2005,8 @@
         "actualMargin": 14,
         "actualTotal": 48,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858506",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T20:15Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858506.json",
       "frozenAt": "2026-10-31T14:27:33.845Z"
@@ -1861,8 +2029,8 @@
         "actualMargin": -7,
         "actualTotal": 49,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858507",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858507.json",
       "frozenAt": "2026-10-31T11:23:57.428Z"
@@ -1885,8 +2053,8 @@
         "actualMargin": 27,
         "actualTotal": 27,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858508",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T20:15Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858508.json",
       "frozenAt": "2026-10-31T14:27:33.845Z"
@@ -1909,8 +2077,8 @@
         "actualMargin": 12,
         "actualTotal": 48,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858509",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401858509.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -1933,8 +2101,8 @@
         "actualMargin": -22,
         "actualTotal": 48,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401859185",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401859185.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -1957,8 +2125,8 @@
         "actualMargin": 1,
         "actualTotal": 91,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860908",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-11-01T02:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401860908.json",
       "frozenAt": "2026-10-31T20:23:02.053Z"
@@ -1981,8 +2149,8 @@
         "actualMargin": 6,
         "actualTotal": 46,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860909",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T23:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401860909.json",
       "frozenAt": "2026-10-31T17:22:33.146Z"
@@ -2005,8 +2173,8 @@
         "actualMargin": 17,
         "actualTotal": 45,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860910",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401860910.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -2029,8 +2197,8 @@
         "actualMargin": 16,
         "actualTotal": 60,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860924",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-11-01T03:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401860924.json",
       "frozenAt": "2026-10-31T21:23:32.593Z"
@@ -2053,8 +2221,8 @@
         "actualMargin": 9,
         "actualTotal": 61,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401861966",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401861966.json",
       "frozenAt": "2026-10-31T13:25:02.832Z"
@@ -2078,7 +2246,7 @@
         "actualTotal": 89,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862812",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401862812.json",
       "frozenAt": "2026-10-29T18:31:30.554Z"
@@ -2101,8 +2269,8 @@
         "actualMargin": -7,
         "actualTotal": 69,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862813",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-30T23:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401862813.json",
       "frozenAt": "2026-10-30T17:25:14.057Z"
@@ -2125,8 +2293,8 @@
         "actualMargin": 27,
         "actualTotal": 71,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862814",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-11-01T00:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401862814.json",
       "frozenAt": "2026-10-31T18:24:38.051Z"
@@ -2149,8 +2317,8 @@
         "actualMargin": 8,
         "actualTotal": 26,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862815",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401862815.json",
       "frozenAt": "2026-10-31T13:25:02.832Z"
@@ -2173,8 +2341,8 @@
         "actualMargin": 20,
         "actualTotal": 40,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862816",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401862816.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -2197,8 +2365,8 @@
         "actualMargin": -5,
         "actualTotal": 37,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864529",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T20:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401864529.json",
       "frozenAt": "2026-10-31T14:27:33.845Z"
@@ -2221,8 +2389,8 @@
         "actualMargin": 7,
         "actualTotal": 55,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864530",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-11-01T02:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401864530.json",
       "frozenAt": "2026-10-31T21:23:32.593Z"
@@ -2245,8 +2413,8 @@
         "actualMargin": 24,
         "actualTotal": 38,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864531",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401864531.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -2269,8 +2437,8 @@
         "actualMargin": 21,
         "actualTotal": 41,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866451",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T02:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401866451.json",
       "frozenAt": "2026-10-30T21:25:17.843Z"
@@ -2293,8 +2461,8 @@
         "actualMargin": 13,
         "actualTotal": 33,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401866452",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T16:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401866452.json",
       "frozenAt": "2026-10-31T10:24:43.220Z"
@@ -2317,8 +2485,8 @@
         "actualMargin": 16,
         "actualTotal": 22,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869846",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T22:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401869846.json",
       "frozenAt": "2026-10-31T17:22:33.146Z"
@@ -2341,8 +2509,8 @@
         "actualMargin": -11,
         "actualTotal": 51,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869944",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T18:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401869944.json",
       "frozenAt": "2026-10-31T12:27:04.829Z"
@@ -2366,7 +2534,7 @@
         "actualTotal": 45,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869963",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401869963.json",
       "frozenAt": "2026-10-29T18:31:30.554Z"
@@ -2390,7 +2558,7 @@
         "actualTotal": 24,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871057",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871057.json",
       "frozenAt": "2026-10-28T21:44:48.552Z"
@@ -2414,7 +2582,7 @@
         "actualTotal": 72,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871058",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871058.json",
       "frozenAt": "2026-10-28T21:44:48.552Z"
@@ -2437,8 +2605,8 @@
         "actualMargin": 39,
         "actualTotal": 59,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871059",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871059.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -2462,7 +2630,7 @@
         "actualTotal": 56,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871071",
         "sourceType": "existing-published-results",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z"
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871071.json",
       "frozenAt": "2026-10-27T18:48:54.311Z"
@@ -2485,8 +2653,8 @@
         "actualMargin": -14,
         "actualTotal": 56,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871095",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:30Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871095.json",
       "frozenAt": "2026-10-31T13:42:41.265Z"
@@ -2509,8 +2677,8 @@
         "actualMargin": -13,
         "actualTotal": 59,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871096",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T17:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871096.json",
       "frozenAt": "2026-10-31T11:23:57.428Z"
@@ -2533,8 +2701,8 @@
         "actualMargin": -15,
         "actualTotal": 55,
         "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871097",
-        "retrievedAt": "2026-11-02T13:22:00.371636Z",
-        "sourceKickoff": "2026-10-31T19:00Z"
+        "sourceType": "existing-published-results",
+        "retrievedAt": "2026-11-06T13:20:57.713952Z"
       },
       "sourcePath": "data/final-snapshots/2026-w9-ESPN-401871097.json",
       "frozenAt": "2026-10-31T13:25:02.832Z"
