@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401860913",
+  "matchup": "Fresno State at Utah State",
+  "kickoff": "2026-11-08T02:30:00.000Z",
+  "frozenAt": "2026-11-07T20:30:01.328Z",
+  "minutesBeforeKickoff": 360,
+  "immutable": true,
+  "market": {
+    "spread": "Fresno State -1.5",
+    "total": 43.5,
+    "moneyline": "Fresno State -118 / Utah State -102",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-07T20:30:00.650Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Fresno State -4",
+    "marketCalibratedHomeMargin": -3.8704242892292697,
+    "marketCalibratedEdge": 2.3704242892292697,
+    "independentFair": "Fresno State -1.5",
+    "independentHomeMargin": -1.418820145985278,
+    "independentEdge": 0.08117985401472194,
+    "independentSide": "Utah State",
+    "ensembleFair": "Fresno State -2.5",
+    "ensembleHomeMargin": -2.522042010445074,
+    "ensembleEdge": 1.022042010445074,
+    "selectedModel": "ensemble",
+    "governedFair": "Fresno State -2.5",
+    "governedTotal": 43.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T19:21:19.792Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.1704242892292696
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -2.207042010445074
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T19:21:19.792Z",
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Fresno State -2.5",
+    "sourceObservedAt": "2026-11-01T17:20:35.142Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T20:30:00.650Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T20:30:00.650Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 29,
+        "independentCount": 29,
+        "ensembleCount": 29,
+        "rejected": 34
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
