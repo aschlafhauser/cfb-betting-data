@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856744",
+  "matchup": "Texas A&M at South Carolina",
+  "kickoff": "2026-11-07T20:00:00.000Z",
+  "frozenAt": "2026-11-07T14:24:46.619Z",
+  "minutesBeforeKickoff": 335.2,
+  "immutable": true,
+  "market": {
+    "spread": "South Carolina -7",
+    "total": 52.5,
+    "moneyline": "Texas A&M +215 / South Carolina -265",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T14:24:45.872Z"
+  },
+  "models": {
+    "marketCalibratedFair": "South Carolina -6",
+    "marketCalibratedHomeMargin": 5.887708695652174,
+    "marketCalibratedEdge": 1.112291304347826,
+    "independentFair": "South Carolina -1.5",
+    "independentHomeMargin": 1.710912991129698,
+    "independentEdge": 5.289087008870302,
+    "independentSide": "Texas A&M",
+    "ensembleFair": "South Carolina -3.5",
+    "ensembleHomeMargin": 3.381631272938688,
+    "ensembleEdge": 3.618368727061312,
+    "selectedModel": "ensemble",
+    "governedFair": "South Carolina -3.5",
+    "governedTotal": 52.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T12:25:31.790Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T12:25:31.611Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T12:26:03.072Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 7.387708695652174
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 4.265471058164812
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T12:26:03.072Z",
+    "inputDates": {
+      "fpi": "2026-11-07T12:25:31.790Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T12:25:31.611Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 5.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "South Carolina -5.5",
+    "sourceObservedAt": "2026-11-01T06:28:10.823Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T14:24:45.872Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T14:24:45.872Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 51
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

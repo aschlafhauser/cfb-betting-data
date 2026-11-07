@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401869936",
+  "matchup": "UL Monroe at Arkansas State",
+  "kickoff": "2026-11-07T20:00:00.000Z",
+  "frozenAt": "2026-11-07T14:24:46.619Z",
+  "minutesBeforeKickoff": 335.2,
+  "immutable": true,
+  "market": {
+    "spread": "Arkansas State -14.5",
+    "total": 52.5,
+    "moneyline": "UL Monroe +500 / Arkansas State -700",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T14:24:45.872Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Arkansas State -15",
+    "marketCalibratedHomeMargin": 15.02892857142857,
+    "marketCalibratedEdge": 0.5289285714285707,
+    "independentFair": "Arkansas State -10",
+    "independentHomeMargin": 10.16300866878693,
+    "independentEdge": 4.336991331213071,
+    "independentSide": "UL Monroe",
+    "ensembleFair": "Arkansas State -12.5",
+    "ensembleHomeMargin": 12.352672624975668,
+    "ensembleEdge": 2.1473273750243322,
+    "selectedModel": "ensemble",
+    "governedFair": "Arkansas State -12.5",
+    "governedTotal": 53.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T12:25:31.790Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T12:25:31.611Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T12:26:03.081Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 15.02892857142857
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 12.352672624975668
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T12:26:03.081Z",
+    "inputDates": {
+      "fpi": "2026-11-07T12:25:31.790Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T12:25:31.611Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 14.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Arkansas State -14.5",
+    "sourceObservedAt": "2026-11-01T16:21:04.840Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T14:24:45.872Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T14:24:45.872Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 51
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
