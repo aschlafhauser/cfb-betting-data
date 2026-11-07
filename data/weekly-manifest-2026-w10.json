@@ -1,8 +1,8 @@
 {
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-07T16:25:13.520Z",
-  "status": "FAIL",
+  "updatedAt": "2026-11-07T16:27:06.233Z",
+  "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
@@ -245,9 +245,10 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "FAIL",
-      "priorFailure": true,
-      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
+      "status": "PASS",
+      "priorFailure": false,
+      "verifiedAt": "2026-11-07T16:27:06.232Z",
+      "detail": "Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
@@ -268,11 +269,7 @@
       "detail": "46 valid immutable snapshots; 17 games remain pending before kickoff."
     }
   },
-  "failures": [
-    "productionVerifier"
-  ],
-  "currentPriorityQueue": [
-    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
-  ],
+  "failures": [],
+  "currentPriorityQueue": [],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
