@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856849",
+  "matchup": "BYU at Utah",
+  "kickoff": "2026-11-07T17:00:00.000Z",
+  "frozenAt": "2026-11-07T11:23:14.974Z",
+  "minutesBeforeKickoff": 336.8,
+  "immutable": true,
+  "market": {
+    "spread": "Utah -4.5",
+    "total": 49.5,
+    "moneyline": "BYU +154 / Utah -185",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T11:23:14.471Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Utah -4",
+    "marketCalibratedHomeMargin": 4.202513075497944,
+    "marketCalibratedEdge": 0.2974869245020564,
+    "independentFair": "BYU -2.5",
+    "independentHomeMargin": -2.7457370999285025,
+    "independentEdge": 7.245737099928503,
+    "independentSide": "BYU",
+    "ensembleFair": "Utah -0.5",
+    "ensembleHomeMargin": 0.3809754790133979,
+    "ensembleEdge": 4.119024520986602,
+    "selectedModel": "ensemble",
+    "governedFair": "Utah -0.5",
+    "governedTotal": 49.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T11:20:44.771Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T11:20:44.475Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T11:21:09.639Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 4.202513075497944
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 0.3809754790133979
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T11:21:09.639Z",
+    "inputDates": {
+      "fpi": "2026-11-07T11:20:44.771Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T11:20:44.475Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 4.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Utah -4.5",
+    "sourceObservedAt": "2026-11-01T03:25:20.988Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T11:23:14.471Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T11:23:14.471Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

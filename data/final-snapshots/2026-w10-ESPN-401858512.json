@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401858512",
+  "matchup": "UCLA at Minnesota",
+  "kickoff": "2026-11-07T17:00:00.000Z",
+  "frozenAt": "2026-11-07T11:23:14.974Z",
+  "minutesBeforeKickoff": 336.8,
+  "immutable": true,
+  "market": {
+    "spread": "UCLA -4",
+    "total": 38.5,
+    "moneyline": "UCLA -185 / Minnesota +154",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T11:23:14.471Z"
+  },
+  "models": {
+    "marketCalibratedFair": "UCLA -6.5",
+    "marketCalibratedHomeMargin": -6.728203728381172,
+    "marketCalibratedEdge": 2.728203728381172,
+    "independentFair": "UCLA -1.5",
+    "independentHomeMargin": -1.2916693599689122,
+    "independentEdge": 2.708330640031088,
+    "independentSide": "Minnesota",
+    "ensembleFair": "UCLA -3.5",
+    "ensembleHomeMargin": -3.738109825754429,
+    "ensembleEdge": 0.26189017424557104,
+    "selectedModel": "ensemble",
+    "governedFair": "UCLA -3.5",
+    "governedTotal": 38.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T11:20:44.771Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T11:20:44.475Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T11:21:09.579Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -4.978203728381172
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -2.950609825754429
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T11:21:09.579Z",
+    "inputDates": {
+      "fpi": "2026-11-07T11:20:44.771Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T11:20:44.475Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -6.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "UCLA -6.5",
+    "sourceObservedAt": "2026-11-01T03:24:40.324Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T11:23:14.471Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T11:23:14.471Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
