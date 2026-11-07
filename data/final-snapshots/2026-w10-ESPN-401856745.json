@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856745",
+  "matchup": "Kentucky at Tennessee",
+  "kickoff": "2026-11-07T23:15:00.000Z",
+  "frozenAt": "2026-11-07T17:23:48.351Z",
+  "minutesBeforeKickoff": 351.2,
+  "immutable": true,
+  "market": {
+    "spread": "Tennessee -6",
+    "total": 49.5,
+    "moneyline": "Kentucky +170 / Tennessee -205",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T17:23:47.785Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Tennessee -5.5",
+    "marketCalibratedHomeMargin": 5.6665672191560414,
+    "marketCalibratedEdge": 0.33343278084395855,
+    "independentFair": "Tennessee -5.5",
+    "independentHomeMargin": 5.310312327181473,
+    "independentEdge": 0.6896876728185273,
+    "independentSide": "Kentucky",
+    "ensembleFair": "Tennessee -5.5",
+    "ensembleHomeMargin": 5.4706270285700285,
+    "ensembleEdge": 0.5293729714299715,
+    "selectedModel": "ensemble",
+    "governedFair": "Tennessee -5.5",
+    "governedTotal": 50
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T16:21:21.654Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T16:21:21.328Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T16:21:43.838Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 6.0246130434782605
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 5.631747649515027
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T16:21:43.838Z",
+    "inputDates": {
+      "fpi": "2026-11-07T16:21:21.654Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T16:21:21.328Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 5.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Tennessee -5.5",
+    "sourceObservedAt": "2026-11-01T03:25:21.127Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T17:23:47.785Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T17:23:47.785Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 20,
+        "independentCount": 20,
+        "ensembleCount": 20,
+        "rejected": 43
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

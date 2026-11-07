@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401860911",
+  "matchup": "Boise State at Colorado State",
+  "kickoff": "2026-11-07T23:00:00.000Z",
+  "frozenAt": "2026-11-07T17:23:48.351Z",
+  "minutesBeforeKickoff": 336.2,
+  "immutable": true,
+  "market": {
+    "spread": "Boise State -16.5",
+    "total": 68.5,
+    "moneyline": "Boise State -950 / Colorado State +625",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T17:23:47.785Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Boise State -20",
+    "marketCalibratedHomeMargin": -19.761350601465836,
+    "marketCalibratedEdge": 3.2613506014658356,
+    "independentFair": "Boise State -10",
+    "independentHomeMargin": -10.213168010957634,
+    "independentEdge": 6.286831989042366,
+    "independentSide": "Colorado State",
+    "ensembleFair": "Boise State -14.5",
+    "ensembleHomeMargin": -14.509850176686324,
+    "ensembleEdge": 1.9901498233136756,
+    "selectedModel": "ensemble",
+    "governedFair": "Boise State -14.5",
+    "governedTotal": 68.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T16:21:21.654Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T16:21:21.328Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T16:21:43.832Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -18.361350601465837
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -13.879850176686325
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T16:21:43.832Z",
+    "inputDates": {
+      "fpi": "2026-11-07T16:21:21.654Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T16:21:21.328Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -18.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Boise State -18.5",
+    "sourceObservedAt": "2026-11-01T17:20:35.142Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T17:23:47.785Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T17:23:47.785Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 20,
+        "independentCount": 20,
+        "ensembleCount": 20,
+        "rejected": 43
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
