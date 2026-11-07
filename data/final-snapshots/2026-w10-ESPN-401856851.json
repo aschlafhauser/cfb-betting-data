@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856851",
+  "matchup": "Cincinnati at Houston",
+  "kickoff": "2026-11-07T20:30:00.000Z",
+  "frozenAt": "2026-11-07T15:25:21.250Z",
+  "minutesBeforeKickoff": 304.6,
+  "immutable": true,
+  "market": {
+    "spread": "Houston -10.5",
+    "total": 61.5,
+    "moneyline": "Cincinnati +320 / Houston -410",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T15:25:20.690Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Houston -11.5",
+    "marketCalibratedHomeMargin": 11.331665866223455,
+    "marketCalibratedEdge": 0.8316658662234548,
+    "independentFair": "Houston -13.5",
+    "independentHomeMargin": 13.562064901380507,
+    "independentEdge": 3.0620649013805075,
+    "independentSide": "Houston",
+    "ensembleFair": "Houston -12.5",
+    "ensembleHomeMargin": 12.669905287317686,
+    "ensembleEdge": 2.169905287317686,
+    "selectedModel": "ensemble",
+    "governedFair": "Houston -12.5",
+    "governedTotal": 62
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T15:21:39.465Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 12.031665866223454
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 12.949905287317687
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T15:21:39.465Z",
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 9.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Houston -9.5",
+    "sourceObservedAt": "2026-11-01T07:21:01.453Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T15:25:20.690Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T15:25:20.690Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

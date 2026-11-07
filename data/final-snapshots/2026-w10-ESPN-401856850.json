@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856850",
+  "matchup": "UCF at Kansas",
+  "kickoff": "2026-11-07T20:45:00.000Z",
+  "frozenAt": "2026-11-07T15:25:21.250Z",
+  "minutesBeforeKickoff": 319.6,
+  "immutable": true,
+  "market": {
+    "spread": "Kansas -4",
+    "total": 48.5,
+    "moneyline": "UCF +154 / Kansas -185",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T15:25:20.690Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Kansas -2",
+    "marketCalibratedHomeMargin": 1.818998753938105,
+    "marketCalibratedEdge": 2.181001246061895,
+    "independentFair": "Kansas -3",
+    "independentHomeMargin": 3.114043913319863,
+    "independentEdge": 0.885956086680137,
+    "independentSide": "UCF",
+    "ensembleFair": "Kansas -2.5",
+    "ensembleHomeMargin": 2.5960258495671598,
+    "ensembleEdge": 1.4039741504328402,
+    "selectedModel": "ensemble",
+    "governedFair": "Kansas -2.5",
+    "governedTotal": 48.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T15:21:39.506Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 2.868998753938105
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 3.0160258495671597
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T15:21:39.506Z",
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Kansas -2.5",
+    "sourceObservedAt": "2026-11-01T15:21:13.127Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T15:25:20.690Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T15:25:20.690Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

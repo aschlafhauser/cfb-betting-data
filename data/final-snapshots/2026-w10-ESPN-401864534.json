@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401864534",
+  "matchup": "Northern Illinois at San José State",
+  "kickoff": "2026-11-07T21:00:00.000Z",
+  "frozenAt": "2026-11-07T15:25:21.250Z",
+  "minutesBeforeKickoff": 334.6,
+  "immutable": true,
+  "market": {
+    "spread": "San José State -12.5",
+    "total": 52.5,
+    "moneyline": "Northern Illinois +340 / San José State -440",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T15:25:20.690Z"
+  },
+  "models": {
+    "marketCalibratedFair": "San José State -12",
+    "marketCalibratedHomeMargin": 12.229690443606295,
+    "marketCalibratedEdge": 0.27030955639370546,
+    "independentFair": "San José State -6.5",
+    "independentHomeMargin": 6.665877620562092,
+    "independentEdge": 5.834122379437908,
+    "independentSide": "Northern Illinois",
+    "ensembleFair": "San José State -9",
+    "ensembleHomeMargin": 9.169593390931983,
+    "ensembleEdge": 3.3304066090680173,
+    "selectedModel": "ensemble",
+    "governedFair": "San José State -9",
+    "governedTotal": 52.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T15:21:39.774Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 12.929690443606296
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 9.484593390931984
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T15:21:39.774Z",
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 11.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "San José State -11.5",
+    "sourceObservedAt": "2026-11-01T19:20:41.551Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T15:25:20.690Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T15:25:20.690Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

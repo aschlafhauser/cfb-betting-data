@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856742",
+  "matchup": "Vanderbilt at Mississippi State",
+  "kickoff": "2026-11-07T21:15:00.000Z",
+  "frozenAt": "2026-11-07T15:25:21.250Z",
+  "minutesBeforeKickoff": 349.6,
+  "immutable": true,
+  "market": {
+    "spread": "Mississippi State -3",
+    "total": 48.5,
+    "moneyline": "Vanderbilt +120 / Mississippi State -142",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T15:25:20.690Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Mississippi State -3.5",
+    "marketCalibratedHomeMargin": 3.6238962732919258,
+    "marketCalibratedEdge": 0.6238962732919258,
+    "independentFair": "Mississippi State -4",
+    "independentHomeMargin": 4.102624807723502,
+    "independentEdge": 1.102624807723502,
+    "independentSide": "Mississippi State",
+    "ensembleFair": "Mississippi State -4",
+    "ensembleHomeMargin": 3.9111333939508715,
+    "ensembleEdge": 0.9111333939508715,
+    "selectedModel": "ensemble",
+    "governedFair": "Mississippi State -4",
+    "governedTotal": 48.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T15:21:39.810Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 3.6238962732919258
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 3.9111333939508715
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T15:21:39.810Z",
+    "inputDates": {
+      "fpi": "2026-11-07T15:21:10.115Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T15:21:09.985Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 3,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Mississippi State -3",
+    "sourceObservedAt": "2026-11-01T16:21:04.840Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T15:25:20.690Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T15:25:20.690Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
