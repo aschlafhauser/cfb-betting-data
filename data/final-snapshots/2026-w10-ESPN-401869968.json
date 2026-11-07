@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401869968",
+  "matchup": "South Alabama at Louisiana",
+  "kickoff": "2026-11-07T22:00:00.000Z",
+  "frozenAt": "2026-11-07T16:23:58.636Z",
+  "minutesBeforeKickoff": 336,
+  "immutable": true,
+  "market": {
+    "spread": "Louisiana -7",
+    "total": 57.5,
+    "moneyline": "South Alabama +230 / Louisiana -285",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T16:23:58.110Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Louisiana -7",
+    "marketCalibratedHomeMargin": 6.839001035196687,
+    "marketCalibratedEdge": 0.160998964803313,
+    "independentFair": "Louisiana -5.5",
+    "independentHomeMargin": 5.4368138612476855,
+    "independentEdge": 1.5631861387523145,
+    "independentSide": "South Alabama",
+    "ensembleFair": "Louisiana -6",
+    "ensembleHomeMargin": 6.067798089524736,
+    "ensembleEdge": 0.9322019104752641,
+    "selectedModel": "ensemble",
+    "governedFair": "Louisiana -6",
+    "governedTotal": 57.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T16:21:21.654Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T16:21:21.328Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T16:21:43.825Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 8.110239509614642
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 6.639855403012816
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T16:21:43.825Z",
+    "inputDates": {
+      "fpi": "2026-11-07T16:21:21.654Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T16:21:21.328Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 5.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Louisiana -5.5",
+    "sourceObservedAt": "2026-11-01T16:21:04.840Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T16:23:58.110Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T16:23:58.110Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
