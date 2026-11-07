@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856739",
+  "matchup": "Oklahoma at Florida",
+  "kickoff": "2026-11-08T00:45:00.000Z",
+  "frozenAt": "2026-11-07T19:23:40.973Z",
+  "minutesBeforeKickoff": 321.3,
+  "immutable": true,
+  "market": {
+    "spread": "Florida -4.5",
+    "total": 45.5,
+    "moneyline": "Oklahoma +164 / Florida -198",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T19:23:40.484Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Florida -3.5",
+    "marketCalibratedHomeMargin": 3.3437654681053632,
+    "marketCalibratedEdge": 1.1562345318946368,
+    "independentFair": "Florida -8.5",
+    "independentHomeMargin": 8.68867846751918,
+    "independentEdge": 4.18867846751918,
+    "independentSide": "Florida",
+    "ensembleFair": "Florida -6.5",
+    "ensembleHomeMargin": 6.2834676177829625,
+    "ensembleEdge": 1.7834676177829625,
+    "selectedModel": "ensemble",
+    "governedFair": "Florida -6.5",
+    "governedTotal": 45.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T19:21:19.775Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 3.6937654681053633
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 6.440967617782962
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T19:21:19.775Z",
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 4,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Florida -4",
+    "sourceObservedAt": "2026-11-01T03:24:40.324Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T19:23:40.484Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T19:23:40.484Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

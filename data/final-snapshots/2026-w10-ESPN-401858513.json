@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401858513",
+  "matchup": "Iowa at Northwestern",
+  "kickoff": "2026-11-08T00:30:00.000Z",
+  "frozenAt": "2026-11-07T19:23:40.973Z",
+  "minutesBeforeKickoff": 306.3,
+  "immutable": true,
+  "market": {
+    "spread": "Iowa -3",
+    "total": 42.5,
+    "moneyline": "Iowa -155 / Northwestern +130",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T19:23:40.484Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Northwestern -1",
+    "marketCalibratedHomeMargin": 0.8926391304347826,
+    "marketCalibratedEdge": 3.8926391304347825,
+    "independentFair": "Pick",
+    "independentHomeMargin": -0.21569358019414644,
+    "independentEdge": 2.7843064198058536,
+    "independentSide": "Northwestern",
+    "ensembleFair": "Pick",
+    "ensembleHomeMargin": 0.2276395040574252,
+    "ensembleEdge": 3.227639504057425,
+    "selectedModel": "ensemble",
+    "governedFair": "Pick",
+    "governedTotal": 43
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T19:21:19.565Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.4896317058461994
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -1.6889657367375701
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T19:21:19.565Z",
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Northwestern -2.5",
+    "sourceObservedAt": "2026-11-01T03:24:40.324Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T19:23:40.484Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T19:23:40.484Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

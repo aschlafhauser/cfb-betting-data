@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401858287",
+  "matchup": "Louisville at Georgia Tech",
+  "kickoff": "2026-11-08T00:30:00.000Z",
+  "frozenAt": "2026-11-07T19:23:40.973Z",
+  "minutesBeforeKickoff": 306.3,
+  "immutable": true,
+  "market": {
+    "spread": "Louisville -14.5",
+    "total": 62.5,
+    "moneyline": "Louisville -650 / Georgia Tech +470",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T19:23:40.484Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Louisville -15",
+    "marketCalibratedHomeMargin": -14.805001408456423,
+    "marketCalibratedEdge": 0.3050014084564232,
+    "independentFair": "Louisville -6.5",
+    "independentHomeMargin": -6.5953427860654745,
+    "independentEdge": 7.9046572139345255,
+    "independentSide": "Georgia Tech",
+    "ensembleFair": "Louisville -10.5",
+    "ensembleHomeMargin": -10.2896891661414,
+    "ensembleEdge": 4.2103108338586,
+    "selectedModel": "ensemble",
+    "governedFair": "Louisville -10.5",
+    "governedTotal": 62
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T19:21:19.760Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -15.505001408456422
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -10.604689166141402
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T19:21:19.760Z",
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -13.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Louisville -13.5",
+    "sourceObservedAt": "2026-11-01T07:21:01.453Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T19:23:40.484Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T19:23:40.484Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

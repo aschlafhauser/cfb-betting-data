@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-07T18:36:10.700Z",
+  "updatedAt": "2026-11-07T19:25:09.833Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-07T18:27:25.435Z",
+      "checkedAt": "2026-11-07T19:25:09.833Z",
       "unstartedGames": 38,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -166,14 +166,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-07T18:27:13.871Z",
+      "verifiedAt": "2026-11-07T19:24:59.814Z",
       "artifact": "data/statistical-display-integrity-2026-w10.json",
-      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/15."
+      "detail": "Team/stat coverage 126/126; ESPN FPI 126 numeric teams; sampled rendered statistical panels 10/11; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-07T18:27:25.384Z",
+      "verifiedAt": "2026-11-07T19:25:09.785Z",
       "artifact": "data/market-derived-integrity-2026-w10.json",
       "detail": "Independently reconciled 108 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -208,33 +208,32 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-07T18:36:10.700Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-07T18:25:38.045Z",
+      "verifiedAt": "2026-11-07T19:23:41.020Z",
       "artifact": "data/final-snapshot-integrity-2026-w10.json",
-      "validSnapshots": 49,
-      "pendingBeforeKickoff": 14,
+      "validSnapshots": 58,
+      "pendingBeforeKickoff": 5,
       "permanentFailures": [],
       "acknowledgedExceptions": [],
       "unacknowledgedFailures": [],
-      "detail": "49 valid immutable snapshots; 14 games remain pending before kickoff."
+      "detail": "58 valid immutable snapshots; 5 games remain pending before kickoff."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "blocking": false,
       "artifact": "data/final-snapshot-integrity-2026-w10.json",
-      "detail": "49 valid immutable snapshots; 14 games remain pending before kickoff."
+      "detail": "58 valid immutable snapshots; 5 games remain pending before kickoff."
     }
   },
-  "failures": [],
+  "failures": [
+    "productionVerifier"
+  ],
   "currentPriorityQueue": [
-    "Run fresh live-browser production verification",
-    "Maintain injury/market/expert refreshes through kickoff",
-    "Freeze each final pre-kickoff snapshot"
+    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }

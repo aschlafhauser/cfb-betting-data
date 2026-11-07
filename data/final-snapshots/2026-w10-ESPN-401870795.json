@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401870795",
+  "matchup": "Liberty at New Mexico State",
+  "kickoff": "2026-11-08T01:00:00.000Z",
+  "frozenAt": "2026-11-07T19:23:40.973Z",
+  "minutesBeforeKickoff": 336.3,
+  "immutable": true,
+  "market": {
+    "spread": "Liberty -15.5",
+    "total": 46.5,
+    "moneyline": "Liberty -750 / New Mexico State +525",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-07T19:23:40.484Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Liberty -15",
+    "marketCalibratedHomeMargin": -15.08822707343807,
+    "marketCalibratedEdge": 0.4117729265619303,
+    "independentFair": "Liberty -8.5",
+    "independentHomeMargin": -8.35864002327224,
+    "independentEdge": 7.14135997672776,
+    "independentSide": "New Mexico State",
+    "ensembleFair": "Liberty -11.5",
+    "ensembleHomeMargin": -11.386954195846863,
+    "ensembleEdge": 4.113045804153137,
+    "selectedModel": "ensemble",
+    "governedFair": "Liberty -11.5",
+    "governedTotal": 46
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T19:21:19.782Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -17.088227073438073
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -12.286954195846866
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T19:21:19.782Z",
+    "inputDates": {
+      "fpi": "2026-11-07T19:20:52.303Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T19:20:52.132Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -13.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Liberty -13.5",
+    "sourceObservedAt": "2026-11-01T17:20:35.142Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T19:23:40.484Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T19:23:40.484Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
