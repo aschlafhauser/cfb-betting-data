@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401856738",
+  "matchup": "Arkansas at Auburn",
+  "kickoff": "2026-11-07T17:45:00.000Z",
+  "frozenAt": "2026-11-07T12:29:40.949Z",
+  "minutesBeforeKickoff": 315.3,
+  "immutable": true,
+  "market": {
+    "spread": "Auburn -10.5",
+    "total": 54.5,
+    "moneyline": "Arkansas +310 / Auburn -395",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-07T12:29:38.377Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Auburn -13.5",
+    "marketCalibratedHomeMargin": 13.506096066252589,
+    "marketCalibratedEdge": 3.0060960662525886,
+    "independentFair": "Auburn -7",
+    "independentHomeMargin": 6.785310306168346,
+    "independentEdge": 3.7146896938316543,
+    "independentSide": "Arkansas",
+    "ensembleFair": "Auburn -10",
+    "ensembleHomeMargin": 9.809663898206255,
+    "ensembleEdge": 0.6903361017937453,
+    "selectedModel": "ensemble",
+    "governedFair": "Auburn -10",
+    "governedTotal": 55
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T12:25:31.790Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T12:25:31.611Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T12:26:03.033Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 11.30913784943703
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 8.821032700639254
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T12:26:03.033Z",
+    "inputDates": {
+      "fpi": "2026-11-07T12:25:31.790Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T12:25:31.611Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 13.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Auburn -13.5",
+    "sourceObservedAt": "2026-11-01T05:21:08.619Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T12:29:38.377Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T12:29:38.377Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 61,
+        "independentCount": 61,
+        "ensembleCount": 61,
+        "rejected": 0
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
