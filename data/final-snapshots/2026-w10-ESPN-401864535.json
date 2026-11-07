@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 10,
+  "canonicalGameId": "ESPN-401864535",
+  "matchup": "Wyoming at UNLV",
+  "kickoff": "2026-11-08T03:30:00.000Z",
+  "frozenAt": "2026-11-07T22:28:03.404Z",
+  "minutesBeforeKickoff": 301.9,
+  "immutable": true,
+  "market": {
+    "spread": "UNLV -3.5",
+    "total": 49.5,
+    "moneyline": "Wyoming +145 / UNLV -175",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-07T22:28:02.984Z"
+  },
+  "models": {
+    "marketCalibratedFair": "UNLV -8.5",
+    "marketCalibratedHomeMargin": 8.333957222269492,
+    "marketCalibratedEdge": 4.8339572222694915,
+    "independentFair": "UNLV -13.5",
+    "independentHomeMargin": 13.72031302183061,
+    "independentEdge": 10.22031302183061,
+    "independentSide": "UNLV",
+    "ensembleFair": "UNLV -11.5",
+    "ensembleHomeMargin": 11.565770702006162,
+    "ensembleEdge": 8.065770702006162,
+    "selectedModel": "ensemble",
+    "governedFair": "UNLV -11.5",
+    "governedTotal": 49.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-07T21:21:12.728Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T21:21:12.463Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-07T21:21:44.032Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 4.580733393050094
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 10.064481170318404
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-07T21:21:44.032Z",
+    "inputDates": {
+      "fpi": "2026-11-07T21:21:12.728Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-07T21:21:12.463Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 8.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "UNLV -8.5",
+    "sourceObservedAt": "2026-11-01T17:20:35.142Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-07T22:28:02.984Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-07T22:28:02.984Z",
+      "selectedWeek": "Week 10",
+      "modelPromotion": {
+        "marketCount": 45,
+        "independentCount": 45,
+        "ensembleCount": 45,
+        "rejected": 17
+      },
+      "renderedRowCount": 63,
+      "deepDiveCompleteCount": 63,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 63
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
