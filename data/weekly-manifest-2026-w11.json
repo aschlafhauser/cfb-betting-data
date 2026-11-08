@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 11,
-  "updatedAt": "2026-11-08T05:36:58.789Z",
+  "updatedAt": "2026-11-08T06:33:59.211Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-08T05:34:10.520Z",
+      "checkedAt": "2026-11-08T06:33:59.211Z",
       "unstartedGames": 67,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -232,7 +232,7 @@
     "marketCoverage": {
       "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 3,
-      "actualMarketGames": 26,
+      "actualMarketGames": 32,
       "dueGames": 3,
       "dueMarketGames": 3,
       "startedGamesExcluded": 0,
@@ -253,15 +253,16 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-08T05:33:55.901Z",
+      "verifiedAt": "2026-11-08T06:33:43.262Z",
       "artifact": "data/statistical-display-integrity-2026-w11.json",
       "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/15."
     },
     "marketDerivedIntegrity": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-11-08T06:33:59.167Z",
       "artifact": "data/market-derived-integrity-2026-w11.json",
-      "detail": "Independently reconciled 75 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 75/78 expected model/market arithmetic records were checkable for 26 currently priced games"
+      "detail": "Independently reconciled 96 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -277,7 +278,7 @@
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 7 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 14 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -294,13 +295,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-08T05:36:58.789Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-08T05:32:11.822Z",
+      "verifiedAt": "2026-11-08T06:32:05.463Z",
       "artifact": "data/final-snapshot-integrity-2026-w11.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 67,
@@ -317,11 +317,9 @@
     }
   },
   "failures": [
-    "marketDerivedIntegrity",
     "productionVerifier"
   ],
   "currentPriorityQueue": [
-    "marketDerivedIntegrity: Independently reconciled 75 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: only 75/78 expected model/market arithmetic records were checkable for 26 currently priced games",
     "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
