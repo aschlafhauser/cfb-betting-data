@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "status": "prospective-live",
-  "updatedAt": "2026-11-08T04:16:35.922Z",
+  "updatedAt": "2026-11-08T04:29:50.538Z",
   "research": {
     "selectedBand": "+3.5 to +7",
     "primaryRule": "Underdog between +3.5 and +7 with at least 2 of 3 advantages (rest/schedule, non-explosive down-to-down efficiency, QB passing efficiency/YPA) plus a verified live moneyline better than the frozen fair-ML estimate.",
@@ -26,7 +26,7 @@
     "criterionAssessment": {
       "version": "v1.1-governed-2026-09-12",
       "status": "COMPLETE",
-      "assessedAt": "2026-11-08T04:16:35.834Z",
+      "assessedAt": "2026-11-08T04:29:50.208Z",
       "timing": "Complete during Sunday kickoff / Monday early-week screen; refresh after material schedule, statistical, QB or availability changes.",
       "methods": {
         "rest": "PASS when ESPN FPI prior-schedule rank shows the underdog faced a schedule at least 10 ranks stronger (lower rank). Otherwise FAIL; absence of a comparable opponent row cannot create a pass.",
@@ -36,7 +36,7 @@
       "provenance": [
         "data/espn-fpi-current.json",
         "data/team-metrics-current.json",
-        "data/upset-research-2026-w10.json"
+        "data/upset-research-2026-w11.json"
       ]
     }
   },
@@ -47,10 +47,10 @@
     "executionRule": "After the 2-of-3 profile qualifies, verified live ML must be better than model fair ML."
   },
   "sundayWeek2Rerun": {
-    "timestamp": "2026-11-08T04:16:35.834Z",
+    "timestamp": "2026-11-08T04:29:50.208Z",
     "result": "CURRENT SCREEN + CRITERIA COMPLETE",
-    "criterionAssessment": "1/1 candidates fully assessed",
-    "note": "Canonical board produced 1 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+    "criterionAssessment": "8/8 candidates fully assessed",
+    "note": "Canonical board produced 8 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
   },
   "candidates": [
     {
@@ -1419,8 +1419,402 @@
       "criterionAssessedAt": "2026-11-08T04:16:35.834Z",
       "mlValueQualifies": null,
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "HISTORICAL-SCREEN-CLOSED",
+      "action": "Historical record only; excluded from selected-week display and execution.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate.",
+      "historicalStatus": "CURRENT-SCREEN",
+      "lifecycleStatus": "HISTORICAL"
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401866459",
+      "legacyGameId": null,
+      "team": "Kent State",
+      "opponent": "Bowling Green",
+      "modelSpread": "Bowling Green -5.5",
+      "currentSpread": "+5.5",
+      "currentMoneyline": "+170",
+      "moneylineStatus": "CURRENT",
+      "moneylineSource": "ESPN Draft Kings",
+      "moneylineTimestamp": "2026-11-08T04:29:50.095Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 1.8,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": true,
+          "reason": "Material schedule edge: ESPN FPI prior-schedule rank 63 vs 102; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "PASS"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 17.0 vs 21.4.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 6.3 vs 6.8; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 1,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
       "status": "CURRENT-SCREEN",
       "action": "No Special: football profile clears 1/3 criteria; retain as an in-band watchlist candidate.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401862824",
+      "legacyGameId": null,
+      "team": "South Florida",
+      "opponent": "Memphis",
+      "modelSpread": "Memphis -6",
+      "currentSpread": "+6.5",
+      "currentMoneyline": "+250",
+      "moneylineStatus": "CURRENT-FREE-SOURCE / EXECUTION-RECHECK",
+      "moneylineSource": "CBS Sports / FanDuel (indicative)",
+      "moneylineTimestamp": "2026-11-08T04:29:50.255Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 3.6,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": false,
+          "reason": "No material schedule/rest edge: ESPN FPI prior-schedule rank 132 vs 106; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 49.0 vs 57.8.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 7.0 vs 9.7; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 0,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "Research/screen price only; re-verify executable sportsbook price before activation.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401858293",
+      "legacyGameId": null,
+      "team": "Florida State",
+      "opponent": "Pittsburgh",
+      "modelSpread": "Pittsburgh -7.5",
+      "currentSpread": "+4.5",
+      "currentMoneyline": "+142",
+      "moneylineStatus": "CURRENT-FREE-SOURCE / EXECUTION-RECHECK",
+      "moneylineSource": "CBS Sports / FanDuel (indicative)",
+      "moneylineTimestamp": "2026-11-08T04:29:50.255Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 4.1,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": true,
+          "reason": "Material schedule edge: ESPN FPI prior-schedule rank 12 vs 60; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "PASS"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 63.3 vs 65.4.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": true,
+          "reason": "PASS: governed current passing YPA is 9.1 vs 8.0; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "PASS"
+        }
+      },
+      "qualifierCount": 2,
+      "profileQualifies": true,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "Research/screen price only; re-verify executable sportsbook price before activation.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401856885",
+      "legacyGameId": null,
+      "team": "Texas",
+      "opponent": "LSU",
+      "modelSpread": "LSU -2.5",
+      "currentSpread": "+5.5",
+      "currentMoneyline": "+164",
+      "moneylineStatus": "CURRENT-FREE-SOURCE / EXECUTION-RECHECK",
+      "moneylineSource": "CBS Sports / DraftKings (indicative)",
+      "moneylineTimestamp": "2026-11-08T04:29:50.255Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 5.2,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": true,
+          "reason": "Material schedule edge: ESPN FPI prior-schedule rank 10 vs 23; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "PASS"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 83.6 vs 87.7.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 7.9 vs 8.5; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 1,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "Research/screen price only; re-verify executable sportsbook price before activation.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401856858",
+      "legacyGameId": null,
+      "team": "Baylor",
+      "opponent": "BYU",
+      "modelSpread": "BYU -10.5",
+      "currentSpread": "+7",
+      "currentMoneyline": "+230",
+      "moneylineStatus": "CURRENT-FREE-SOURCE / EXECUTION-RECHECK",
+      "moneylineSource": "CBS Sports / DraftKings (indicative)",
+      "moneylineTimestamp": "2026-11-08T04:29:50.255Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 4.2,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": false,
+          "reason": "No material schedule/rest edge: ESPN FPI prior-schedule rank 73 vs 45; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 72.3 vs 78.1.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 7.3 vs 8.2; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 0,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "Research/screen price only; re-verify executable sportsbook price before activation.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401856887",
+      "legacyGameId": null,
+      "team": "Ole Miss",
+      "opponent": "Oklahoma",
+      "modelSpread": "Pick",
+      "currentSpread": "+4",
+      "currentMoneyline": "+164",
+      "moneylineStatus": "CURRENT-FREE-SOURCE / EXECUTION-RECHECK",
+      "moneylineSource": "CBS Sports / DraftKings (indicative)",
+      "moneylineTimestamp": "2026-11-08T04:29:50.255Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 5.3,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": false,
+          "reason": "No material schedule/rest edge: ESPN FPI prior-schedule rank 4 vs 5; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "nonExplosive": {
+          "qualifies": true,
+          "reason": "Advantage: ESPN opponent-adjusted total per-play efficiency 84.2 vs 68.5.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "PASS"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 7.4 vs 7.3; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 1,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "Research/screen price only; re-verify executable sportsbook price before activation.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401858518",
+      "legacyGameId": null,
+      "team": "USC",
+      "opponent": "Indiana",
+      "modelSpread": "Indiana -7",
+      "currentSpread": "+7",
+      "currentMoneyline": "+220",
+      "moneylineStatus": "CURRENT",
+      "moneylineSource": "ESPN Draft Kings",
+      "moneylineTimestamp": "2026-11-08T04:29:50.095Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 4.3,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": false,
+          "reason": "No material schedule/rest edge: ESPN FPI prior-schedule rank 27 vs 35; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 74.6 vs 82.9.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 8.5 vs 9.1; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 0,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "No Special: football profile clears 0/3 criteria; retain as an in-band watchlist candidate.",
+      "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
+    },
+    {
+      "week": 11,
+      "canonicalGameId": "ESPN-401858523",
+      "legacyGameId": null,
+      "team": "Michigan",
+      "opponent": "Oregon",
+      "modelSpread": "Oregon -10.5",
+      "currentSpread": "+5.5",
+      "currentMoneyline": "+170",
+      "moneylineStatus": "CURRENT-FREE-SOURCE / EXECUTION-RECHECK",
+      "moneylineSource": "CBS Sports / DraftKings (indicative)",
+      "moneylineTimestamp": "2026-11-08T04:29:50.255Z",
+      "moneylineExecutionVerified": false,
+      "profileScore": 3.9,
+      "researchTier": "D",
+      "qualifiers": {
+        "rest": {
+          "qualifies": false,
+          "reason": "No material schedule/rest edge: ESPN FPI prior-schedule rank 44 vs 21; PASS requires the underdog's prior schedule to be at least 10 ranks stronger (lower rank).",
+          "source": "ESPN FPI prior schedule-strength rank",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "nonExplosive": {
+          "qualifies": false,
+          "reason": "No advantage: ESPN opponent-adjusted total per-play efficiency 63.9 vs 76.4.",
+          "source": "ESPN opponent-adjusted total efficiency",
+          "sourceUpdatedAt": "2026-11-08T04:22:16.173Z",
+          "status": "FAIL"
+        },
+        "qbYpa": {
+          "qualifies": false,
+          "reason": "FAIL: governed current passing YPA is 7.4 vs 7.9; PASS requires at least a +0.5 YPA edge when the Deep Dive does not identify a directional QB advantage.",
+          "source": "ESPN team metrics yards per pass attempt",
+          "sourceUpdatedAt": "2026-11-08T04:22:15.877Z",
+          "status": "FAIL"
+        }
+      },
+      "qualifierCount": 0,
+      "profileQualifies": false,
+      "criterionAssessmentStatus": "COMPLETE",
+      "criterionAssessmentVersion": "v1.1-governed-2026-09-12",
+      "criterionAssessedAt": "2026-11-08T04:29:50.208Z",
+      "mlValueQualifies": null,
+      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
+      "status": "CURRENT-SCREEN",
+      "action": "Research/screen price only; re-verify executable sportsbook price before activation.",
       "note": "All three football-profile criteria are explicitly assessed from governed schedule, opponent-adjusted efficiency, QB/YPA and completed Deep Dive evidence. Price remains a separate execution gate."
     }
   ],
@@ -1454,5 +1848,5 @@
     "weekBindingFixedAt": "2026-08-30T08:30:00-04:00",
     "week0Handling": "No retroactive official wager was created."
   },
-  "week": 10
+  "week": 11
 }
