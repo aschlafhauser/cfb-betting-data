@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 11,
-  "updatedAt": "2026-11-08T04:31:24.383Z",
+  "updatedAt": "2026-11-08T04:36:52.888Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
@@ -292,9 +292,10 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "PENDING-LIVE-CHECK",
-      "priorFailure": false,
-      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
+      "status": "FAIL",
+      "priorFailure": true,
+      "verifiedAt": "2026-11-08T04:36:52.887Z",
+      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
