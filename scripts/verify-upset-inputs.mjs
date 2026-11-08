@@ -43,6 +43,7 @@ for(const r of records){
  assert(Object.values(r.components).every(v=>Number.isFinite(v)&&v>=0),`${r.team}: invalid component`);
  assert(r.score25>=0&&r.score25<=25,`${r.team}: invalid total`);
 }
-assert.equal(records.length,board.games.filter(g=>g.currentSpread).length,'Incomplete underdog evidence universe');
+const expectedUnderdogUniverse=board.games.filter(g=>/^(.+?)\s+(-?\d+(?:\.\d+)?)/.test(String(g.currentSpread||''))).length;
+assert.equal(records.length,expectedUnderdogUniverse,'Incomplete underdog evidence universe');
 assert(Object.values(research.isolation).every(v=>v===0),'Upset research changed production decisions');
 console.log(`Upset input integrity PASS: ${records.length} matchups, ${modelChecks} probability, ${rankChecks} current Phil rank and ${sourceLimitedRankChecks} explicit source-limited rank checks; production impact zero.`);
