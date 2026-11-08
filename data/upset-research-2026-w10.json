@@ -2,7 +2,7 @@
   "version": "3.0-25pt-evidence-capped-research",
   "season": 2026,
   "week": 10,
-  "updatedAt": "2026-11-08T01:14:34.444Z",
+  "updatedAt": "2026-11-08T01:23:30.153Z",
   "status": "PROSPECTIVE-RESEARCH-ONLY",
   "isolation": {
     "productionFairImpact": 0,
@@ -40,243 +40,13 @@
     ]
   },
   "coverage": {
-    "allUnderdogs": 10,
-    "underdogSpecial": 6,
-    "upsetLab": 3,
+    "allUnderdogs": 5,
+    "underdogSpecial": 3,
+    "upsetLab": 1,
     "intermediate": 1,
     "routingViolations": 0
   },
   "underdogSpecial": [
-    {
-      "week": 10,
-      "canonicalGameId": "ESPN-401856739",
-      "team": "Oklahoma",
-      "opponent": "Florida",
-      "currentSpread": "+4",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 4.8,
-      "score25": 4.8,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0.2,
-        "trenchResistance": 3.2,
-        "explosivePath": 0.4,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.14285714285714285,
-        "observedExplosiveRushRate": 0.07692307692307693,
-        "observedSackRateAllowed": 0.06766917293233082,
-        "observedDefensiveSackRate": 0.10909090909090909,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 57,
-        "teamOffenseYppRank": 114,
-        "teamAggregateRank": 27,
-        "teamDefensiveYppRank": 41,
-        "marketTotal": 46.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.4264631330069377,
-        "productionWinProbability": 0.3819023560304163,
-        "independentWinProbability": 0.347594522906578
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.3819023560304163,
-      "marketWinProbability": 0.4264631330069377,
-      "narrative": {
-        "upsetCase": "Oklahoma has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Florida QB/WR vs Oklahoma DB — Oklahoma +",
-        "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "Oklahoma QB efficiency and early-down success",
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Florida QB/WR vs Oklahoma DB — Oklahoma +",
-          "Oklahoma QB/WR vs Florida DB — Oklahoma +",
-          "Florida OL/RB vs Oklahoma DL/LB — Oklahoma +",
-          "Phil Steele current power rating: Oklahoma 132 vs Florida 132.",
-          "Canonical selected-week market: Oklahoma +4, total 46.5; production model Lean Oklahoma edge 2.2834676177829625; Football Independent Florida edge 4.68867846751918."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 10,
-      "canonicalGameId": "ESPN-401862823",
-      "team": "Air Force",
-      "opponent": "Army",
-      "currentSpread": "+3.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 4.4,
-      "score25": 4.4,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0.9,
-        "trenchResistance": 1,
-        "explosivePath": 1.2,
-        "compression": 1.3,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.21333333333333335,
-        "observedExplosiveRushRate": 0.13188976377952755,
-        "observedSackRateAllowed": 0.08,
-        "observedDefensiveSackRate": 0.057692307692307696,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 124,
-        "teamOffenseYppRank": 99,
-        "teamAggregateRank": 86,
-        "teamDefensiveYppRank": 97,
-        "marketTotal": 43.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.43554580738864324,
-        "productionWinProbability": 0.4174297935376853,
-        "independentWinProbability": 0.43554580738864324
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.4174297935376853,
-      "marketWinProbability": 0.43554580738864324,
-      "narrative": {
-        "upsetCase": "Air Force has an upset path built around a credible quarterback/passing path, enough trench resistance to avoid a one-sided game, an explosive-play matchup path. Army OL/RB vs Air Force DL/LB — Army +",
-        "whyItCouldFail": "The case can fail if neither pricing model currently supports the underdog.",
-        "keyThingsToWatch": [
-          "Air Force QB efficiency and early-down success",
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Army OL/RB vs Air Force DL/LB — Army +",
-          "Air Force QB/WR vs Army DB — Air Force +",
-          "Army QB/WR vs Air Force DB — Army +",
-          "Phil Steele current power rating: Air Force 111 vs Army 114.",
-          "Canonical selected-week market: Air Force +3.5, total 43.5; production model Lean Army edge 0.4378260757990482; Football Independent Air Force edge 0.32068182400253065."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
     {
       "week": 10,
       "canonicalGameId": "ESPN-401860912",
@@ -342,7 +112,7 @@
         "observedExplosiveRushRate": 0.14626865671641792,
         "observedSackRateAllowed": 0.032,
         "observedDefensiveSackRate": 0.02359882005899705,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
+        "statisticsUpdatedAt": "2026-11-08T01:21:11.052Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -384,120 +154,6 @@
       "researchFlags": {
         "highProfile": false,
         "modelSupport": false,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 10,
-      "canonicalGameId": "ESPN-401856741",
-      "team": "Ole Miss",
-      "opponent": "Georgia",
-      "currentSpread": "+3.5",
-      "band": "UNDERDOG-SPECIAL",
-      "profileScore": 3.7,
-      "score25": 3.7,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 2.1,
-        "explosivePath": 1.2,
-        "compression": 0.3,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0.1
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.17363344051446947,
-        "observedExplosiveRushRate": 0.15953307392996108,
-        "observedSackRateAllowed": 0.01607717041800643,
-        "observedDefensiveSackRate": 0.05434782608695652,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 21,
-        "teamOffenseYppRank": 47,
-        "teamAggregateRank": 8,
-        "teamDefensiveYppRank": 72,
-        "marketTotal": 56.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.43554580738864324,
-        "productionWinProbability": 0.47225076494548685,
-        "independentWinProbability": 0.49074179903855786
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.47225076494548685,
-      "marketWinProbability": 0.43554580738864324,
-      "narrative": {
-        "upsetCase": "Ole Miss has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path, support from at least one independent pricing view. Ole Miss OL/RB vs Georgia DL/LB — Even",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Ole Miss OL/RB vs Georgia DL/LB — Even",
-          "Ole Miss QB/WR vs Georgia DB — Even",
-          "Georgia QB/WR vs Ole Miss DB — Even",
-          "Phil Steele current power rating: Ole Miss 143 vs Georgia 146.",
-          "Canonical selected-week market: Ole Miss +3.5, total 56.5; production model Lean Ole Miss edge 1.9781214997714307; Football Independent Ole Miss edge 2.908705678025746."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": true,
         "volatilityPath": false
       },
       "scoreAudit": {
@@ -571,7 +227,7 @@
         "observedExplosiveRushRate": 0.19402985074626866,
         "observedSackRateAllowed": 0.07567567567567568,
         "observedDefensiveSackRate": 0.072,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
+        "statisticsUpdatedAt": "2026-11-08T01:21:11.052Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -686,7 +342,7 @@
         "observedExplosiveRushRate": 0.16736401673640167,
         "observedSackRateAllowed": 0.16901408450704225,
         "observedDefensiveSackRate": 0.02857142857142857,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
+        "statisticsUpdatedAt": "2026-11-08T01:21:11.052Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -737,235 +393,6 @@
     }
   ],
   "upsetLab": [
-    {
-      "week": 10,
-      "canonicalGameId": "ESPN-401870795",
-      "team": "New Mexico State",
-      "opponent": "Liberty",
-      "currentSpread": "+14.5",
-      "band": "UPSET-LAB",
-      "profileScore": 3,
-      "score25": 3,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 1.1,
-        "explosivePath": 0.6,
-        "compression": 1,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0.1,
-        "independentModel": 0.2
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.15748031496062992,
-        "observedExplosiveRushRate": 0.13821138211382114,
-        "observedSackRateAllowed": 0.03543307086614173,
-        "observedDefensiveSackRate": 0.06719367588932806,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 11,
-        "teamOffenseYppRank": 93,
-        "teamAggregateRank": 111,
-        "teamDefensiveYppRank": 60,
-        "marketTotal": 46.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.25462908030684506,
-        "productionWinProbability": 0.2990445336807876,
-        "independentWinProbability": 0.347594522906578
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.2990445336807876,
-      "marketWinProbability": 0.25462908030684506,
-      "narrative": {
-        "upsetCase": "New Mexico State has an upset path built around enough trench resistance to avoid a one-sided game, an explosive-play matchup path, support from at least one independent pricing view. Liberty OL/RB vs New Mexico State DL/LB — Liberty ++",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Liberty OL/RB vs New Mexico State DL/LB — Liberty ++",
-          "Liberty QB/WR vs New Mexico State DB — Even",
-          "New Mexico State QB/WR vs Liberty DB — Even",
-          "Trey Hedden was efficient through the air but the Aggies managed only 47 rushing yards.",
-          "Phil Steele current power rating: New Mexico State 98 vs Liberty 123.",
-          "Canonical selected-week market: New Mexico State +14.5, total 46.5; production model Lean Liberty edge 3.1130458041531366; Football Independent New Mexico State edge 6.14135997672776."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": true,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
-    {
-      "week": 10,
-      "canonicalGameId": "ESPN-401858511",
-      "team": "Michigan State",
-      "opponent": "Michigan",
-      "currentSpread": "+14",
-      "band": "UPSET-LAB",
-      "profileScore": 2.9,
-      "score25": 2.9,
-      "scoreMax": 25,
-      "tier": "D",
-      "components": {
-        "qbStability": 0,
-        "trenchResistance": 1.5,
-        "explosivePath": 0,
-        "compression": 1.3,
-        "havocVolatility": 0,
-        "coachingSituational": 0,
-        "availability": 0,
-        "productionModel": 0,
-        "independentModel": 0.1
-      },
-      "componentEvidence": {
-        "qbStability": {
-          "quality": "LIMITED",
-          "reason": "Season QB EPA missing: capped at 1/4 despite matchup opportunity."
-        },
-        "trenchResistance": {
-          "quality": "PARTIAL",
-          "reason": "Team aggregate and defensive production with capped trench matchup adjustment; line-specific metrics pending."
-        },
-        "explosivePath": {
-          "quality": "PARTIAL",
-          "reason": "YPP-based research proxy. Current observed explosive rates are retained in scoring signals without additional unvalidated score weight."
-        },
-        "compression": {
-          "quality": "PARTIAL",
-          "reason": "Market total alone capped at 1.25/3; possession and drive evidence required for maximum."
-        },
-        "havocVolatility": {
-          "quality": "LIMITED",
-          "reason": "Requires observed opponent-adjusted havoc and opponent turnover-worthy rate; no prose-only points."
-        },
-        "coachingSituational": {
-          "quality": "MISSING",
-          "reason": "No verified quantified situational advantage; neutral."
-        },
-        "availability": {
-          "quality": "MISSING",
-          "reason": "Verified net impact only; unknown is neutral."
-        },
-        "productionModel": {
-          "quality": "ESTIMATED",
-          "reason": "Outright-win probability relative to implied benchmark, not ATS edge."
-        },
-        "independentModel": {
-          "quality": "ESTIMATED-CORRELATED",
-          "reason": "Win-probability corroboration with shared-input credit capped at 1/2."
-        }
-      },
-      "signals": {
-        "observedExplosivePassRate": 0.13333333333333333,
-        "observedExplosiveRushRate": 0.07905138339920949,
-        "observedSackRateAllowed": 0.08333333333333333,
-        "observedDefensiveSackRate": 0.04932735426008968,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
-        "qbSeasonEpa": null,
-        "qbRecentEpa": null,
-        "qbStarterConfirmed": false,
-        "opponentPassDefenseRank": 23,
-        "teamOffenseYppRank": 134,
-        "teamAggregateRank": 64,
-        "teamDefensiveYppRank": 81,
-        "marketTotal": 39.5,
-        "neutralPacePossessions": null,
-        "driveSuccessRate": null,
-        "havocRate": null,
-        "opponentTurnoverWorthyRate": null,
-        "marketWinProbability": 0.26172210408419255,
-        "productionWinProbability": 0.29133917497056444,
-        "independentWinProbability": 0.3309915811752626
-      },
-      "priceStatus": "NO_EXECUTABLE_MONEYLINE",
-      "estimatedWinProbability": 0.29133917497056444,
-      "marketWinProbability": 0.26172210408419255,
-      "narrative": {
-        "upsetCase": "Michigan State has an upset path built around enough trench resistance to avoid a one-sided game, support from at least one independent pricing view. Michigan State QB/WR vs Michigan DB — Michigan ++",
-        "whyItCouldFail": "The case can fail if no clear QB/passing advantage.",
-        "keyThingsToWatch": [
-          "pressure rate and line-of-scrimmage control",
-          "game pace / possession count",
-          "late availability and inactives"
-        ],
-        "evidence": [
-          "Michigan State QB/WR vs Michigan DB — Michigan ++",
-          "Michigan State OL/RB vs Michigan DL/LB — Michigan ++",
-          "Michigan QB/WR vs Michigan State DB — Michigan ++",
-          "Phil Steele current power rating: Michigan State 121 vs Michigan 132.",
-          "Canonical selected-week market: Michigan State +14, total 39.5; production model Lean Michigan edge 1.9573687458974938; Football Independent Michigan State edge 4.4652003590696765."
-        ]
-      },
-      "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
-      "informationQuality": "source-limited",
-      "researchFlags": {
-        "highProfile": false,
-        "modelSupport": true,
-        "volatilityPath": false
-      },
-      "scoreAudit": {
-        "version": "v3.0-25pt-evidence-capped",
-        "rule": "25-point directional rubric. Qualitative credit requires underdog-favorable evidence; model support is directional; no keyword-presence points."
-      },
-      "governance": "RESEARCH-ONLY — cannot alter production fair, model weights, Bet Activation Gate, official ledger, units or historical snapshots."
-    },
     {
       "week": 10,
       "canonicalGameId": "ESPN-401856856",
@@ -1031,7 +458,7 @@
         "observedExplosiveRushRate": 0.13526570048309178,
         "observedSackRateAllowed": 0.07386363636363637,
         "observedDefensiveSackRate": 0.05185185185185185,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
+        "statisticsUpdatedAt": "2026-11-08T01:21:11.052Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
@@ -1147,7 +574,7 @@
         "observedExplosiveRushRate": 0.13414634146341464,
         "observedSackRateAllowed": 0.05263157894736842,
         "observedDefensiveSackRate": 0.05693950177935943,
-        "statisticsUpdatedAt": "2026-11-08T01:14:33.833Z",
+        "statisticsUpdatedAt": "2026-11-08T01:21:11.052Z",
         "qbSeasonEpa": null,
         "qbRecentEpa": null,
         "qbStarterConfirmed": false,
