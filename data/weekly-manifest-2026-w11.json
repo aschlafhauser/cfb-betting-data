@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 11,
-  "updatedAt": "2026-11-10T02:31:01.236Z",
+  "updatedAt": "2026-11-10T03:32:24.517Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-10T02:28:58.431Z",
+      "checkedAt": "2026-11-10T03:32:24.517Z",
       "unstartedGames": 67,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -253,14 +253,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-10T02:28:49.319Z",
+      "verifiedAt": "2026-11-10T03:32:06.364Z",
       "artifact": "data/statistical-display-integrity-2026-w11.json",
       "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-10T02:28:58.390Z",
+      "verifiedAt": "2026-11-10T03:32:24.462Z",
       "artifact": "data/market-derived-integrity-2026-w11.json",
       "detail": "Independently reconciled 198 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -293,15 +293,14 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "PASS",
+      "status": "PENDING-LIVE-CHECK",
       "priorFailure": false,
-      "verifiedAt": "2026-11-10T02:31:01.236Z",
-      "detail": "Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed."
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-10T02:27:39.110Z",
+      "verifiedAt": "2026-11-10T03:30:17.717Z",
       "artifact": "data/final-snapshot-integrity-2026-w11.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 67,
