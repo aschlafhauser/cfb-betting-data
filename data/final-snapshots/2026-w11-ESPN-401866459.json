@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401866459",
+  "matchup": "Kent State at Bowling Green",
+  "kickoff": "2026-11-11T00:00:00.000Z",
+  "frozenAt": "2026-11-10T18:27:19.541Z",
+  "minutesBeforeKickoff": 332.7,
+  "immutable": true,
+  "market": {
+    "spread": "Bowling Green -5.5",
+    "total": 43.5,
+    "moneyline": "Kent State +170 / Bowling Green -205",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-10T18:27:19.094Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Bowling Green -5",
+    "marketCalibratedHomeMargin": 5.11169326446875,
+    "marketCalibratedEdge": 0.38830673553125017,
+    "independentFair": "Bowling Green -5.5",
+    "independentHomeMargin": 5.588201227345099,
+    "independentEdge": 0.08820122734509894,
+    "independentSide": "Bowling Green",
+    "ensembleFair": "Bowling Green -5.5",
+    "ensembleHomeMargin": 5.373772644050742,
+    "ensembleEdge": 0.1262273559492577,
+    "selectedModel": "ensemble",
+    "governedFair": "Bowling Green -5.5",
+    "governedTotal": 43
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-10T18:22:42.372Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-10T18:22:42.179Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-10T18:23:29.091Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 5.11169326446875
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 5.373772644050742
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-10T18:23:29.091Z",
+    "inputDates": {
+      "fpi": "2026-11-10T18:22:42.372Z",
+      "phil": "2026-11-01",
+      "metrics": "2026-11-10T18:22:42.179Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 5.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Bowling Green -5.5",
+    "sourceObservedAt": "2026-11-08T04:22:36.291Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-10T18:27:19.094Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-10T18:27:19.094Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 67
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

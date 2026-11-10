@@ -3,13 +3,13 @@
   "sport": "CFB",
   "season": 2026,
   "week": 11,
-  "verifiedAt": "2026-11-10T17:25:49.079Z",
+  "verifiedAt": "2026-11-10T18:27:19.593Z",
   "status": "IN_PROGRESS",
   "blocking": false,
   "counts": {
     "selectedWeekGames": 67,
-    "validPreKickoffSnapshots": 0,
-    "pendingBeforeKickoff": 67,
+    "validPreKickoffSnapshots": 2,
+    "pendingBeforeKickoff": 65,
     "permanentFailures": 0,
     "acknowledgedPermanentExceptions": 0,
     "unacknowledgedPermanentFailures": 0
@@ -18,22 +18,6 @@
   "acknowledgedFailures": [],
   "unacknowledgedFailures": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401866458",
-      "game": "Western Michigan at Akron",
-      "kickoff": "2026-11-11T00:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401866459",
-      "game": "Kent State at Bowling Green",
-      "kickoff": "2026-11-11T00:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401866460",
       "game": "Ohio at Miami (OH)",
@@ -555,7 +539,24 @@
       "frozenAt": null
     }
   ],
-  "passedGames": [],
+  "passedGames": [
+    {
+      "canonicalGameId": "ESPN-401866458",
+      "game": "Western Michigan at Akron",
+      "kickoff": "2026-11-11T00:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w11-ESPN-401866458.json",
+      "frozenAt": "2026-11-10T18:27:19.541Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401866459",
+      "game": "Kent State at Bowling Green",
+      "kickoff": "2026-11-11T00:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w11-ESPN-401866459.json",
+      "frozenAt": "2026-11-10T18:27:19.541Z"
+    }
+  ],
   "exceptionLedger": "data/final-snapshot-exceptions.json",
   "governance": "A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure."
 }
