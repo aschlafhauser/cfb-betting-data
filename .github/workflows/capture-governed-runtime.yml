@@ -81,7 +81,12 @@ jobs:
       - name: Refresh ESPN FPI and opponent-adjusted efficiency components
         id: fpi_refresh
         continue-on-error: true
-        run: node scripts/refresh-espn-fpi.mjs
+        run: |
+          if timeout 300 node scripts/refresh-espn-fpi.mjs; then exit 0; fi
+          echo 'Live ESPN FPI refresh timed out; validating the already-persisted selected-week checkpoint.'
+          node - <<'NODE'
+          const fs=require('fs');const b=JSON.parse(fs.readFileSync('data/weekly-board.json','utf8'));const f=JSON.parse(fs.readFileSync('data/espn-fpi-current.json','utf8'));const age=Date.now()-Date.parse(f.updatedAt||'');if(Number(f.week)!==Number(b.week)||!Number.isFinite(age)||age<0||age>6*3600000||Number(f.coverage?.rows||0)<100||Number(f.coverage?.namedRows||0)<100)throw new Error('Persisted FPI checkpoint is not current, selected-week, or sufficiently covered.');console.log(`Using current persisted FPI checkpoint: week ${f.week}, ${f.coverage.rows} rows, age ${Math.round(age/60000)}m.`);
+          NODE
 
       - name: Publish selected-week checkpoint before browser calculation
         run: |
