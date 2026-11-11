@@ -103,7 +103,14 @@ jobs:
         run: |
           npm init -y >/dev/null 2>&1
           npm install playwright@1.55.0
-          npx playwright install --with-deps chromium
+          # Hosted-runner package mirrors can fail transiently even when the
+          # required Chromium libraries are already present. Always attempt the
+          # governed dependency install first, then fall back to downloading the
+          # pinned browser so every sticky browser verifier can still execute.
+          if ! npx playwright install --with-deps chromium; then
+            echo 'Playwright dependency install failed; retrying pinned browser download without apt.'
+            npx playwright install chromium
+          fi
 
       - name: Capture governed portal outputs using current selected-week inputs
         id: capture_runtime
