@@ -318,7 +318,6 @@ jobs:
         env:
           CAPTURE_OUTCOME: ${{ steps.capture_runtime.outcome }}
           PHIL_REFRESH_OUTCOME: ${{ steps.phil_refresh.outcome }}
-          PHIL_REFRESH_OUTCOME: ${{ steps.phil_refresh.outcome }}
           PHIL_OUTCOME: ${{ steps.phil_verify.outcome }}
           MULTIMODEL_OUTCOME: ${{ steps.multimodel_verify.outcome }}
           STATS_OUTCOME: ${{ steps.stats_verify.outcome }}
@@ -351,6 +350,7 @@ jobs:
         env:
           CAPTURE_OUTCOME: ${{ steps.capture_runtime.outcome }}
           IDENTITY_OUTCOME: ${{ steps.identity.outcome }}
+          PHIL_REFRESH_OUTCOME: ${{ steps.phil_refresh.outcome }}
           PHIL_OUTCOME: ${{ steps.phil_verify.outcome }}
           MULTIMODEL_OUTCOME: ${{ steps.multimodel_verify.outcome }}
           DEEP_DIVE_OUTCOME: ${{ steps.deep_dives.outcome }}
