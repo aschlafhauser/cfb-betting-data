@@ -122,7 +122,7 @@ jobs:
           # required Chromium libraries are already present. Always attempt the
           # governed dependency install first, then fall back to downloading the
           # pinned browser so every sticky browser verifier can still execute.
-          if ! npx playwright install --with-deps chromium; then
+          if ! timeout 180 npx playwright install --with-deps chromium; then
             echo 'Playwright dependency install failed; retrying pinned browser download without apt.'
             npx playwright install chromium
           fi
