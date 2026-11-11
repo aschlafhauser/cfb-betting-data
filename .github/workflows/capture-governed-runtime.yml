@@ -88,6 +88,11 @@ jobs:
           const fs=require('fs');const b=JSON.parse(fs.readFileSync('data/weekly-board.json','utf8'));const f=JSON.parse(fs.readFileSync('data/espn-fpi-current.json','utf8'));const age=Date.now()-Date.parse(f.updatedAt||'');if(Number(f.week)!==Number(b.week)||!Number.isFinite(age)||age<0||age>6*3600000||Number(f.coverage?.rows||0)<100||Number(f.coverage?.namedRows||0)<100)throw new Error('Persisted FPI checkpoint is not current, selected-week, or sufficiently covered.');console.log(`Using current persisted FPI checkpoint: week ${f.week}, ${f.coverage.rows} rows, age ${Math.round(age/60000)}m.`);
           NODE
 
+      - name: Refresh newest governed Phil Steele in-season tables
+        id: phil_refresh
+        continue-on-error: true
+        run: node scripts/refresh-phil-inseason.mjs
+
       - name: Publish selected-week checkpoint before browser calculation
         run: |
           set -e
@@ -312,6 +317,8 @@ jobs:
         if: ${{ always() }}
         env:
           CAPTURE_OUTCOME: ${{ steps.capture_runtime.outcome }}
+          PHIL_REFRESH_OUTCOME: ${{ steps.phil_refresh.outcome }}
+          PHIL_REFRESH_OUTCOME: ${{ steps.phil_refresh.outcome }}
           PHIL_OUTCOME: ${{ steps.phil_verify.outcome }}
           MULTIMODEL_OUTCOME: ${{ steps.multimodel_verify.outcome }}
           STATS_OUTCOME: ${{ steps.stats_verify.outcome }}
@@ -321,7 +328,7 @@ jobs:
           STABILITY_OUTCOME: ${{ steps.stability_verify.outcome }}
         run: |
           failed_outcomes=""
-          for outcome in "$CAPTURE_OUTCOME" "$PHIL_OUTCOME" "$MULTIMODEL_OUTCOME" "$STATS_OUTCOME" "$MARKET_OUTCOME" "$LIVE_OUTCOME" "$COMPLETENESS_OUTCOME" "$STABILITY_OUTCOME"; do
+          for outcome in "$CAPTURE_OUTCOME" "$PHIL_REFRESH_OUTCOME" "$PHIL_OUTCOME" "$MULTIMODEL_OUTCOME" "$STATS_OUTCOME" "$MARKET_OUTCOME" "$LIVE_OUTCOME" "$COMPLETENESS_OUTCOME" "$STABILITY_OUTCOME"; do
             if [ "$outcome" != "success" ]; then
               echo "Live certification prerequisite did not succeed: $outcome"
               failed_outcomes="${failed_outcomes} ${outcome}"
@@ -357,7 +364,7 @@ jobs:
           STABILITY_OUTCOME: ${{ steps.stability_verify.outcome }}
         run: |
           node scripts/verify-weekly-gates.mjs
-          for outcome in "$CAPTURE_OUTCOME" "$IDENTITY_OUTCOME" "$PHIL_OUTCOME" "$MULTIMODEL_OUTCOME" "$DEEP_DIVE_OUTCOME" "$UPSET_OUTCOME" "$SPECIALTY_OUTCOME" "$STATS_OUTCOME" "$MARKET_OUTCOME" "$MANIFEST_OUTCOME" "$LIVE_OUTCOME" "$COMPLETENESS_OUTCOME" "$STABILITY_OUTCOME"; do
+          for outcome in "$CAPTURE_OUTCOME" "$IDENTITY_OUTCOME" "$PHIL_REFRESH_OUTCOME" "$PHIL_OUTCOME" "$MULTIMODEL_OUTCOME" "$DEEP_DIVE_OUTCOME" "$UPSET_OUTCOME" "$SPECIALTY_OUTCOME" "$STATS_OUTCOME" "$MARKET_OUTCOME" "$MANIFEST_OUTCOME" "$LIVE_OUTCOME" "$COMPLETENESS_OUTCOME" "$STABILITY_OUTCOME"; do
             if [ "$outcome" != "success" ]; then
               echo "Sticky governed-runtime step did not succeed: $outcome"
               exit 1
