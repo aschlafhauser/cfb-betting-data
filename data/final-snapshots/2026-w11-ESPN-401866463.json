@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401866463",
+  "matchup": "Massachusetts at Toledo",
+  "kickoff": "2026-11-12T00:30:00.000Z",
+  "frozenAt": "2026-11-11T19:26:01.193Z",
+  "minutesBeforeKickoff": 304,
+  "immutable": true,
+  "market": {
+    "spread": "Toledo -14",
+    "total": 51.5,
+    "moneyline": "Massachusetts +440 / Toledo -600",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-11T19:26:00.750Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Toledo -15",
+    "marketCalibratedHomeMargin": 14.754695309617913,
+    "marketCalibratedEdge": 0.7546953096179134,
+    "independentFair": "Toledo -11.5",
+    "independentHomeMargin": 11.727351593422615,
+    "independentEdge": 2.2726484065773853,
+    "independentSide": "Massachusetts",
+    "ensembleFair": "Toledo -13",
+    "ensembleHomeMargin": 13.089656265710499,
+    "ensembleEdge": 0.9103437342895013,
+    "selectedModel": "ensemble",
+    "governedFair": "Toledo -13",
+    "governedTotal": 51
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-11T19:21:32.112Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-11T19:21:31.959Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-11T19:22:07.894Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 14.754695309617913
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 13.089656265710499
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-11T19:22:07.894Z",
+    "inputDates": {
+      "fpi": "2026-11-11T19:21:32.112Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-11T19:21:31.959Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 14,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Toledo -14",
+    "sourceObservedAt": "2026-11-08T04:22:36.304Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-11T19:26:00.750Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-11T19:26:00.750Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 67
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
