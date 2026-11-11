@@ -76,7 +76,12 @@ jobs:
       - name: Refresh team and position-group statistical display metrics
         id: stats_refresh
         continue-on-error: true
-        run: node scripts/refresh-team-metrics.mjs
+        run: |
+          if timeout 300 node scripts/refresh-team-metrics.mjs; then exit 0; fi
+          echo 'Live team-metric refresh timed out; validating the already-persisted selected-week checkpoint.'
+          node - <<'NODE'
+          const fs=require('fs');const b=JSON.parse(fs.readFileSync('data/weekly-board.json','utf8'));const m=JSON.parse(fs.readFileSync('data/team-metrics-current.json','utf8'));const age=Date.now()-Date.parse(m.updatedAt||'');if(Number(m.week)!==Number(b.week)||!Number.isFinite(age)||age<0||age>6*3600000||Number((m.teams||[]).length)<100)throw new Error('Persisted team-metric checkpoint is not current, selected-week, or sufficiently covered.');console.log(`Using current persisted team-metric checkpoint: week ${m.week}, ${m.teams.length} teams, age ${Math.round(age/60000)}m.`);
+          NODE
 
       - name: Refresh ESPN FPI and opponent-adjusted efficiency components
         id: fpi_refresh
