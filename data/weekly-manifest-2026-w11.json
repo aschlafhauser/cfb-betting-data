@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 11,
-  "updatedAt": "2026-11-11T12:43:22.325Z",
+  "updatedAt": "2026-11-11T13:34:19.636Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-11T12:40:16.454Z",
+      "checkedAt": "2026-11-11T13:34:19.636Z",
       "unstartedGames": 64,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -244,7 +244,7 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-11T12:40:00.472Z",
+      "verifiedAt": "2026-11-11T13:34:04.695Z",
       "artifact": "data/statistical-display-integrity-2026-w11.json",
       "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/15."
     },
@@ -285,13 +285,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-11T12:43:22.325Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-11T12:38:03.227Z",
+      "verifiedAt": "2026-11-11T13:32:11.240Z",
       "artifact": "data/final-snapshot-integrity-2026-w11.json",
       "validSnapshots": 3,
       "pendingBeforeKickoff": 64,
