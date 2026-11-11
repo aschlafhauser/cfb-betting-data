@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 11,
-  "updatedAt": "2026-11-11T14:39:26.334Z",
+  "updatedAt": "2026-11-11T14:53:02.506Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-11T14:35:01.064Z",
+      "checkedAt": "2026-11-11T14:53:02.506Z",
       "unstartedGames": 64,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -285,13 +285,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-11T14:39:26.334Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure failure failure failure failure failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure failure failure failure failure failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-11T14:35:00.500Z",
+      "verifiedAt": "2026-11-11T14:53:01.814Z",
       "artifact": "data/final-snapshot-integrity-2026-w11.json",
       "validSnapshots": 3,
       "pendingBeforeKickoff": 64,
@@ -313,7 +312,7 @@
   ],
   "currentPriorityQueue": [
     "marketDerivedIntegrity: Independently reconciled 192 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: missing governed model/market records: ESPN-401866458:market, ESPN-401866458:independent, ESPN-401866458:ensemble, ESPN-401866459:market, ESPN-401866459:independent, ESPN-401866459:ensemble, ESPN-401866460:market, ESPN-401866460:independent, ESPN-401866460:ensemble",
-    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
+    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure failure failure failure failure failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
