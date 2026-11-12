@@ -54,8 +54,11 @@ for(const [k] of Object.entries(names)){
   const ordered=[...rows].sort((a,b)=>a.rank-b.rank);
   for(let i=0;i<ordered.length;i++){
    const r=ordered[i],p=ordered[i-1];
-   // Source competition ranks may tie only when their displayed metric also ties.
-   assert(r.rank===i+1||(k.endsWith('avg')&&p&&r.rank===p.rank&&r.average===p.average),`${k} rank coverage at ${r.team}`);
+   // Preserve publisher competition ranks for tied averages or exactly tied YPP.
+   // Equal rounded YPP alone does not establish a tie.
+   const tied=p&&r.rank===p.rank&&(k.endsWith('avg')?r.average===p.average:
+     (k==='off'||k==='def')&&r.ypp===p.ypp&&r.yards*(p.rushAtt+p.passAtt)===p.yards*(r.rushAtt+r.passAtt));
+   assert(r.rank===i+1||tied,`${k} rank coverage at ${r.team}`);
   }
  }
  for(const r of rows){
