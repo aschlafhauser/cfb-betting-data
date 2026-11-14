@@ -1,18 +1,20 @@
 {
   "season": 2026,
   "week": 11,
-  "verifiedAt": "2026-11-14T05:26:40.337Z",
-  "status": "PASS",
-  "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 10/11; FPI-eligible panels 8/14.",
+  "verifiedAt": "2026-11-14T06:34:11.130Z",
+  "status": "FAIL",
+  "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 7/11; FPI-eligible panels 8/15.",
   "coverage": {
     "expectedTeams": 134,
     "resolvedTeams": 134,
     "fpiNumeric": 135,
     "options": 67,
     "checked": 11,
-    "statsWithValues": 10,
-    "fpiChecked": 14,
+    "statsWithValues": 7,
+    "fpiChecked": 15,
     "fpiPanels": 8
   },
-  "failures": []
+  "failures": [
+    "too few sampled matchup panels expose numeric stats: 7/11"
+  ]
 }
