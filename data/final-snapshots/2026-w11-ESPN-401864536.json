@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401864536",
+  "matchup": "Nevada at Northern Illinois",
+  "kickoff": "2026-11-14T20:30:00.000Z",
+  "frozenAt": "2026-11-14T15:24:27.505Z",
+  "minutesBeforeKickoff": 305.5,
+  "immutable": true,
+  "market": {
+    "spread": "Nevada -6",
+    "total": 47.5,
+    "moneyline": "Nevada -230 / Northern Illinois +190",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T15:24:27.169Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Nevada -11",
+    "marketCalibratedHomeMargin": -10.961550356749111,
+    "marketCalibratedEdge": 4.961550356749111,
+    "independentFair": "Nevada -2.5",
+    "independentHomeMargin": -2.6119105441074453,
+    "independentEdge": 3.3880894558925547,
+    "independentSide": "Northern Illinois",
+    "ensembleFair": "Nevada -6.5",
+    "ensembleHomeMargin": -6.369248459796195,
+    "ensembleEdge": 0.3692484597961947,
+    "selectedModel": "ensemble",
+    "governedFair": "Nevada -6.5",
+    "governedTotal": 47.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T15:20:54.526Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T15:20:54.224Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T15:21:25.873Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -6.881666666666666
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -4.533300799259094
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T15:21:25.873Z",
+    "inputDates": {
+      "fpi": "2026-11-14T15:20:54.526Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T15:20:54.224Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -10.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Nevada -10.5",
+    "sourceObservedAt": "2026-11-08T16:20:47.865Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T15:24:27.169Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T15:24:27.169Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

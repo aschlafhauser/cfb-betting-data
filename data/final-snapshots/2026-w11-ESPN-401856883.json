@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401856883",
+  "matchup": "Missouri at Georgia",
+  "kickoff": "2026-11-14T20:30:00.000Z",
+  "frozenAt": "2026-11-14T15:24:27.505Z",
+  "minutesBeforeKickoff": 305.5,
+  "immutable": true,
+  "market": {
+    "spread": "Georgia -16.5",
+    "total": 48.5,
+    "moneyline": "Missouri +525 / Georgia -750",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T15:24:27.169Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Georgia -14",
+    "marketCalibratedHomeMargin": 14.067525051759834,
+    "marketCalibratedEdge": 2.4324749482401664,
+    "independentFair": "Georgia -11",
+    "independentHomeMargin": 10.963807248386233,
+    "independentEdge": 5.536192751613767,
+    "independentSide": "Missouri",
+    "ensembleFair": "Georgia -12",
+    "ensembleHomeMargin": 12.205294369735673,
+    "ensembleEdge": 4.2947056302643265,
+    "selectedModel": "ensemble",
+    "governedFair": "Georgia -12",
+    "governedTotal": 49
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T15:20:54.526Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T15:20:54.224Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T15:21:25.640Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 18.067525051759834
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 14.160480259904354
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T15:21:25.641Z",
+    "inputDates": {
+      "fpi": "2026-11-14T15:20:54.526Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T15:20:54.224Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 12.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Georgia -12.5",
+    "sourceObservedAt": "2026-11-08T04:21:47.653Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T15:24:27.169Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T15:24:27.169Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
