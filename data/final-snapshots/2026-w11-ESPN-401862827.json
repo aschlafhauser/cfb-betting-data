@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401862827",
+  "matchup": "North Texas at UTSA",
+  "kickoff": "2026-11-15T02:00:00.000Z",
+  "frozenAt": "2026-11-14T20:24:31.423Z",
+  "minutesBeforeKickoff": 335.5,
+  "immutable": true,
+  "market": {
+    "spread": "North Texas -2.5",
+    "total": 76.5,
+    "moneyline": "North Texas -130 / UTSA +110",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T20:24:31.068Z"
+  },
+  "models": {
+    "marketCalibratedFair": "North Texas -0.5",
+    "marketCalibratedHomeMargin": -0.7323416581159568,
+    "marketCalibratedEdge": 1.7676583418840432,
+    "independentFair": "North Texas -0.5",
+    "independentHomeMargin": -0.34667439825067425,
+    "independentEdge": 2.1533256017493256,
+    "independentSide": "UTSA",
+    "ensembleFair": "North Texas -0.5",
+    "ensembleHomeMargin": -0.5009413021967872,
+    "ensembleEdge": 1.9990586978032128,
+    "selectedModel": "ensemble",
+    "governedFair": "North Texas -0.5",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T20:21:25.710Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T20:21:25.459Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T20:21:59.890Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -1.4323416581159565
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -0.7809413021967871
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T20:21:59.890Z",
+    "inputDates": {
+      "fpi": "2026-11-14T20:21:25.710Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T20:21:25.459Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "North Texas -1.5",
+    "sourceObservedAt": "2026-11-08T14:20:37.644Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T20:24:31.068Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T20:24:31.068Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
