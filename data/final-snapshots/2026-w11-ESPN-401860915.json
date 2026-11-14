@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401860915",
+  "matchup": "Utah State at San Diego State",
+  "kickoff": "2026-11-15T02:30:00.000Z",
+  "frozenAt": "2026-11-14T21:24:21.622Z",
+  "minutesBeforeKickoff": 305.6,
+  "immutable": true,
+  "market": {
+    "spread": "Utah State -3",
+    "total": 43.5,
+    "moneyline": "Utah State -148 / San Diego State +124",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T21:24:21.222Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Utah State -2.5",
+    "marketCalibratedHomeMargin": -2.6584420686916816,
+    "marketCalibratedEdge": 0.34155793130831835,
+    "independentFair": "San Diego State -0.5",
+    "independentHomeMargin": 0.5505191066003613,
+    "independentEdge": 3.5505191066003614,
+    "independentSide": "San Diego State",
+    "ensembleFair": "Utah State -1",
+    "ensembleHomeMargin": -0.8935134222810579,
+    "ensembleEdge": 2.1064865777189423,
+    "selectedModel": "ensemble",
+    "governedFair": "Utah State -1",
+    "governedTotal": 43.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T21:21:30.218Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T21:21:29.879Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T21:22:00.338Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.1584420686916816
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -1.118513422281058
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T21:22:00.338Z",
+    "inputDates": {
+      "fpi": "2026-11-14T21:21:30.218Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T21:21:29.879Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Utah State -2.5",
+    "sourceObservedAt": "2026-11-08T16:20:47.865Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T21:24:21.222Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T21:24:21.222Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
