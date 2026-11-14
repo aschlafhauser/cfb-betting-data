@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401871100",
+  "matchup": "Troy at South Alabama",
+  "kickoff": "2026-11-15T00:00:00.000Z",
+  "frozenAt": "2026-11-14T18:25:46.875Z",
+  "minutesBeforeKickoff": 334.2,
+  "immutable": true,
+  "market": {
+    "spread": "South Alabama -3",
+    "total": 55.5,
+    "moneyline": "Troy +130 / South Alabama -155",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T18:25:46.437Z"
+  },
+  "models": {
+    "marketCalibratedFair": "South Alabama -3",
+    "marketCalibratedHomeMargin": 3.2334958218263927,
+    "marketCalibratedEdge": 0.23349582182639272,
+    "independentFair": "South Alabama -2",
+    "independentHomeMargin": 2.1683282279394764,
+    "independentEdge": 0.8316717720605236,
+    "independentSide": "Troy",
+    "ensembleFair": "South Alabama -2.5",
+    "ensembleHomeMargin": 2.647653645188589,
+    "ensembleEdge": 0.3523463548114112,
+    "selectedModel": "ensemble",
+    "governedFair": "South Alabama -2.5",
+    "governedTotal": 55.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T18:22:28.193Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 3.2334958218263927
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 2.647653645188589
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T18:22:28.193Z",
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 3,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "South Alabama -3",
+    "sourceObservedAt": "2026-11-08T16:20:47.865Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T18:25:46.437Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T18:25:46.437Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

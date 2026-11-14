@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401858298",
+  "matchup": "Louisville at North Carolina",
+  "kickoff": "2026-11-15T00:00:00.000Z",
+  "frozenAt": "2026-11-14T18:25:46.875Z",
+  "minutesBeforeKickoff": 334.2,
+  "immutable": true,
+  "market": {
+    "spread": "Louisville -3.5",
+    "total": 57.5,
+    "moneyline": "Louisville -175 / North Carolina +145",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T18:25:46.437Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Louisville -3",
+    "marketCalibratedHomeMargin": -3.208748281757091,
+    "marketCalibratedEdge": 0.2912517182429091,
+    "independentFair": "Louisville -2.5",
+    "independentHomeMargin": -2.36628995971527,
+    "independentEdge": 1.13371004028473,
+    "independentSide": "North Carolina",
+    "ensembleFair": "Louisville -2.5",
+    "ensembleHomeMargin": -2.7453962046340896,
+    "ensembleEdge": 0.7546037953659104,
+    "selectedModel": "ensemble",
+    "governedFair": "Louisville -2.5",
+    "governedTotal": 57
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T18:22:27.961Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.9087482817570907
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -3.060396204634089
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T18:22:27.961Z",
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Louisville -2.5",
+    "sourceObservedAt": "2026-11-08T04:21:47.653Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T18:25:46.437Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T18:25:46.437Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
