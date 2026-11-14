@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401856882",
+  "matchup": "South Carolina at Arkansas",
+  "kickoff": "2026-11-15T00:45:00.000Z",
+  "frozenAt": "2026-11-14T19:24:53.931Z",
+  "minutesBeforeKickoff": 320.1,
+  "immutable": true,
+  "market": {
+    "spread": "South Carolina -7.5",
+    "total": 51.5,
+    "moneyline": "South Carolina -325 / Arkansas +260",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T19:24:53.532Z"
+  },
+  "models": {
+    "marketCalibratedFair": "South Carolina -9",
+    "marketCalibratedHomeMargin": -9.169083197123243,
+    "marketCalibratedEdge": 1.6690831971232427,
+    "independentFair": "South Carolina -4",
+    "independentHomeMargin": -4.183442956783217,
+    "independentEdge": 3.3165570432167826,
+    "independentSide": "Arkansas",
+    "ensembleFair": "South Carolina -6.5",
+    "ensembleHomeMargin": -6.4269810649362284,
+    "ensembleEdge": 1.0730189350637716,
+    "selectedModel": "ensemble",
+    "governedFair": "South Carolina -6.5",
+    "governedTotal": 51.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T18:22:28.215Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -9.169083197123243
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -6.4269810649362284
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T18:22:28.215Z",
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -7.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "South Carolina -7.5",
+    "sourceObservedAt": "2026-11-08T04:21:47.653Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T19:24:53.532Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T19:24:53.532Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 26,
+        "independentCount": 26,
+        "ensembleCount": 26,
+        "rejected": 41
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

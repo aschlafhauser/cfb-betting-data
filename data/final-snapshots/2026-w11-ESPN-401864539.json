@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401864539",
+  "matchup": "UNLV at New Mexico",
+  "kickoff": "2026-11-15T00:30:00.000Z",
+  "frozenAt": "2026-11-14T19:24:53.931Z",
+  "minutesBeforeKickoff": 305.1,
+  "immutable": true,
+  "market": {
+    "spread": "New Mexico -17.5",
+    "total": 46.5,
+    "moneyline": "UNLV +625 / New Mexico -950",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T19:24:53.532Z"
+  },
+  "models": {
+    "marketCalibratedFair": "New Mexico -14",
+    "marketCalibratedHomeMargin": 13.869167861124382,
+    "marketCalibratedEdge": 3.6308321388756184,
+    "independentFair": "Pick",
+    "independentHomeMargin": 0.20394889381055492,
+    "independentEdge": 17.296051106189445,
+    "independentSide": "UNLV",
+    "ensembleFair": "New Mexico -5.5",
+    "ensembleHomeMargin": 5.670036480736086,
+    "ensembleEdge": 11.829963519263913,
+    "selectedModel": "ensemble",
+    "governedFair": "New Mexico -5.5",
+    "governedTotal": 46.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T18:22:28.200Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 17.86916786112438
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 8.153297429101777
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T18:22:28.200Z",
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 13.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "New Mexico -13.5",
+    "sourceObservedAt": "2026-11-08T16:20:47.865Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T19:24:53.532Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T19:24:53.532Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 26,
+        "independentCount": 26,
+        "ensembleCount": 26,
+        "rejected": 41
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

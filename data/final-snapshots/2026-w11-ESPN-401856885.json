@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401856885",
+  "matchup": "Texas at LSU",
+  "kickoff": "2026-11-15T00:30:00.000Z",
+  "frozenAt": "2026-11-14T19:24:53.931Z",
+  "minutesBeforeKickoff": 305.1,
+  "immutable": true,
+  "market": {
+    "spread": "LSU -5.5",
+    "total": 46.5,
+    "moneyline": "Texas +170 / LSU -205",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T19:24:53.532Z"
+  },
+  "models": {
+    "marketCalibratedFair": "LSU -4.5",
+    "marketCalibratedHomeMargin": 4.507356521739131,
+    "marketCalibratedEdge": 0.007356521739130706,
+    "independentFair": "Pick",
+    "independentHomeMargin": 0.22410254492283033,
+    "independentEdge": 4.275897455077169,
+    "independentSide": "Texas",
+    "ensembleFair": "LSU -2",
+    "ensembleHomeMargin": 2.1515668344901653,
+    "ensembleEdge": 2.3484331655098347,
+    "selectedModel": "ensemble",
+    "governedFair": "LSU -2",
+    "governedTotal": 46
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T18:22:27.876Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 3.5073565217391303
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 1.5374041356493504
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T18:22:27.876Z",
+    "inputDates": {
+      "fpi": "2026-11-14T18:21:45.378Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T18:21:45.237Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 5.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "LSU -5.5",
+    "sourceObservedAt": "2026-11-08T04:21:47.653Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T19:24:53.532Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T19:24:53.532Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 26,
+        "independentCount": 26,
+        "ensembleCount": 26,
+        "rejected": 41
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
