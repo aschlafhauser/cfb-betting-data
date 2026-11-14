@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401858521",
+  "matchup": "Washington at Michigan State",
+  "kickoff": "2026-11-14T22:30:00.000Z",
+  "frozenAt": "2026-11-14T17:25:58.032Z",
+  "minutesBeforeKickoff": 304,
+  "immutable": true,
+  "market": {
+    "spread": "Washington -2.5",
+    "total": 44.5,
+    "moneyline": "Washington -135 / Michigan State +114",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T17:25:57.570Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Washington -4",
+    "marketCalibratedHomeMargin": -4.2479997060377315,
+    "marketCalibratedEdge": 1.7479997060377315,
+    "independentFair": "Washington -2.5",
+    "independentHomeMargin": -2.274259108370859,
+    "independentEdge": 0.2257408916291408,
+    "independentSide": "Michigan State",
+    "ensembleFair": "Washington -3",
+    "ensembleHomeMargin": -3.162442377320952,
+    "ensembleEdge": 0.6624423773209518,
+    "selectedModel": "ensemble",
+    "governedFair": "Washington -3",
+    "governedTotal": 44
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T17:21:28.597Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T17:21:28.359Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T17:22:15.384Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.5479997060377313
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -2.8474423773209514
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T17:22:15.384Z",
+    "inputDates": {
+      "fpi": "2026-11-14T17:21:28.597Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T17:21:28.359Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -3.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Washington -3.5",
+    "sourceObservedAt": "2026-11-08T16:20:47.865Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T17:25:57.570Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T17:25:57.570Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

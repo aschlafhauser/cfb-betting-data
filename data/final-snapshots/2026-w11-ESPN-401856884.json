@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401856884",
+  "matchup": "Florida at Kentucky",
+  "kickoff": "2026-11-14T23:15:00.000Z",
+  "frozenAt": "2026-11-14T17:25:58.032Z",
+  "minutesBeforeKickoff": 349,
+  "immutable": true,
+  "market": {
+    "spread": "Kentucky -3",
+    "total": 52.5,
+    "moneyline": "Florida +130 / Kentucky -155",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T17:25:57.570Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Kentucky -1.5",
+    "marketCalibratedHomeMargin": 1.3056521455477044,
+    "marketCalibratedEdge": 1.6943478544522956,
+    "independentFair": "Florida -6",
+    "independentHomeMargin": -5.769063650224635,
+    "independentEdge": 8.769063650224634,
+    "independentSide": "Florida",
+    "ensembleFair": "Florida -3",
+    "ensembleHomeMargin": -2.9391773319156993,
+    "ensembleEdge": 5.939177331915699,
+    "selectedModel": "ensemble",
+    "governedFair": "Florida -3",
+    "governedTotal": 53
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T17:21:28.597Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T17:21:28.359Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T17:22:15.042Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 2.3556521455477037
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -2.5191773319156994
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T17:22:15.042Z",
+    "inputDates": {
+      "fpi": "2026-11-14T17:21:28.597Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T17:21:28.359Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Kentucky -1.5",
+    "sourceObservedAt": "2026-11-08T04:21:47.653Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T17:25:57.570Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T17:25:57.570Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 33,
+      "deepDiveSourceLimitedCount": 34
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
