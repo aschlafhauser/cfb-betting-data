@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401870796",
+  "matchup": "New Mexico State at Missouri State",
+  "kickoff": "2026-11-14T20:00:00.000Z",
+  "frozenAt": "2026-11-14T14:19:15.693Z",
+  "minutesBeforeKickoff": 340.7,
+  "immutable": true,
+  "market": {
+    "spread": "Missouri State -1.5",
+    "total": 49.5,
+    "moneyline": "New Mexico State +100 / Missouri State -120",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T14:19:15.363Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Missouri State -1",
+    "marketCalibratedHomeMargin": 1.0762745951695285,
+    "marketCalibratedEdge": 0.4237254048304715,
+    "independentFair": "Missouri State -3",
+    "independentHomeMargin": 2.9636932389714383,
+    "independentEdge": 1.4636932389714383,
+    "independentSide": "Missouri State",
+    "ensembleFair": "Missouri State -2",
+    "ensembleHomeMargin": 2.114354849260579,
+    "ensembleEdge": 0.6143548492605788,
+    "selectedModel": "ensemble",
+    "governedFair": "Missouri State -2",
+    "governedTotal": 49
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T14:15:25.008Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T14:15:24.532Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T14:16:07.445Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 1.0762745951695285
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 2.114354849260579
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T14:16:07.445Z",
+    "inputDates": {
+      "fpi": "2026-11-14T14:15:25.008Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T14:15:24.532Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Missouri State -1.5",
+    "sourceObservedAt": "2026-11-08T16:20:47.865Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T14:19:15.363Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T14:19:15.363Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 28,
+      "deepDiveSourceLimitedCount": 39
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

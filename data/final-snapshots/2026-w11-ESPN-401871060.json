@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401871060",
+  "matchup": "Florida International at Delaware",
+  "kickoff": "2026-11-14T20:00:00.000Z",
+  "frozenAt": "2026-11-14T14:19:15.693Z",
+  "minutesBeforeKickoff": 340.7,
+  "immutable": true,
+  "market": {
+    "spread": "Delaware -3.5",
+    "total": 54.5,
+    "moneyline": "Florida International +154 / Delaware -185",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-14T14:19:15.363Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Delaware -5",
+    "marketCalibratedHomeMargin": 5.098563079583373,
+    "marketCalibratedEdge": 1.5985630795833732,
+    "independentFair": "Delaware -3.5",
+    "independentHomeMargin": 3.566729834732431,
+    "independentEdge": 0.06672983473243121,
+    "independentSide": "Delaware",
+    "ensembleFair": "Delaware -4.5",
+    "ensembleHomeMargin": 4.256054794915355,
+    "ensembleEdge": 0.7560547949153547,
+    "selectedModel": "ensemble",
+    "governedFair": "Delaware -4.5",
+    "governedTotal": 54.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T14:15:25.008Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T14:15:24.532Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T14:16:07.450Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 3.3485630795833727
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 3.468554794915355
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T14:16:07.450Z",
+    "inputDates": {
+      "fpi": "2026-11-14T14:15:25.008Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T14:15:24.532Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 6,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Delaware -6",
+    "sourceObservedAt": "2026-11-08T17:21:05.474Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T14:19:15.363Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T14:19:15.363Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 67,
+        "independentCount": 67,
+        "ensembleCount": 67,
+        "rejected": 0
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 28,
+      "deepDiveSourceLimitedCount": 39
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
