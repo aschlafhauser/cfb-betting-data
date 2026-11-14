@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401858300",
+  "matchup": "Syracuse at NC State",
+  "kickoff": "2026-11-14T17:00:00.000Z",
+  "frozenAt": "2026-11-14T11:25:18.463Z",
+  "minutesBeforeKickoff": 334.7,
+  "immutable": true,
+  "market": {
+    "spread": "Syracuse -3",
+    "total": 53.5,
+    "moneyline": "Syracuse -148 / NC State +124",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-14T11:25:18.067Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Syracuse -2.5",
+    "marketCalibratedHomeMargin": -2.6964617079341693,
+    "marketCalibratedEdge": 0.3035382920658307,
+    "independentFair": "NC State -9",
+    "independentHomeMargin": 9.238785814940647,
+    "independentEdge": 12.238785814940647,
+    "independentSide": "NC State",
+    "ensembleFair": "NC State -4",
+    "ensembleHomeMargin": 3.8679244296469797,
+    "ensembleEdge": 6.86792442964698,
+    "selectedModel": "ensemble",
+    "governedFair": "NC State -4",
+    "governedTotal": 54
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T10:21:58.747Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.0464617079341694
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 3.71042442964698
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T10:21:58.747Z",
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Syracuse -2.5",
+    "sourceObservedAt": "2026-11-08T07:20:40.341Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T11:25:18.067Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T11:25:18.067Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 11,
+        "independentCount": 11,
+        "ensembleCount": 11,
+        "rejected": 56
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 67
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401858301",
+  "matchup": "Wake Forest at SMU",
+  "kickoff": "2026-11-14T17:00:00.000Z",
+  "frozenAt": "2026-11-14T11:25:18.463Z",
+  "minutesBeforeKickoff": 334.7,
+  "immutable": true,
+  "market": {
+    "spread": "SMU -1.5",
+    "total": 60.5,
+    "moneyline": "Wake Forest -105 / SMU -115",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-14T11:25:18.067Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Wake Forest -2.5",
+    "marketCalibratedHomeMargin": -2.4960018633540373,
+    "marketCalibratedEdge": 3.9960018633540373,
+    "independentFair": "Pick",
+    "independentHomeMargin": 0.12589495461378042,
+    "independentEdge": 1.3741050453862196,
+    "independentSide": "Wake Forest",
+    "ensembleFair": "Wake Forest -1",
+    "ensembleHomeMargin": -0.9228637725733467,
+    "ensembleEdge": 2.4228637725733466,
+    "selectedModel": "ensemble",
+    "governedFair": "Wake Forest -1",
+    "governedTotal": 60.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T10:21:58.737Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 1.5039981366459627
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 0.7460413865282625
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T10:21:58.737Z",
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Wake Forest -2.5",
+    "sourceObservedAt": "2026-11-08T05:21:21.539Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T11:25:18.067Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T11:25:18.067Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 11,
+        "independentCount": 11,
+        "ensembleCount": 11,
+        "rejected": 56
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 67
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

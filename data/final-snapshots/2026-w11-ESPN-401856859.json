@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401856859",
+  "matchup": "Cincinnati at Iowa State",
+  "kickoff": "2026-11-14T17:00:00.000Z",
+  "frozenAt": "2026-11-14T11:25:18.463Z",
+  "minutesBeforeKickoff": 334.7,
+  "immutable": true,
+  "market": {
+    "spread": "Iowa State -3",
+    "total": 58.5,
+    "moneyline": "Cincinnati +124 / Iowa State -148",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-14T11:25:18.067Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Iowa State -1.5",
+    "marketCalibratedHomeMargin": 1.4383902552435563,
+    "marketCalibratedEdge": 1.5616097447564437,
+    "independentFair": "Iowa State -2",
+    "independentHomeMargin": 1.9829942589850589,
+    "independentEdge": 1.0170057410149411,
+    "independentSide": "Cincinnati",
+    "ensembleFair": "Iowa State -2",
+    "ensembleHomeMargin": 1.765152657488458,
+    "ensembleEdge": 1.234847342511542,
+    "selectedModel": "ensemble",
+    "governedFair": "Iowa State -2",
+    "governedTotal": 58.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T10:21:58.710Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 2.4883902552435564
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 2.185152657488458
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T10:21:58.710Z",
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Iowa State -1.5",
+    "sourceObservedAt": "2026-11-08T15:20:36.908Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T11:25:18.067Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T11:25:18.067Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 11,
+        "independentCount": 11,
+        "ensembleCount": 11,
+        "rejected": 56
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 67
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

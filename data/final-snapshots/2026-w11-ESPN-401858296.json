@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 11,
+  "canonicalGameId": "ESPN-401858296",
+  "matchup": "Duke at Miami",
+  "kickoff": "2026-11-14T17:00:00.000Z",
+  "frozenAt": "2026-11-14T11:25:18.463Z",
+  "minutesBeforeKickoff": 334.7,
+  "immutable": true,
+  "market": {
+    "spread": "Miami -14",
+    "total": 54.5,
+    "moneyline": "Duke +440 / Miami -600",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-14T11:25:18.067Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Miami -16",
+    "marketCalibratedHomeMargin": 15.887857142857142,
+    "marketCalibratedEdge": 1.8878571428571416,
+    "independentFair": "Miami -10",
+    "independentHomeMargin": 9.851592323522611,
+    "independentEdge": 4.1484076764773885,
+    "independentSide": "Duke",
+    "ensembleFair": "Miami -12.5",
+    "ensembleHomeMargin": 12.56791149222315,
+    "ensembleEdge": 1.4320885077768502,
+    "selectedModel": "ensemble",
+    "governedFair": "Miami -12.5",
+    "governedTotal": 55
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-14T10:21:58.726Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 14.387857142857143
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 11.89291149222315
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-14T10:21:58.726Z",
+    "inputDates": {
+      "fpi": "2026-11-14T10:21:21.367Z",
+      "phil": "2026-11-08",
+      "metrics": "2026-11-14T10:21:21.286Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 15.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Miami -15.5",
+    "sourceObservedAt": "2026-11-08T06:27:56.033Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-14T11:25:18.067Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-14T11:25:18.067Z",
+      "selectedWeek": "Week 11",
+      "modelPromotion": {
+        "marketCount": 11,
+        "independentCount": 11,
+        "ensembleCount": 11,
+        "rejected": 56
+      },
+      "renderedRowCount": 67,
+      "deepDiveCompleteCount": 67,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 67
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
