@@ -1,20 +1,22 @@
 {
   "season": 2026,
   "week": 11,
-  "verifiedAt": "2026-11-14T23:24:55.247Z",
-  "status": "PASS",
-  "detail": "Independently reconciled 60 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
+  "verifiedAt": "2026-11-15T00:50:14.267Z",
+  "status": "FAIL",
+  "detail": "Independently reconciled 30 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
   "dependencies": {
-    "canonicalBoardUpdatedAt": "2026-11-14T23:20:41.198Z",
-    "verifiedAt": "2026-11-14T23:24:55.247Z"
+    "canonicalBoardUpdatedAt": "2026-11-15T00:43:30.705Z",
+    "verifiedAt": "2026-11-15T00:50:14.267Z"
   },
   "checks": {
-    "records": 60,
-    "requiredRecords": 60,
+    "records": 30,
+    "requiredRecords": 30,
     "missingRecords": 0,
     "mathFailures": 0,
     "independentMarketLeakage": 0,
-    "renderFailures": 0
+    "renderFailures": 1
   },
-  "failures": []
+  "failures": [
+    "rendered Ensemble mismatch: ESPN-401856885"
+  ]
 }
