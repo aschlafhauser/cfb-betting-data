@@ -1,6 +1,6 @@
 {
   "week": 11,
-  "updatedAt": "2026-11-15T10:21:11.160Z",
+  "updatedAt": "2026-11-15T10:24:39.031Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
@@ -11,7 +11,7 @@
     "scheduleHydrationError": null,
     "marketGameCount": 1,
     "deepDiveCompleteCount": 67,
-    "note": "Canonical Week 11 refreshed from one ESPN snapshot: schedule=67; priced markets=1. Fresh indicative CBS fallback quotes retain their own source and timestamp. Missing quotes remain null and are never carried forward as a mixed snapshot.",
+    "note": "Canonical Week 11: schedule=67/67; completed research=67/67; full-evidence=33; source-limited=34.",
     "deepDiveFullEvidenceCount": 33,
     "deepDiveSourceLimitedCount": 34,
     "marketSnapshotAt": "2026-11-15T10:21:11.160Z"
@@ -6668,13 +6668,13 @@
       "currentTotal": 48.5,
       "currentMoneyline": "Ole Miss +120 / Oklahoma -142",
       "marketSource": "ESPN Draft Kings",
-      "modelSpread": "Oklahoma -1.5",
-      "modelTotal": 48.5,
-      "modelEdgeMagnitude": 1.185552783469997,
+      "modelSpread": "Oklahoma -1",
+      "modelTotal": null,
+      "modelEdgeMagnitude": 1.3528352834699973,
       "finalExecutableEdge": null,
-      "independentFootballFair": "Pick",
-      "independentFootballHomeMargin": -0.13306988298892683,
-      "independentFootballEdge": 2.6330698829889267,
+      "independentFootballFair": "Ole Miss -0.5",
+      "independentFootballHomeMargin": -0.43721988298892733,
+      "independentFootballEdge": 2.937219882988927,
       "independentFootballSide": "Ole Miss",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -6695,8 +6695,8 @@
         "sourceObservedAt": "2026-11-08T04:21:47.653Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": "Lean Oklahoma",
-      "modelGrade": "Watch",
+      "modelLean": null,
+      "modelGrade": null,
       "modelComponents": {
         "base": 4,
         "power": 0,
@@ -6961,9 +6961,10 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": true
+        "sourceValid": false,
+        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
       },
-      "modelHomeMargin": 1.314447216530003,
+      "modelHomeMargin": 1.1471647165300027,
       "spreadLean": "Ole Miss",
       "selectedModel": "ensemble",
       "shadowModels": {
@@ -6971,26 +6972,26 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-15T09:21:46.709Z",
+          "fpi": "2026-11-15T10:22:32.992Z",
           "phil": "2026-11-08",
-          "metrics": "2026-11-15T09:21:46.210Z",
+          "metrics": "2026-11-15T10:22:32.689Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-15T09:22:11.395Z",
+        "computedAt": "2026-11-15T10:23:04.269Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.5836347826086956
         },
         "ensembleAnchorCandidate": {
-          "homeMargin": 0.5536119832501222
+          "homeMargin": 0.3711219832501219
         }
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-15T09:22:11.395Z",
+        "computedAt": "2026-11-15T10:23:04.269Z",
         "inputDates": {
-          "fpi": "2026-11-15T09:21:46.709Z",
+          "fpi": "2026-11-15T10:22:32.992Z",
           "phil": "2026-11-08",
-          "metrics": "2026-11-15T09:21:46.210Z",
+          "metrics": "2026-11-15T10:22:32.689Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -7023,9 +7024,9 @@
           }
         },
         "independent": {
-          "fair": "Pick",
-          "homeMargin": -0.13306988298892683,
-          "edge": 2.6330698829889267,
+          "fair": "Ole Miss -0.5",
+          "homeMargin": -0.43721988298892733,
+          "edge": 2.937219882988927,
           "side": "Ole Miss",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -7038,7 +7039,7 @@
               },
               {
                 "name": "ESPN FPI",
-                "margin": -2.514999999999998,
+                "margin": -3.3839999999999995,
                 "weight": 0.35
               },
               {
@@ -7051,21 +7052,21 @@
           }
         },
         "ensemble": {
-          "fair": "Oklahoma -1.5",
-          "homeMargin": 1.314447216530003,
-          "edge": 1.185552783469997,
+          "fair": "Oklahoma -1",
+          "homeMargin": 1.1471647165300027,
+          "edge": 1.3528352834699973,
           "side": "Ole Miss",
           "confidence": "Medium",
           "modelVersion": "1.2-input-integrity",
           "components": {
-            "independent": -0.13306988298892683,
+            "independent": -0.43721988298892733,
             "marketCalibrated": 3.0836347826086956,
             "independentWeight": 0.55,
             "marketWeight": 0.44999999999999996,
             "agreement": false
           },
           "tags": [],
-          "decisionScore": 1.4463743958333963
+          "decisionScore": 1.6504590458333965
         }
       }
     },
@@ -27808,7 +27809,7 @@
   "runtimePersistence": {
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "capturedAt": "2026-11-15T09:23:23.593Z",
+    "capturedAt": "2026-11-15T10:24:39.031Z",
     "selectedWeek": "Week 11",
     "modelPromotion": {
       "marketCount": 67,
@@ -27823,11 +27824,11 @@
   },
   "modelRuntime": {
     "week": 11,
-    "promotedGameCount": 1,
-    "totalPromotedGameCount": 1,
-    "independentGameCount": 1,
-    "rejectedFallbackCount": 0,
-    "generatedAt": "2026-11-15T09:22:11.038Z",
+    "promotedGameCount": 0,
+    "totalPromotedGameCount": 0,
+    "independentGameCount": 0,
+    "rejectedFallbackCount": 1,
+    "generatedAt": "2026-11-15T10:23:02.961Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },
