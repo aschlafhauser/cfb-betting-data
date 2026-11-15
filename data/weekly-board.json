@@ -1,6 +1,6 @@
 {
   "week": 11,
-  "updatedAt": "2026-11-15T11:21:07.935Z",
+  "updatedAt": "2026-11-15T11:23:31.700Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
@@ -11,7 +11,7 @@
     "scheduleHydrationError": null,
     "marketGameCount": 1,
     "deepDiveCompleteCount": 67,
-    "note": "Canonical Week 11 refreshed from one ESPN snapshot: schedule=67; priced markets=1. Fresh indicative CBS fallback quotes retain their own source and timestamp. Missing quotes remain null and are never carried forward as a mixed snapshot.",
+    "note": "Canonical Week 11: schedule=67/67; completed research=67/67; full-evidence=33; source-limited=34.",
     "deepDiveFullEvidenceCount": 33,
     "deepDiveSourceLimitedCount": 34,
     "marketSnapshotAt": "2026-11-15T11:21:07.935Z"
@@ -6669,7 +6669,7 @@
       "currentMoneyline": "Ole Miss +120 / Oklahoma -142",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Oklahoma -1",
-      "modelTotal": null,
+      "modelTotal": 48.5,
       "modelEdgeMagnitude": 1.3528352834699973,
       "finalExecutableEdge": null,
       "independentFootballFair": "Ole Miss -0.5",
@@ -6695,8 +6695,8 @@
         "sourceObservedAt": "2026-11-08T04:21:47.653Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Oklahoma",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 4,
         "power": 0,
@@ -6961,8 +6961,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 1.1471647165300027,
       "spreadLean": "Ole Miss",
@@ -6972,12 +6971,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-15T10:22:32.992Z",
+          "fpi": "2026-11-15T11:21:33.782Z",
           "phil": "2026-11-08",
-          "metrics": "2026-11-15T10:22:32.689Z",
+          "metrics": "2026-11-15T11:21:33.753Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-15T10:23:04.269Z",
+        "computedAt": "2026-11-15T11:22:11.473Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.5836347826086956
         },
@@ -6987,11 +6986,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-15T10:23:04.269Z",
+        "computedAt": "2026-11-15T11:22:11.473Z",
         "inputDates": {
-          "fpi": "2026-11-15T10:22:32.992Z",
+          "fpi": "2026-11-15T11:21:33.782Z",
           "phil": "2026-11-08",
-          "metrics": "2026-11-15T10:22:32.689Z",
+          "metrics": "2026-11-15T11:21:33.753Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -27809,7 +27808,7 @@
   "runtimePersistence": {
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "capturedAt": "2026-11-15T10:24:39.031Z",
+    "capturedAt": "2026-11-15T11:23:31.700Z",
     "selectedWeek": "Week 11",
     "modelPromotion": {
       "marketCount": 67,
@@ -27824,11 +27823,11 @@
   },
   "modelRuntime": {
     "week": 11,
-    "promotedGameCount": 0,
-    "totalPromotedGameCount": 0,
-    "independentGameCount": 0,
-    "rejectedFallbackCount": 1,
-    "generatedAt": "2026-11-15T10:23:02.961Z",
+    "promotedGameCount": 1,
+    "totalPromotedGameCount": 1,
+    "independentGameCount": 1,
+    "rejectedFallbackCount": 0,
+    "generatedAt": "2026-11-15T11:22:11.215Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },
