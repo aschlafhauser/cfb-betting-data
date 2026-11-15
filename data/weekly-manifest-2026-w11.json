@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 11,
-  "updatedAt": "2026-11-15T00:57:46.391Z",
+  "updatedAt": "2026-11-15T01:24:55.152Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-15T00:50:14.308Z",
+      "checkedAt": "2026-11-15T01:24:55.152Z",
       "unstartedGames": 8,
       "expertContextGames": 7,
       "materialWrittenAnalysisGames": 6,
@@ -56,15 +56,16 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-15T00:50:09.492Z",
+      "verifiedAt": "2026-11-15T01:24:48.367Z",
       "artifact": "data/statistical-display-integrity-2026-w11.json",
       "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 10/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-11-15T01:24:55.095Z",
       "artifact": "data/market-derived-integrity-2026-w11.json",
-      "detail": "Independently reconciled 30 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401856885"
+      "detail": "Independently reconciled 24 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -76,7 +77,7 @@
     },
     "underdogSpecial": {
       "status": "PASS",
-      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 5 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
+      "detail": "Canonical +3.5-to-+7 screen refreshed; Canonical board produced 3 +3.5-to-+7 underdogs. All three football-profile criteria are governed and complete; moneyline availability/value remains a separate gate."
     },
     "longshotUpsetLab": {
       "status": "PASS",
@@ -97,13 +98,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-15T00:57:46.391Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-15T00:49:19.727Z",
+      "verifiedAt": "2026-11-15T01:23:48.398Z",
       "artifact": "data/final-snapshot-integrity-2026-w11.json",
       "validSnapshots": 66,
       "pendingBeforeKickoff": 1,
@@ -120,10 +120,10 @@
     }
   },
   "failures": [
-    "marketDerivedIntegrity"
+    "productionVerifier"
   ],
   "currentPriorityQueue": [
-    "marketDerivedIntegrity: Independently reconciled 30 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401856885"
+    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
