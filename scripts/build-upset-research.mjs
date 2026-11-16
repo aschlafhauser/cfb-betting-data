@@ -5,7 +5,7 @@ const live=JSON.parse(await fs.readFile('data/live-team-stats.json','utf8').catc
 const phil=JSON.parse(await fs.readFile('data/phil-inseason-power-ratings-2026.json','utf8').catch(()=>'{"rows":[]}'));
 const now=new Date().toISOString(), norm=s=>String(s||'').replace(/\bSt\.?$/i,'State').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 const byId=new Map((dives.dossiers||[]).map(d=>[d.canonicalGameId,d]));
-const aliases={af:'airforce',buf:'buffalo',fiu:'floridainternational',fau:'floridaatlantic',wku:'westernkentucky',usf:'southflorida',mtsu:'middletennessee',ulm:'ulmonroe',mississippi:'olemiss',armywestpoint:'army',connecticut:'uconn',appalachianst:'appstate',appalachianstate:'appstate',miamifla:'miami',miamifl:'miami',ohiost:'ohiostate',pennst:'pennstate',floridast:'floridastate',mississippist:'mississippistate',michiganst:'michiganstate',sanjosest:'sanjosestate',coloradost:'coloradostate',kansasst:'kansasstate',arizonast:'arizonastate',iowast:'iowastate',oklahomast:'oklahomastate',boisest:'boisestate',oregonst:'oregonstate',utahst:'utahstate',kentst:'kentstate',massachusetts:'umass',centmichigan:'centralmichigan',samhoustonstate:'samhouston',kennesaw:'kennesawstate',wkentucky:'westernkentucky'};
+const aliases={af:'airforce',buf:'buffalo',fiu:'floridainternational',fau:'floridaatlantic',wku:'westernkentucky',usf:'southflorida',mtsu:'middletennessee',ulm:'ulmonroe',mississippi:'olemiss',armywestpoint:'army',connecticut:'uconn',appalachianst:'appstate',appalachianstate:'appstate',miamifla:'miami',miamifl:'miami',ohiost:'ohiostate',pennst:'pennstate',floridast:'floridastate',mississippist:'mississippistate',michiganst:'michiganstate',sanjosest:'sanjosestate',coloradost:'coloradostate',kansasst:'kansasstate',arizonast:'arizonastate',iowast:'iowastate',oklahomast:'oklahomastate',boisest:'boisestate',oregonst:'oregonstate',utahst:'utahstate',kentst:'kentstate',massachusetts:'umass',centmichigan:'centralmichigan',samhoustonstate:'samhouston',kennesaw:'kennesawstate',wkentucky:'westernkentucky',emichigan:'easternmichigan',wmichigan:'westernmichigan'};
 const canon=s=>aliases[norm(s)]||norm(s);
 const liveByTeam=new Map((live.teams||[]).map(x=>[canon(x.team),x]));
 const philByTeam=new Map((phil.rows||[]).map(x=>[canon(x.team),x]));
@@ -55,7 +55,7 @@ function score25(g,d,dd){
  const qbMatch=directionalEvidence(dd,'qbPassing',d.team),trMatch=directionalEvidence(dd,'olFront',d.team),exMatch=directionalEvidence(dd,'receiversCoverage',d.team);
  const teamYppRank=observed(g,dd,side,'offYpp')==null?numeric(dd?.evidenceDimensions?.modelFair?.evidence?.components?.philInseason?.[side]?.offYpp?.rank):null;
  const homeUnits=dd?.evidenceDimensions?.modelFair?.evidence?.components?.philInseason;
- const team={...(homeUnits?.[side]||{}),...philProfile(d.team)},opp={...(homeUnits?.[other]||{}),...philProfile(d.opp)};
+ const team={...philProfile(d.team),...(homeUnits?.[side]||{})},opp={...philProfile(d.opp),...(homeUnits?.[other]||{})};
  const offense=rankScore(numeric(team.offYpp?.rank),1.5),oppDefense=rankScore(numeric(opp.defYpp?.rank),1);
  const passDefenseWeakness=opp.passD?.rank==null?null:clamp((Number(opp.passD.rank)-40)/95,0,1);
  const qbSeason=numeric(liveByTeam.get(canon(d.team))?.quarterback?.adjustedEpaPerDropback);
