@@ -3,13 +3,13 @@
   "sport": "CFB",
   "season": 2026,
   "week": 12,
-  "verifiedAt": "2026-11-17T16:28:46.847Z",
+  "verifiedAt": "2026-11-17T17:26:15.295Z",
   "status": "IN_PROGRESS",
   "blocking": false,
   "counts": {
     "selectedWeekGames": 70,
-    "validPreKickoffSnapshots": 0,
-    "pendingBeforeKickoff": 70,
+    "validPreKickoffSnapshots": 1,
+    "pendingBeforeKickoff": 69,
     "permanentFailures": 0,
     "acknowledgedPermanentExceptions": 0,
     "unacknowledgedPermanentFailures": 0
@@ -18,14 +18,6 @@
   "acknowledgedFailures": [],
   "unacknowledgedFailures": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401866465",
-      "game": "Eastern Michigan at Western Michigan",
-      "kickoff": "2026-11-17T23:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401866464",
       "game": "Ball State at Ohio",
@@ -579,7 +571,16 @@
       "frozenAt": null
     }
   ],
-  "passedGames": [],
+  "passedGames": [
+    {
+      "canonicalGameId": "ESPN-401866465",
+      "game": "Eastern Michigan at Western Michigan",
+      "kickoff": "2026-11-17T23:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w12-ESPN-401866465.json",
+      "frozenAt": "2026-11-17T17:26:15.259Z"
+    }
+  ],
   "exceptionLedger": "data/final-snapshot-exceptions.json",
   "governance": "A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure."
 }
