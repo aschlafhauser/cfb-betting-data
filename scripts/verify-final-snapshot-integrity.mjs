@@ -36,18 +36,6 @@ for(const record of snapshots){
   if(!current||(!current.valid&&valid))byGameId.set(record.snapshot.canonicalGameId,{...record,valid,frozenAt:record.snapshot.frozenAt||null,kickoff:record.snapshot.kickoff||null});
 }
 
-const canonicalKickoffs=new Map((board.games||[]).map(game=>[game.gameId||game.canonicalGameId,Date.parse(game.dateTime||game.kickoff||'')]));
-const clearedMalformedLegacyFailures=[];
-const retainedPriorFailures=(previous?.permanentFailures||[]).filter(f=>{
-  const currentKickoff=canonicalKickoffs.get(f.canonicalGameId);
-  const recordedKickoff=Date.parse(f.kickoff||'');
-  const firstDetected=Date.parse(f.firstDetectedAt||'');
-  const malformedLegacy=Number.isFinite(recordedKickoff)&&new Date(recordedKickoff).getUTCFullYear()<season-1;
-  const demonstrablyPreKickoff=Number.isFinite(currentKickoff)&&Number.isFinite(firstDetected)&&currentKickoff>firstDetected;
-  if(malformedLegacy&&demonstrablyPreKickoff){clearedMalformedLegacyFailures.push({...f,clearedReason:'Malformed legacy kickoff parse predated the governed season while the canonical kickoff was still in the future at detection.'});return false}
-  return true;
-});
-const priorFailures=new Map(retainedPriorFailures.map(f=>[f.canonicalGameId,f]));
 const games=(board.games||[]).map(game=>{
   const canonicalGameId=game.gameId||game.canonicalGameId;
   const kickoffMs=Date.parse(game.dateTime||game.kickoff||'');
@@ -67,14 +55,18 @@ const games=(board.games||[]).map(game=>{
 // was outside the selected season while the same canonical game is currently governed
 // as a valid future selected-week event.
 const currentById=new Map(games.map(g=>[g.canonicalGameId,g]));
-const priorFailures=new Map((previous?.permanentFailures||[]).filter(f=>{
+const clearedMalformedLegacyFailures=[];
+const retainedPriorFailures=(previous?.permanentFailures||[]).filter(f=>{
   const current=currentById.get(f.canonicalGameId);
   const priorMs=Date.parse(f.kickoff||'');
   const priorYear=Number.isFinite(priorMs)?new Date(priorMs).getUTCFullYear():null;
   const currentMs=Date.parse(current?.kickoff||'');
   const currentIsValidFuture=current?.status==='PENDING'&&Number.isFinite(currentMs)&&new Date(currentMs).getUTCFullYear()===season&&currentMs>asOf.getTime();
-  return !(priorYear!==season&&currentIsValidFuture);
-}).map(f=>[f.canonicalGameId,f]));
+  const clear=priorYear!==season&&currentIsValidFuture;
+  if(clear)clearedMalformedLegacyFailures.push({...f,clearedReason:'Recorded kickoff was outside the selected season while the same canonical game remained a valid future selected-week event.'});
+  return !clear;
+});
+const priorFailures=new Map(retainedPriorFailures.map(f=>[f.canonicalGameId,f]));
 
 for(const game of games){
   if(game.status==='FINAL_SNAPSHOT_MISSING'||game.status==='INVALID_PRE_KICKOFF_SNAPSHOT'){
