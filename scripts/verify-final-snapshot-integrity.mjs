@@ -51,12 +51,29 @@ const games=(board.games||[]).map(game=>{
   const canonicalGameId=game.gameId||game.canonicalGameId;
   const kickoffMs=Date.parse(game.dateTime||game.kickoff||'');
   const snapshot=byGameId.get(canonicalGameId);
+  const kickoffYear=Number.isFinite(kickoffMs)?new Date(kickoffMs).getUTCFullYear():null;
+  const validKickoffProvenance=kickoffYear===season;
   let status='PENDING';
   if(snapshot?.valid)status='PASS';
-  else if(Number.isFinite(kickoffMs)&&kickoffMs<=asOf.getTime())status='FINAL_SNAPSHOT_MISSING';
+  else if(!validKickoffProvenance)status='INVALID_KICKOFF_PROVENANCE';
+  else if(kickoffMs<=asOf.getTime())status='FINAL_SNAPSHOT_MISSING';
   else if(snapshot&&!snapshot.valid)status='INVALID_PRE_KICKOFF_SNAPSHOT';
   return {canonicalGameId,game:`${game.away} at ${game.home}`,kickoff:Number.isFinite(kickoffMs)?new Date(kickoffMs).toISOString():null,status,snapshotFile:snapshot?.file||null,frozenAt:snapshot?.frozenAt||null};
 });
+
+// A malformed date parse must never manufacture an irreversible historical failure.
+// Retain every genuine prior miss, but discard only prior rows whose recorded kickoff
+// was outside the selected season while the same canonical game is currently governed
+// as a valid future selected-week event.
+const currentById=new Map(games.map(g=>[g.canonicalGameId,g]));
+const priorFailures=new Map((previous?.permanentFailures||[]).filter(f=>{
+  const current=currentById.get(f.canonicalGameId);
+  const priorMs=Date.parse(f.kickoff||'');
+  const priorYear=Number.isFinite(priorMs)?new Date(priorMs).getUTCFullYear():null;
+  const currentMs=Date.parse(current?.kickoff||'');
+  const currentIsValidFuture=current?.status==='PENDING'&&Number.isFinite(currentMs)&&new Date(currentMs).getUTCFullYear()===season&&currentMs>asOf.getTime();
+  return !(priorYear!==season&&currentIsValidFuture);
+}).map(f=>[f.canonicalGameId,f]));
 
 for(const game of games){
   if(game.status==='FINAL_SNAPSHOT_MISSING'||game.status==='INVALID_PRE_KICKOFF_SNAPSHOT'){
@@ -68,14 +85,15 @@ const acknowledgedFailures=permanentFailures.filter(item=>acknowledgedIds.has(it
 const unacknowledgedFailures=permanentFailures.filter(item=>!acknowledgedIds.has(item.canonicalGameId));
 const passedGames=games.filter(game=>game.status==='PASS');
 const pendingGames=games.filter(game=>game.status==='PENDING');
+const invalidKickoffGames=games.filter(game=>game.status==='INVALID_KICKOFF_PROVENANCE');
 const artifact={
   schemaVersion:'cfb-final-snapshot-integrity-v2',sport:'CFB',season,week,verifiedAt:asOf.toISOString(),
-  status:unacknowledgedFailures.length?'FAIL':acknowledgedFailures.length?'PASS-WITH-PERMANENT-EXCEPTION':pendingGames.length?'IN_PROGRESS':'PASS',
-  blocking:unacknowledgedFailures.length>0,
-  counts:{selectedWeekGames:games.length,validPreKickoffSnapshots:passedGames.length,pendingBeforeKickoff:pendingGames.length,permanentFailures:permanentFailures.length,acknowledgedPermanentExceptions:acknowledgedFailures.length,unacknowledgedPermanentFailures:unacknowledgedFailures.length},
-  permanentFailures,acknowledgedFailures,unacknowledgedFailures,pendingGames,passedGames,clearedMalformedLegacyFailures,
+  status:unacknowledgedFailures.length||invalidKickoffGames.length?'FAIL':acknowledgedFailures.length?'PASS-WITH-PERMANENT-EXCEPTION':pendingGames.length?'IN_PROGRESS':'PASS',
+  blocking:unacknowledgedFailures.length>0||invalidKickoffGames.length>0,
+  counts:{selectedWeekGames:games.length,validPreKickoffSnapshots:passedGames.length,pendingBeforeKickoff:pendingGames.length,invalidKickoffProvenance:invalidKickoffGames.length,permanentFailures:permanentFailures.length,acknowledgedPermanentExceptions:acknowledgedFailures.length,unacknowledgedPermanentFailures:unacknowledgedFailures.length},
+  permanentFailures,acknowledgedFailures,unacknowledgedFailures,invalidKickoffGames,pendingGames,passedGames,clearedMalformedLegacyFailures,
   exceptionLedger:'data/final-snapshot-exceptions.json',
   governance:'A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure. A prior failure may be cleared only when its recorded kickoff is demonstrably malformed outside the governed season and the canonical kickoff was still in the future when the false failure was first detected.'
 };
 await fs.writeFile(artifactPath,JSON.stringify(artifact,null,2)+'\n');
-console.log(`Final snapshot integrity ${artifact.status}: ${passedGames.length} valid, ${pendingGames.length} pending, ${acknowledgedFailures.length} acknowledged exceptions, ${unacknowledgedFailures.length} blocking failures`);
+console.log(`Final snapshot integrity ${artifact.status}: ${passedGames.length} valid, ${pendingGames.length} pending, ${invalidKickoffGames.length} invalid kickoff provenance, ${acknowledgedFailures.length} acknowledged exceptions, ${unacknowledgedFailures.length} blocking failures`);
