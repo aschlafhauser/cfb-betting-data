@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 12,
-  "updatedAt": "2026-11-18T17:34:39.607Z",
+  "updatedAt": "2026-11-18T18:33:22.942Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-18T17:32:19.833Z",
+      "checkedAt": "2026-11-18T18:33:22.942Z",
       "unstartedGames": 67,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -231,15 +231,17 @@
     },
     "marketCoverage": {
       "status": "PASS-SOURCE-LIMITED",
-      "minimumRequired": 22,
+      "minimumRequired": 24,
       "actualMarketGames": 65,
-      "dueGames": 22,
-      "dueMarketGames": 22,
+      "dueGames": 25,
+      "dueMarketGames": 24,
       "startedGamesExcluded": 3,
-      "laterGamesOutsideBlockingWindow": 45,
-      "explicitSourceLimitedExemptions": [],
+      "laterGamesOutsideBlockingWindow": 42,
+      "explicitSourceLimitedExemptions": [
+        "ESPN-401856750"
+      ],
       "deadlineHours": 72,
-      "detail": "Every game inside the 72-hour market deadline has governed spread/total coverage; later-week unpublished prices remain explicitly source-limited. 3 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity. 45 later-week game(s) remain outside the 72-hour blocking window; unpublished prices stay null and source-limited."
+      "detail": "Every game inside the 72-hour market deadline has governed spread/total coverage; later-week unpublished prices remain explicitly source-limited. 3 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity. 42 later-week game(s) remain outside the 72-hour blocking window; unpublished prices stay null and source-limited."
     },
     "deepDiveEvidence": {
       "status": "PASS",
@@ -253,9 +255,9 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-18T17:32:16.430Z",
+      "verifiedAt": "2026-11-18T18:33:17.819Z",
       "artifact": "data/statistical-display-integrity-2026-w12.json",
-      "detail": "Team/stat coverage 140/140; ESPN FPI 137 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 140/140; ESPN FPI 137 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/15."
     },
     "marketDerivedIntegrity": {
       "status": "FAIL",
@@ -294,26 +296,25 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-18T17:34:39.607Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-18T17:30:58.557Z",
+      "verifiedAt": "2026-11-18T18:31:34.778Z",
       "artifact": "data/final-snapshot-integrity-2026-w12.json",
-      "validSnapshots": 3,
-      "pendingBeforeKickoff": 67,
+      "validSnapshots": 5,
+      "pendingBeforeKickoff": 65,
       "permanentFailures": [],
       "acknowledgedExceptions": [],
       "unacknowledgedFailures": [],
-      "detail": "3 valid immutable snapshots; 67 games remain pending before kickoff."
+      "detail": "5 valid immutable snapshots; 65 games remain pending before kickoff."
     },
     "preKickoffSnapshots": {
       "status": "IN_PROGRESS",
       "blocking": false,
       "artifact": "data/final-snapshot-integrity-2026-w12.json",
-      "detail": "3 valid immutable snapshots; 67 games remain pending before kickoff."
+      "detail": "5 valid immutable snapshots; 65 games remain pending before kickoff."
     }
   },
   "failures": [

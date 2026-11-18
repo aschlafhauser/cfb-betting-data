@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401866469",
+  "matchup": "Central Michigan at Buffalo",
+  "kickoff": "2026-11-19T00:30:00.000Z",
+  "frozenAt": "2026-11-18T18:31:34.730Z",
+  "minutesBeforeKickoff": 358.4,
+  "immutable": true,
+  "market": {
+    "spread": "BUF -2.5",
+    "total": 46.5,
+    "moneyline": "Central Michigan +120 / Buffalo -142",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-18T18:31:34.102Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Buffalo -1.5",
+    "marketCalibratedHomeMargin": 1.643333333333333,
+    "marketCalibratedEdge": 0.8566666666666669,
+    "independentFair": "Buffalo -2",
+    "independentHomeMargin": 2.03304054185414,
+    "independentEdge": 0.46695945814586004,
+    "independentSide": "Central Michigan",
+    "ensembleFair": "Buffalo -2",
+    "ensembleHomeMargin": 1.8576722980197768,
+    "ensembleEdge": 0.6423277019802232,
+    "selectedModel": "ensemble",
+    "governedFair": "Buffalo -2",
+    "governedTotal": 46
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-18T18:22:39.557Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-18T18:22:39.305Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-18T18:23:26.551Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 1.643333333333333
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 1.8576722980197768
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-18T18:23:26.551Z",
+    "inputDates": {
+      "fpi": "2026-11-18T18:22:39.557Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-18T18:22:39.305Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "BUF -2.5",
+    "sourceObservedAt": "2026-11-15T18:22:27.976Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-18T18:31:34.102Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-18T18:31:34.102Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 66,
+        "independentCount": 66,
+        "ensembleCount": 66,
+        "rejected": 0
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
