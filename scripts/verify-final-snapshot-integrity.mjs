@@ -1,3 +1,4 @@
+// Full-runtime rerun marker: corrected Week 12 governance gates.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
