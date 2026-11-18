@@ -35,7 +35,18 @@ for(const record of snapshots){
   if(!current||(!current.valid&&valid))byGameId.set(record.snapshot.canonicalGameId,{...record,valid,frozenAt:record.snapshot.frozenAt||null,kickoff:record.snapshot.kickoff||null});
 }
 
-const priorFailures=new Map((previous?.permanentFailures||[]).map(f=>[f.canonicalGameId,f]));
+const canonicalKickoffs=new Map((board.games||[]).map(game=>[game.gameId||game.canonicalGameId,Date.parse(game.dateTime||game.kickoff||'')]));
+const clearedMalformedLegacyFailures=[];
+const retainedPriorFailures=(previous?.permanentFailures||[]).filter(f=>{
+  const currentKickoff=canonicalKickoffs.get(f.canonicalGameId);
+  const recordedKickoff=Date.parse(f.kickoff||'');
+  const firstDetected=Date.parse(f.firstDetectedAt||'');
+  const malformedLegacy=Number.isFinite(recordedKickoff)&&new Date(recordedKickoff).getUTCFullYear()<season-1;
+  const demonstrablyPreKickoff=Number.isFinite(currentKickoff)&&Number.isFinite(firstDetected)&&currentKickoff>firstDetected;
+  if(malformedLegacy&&demonstrablyPreKickoff){clearedMalformedLegacyFailures.push({...f,clearedReason:'Malformed legacy kickoff parse predated the governed season while the canonical kickoff was still in the future at detection.'});return false}
+  return true;
+});
+const priorFailures=new Map(retainedPriorFailures.map(f=>[f.canonicalGameId,f]));
 const games=(board.games||[]).map(game=>{
   const canonicalGameId=game.gameId||game.canonicalGameId;
   const kickoffMs=Date.parse(game.dateTime||game.kickoff||'');
@@ -62,9 +73,9 @@ const artifact={
   status:unacknowledgedFailures.length?'FAIL':acknowledgedFailures.length?'PASS-WITH-PERMANENT-EXCEPTION':pendingGames.length?'IN_PROGRESS':'PASS',
   blocking:unacknowledgedFailures.length>0,
   counts:{selectedWeekGames:games.length,validPreKickoffSnapshots:passedGames.length,pendingBeforeKickoff:pendingGames.length,permanentFailures:permanentFailures.length,acknowledgedPermanentExceptions:acknowledgedFailures.length,unacknowledgedPermanentFailures:unacknowledgedFailures.length},
-  permanentFailures,acknowledgedFailures,unacknowledgedFailures,pendingGames,passedGames,
+  permanentFailures,acknowledgedFailures,unacknowledgedFailures,pendingGames,passedGames,clearedMalformedLegacyFailures,
   exceptionLedger:'data/final-snapshot-exceptions.json',
-  governance:'A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure.'
+  governance:'A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure. A prior failure may be cleared only when its recorded kickoff is demonstrably malformed outside the governed season and the canonical kickoff was still in the future when the false failure was first detected.'
 };
 await fs.writeFile(artifactPath,JSON.stringify(artifact,null,2)+'\n');
 console.log(`Final snapshot integrity ${artifact.status}: ${passedGames.length} valid, ${pendingGames.length} pending, ${acknowledgedFailures.length} acknowledged exceptions, ${unacknowledgedFailures.length} blocking failures`);
