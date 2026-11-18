@@ -1,14 +1,17 @@
 {
   "season": 2026,
   "week": 12,
-  "verifiedAt": "2026-11-18T13:31:11.914Z",
+  "verifiedAt": "2026-11-18T14:38:15.955Z",
   "status": "FAIL",
-  "detail": "Independently reconciled 189 model/market arithmetic records across Market-Calibrated, Football Independent and Ensemble; verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
+  "detail": "Independently reconciled 189 model/market arithmetic records across 65 fully comparable priced games; 0 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
   "dependencies": {
-    "canonicalBoardUpdatedAt": "2026-11-18T13:21:21.054Z",
-    "verifiedAt": "2026-11-18T13:31:11.914Z"
+    "canonicalBoardUpdatedAt": "2026-11-18T14:24:56.124Z",
+    "verifiedAt": "2026-11-18T14:38:15.955Z"
   },
   "checks": {
+    "pricedGames": 65,
+    "eligibleMarketGames": 65,
+    "sourceLimitedExclusions": [],
     "records": 189,
     "requiredRecords": 195,
     "missingRecords": 6,
@@ -17,7 +20,7 @@
     "renderFailures": 0
   },
   "failures": [
-    "only 189/195 expected model/market arithmetic records were checkable for 65 currently priced games",
+    "only 189/195 expected model/market arithmetic records were checkable for 65 eligible currently priced games",
     "missing governed model/market records: ESPN-401856749:market, ESPN-401856749:independent, ESPN-401856749:ensemble, ESPN-401856746:market, ESPN-401856746:independent, ESPN-401856746:ensemble"
   ]
 }
