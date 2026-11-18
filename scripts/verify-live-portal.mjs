@@ -45,7 +45,7 @@ for(let attempt=1;attempt<=8;attempt++){
   const deepDiveComplete=games.filter(g=>['COMPLETE','COMPLETE-SOURCE-LIMITED'].includes(g.deepDiveStatus)&&Number(g.deepDiveEvidenceCount)>0).length;
   const falseDeepDive=games.filter(g=>/deep-dive-complete/i.test(g.stage||'')&&!(['COMPLETE','COMPLETE-SOURCE-LIMITED'].includes(g.deepDiveStatus)&&Number(g.deepDiveEvidenceCount)>0)).length;
   const integrity=document.getElementById('runtimeIntegrity')?.textContent?.trim()||'',dossiers=window.CFB_DEEP_DIVES_CURRENT?.dossiers||[],movers=window.CFB_MARKET_MOVERS_CURRENT?.movers||[];
-  let matchPanel=false;try{const s=document.getElementById('matchSel');if(s&&s.options.length){s.selectedIndex=0;s.dispatchEvent(new Event('change',{bubbles:true}));if(typeof window.renderMatch==='function')window.renderMatch();}}catch{}matchPanel=!!document.getElementById('governedDeepDivePanel');
+  let matchPanel=false;try{const s=document.getElementById('matchSel');if(s&&s.options.length){s.selectedIndex=0;s.dispatchEvent(new Event('change',{bubbles:true}));}}catch{}matchPanel=!!document.getElementById('governedDeepDivePanel');
   try{if(typeof window.renderLongshotUpsetLab==='function')window.renderLongshotUpsetLab()}catch{}
   try{if(typeof window.renderUnderdogSpecial==='function')window.renderUnderdogSpecial()}catch{}
   const longshotRuntime=(window.CFB_LONGSHOT_UPSET_LAB_2026?.candidates||[]).length;
