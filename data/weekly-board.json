@@ -1,6 +1,6 @@
 {
   "week": 12,
-  "updatedAt": "2026-11-18T23:20:50.502Z",
+  "updatedAt": "2026-11-18T23:30:57.036Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
@@ -11,7 +11,7 @@
     "scheduleHydrationError": null,
     "marketGameCount": 65,
     "deepDiveCompleteCount": 70,
-    "note": "Canonical Week 12 refreshed from one ESPN snapshot: schedule=70; priced markets=65. Fresh indicative CBS fallback quotes retain their own source and timestamp. Missing quotes remain null and are never carried forward as a mixed snapshot.",
+    "note": "Canonical Week 12: schedule=70/70; completed research=70/70; full-evidence=0; source-limited=70.",
     "deepDiveFullEvidenceCount": 0,
     "deepDiveSourceLimitedCount": 70,
     "marketSnapshotAt": "2026-11-18T23:20:50.502Z"
@@ -1272,19 +1272,19 @@
       "currentMoneyline": "Akron +140 / Massachusetts -166",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Massachusetts -4",
-      "modelTotal": null,
-      "modelEdgeMagnitude": 0.2807625459041807,
+      "modelTotal": 47.5,
+      "modelEdgeMagnitude": 0.7678806166122025,
       "finalExecutableEdge": null,
       "independentFootballFair": "Massachusetts -3.5",
       "independentFootballHomeMargin": 3.6648251822763758,
-      "independentFootballEdge": 0.16482518227637577,
+      "independentFootballEdge": 0.6648251822763758,
       "independentFootballSide": "Massachusetts",
       "independentFootballConfidence": "High",
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
       "deepDiveEvidenceCount": 9,
-      "confidence": "Medium",
+      "confidence": "High",
       "informationQuality": "market-available",
       "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
       "action": "PASS/WATCH pending Bet Activation Gate",
@@ -1296,8 +1296,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.973Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Massachusetts",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 3,
         "power": 0.09333333333333332,
@@ -1562,10 +1562,9 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
-      "modelHomeMargin": 3.7807625459041807,
+      "modelHomeMargin": 3.7678806166122025,
       "spreadLean": "Massachusetts",
       "selectedModel": "ensemble",
       "shadowModels": {
@@ -1573,26 +1572,26 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:07.992Z",
+        "computedAt": "2026-11-18T23:22:33.003Z",
         "marketAnchorCandidate": {
-          "homeMargin": 4.422463768115942
+          "homeMargin": 3.922463768115942
         },
         "ensembleAnchorCandidate": {
-          "homeMargin": 4.00576254590418
+          "homeMargin": 3.7678806166122025
         }
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:07.992Z",
+        "computedAt": "2026-11-18T23:22:33.003Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -1604,7 +1603,7 @@
         "market": {
           "fair": "Massachusetts -4",
           "homeMargin": 3.922463768115942,
-          "edge": 0.422463768115942,
+          "edge": 0.922463768115942,
           "side": "Massachusetts",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -1627,7 +1626,7 @@
         "independent": {
           "fair": "Massachusetts -3.5",
           "homeMargin": 3.6648251822763758,
-          "edge": 0.16482518227637577,
+          "edge": 0.6648251822763758,
           "side": "Massachusetts",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -1654,20 +1653,22 @@
         },
         "ensemble": {
           "fair": "Massachusetts -4",
-          "homeMargin": 3.7807625459041807,
-          "edge": 0.2807625459041807,
+          "homeMargin": 3.7678806166122025,
+          "edge": 0.7678806166122025,
           "side": "Massachusetts",
-          "confidence": "Medium",
+          "confidence": "High",
           "modelVersion": "1.2-input-integrity",
           "components": {
             "independent": 3.6648251822763758,
             "marketCalibrated": 3.922463768115942,
-            "independentWeight": 0.55,
-            "marketWeight": 0.44999999999999996,
-            "agreement": false
+            "independentWeight": 0.6,
+            "marketWeight": 0.4,
+            "agreement": true
           },
-          "tags": [],
-          "decisionScore": 0.34253030600310047
+          "tags": [
+            "Model Consensus"
+          ],
+          "decisionScore": 1.486814352266887
         }
       },
       "marketUpdatedAt": "2026-11-18T23:20:50.502Z",
@@ -1685,7 +1686,7 @@
       "currentMoneyline": "Central Michigan +120 / Buffalo -142",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Buffalo -2",
-      "modelTotal": null,
+      "modelTotal": 46,
       "modelEdgeMagnitude": 0.641365201980223,
       "finalExecutableEdge": null,
       "independentFootballFair": "Buffalo -2",
@@ -1709,8 +1710,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.976Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Central Michigan",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 2.5,
         "power": -0.0066666666666666706,
@@ -1975,8 +1976,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 1.858634798019777,
       "spreadLean": "Central Michigan",
@@ -1986,12 +1986,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:07.998Z",
+        "computedAt": "2026-11-18T23:22:33.011Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.643333333333333
         },
@@ -2001,11 +2001,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:07.998Z",
+        "computedAt": "2026-11-18T23:22:33.011Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -2098,7 +2098,7 @@
       "currentMoneyline": "Rice +124 / Temple -148",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Temple -3.5",
-      "modelTotal": null,
+      "modelTotal": 51.5,
       "modelEdgeMagnitude": 0.5143144759847251,
       "finalExecutableEdge": null,
       "independentFootballFair": "Temple -3.5",
@@ -2122,8 +2122,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.979Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Temple",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 4,
         "power": 0.09571428571428575,
@@ -2388,8 +2388,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 3.514314475984725,
       "spreadLean": "Temple",
@@ -2399,12 +2398,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.004Z",
+        "computedAt": "2026-11-18T23:22:33.018Z",
         "marketAnchorCandidate": {
           "homeMargin": 2.47527950310559
         },
@@ -2414,11 +2413,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.004Z",
+        "computedAt": "2026-11-18T23:22:33.018Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -2511,7 +2510,7 @@
       "currentMoneyline": "Iowa State +105 / UCF -125",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "UCF -0.5",
-      "modelTotal": null,
+      "modelTotal": 48,
       "modelEdgeMagnitude": 1.9066144098775046,
       "finalExecutableEdge": null,
       "independentFootballFair": "Pick",
@@ -2535,8 +2534,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.984Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Iowa State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 1.5,
         "power": 0.4684523809523809,
@@ -2801,8 +2800,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 0.5933855901224953,
       "spreadLean": "Iowa State",
@@ -2812,12 +2810,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.011Z",
+        "computedAt": "2026-11-18T23:22:33.027Z",
         "marketAnchorCandidate": {
           "homeMargin": 2.5633915113871635
         },
@@ -2827,11 +2825,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.011Z",
+        "computedAt": "2026-11-18T23:22:33.027Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -2927,7 +2925,7 @@
       "currentMoneyline": "Clemson +400 / Duke -535",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Duke -6.5",
-      "modelTotal": null,
+      "modelTotal": 40,
       "modelEdgeMagnitude": 7.221990887954161,
       "finalExecutableEdge": null,
       "independentFootballFair": "Duke -5",
@@ -2951,8 +2949,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.985Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Clemson",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 8.5,
         "power": -0.27619047619047615,
@@ -3217,8 +3215,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 6.278009112045839,
       "spreadLean": "Clemson",
@@ -3228,12 +3225,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.012Z",
+        "computedAt": "2026-11-18T23:22:33.028Z",
         "marketAnchorCandidate": {
           "homeMargin": 12.950053962182453
         },
@@ -3243,11 +3240,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.012Z",
+        "computedAt": "2026-11-18T23:22:33.028Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -3343,7 +3340,7 @@
       "currentMoneyline": "Bowling Green +525 / Toledo -750",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Toledo -13.5",
-      "modelTotal": null,
+      "modelTotal": 48,
       "modelEdgeMagnitude": 3.187716194799691,
       "finalExecutableEdge": null,
       "independentFootballFair": "Toledo -10.5",
@@ -3367,8 +3364,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.988Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Toledo",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 15.5,
         "power": 0.12999999999999995,
@@ -3633,8 +3630,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 13.312283805200309,
       "spreadLean": "Bowling Green",
@@ -3644,12 +3640,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.019Z",
+        "computedAt": "2026-11-18T23:22:33.038Z",
         "marketAnchorCandidate": {
           "homeMargin": 17.64462242562929
         },
@@ -3659,11 +3655,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.019Z",
+        "computedAt": "2026-11-18T23:22:33.038Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -3756,7 +3752,7 @@
       "currentMoneyline": "Oregon -900 / Michigan State +600",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Oregon -16",
-      "modelTotal": null,
+      "modelTotal": 44.5,
       "modelEdgeMagnitude": 0.36835671977300777,
       "finalExecutableEdge": null,
       "independentFootballFair": "Oregon -17",
@@ -3780,8 +3776,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.990Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Michigan State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -13.5,
         "power": -0.4533333333333333,
@@ -4046,8 +4042,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -16.131643280226992,
       "spreadLean": "Michigan State",
@@ -4057,12 +4052,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.024Z",
+        "computedAt": "2026-11-18T23:22:33.044Z",
         "marketAnchorCandidate": {
           "homeMargin": -17.22096545591067
         },
@@ -4072,11 +4067,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.024Z",
+        "computedAt": "2026-11-18T23:22:33.044Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -4169,7 +4164,7 @@
       "currentMoneyline": "UTEP +1100 / Air Force -2100",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Air Force -17.5",
-      "modelTotal": null,
+      "modelTotal": 47,
       "modelEdgeMagnitude": 5.195134766517956,
       "finalExecutableEdge": null,
       "independentFootballFair": "Air Force -13.5",
@@ -4193,8 +4188,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.993Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean UTEP",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 21.5,
         "power": 0.31666666666666665,
@@ -4459,8 +4454,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 17.304865233482044,
       "spreadLean": "UTEP",
@@ -4470,12 +4464,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.029Z",
+        "computedAt": "2026-11-18T23:22:33.051Z",
         "marketAnchorCandidate": {
           "homeMargin": 22.77044251905795
         },
@@ -4485,11 +4479,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.029Z",
+        "computedAt": "2026-11-18T23:22:33.051Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -4582,7 +4576,7 @@
       "currentMoneyline": "New Mexico -305 / Wyoming +245",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "New Mexico -7.5",
-      "modelTotal": null,
+      "modelTotal": 37.5,
       "modelEdgeMagnitude": 0.20485894664804238,
       "finalExecutableEdge": null,
       "independentFootballFair": "New Mexico -5",
@@ -4606,8 +4600,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.996Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "New Mexico ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": -9.5,
         "power": -0.3672619047619048,
@@ -4872,8 +4866,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -7.295141053351958,
       "spreadLean": "Wyoming",
@@ -4883,12 +4876,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.036Z",
+        "computedAt": "2026-11-18T23:22:33.060Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.60700916454757
         },
@@ -4898,11 +4891,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.036Z",
+        "computedAt": "2026-11-18T23:22:33.060Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -4995,7 +4988,7 @@
       "currentMoneyline": "Virginia Tech +900 / Miami -1600",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Miami -18",
-      "modelTotal": null,
+      "modelTotal": 61,
       "modelEdgeMagnitude": 2.4639396725106124,
       "finalExecutableEdge": null,
       "independentFootballFair": "Miami -15.5",
@@ -5019,8 +5012,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.997Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Miami",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 19.5,
         "power": 0.21940476190476188,
@@ -5285,8 +5278,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 18.036060327489388,
       "spreadLean": "Virginia Tech",
@@ -5296,12 +5288,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.037Z",
+        "computedAt": "2026-11-18T23:22:33.061Z",
         "marketAnchorCandidate": {
           "homeMargin": 22.36975258799172
         },
@@ -5311,11 +5303,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.037Z",
+        "computedAt": "2026-11-18T23:22:33.061Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -5408,7 +5400,7 @@
       "currentMoneyline": "Wake Forest -1600 / Georgia Tech +900",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Wake Forest -14",
-      "modelTotal": null,
+      "modelTotal": 56,
       "modelEdgeMagnitude": 6.822455813007647,
       "finalExecutableEdge": null,
       "independentFootballFair": "Wake Forest -8",
@@ -5432,8 +5424,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.997Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Wake Forest",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -21,
         "power": 0.13333333333333333,
@@ -5698,8 +5690,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -14.177544186992353,
       "spreadLean": "Georgia Tech",
@@ -5709,12 +5700,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.037Z",
+        "computedAt": "2026-11-18T23:22:33.061Z",
         "marketAnchorCandidate": {
           "homeMargin": -21.90240579710145
         },
@@ -5724,11 +5715,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.037Z",
+        "computedAt": "2026-11-18T23:22:33.061Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -5821,7 +5812,7 @@
       "currentMoneyline": "Pittsburgh +425 / Louisville -575",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Louisville -4.5",
-      "modelTotal": null,
+      "modelTotal": 50,
       "modelEdgeMagnitude": 9.673599683652954,
       "finalExecutableEdge": null,
       "independentFootballFair": "Pittsburgh -1",
@@ -5845,8 +5836,8 @@
         "sourceObservedAt": "2026-11-15T18:22:27.998Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Pittsburgh ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": 12.5,
         "power": 0.047619047619047596,
@@ -6111,8 +6102,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 4.326400316347046,
       "spreadLean": "Pittsburgh",
@@ -6122,12 +6112,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.038Z",
+        "computedAt": "2026-11-18T23:22:33.062Z",
         "marketAnchorCandidate": {
           "homeMargin": 13.487497308488614
         },
@@ -6137,11 +6127,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.038Z",
+        "computedAt": "2026-11-18T23:22:33.062Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -6237,7 +6227,7 @@
       "currentMoneyline": "North Texas -238 / Tulane +195",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "North Texas -6",
-      "modelTotal": null,
+      "modelTotal": 55,
       "modelEdgeMagnitude": 0.6087086397126491,
       "finalExecutableEdge": null,
       "independentFootballFair": "North Texas -2.5",
@@ -6261,8 +6251,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.002Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean North Texas",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -11.5,
         "power": 0.1994047619047619,
@@ -6527,8 +6517,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -5.891291360287351,
       "spreadLean": "Tulane",
@@ -6538,12 +6527,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.045Z",
+        "computedAt": "2026-11-18T23:22:33.074Z",
         "marketAnchorCandidate": {
           "homeMargin": -6.792717328719248
         },
@@ -6553,11 +6542,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.045Z",
+        "computedAt": "2026-11-18T23:22:33.074Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -6650,7 +6639,7 @@
       "currentMoneyline": "BYU -225 / Kansas +185",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "BYU -9.5",
-      "modelTotal": null,
+      "modelTotal": 47.5,
       "modelEdgeMagnitude": 4.079173563053818,
       "finalExecutableEdge": null,
       "independentFootballFair": "BYU -10.5",
@@ -6674,8 +6663,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.003Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "BYU ATS",
+      "modelGrade": "B+",
       "modelComponents": {
         "base": -6.5,
         "power": -0.3134523809523809,
@@ -6940,8 +6929,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -9.579173563053818,
       "spreadLean": "BYU",
@@ -6951,12 +6939,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.049Z",
+        "computedAt": "2026-11-18T23:22:33.080Z",
         "marketAnchorCandidate": {
           "homeMargin": -7.358137580272329
         },
@@ -6966,11 +6954,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.049Z",
+        "computedAt": "2026-11-18T23:22:33.080Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -7298,11 +7286,11 @@
       "shadowModels": null,
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.049Z",
+        "computedAt": "2026-11-18T23:22:33.080Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": null,
@@ -7351,7 +7339,7 @@
       "currentMoneyline": "Ohio State -162 / Nebraska +136",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Ohio State -4.5",
-      "modelTotal": null,
+      "modelTotal": 41,
       "modelEdgeMagnitude": 1.4714600455650562,
       "finalExecutableEdge": null,
       "independentFootballFair": "Ohio State -5.5",
@@ -7375,8 +7363,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.008Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Ohio State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -3.5,
         "power": -0.1436904761904762,
@@ -7641,8 +7629,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -4.471460045565056,
       "spreadLean": "Ohio State",
@@ -7652,12 +7639,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.060Z",
+        "computedAt": "2026-11-18T23:22:33.093Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.0396809455379503
         },
@@ -7667,11 +7654,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.060Z",
+        "computedAt": "2026-11-18T23:22:33.093Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -7764,7 +7751,7 @@
       "currentMoneyline": "Vanderbilt +400 / Florida -535",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Florida -13.5",
-      "modelTotal": null,
+      "modelTotal": 47,
       "modelEdgeMagnitude": 0.08677992661277045,
       "finalExecutableEdge": null,
       "independentFootballFair": "Florida -13.5",
@@ -7788,8 +7775,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.011Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Vanderbilt",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 13.5,
         "power": 0.07261904761904764,
@@ -8054,8 +8041,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 13.41322007338723,
       "spreadLean": "Vanderbilt",
@@ -8065,12 +8051,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.064Z",
+        "computedAt": "2026-11-18T23:22:33.100Z",
         "marketAnchorCandidate": {
           "homeMargin": 13.327353137966998
         },
@@ -8080,11 +8066,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.064Z",
+        "computedAt": "2026-11-18T23:22:33.100Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -8177,7 +8163,7 @@
       "currentMoneyline": "Texas A&M +245 / Oklahoma -305",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Oklahoma -3.5",
-      "modelTotal": null,
+      "modelTotal": 38.5,
       "modelEdgeMagnitude": 4.081827507915359,
       "finalExecutableEdge": null,
       "independentFootballFair": "Oklahoma -3.5",
@@ -8203,8 +8189,8 @@
         "sourceObservedAt": "2026-11-15T18:21:28.538Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Texas A&M ATS",
+      "modelGrade": "A-",
       "modelComponents": {
         "base": 2.5,
         "power": 0,
@@ -8469,8 +8455,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 3.418172492084641,
       "spreadLean": "Texas A&M",
@@ -8480,12 +8465,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.075Z",
+        "computedAt": "2026-11-18T23:22:33.114Z",
         "marketAnchorCandidate": {
           "homeMargin": 8.3836
         },
@@ -8495,11 +8480,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.075Z",
+        "computedAt": "2026-11-18T23:22:33.114Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -8594,7 +8579,7 @@
       "currentMoneyline": "Colorado +136 / Cincinnati -162",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Cincinnati -2.5",
-      "modelTotal": null,
+      "modelTotal": 59,
       "modelEdgeMagnitude": 0.29440591932160043,
       "finalExecutableEdge": null,
       "independentFootballFair": "Cincinnati -3.5",
@@ -8618,8 +8603,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.018Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Colorado",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 3,
         "power": -0.10488095238095237,
@@ -8884,8 +8869,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 2.7055940806783996,
       "spreadLean": "Colorado",
@@ -8895,12 +8879,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.080Z",
+        "computedAt": "2026-11-18T23:22:33.119Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.7696952290935277
         },
@@ -8910,11 +8894,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.080Z",
+        "computedAt": "2026-11-18T23:22:33.119Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -9007,7 +8991,7 @@
       "currentMoneyline": "Syracuse -135 / Boston College +114",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Syracuse -2",
-      "modelTotal": null,
+      "modelTotal": 50,
       "modelEdgeMagnitude": 0.5958128112560548,
       "finalExecutableEdge": null,
       "independentFootballFair": "Syracuse -0.5",
@@ -9031,8 +9015,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.018Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Syracuse",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -3.5,
         "power": -0.20714285714285713,
@@ -9297,8 +9281,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -1.9041871887439452,
       "spreadLean": "Boston College",
@@ -9308,12 +9291,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.080Z",
+        "computedAt": "2026-11-18T23:22:33.120Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.061987792652411
         },
@@ -9323,11 +9306,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.080Z",
+        "computedAt": "2026-11-18T23:22:33.120Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -9420,7 +9403,7 @@
       "currentMoneyline": "Northwestern -155 / Minnesota +130",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Northwestern -2.5",
-      "modelTotal": null,
+      "modelTotal": 42.5,
       "modelEdgeMagnitude": 0.4411362889702768,
       "finalExecutableEdge": null,
       "independentFootballFair": "Northwestern -2",
@@ -9444,8 +9427,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.022Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Northwestern",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -3,
         "power": 0.1283333333333333,
@@ -9710,8 +9693,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -2.558863711029723,
       "spreadLean": "Minnesota",
@@ -9721,12 +9703,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.089Z",
+        "computedAt": "2026-11-18T23:22:33.132Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.041774388047478
         },
@@ -9736,11 +9718,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.089Z",
+        "computedAt": "2026-11-18T23:22:33.132Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -9833,7 +9815,7 @@
       "currentMoneyline": "Wisconsin -230 / Purdue +190",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Wisconsin -5",
-      "modelTotal": null,
+      "modelTotal": 46,
       "modelEdgeMagnitude": 0.89165804734409,
       "finalExecutableEdge": null,
       "independentFootballFair": "Wisconsin -2.5",
@@ -9857,8 +9839,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.025Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Wisconsin ATS",
+      "modelGrade": "B+",
       "modelComponents": {
         "base": -6.5,
         "power": -0.3405952380952381,
@@ -10123,8 +10105,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -5.10834195265591,
       "spreadLean": "Purdue",
@@ -10134,12 +10115,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.096Z",
+        "computedAt": "2026-11-18T23:22:33.141Z",
         "marketAnchorCandidate": {
           "homeMargin": -7.866400864693703
         },
@@ -10149,11 +10130,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.096Z",
+        "computedAt": "2026-11-18T23:22:33.141Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -10246,7 +10227,7 @@
       "currentMoneyline": "East Carolina +190 / Army -230",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Army -4",
-      "modelTotal": null,
+      "modelTotal": 45.5,
       "modelEdgeMagnitude": 2.0920126620526105,
       "finalExecutableEdge": null,
       "independentFootballFair": "Army -3",
@@ -10270,8 +10251,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.028Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean East Carolina",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 6,
         "power": 0.05583333333333333,
@@ -10536,8 +10517,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 3.9079873379473895,
       "spreadLean": "East Carolina",
@@ -10547,12 +10527,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.103Z",
+        "computedAt": "2026-11-18T23:22:33.150Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.38884336677815
         },
@@ -10562,11 +10542,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.103Z",
+        "computedAt": "2026-11-18T23:22:33.150Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -10662,7 +10642,7 @@
       "currentMoneyline": "Memphis -170 / Navy +142",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Memphis -5.5",
-      "modelTotal": null,
+      "modelTotal": 67.5,
       "modelEdgeMagnitude": 2.1238285561763925,
       "finalExecutableEdge": null,
       "independentFootballFair": "Memphis -7.5",
@@ -10686,8 +10666,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.030Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Navy",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -3,
         "power": 0.16119047619047616,
@@ -10952,8 +10932,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -5.6238285561763925,
       "spreadLean": "Memphis",
@@ -10963,12 +10942,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.107Z",
+        "computedAt": "2026-11-18T23:22:33.155Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.675978205257371
         },
@@ -10978,11 +10957,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.107Z",
+        "computedAt": "2026-11-18T23:22:33.155Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -11077,7 +11056,7 @@
       "currentMoneyline": "North Carolina -102 / Virginia -118",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Virginia -5.5",
-      "modelTotal": null,
+      "modelTotal": 43,
       "modelEdgeMagnitude": 3.7821691927111614,
       "finalExecutableEdge": null,
       "independentFootballFair": "Virginia -8.5",
@@ -11101,8 +11080,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.030Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean North Carolina",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 1.5,
         "power": 0.21249999999999997,
@@ -11367,8 +11346,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 5.282169192711161,
       "spreadLean": "Virginia",
@@ -11378,12 +11356,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.108Z",
+        "computedAt": "2026-11-18T23:22:33.156Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.3938391304347824
         },
@@ -11393,11 +11371,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.108Z",
+        "computedAt": "2026-11-18T23:22:33.156Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -11493,7 +11471,7 @@
       "currentMoneyline": "Houston -325 / West Virginia +260",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Houston -9",
-      "modelTotal": null,
+      "modelTotal": 70.5,
       "modelEdgeMagnitude": 0.5849671000149517,
       "finalExecutableEdge": null,
       "independentFootballFair": "Houston -10.5",
@@ -11517,8 +11495,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.032Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean West Virginia",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -7,
         "power": -0.3594047619047619,
@@ -11783,8 +11761,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -9.084967100014952,
       "spreadLean": "Houston",
@@ -11794,12 +11771,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.113Z",
+        "computedAt": "2026-11-18T23:22:33.162Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.68900917849338
         },
@@ -11809,11 +11786,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.113Z",
+        "computedAt": "2026-11-18T23:22:33.162Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -11941,11 +11918,11 @@
       "shadowModels": null,
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.115Z",
+        "computedAt": "2026-11-18T23:22:33.165Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": null,
@@ -11973,7 +11950,7 @@
       "currentMoneyline": "Western Kentucky +575 / Liberty -850",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Liberty -12",
-      "modelTotal": null,
+      "modelTotal": 53.5,
       "modelEdgeMagnitude": 5.687742457220743,
       "finalExecutableEdge": null,
       "independentFootballFair": "Liberty -9",
@@ -11997,8 +11974,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.038Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Western Kentucky ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": 14.5,
         "power": -0.13845238095238094,
@@ -12263,8 +12240,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 11.812257542779257,
       "spreadLean": "Western Kentucky",
@@ -12274,12 +12250,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.119Z",
+        "computedAt": "2026-11-18T23:22:33.173Z",
         "marketAnchorCandidate": {
           "homeMargin": 18.524540336219772
         },
@@ -12289,11 +12265,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.119Z",
+        "computedAt": "2026-11-18T23:22:33.174Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -12619,11 +12595,11 @@
       "shadowModels": null,
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.120Z",
+        "computedAt": "2026-11-18T23:22:33.174Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": null,
@@ -12672,7 +12648,7 @@
       "currentMoneyline": "Charlotte +1100 / Tulsa -2100",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Tulsa -15.5",
-      "modelTotal": null,
+      "modelTotal": 52,
       "modelEdgeMagnitude": 7.218509870875465,
       "finalExecutableEdge": null,
       "independentFootballFair": "Tulsa -12",
@@ -12696,8 +12672,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.044Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Charlotte ATS",
+      "modelGrade": "B+",
       "modelComponents": {
         "base": 18.5,
         "power": 0.32464285714285707,
@@ -12962,8 +12938,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 15.281490129124535,
       "spreadLean": "Charlotte",
@@ -12973,12 +12948,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.126Z",
+        "computedAt": "2026-11-18T23:22:33.182Z",
         "marketAnchorCandidate": {
           "homeMargin": 23.042455683553875
         },
@@ -12988,11 +12963,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.126Z",
+        "computedAt": "2026-11-18T23:22:33.182Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -13087,7 +13062,7 @@
       "currentMoneyline": "Missouri State +320 / Jacksonville State -410",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Jacksonville State -8.5",
-      "modelTotal": null,
+      "modelTotal": 53.5,
       "modelEdgeMagnitude": 1.8868500983232046,
       "finalExecutableEdge": null,
       "independentFootballFair": "Jacksonville State -6.5",
@@ -13111,8 +13086,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.047Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Jacksonville State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 10,
         "power": 0.19285714285714287,
@@ -13377,8 +13352,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 8.613149901676795,
       "spreadLean": "Missouri State",
@@ -13388,12 +13362,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.133Z",
+        "computedAt": "2026-11-18T23:22:33.192Z",
         "marketAnchorCandidate": {
           "homeMargin": 11.29684965982206
         },
@@ -13403,11 +13377,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.133Z",
+        "computedAt": "2026-11-18T23:22:33.192Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -13502,7 +13476,7 @@
       "currentMoneyline": "Middle Tennessee -218 / Sam Houston +180",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Middle Tennessee -4",
-      "modelTotal": null,
+      "modelTotal": 48.5,
       "modelEdgeMagnitude": 1.5099260440047617,
       "finalExecutableEdge": null,
       "independentFootballFair": "Middle Tennessee -2",
@@ -13526,8 +13500,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.049Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Middle Tennessee",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -5.5,
         "power": -0.0033333333333333353,
@@ -13795,8 +13769,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -3.9900739559952383,
       "spreadLean": "Sam Houston",
@@ -13806,12 +13779,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.140Z",
+        "computedAt": "2026-11-18T23:22:33.201Z",
         "marketAnchorCandidate": {
           "homeMargin": -6.541159420289854
         },
@@ -13821,11 +13794,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.140Z",
+        "computedAt": "2026-11-18T23:22:33.201Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -13920,7 +13893,7 @@
       "currentMoneyline": "Iowa -325 / Illinois +260",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Pick",
-      "modelTotal": null,
+      "modelTotal": 41,
       "modelEdgeMagnitude": 8.577455712758917,
       "finalExecutableEdge": null,
       "independentFootballFair": "Illinois -5",
@@ -13944,8 +13917,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.051Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Illinois",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -6.5,
         "power": -0.20011904761904767,
@@ -14210,8 +14183,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 0.07745571275891683,
       "spreadLean": "Illinois",
@@ -14221,12 +14193,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.144Z",
+        "computedAt": "2026-11-18T23:22:33.207Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.730741570758811
         },
@@ -14236,11 +14208,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.144Z",
+        "computedAt": "2026-11-18T23:22:33.207Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -14337,7 +14309,7 @@
       "currentMoneyline": "South Florida -115 / Florida Atlantic -105",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "South Florida -1",
-      "modelTotal": null,
+      "modelTotal": 64.5,
       "modelEdgeMagnitude": 0.4004889593869583,
       "finalExecutableEdge": null,
       "independentFootballFair": "South Florida -1.5",
@@ -14361,8 +14333,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.053Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Florida Atlantic",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -1.5,
         "power": 0.08357142857142856,
@@ -14627,8 +14599,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -1.0995110406130417,
       "spreadLean": "Florida Atlantic",
@@ -14638,12 +14609,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.149Z",
+        "computedAt": "2026-11-18T23:22:33.213Z",
         "marketAnchorCandidate": {
           "homeMargin": -0.5949869238313173
         },
@@ -14653,11 +14624,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.149Z",
+        "computedAt": "2026-11-18T23:22:33.213Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -14750,7 +14721,7 @@
       "currentMoneyline": "UL Monroe +455 / App State -625",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "App State -11",
-      "modelTotal": null,
+      "modelTotal": 50.5,
       "modelEdgeMagnitude": 2.899546137285782,
       "finalExecutableEdge": null,
       "independentFootballFair": "App State -9",
@@ -14774,8 +14745,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.055Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean UL Monroe",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 14,
         "power": -0.30392857142857144,
@@ -15041,8 +15012,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 11.100453862714218,
       "spreadLean": "UL Monroe",
@@ -15052,12 +15022,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.154Z",
+        "computedAt": "2026-11-18T23:22:33.219Z",
         "marketAnchorCandidate": {
           "homeMargin": 13.61186973536264
         },
@@ -15067,11 +15037,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.154Z",
+        "computedAt": "2026-11-18T23:22:33.219Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -15164,7 +15134,7 @@
       "currentMoneyline": "Coastal Carolina +320 / Louisiana -410",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Louisiana -8.5",
-      "modelTotal": null,
+      "modelTotal": 50,
       "modelEdgeMagnitude": 2.1987415535868635,
       "finalExecutableEdge": null,
       "independentFootballFair": "Louisiana -6.5",
@@ -15188,8 +15158,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.057Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Louisiana",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 9.5,
         "power": 0.21392857142857144,
@@ -15455,8 +15425,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 8.301258446413136,
       "spreadLean": "Coastal Carolina",
@@ -15466,12 +15435,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.159Z",
+        "computedAt": "2026-11-18T23:22:33.227Z",
         "marketAnchorCandidate": {
           "homeMargin": 11.42579023679076
         },
@@ -15481,11 +15450,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.159Z",
+        "computedAt": "2026-11-18T23:22:33.227Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -15580,12 +15549,12 @@
       "currentMoneyline": "Delaware -166 / New Mexico State +140",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Delaware -2",
-      "modelTotal": null,
-      "modelEdgeMagnitude": 1.3845300541728878,
+      "modelTotal": 54,
+      "modelEdgeMagnitude": 0.8845300541728878,
       "finalExecutableEdge": null,
       "independentFootballFair": "Delaware -1",
       "independentFootballHomeMargin": -0.884748448779055,
-      "independentFootballEdge": 2.615251551220945,
+      "independentFootballEdge": 2.115251551220945,
       "independentFootballSide": "New Mexico State",
       "independentFootballConfidence": "High",
       "priority": "low",
@@ -15604,8 +15573,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.059Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Delaware",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -3.5,
         "power": -0.04785714285714284,
@@ -15872,8 +15841,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -2.1154699458271122,
       "spreadLean": "New Mexico State",
@@ -15883,26 +15851,26 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.166Z",
+        "computedAt": "2026-11-18T23:22:33.235Z",
         "marketAnchorCandidate": {
-          "homeMargin": -3.619685108885849
+          "homeMargin": -3.2696851088858487
         },
         "ensembleAnchorCandidate": {
-          "homeMargin": -2.1154699458271122
+          "homeMargin": -1.957969945827112
         }
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.166Z",
+        "computedAt": "2026-11-18T23:22:33.235Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -15914,7 +15882,7 @@
         "market": {
           "fair": "Delaware -3.5",
           "homeMargin": -3.619685108885849,
-          "edge": 0.11968510888584882,
+          "edge": 0.6196851088858488,
           "side": "Delaware",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -15937,7 +15905,7 @@
         "independent": {
           "fair": "Delaware -1",
           "homeMargin": -0.884748448779055,
-          "edge": 2.615251551220945,
+          "edge": 2.115251551220945,
           "side": "New Mexico State",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -15965,7 +15933,7 @@
         "ensemble": {
           "fair": "Delaware -2",
           "homeMargin": -2.1154699458271122,
-          "edge": 1.3845300541728878,
+          "edge": 0.8845300541728878,
           "side": "New Mexico State",
           "confidence": "Medium",
           "modelVersion": "1.2-input-integrity",
@@ -15976,10 +15944,8 @@
             "marketWeight": 0.44999999999999996,
             "agreement": false
           },
-          "tags": [
-            "Key-Number Cross"
-          ],
-          "decisionScore": 2.339126666090923
+          "tags": [],
+          "decisionScore": 1.0791266660909231
         }
       },
       "marketUpdatedAt": "2026-11-18T23:20:50.502Z",
@@ -15997,7 +15963,7 @@
       "currentMoneyline": "Florida International +136 / Kennesaw State -162",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Kennesaw State -4",
-      "modelTotal": null,
+      "modelTotal": 44.5,
       "modelEdgeMagnitude": 0.2801567987153164,
       "finalExecutableEdge": null,
       "independentFootballFair": "Kennesaw State -4",
@@ -16021,8 +15987,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.061Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Kennesaw State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 3,
         "power": -0.07476190476190477,
@@ -16287,8 +16253,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 3.7801567987153164,
       "spreadLean": "Kennesaw State",
@@ -16298,12 +16263,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.171Z",
+        "computedAt": "2026-11-18T23:22:33.242Z",
         "marketAnchorCandidate": {
           "homeMargin": 4.037551152879535
         },
@@ -16313,11 +16278,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.171Z",
+        "computedAt": "2026-11-18T23:22:33.242Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -16410,7 +16375,7 @@
       "currentMoneyline": "UCLA -175 / Michigan +145",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "UCLA -2",
-      "modelTotal": null,
+      "modelTotal": 37.5,
       "modelEdgeMagnitude": 1.326664397245489,
       "finalExecutableEdge": null,
       "independentFootballFair": "Michigan -2",
@@ -16434,8 +16399,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.065Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "UCLA ATS",
+      "modelGrade": "A-",
       "modelComponents": {
         "base": -7,
         "power": 0.14226190476190476,
@@ -16700,8 +16665,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -2.173335602754511,
       "spreadLean": "Michigan",
@@ -16711,12 +16675,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.181Z",
+        "computedAt": "2026-11-18T23:22:33.255Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.749964182194617
         },
@@ -16726,11 +16690,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.181Z",
+        "computedAt": "2026-11-18T23:22:33.255Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -16825,7 +16789,7 @@
       "currentMoneyline": "Arkansas +900 / Texas -1600",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Texas -16.5",
-      "modelTotal": null,
+      "modelTotal": 46.5,
       "modelEdgeMagnitude": 3.821659160044117,
       "finalExecutableEdge": null,
       "independentFootballFair": "Texas -13",
@@ -16849,8 +16813,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.069Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Texas",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 19.5,
         "power": 0.35928571428571426,
@@ -17115,8 +17079,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 16.678340839955883,
       "spreadLean": "Arkansas",
@@ -17126,12 +17089,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.190Z",
+        "computedAt": "2026-11-18T23:22:33.267Z",
         "marketAnchorCandidate": {
           "homeMargin": 22.179545090537523
         },
@@ -17141,11 +17104,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.190Z",
+        "computedAt": "2026-11-18T23:22:33.267Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -17238,7 +17201,7 @@
       "currentMoneyline": "LSU -115 / Tennessee -105",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Tennessee -2",
-      "modelTotal": null,
+      "modelTotal": 45,
       "modelEdgeMagnitude": 3.4919414607368813,
       "finalExecutableEdge": null,
       "independentFootballFair": "Tennessee -2",
@@ -17262,8 +17225,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.072Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Tennessee ATS",
+      "modelGrade": "A-",
       "modelComponents": {
         "base": 1.5,
         "power": 0,
@@ -17528,8 +17491,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 1.9919414607368813,
       "spreadLean": "Tennessee",
@@ -17539,12 +17501,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.199Z",
+        "computedAt": "2026-11-18T23:22:33.282Z",
         "marketAnchorCandidate": {
           "homeMargin": -0.8668347826086956
         },
@@ -17554,11 +17516,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.199Z",
+        "computedAt": "2026-11-18T23:22:33.282Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -17655,7 +17617,7 @@
       "currentMoneyline": "Indiana -310 / Washington +250",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Indiana -7",
-      "modelTotal": null,
+      "modelTotal": 43,
       "modelEdgeMagnitude": 0.428958969770151,
       "finalExecutableEdge": null,
       "independentFootballFair": "Indiana -5",
@@ -17679,8 +17641,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.076Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Indiana ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": -8.5,
         "power": -0.0008333333333333498,
@@ -17945,8 +17907,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -7.071041030229849,
       "spreadLean": "Washington",
@@ -17956,12 +17917,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.209Z",
+        "computedAt": "2026-11-18T23:22:33.295Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.640815942028986
         },
@@ -17971,11 +17932,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.209Z",
+        "computedAt": "2026-11-18T23:22:33.295Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -18068,7 +18029,7 @@
       "currentMoneyline": "Texas Tech -170 / Baylor +142",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Texas Tech -8",
-      "modelTotal": null,
+      "modelTotal": 55,
       "modelEdgeMagnitude": 4.350299579126582,
       "finalExecutableEdge": null,
       "independentFootballFair": "Texas Tech -10",
@@ -18092,8 +18053,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.079Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Texas Tech",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -3,
         "power": -0.26738095238095233,
@@ -18358,8 +18319,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -7.850299579126582,
       "spreadLean": "Texas Tech",
@@ -18369,12 +18329,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.214Z",
+        "computedAt": "2026-11-18T23:22:33.304Z",
         "marketAnchorCandidate": {
           "homeMargin": -5.123050517598344
         },
@@ -18384,11 +18344,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.214Z",
+        "computedAt": "2026-11-18T23:22:33.304Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -18520,11 +18480,11 @@
       "shadowModels": null,
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.216Z",
+        "computedAt": "2026-11-18T23:22:33.307Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": null,
@@ -18552,7 +18512,7 @@
       "currentMoneyline": "NC State +310 / Florida State -395",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Florida State -4.5",
-      "modelTotal": null,
+      "modelTotal": 57,
       "modelEdgeMagnitude": 6.230077262271048,
       "finalExecutableEdge": null,
       "independentFootballFair": "NC State -0.5",
@@ -18576,8 +18536,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.082Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean NC State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 9.5,
         "power": 0.20880952380952378,
@@ -18842,8 +18802,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 4.269922737728952,
       "spreadLean": "NC State",
@@ -18853,12 +18812,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.217Z",
+        "computedAt": "2026-11-18T23:22:33.309Z",
         "marketAnchorCandidate": {
           "homeMargin": 10.738118768257749
         },
@@ -18868,11 +18827,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.217Z",
+        "computedAt": "2026-11-18T23:22:33.309Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -18967,7 +18926,7 @@
       "currentMoneyline": "Rutgers +1300 / Penn State -2800",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Penn State -18.5",
-      "modelTotal": null,
+      "modelTotal": 50.5,
       "modelEdgeMagnitude": 5.917629789090139,
       "finalExecutableEdge": null,
       "independentFootballFair": "Penn State -13.5",
@@ -18991,8 +18950,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.085Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Penn State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 23.5,
         "power": 0.3070238095238095,
@@ -19257,8 +19216,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 18.58237021090986,
       "spreadLean": "Rutgers",
@@ -19268,12 +19226,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.227Z",
+        "computedAt": "2026-11-18T23:22:33.324Z",
         "marketAnchorCandidate": {
           "homeMargin": 25.642674999993268
         },
@@ -19283,11 +19241,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.227Z",
+        "computedAt": "2026-11-18T23:22:33.324Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -19380,7 +19338,7 @@
       "currentMoneyline": "Old Dominion +400 / UConn -535",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "UConn -8.5",
-      "modelTotal": null,
+      "modelTotal": 47,
       "modelEdgeMagnitude": 5.098389504383853,
       "finalExecutableEdge": null,
       "independentFootballFair": "UConn -5.5",
@@ -19404,8 +19362,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.087Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Old Dominion",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 14,
         "power": -0.27714285714285714,
@@ -19670,8 +19628,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 8.401610495616147,
       "spreadLean": "Old Dominion",
@@ -19681,12 +19638,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.233Z",
+        "computedAt": "2026-11-18T23:22:33.332Z",
         "marketAnchorCandidate": {
           "homeMargin": 12.362422360248447
         },
@@ -19696,11 +19653,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.233Z",
+        "computedAt": "2026-11-18T23:22:33.332Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -19796,7 +19753,7 @@
       "currentMoneyline": "Northern Illinois +1400 / North Dakota State -3200",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "North Dakota State -18",
-      "modelTotal": null,
+      "modelTotal": 43.5,
       "modelEdgeMagnitude": 7.572200271191672,
       "finalExecutableEdge": null,
       "independentFootballFair": "North Dakota State -11.5",
@@ -19820,8 +19777,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.089Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean North Dakota State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 24.5,
         "power": 0.18035714285714285,
@@ -20087,8 +20044,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 17.927799728808328,
       "spreadLean": "Northern Illinois",
@@ -20098,12 +20054,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.237Z",
+        "computedAt": "2026-11-18T23:22:33.337Z",
         "marketAnchorCandidate": {
           "homeMargin": 26.96861801242236
         },
@@ -20113,11 +20069,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.237Z",
+        "computedAt": "2026-11-18T23:22:33.337Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -20210,7 +20166,7 @@
       "currentMoneyline": "Georgia Southern -340 / Troy +270",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Georgia Southern -6",
-      "modelTotal": null,
+      "modelTotal": 48,
       "modelEdgeMagnitude": 2.5505722421634243,
       "finalExecutableEdge": null,
       "independentFootballFair": "Georgia Southern -2.5",
@@ -20234,8 +20190,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.091Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Georgia Southern",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -9.5,
         "power": 0.06428571428571428,
@@ -20500,8 +20456,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -5.949427757836576,
       "spreadLean": "Troy",
@@ -20511,12 +20466,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.245Z",
+        "computedAt": "2026-11-18T23:22:33.347Z",
         "marketAnchorCandidate": {
           "homeMargin": -9.348322981366458
         },
@@ -20526,11 +20481,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.245Z",
+        "computedAt": "2026-11-18T23:22:33.347Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -20626,7 +20581,7 @@
       "currentMoneyline": "Georgia State -105 / Marshall -115",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Georgia State -0.5",
-      "modelTotal": null,
+      "modelTotal": 56.5,
       "modelEdgeMagnitude": 2.209760758986799,
       "finalExecutableEdge": null,
       "independentFootballFair": "Marshall -0.5",
@@ -20650,8 +20605,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.094Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Georgia State ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": -2.5,
         "power": 0.2934523809523809,
@@ -20916,8 +20871,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -0.7097607589867987,
       "spreadLean": "Georgia State",
@@ -20927,12 +20881,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.251Z",
+        "computedAt": "2026-11-18T23:22:33.355Z",
         "marketAnchorCandidate": {
           "homeMargin": 1.1591755397811299
         },
@@ -20942,11 +20896,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.251Z",
+        "computedAt": "2026-11-18T23:22:33.355Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -21043,7 +20997,7 @@
       "currentMoneyline": "South Alabama -185 / Southern Miss +154",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "South Alabama -3.5",
-      "modelTotal": null,
+      "modelTotal": 65,
       "modelEdgeMagnitude": 0.20179018246957448,
       "finalExecutableEdge": null,
       "independentFootballFair": "South Alabama -1.5",
@@ -21067,8 +21021,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.096Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean South Alabama",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -5.5,
         "power": -0.02499999999999998,
@@ -21334,8 +21288,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -3.7017901824695745,
       "spreadLean": "South Alabama",
@@ -21345,12 +21298,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.257Z",
+        "computedAt": "2026-11-18T23:22:33.362Z",
         "marketAnchorCandidate": {
           "homeMargin": -4.375
         },
@@ -21360,11 +21313,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.257Z",
+        "computedAt": "2026-11-18T23:22:33.363Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -21457,7 +21410,7 @@
       "currentMoneyline": "Washington State +340 / Texas State -440",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Texas State -9",
-      "modelTotal": null,
+      "modelTotal": 62,
       "modelEdgeMagnitude": 2.2726655807909513,
       "finalExecutableEdge": null,
       "independentFootballFair": "Texas State -4.5",
@@ -21481,8 +21434,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.099Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Texas State ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": 14,
         "power": 0.28428571428571425,
@@ -21747,8 +21700,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 9.227334419209049,
       "spreadLean": "Washington State",
@@ -21758,12 +21710,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.265Z",
+        "computedAt": "2026-11-18T23:22:33.376Z",
         "marketAnchorCandidate": {
           "homeMargin": 12.991539718862372
         },
@@ -21773,11 +21725,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.265Z",
+        "computedAt": "2026-11-18T23:22:33.376Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -21872,7 +21824,7 @@
       "currentMoneyline": "Maryland +600 / USC -900",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "USC -14",
-      "modelTotal": null,
+      "modelTotal": 58.5,
       "modelEdgeMagnitude": 3.544790586326622,
       "finalExecutableEdge": null,
       "independentFootballFair": "USC -11.5",
@@ -21896,8 +21848,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.101Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Maryland",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 16.5,
         "power": 0.25749999999999995,
@@ -22162,8 +22114,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 13.955209413673378,
       "spreadLean": "Maryland",
@@ -22173,12 +22124,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.270Z",
+        "computedAt": "2026-11-18T23:22:33.383Z",
         "marketAnchorCandidate": {
           "homeMargin": 17.92515288676567
         },
@@ -22188,11 +22139,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.270Z",
+        "computedAt": "2026-11-18T23:22:33.383Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -22285,7 +22236,7 @@
       "currentMoneyline": "Arizona -290 / Kansas State +235",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Arizona -6.5",
-      "modelTotal": null,
+      "modelTotal": 53,
       "modelEdgeMagnitude": 0.6009156975890715,
       "finalExecutableEdge": null,
       "independentFootballFair": "Arizona -2.5",
@@ -22309,8 +22260,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.105Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Arizona ATS",
+      "modelGrade": "A-",
       "modelComponents": {
         "base": -10,
         "power": -0.17916666666666664,
@@ -22575,8 +22526,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -6.3990843024109285,
       "spreadLean": "Kansas State",
@@ -22586,12 +22536,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.281Z",
+        "computedAt": "2026-11-18T23:22:33.396Z",
         "marketAnchorCandidate": {
           "homeMargin": -7.994210144927536
         },
@@ -22601,11 +22551,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.281Z",
+        "computedAt": "2026-11-18T23:22:33.396Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -22698,7 +22648,7 @@
       "currentMoneyline": "UNLV -258 / San José State +210",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "UNLV -8",
-      "modelTotal": null,
+      "modelTotal": 46.5,
       "modelEdgeMagnitude": 1.0142345669958424,
       "finalExecutableEdge": null,
       "independentFootballFair": "UNLV -10",
@@ -22722,8 +22672,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.107Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "San José State ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": -4,
         "power": 0.06047619047619047,
@@ -22988,8 +22938,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -8.014234566995842,
       "spreadLean": "UNLV",
@@ -22999,12 +22948,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.287Z",
+        "computedAt": "2026-11-18T23:22:33.404Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.38591176939003
         },
@@ -23014,11 +22963,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.287Z",
+        "computedAt": "2026-11-18T23:22:33.404Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -23111,7 +23060,7 @@
       "currentMoneyline": "Arkansas State +425 / Louisiana Tech -575",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Louisiana Tech -11.5",
-      "modelTotal": null,
+      "modelTotal": 53.5,
       "modelEdgeMagnitude": 2.0455628404379596,
       "finalExecutableEdge": null,
       "independentFootballFair": "Louisiana Tech -8",
@@ -23135,8 +23084,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.110Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Louisiana Tech ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": 14.5,
         "power": 0.10845238095238098,
@@ -23401,8 +23350,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 11.45443715956204,
       "spreadLean": "Arkansas State",
@@ -23412,12 +23360,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.296Z",
+        "computedAt": "2026-11-18T23:22:33.416Z",
         "marketAnchorCandidate": {
           "homeMargin": 14.570090260642672
         },
@@ -23427,11 +23375,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.296Z",
+        "computedAt": "2026-11-18T23:22:33.416Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -23524,7 +23472,7 @@
       "currentMoneyline": "Georgia -850 / South Carolina +575",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Georgia -12",
-      "modelTotal": null,
+      "modelTotal": 51.5,
       "modelEdgeMagnitude": 4.419096554275679,
       "finalExecutableEdge": null,
       "independentFootballFair": "Georgia -8",
@@ -23548,8 +23496,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.114Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Georgia",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -16.5,
         "power": -0.10249999999999998,
@@ -23814,8 +23762,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -12.08090344572432,
       "spreadLean": "South Carolina",
@@ -23825,12 +23772,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.306Z",
+        "computedAt": "2026-11-18T23:22:33.430Z",
         "marketAnchorCandidate": {
           "homeMargin": -17.079580289983916
         },
@@ -23840,11 +23787,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.306Z",
+        "computedAt": "2026-11-18T23:22:33.430Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -23937,7 +23884,7 @@
       "currentMoneyline": "SMU +950 / Notre Dame -1650",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Notre Dame -16",
-      "modelTotal": null,
+      "modelTotal": 57,
       "modelEdgeMagnitude": 4.26918921788927,
       "finalExecutableEdge": null,
       "independentFootballFair": "Notre Dame -12.5",
@@ -23961,8 +23908,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.115Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Notre Dame",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 20.5,
         "power": 0.005000000000000035,
@@ -24227,8 +24174,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 16.23081078211073,
       "spreadLean": "SMU",
@@ -24238,12 +24184,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.307Z",
+        "computedAt": "2026-11-18T23:22:33.431Z",
         "marketAnchorCandidate": {
           "homeMargin": 20.560640327080172
         },
@@ -24253,11 +24199,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.307Z",
+        "computedAt": "2026-11-18T23:22:33.431Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -24350,7 +24296,7 @@
       "currentMoneyline": "Kentucky +180 / Missouri -218",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Missouri -5",
-      "modelTotal": null,
+      "modelTotal": 49,
       "modelEdgeMagnitude": 0.5996810233766432,
       "finalExecutableEdge": null,
       "independentFootballFair": "Missouri -4",
@@ -24374,8 +24320,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.118Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Missouri",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 5.5,
         "power": 0.3172619047619047,
@@ -24640,8 +24586,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 4.900318976623357,
       "spreadLean": "Kentucky",
@@ -24651,12 +24596,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.316Z",
+        "computedAt": "2026-11-18T23:22:33.442Z",
         "marketAnchorCandidate": {
           "homeMargin": 6.096887578352931
         },
@@ -24666,11 +24611,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.316Z",
+        "computedAt": "2026-11-18T23:22:33.442Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -24763,7 +24708,7 @@
       "currentMoneyline": "Stanford -130 / California +110",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Stanford -4.5",
-      "modelTotal": null,
+      "modelTotal": 56.5,
       "modelEdgeMagnitude": 1.8410479265673292,
       "finalExecutableEdge": null,
       "independentFootballFair": "Stanford -5",
@@ -24787,8 +24732,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.119Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Stanford",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -2.5,
         "power": -0.0010714285714285645,
@@ -25053,8 +24998,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -4.341047926567329,
       "spreadLean": "Stanford",
@@ -25064,12 +25008,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.317Z",
+        "computedAt": "2026-11-18T23:22:33.444Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.0948480876103304
         },
@@ -25079,11 +25023,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.317Z",
+        "computedAt": "2026-11-18T23:22:33.444Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -25180,7 +25124,7 @@
       "currentMoneyline": "Colorado State +850 / Fresno State -1450",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Fresno State -15.5",
-      "modelTotal": null,
+      "modelTotal": 66,
       "modelEdgeMagnitude": 5.240003207701022,
       "finalExecutableEdge": null,
       "independentFootballFair": "Fresno State -11",
@@ -25204,8 +25148,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.122Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Fresno State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 20.5,
         "power": 0.3883333333333333,
@@ -25470,8 +25414,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 15.259996792298978,
       "spreadLean": "Colorado State",
@@ -25481,12 +25424,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.327Z",
+        "computedAt": "2026-11-18T23:22:33.456Z",
         "marketAnchorCandidate": {
           "homeMargin": 20.712006476315022
         },
@@ -25496,11 +25439,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.327Z",
+        "computedAt": "2026-11-18T23:22:33.456Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -25593,7 +25536,7 @@
       "currentMoneyline": "UTSA -245 / UAB +200",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "UTSA -6.5",
-      "modelTotal": null,
+      "modelTotal": 51,
       "modelEdgeMagnitude": 0.12538560332748538,
       "finalExecutableEdge": null,
       "independentFootballFair": "UTSA -4.5",
@@ -25617,8 +25560,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.124Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean UTSA",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -7,
         "power": -0.6109523809523808,
@@ -25883,8 +25826,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -6.374614396672515,
       "spreadLean": "UAB",
@@ -25894,12 +25836,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.332Z",
+        "computedAt": "2026-11-18T23:22:33.463Z",
         "marketAnchorCandidate": {
           "homeMargin": -8.372724956203218
         },
@@ -25909,11 +25851,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.332Z",
+        "computedAt": "2026-11-18T23:22:33.463Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -26006,7 +25948,7 @@
       "currentMoneyline": "Utah -270 / TCU +220",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Utah -5.5",
-      "modelTotal": null,
+      "modelTotal": 46.5,
       "modelEdgeMagnitude": 1.5037169401214827,
       "finalExecutableEdge": null,
       "independentFootballFair": "Utah -4",
@@ -26030,8 +25972,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.124Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Utah",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -7,
         "power": -0.16726190476190467,
@@ -26296,8 +26238,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -5.496283059878517,
       "spreadLean": "TCU",
@@ -26307,12 +26248,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.333Z",
+        "computedAt": "2026-11-18T23:22:33.464Z",
         "marketAnchorCandidate": {
           "homeMargin": -7.395266089959065
         },
@@ -26322,11 +26263,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.333Z",
+        "computedAt": "2026-11-18T23:22:33.464Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -26421,7 +26362,7 @@
       "currentMoneyline": "San Diego State +600 / Boise State -900",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Boise State -13",
-      "modelTotal": null,
+      "modelTotal": 61,
       "modelEdgeMagnitude": 4.5715614006181315,
       "finalExecutableEdge": null,
       "independentFootballFair": "Boise State -10.5",
@@ -26445,8 +26386,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.128Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean San Diego State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 16.5,
         "power": 0.24380952380952378,
@@ -26711,8 +26652,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 12.928438599381868,
       "spreadLean": "San Diego State",
@@ -26722,12 +26662,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.345Z",
+        "computedAt": "2026-11-18T23:22:33.482Z",
         "marketAnchorCandidate": {
           "homeMargin": 17.123016234476964
         },
@@ -26737,11 +26677,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.345Z",
+        "computedAt": "2026-11-18T23:22:33.482Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -26836,7 +26776,7 @@
       "currentMoneyline": "Oklahoma State -155 / Arizona State +130",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Oklahoma State -1.5",
-      "modelTotal": null,
+      "modelTotal": 61,
       "modelEdgeMagnitude": 1.4378708570127166,
       "finalExecutableEdge": null,
       "independentFootballFair": "Pick",
@@ -26860,8 +26800,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.132Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Oklahoma State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -4,
         "power": -0.06892857142857144,
@@ -27126,8 +27066,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -1.5621291429872834,
       "spreadLean": "Arizona State",
@@ -27137,12 +27076,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.355Z",
+        "computedAt": "2026-11-18T23:22:33.494Z",
         "marketAnchorCandidate": {
           "homeMargin": -3.035132738561546
         },
@@ -27152,11 +27091,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.355Z",
+        "computedAt": "2026-11-18T23:22:33.494Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -27249,7 +27188,7 @@
       "currentMoneyline": "Utah State +280 / Oregon State -355",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Oregon State -6.5",
-      "modelTotal": null,
+      "modelTotal": 50.5,
       "modelEdgeMagnitude": 3.181474592619656,
       "finalExecutableEdge": null,
       "independentFootballFair": "Oregon State -5",
@@ -27273,8 +27212,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.135Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Utah State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 9.5,
         "power": -0.15928571428571428,
@@ -27539,8 +27478,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 6.318525407380344,
       "spreadLean": "Utah State",
@@ -27550,12 +27488,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.363Z",
+        "computedAt": "2026-11-18T23:22:33.504Z",
         "marketAnchorCandidate": {
           "homeMargin": 8.615931677018635
         },
@@ -27565,11 +27503,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.363Z",
+        "computedAt": "2026-11-18T23:22:33.504Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -27666,7 +27604,7 @@
       "currentMoneyline": "Hawai'i +170 / Nevada -205",
       "marketSource": "ESPN DraftKings",
       "modelSpread": "Hawai'i -2",
-      "modelTotal": null,
+      "modelTotal": 40.5,
       "modelEdgeMagnitude": 6.333885398357066,
       "finalExecutableEdge": null,
       "independentFootballFair": "Hawai'i -5.5",
@@ -27690,8 +27628,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.136Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Hawai'i",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 4.5,
         "power": -0.17011904761904761,
@@ -27956,8 +27894,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -1.833885398357066,
       "spreadLean": "Hawai'i",
@@ -27967,12 +27904,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-18T21:25:08.367Z",
+        "computedAt": "2026-11-18T23:22:33.508Z",
         "marketAnchorCandidate": {
           "homeMargin": 3.7063229649801586
         },
@@ -27982,11 +27919,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-18T21:25:08.367Z",
+        "computedAt": "2026-11-18T23:22:33.508Z",
         "inputDates": {
-          "fpi": "2026-11-18T21:21:42.087Z",
+          "fpi": "2026-11-18T23:21:58.480Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-18T21:21:42.053Z",
+          "metrics": "2026-11-18T23:21:58.104Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -28083,13 +28020,13 @@
   "runtimePersistence": {
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "capturedAt": "2026-11-18T22:32:24.581Z",
+    "capturedAt": "2026-11-18T23:30:57.036Z",
     "selectedWeek": "Week 12",
     "modelPromotion": {
-      "marketCount": 3,
-      "independentCount": 3,
-      "ensembleCount": 3,
-      "rejected": 67
+      "marketCount": 66,
+      "independentCount": 66,
+      "ensembleCount": 66,
+      "rejected": 0
     },
     "renderedRowCount": 70,
     "deepDiveCompleteCount": 70,
@@ -28098,11 +28035,11 @@
   },
   "modelRuntime": {
     "week": 12,
-    "promotedGameCount": 0,
-    "totalPromotedGameCount": 0,
-    "independentGameCount": 0,
-    "rejectedFallbackCount": 0,
-    "generatedAt": "2026-11-18T22:23:12.825Z",
+    "promotedGameCount": 63,
+    "totalPromotedGameCount": 63,
+    "independentGameCount": 63,
+    "rejectedFallbackCount": 4,
+    "generatedAt": "2026-11-18T23:22:32.632Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },
