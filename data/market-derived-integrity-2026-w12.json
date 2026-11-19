@@ -1,12 +1,12 @@
 {
   "season": 2026,
   "week": 12,
-  "verifiedAt": "2026-11-19T21:29:08.115Z",
-  "status": "PASS",
+  "verifiedAt": "2026-11-19T22:28:53.558Z",
+  "status": "FAIL",
   "detail": "Independently reconciled 183 model/market arithmetic records across 61 fully comparable priced games; 4 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement.",
   "dependencies": {
-    "canonicalBoardUpdatedAt": "2026-11-19T21:21:23.517Z",
-    "verifiedAt": "2026-11-19T21:29:08.115Z"
+    "canonicalBoardUpdatedAt": "2026-11-19T22:20:54.204Z",
+    "verifiedAt": "2026-11-19T22:28:53.558Z"
   },
   "checks": {
     "pricedGames": 65,
@@ -22,7 +22,9 @@
     "missingRecords": 0,
     "mathFailures": 0,
     "independentMarketLeakage": 0,
-    "renderFailures": 0
+    "renderFailures": 14
   },
-  "failures": []
+  "failures": [
+    "rendered Ensemble mismatch: ESPN-401862830, ESPN-401856869, ESPN-401858303, ESPN-401866468, ESPN-401858529, ESPN-401864545, ESPN-401864542, ESPN-401858302, ESPN-401858310, ESPN-401858306"
+  ]
 }
