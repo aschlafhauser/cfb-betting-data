@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401862830",
+  "matchup": "Rice at Temple",
+  "kickoff": "2026-11-20T00:30:00.000Z",
+  "frozenAt": "2026-11-19T19:26:30.335Z",
+  "minutesBeforeKickoff": 303.5,
+  "immutable": true,
+  "market": {
+    "spread": "Temple -2.5",
+    "total": 51.5,
+    "moneyline": "Rice +120 / Temple -142",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-19T19:26:29.682Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Temple -3.5",
+    "marketCalibratedHomeMargin": 3.47527950310559,
+    "marketCalibratedEdge": 0.9752795031055901,
+    "independentFair": "Temple -3.5",
+    "independentHomeMargin": 3.550452181067654,
+    "independentEdge": 1.0504521810676541,
+    "independentSide": "Temple",
+    "ensembleFair": "Temple -3.5",
+    "ensembleHomeMargin": 3.5203831098828284,
+    "ensembleEdge": 1.0203831098828284,
+    "selectedModel": "ensemble",
+    "governedFair": "Temple -3.5",
+    "governedTotal": 51.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-19T19:22:16.185Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-19T19:22:16.033Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-19T19:22:59.054Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 2.018866625819562
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 2.8612386812060127
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-19T19:22:59.054Z",
+    "inputDates": {
+      "fpi": "2026-11-19T19:22:16.185Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-19T19:22:16.033Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 4,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Temple -4",
+    "sourceObservedAt": "2026-11-15T18:22:27.979Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-19T19:26:29.682Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-19T19:26:29.682Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 66,
+        "independentCount": 66,
+        "ensembleCount": 66,
+        "rejected": 0
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
