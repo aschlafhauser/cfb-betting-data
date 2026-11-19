@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 12,
-  "updatedAt": "2026-11-19T01:34:37.815Z",
+  "updatedAt": "2026-11-19T02:37:49.184Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-19T01:32:16.811Z",
+      "checkedAt": "2026-11-19T02:37:49.184Z",
       "unstartedGames": 65,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -225,12 +225,12 @@
     },
     "marketCoverage": {
       "status": "PASS",
-      "minimumRequired": 60,
+      "minimumRequired": 62,
       "actualMarketGames": 65,
-      "dueGames": 60,
-      "dueMarketGames": 60,
+      "dueGames": 62,
+      "dueMarketGames": 62,
       "startedGamesExcluded": 5,
-      "laterGamesOutsideBlockingWindow": 5,
+      "laterGamesOutsideBlockingWindow": 3,
       "explicitSourceLimitedExemptions": [],
       "deadlineHours": 72,
       "detail": "Current spread/total coverage is complete for every unstarted market-eligible game. 5 started game(s) are excluded from live-price coverage and governed separately by immutable pre-kickoff snapshot integrity."
@@ -247,9 +247,9 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-19T01:32:07.370Z",
+      "verifiedAt": "2026-11-19T02:37:43.947Z",
       "artifact": "data/statistical-display-integrity-2026-w12.json",
-      "detail": "Team/stat coverage 140/140; ESPN FPI 137 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 140/140; ESPN FPI 137 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/15."
     },
     "marketDerivedIntegrity": {
       "status": "FAIL",
@@ -288,13 +288,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-19T01:34:37.815Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-19T01:30:48.695Z",
+      "verifiedAt": "2026-11-19T02:35:51.496Z",
       "artifact": "data/final-snapshot-integrity-2026-w12.json",
       "validSnapshots": 5,
       "pendingBeforeKickoff": 65,
