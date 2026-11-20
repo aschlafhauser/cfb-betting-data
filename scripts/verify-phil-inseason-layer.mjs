@@ -89,7 +89,7 @@ try{
         }
       }
       const panel=document.getElementById('philInseasonPanel'),txt=panel?.innerText||'';let model=null;
-      try{const x=(window.CFB_WEEKLY_BOARD_2026?.games||[]).find(g=>String(g.gameId||g.id)===String(gameId));model=x?.modelComponents?.philInseason||null}catch{}
+      try{const legacy=typeof weeks!=='undefined'?Object.values(weeks||{}).flatMap(w=>w.games||[]):[];const selected=legacy.find(g=>String(g.id||'')===String(sel?.value||'')||String(g.gameId||'')===String(gameId));const x=selected||(window.CFB_WEEKLY_BOARD_2026?.games||[]).find(g=>String(g.gameId||g.id)===String(gameId));model=x?.modelComponents?.philInseason||null}catch{}
       return{ready:window.CFB_PHIL_INSEASON_READY===true,panel:!!panel,text:txt,model,updatedAt:window.CFB_PHIL_INSEASON?.updatedAt||null,selectedIndex:wanted,matchup:sel?.selectedOptions?.[0]?.textContent||null};
     },{away:target.away,home:target.home,gameId:target.gameId,awayAliases,homeAliases});
   }
