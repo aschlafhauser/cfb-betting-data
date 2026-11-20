@@ -6,6 +6,10 @@ const specs={
  power:{slug:'power-ratings',url:'https://plus.philsteele.com/fbsinfo/2026/26_Power_Ratings.html'},
  agg:{slug:'average-game-grade',url:'https://plus.philsteele.com/fbsinfo/2026/2026_Average_Game_Grade_Rank.html'},
  pass:{slug:'pass-efficiency-defense',url:'https://plus.philsteele.com/fbsinfo/2026/26_Pass_Eff_Def.html'},
+ off:{slug:'offensive-ypp',url:'https://plus.philsteele.com/fbsinfo/2026/26_Yards_Per_Play_OFF.html'},
+ def:{slug:'defensive-ypp',url:'https://plus.philsteele.com/fbsinfo/2026/26_Yards_Per_Play_DEF.html'},
+ offavg:{slug:'off-yards-vs-opp-avg',url:'https://plus.philsteele.com/fbsinfo/2026/26_OFF_Opp_Avg.html'},
+ defavg:{slug:'def-yards-vs-opp-avg',url:'https://plus.philsteele.com/fbsinfo/2026/26_DEF_Opp_Avg.html'},
  st:{slug:'special-teams',url:'https://plus.philsteele.com/fbsinfo/2026/2026_Special_Teams.html'}
 };
 const key=s=>{const k=String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');return k==='sanjosest'?'sanjosestate':k};
@@ -39,13 +43,22 @@ for(const [k,spec] of Object.entries(specs)){
  }else if(k==='agg'){
    const table=parsed.find(t=>t.some(r=>r[0]==='1'&&r[1]));assert(table,'AGG table missing');
    for(const r of table)for(const i of [0,4])if(rank(r[i]))add(r[i+1],{rank:num(r[i]),agg:num(r[i+2])});
+ }else if(k==='off'||k==='def'||k.endsWith('avg')){
+   const average=k.endsWith('avg'),width=average?3:6;
+   const table=parsed.find(t=>t.filter(r=>r.length===width&&rank(r[average?1:0])).length>=130);
+   assert(table,`${k} table missing`);
+   for(const r of table){
+     if(r.length!==width||!rank(r[average?1:0]))continue;
+     if(average)add(r[0],{rank:num(r[1].replace('.','')),average:num(r[2])});
+     else add(r[1],{rank:num(r[0].replace('.','')),rushAtt:num(r[2]),passAtt:num(r[3]),yards:num(r[4]),ypp:num(r[5])});
+   }
  }else{
    const width=k==='st'?17:10,table=parsed.find(t=>t.filter(r=>r.length===width&&rank(r[0])).length>=130);assert(table,`${k} table missing`);
    for(const r of table){if(r.length!==width||!rank(r[0]))continue;const fields=k==='pass'?['yards','att','comp','compPct','td','int','grade','opp']:['stIncK','netPunts','prOff','oppNetP','krOff','oppNetKo','netKo','td','stRating','stRank','kickerRating','kickerRank','fgTotal','fgPct','fg50Plus'];const row={rank:num(r[0].replace('.',''))};fields.forEach((f,i)=>row[f]=['fgTotal','fg50Plus'].includes(f)?r[i+2]:num(r[i+2]));add(r[1],row)}
  }
  assert.equal(rows.length,138,`${k} coverage`);assert.equal(seen.size,138,`${k} unique coverage`);
  assert.deepEqual(new Set(rows.map(r=>key(r.team))),new Set(previous[k].data.rows.map(r=>key(r.team))),`${k} team namespace changed`);
- for(const r of rows){if(k==='power')assert(r.start>=50&&r.start<=180&&r.current>=50&&r.current<=180,`Power outlier ${r.team}`);if(k==='agg')assert(r.agg>0&&r.agg<200,`AGG outlier ${r.team}`);if(k==='pass')assert(r.comp<=r.att&&r.compPct>=0&&r.compPct<=100&&Math.abs(100*r.comp/r.att-r.compPct)<=.055,`Pass arithmetic ${r.team}`)}
+ for(const r of rows){if(k==='power')assert(r.start>=50&&r.start<=180&&r.current>=50&&r.current<=180,`Power outlier ${r.team}`);if(k==='agg')assert(r.agg>0&&r.agg<200,`AGG outlier ${r.team}`);if(k==='off'||k==='def')assert(r.ypp>0&&r.ypp<15&&r.rushAtt+r.passAtt>0&&Math.abs(r.yards/(r.rushAtt+r.passAtt)-r.ypp)<=.055,`YPP arithmetic ${r.team}`);if(k.endsWith('avg'))assert(Math.abs(r.average)<500,`Opponent average outlier ${r.team}`);if(k==='pass')assert(r.comp<=r.att&&r.compPct>=0&&r.compPct<=100&&Math.abs(100*r.comp/r.att-r.compPct)<=.055,`Pass arithmetic ${r.team}`)}
  staged.push({path:previous[k].path,data:{...previous[k].data,updatedAt:sourceDate,retrievedAt,source:'Phil Steele governed current-season public Plus table',sourceUrl:spec.url,rows}});
  console.log(`${k}: staged ${rows.length} teams from ${sourceDate}`);
 }
