@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401858529",
+  "matchup": "Oregon at Michigan State",
+  "kickoff": "2026-11-21T01:00:00.000Z",
+  "frozenAt": "2026-11-20T19:26:01.484Z",
+  "minutesBeforeKickoff": 334,
+  "immutable": true,
+  "market": {
+    "spread": "Oregon -17.5",
+    "total": 43.5,
+    "moneyline": "Oregon -950 / Michigan State +625",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-20T19:26:01.053Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Oregon -15",
+    "marketCalibratedHomeMargin": -15.12096545591067,
+    "marketCalibratedEdge": 2.379034544089331,
+    "independentFair": "Oregon -17",
+    "independentHomeMargin": -16.96101150012217,
+    "independentEdge": 0.5389884998778314,
+    "independentSide": "Michigan State",
+    "ensembleFair": "Oregon -16",
+    "ensembleHomeMargin": -16.22499308243757,
+    "ensembleEdge": 1.275006917562429,
+    "selectedModel": "ensemble",
+    "governedFair": "Oregon -16",
+    "governedTotal": 43.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-20T19:22:45.073Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-20T19:22:44.977Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-20T19:23:36.646Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -18.00333333333333
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -17.43005632506719
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-20T19:23:36.646Z",
+    "inputDates": {
+      "fpi": "2026-11-20T19:22:45.073Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-20T19:22:44.977Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -13.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Oregon -13.5",
+    "sourceObservedAt": "2026-11-15T18:22:27.990Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-20T19:26:01.053Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-20T19:26:01.053Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 66,
+        "independentCount": 66,
+        "ensembleCount": 66,
+        "rejected": 0
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
