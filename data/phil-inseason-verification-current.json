@@ -1,12 +1,16 @@
 {
-  "checkedAt": "2026-11-20T23:40:47.195Z",
+  "checkedAt": "2026-11-20T23:50:53.798Z",
   "week": 12,
   "sourceDate": "2026-11-17",
   "sourceDates": {
     "power": "2026-11-15",
     "averageGameGrade": "2026-11-15",
     "passEfficiencyDefense": "2026-11-15",
-    "specialTeams": "2026-11-17"
+    "specialTeams": "2026-11-17",
+    "offensiveYpp": "2026-11-15",
+    "defensiveYpp": "2026-11-15",
+    "offensiveVsOpponent": "2026-11-15",
+    "defensiveVsOpponent": "2026-11-15"
   },
   "matchup": "Clemson at Duke",
   "model": {
@@ -270,6 +274,34 @@
     "totalImpact": 0,
     "provenance": "Each governed Phil table retains its own source date; sourceDate is the newest table date."
   },
-  "failures": [],
-  "status": "PASS"
+  "failures": [
+    "Phil away offYpp.rank live 126 != governed 132",
+    "Phil away offYpp.rushAtt live 341 != governed 375",
+    "Phil away offYpp.passAtt live 279 != governed 313",
+    "Phil away offYpp.yards live 3042 != governed 3270",
+    "Phil away offYpp.ypp live 4.9 != governed 4.8",
+    "Phil away defYpp.rank live 35 != governed 36",
+    "Phil away defYpp.rushAtt live 308 != governed 360",
+    "Phil away defYpp.passAtt live 290 != governed 305",
+    "Phil away defYpp.yards live 3014 != governed 3421",
+    "Phil away defYpp.ypp live 5 != governed 5.1",
+    "Phil away offOppYpg.rank live 108 != governed 120",
+    "Phil away offOppYpg.average live -24.9 != governed -42.3",
+    "Phil away defOppYpg.rank live 31 != governed 44",
+    "Phil away defOppYpg.average live 65.2 != governed 45.8",
+    "Phil home offYpp.rank live 35 != governed 33",
+    "Phil home offYpp.rushAtt live 328 != governed 345",
+    "Phil home offYpp.passAtt live 282 != governed 326",
+    "Phil home offYpp.yards live 3826 != governed 4167",
+    "Phil home offYpp.ypp live 6.3 != governed 6.2",
+    "Phil home defYpp.rank live 16 != governed 27",
+    "Phil home defYpp.rushAtt live 286 != governed 318",
+    "Phil home defYpp.passAtt live 260 != governed 301",
+    "Phil home defYpp.yards live 2539 != governed 3071",
+    "Phil home defYpp.ypp live 4.7 != governed 5",
+    "Phil home offOppYpg.rank live 67 != governed 62",
+    "Phil home offOppYpg.average live 7.5 != governed 14.4",
+    "Phil home defOppYpg.average live 73.9 != governed 60.9"
+  ],
+  "status": "FAIL"
 }
