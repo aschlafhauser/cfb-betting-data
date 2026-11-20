@@ -6,21 +6,29 @@ import { chromium } from 'playwright';
 
 const portal=process.env.CFB_PORTAL_URL||'https://cfb-betting-intelligence.netlify.app/';
 const board=JSON.parse(await fs.readFile('data/weekly-board.json','utf8'));
-const [agg,power,passD,st]=await Promise.all([
+const [agg,power,passD,st,offYpp,defYpp,offOppYpg,defOppYpg]=await Promise.all([
   'data/phil-inseason-average-game-grade-2026.json',
   'data/phil-inseason-power-ratings-2026.json',
   'data/phil-inseason-pass-efficiency-defense-2026.json',
-  'data/phil-inseason-special-teams-2026.json'
+  'data/phil-inseason-special-teams-2026.json',
+  'data/phil-inseason-offensive-ypp-2026.json',
+  'data/phil-inseason-defensive-ypp-2026.json',
+  'data/phil-inseason-off-yards-vs-opp-avg-2026.json',
+  'data/phil-inseason-def-yards-vs-opp-avg-2026.json'
 ].map(async p=>JSON.parse(await fs.readFile(p,'utf8'))));
 const failures=[];
 const sourceDates={
   power:String(power.updatedAt||''),
   averageGameGrade:String(agg.updatedAt||''),
   passEfficiencyDefense:String(passD.updatedAt||''),
-  specialTeams:String(st.updatedAt||'')
+  specialTeams:String(st.updatedAt||''),
+  offensiveYpp:String(offYpp.updatedAt||''),
+  defensiveYpp:String(defYpp.updatedAt||''),
+  offensiveVsOpponent:String(offOppYpg.updatedAt||''),
+  defensiveVsOpponent:String(defOppYpg.updatedAt||'')
 };
 const sourceDate=Object.values(sourceDates).filter(Boolean).sort().at(-1)||'';
-for(const [name,d,min] of [['AGG',agg,130],['Power',power,130],['PassD',passD,130],['ST',st,130]]){
+for(const [name,d,min] of [['AGG',agg,130],['Power',power,130],['PassD',passD,130],['ST',st,138],['OffYPP',offYpp,138],['DefYPP',defYpp,138],['OffOppYPG',offOppYpg,138],['DefOppYPG',defOppYpg,138]]){
   if(!d.updatedAt)failures.push(`${name} snapshot has no source date`);
   if(!Array.isArray(d.rows)||d.rows.length<min)failures.push(`${name} rows ${d.rows?.length||0} < ${min}`);
 }
