@@ -97,5 +97,19 @@ try{
 if(!out.ready)failures.push('CFB_PHIL_INSEASON_READY did not become true');if(sourceDate&&out.updatedAt!==sourceDate)failures.push(`Rendered Phil source date ${out.updatedAt} != ${sourceDate}`);if(target&&out.selectedIndex<0)failures.push(`Selected-week matchup not found in Matchup Center: ${target.away} at ${target.home}`);if(target&&!out.panel)failures.push('Phil Steele in-season quantitative panel missing');
 if(target){const text=out.text.toLowerCase(),matchup=String(out.matchup||'').toLowerCase();if(!matchup.includes(target.away.toLowerCase())||!matchup.includes(target.home.toLowerCase()))failures.push(`Phil matchup selection did not persist: ${out.matchup||'missing'}`);for(const token of ['Average Game Grade','Pass D','Special Teams','Model treatment'])if(!text.includes(token.toLowerCase()))failures.push(`Phil in-season panel missing ${token}`);for(const [label,side] of [['away',out.model?.away],['home',out.model?.home]]){const aliases=[target[label],side?.power?.team,side?.agg?.team,side?.passD?.team,side?.st?.team].filter(Boolean);if(!aliases.some(token=>text.includes(String(token).toLowerCase())))failures.push(`Phil in-season panel missing governed ${label} identity for ${target[label]}`)}}
 if(out.model){const a=Number(out.model.adjustment);if(!Number.isFinite(a))failures.push('Phil in-season model adjustment is not numeric');else if(Math.abs(a)>.850001)failures.push(`Phil in-season adjustment ${a} exceeds ±0.85 cap`);if(Number(out.model.totalImpact)!==0)failures.push(`Phil in-season totalImpact ${out.model.totalImpact} != 0`);if(out.model.governance!=='ACTIVE_CAPPED_RESIDUAL')failures.push(`Phil in-season governance ${out.model.governance} unexpected`)}else if(target)failures.push('Selected matchup missing modelComponents.philInseason');
+// Verify that every model-side table row matches the newly governed inputs,
+// including the four efficiency tables whose dates can differ from the headline.
+if(target&&out.model){
+  for(const side of ['away','home']){
+    for(const [field,data] of [['power',power],['agg',agg],['passD',passD],['st',st],['offYpp',offYpp],['defYpp',defYpp],['offOppYpg',offOppYpg],['defOppYpg',defOppYpg]]){
+      const actual=out.model[side]?.[field],expected=index(data).get(key(actual?.team||target[side]));
+      if(!actual||!expected){failures.push(`Phil ${side} ${field} row missing`);continue;}
+      for(const [name,value] of Object.entries(expected)){
+        if(name==='team'||name==='sourceTeam')continue;
+        if(actual[name]!==value)failures.push(`Phil ${side} ${field}.${name} live ${actual[name]} != governed ${value}`);
+      }
+    }
+  }
+}
 for(const e of browserErrors)failures.push(`browser pageerror: ${e}`);
 const report={checkedAt:new Date().toISOString(),week:Number(board.week),sourceDate,sourceDates,matchup:target?`${target.away} at ${target.home}`:null,model:out.model,policy:{spreadImpactCap:0.85,totalImpact:0,provenance:'Each governed Phil table retains its own source date; sourceDate is the newest table date.'},failures,status:failures.length?'FAIL':'PASS'};await fs.writeFile('data/phil-inseason-verification-current.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(failures.length)throw new Error(`PHIL IN-SEASON VERIFICATION FAIL: ${failures.join(' | ')}`);console.log('PHIL IN-SEASON VERIFICATION PASS');
