@@ -34,6 +34,12 @@ async function run(){
       const kickoff=Date.parse(g.dateTime||'');
       if(Number.isFinite(kickoff)&&kickoff<=Date.now()){if(g.multiModel?.market)marketCount++;if(g.multiModel?.independent)independentCount++;if(g.multiModel?.ensemble)ensembleCount++;continue}
       const x=byId.get(String(g.gameId||''))||byPair.get(pair(g.away,g.home));if(!x){rejected++;continue}
+      // Refresh and persist the full Phil audit trace alongside the recalculated
+      // model outputs. Previously g.modelComponents retained last week's rows.
+      window.syncGameModelPhilInseason?.(x);
+      if(x.modelComponents?.philInseason){
+        g.modelComponents={...(g.modelComponents||{}),philInseason:JSON.parse(JSON.stringify(x.modelComponents.philInseason))};
+      }
       const market=api.calculate(x,'market'),independent=api.calculate(x,'independent'),ensemble=api.calculate(x,'ensemble');if(market)marketCount++;if(independent)independentCount++;if(ensemble)ensembleCount++;
       const namedAnchor=window.CFB_GOVERNED_MARKET_MODEL?.anchorFromRuntime?.(g);if(namedAnchor)g.marketModelAnchor=namedAnchor;
       const selected=ensemble||independent||market;if(selected){g.modelSpread=selected.fair||null;g.modelHomeMargin=selected.homeMargin!==null&&Number.isFinite(Number(selected.homeMargin))?Number(selected.homeMargin):null;g.modelEdgeMagnitude=selected.edge!==null&&Number.isFinite(Number(selected.edge))?Number(selected.edge):null;g.spreadLean=selected.side||null;g.confidence=selected.confidence||g.confidence;g.selectedModel=ensemble?'ensemble':independent?'independent':'market'}
