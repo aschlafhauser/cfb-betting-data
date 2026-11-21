@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 12,
-  "updatedAt": "2026-11-20T23:58:15.871Z",
+  "updatedAt": "2026-11-21T00:03:35.883Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-20T23:55:21.454Z",
+      "checkedAt": "2026-11-21T00:03:35.883Z",
       "unstartedGames": 63,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -241,16 +241,15 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-20T23:55:16.067Z",
+      "verifiedAt": "2026-11-21T00:03:31.187Z",
       "artifact": "data/statistical-display-integrity-2026-w12.json",
-      "detail": "Team/stat coverage 140/140; ESPN FPI 137 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/15."
+      "detail": "Team/stat coverage 140/140; ESPN FPI 137 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
-      "status": "PASS",
+      "status": "FAIL",
       "blocking": true,
-      "verifiedAt": "2026-11-20T23:55:21.398Z",
       "artifact": "data/market-derived-integrity-2026-w12.json",
-      "detail": "Independently reconciled 177 model/market arithmetic records across 59 fully comparable priced games; 4 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Independently reconciled 177 model/market arithmetic records across 59 fully comparable priced games; 4 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401858303, ESPN-401866468, ESPN-401858529, ESPN-401864545, ESPN-401864542, ESPN-401858302, ESPN-401858310, ESPN-401858306, ESPN-401862835, ESPN-401856866"
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -283,13 +282,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-20T23:58:15.871Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-20T23:53:24.404Z",
+      "verifiedAt": "2026-11-21T00:02:14.241Z",
       "artifact": "data/final-snapshot-integrity-2026-w12.json",
       "validSnapshots": 12,
       "pendingBeforeKickoff": 58,
@@ -305,11 +303,13 @@
       "detail": "12 valid immutable snapshots; 58 games remain pending before kickoff."
     }
   },
-  "failures": [],
+  "failures": [
+    "marketDerivedIntegrity",
+    "productionVerifier"
+  ],
   "currentPriorityQueue": [
-    "Run fresh live-browser production verification",
-    "Maintain injury/market/expert refreshes through kickoff",
-    "Freeze each final pre-kickoff snapshot"
+    "marketDerivedIntegrity: Independently reconciled 177 model/market arithmetic records across 59 fully comparable priced games; 4 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement. Failure: rendered Ensemble mismatch: ESPN-401858303, ESPN-401866468, ESPN-401858529, ESPN-401864545, ESPN-401864542, ESPN-401858302, ESPN-401858310, ESPN-401858306, ESPN-401862835, ESPN-401856866",
+    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
