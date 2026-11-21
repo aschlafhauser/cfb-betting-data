@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401858534",
+  "matchup": "Maryland at USC",
+  "kickoff": "2026-11-21T23:15:00.000Z",
+  "frozenAt": "2026-11-21T17:23:47.726Z",
+  "minutesBeforeKickoff": 351.2,
+  "immutable": true,
+  "market": {
+    "spread": "USC -17.5",
+    "total": 56.5,
+    "moneyline": "Maryland +625 / USC -950",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-21T17:23:47.201Z"
+  },
+  "models": {
+    "marketCalibratedFair": "USC -17",
+    "marketCalibratedHomeMargin": 17.125254504742102,
+    "marketCalibratedEdge": 0.3747454952578977,
+    "independentFair": "USC -11.5",
+    "independentHomeMargin": 11.307451117506957,
+    "independentEdge": 6.192548882493043,
+    "independentSide": "Maryland",
+    "ensembleFair": "USC -14",
+    "ensembleHomeMargin": 13.925462641762772,
+    "ensembleEdge": 3.5745373582372277,
+    "selectedModel": "ensemble",
+    "governedFair": "USC -14",
+    "governedTotal": 58.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T16:22:03.397Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T16:22:03.364Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T16:22:58.300Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 17.8252545047421
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 14.240462641762772
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T16:22:58.300Z",
+    "inputDates": {
+      "fpi": "2026-11-21T16:22:03.397Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T16:22:03.364Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 16.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "USC -16.5",
+    "sourceObservedAt": "2026-11-15T18:22:28.101Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T17:23:47.201Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T17:23:47.201Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 23,
+        "independentCount": 23,
+        "ensembleCount": 23,
+        "rejected": 46
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401860920",
+  "matchup": "Washington State at Texas State",
+  "kickoff": "2026-11-21T23:00:00.000Z",
+  "frozenAt": "2026-11-21T17:23:47.726Z",
+  "minutesBeforeKickoff": 336.2,
+  "immutable": true,
+  "market": {
+    "spread": "Texas State -13.5",
+    "total": 61.5,
+    "moneyline": "Washington State +425 / Texas State -575",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-21T17:23:47.201Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Texas State -15",
+    "marketCalibratedHomeMargin": 14.862739612454881,
+    "marketCalibratedEdge": 1.362739612454881,
+    "independentFair": "Texas State -4.5",
+    "independentHomeMargin": 4.5227387652972935,
+    "independentEdge": 8.977261234702706,
+    "independentSide": "Washington State",
+    "ensembleFair": "Texas State -9",
+    "ensembleHomeMargin": 9.175739146518207,
+    "ensembleEdge": 4.324260853481793,
+    "selectedModel": "ensemble",
+    "governedFair": "Texas State -9",
+    "governedTotal": 62
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T16:22:03.397Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T16:22:03.364Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T16:22:58.295Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 14.51273961245488
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 9.018239146518207
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T16:22:58.295Z",
+    "inputDates": {
+      "fpi": "2026-11-21T16:22:03.397Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T16:22:03.364Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 14,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Texas State -14",
+    "sourceObservedAt": "2026-11-15T18:22:28.099Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T17:23:47.201Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T17:23:47.201Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 23,
+        "independentCount": 23,
+        "ensembleCount": 23,
+        "rejected": 46
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
