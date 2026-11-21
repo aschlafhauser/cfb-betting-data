@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401858532",
+  "matchup": "Rutgers at Penn State",
+  "kickoff": "2026-11-21T20:30:00.000Z",
+  "frozenAt": "2026-11-21T15:25:30.136Z",
+  "minutesBeforeKickoff": 304.5,
+  "immutable": true,
+  "market": {
+    "spread": "Penn State -26.5",
+    "total": 49.5,
+    "moneyline": "Rutgers +1400 / Penn State -3200",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-21T15:25:29.508Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Penn State -25",
+    "marketCalibratedHomeMargin": 25.06107764680295,
+    "marketCalibratedEdge": 1.43892235319705,
+    "independentFair": "Penn State -13.5",
+    "independentHomeMargin": 13.416984474387077,
+    "independentEdge": 13.083015525612923,
+    "independentSide": "Rutgers",
+    "ensembleFair": "Penn State -18",
+    "ensembleHomeMargin": 18.074621743353426,
+    "ensembleEdge": 8.425378256646574,
+    "selectedModel": "ensemble",
+    "governedFair": "Penn State -18",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T14:24:07.212Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 27.161077646802948
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 19.60182640197422
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T14:24:07.212Z",
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 23.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Penn State -23.5",
+    "sourceObservedAt": "2026-11-15T18:22:28.085Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T15:25:29.508Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T15:25:29.508Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 58
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

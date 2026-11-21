@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401858304",
+  "matchup": "NC State at Florida State",
+  "kickoff": "2026-11-21T20:30:00.000Z",
+  "frozenAt": "2026-11-21T15:25:30.136Z",
+  "minutesBeforeKickoff": 304.5,
+  "immutable": true,
+  "market": {
+    "spread": "Florida State -10.5",
+    "total": 56.5,
+    "moneyline": "NC State +310 / Florida State -395",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-21T15:25:29.508Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Florida State -10",
+    "marketCalibratedHomeMargin": 9.980324906580048,
+    "marketCalibratedEdge": 0.5196750934199521,
+    "independentFair": "NC State -0.5",
+    "independentHomeMargin": -0.37636037815824497,
+    "independentEdge": 10.876360378158244,
+    "independentSide": "NC State",
+    "ensembleFair": "Florida State -4",
+    "ensembleHomeMargin": 3.7663137357370724,
+    "ensembleEdge": 6.733686264262928,
+    "selectedModel": "ensemble",
+    "governedFair": "Florida State -4",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T14:24:07.202Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 10.680324906580049
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 4.599147999973987
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T14:24:07.202Z",
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 9.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Florida State -9.5",
+    "sourceObservedAt": "2026-11-15T18:22:28.082Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T15:25:29.508Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T15:25:29.508Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 58
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

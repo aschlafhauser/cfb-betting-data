@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401856752",
+  "matchup": "Texas A&M at Oklahoma",
+  "kickoff": "2026-11-21T20:45:00.000Z",
+  "frozenAt": "2026-11-21T15:25:30.136Z",
+  "minutesBeforeKickoff": 319.5,
+  "immutable": true,
+  "market": {
+    "spread": "Oklahoma -7",
+    "total": 37.5,
+    "moneyline": "Texas A&M +235 / Oklahoma -290",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-21T15:25:29.508Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Oklahoma -3.5",
+    "marketCalibratedHomeMargin": 3.3836,
+    "marketCalibratedEdge": 3.6164,
+    "independentFair": "Oklahoma -3.5",
+    "independentHomeMargin": 3.3509208201410683,
+    "independentEdge": 3.6490791798589317,
+    "independentSide": "Texas A&M",
+    "ensembleFair": "Oklahoma -3.5",
+    "ensembleHomeMargin": 3.3639924920846407,
+    "ensembleEdge": 3.6360075079153593,
+    "selectedModel": "ensemble",
+    "governedFair": "Oklahoma -3.5",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T14:24:07.061Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 7.8835999999999995
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 5.390626451077587
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T14:24:07.061Z",
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Oklahoma -2.5",
+    "sourceObservedAt": "2026-11-15T18:21:28.538Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T15:25:29.508Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T15:25:29.508Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 58
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

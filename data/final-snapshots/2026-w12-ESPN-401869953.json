@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401869953",
+  "matchup": "Georgia Southern at Troy",
+  "kickoff": "2026-11-21T21:00:00.000Z",
+  "frozenAt": "2026-11-21T15:25:30.136Z",
+  "minutesBeforeKickoff": 334.5,
+  "immutable": true,
+  "market": {
+    "spread": "Georgia Southern -9.5",
+    "total": 47.5,
+    "moneyline": "Georgia Southern -355 / Troy +280",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-21T15:25:29.508Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Georgia Southern -10.5",
+    "marketCalibratedHomeMargin": -10.348322981366458,
+    "marketCalibratedEdge": 0.8483229813664579,
+    "independentFair": "Georgia Southern -2.5",
+    "independentHomeMargin": -2.4091316658575828,
+    "independentEdge": 7.090868334142417,
+    "independentSide": "Troy",
+    "ensembleFair": "Georgia Southern -6",
+    "ensembleHomeMargin": -5.981767757836575,
+    "ensembleEdge": 3.5182322421634247,
+    "selectedModel": "ensemble",
+    "governedFair": "Georgia Southern -6",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T14:24:07.229Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -10.348322981366458
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -5.981767757836575
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T14:24:07.229Z",
+    "inputDates": {
+      "fpi": "2026-11-21T14:23:12.403Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T14:23:12.372Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -9.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Georgia Southern -9.5",
+    "sourceObservedAt": "2026-11-15T18:22:28.091Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T15:25:29.508Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T15:25:29.508Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 58
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
