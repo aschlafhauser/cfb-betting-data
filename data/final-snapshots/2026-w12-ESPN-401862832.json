@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401862832",
+  "matchup": "Charlotte at Tulsa",
+  "kickoff": "2026-11-21T19:00:00.000Z",
+  "frozenAt": "2026-11-21T13:26:21.599Z",
+  "minutesBeforeKickoff": 333.6,
+  "immutable": true,
+  "market": {
+    "spread": "Tulsa -22.5",
+    "total": 51.5,
+    "moneyline": "Charlotte +1100 / Tulsa -2100",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-21T13:26:20.958Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Tulsa -20",
+    "marketCalibratedHomeMargin": 19.8538489062922,
+    "marketCalibratedEdge": 2.6461510937078003,
+    "independentFair": "Tulsa -12.5",
+    "independentHomeMargin": 12.26650094434609,
+    "independentEdge": 10.23349905565391,
+    "independentSide": "Charlotte",
+    "ensembleFair": "Tulsa -15.5",
+    "ensembleHomeMargin": 15.301440129124533,
+    "ensembleEdge": 7.198559870875467,
+    "selectedModel": "ensemble",
+    "governedFair": "Tulsa -15.5",
+    "governedTotal": null
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T13:21:54.256Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T13:21:54.059Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T13:22:27.456Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 23.121417889806562
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 17.151213569803303
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T13:22:27.456Z",
+    "inputDates": {
+      "fpi": "2026-11-21T13:21:54.256Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T13:21:54.059Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 18.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Tulsa -18.5",
+    "sourceObservedAt": "2026-11-15T18:22:28.044Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T13:26:20.958Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T13:26:20.958Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 66,
+        "independentCount": 66,
+        "ensembleCount": 66,
+        "rejected": 0
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
