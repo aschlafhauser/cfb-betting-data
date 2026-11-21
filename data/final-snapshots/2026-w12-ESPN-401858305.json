@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 12,
+  "canonicalGameId": "ESPN-401858305",
+  "matchup": "North Carolina at Virginia",
+  "kickoff": "2026-11-21T17:30:00.000Z",
+  "frozenAt": "2026-11-21T12:29:32.790Z",
+  "minutesBeforeKickoff": 300.5,
+  "immutable": true,
+  "market": {
+    "spread": "Virginia -1.5",
+    "total": 41.5,
+    "moneyline": "North Carolina -102 / Virginia -118",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-21T12:29:32.185Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Virginia -1.5",
+    "marketCalibratedHomeMargin": 1.3938391304347824,
+    "marketCalibratedEdge": 0.10616086956521764,
+    "independentFair": "Virginia -8.5",
+    "independentHomeMargin": 8.41943015275547,
+    "independentEdge": 6.919430152755471,
+    "independentSide": "Virginia",
+    "ensembleFair": "Virginia -5.5",
+    "ensembleHomeMargin": 5.257914192711161,
+    "ensembleEdge": 3.7579141927111612,
+    "selectedModel": "ensemble",
+    "governedFair": "Virginia -5.5",
+    "governedTotal": 41
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-21T11:23:48.173Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T11:23:48.078Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-21T11:24:36.971Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 1.3938391304347824
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 5.257914192711161
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-21T11:24:36.971Z",
+    "inputDates": {
+      "fpi": "2026-11-21T11:23:48.173Z",
+      "phil": "2026-11-15",
+      "metrics": "2026-11-21T11:23:48.078Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Virginia -1.5",
+    "sourceObservedAt": "2026-11-15T18:22:28.030Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-21T12:29:32.185Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-21T12:29:32.185Z",
+      "selectedWeek": "Week 12",
+      "modelPromotion": {
+        "marketCount": 12,
+        "independentCount": 12,
+        "ensembleCount": 12,
+        "rejected": 58
+      },
+      "renderedRowCount": 70,
+      "deepDiveCompleteCount": 70,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 70
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
