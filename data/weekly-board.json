@@ -1,6 +1,6 @@
 {
   "week": 12,
-  "updatedAt": "2026-11-22T01:20:41.792Z",
+  "updatedAt": "2026-11-22T01:24:25.357Z",
   "marketSource": "CBS Sports Week 2 boards + targeted current-book cross-checks; complete slate sourced from current Week 2 schedule feed",
   "scheduleCoverage": {
     "completeSlate": true,
@@ -11,7 +11,7 @@
     "scheduleHydrationError": null,
     "marketGameCount": 5,
     "deepDiveCompleteCount": 70,
-    "note": "Canonical Week 12 refreshed from one ESPN snapshot: schedule=70; priced markets=5. Fresh indicative CBS fallback quotes retain their own source and timestamp. Missing quotes remain null and are never carried forward as a mixed snapshot.",
+    "note": "Canonical Week 12: schedule=70/70; completed research=70/70; full-evidence=0; source-limited=70.",
     "deepDiveFullEvidenceCount": 0,
     "deepDiveSourceLimitedCount": 70,
     "marketSnapshotAt": "2026-11-22T01:20:41.792Z"
@@ -23893,7 +23893,7 @@
       "deepDiveEvidenceCount": 9,
       "confidence": "Medium",
       "informationQuality": "market-available",
-      "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+      "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET LIMITED",
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 12 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "marketModelAnchor": {
@@ -25957,7 +25957,7 @@
       "deepDiveEvidenceCount": 9,
       "confidence": "Low",
       "informationQuality": "market-available",
-      "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+      "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET LIMITED",
       "action": "PASS/WATCH pending Bet Activation Gate",
       "notes": "Canonical Week 12 schedule row. No prior-week model, expert, injury or execution state carried forward.",
       "marketModelAnchor": {
@@ -26357,20 +26357,20 @@
       "currentTotal": 46.5,
       "currentMoneyline": "Utah -325 / TCU +260",
       "marketSource": "ESPN Draft Kings",
-      "modelSpread": "Utah -5",
-      "modelTotal": null,
-      "modelEdgeMagnitude": 3.254716590033736,
+      "modelSpread": "Utah -5.5",
+      "modelTotal": 46.5,
+      "modelEdgeMagnitude": 2.074946122741803,
       "finalExecutableEdge": null,
       "independentFootballFair": "Utah -4",
       "independentFootballHomeMargin": -3.8071196716307973,
-      "independentFootballEdge": 4.692880328369203,
+      "independentFootballEdge": 3.6928803283692027,
       "independentFootballSide": "TCU",
       "independentFootballConfidence": "High",
       "priority": "low",
       "stage": "deep-dive-complete-source-limited",
       "deepDiveStatus": "COMPLETE-SOURCE-LIMITED",
       "deepDiveEvidenceCount": 9,
-      "confidence": "High",
+      "confidence": "Low",
       "informationQuality": "market-available",
       "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
       "action": "PASS/WATCH pending Bet Activation Gate",
@@ -26382,8 +26382,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.124Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean TCU",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -7,
         "power": -0.16726190476190467,
@@ -26648,10 +26648,9 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
-      "modelHomeMargin": -5.245283409966264,
+      "modelHomeMargin": -5.425053877258197,
       "spreadLean": "TCU",
       "selectedModel": "ensemble",
       "shadowModels": {
@@ -26659,26 +26658,26 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-22T00:45:52.914Z",
+        "computedAt": "2026-11-22T01:22:52.716Z",
         "marketAnchorCandidate": {
-          "homeMargin": -8.452529017469463
+          "homeMargin": -7.752529017469463
         },
         "ensembleAnchorCandidate": {
-          "homeMargin": -5.897553877258197
+          "homeMargin": -5.582553877258197
         }
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-22T00:45:52.914Z",
+        "computedAt": "2026-11-22T01:22:52.716Z",
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -26690,7 +26689,7 @@
         "market": {
           "fair": "Utah -7.5",
           "homeMargin": -7.402529017469463,
-          "edge": 1.0974709825305373,
+          "edge": 0.09747098253053732,
           "side": "TCU",
           "confidence": "Low",
           "modelVersion": "1.2-input-integrity",
@@ -26713,7 +26712,7 @@
         "independent": {
           "fair": "Utah -4",
           "homeMargin": -3.8071196716307973,
-          "edge": 4.692880328369203,
+          "edge": 3.6928803283692027,
           "side": "TCU",
           "confidence": "High",
           "modelVersion": "1.2-input-integrity",
@@ -26739,25 +26738,24 @@
           }
         },
         "ensemble": {
-          "fair": "Utah -5",
-          "homeMargin": -5.245283409966264,
-          "edge": 3.254716590033736,
+          "fair": "Utah -5.5",
+          "homeMargin": -5.425053877258197,
+          "edge": 2.074946122741803,
           "side": "TCU",
-          "confidence": "High",
+          "confidence": "Low",
           "modelVersion": "1.2-input-integrity",
           "components": {
             "independent": -3.8071196716307973,
             "marketCalibrated": -7.402529017469463,
-            "independentWeight": 0.6,
-            "marketWeight": 0.4,
-            "agreement": true
+            "independentWeight": 0.55,
+            "marketWeight": 0.44999999999999996,
+            "agreement": false
           },
           "tags": [
             "Competitive-Game Edge",
-            "Key-Number Cross",
-            "Model Consensus"
+            "Key-Number Cross"
           ],
-          "decisionScore": 5.170754239841157
+          "decisionScore": 3.1814342697449995
         }
       },
       "marketUpdatedAt": "2026-11-22T01:20:41.792Z",
@@ -26775,7 +26773,7 @@
       "currentMoneyline": "San Diego State +850 / Boise State -1450",
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Boise State -13",
-      "modelTotal": null,
+      "modelTotal": 61,
       "modelEdgeMagnitude": 7.582641586237891,
       "finalExecutableEdge": null,
       "independentFootballFair": "Boise State -10.5",
@@ -26799,8 +26797,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.128Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "San Diego State ATS",
+      "modelGrade": "B+",
       "modelComponents": {
         "base": 16.5,
         "power": 0.24380952380952378,
@@ -27065,8 +27063,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 12.91735841376211,
       "spreadLean": "San Diego State",
@@ -27076,12 +27073,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-22T00:45:52.923Z",
+        "computedAt": "2026-11-22T01:22:52.730Z",
         "marketAnchorCandidate": {
           "homeMargin": 20.022574741200827
         },
@@ -27091,11 +27088,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-22T00:45:52.923Z",
+        "computedAt": "2026-11-22T01:22:52.730Z",
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -27190,7 +27187,7 @@
       "currentMoneyline": "Oklahoma State -135 / Arizona State +114",
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Oklahoma State -1.5",
-      "modelTotal": null,
+      "modelTotal": 59,
       "modelEdgeMagnitude": 0.958744986839104,
       "finalExecutableEdge": null,
       "independentFootballFair": "Pick",
@@ -27214,8 +27211,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.132Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Oklahoma State",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": -4,
         "power": -0.06892857142857144,
@@ -27480,8 +27477,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -1.541255013160896,
       "spreadLean": "Arizona State",
@@ -27491,12 +27487,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-22T00:45:52.931Z",
+        "computedAt": "2026-11-22T01:22:52.740Z",
         "marketAnchorCandidate": {
           "homeMargin": -2.6798124500584626
         },
@@ -27506,11 +27502,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-22T00:45:52.931Z",
+        "computedAt": "2026-11-22T01:22:52.740Z",
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -27603,7 +27599,7 @@
       "currentMoneyline": "Utah State +210 / Oregon State -258",
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Oregon State -6.5",
-      "modelTotal": null,
+      "modelTotal": 51.5,
       "modelEdgeMagnitude": 0.514279070149799,
       "finalExecutableEdge": null,
       "independentFootballFair": "Oregon State -4.5",
@@ -27627,8 +27623,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.135Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Oregon State ATS",
+      "modelGrade": "B",
       "modelComponents": {
         "base": 9.5,
         "power": -0.15928571428571428,
@@ -27893,8 +27889,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": 6.485720929850201,
       "spreadLean": "Utah State",
@@ -27904,12 +27899,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-22T00:45:52.936Z",
+        "computedAt": "2026-11-22T01:22:52.747Z",
         "marketAnchorCandidate": {
           "homeMargin": 6.115931677018634
         },
@@ -27919,11 +27914,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-22T00:45:52.936Z",
+        "computedAt": "2026-11-22T01:22:52.747Z",
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -28016,7 +28011,7 @@
       "currentMoneyline": "Hawai'i +225 / Nevada -278",
       "marketSource": "ESPN Draft Kings",
       "modelSpread": "Hawai'i -2",
-      "modelTotal": null,
+      "modelTotal": 40.5,
       "modelEdgeMagnitude": 8.816667749068802,
       "finalExecutableEdge": null,
       "independentFootballFair": "Hawai'i -5.5",
@@ -28040,8 +28035,8 @@
         "sourceObservedAt": "2026-11-15T18:22:28.136Z",
         "calibrationStatus": "prospective-week-initialization"
       },
-      "modelLean": null,
-      "modelGrade": null,
+      "modelLean": "Lean Hawai'i",
+      "modelGrade": "Watch",
       "modelComponents": {
         "base": 4.5,
         "power": -0.17011904761904761,
@@ -28306,8 +28301,7 @@
           "architecture": "POWER_PLUS_ORTHOGONAL_RESIDUALS",
           "totalImpact": 0
         },
-        "sourceValid": false,
-        "coverageGate": "WITHHELD_COMPARABLE_TEAM_COVERAGE"
+        "sourceValid": true
       },
       "modelHomeMargin": -1.8166677490688015,
       "spreadLean": "Hawai'i",
@@ -28317,12 +28311,12 @@
         "researchOnly": true,
         "promoted": false,
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
-        "computedAt": "2026-11-22T00:45:52.939Z",
+        "computedAt": "2026-11-22T01:22:52.751Z",
         "marketAnchorCandidate": {
           "homeMargin": 5.687707039337474
         },
@@ -28332,11 +28326,11 @@
       },
       "modelComputation": {
         "version": "1.2-input-integrity",
-        "computedAt": "2026-11-22T00:45:52.939Z",
+        "computedAt": "2026-11-22T01:22:52.751Z",
         "inputDates": {
-          "fpi": "2026-11-22T00:45:14.718Z",
+          "fpi": "2026-11-22T01:22:07.730Z",
           "phil": "2026-11-15",
-          "metrics": "2026-11-22T00:45:14.517Z",
+          "metrics": "2026-11-22T01:22:07.650Z",
           "live": "2026-09-06T08:41:55-05:00"
         },
         "marketAnchorSource": "preserved-named-market-model",
@@ -28433,7 +28427,7 @@
   "runtimePersistence": {
     "status": "ACTIVE",
     "source": "https://cfb-betting-intelligence.netlify.app/",
-    "capturedAt": "2026-11-22T00:47:17.639Z",
+    "capturedAt": "2026-11-22T01:24:25.357Z",
     "selectedWeek": "Week 12",
     "modelPromotion": {
       "marketCount": 66,
@@ -28448,11 +28442,11 @@
   },
   "modelRuntime": {
     "week": 12,
-    "promotedGameCount": 0,
-    "totalPromotedGameCount": 0,
-    "independentGameCount": 0,
-    "rejectedFallbackCount": 6,
-    "generatedAt": "2026-11-22T00:45:51.755Z",
+    "promotedGameCount": 5,
+    "totalPromotedGameCount": 5,
+    "independentGameCount": 5,
+    "rejectedFallbackCount": 0,
+    "generatedAt": "2026-11-22T01:22:52.457Z",
     "status": "browser-governed-model-active",
     "note": "Only source-valid model outputs are promoted. Zero-information Pick/0.0 fallbacks are explicitly rejected; finalExecutableEdge remains separately gated."
   },
