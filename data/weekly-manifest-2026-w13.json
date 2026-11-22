@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 13,
-  "updatedAt": "2026-11-22T14:36:54.257Z",
+  "updatedAt": "2026-11-22T14:58:54.549Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-22T14:32:46.294Z",
+      "checkedAt": "2026-11-22T14:58:54.549Z",
       "unstartedGames": 69,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -257,15 +257,16 @@
       "detail": "Every game must have a structured dossier; source-limited completion is explicit and does not masquerade as full evidence."
     },
     "statisticalDisplay": {
-      "status": "FAIL",
+      "status": "PASS",
       "blocking": true,
+      "verifiedAt": "2026-11-22T14:58:26.883Z",
       "artifact": "data/statistical-display-integrity-2026-w13.json",
-      "detail": "No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes."
+      "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 10/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-22T14:32:46.258Z",
+      "verifiedAt": "2026-11-22T14:58:54.512Z",
       "artifact": "data/market-derived-integrity-2026-w13.json",
       "detail": "Independently reconciled 105 model/market arithmetic records across 35 fully comparable priced games; 0 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -300,13 +301,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-22T14:36:54.257Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-22T14:30:48.094Z",
+      "verifiedAt": "2026-11-22T14:57:03.473Z",
       "artifact": "data/final-snapshot-integrity-2026-w13.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 69,
@@ -323,11 +323,9 @@
     }
   },
   "failures": [
-    "statisticalDisplay",
     "productionVerifier"
   ],
   "currentPriorityQueue": [
-    "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
     "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
