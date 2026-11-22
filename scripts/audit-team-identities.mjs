@@ -20,7 +20,10 @@ for(const rec of registry.teams||[]){
 }
 const canon=s=>aliasToCanonical.get(raw(s))||String(s||'').trim();
 const ckey=s=>raw(canon(s));
-const boardTeams=[...new Set((board.games||[]).flatMap(g=>[g.away,g.home]).filter(Boolean))];
+const isPlaceholderTeam=name=>/^(tbd|tba|to be determined|unknown)$/i.test(String(name||'').trim());
+// Preserve placeholder schedule rows, but never promote an unresolved opponent token
+// into a governed team identity/statistical coverage obligation.
+const boardTeams=[...new Set((board.games||[]).flatMap(g=>[g.away,g.home]).filter(name=>name&&!isPlaceholderTeam(name)))];
 const statsByCanon=new Map();
 for(const t of metrics.teams||[]){const k=ckey(t.team);if(!statsByCanon.has(k))statsByCanon.set(k,[]);statsByCanon.get(k).push(t)}
 
