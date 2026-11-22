@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 13,
-  "updatedAt": "2026-11-22T04:43:40.523Z",
+  "updatedAt": "2026-11-22T05:37:21.136Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-22T04:38:05.389Z",
+      "checkedAt": "2026-11-22T05:37:21.136Z",
       "unstartedGames": 69,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -238,7 +238,7 @@
     "marketCoverage": {
       "status": "PASS-SOURCE-LIMITED",
       "minimumRequired": 2,
-      "actualMarketGames": 16,
+      "actualMarketGames": 19,
       "dueGames": 2,
       "dueMarketGames": 2,
       "startedGamesExcluded": 0,
@@ -265,9 +265,9 @@
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-22T04:38:05.341Z",
+      "verifiedAt": "2026-11-22T05:37:21.081Z",
       "artifact": "data/market-derived-integrity-2026-w13.json",
-      "detail": "Independently reconciled 48 model/market arithmetic records across 16 fully comparable priced games; 0 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
+      "detail": "Independently reconciled 57 model/market arithmetic records across 19 fully comparable priced games; 0 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
     "unifiedUpsetResearch": {
       "status": "PASS",
@@ -283,7 +283,7 @@
     },
     "longshotUpsetLab": {
       "status": "PASS",
-      "detail": "Canonical longshot spread screen refreshed with 5 visible candidates."
+      "detail": "Canonical longshot spread screen refreshed with 8 visible candidates."
     },
     "expertEpisodeInventory": {
       "status": "IN_PROGRESS",
@@ -300,13 +300,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-22T04:43:40.523Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-22T04:35:12.217Z",
+      "verifiedAt": "2026-11-22T05:34:29.133Z",
       "artifact": "data/final-snapshot-integrity-2026-w13.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 69,
@@ -323,10 +322,12 @@
     }
   },
   "failures": [
-    "statisticalDisplay"
+    "statisticalDisplay",
+    "productionVerifier"
   ],
   "currentPriorityQueue": [
-    "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes."
+    "statisticalDisplay: No dedicated current PASS artifact proves complete statistical-display coverage and live Matchup Center reconciliation. This blocking gate is sticky until explicit verification passes.",
+    "productionVerifier: Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
   ],
   "notificationPolicy": "Notify only for material handicap evidence, material confidence/disagreement change, official activation or unresolved hard gate failure."
 }
