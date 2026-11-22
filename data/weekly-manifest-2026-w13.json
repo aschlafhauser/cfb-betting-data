@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 13,
-  "updatedAt": "2026-11-22T12:39:34.514Z",
+  "updatedAt": "2026-11-22T13:30:14.728Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-22T12:37:05.309Z",
+      "checkedAt": "2026-11-22T13:30:14.728Z",
       "unstartedGames": 69,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -265,7 +265,7 @@
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-22T12:37:05.267Z",
+      "verifiedAt": "2026-11-22T13:30:14.680Z",
       "artifact": "data/market-derived-integrity-2026-w13.json",
       "detail": "Independently reconciled 90 model/market arithmetic records across 30 fully comparable priced games; 0 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -300,13 +300,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-22T12:39:34.514Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-22T12:35:11.882Z",
+      "verifiedAt": "2026-11-22T13:28:31.799Z",
       "artifact": "data/final-snapshot-integrity-2026-w13.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 69,
