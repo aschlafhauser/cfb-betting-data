@@ -8,7 +8,10 @@ const fpi=JSON.parse(await fs.readFile('data/espn-fpi-current.json','utf8'));
 const season=Number(board.season||2026),week=Number(board.week);
 const norm=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
 const games=board.games||[];
-const expectedTeams=new Set(games.flatMap(g=>[g.away,g.home]).filter(Boolean)).size;
+const isPlaceholderTeam=name=>/^(tbd|tba|to be determined|unknown)$/i.test(String(name||'').trim());
+// Placeholder opponents remain canonical schedule rows and explicitly coverage-limited
+// model records, but are not teams and cannot be required to resolve to ESPN statistics.
+const expectedTeams=new Set(games.flatMap(g=>[g.away,g.home]).filter(name=>name&&!isPlaceholderTeam(name))).size;
 const fpiTeams=new Set((fpi.teams||[]).filter(x=>Number.isFinite(Number(x.fpi))).map(x=>norm(x.team)));
 const now=Date.now();
 const isUpcoming=g=>{
@@ -26,7 +29,8 @@ const failures=[];
 
 if(Number(metrics.week)!==week)failures.push(`team metrics week ${metrics.week} != ${week}`);
 if((metrics.coverage?.resolvedTeams||0)!==expectedTeams)failures.push(`team metrics coverage ${metrics.coverage?.resolvedTeams||0}/${expectedTeams}`);
-if((metrics.coverage?.unresolvedTeams||[]).length)failures.push(`unresolved stat teams: ${metrics.coverage.unresolvedTeams.join(', ')}`);
+const unresolvedRealTeams=(metrics.coverage?.unresolvedTeams||[]).filter(name=>!isPlaceholderTeam(name));
+if(unresolvedRealTeams.length)failures.push(`unresolved stat teams: ${unresolvedRealTeams.join(', ')}`);
 if(fpiTeams.size<100)failures.push('ESPN FPI numeric coverage < 100 teams');
 for(const team of metrics.teams||[]){
  for(const [side,field] of [['offense','thirdDownRate'],['offense','successRate'],['offense','explosivePassRate'],['offense','explosiveRushRate'],['offense','sackRateAllowed'],['defense','pointsAllowedPerGame'],['defense','yardsAllowedPerGame'],['defense','successRateAllowed'],['defense','sackRate']]){const value=team[side]?.[field];if(value==null||!Number.isFinite(Number(value)))failures.push(`${team.team}: missing numeric ${side}.${field}`);}
