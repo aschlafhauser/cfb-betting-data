@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 13,
-  "updatedAt": "2026-11-23T07:32:31.588Z",
+  "updatedAt": "2026-11-23T08:34:31.909Z",
   "status": "FAIL",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-23T07:30:10.403Z",
+      "checkedAt": "2026-11-23T08:34:31.909Z",
       "unstartedGames": 69,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -259,14 +259,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-23T07:29:42.046Z",
+      "verifiedAt": "2026-11-23T08:34:07.836Z",
       "artifact": "data/statistical-display-integrity-2026-w13.json",
-      "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/15."
+      "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-23T07:30:10.357Z",
+      "verifiedAt": "2026-11-23T08:34:31.867Z",
       "artifact": "data/market-derived-integrity-2026-w13.json",
       "detail": "Independently reconciled 192 model/market arithmetic records across 64 fully comparable priced games; 4 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -301,13 +301,12 @@
     "productionVerifier": {
       "status": "FAIL",
       "priorFailure": true,
-      "verifiedAt": "2026-11-23T07:32:31.588Z",
-      "detail": "Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure."
+      "detail": "Persisted live-browser verification failure remains unresolved: Explicit live-browser certification failed and remains sticky until every dedicated verifier passes. Outcomes: failure.. This hard FAIL is sticky across ordinary manifest regeneration and may be cleared only by an explicit clean live-browser verification with zero browser/page/runtime errors."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-23T07:28:10.509Z",
+      "verifiedAt": "2026-11-23T08:32:42.780Z",
       "artifact": "data/final-snapshot-integrity-2026-w13.json",
       "validSnapshots": 0,
       "pendingBeforeKickoff": 69,
