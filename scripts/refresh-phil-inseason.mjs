@@ -38,8 +38,13 @@ for(const [k,spec] of Object.entries(specs)){
  const rows=[],seen=new Set();
  const add=(sourceTeam,fields)=>{const resolved=resolve(sourceTeam);assert(resolved,`Unresolved ${k} team: ${sourceTeam}`);const team=key(resolved)==='sanjosestate'?'San José State':resolved;if(seen.has(key(team)))return;seen.add(key(team));rows.push({...fields,team,...(key(sourceTeam)!==key(team)||team!==resolved?{sourceTeam}:{})})};
  if(k==='power'){
-   const table=parsed.find(t=>t.some(r=>r.includes('Georgia')&&r.includes('Indiana')));assert(table,'Power table missing');
-   for(const r of table)for(const i of [0,4,8])if(r[i]&&/^\d+$/.test(r[i+1]||'')&&/^\d+$/.test(r[i+2]||'')){const start=num(r[i+1]),current=num(r[i+2]);add(r[i],{start,current,delta:current-start})}
+   // Phil periodically reorders the visible three-column groups, so selecting
+   // the table by two specific team names is brittle. Identify the governed
+   // table by its repeated team/start/current numeric triplets instead.
+   const triplets=r=>{const out=[];for(let i=0;i+2<r.length;i++){if(r[i]&&!/^[+-]?\d/.test(r[i])&&/^\d+$/.test(r[i+1]||'')&&/^\d+$/.test(r[i+2]||'')){out.push([r[i],r[i+1],r[i+2]]);i+=2}}return out};
+   const ranked=parsed.map(t=>({table:t,count:t.reduce((n,r)=>n+triplets(r).length,0)})).sort((a,b)=>b.count-a.count);
+   const table=ranked[0]?.count>=130?ranked[0].table:null;assert(table,'Power table missing');
+   for(const r of table)for(const [sourceTeam,startCell,currentCell] of triplets(r)){const start=num(startCell),current=num(currentCell);add(sourceTeam,{start,current,delta:current-start})}
  }else if(k==='agg'){
    const table=parsed.find(t=>t.some(r=>r[0]==='1'&&r[1]));assert(table,'AGG table missing');
    for(const r of table)for(const i of [0,4])if(rank(r[i]))add(r[i+1],{rank:num(r[i]),agg:num(r[i+2])});
