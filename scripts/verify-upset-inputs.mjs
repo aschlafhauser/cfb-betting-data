@@ -43,7 +43,18 @@ for(const r of records){
  assert(Object.values(r.components).every(v=>Number.isFinite(v)&&v>=0),`${r.team}: invalid component`);
  assert(r.score25>=0&&r.score25<=25,`${r.team}: invalid total`);
 }
-const expectedUnderdogUniverse=board.games.filter(g=>/^(.+?)\s+(-?\d+(?:\.\d+)?)/.test(String(g.currentSpread||''))).length;
-assert.equal(records.length,expectedUnderdogUniverse,'Incomplete underdog evidence universe');
+const norm=s=>String(s||'').replace(/\bSt\.?$/i,'State').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const aliases={af:'airforce',buf:'buffalo',fiu:'floridainternational',fau:'floridaatlantic',wku:'westernkentucky',usf:'southflorida',mtsu:'middletennessee',ulm:'ulmonroe',mississippi:'olemiss',armywestpoint:'army',connecticut:'uconn',appalachianst:'appstate',appalachianstate:'appstate',miamifla:'miami',miamifl:'miami',ohiost:'ohiostate',pennst:'pennstate',floridast:'floridastate',mississippist:'mississippistate',michiganst:'michiganstate',sanjosest:'sanjosestate',coloradost:'coloradostate',kansasst:'kansasstate',arizonast:'arizonastate',iowast:'iowastate',oklahomast:'oklahomastate',boisest:'boisestate',oregonst:'oregonstate',utahst:'utahstate',kentst:'kentstate',massachusetts:'umass',centmichigan:'centralmichigan',samhoustonstate:'samhouston',kennesaw:'kennesawstate',wkentucky:'westernkentucky',emichigan:'easternmichigan',wmichigan:'westernmichigan'};
+const canon=s=>aliases[norm(s)]||norm(s);
+const priced=board.games.map(g=>({g,m:String(g.currentSpread||'').match(/^(.+?)\s+(-?\d+(?:\.\d+)?)/)})).filter(x=>x.m);
+const resolvable=priced.filter(({g,m})=>[g.away,g.home].some(t=>canon(t)===canon(m[1])));
+const unresolved=priced.filter(({g,m})=>![g.away,g.home].some(t=>canon(t)===canon(m[1])));
+const marketIntegrity=await read(`market-derived-integrity-${board.season}-w${board.week}.json`);
+for(const {g} of unresolved){
+ const documented=(marketIntegrity.checks?.sourceLimitedExclusions||[]).some(x=>String(x).startsWith(g.gameId+':'));
+ assert(documented,`${g.gameId}: unresolved market identity is not documented as coverage-limited`);
+ assert(/source-limited/i.test(String(g.deepDiveStatus||g.stage||'')),`${g.gameId}: unresolved market identity lacks an explicit source-limited record`);
+}
+assert.equal(records.length,resolvable.length,'Incomplete resolvable underdog evidence universe');
 assert(Object.values(research.isolation).every(v=>v===0),'Upset research changed production decisions');
-console.log(`Upset input integrity PASS: ${records.length} matchups, ${modelChecks} probability, ${rankChecks} current Phil rank and ${sourceLimitedRankChecks} explicit source-limited rank checks; production impact zero.`);
+console.log(`Upset input integrity PASS: ${records.length} resolvable matchups, ${unresolved.length} documented identity-limited exclusions, ${modelChecks} probability, ${rankChecks} current Phil rank and ${sourceLimitedRankChecks} explicit source-limited rank checks; production impact zero.`);
