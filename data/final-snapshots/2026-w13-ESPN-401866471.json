@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401866471",
+  "matchup": "Miami (OH) at Western Michigan",
+  "kickoff": "2026-11-25T00:00:00.000Z",
+  "frozenAt": "2026-11-24T18:28:15.057Z",
+  "minutesBeforeKickoff": 331.7,
+  "immutable": true,
+  "market": {
+    "spread": "Western Michigan -5.5",
+    "total": 45.5,
+    "moneyline": "Miami (OH) +190 / Western Michigan -230",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-24T18:28:14.594Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Western Michigan -7",
+    "marketCalibratedHomeMargin": 7.2171140859978955,
+    "marketCalibratedEdge": 1.7171140859978955,
+    "independentFair": "Western Michigan -4.5",
+    "independentHomeMargin": 4.50091546733346,
+    "independentEdge": 0.9990845326665401,
+    "independentSide": "Miami (OH)",
+    "ensembleFair": "Western Michigan -5.5",
+    "ensembleHomeMargin": 5.723204845732456,
+    "ensembleEdge": 0.22320484573245558,
+    "selectedModel": "ensemble",
+    "governedFair": "Western Michigan -5.5",
+    "governedTotal": 45.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-24T18:23:31.465Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-24T18:23:31.255Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-24T18:24:25.993Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 5.817114085997895
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 5.093204845732456
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-24T18:24:25.993Z",
+    "inputDates": {
+      "fpi": "2026-11-24T18:23:31.465Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-24T18:23:31.255Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 7.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Western Michigan -7.5",
+    "sourceObservedAt": "2026-11-22T04:24:07.560Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-24T18:28:14.594Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-24T18:28:14.594Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

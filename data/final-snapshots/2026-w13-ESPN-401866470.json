@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401866470",
+  "matchup": "Kent State at Eastern Michigan",
+  "kickoff": "2026-11-25T00:00:00.000Z",
+  "frozenAt": "2026-11-24T18:28:15.057Z",
+  "minutesBeforeKickoff": 331.7,
+  "immutable": true,
+  "market": {
+    "spread": "Eastern Michigan -5.5",
+    "total": 46.5,
+    "moneyline": "Kent State +185 / Eastern Michigan -225",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-24T18:28:14.594Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Eastern Michigan -7.5",
+    "marketCalibratedHomeMargin": 7.260742824338571,
+    "marketCalibratedEdge": 1.7607428243385712,
+    "independentFair": "Eastern Michigan -6",
+    "independentHomeMargin": 6.019496593046386,
+    "independentEdge": 0.5194965930463864,
+    "independentSide": "Eastern Michigan",
+    "ensembleFair": "Eastern Michigan -6.5",
+    "ensembleHomeMargin": 6.51599508556326,
+    "ensembleEdge": 1.0159950855632598,
+    "selectedModel": "ensemble",
+    "governedFair": "Eastern Michigan -6.5",
+    "governedTotal": 46.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-24T18:23:31.465Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-24T18:23:31.255Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-24T18:24:25.980Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 6.560742824338572
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 6.23599508556326
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-24T18:24:25.980Z",
+    "inputDates": {
+      "fpi": "2026-11-24T18:23:31.465Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-24T18:23:31.255Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 6.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Eastern Michigan -6.5",
+    "sourceObservedAt": "2026-11-22T04:24:07.543Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-24T18:28:14.594Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-24T18:28:14.594Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

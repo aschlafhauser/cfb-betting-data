@@ -3,13 +3,13 @@
   "sport": "CFB",
   "season": 2026,
   "week": 13,
-  "verifiedAt": "2026-11-24T17:26:40.634Z",
+  "verifiedAt": "2026-11-24T18:28:15.114Z",
   "status": "IN_PROGRESS",
   "blocking": false,
   "counts": {
     "selectedWeekGames": 69,
-    "validPreKickoffSnapshots": 0,
-    "pendingBeforeKickoff": 69,
+    "validPreKickoffSnapshots": 2,
+    "pendingBeforeKickoff": 67,
     "invalidKickoffProvenance": 0,
     "permanentFailures": 0,
     "acknowledgedPermanentExceptions": 0,
@@ -20,22 +20,6 @@
   "unacknowledgedFailures": [],
   "invalidKickoffGames": [],
   "pendingGames": [
-    {
-      "canonicalGameId": "ESPN-401866470",
-      "game": "Kent State at Eastern Michigan",
-      "kickoff": "2026-11-25T00:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
-    {
-      "canonicalGameId": "ESPN-401866471",
-      "game": "Miami (OH) at Western Michigan",
-      "kickoff": "2026-11-25T00:00:00.000Z",
-      "status": "PENDING",
-      "snapshotFile": null,
-      "frozenAt": null
-    },
     {
       "canonicalGameId": "ESPN-401856879",
       "game": "TCU at Texas Tech",
@@ -573,7 +557,24 @@
       "frozenAt": null
     }
   ],
-  "passedGames": [],
+  "passedGames": [
+    {
+      "canonicalGameId": "ESPN-401866470",
+      "game": "Kent State at Eastern Michigan",
+      "kickoff": "2026-11-25T00:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w13-ESPN-401866470.json",
+      "frozenAt": "2026-11-24T18:28:15.057Z"
+    },
+    {
+      "canonicalGameId": "ESPN-401866471",
+      "game": "Miami (OH) at Western Michigan",
+      "kickoff": "2026-11-25T00:00:00.000Z",
+      "status": "PASS",
+      "snapshotFile": "data/final-snapshots/2026-w13-ESPN-401866471.json",
+      "frozenAt": "2026-11-24T18:28:15.057Z"
+    }
+  ],
   "clearedMalformedLegacyFailures": [],
   "exceptionLedger": "data/final-snapshot-exceptions.json",
   "governance": "A missed or invalid pre-kickoff snapshot is never reconstructed or backfilled. A specifically acknowledged historical exception remains permanently visible in this audit but does not keep the current decision system in a false failed state. Any new, unacknowledged miss remains a blocking failure. A prior failure may be cleared only when its recorded kickoff is demonstrably malformed outside the governed season and the canonical kickoff was still in the future when the false failure was first detected."
