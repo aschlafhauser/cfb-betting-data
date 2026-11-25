@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 13,
-  "updatedAt": "2026-11-25T07:32:37.915Z",
+  "updatedAt": "2026-11-25T08:32:24.682Z",
   "status": "PASS-WITH-IN-PROGRESS-GATES",
   "healthyDefinition": "No hard data/runtime gate may fail. Persisted live-browser, statistical-display and market-derived-integrity failures are sticky until their explicit clean verification path clears them.",
   "gates": {
     "currentWeekContent": {
       "status": "PASS-WITH-SOURCE-LIMITS",
       "blocking": false,
-      "checkedAt": "2026-11-25T07:30:24.205Z",
+      "checkedAt": "2026-11-25T08:32:24.682Z",
       "unstartedGames": 67,
       "expertContextGames": 0,
       "materialWrittenAnalysisGames": 0,
@@ -253,14 +253,14 @@
     "statisticalDisplay": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-25T07:29:54.221Z",
+      "verifiedAt": "2026-11-25T08:31:56.042Z",
       "artifact": "data/statistical-display-integrity-2026-w13.json",
-      "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 12/12; FPI-eligible panels 8/14."
+      "detail": "Team/stat coverage 134/134; ESPN FPI 135 numeric teams; sampled rendered statistical panels 11/12; FPI-eligible panels 8/14."
     },
     "marketDerivedIntegrity": {
       "status": "PASS",
       "blocking": true,
-      "verifiedAt": "2026-11-25T07:30:24.166Z",
+      "verifiedAt": "2026-11-25T08:32:24.643Z",
       "artifact": "data/market-derived-integrity-2026-w13.json",
       "detail": "Independently reconciled 189 model/market arithmetic records across 63 fully comparable priced games; 4 priced games remain explicitly coverage-limited rather than receiving zero-information model fallbacks. Verified Football Independent fair invariance under market mutation and sampled rendered Ensemble fair/edge agreement."
     },
@@ -293,15 +293,14 @@
       "detail": "New Deep Dive, Market Movers, unified upset research, Underdog and Longshot derived records use canonical game IDs. Legacy expert/audit records remain bridged/reconciled separately rather than rewritten."
     },
     "productionVerifier": {
-      "status": "PASS",
+      "status": "PENDING-LIVE-CHECK",
       "priorFailure": false,
-      "verifiedAt": "2026-11-25T07:32:37.915Z",
-      "detail": "Explicit selected-week live decision-system, identity, Phil, FPI/statistical, multi-model independence, market-derived, every-tab and mobile/stability verification passed."
+      "detail": "Live portal verification runs after runtime artifacts are committed/deployed; only an explicit clean browser run may certify current production health."
     },
     "finalSnapshotIntegrity": {
       "status": "IN_PROGRESS",
       "blocking": false,
-      "verifiedAt": "2026-11-25T07:28:35.413Z",
+      "verifiedAt": "2026-11-25T08:30:39.522Z",
       "artifact": "data/final-snapshot-integrity-2026-w13.json",
       "validSnapshots": 2,
       "pendingBeforeKickoff": 67,
