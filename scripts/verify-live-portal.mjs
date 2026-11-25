@@ -12,7 +12,7 @@ for(let attempt=1;attempt<=8;attempt++){
  // bootstrap is a rollover failure even if current data later replaces them.
  const bootStates=[];const bootUntil=Date.now()+20000;
  while(Date.now()<bootUntil){
-  const state=await page.evaluate(n=>{const sel=document.getElementById('weekSel'),m=String(sel?.value||sel?.selectedOptions?.[0]?.textContent||'').match(/\d+/),rows=Array.from(document.querySelectorAll('#scheduleRows tr')),ready=Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&Array.isArray(window.CFB_DEEP_DIVES_CURRENT?.dossiers)&&window.CFB_DEEP_DIVES_CURRENT.dossiers.length===n&&window.CFB_WEEKLY_MANIFEST_CURRENT;return{at:Date.now(),week:m?Number(m[0]):null,rowCount:rows.length,sample:rows.slice(0,3).map(r=>String(r.dataset?.gameId||r.textContent||'').trim().replace(/\s+/g,' ').slice(0,180)),ready:Boolean(ready)}},expected);
+  const state=await page.evaluate(n=>{const sel=document.getElementById('weekSel'),m=String(sel?.value||sel?.selectedOptions?.[0]?.textContent||'').match(/\d+/),rows=Array.from(document.querySelectorAll('#scheduleRows tr')),ready=Array.isArray(window.CFB_WEEKLY_BOARD_2026?.games)&&window.CFB_WEEKLY_BOARD_2026.games.length===n&&Array.isArray(window.CFB_DEEP_DIVES_CURRENT?.dossiers)&&window.CFB_DEEP_DIVES_CURRENT.dossiers.length===n&&window.CFB_WEEKLY_MANIFEST_CURRENT,bootstrapForbidden=!ready&&rows.some(r=>/^Pick(?:\s|$)/i.test(r.children?.[5]?.textContent?.trim()||'')||/^0(?:\.0)?(?:\s|pre-weather|$)/i.test(r.children?.[11]?.textContent?.trim()||''));return{at:Date.now(),week:m?Number(m[0]):null,rowCount:rows.length,sample:rows.slice(0,3).map(r=>String(r.dataset?.gameId||r.textContent||'').trim().replace(/\s+/g,' ').slice(0,180)),ready:Boolean(ready),bootstrapForbidden}},expected);
   bootStates.push(state);if(state.ready)break;
   await page.waitForTimeout(75);
  }
@@ -38,6 +38,8 @@ for(let attempt=1;attempt<=8;attempt++){
   };
   const meaningful=rows.filter(r=>{const t=r.children?.[5]?.textContent?.trim()||'';if(!t||/pending|—/i.test(t))return false;if(/^Pick(?:power|\s|$)/i.test(t))return isLegitPick(r);return true}).length;
   const markets=rows.filter(r=>{const s=r.children?.[3]?.textContent?.trim()||'',t=r.children?.[4]?.textContent?.trim()||'';return(s&&s!=='—')||(t&&t!=='—')}).length;
+  const canonicalById=new Map(games.map(g=>[String(g.gameId||g.canonicalGameId||g.id||''),g]));
+  const zeroFallbackRows=rows.map(r=>{const id=String(r.dataset?.gameId||''),g=canonicalById.get(id),text=r.children?.[11]?.textContent?.trim()||'';return{id,game:g?`${g.away} at ${g.home}`:null,text,sourceModelTotal:g?.modelTotal}}).filter(x=>x.sourceModelTotal==null&&/^0(?:\.0)?(?:\s|pre-weather|$)/i.test(x.text));
   const picks=rows.filter(r=>/^Pick(?:power|\s|$)/i.test(r.children?.[5]?.textContent?.trim()||'')).length;
   // Ensure every Pick row is audited even if meaningful() already evaluated it.
   for(const r of rows){const t=r.children?.[5]?.textContent?.trim()||'';if(/^Pick(?:power|\s|$)/i.test(t)&&!pickRows.some(x=>x.gameId===String(r.dataset?.gameId||'')))isLegitPick(r)}
@@ -56,16 +58,16 @@ for(let attempt=1;attempt<=8;attempt++){
   const underdogData=window.CFB_UNDERDOG_SPECIAL_2026||{},underdogRuntime=(underdogData.candidates||underdogData.games||underdogData.items||[]).length,underdogSection=document.getElementById('underdog'),underdogRendered=underdogSection?underdogSection.querySelectorAll('.card,[data-candidate],tr').length:0;
   const longshotVisibleOk=longshotRuntime===0||(longshotRendered===longshotRuntime&&longshotComponents===9&&longshotNarrative&&longshotScore25);
   const underdogVisibleOk=underdogRuntime===0||underdogRendered>0;
-  return{sourceGames:games.length,renderedRows:rows.length,meaningful,markets,picks,fakePicks,pickRows,deepDiveComplete,falseDeepDive,dossierCount:dossiers.length,moverCount:movers.length,integrity,matchPanel,longshotRuntime,longshotRendered,longshotComponents,longshotNarrative,longshotScore25,longshotVisibleOk,underdogRuntime,underdogRendered,underdogVisibleOk,runtime:window.CFB_RUNTIME_DATA||null};
+  return{sourceGames:games.length,renderedRows:rows.length,meaningful,markets,picks,fakePicks,pickRows,zeroFallbackRows,deepDiveComplete,falseDeepDive,dossierCount:dossiers.length,moverCount:movers.length,integrity,matchPanel,longshotRuntime,longshotRendered,longshotComponents,longshotNarrative,longshotScore25,longshotVisibleOk,underdogRuntime,underdogRendered,underdogVisibleOk,runtime:window.CFB_RUNTIME_DATA||null};
  });
  diag.browserErrors=[...browserErrors];
  const canonicalWeek=await page.evaluate(()=>{const w=window.CFB_WEEKLY_BOARD_2026?.week;return Number.isFinite(Number(w))?Number(w):null});
- const bootViolations=bootStates.filter(s=>canonicalWeek!==null&&s.week!==null&&s.week!==canonicalWeek);
+ const bootViolations=bootStates.filter(s=>(canonicalWeek!==null&&s.week!==null&&s.week!==canonicalWeek)||s.bootstrapForbidden);
  const bootUnique=[...new Map(bootStates.map(s=>[JSON.stringify({week:s.week,rowCount:s.rowCount,sample:s.sample}),s])).values()];
  diag.bootRollover={canonicalWeek,observedStates:bootUnique.map(({at,...s})=>s),violationCount:bootViolations.length,firstViolation:bootViolations[0]||null};
  console.log(`Live verification attempt ${attempt}: ${JSON.stringify(diag)}`);
  if(bootViolations.length){await browser.close();throw new Error(`Live production verification failed rollover boot-isolation gate: ${JSON.stringify(diag.bootRollover)}`)}
- const structural=diag.sourceGames===expected&&diag.renderedRows===expected&&diag.meaningful>=minModels&&diag.markets>=minMarkets&&diag.fakePicks===0&&diag.falseDeepDive===0;
+ const structural=diag.sourceGames===expected&&diag.renderedRows===expected&&diag.meaningful>=minModels&&diag.markets>=minMarkets&&diag.fakePicks===0&&diag.zeroFallbackRows.length===0&&diag.falseDeepDive===0;
  const moverLayerLoaded=diag.moverCount>0||(diag.runtime?.loaded||[]).some(x=>/^market-movers-/.test(String(x)));
  const decisionLayers=diag.dossierCount===expected&&diag.deepDiveComplete===expected&&moverLayerLoaded&&diag.matchPanel;
  // Current browser exceptions are authoritative. A previously persisted productionVerifier
