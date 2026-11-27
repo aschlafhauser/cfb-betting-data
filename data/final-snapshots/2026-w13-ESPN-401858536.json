@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401858536",
+  "matchup": "Nebraska at Iowa",
+  "kickoff": "2026-11-27T17:08:00.000Z",
+  "frozenAt": "2026-11-27T11:25:55.030Z",
+  "minutesBeforeKickoff": 342.1,
+  "immutable": true,
+  "market": {
+    "spread": "Iowa -3.5",
+    "total": 40.5,
+    "moneyline": "Nebraska +164 / Iowa -198",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-27T11:25:54.712Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Iowa -6",
+    "marketCalibratedHomeMargin": 5.878414233764965,
+    "marketCalibratedEdge": 2.378414233764965,
+    "independentFair": "Iowa -4",
+    "independentHomeMargin": 4.120213125160894,
+    "independentEdge": 0.6202131251608938,
+    "independentSide": "Iowa",
+    "ensembleFair": "Iowa -5",
+    "ensembleHomeMargin": 4.823493568602522,
+    "ensembleEdge": 1.3234935686025224,
+    "selectedModel": "ensemble",
+    "governedFair": "Iowa -5",
+    "governedTotal": 40.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-27T11:21:59.230Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T11:21:59.148Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-27T11:22:54.514Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 4.128414233764965
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 4.123493568602522
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-27T11:22:54.514Z",
+    "inputDates": {
+      "fpi": "2026-11-27T11:21:59.230Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T11:21:59.148Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 6,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Iowa -6",
+    "sourceObservedAt": "2026-11-22T04:24:07.568Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-27T11:25:54.712Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-27T11:25:54.712Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

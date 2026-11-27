@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401862840",
+  "matchup": "Tulsa at UTSA",
+  "kickoff": "2026-11-27T17:00:00.000Z",
+  "frozenAt": "2026-11-27T11:25:55.030Z",
+  "minutesBeforeKickoff": 334.1,
+  "immutable": true,
+  "market": {
+    "spread": "Tulsa -1.5",
+    "total": 57.5,
+    "moneyline": "Tulsa -122 / UTSA +102",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-27T11:25:54.712Z"
+  },
+  "models": {
+    "marketCalibratedFair": "UTSA -3",
+    "marketCalibratedHomeMargin": 2.8466668448342185,
+    "marketCalibratedEdge": 4.3466668448342185,
+    "independentFair": "UTSA -3.5",
+    "independentHomeMargin": 3.323466693323162,
+    "independentEdge": 4.823466693323162,
+    "independentSide": "UTSA",
+    "ensembleFair": "UTSA -3",
+    "ensembleHomeMargin": 3.1327467539275844,
+    "ensembleEdge": 4.632746753927584,
+    "selectedModel": "ensemble",
+    "governedFair": "UTSA -3",
+    "governedTotal": 57.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-27T11:21:59.230Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T11:21:59.148Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-27T11:22:54.527Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -0.11501469702320377
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 1.9480741371846155
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-27T11:22:54.527Z",
+    "inputDates": {
+      "fpi": "2026-11-27T11:21:59.230Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T11:21:59.148Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 2.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "UTSA -2.5",
+    "sourceObservedAt": "2026-11-22T14:21:18.972Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-27T11:25:54.712Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-27T11:25:54.712Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
