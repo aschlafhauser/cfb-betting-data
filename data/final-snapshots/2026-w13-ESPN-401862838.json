@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401862838",
+  "matchup": "Temple at Memphis",
+  "kickoff": "2026-11-27T20:30:00.000Z",
+  "frozenAt": "2026-11-27T15:26:18.602Z",
+  "minutesBeforeKickoff": 303.7,
+  "immutable": true,
+  "market": {
+    "spread": "Memphis -19.5",
+    "total": 66.5,
+    "moneyline": "Temple +750 / Memphis -1200",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-27T15:26:18.276Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Memphis -17.5",
+    "marketCalibratedHomeMargin": 17.565622567287786,
+    "marketCalibratedEdge": 1.934377432712214,
+    "independentFair": "Memphis -17.5",
+    "independentHomeMargin": 17.522287667532144,
+    "independentEdge": 1.9777123324678563,
+    "independentSide": "Temple",
+    "ensembleFair": "Memphis -17.5",
+    "ensembleHomeMargin": 17.5396216274344,
+    "ensembleEdge": 1.9603783725656,
+    "selectedModel": "ensemble",
+    "governedFair": "Memphis -17.5",
+    "governedTotal": 66
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-27T15:22:34.763Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T15:22:34.732Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-27T15:23:26.060Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 19.950487171369513
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 18.61497744425896
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-27T15:23:26.060Z",
+    "inputDates": {
+      "fpi": "2026-11-27T15:22:34.763Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T15:22:34.732Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 16.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Memphis -16.5",
+    "sourceObservedAt": "2026-11-22T14:21:18.972Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-27T15:26:18.276Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-27T15:26:18.276Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

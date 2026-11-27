@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401864549",
+  "matchup": "North Dakota State at San José State",
+  "kickoff": "2026-11-27T20:30:00.000Z",
+  "frozenAt": "2026-11-27T15:26:18.602Z",
+  "minutesBeforeKickoff": 303.7,
+  "immutable": true,
+  "market": {
+    "spread": "North Dakota State -7.5",
+    "total": 39.5,
+    "moneyline": "North Dakota State -345 / San José State +275",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-27T15:26:18.276Z"
+  },
+  "models": {
+    "marketCalibratedFair": "North Dakota State -11.5",
+    "marketCalibratedHomeMargin": -11.529555259213016,
+    "marketCalibratedEdge": 4.029555259213016,
+    "independentFair": "North Dakota State -2",
+    "independentHomeMargin": -1.809303953487795,
+    "independentEdge": 5.690696046512205,
+    "independentSide": "San José State",
+    "ensembleFair": "North Dakota State -6",
+    "ensembleHomeMargin": -6.183417041064144,
+    "ensembleEdge": 1.3165829589358564,
+    "selectedModel": "ensemble",
+    "governedFair": "North Dakota State -6",
+    "governedTotal": 39.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-27T15:22:34.763Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T15:22:34.732Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-27T15:23:26.066Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -8.52861801242236
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -4.832995280008349
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-27T15:23:26.066Z",
+    "inputDates": {
+      "fpi": "2026-11-27T15:22:34.763Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-27T15:22:34.732Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -11.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "North Dakota State -11.5",
+    "sourceObservedAt": "2026-11-22T16:20:55.598Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-27T15:26:18.276Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-27T15:26:18.276Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
