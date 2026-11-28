@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401870804",
+  "matchup": "Kennesaw State at Western Kentucky",
+  "kickoff": "2026-11-28T18:00:00.000Z",
+  "frozenAt": "2026-11-28T12:29:40.364Z",
+  "minutesBeforeKickoff": 330.3,
+  "immutable": true,
+  "market": {
+    "spread": "Kennesaw State -3.5",
+    "total": 54.5,
+    "moneyline": "Kennesaw State -170 / Western Kentucky +142",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-28T12:29:39.899Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Kennesaw State -2",
+    "marketCalibratedHomeMargin": -1.7634049935295844,
+    "marketCalibratedEdge": 1.7365950064704156,
+    "independentFair": "Western Kentucky -1",
+    "independentHomeMargin": 1.0927197916792022,
+    "independentEdge": 4.592719791679202,
+    "independentSide": "Western Kentucky",
+    "ensembleFair": "Pick",
+    "ensembleHomeMargin": -0.049730122404312516,
+    "ensembleEdge": 3.4502698775956873,
+    "selectedModel": "ensemble",
+    "governedFair": "Pick",
+    "governedTotal": 54.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-28T12:25:42.915Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T12:25:42.721Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-28T12:26:18.512Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -3.1634049935295843
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -0.8225363616647514
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-28T12:26:18.512Z",
+    "inputDates": {
+      "fpi": "2026-11-28T12:25:42.915Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T12:25:42.721Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -1.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Kennesaw State -1.5",
+    "sourceObservedAt": "2026-11-22T17:20:48.859Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-28T12:29:39.899Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-28T12:29:39.899Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
