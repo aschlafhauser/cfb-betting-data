@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401856877",
+  "matchup": "Kansas at Oklahoma State",
+  "kickoff": "2026-11-28T23:15:00.000Z",
+  "frozenAt": "2026-11-28T17:25:30.286Z",
+  "minutesBeforeKickoff": 349.5,
+  "immutable": true,
+  "market": {
+    "spread": "Oklahoma State -5.5",
+    "total": 65.5,
+    "moneyline": "Kansas +185 / Oklahoma State -225",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-28T17:25:29.821Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Oklahoma State -6",
+    "marketCalibratedHomeMargin": 5.812591678720327,
+    "marketCalibratedEdge": 0.31259167872032734,
+    "independentFair": "Oklahoma State -2.5",
+    "independentHomeMargin": 2.7185620464118587,
+    "independentEdge": 2.7814379535881413,
+    "independentSide": "Kansas",
+    "ensembleFair": "Oklahoma State -4",
+    "ensembleHomeMargin": 4.11087538095067,
+    "ensembleEdge": 1.3891246190493298,
+    "selectedModel": "ensemble",
+    "governedFair": "Oklahoma State -4",
+    "governedTotal": 65.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-28T17:21:46.891Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T17:21:46.778Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-28T17:22:24.500Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 5.050078899095566
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 3.767744630119527
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-28T17:22:24.500Z",
+    "inputDates": {
+      "fpi": "2026-11-28T17:21:46.891Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T17:21:46.778Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 6.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Oklahoma State -6.5",
+    "sourceObservedAt": "2026-11-22T09:21:17.818Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-28T17:25:29.821Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-28T17:25:29.821Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
