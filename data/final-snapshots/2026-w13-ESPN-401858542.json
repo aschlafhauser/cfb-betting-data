@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401858542",
+  "matchup": "Michigan State at Rutgers",
+  "kickoff": "2026-11-28T21:15:00.000Z",
+  "frozenAt": "2026-11-28T15:25:31.421Z",
+  "minutesBeforeKickoff": 349.5,
+  "immutable": true,
+  "market": {
+    "spread": "Michigan State -2.5",
+    "total": 45.5,
+    "moneyline": "Michigan State -135 / Rutgers +114",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-28T15:25:31.084Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Michigan State -3",
+    "marketCalibratedHomeMargin": -3.166220685995307,
+    "marketCalibratedEdge": 0.6662206859953068,
+    "independentFair": "Pick",
+    "independentHomeMargin": 0.12958710749627994,
+    "independentEdge": 2.6295871074962798,
+    "independentSide": "Rutgers",
+    "ensembleFair": "Michigan State -1.5",
+    "ensembleHomeMargin": -1.3535263995749338,
+    "ensembleEdge": 1.1464736004250662,
+    "selectedModel": "ensemble",
+    "governedFair": "Michigan State -1.5",
+    "governedTotal": 45.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-28T15:22:06.814Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T15:22:06.783Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-28T15:22:56.066Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -2.4662206859953066
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -1.0385263995749339
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-28T15:22:56.066Z",
+    "inputDates": {
+      "fpi": "2026-11-28T15:22:06.814Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T15:22:06.783Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -3.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Michigan State -3.5",
+    "sourceObservedAt": "2026-11-22T16:20:55.598Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-28T15:25:31.084Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-28T15:25:31.084Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
