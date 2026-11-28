@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401862841",
+  "matchup": "Army at Rice",
+  "kickoff": "2026-11-28T19:00:00.000Z",
+  "frozenAt": "2026-11-28T13:25:29.747Z",
+  "minutesBeforeKickoff": 334.5,
+  "immutable": true,
+  "market": {
+    "spread": "Army -4.5",
+    "total": 45.5,
+    "moneyline": "Army -192 / Rice +160",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-28T13:25:29.421Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Army -7.5",
+    "marketCalibratedHomeMargin": -7.635920767925292,
+    "marketCalibratedEdge": 3.135920767925292,
+    "independentFair": "Army -4.5",
+    "independentHomeMargin": -4.702120174441049,
+    "independentEdge": 0.20212017444104902,
+    "independentSide": "Army",
+    "ensembleFair": "Army -6",
+    "ensembleHomeMargin": -6.022330441508958,
+    "ensembleEdge": 1.5223304415089576,
+    "selectedModel": "ensemble",
+    "governedFair": "Army -6",
+    "governedTotal": 46
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-28T13:22:11.895Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T13:22:11.865Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-28T13:22:52.393Z",
+    "marketAnchorCandidate": {
+      "homeMargin": -5.535920767925292
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": -5.077330441508958
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-28T13:22:52.393Z",
+    "inputDates": {
+      "fpi": "2026-11-28T13:22:11.895Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T13:22:11.865Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": -7.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Army -7.5",
+    "sourceObservedAt": "2026-11-22T16:20:55.598Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-28T13:25:29.421Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-28T13:25:29.421Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}

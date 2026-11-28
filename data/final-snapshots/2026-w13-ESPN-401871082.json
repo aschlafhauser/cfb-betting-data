@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401871082",
+  "matchup": "Sam Houston at Florida International",
+  "kickoff": "2026-11-28T19:00:00.000Z",
+  "frozenAt": "2026-11-28T13:25:29.747Z",
+  "minutesBeforeKickoff": 334.5,
+  "immutable": true,
+  "market": {
+    "spread": "Florida International -11.5",
+    "total": 41.5,
+    "moneyline": "Sam Houston +360 / Florida International -470",
+    "source": "ESPN Draft Kings",
+    "observedAt": "2026-11-28T13:25:29.421Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Florida International -11.5",
+    "marketCalibratedHomeMargin": 11.432821749027868,
+    "marketCalibratedEdge": 0.06717825097213215,
+    "independentFair": "Florida International -6.5",
+    "independentHomeMargin": 6.361941084081377,
+    "independentEdge": 5.138058915918623,
+    "independentSide": "Sam Houston",
+    "ensembleFair": "Florida International -8.5",
+    "ensembleHomeMargin": 8.643837383307297,
+    "ensembleEdge": 2.8561626166927034,
+    "selectedModel": "ensemble",
+    "governedFair": "Florida International -8.5",
+    "governedTotal": 41.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-28T13:22:11.895Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T13:22:11.865Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-28T13:22:52.420Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 11.432821749027868
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 8.643837383307297
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-28T13:22:52.420Z",
+    "inputDates": {
+      "fpi": "2026-11-28T13:22:11.895Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T13:22:11.865Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 11.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Florida International -11.5",
+    "sourceObservedAt": "2026-11-22T17:20:48.859Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-28T13:25:29.421Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-28T13:25:29.421Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
