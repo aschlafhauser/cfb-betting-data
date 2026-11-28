@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "cfb-frozen-pre-kickoff-v2",
+  "snapshotType": "frozen-pre-kickoff",
+  "sport": "CFB",
+  "season": 2026,
+  "week": 13,
+  "canonicalGameId": "ESPN-401858538",
+  "matchup": "Purdue at Indiana",
+  "kickoff": "2026-11-29T00:00:00.000Z",
+  "frozenAt": "2026-11-28T18:26:16.626Z",
+  "minutesBeforeKickoff": 333.7,
+  "immutable": true,
+  "market": {
+    "spread": "Indiana -23.5",
+    "total": 52.5,
+    "moneyline": "Purdue +1200 / Indiana -2400",
+    "source": "ESPN DraftKings",
+    "observedAt": "2026-11-28T18:26:16.309Z"
+  },
+  "models": {
+    "marketCalibratedFair": "Indiana -23.5",
+    "marketCalibratedHomeMargin": 23.74642857142857,
+    "marketCalibratedEdge": 0.2464285714285701,
+    "independentFair": "Indiana -15.5",
+    "independentHomeMargin": 15.357723304634101,
+    "independentEdge": 8.142276695365899,
+    "independentSide": "Purdue",
+    "ensembleFair": "Indiana -19",
+    "ensembleHomeMargin": 19.13264067469161,
+    "ensembleEdge": 4.367359325308389,
+    "selectedModel": "ensemble",
+    "governedFair": "Indiana -19",
+    "governedTotal": 52.5
+  },
+  "shadowModels": {
+    "version": "market-anchor-candidate-v1",
+    "researchOnly": true,
+    "promoted": false,
+    "inputDates": {
+      "fpi": "2026-11-28T18:23:19.774Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T18:23:19.742Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "computedAt": "2026-11-28T18:24:15.979Z",
+    "marketAnchorCandidate": {
+      "homeMargin": 25.74642857142857
+    },
+    "ensembleAnchorCandidate": {
+      "homeMargin": 20.032640674691613
+    }
+  },
+  "modelComputation": {
+    "version": "1.2-input-integrity",
+    "computedAt": "2026-11-28T18:24:15.979Z",
+    "inputDates": {
+      "fpi": "2026-11-28T18:23:19.774Z",
+      "phil": "2026-11-22",
+      "metrics": "2026-11-28T18:23:19.742Z",
+      "live": "2026-09-06T08:41:55-05:00"
+    },
+    "marketAnchorSource": "preserved-named-market-model",
+    "comparableCoverage": true
+  },
+  "marketModelAnchor": {
+    "baseHomeMargin": 21.5,
+    "source": "selected-week-opening-market",
+    "sourceMarket": "Indiana -21.5",
+    "sourceObservedAt": "2026-11-22T07:21:27.410Z",
+    "calibrationStatus": "prospective-week-initialization"
+  },
+  "decision": {
+    "stage": "deep-dive-complete-source-limited",
+    "priority": "low",
+    "action": "PASS/WATCH pending Bet Activation Gate",
+    "thresholdStatus": "COMPLETE SOURCE LIMITED · MARKET AVAILABLE",
+    "finalExecutableEdge": null
+  },
+  "availability": {
+    "injuryStatus": null,
+    "weather": null
+  },
+  "provenance": {
+    "boardUpdatedAt": "2026-11-28T18:26:16.309Z",
+    "runtimePersistence": {
+      "status": "ACTIVE",
+      "source": "https://cfb-betting-intelligence.netlify.app/",
+      "capturedAt": "2026-11-28T18:26:16.309Z",
+      "selectedWeek": "Week 13",
+      "modelPromotion": {
+        "marketCount": 65,
+        "independentCount": 65,
+        "ensembleCount": 65,
+        "rejected": 0
+      },
+      "renderedRowCount": 69,
+      "deepDiveCompleteCount": 69,
+      "deepDiveFullEvidenceCount": 0,
+      "deepDiveSourceLimitedCount": 69
+    }
+  },
+  "governance": "Immutable prospective snapshot written before kickoff. Never overwrite or reconstruct after kickoff."
+}
